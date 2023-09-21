@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "6407a27fc503d0c6f5a33233"
+  },
+  "name": "5 HP",
+  "rules": "This card starts with 5 HP when defending.",
+  "tag_number": 1001
+},{
+  "_id": {
+    "$oid": "6407a29bc503d0c6f5a33234"
+  },
+  "name": "Focus",
+  "rules": "This card requires a Focus roll.",
+  "tag_number": 1002
+},{
+  "_id": {
+    "$oid": "6407ac305139f66679d6ac54"
+  },
+  "name": "Auto",
+  "rules": "This card resolves immediately after being revealed in a play.",
+  "tag_number": 1003
+},{
+  "_id": {
+    "$oid": "640ce5e85f6730657ad873cb"
+  },
+  "name": "Max 1",
+  "rules": "You can only resolve 1 card with this tag per round.",
+  "tag_number": 1005
+},{
+  "_id": {
+    "$oid": "64124686d762a869c0b2e12d"
+  },
+  "name": "Stay",
+  "rules": "You can keep this card in your play area at the end of a round.",
+  "tag_number": 1004
+},{
+  "_id": {
+    "$oid": "641292cf38b70f477bb72e6f"
+  },
+  "name": "n/a",
+  "rules": "",
+  "tag_number": 1000
+}]
