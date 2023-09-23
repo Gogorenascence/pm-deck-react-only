@@ -1,24 +1,20 @@
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { QueryContext } from "../context/QueryContext";
-import { AuthContext } from "../context/AuthContext";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 
-function CardsPage() {
+function CardsPage(props) {
 
-    const [cards, setCards] = useState([]);
+    const {
+        cards,
+        booster_sets
+    } = props
 
-    const [boosterSets, setBoosterSets] = useState([]);
-
-    const getBoosterSets = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/booster_sets/`);
-        const data = await response.json();
-        setBoosterSets(data.booster_sets);
-    };
+    const [newCards, setNewCards] = useState([]);
 
     const handleBoosterSetChange = (event) => {
         setBoosterSetId(event.target.value)
-        const selectedBoosterSet = boosterSets.find(set => set.id === event.target.value);
+        const selectedBoosterSet = booster_sets.find(set => set.id === event.target.value);
         setBoosterSet(selectedBoosterSet)
         console.log(boosterSet[rarity])
     };
@@ -27,8 +23,6 @@ function CardsPage() {
         setRarity(event.target.value);
         console.log(rarity)
     };
-
-    const { account } = useContext(AuthContext)
 
     const {
         query,
@@ -49,14 +43,10 @@ function CardsPage() {
     const [noCards, setNoCards] = useState(false);
 
     const getCards = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/`);
-        const data = await response.json();
-
-        if (data.cards.length == 0 ) {
+        if (newCards.length == 0 ) {
             setNoCards(true)
         }
-
-        const sortedCards = [...data.cards].sort(sortMethods[sortState].method);
+        const sortedCards = [...cards].sort(sortMethods[sortState].method);
 
         const typedCards = []
         for (let card of sortedCards){
@@ -93,8 +83,7 @@ function CardsPage() {
 
             typedCards.push(card)
         }
-        console.log(typedCards)
-        setCards(typedCards);
+        setNewCards(typedCards);
     };
 
     const navigate = useNavigate()
@@ -108,9 +97,7 @@ function CardsPage() {
 
     useEffect(() => {
         getCards();
-        getBoosterSets();
         console.log(cards)
-        console.log(account)
         document.title = "Cards - PM CardBase"
         return () => {
             document.title = "PlayMaker CardBase"
@@ -120,7 +107,7 @@ function CardsPage() {
 
 
     const sortMethods = {
-        none: { method: (a,b) => new Date(b.updated_on.full_time) - new Date(a.updated_on.full_time) },
+        none: { method: (a,b) => new Date(b.updated_on.full_time.$date) - new Date(a.updated_on.full_time.$date) },
         newest: { method: (a,b) => b.id.localeCompare(a.id) },
         oldest: { method: (a,b) => a.id.localeCompare(b.id) },
         name: { method: (a,b) => a.name.localeCompare(b.name) },
@@ -169,7 +156,7 @@ function CardsPage() {
         setShowMore(20)
     };
 
-    const all_cards = cards.filter(card => card.name.toLowerCase().includes(query.cardName.toLowerCase()))
+    const all_cards = newCards.filter(card => card.name.toLowerCase().includes(query.cardName.toLowerCase()))
         .filter((card, index, arr) => (card.effect_text + card.second_effect_text).toLowerCase().includes(query.cardText.toLowerCase()))
         .filter(card => card.card_number.toString().includes(query.cardNumber))
         .filter(card => card.hero_id.toLowerCase().includes(query.heroID.toLowerCase()))
@@ -218,7 +205,7 @@ function CardsPage() {
                 name="boosterSet"
                 value={boosterSetId}>
                 <option value="">Card Set</option>
-                {boosterSets.map(function(boosterSet)
+                {booster_sets.map(function(boosterSet)
                 {return( <option value={boosterSet.id}>{boosterSet.name}</option>)}
                     )}
             </select>
@@ -365,14 +352,6 @@ function CardsPage() {
             </select>
             <br/>
 
-            { account && account.roles.includes("admin")?
-                <NavLink to="/cardcreate">
-                    <button
-                        className="left red">
-                        Create
-                    </button>
-                </NavLink>:
-            null}
             <button
                 className="left"
                 variant="dark"
@@ -382,7 +361,6 @@ function CardsPage() {
             </button>
             <button
                 className="left"
-                variant="dark"
                 onClick={getRandomCard}
                 >
                 Random Card

@@ -5,21 +5,18 @@ import { useState, useEffect, useContext } from "react";
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from "../context/AuthContext";
 import FavoriteDeck from "../Accounts/FavoriteDeck";
+import decks from "../database/decks.json";
 
 
 function DeckRow() {
 
-    const [decks, setDecks] = useState([]);
-
     const {account, users} = useContext(AuthContext)
+    const [newDecks, setNewDecks] = useState([])
 
     const getDecks = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/`);
-        const data = await response.json();
-
-        const deckData = data.decks
+        const deckData = decks
         for (let deck of deckData){
-            const date = new Date(deck["created_on"]["full_time"])
+            const date = new Date(deck["created_on"]["full_time"]["$date"])
 
             const time_now = new Date();
             time_now.setHours(time_now.getHours() + 5);
@@ -51,7 +48,7 @@ function DeckRow() {
             deck["created_on"]["ago"] = "a few seconds ago";
             }
 
-            const updateDate = new Date(deck["updated_on"]["full_time"])
+            const updateDate = new Date(deck["updated_on"]["full_time"]["$date"])
             // Calculate years, months, days, hours, minutes, and seconds
             let updateAgo = Math.abs(time_now - updateDate);
             const updateYears = Math.floor(updateAgo / 31557600000);
@@ -79,11 +76,11 @@ function DeckRow() {
             deck["updated_on"]["ago"] = "a few seconds ago";
             }
         }
-        setDecks(deckData);
+        setNewDecks(deckData);
         console.log(decks)
     };
 
-    const all_decks = decks.filter(deck => deck.private ? deck.private === false || deck.account_id === account.id || account && account.roles.includes("admin"): true)
+    const all_decks = newDecks.filter(deck => deck.private ? deck.private === false || deck.account_id === account.id || account && account.roles.includes("admin"): true)
     .slice(-4).reverse()
 
     const createdBy = (deck) => {

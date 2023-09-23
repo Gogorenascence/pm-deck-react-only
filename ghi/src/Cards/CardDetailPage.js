@@ -1,18 +1,18 @@
-import {
-    Container,
-} from "react-bootstrap";
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useParams, useNavigate} from 'react-router-dom';
-import CardEditModal from "./CardEditModal";
 import RelatedCardModal from "./RelatedCardModal";
 import BackButton from "../display/BackButton";
-import { AuthContext } from "../context/AuthContext";
+import cards from "../database/cards.json";
+import card_types from "../database/card_types.json";
+import card_tags from "../database/card_tags.json";
+import extra_effects from "../database/extra_effects.json";
+import reactions from "../database/reactions.json";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 
 
 function CardDetailPage() {
+    const { card_number } = useParams()
 
-    const {card_number} = useParams();
     const [card, setCard] = useState({
         name: "",
         card_class: "",
@@ -33,20 +33,11 @@ function CardDetailPage() {
         reactions: [],
         card_tags: [],
     });
-    const [relatedCards, setRelatedCards] = useState([]);
-    const [card_type, setCardType] = useState("")
-    const [extra_effects, setExtraEffects] = useState([])
-    const [reactions, setReactions] = useState([])
-    const [card_tags, setCardTags] = useState([])
-
-    const [cards, setCards] = useState([]);
-
-    const { account } = useContext(AuthContext)
 
     const getCard = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/`);
-        const cardData = await response.json();
 
+        const cardData = cards.find(card => card.card_number.toString() === card_number)
+        console.log(cards)
         cardData["seriesNames"] = cardData.series_name.split("//")
         cardData["effectText"] = cardData.effect_text.split("//")
         if (cardData.second_effect_text){
@@ -55,47 +46,45 @@ function CardDetailPage() {
         setCard(cardData);
     };
 
-    const getRelatedCards = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/related_cards/`);
-        const relatedData = await response.json();
+    const relatedCardsList = cards?.filter(relatedCard => (card?.hero_id === relatedCard.hero_id) && relatedCard.card_number !== card.card_number)
+    relatedCardsList.sort((a,b) => a.card_number - b.card_number)
 
-        setRelatedCards(relatedData.cards.sort((a,b) => a.card_number - b.card_number));
-    };
+    const card_type = card_types.find(card_type => card?.card_type[0] === card_type?.type_number)
 
-    const getCardType = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/get_card_type/`);
-        const cardTypeData = await response.json();
+    const extra_effects_list = []
+    for (let extra_effect of extra_effects) {
+        if (card.extra_effects.includes(extra_effect.effect_number) ) {
+            console.log(extra_effect)
+            extra_effects_list.push(extra_effect)
+        }
+    }
 
-        setCardType(cardTypeData);
-    };
+    const reaction_counts = {}
+    for (let reaction_number of card.reactions) {
+        const reaction = reactions.find(reaction => reaction.reaction_number === reaction_number)
+            !reaction_counts[reaction.name]?
+                reaction_counts[reaction.name] = {
+                    info: reaction,
+                    count: 1,
+                }:
+                reaction_counts[reaction.name]["count"]++
 
-    const getExtraEffects = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/get_extra_effects/`);
-        const extraEffectData = await response.json();
+        console.log(reaction_counts)
+    }
 
-        setExtraEffects(extraEffectData);
-    };
+    const reactions_list = Object.values(reaction_counts)
 
-    const getReactions = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/get_reactions/`);
-        const reactionData = await response.json();
-        reactionData.map(reaction => reaction["rules"] = reaction["rules"].replace("{count}", reaction["count"].toString()))
-        setReactions(reactionData);
-    };
+    const reactionRules = (reaction) => {
+        const rules = reaction.info.rules.replace("{count}", reaction.count.toString())
+        return rules
+    }
 
-    const getCardTags = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/get_tags/`);
-        const cardTagData = await response.json();
-
-        setCardTags(cardTagData);
-    };
-
-    const getCards = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/`);
-        const data = await response.json();
-
-        setCards(data.cards.reverse());
-    };
+    const card_tags_list = []
+    for (let card_tag of card_tags) {
+        if (card.card_tags.includes(card_tag.tag_number) ) {
+            card_tags_list.push(card_tag)
+        }
+    }
 
     const navigate = useNavigate()
 
@@ -107,12 +96,7 @@ function CardDetailPage() {
 
     useEffect(() => {
         getCard();
-        getRelatedCards();
-        getCardType();
-        getExtraEffects();
-        getReactions();
-        getCardTags();
-        getCards();
+        console.log(reactions_list)
         document.title = "Cards - PM CardBase"
         return () => {
             document.title = "PlayMaker CardBase"
@@ -133,7 +117,7 @@ function CardDetailPage() {
                             <h1 className="centered-h1">Related Cards</h1>
                         <div className="cd-inner">
                             <div className="cd-inner card-list3" style={{width: "480px"}}>
-                                {relatedCards.slice(0,6).map((relatedCard) => {
+                                {relatedCardsList.slice(0,6).map((relatedCard) => {
                                     return (
                                         <NavLink to={`/cards/${relatedCard.card_number}`}>
                                                 <img
@@ -154,16 +138,10 @@ function CardDetailPage() {
                             >
                                 Random Card
                             </button>
-                            {relatedCards.length > 6?
+                            {relatedCardsList.length > 6?
                                 <RelatedCardModal/>: null
                             }
-                            { account && account.roles.includes("admin")?
-                                null:
-                                <BackButton
-                                    className="left button100 heightNorm"
-                                    style={{marginLeft: "5%", textAlign: "center"}}
-                                />
-                            }
+
                         </div>
                     </div>
                 </div>
@@ -174,9 +152,9 @@ function CardDetailPage() {
                             <div className="cd-info">
                                 <div className={card.card_class ? card.card_class : "NoClass"}>
                                     <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Type</h4>
-                                        <h5 title={card_type.rules}
+                                        <h5 title={card_type?.rules}
                                             style={{fontWeight: "400", margin: "18px 12px"}}
-                                            >{card_type.name} *</h5>
+                                            >{card_type?.name} *</h5>
                                 </div>
                                 <div className={card.card_class ? card.card_class : "NoClass"}>
                                     <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Class</h4>
@@ -184,10 +162,10 @@ function CardDetailPage() {
                                 </div>
                                 <div className={card.card_class ? card.card_class : "NoClass"}>
                                     <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Reactions</h4>
-                                    {reactions.length ? (
-                                        reactions.map((reaction) => (
-                                        <h5 title={reaction.rules} style={{fontWeight: "400", margin: "18px 12px"}} key={reaction.name}>
-                                            {reaction.name} {reaction.count} *
+                                    {reactions_list.length ? (
+                                        reactions_list.map((reaction) => (
+                                        <h5 title={reactionRules(reaction)} style={{fontWeight: "400", margin: "18px 12px"}} key={reaction.info.name}>
+                                            {reaction.info.name} {reaction.count} *
                                         </h5>
                                         ))
                                     ) : (
@@ -200,7 +178,7 @@ function CardDetailPage() {
                                 </div>
                                 <div className={card.card_class ? card.card_class : "NoClass"}>
                                     <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Tags</h4>
-                                    {card_tags.map((card_tag) => {
+                                    {card_tags_list.map((card_tag) => {
                                             return (
                                                 <h5 title={card_tag.rules}
                                                     style={{fontWeight: "400", margin: "18px 12px"}}>
@@ -240,7 +218,7 @@ function CardDetailPage() {
                                         <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
                                             {line}</h5>)}
 
-                                    {/* <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.effect_text}</h5> */}
+
                                     {card.second_effect_text && (
                                         <div className="borderBlack">
 
@@ -248,15 +226,14 @@ function CardDetailPage() {
                                             <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
                                                 {line}</h5>)}
 
-                                            {/* <h5 className="borderBlack"
-                                                style={{fontWeight: "600", margin: "18px 10px 18px 10px"}}>{card.second_effect_text}</h5> */}
+
                                         </div>
                                     )}
-                                    {extra_effects.length ? (
+                                    {extra_effects_list.length ? (
                                     <>
                                         <h4 style={{fontWeight: "600", margin: "12px"}}>Extra Effect Types</h4>
                                         <div className="borderBlack" style={{display:"flex"}}>
-                                            {extra_effects.map((extra_effect) => (
+                                            {extra_effects_list.map((extra_effect) => (
 
                                                 <h5 title={extra_effect.rules}
                                                     style={{fontWeight: "400",
@@ -271,17 +248,7 @@ function CardDetailPage() {
                             </div>
                         </div>
                         <div>
-                            { account && account.roles.includes("admin")?
-                                <Container style={{margin: "2% 0%", width: "662px"}}>
-                                    <div style={{display: "flex", marginBottom: ".75%"}}>
-                                        <CardEditModal/>
-                                        <BackButton
-                                            className="left button100 heightNorm"
-                                            style={{marginLeft: "5%", textAlign: "center"}}
-                                        />
-                                    </div>
-                                </Container>:
-                            null}
+
                         </div>
                     </div>
                 </div>

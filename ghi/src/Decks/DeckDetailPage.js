@@ -11,19 +11,13 @@ import { AuthContext } from "../context/AuthContext";
 import FavoriteDeck from "../Accounts/FavoriteDeck";
 
 
-function DeckDetailPage() {
+function DeckDetailPage(props) {
 
     const {deck_id} = useParams();
-    const [deck, setDeck] = useState({ strategies: []});
-    const [main_list, setMainList] = useState([]);
-    const [pluck_list, setPluckList] = useState([]);
-    const [countedMainList, setCountedMainList] = useState([]);
-    const [countedPluckList, setCountedPluckList] = useState([]);
+    const {decks, cards} = props
     const [shuffledDeck, setShuffledDeck] = useState([]);
     const [ownership, setOwnership] = useState("");
     const [mulliganList, setMulliganList] = useState([]);
-    const [createdAgo, setCreatedAgo] = useState("");
-    const [updatedAgo, setUpdatedAgo] = useState("");
 
     const [listView, setListView] = useState(false);
     const [showMain, setShowMain] = useState(true);
@@ -31,31 +25,108 @@ function DeckDetailPage() {
 
     const {account, users} = useContext(AuthContext)
 
-    const getDeck = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/${deck_id}/`);
-        const deckData = await response.json();
-        setDeck(deckData);
-    };
+    const deck = decks.find(deck => deck.id === deck_id)
 
-    const getAgos = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/get_time_ago/${deck_id}/`);
-        const timeData = await response.json();
-        setCreatedAgo(timeData.created);
-        setUpdatedAgo(timeData.updated);
+    const date = new Date(deck["created_on"]["full_time"]["$date"])
+    const time_now = new Date();
+    time_now.setHours(time_now.getHours() + 5);
+    // Calculate years, months, days, hours, minutes, and seconds
+    let ago = Math.abs(time_now - date);
+    const years = Math.floor(ago / 31557600000);
+    ago -= years * 31557600000;
+    const months = Math.floor(ago / 2630016000);
+    ago -= months * 2630016000;
+    const days = Math.floor(ago / 86400000);
+    ago -= days * 86400000;
+    const hours = Math.floor(ago / 3600000);
+    ago -= hours * 3600000;
+    const minutes = Math.floor(ago / 60000);
+    ago -= minutes * 60000;
+    // Format the time difference
+    if (years > 0) {
+    deck["created_on"]["ago"] = `${years} year ago`;
+    } else if (months > 0) {
+    deck["created_on"]["ago"] = `${months} month${months > 1 ? 's' : ''} ago`;
+    } else if (days > 0) {
+    deck["created_on"]["ago"] = `${days} day${days > 1 ? 's' : ''} ago`;
+    } else if (hours > 0) {
+    deck["created_on"]["ago"] = `${hours} hour${hours > 1 ? 's' : ''} ${minutes > 1 ? ' and ' + minutes + ' minutes ago' : ' ago'}`;
+    } else if (minutes > 0) {
+    deck["created_on"]["ago"] = `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+    } else {
+    deck["created_on"]["ago"] = "a few seconds ago";
     }
 
-    const getDeckList = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/${deck_id}/list/`);
-        const deckListData = await response.json();
-        setMainList(deckListData[0])
-        setPluckList(deckListData[1])
-    };
+    const updateDate = new Date(deck["updated_on"]["full_time"]["$date"])
+    // Calculate years, months, days, hours, minutes, and seconds
+    let updateAgo = Math.abs(time_now - updateDate);
+    const updateYears = Math.floor(updateAgo / 31557600000);
+    updateAgo -= updateYears * 31557600000;
+    const updateMonths = Math.floor(updateAgo / 2630016000);
+    updateAgo -= updateMonths * 2630016000;
+    const updateDays = Math.floor(updateAgo / 86400000);
+    updateAgo -= updateDays * 86400000;
+    const updateHours = Math.floor(updateAgo / 3600000);
+    updateAgo -= updateHours * 3600000;
+    const updateMinutes = Math.floor(updateAgo / 60000);
+    updateAgo -= updateMinutes * 60000;
+    // Format the time difference
+    if (updateYears > 0) {
+    deck["updated_on"]["ago"] = `${updateYears} year ago`;
+    } else if (updateMonths > 0) {
+    deck["updated_on"]["ago"] = `${updateMonths} month${updateMonths > 1 ? 's' : ''} ago`;
+    } else if (updateDays > 0) {
+    deck["updated_on"]["ago"] = `${updateDays} day${updateDays > 1 ? 's' : ''} ago`;
+    } else if (updateHours > 0) {
+    deck["updated_on"]["ago"] = `${updateHours} hour${updateHours > 1 ? 's' : ''} ${updateMinutes > 1 ? ' and ' + updateMinutes + ' minutes ago' : ' ago'}`;
+    } else if (updateMinutes > 0) {
+    deck["updated_on"]["ago"] = `${updateMinutes} minute${updateMinutes > 1 ? 's' : ''} ago`;
+    } else {
+    deck["updated_on"]["ago"] = "a few seconds ago";
+    }
+
+    const main_list = []
+    const pluck_list = []
+    for (let card_number of deck.cards) {
+        const mainDeckCard = cards.find(card => card.card_number === card_number)
+        main_list.push(mainDeckCard)
+    }
+    for (let card_number of deck.pluck) {
+        const pluckDeckCard = cards.find(card => card.card_number === card_number)
+        pluck_list.push(pluckDeckCard)
+    }
+
+    const mainCount = {}
+    const pluckCount = {}
+    for (let card_number of deck.cards) {
+        const mainDeckCard = cards.find(card => card.card_number === card_number)
+        !mainCount[card_number]?
+            mainCount[card_number] = {
+                info: mainDeckCard,
+                count: 1,
+            }:
+            mainCount[card_number]["count"]++
+    }
+    const countedMainList = Object.values(mainCount)
+
+    for (let card_number of deck.pluck) {
+        const pluckDeckCard = cards.find(card => card.card_number === card_number)
+        !pluckCount[card_number]?
+            pluckCount[card_number] = {
+                info: pluckDeckCard,
+                count: 1,
+            }:
+            pluckCount[card_number]["count"]++
+    }
+    const countedPluckList = Object.values(pluckCount)
+
+
 
     const getCountedDeckList = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/${deck_id}/counted_list/`);
-        const deckListData = await response.json();
-        setCountedMainList(deckListData[0])
-        setCountedPluckList(deckListData[1])
+        // const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/${deck_id}/counted_list/`);
+        // const deckListData = await response.json();
+        // setCountedMainList(deckListData[0])
+        // setCountedPluckList(deckListData[1])
     };
 
     const getShuffledDeck = async() =>{
@@ -87,16 +158,14 @@ function DeckDetailPage() {
     };
 
     useEffect(() => {
-        getDeck();
-        getDeckList();
         getCountedDeckList();
-        getAgos();
+
         console.log("Deck Details: ", deck)
         document.title = `${deck.name} - PM CardBase`
         return () => {
             document.title = "PlayMaker CardBase"
         };
-    },[createdAgo, updatedAgo]);
+    },[]);
 
     const handleMulliganChange = (card) => {
         const deckIndex = shuffledDeck.indexOf(card)
@@ -196,14 +265,14 @@ function DeckDetailPage() {
                             className="left justify-content-end"
                                 style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                             >
-                                {createdAgo} &nbsp; &nbsp;
+                                {deck.created_on.ago} &nbsp; &nbsp;
                             </h6>
                             <img className="logo3" src="https://i.imgur.com/QLa1ciW.png" alt="updated on"/>
                             <h6
                             className="left justify-content-end"
                                 style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                             >
-                                {updatedAgo} &nbsp; &nbsp;
+                                {deck.updated_on.ago} &nbsp; &nbsp;
                             </h6>
                             <img className="logo2" src="https://i.imgur.com/eMGZ7ON.png" alt="created by"/>
                             <h6
@@ -388,11 +457,11 @@ function DeckDetailPage() {
                                             return (
                                                 <Col style={{padding: "5px"}}>
                                                     <div className="card-container">
-                                                    <h5>{card.name} x <b>{card.count}</b></h5>
+                                                    <h5>{card.info.name} x <b>{card.count}</b></h5>
                                                         <img
                                                             className="card-image"
-                                                            src={card.picture_url}
-                                                            alt={card.name}
+                                                            src={card.info.picture_url}
+                                                            alt={card.info.name}
                                                         />
                                                     </div>
                                                 </Col>
@@ -422,11 +491,11 @@ function DeckDetailPage() {
                                             return (
                                                 <Col style={{padding: "5px"}}>
                                                     <div className="card-container">
-                                                    <h5>{card.name} x <b>{card.count}</b></h5>
+                                                    <h5>{card.info.name} x <b>{card.count}</b></h5>
                                                         <img
                                                             className="card-image"
-                                                            src={card.picture_url}
-                                                            alt={card.name}
+                                                            src={card.info.picture_url}
+                                                            alt={card.info.name}
                                                         />
                                                     </div>
                                                 </Col>

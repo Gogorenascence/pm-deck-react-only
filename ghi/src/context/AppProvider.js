@@ -4,19 +4,22 @@ import { QueryContextProvider } from "./QueryContext";
 import { DeckQueryContextProvider } from "./DeckQueryContext";
 import { AuthContextProvider } from "./AuthContext";
 import { BuilderQueryContextProvider } from "./BuilderQueryContext";
+import { APIContextProvider } from "./APIContext";
 
 const AppProvider = ({ children }) => {
     return (
         <AuthContextProvider>
-            <BuilderQueryContextProvider>
-                <PullsContextProvider>
-                    <QueryContextProvider>
-                        <DeckQueryContextProvider>
-                            {children}
-                        </DeckQueryContextProvider>
-                    </QueryContextProvider>
-                </PullsContextProvider>
-            </BuilderQueryContextProvider>
+            <APIContextProvider>
+                <BuilderQueryContextProvider>
+                    <PullsContextProvider>
+                        <QueryContextProvider>
+                            <DeckQueryContextProvider>
+                                {children}
+                            </DeckQueryContextProvider>
+                        </QueryContextProvider>
+                    </PullsContextProvider>
+                </BuilderQueryContextProvider>
+            </APIContextProvider>
         </AuthContextProvider>
     );
 };

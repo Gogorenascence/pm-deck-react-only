@@ -30,6 +30,36 @@ import GameDecks from "./Decks/GameDecks";
 
 function App() {
 
+  let cards = require('./database/cards.json').map(card =>
+    {card["id"] = card._id.$oid
+    return card
+  })
+  let card_types = require('./database/card_types.json').map(card_type =>
+      {card_type["id"] = card_type._id.$oid
+      return card_type
+  })
+  let extra_effects = require('./database/extra_effects.json').map(extra_effect =>
+      {extra_effect["id"] = extra_effect._id.$oid
+      return extra_effect
+  })
+  let card_tags = require('./database/card_tags.json').map(card_tag =>
+      {card_tag["id"] = card_tag._id.$oid
+      return card_tag
+  })
+  let reactions = require('./database/reactions.json').map(reaction =>
+      {reaction["id"] = reaction.$oid
+      return reaction
+  })
+  let booster_sets = require('./database/booster_sets.json').map(booster_set =>
+      {booster_set["id"] = booster_set._id.$oid
+      return booster_set
+  })
+  let decks = require('./database/decks.json').map(deck =>
+    {deck["id"] = deck._id.$oid
+    return deck
+  })
+
+
   return (
 
     <AppProvider>
@@ -42,28 +72,31 @@ function App() {
           <div className="App">
 
             <Routes>
-              <Route index element={<MainPage />} />
+              <Route index element={<MainPage cards={cards} />} />
               <Route path="/deckbuilder" element={<DeckBuilder />} />
-              <Route path="/decks" element={<DecksPage />} />
-              <Route path="/decks/:deck_id" element={<DeckDetailPage />} />
+              <Route path="/decks" element={<DecksPage decks={decks}/>} />
+              <Route path="/decks/:deck_id" element={<DeckDetailPage
+                                                            decks={decks}
+                                                            cards={cards}
+                                                    />} />
               <Route path="/decks/:deck_id/edit" element={<DeckEditPage />} />
               <Route path="/decks/:deck_id/copy" element={<DeckCopyPage />} />
-              <Route path="/cards" element={<CardsPage />} />
-              <Route path="/cardcreate" element={<CardCreatePage />} />
-              <Route path="/cards/:card_number" element={<CardDetailPage />} />
+              <Route path="/cards" element={<CardsPage cards={cards}  booster_sets={booster_sets}/>} />
+              <Route path="/cards/:card_number" element={<CardDetailPage
+                                                            cards={cards}
+                                                            card_types={card_types}
+                                                            card_tags={card_tags}
+                                                            extra_effects={extra_effects}
+                                                            reactions={reactions}
+                                                        />} />
               <Route path="/topcards" element={<TopCardsPage />} />
               <Route path="/series" element={<UnderConstruction />} />
               <Route path="/cardsets" element={<SetsPage />} />
               <Route path="/cardsets/:card_set_id" element={<SetDetailPage />} />
               <Route path="/cardsets/:card_set_id/pulls" element={<PullPage />} />
               <Route path="/cardsets/:card_set_id/pulls/deckbuilder" element={<PullsDeckBuilder />} />
-              <Route path="/account" element={<AccountPage />} />
-              <Route path="/reset/:reset_id" element={<ResetPassword />} />
-              <Route path="/articles" element={<UnderConstruction />} />
-              <Route path="/gameplay" element={<UnderConstruction />} />
-              <Route path="/forum" element={<UnderConstruction />} />
-              <Route path="/game/cards" element={<GameCards />} />
-              <Route path="/game/decks" element={<GameDecks />} />
+
+
             </Routes>
 
           </div>

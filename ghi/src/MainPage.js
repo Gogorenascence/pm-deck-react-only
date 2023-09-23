@@ -3,7 +3,9 @@ import DeckRow from "./display/DeckRow";
 import CardRow from "./display/CardRow";
 
 
-function MainPage() {
+function MainPage(props) {
+
+  const { cards } = props
 
     return (
       <div>
@@ -24,7 +26,7 @@ function MainPage() {
           <h1 className="margin-top-20">Latest Cards</h1>
         <br/>
         <div>
-          <CardRow/>
+          <CardRow cards={cards}/>
         </div>
       </div>
     );

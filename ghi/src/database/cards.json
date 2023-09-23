@@ -1,0 +1,5426 @@
+[{
+  "_id": {
+    "$oid": "6407a2c0c503d0c6f5a33235"
+  },
+  "name": "PantheraMan",
+  "card_class": "Staunch",
+  "hero_name": "PantheraMan",
+  "hero_id": "PM1",
+  "series_name": "PantheraMan//Nature//Brawler",
+  "card_number": 1001,
+  "effect_text": "Deal 2 damage to a foe who has yet to go this round. If you are first to go this round or you have the highest Enthusiasm, draw 1 Pluck and gain 1 HP.",
+  "flavor_text": "string",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g1pmf.png",
+  "file_name": "i1g1pmf",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [],
+  "reactions": [
+    1003
+  ],
+  "card_tags": [
+    1001
+  ],
+  "enthusiasm": 0,
+  "second_effect_text": "",
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 8,
+    "day": 31,
+    "time": "17:43",
+    "full_time": {
+      "$date": "2023-08-31T17:43:16.884Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6407a305c503d0c6f5a33236"
+  },
+  "name": "Flamebell",
+  "card_class": "Staunch",
+  "hero_name": "Flamebell",
+  "hero_id": "FB1",
+  "series_name": "Flamebell//Magic//Quest",
+  "card_number": 1013,
+  "effect_text": "Gain 2 HP, then all foes with a Power card(s) in their play and their Fighters take 1 damage.",
+  "flavor_text": "string",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g4fbf.png",
+  "file_name": "i1g4fbf",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [
+    1002,
+    1003
+  ],
+  "card_tags": [
+    1001
+  ],
+  "enthusiasm": 0,
+  "second_effect_text": "<Trigger> At the start of the round or when this card is revealed, all Power cards gain damage minus 1 (damage dealt by those cards is reduced by 1 at the end of their resolutions).",
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6407a351c503d0c6f5a33237"
+  },
+  "name": "Swift Guard!!",
+  "card_class": "Staunch",
+  "hero_name": "Golden Wall",
+  "hero_id": "GW1",
+  "series_name": "Golden Wall//Cosmic//Defender",
+  "card_number": 1007,
+  "effect_text": "<Target> Foe on your left or right. //<1-5> No effect. //<6-11> Deal 2 damage. Damage you and your Fighter take this turn is reduced by 1. //<12+> Deal 3 damage. Damage you and your Fighter take this turn is reduced by 1.",
+  "flavor_text": "string",
+  "illustrator": "Eric Rodrigues",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g2gwm.png",
+  "file_name": "i1g2gwm",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "enthusiasm": 0,
+  "second_effect_text": "<Trigger> If you are targeted for damage, resolve this Move in your play.",
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:45",
+    "full_time": {
+      "$date": "2023-06-25T18:45:13.925Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6407ad1b5139f66679d6ac55"
+  },
+  "name": "Formation of the Golden Wall!",
+  "card_class": "Staunch",
+  "hero_name": "Golden Wall",
+  "hero_id": "GW1",
+  "series_name": "Golden Wall//Cosmic//Defender//Transformation",
+  "card_number": 1006,
+  "effect_text": "Gain 2 HP.",
+  "flavor_text": "string",
+  "illustrator": "Eric Rodrigues",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g2gwa.png",
+  "file_name": "i1g2gwa",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "enthusiasm": 0,
+  "second_effect_text": "<Trigger> If you are targeted for damage, your Fighter gains Block 1 (that card is revealed).",
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:45",
+    "full_time": {
+      "$date": "2023-06-25T18:45:24.573Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6407d2c3a777df7381b6d87a"
+  },
+  "name": "Battle Girl Alice",
+  "card_class": "Power",
+  "hero_name": "Battle Girl Alice",
+  "hero_id": "BGA",
+  "series_name": "Battle Girl Alice//Magic//Brawler",
+  "card_number": 1029,
+  "effect_text": "This card gains Counter 1.",
+  "flavor_text": "string",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r4bgaf.png",
+  "file_name": "i1r4bgaf",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [
+    1002,
+    1002
+  ],
+  "card_tags": [
+    1001
+  ],
+  "enthusiasm": 0,
+  "second_effect_text": "<Trigger> If you defend with this card, Counter damage this card deals is treated as bypassing damage (once only).",
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:45",
+    "full_time": {
+      "$date": "2023-06-25T18:45:34.425Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "640935736b4d5881ee5633dc"
+  },
+  "name": "Golden Wall",
+  "card_class": "Staunch",
+  "hero_name": "Golden Wall",
+  "hero_id": "GW1",
+  "series_name": "Golden Wall//Cosmic//Defender",
+  "card_number": 1005,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> At the start of the round or when this card is revealed, draw 1 card and this card gains 2 HP.",
+  "flavor_text": "string",
+  "illustrator": "Eric Rodrigues",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g2gwf.png",
+  "file_name": "i1g2gwf",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [
+    1001
+  ],
+  "card_tags": [
+    1001
+  ],
+  "second_effect_text": "<Critical> You can 1 damage to a random foe each time you resolve a Staunch card or defend with this card this round.",
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:45",
+    "full_time": {
+      "$date": "2023-06-25T18:45:54.655Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "640935786b4d5881ee5633dd"
+  },
+  "name": "Gold Frag",
+  "card_class": "",
+  "hero_name": "string",
+  "hero_id": "GW1",
+  "series_name": "Golden Wall//Cosmic//Defender",
+  "card_number": 1070,
+  "enthusiasm": 0,
+  "effect_text": "<L. Trigger> When a Fighter in your play is revealed, that Fighter gains 1 HP.",
+  "flavor_text": "string",
+  "illustrator": "Eric Rodrigues",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl02gwi.png",
+  "file_name": "i1pl02gwi",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1001,
+    1003,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "second_effect_text": "<C. Trigger> If you resolve the trigger effect of a Staunch card in your play, deal 2 damage to a random foe.",
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 27,
+    "time": "02:39",
+    "full_time": {
+      "$date": "2023-07-27T02:39:55.794Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6409357e6b4d5881ee5633de"
+  },
+  "name": "Double Wall Blowback!!!",
+  "card_class": "Staunch",
+  "hero_name": "Golden Wall",
+  "hero_id": "GW1",
+  "series_name": "Golden Wall//Cosmic//Defender",
+  "card_number": 1008,
+  "enthusiasm": 7,
+  "effect_text": "<Target> Foes on your left and right. //<1-5> Deal 2 damage. //<6-11> Deal 3 damage and if either target has a defending Fighter, deal 1 bypassing damage to them. //<12+> Deal 3 damage and if either target has a defending Fighter, they both take 1 damage.",
+  "flavor_text": "string",
+  "illustrator": "Eric Rodrigues",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g2gwe.png",
+  "file_name": "i1g2gwe",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "second_effect_text": "<Trigger> If this card is discarded from your hand or play,  your Fighter gains 2 HP (that card is revealed).",
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:46",
+    "full_time": {
+      "$date": "2023-06-25T18:46:07.445Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "640935836b4d5881ee5633df"
+  },
+  "name": "New Foundation",
+  "card_class": "",
+  "hero_name": "string",
+  "hero_id": "GW1",
+  "series_name": "Golden Wall//Cosmic//Defender",
+  "card_number": 1072,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> If you resolve a trigger effect, gain 1 HP.",
+  "flavor_text": "string",
+  "illustrator": "Eric Rodrigues",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb2gw.png",
+  "file_name": "i1cb2gw",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "second_effect_text": "<Critical> Gain 2 HP.",
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:46",
+    "full_time": {
+      "$date": "2023-06-25T18:46:12.648Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "640b9f828e4a61dcf4e46dc3"
+  },
+  "name": "Trance State!",
+  "card_class": "Power",
+  "hero_id": "BE1",
+  "series_name": "Burst Esper//Psychic//Energy",
+  "card_number": 1026,
+  "enthusiasm": 0,
+  "effect_text": "Discard up to 3 cards from your hand, then add 1 to your Focus for each card discarded. If you discarded 3 cards, resolve 1 of those discarded cards from your discard pile.",
+  "flavor_text": "string",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r3bea.png",
+  "file_name": "i1r3bea",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "second_effect_text": "<Trigger> If this card is discarded from your hand or play, deal 2 damage to a random foe.",
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 14,
+    "time": "16:14",
+    "full_time": {
+      "$date": "2023-09-14T16:14:53.989Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "640cd72b5f6730657ad87285"
+  },
+  "name": "Bolt Blossom",
+  "card_class": "Unity",
+  "hero_id": "BB1",
+  "series_name": "Bolt Blossom//Nature//Energy",
+  "card_number": 1045,
+  "enthusiasm": 0,
+  "effect_text": "Discard 1 card from your hand, then unfurl 4 cards. Add any Fighters with a class different to this card to your play and discard the other unfurled cards.",
+  "second_effect_text": "",
+  "illustrator": "Fililppo Scalisi",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b4bbf.png",
+  "file_name": "i1b4bbf",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [],
+  "reactions": [
+    1003
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:46",
+    "full_time": {
+      "$date": "2023-06-25T18:46:24.877Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "640ce3485f6730657ad8738d"
+  },
+  "name": "Sparking Rainbow Flower Frenzy!!!",
+  "card_class": "Unity",
+  "hero_id": "BB1",
+  "series_name": "Bolt Blossom//Nature//Energy",
+  "card_number": 1048,
+  "enthusiasm": 12,
+  "effect_text": "<Target> Strongest foe. //Add 1 to your Focus for each non-Unity class in your play. //<1-5> Deal 1 damage for each non-Unity class in your play. //<6-11> Deal 2 damage for each different class in your play. //<12+> Deal 3 damage for each different class in your play. Ignore the reaction(s) of defending Fighter(s).",
+  "second_effect_text": "",
+  "illustrator": "Fililppo Scalisi",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b4bbe.png",
+  "file_name": "i1b4bbe",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 1,
+    "time": "14:43",
+    "full_time": {
+      "$date": "2023-09-01T14:43:13.916Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "640ce5705f6730657ad873bf"
+  },
+  "name": "Taxonomy Above All Orders",
+  "card_class": "",
+  "hero_id": "BB1",
+  "series_name": "Bolt Blossom//Nature//Energy",
+  "card_number": 1101,
+  "enthusiasm": 0,
+  "effect_text": "Apply the following effects based on each different class in your play (you can only apply each effect once): //<Staunch> Gain 2 HP and draw 1 card. //<Power> Deal 2 damage to a foe or add 2 to your Focus. //<Unity> Reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time). //<Canny> Gain 1 Comeback.",
+  "second_effect_text": "",
+  "illustrator": "Fililppo Scalisi",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl12bbe.png",
+  "file_name": "i1pl12bbe",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 1,
+    "time": "14:34",
+    "full_time": {
+      "$date": "2023-09-01T14:34:03.767Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "640fa56627a3b154a88df42b"
+  },
+  "name": "Side Step Counter!!",
+  "card_class": "Power",
+  "hero_id": "BGA",
+  "series_name": "Battle Girl Alice",
+  "card_number": 1031,
+  "enthusiasm": 0,
+  "effect_text": "<Target> Foe on your right. //<1-5> Remove 1 reaction token from your Fighter. //<6-11> Deal 2 damage. Your Fighter gains Counter 1. //<12+> Deal 2 bypassing damage. Your Fighter gains Counter 1.",
+  "second_effect_text": "",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r4bgam.png",
+  "file_name": "",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:51",
+    "full_time": {
+      "$date": "2023-06-25T18:51:22.412Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "640fa9ec27a3b154a88df432"
+  },
+  "name": "Spinning Swallow Tail Deathblow!!!",
+  "card_class": "Power",
+  "hero_id": "BGA",
+  "series_name": "Battle Girl Alice",
+  "card_number": 1032,
+  "enthusiasm": 19,
+  "effect_text": "<Target> Foe on your left. //<1-5> Remove 2 reaction tokens from your Fighter. //<6-11> Deal 2 damage. Your Fighter gains Redirect 1. //<12+> Deal 2 bypassing damage. Your Fighter gains Redirect 1.",
+  "second_effect_text": "",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r4bgae.png",
+  "file_name": "",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:51",
+    "full_time": {
+      "$date": "2023-06-25T18:51:30.307Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "641098bd159c81c7afebd106"
+  },
+  "name": "Battle Girl Transformation!",
+  "card_class": "Power",
+  "hero_id": "BGA",
+  "series_name": "Battle Girl Alice//Magic//Brawler",
+  "card_number": 1030,
+  "enthusiasm": 0,
+  "effect_text": "Resolve 1 of the following effects. If you have yet to deal damage this round, resolve 2 different effects instead: <> Your Fighter gains Counter 1. <> Take 2 damage, then your Fighter gains 2 HP. <> Draw 1 Pluck.",
+  "second_effect_text": "",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r4bgaa.png",
+  "file_name": "i1r4bgaa",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:46",
+    "full_time": {
+      "$date": "2023-06-25T18:46:56.712Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64109f06159c81c7afebd119"
+  },
+  "name": "Double Combatants!",
+  "card_class": "Unity",
+  "hero_id": "DW1",
+  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "card_number": 1034,
+  "enthusiasm": 0,
+  "effect_text": "Draw 1 card. If you have a Fighter in your play, it is now defending. Add 1 Fighter from your hand to your play.",
+  "second_effect_text": "",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b1dwa.png",
+  "file_name": "i1b1dwa",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:51",
+    "full_time": {
+      "$date": "2023-06-25T18:51:36.168Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6410a48cb100cf99372ee885"
+  },
+  "name": "Dual Wing Strike!!",
+  "card_class": "Unity",
+  "hero_id": "DW1",
+  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "card_number": 1035,
+  "enthusiasm": 0,
+  "effect_text": "<Target> Your strongest foe. //<1-5> Deal 2 damage. //<6-11> Deal 2 damage. Draw 1 card. //<12+> Deal 2 damage plus 1 additional damage for each card in your play past 4. Add 1 Unity card from the discard pile to your hand.",
+  "second_effect_text": "",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b1dwm.png",
+  "file_name": "i1b1dwm",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:51",
+    "full_time": {
+      "$date": "2023-06-25T18:51:44.576Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6410a5fabaeb0bbfb51492b3"
+  },
+  "name": "Jet and Climber",
+  "card_class": "Unity",
+  "hero_id": "DW1",
+  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "card_number": 1033,
+  "enthusiasm": 0,
+  "effect_text": "Add 1 Move or MAX VARIABLE from your hand to your play (MAX VARIABLE counts as a Move).\n\n\n",
+  "second_effect_text": "",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b1dwf.png",
+  "file_name": "i1b1dwf",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [],
+  "reactions": [
+    1003
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 17,
+    "time": "17:22",
+    "full_time": {
+      "$date": "2023-07-17T17:22:39.536Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6410aaa0baeb0bbfb51492ba"
+  },
+  "name": "Dive Bomb Finisher!!!",
+  "card_class": "Unity",
+  "hero_id": "DW1",
+  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "card_number": 1036,
+  "enthusiasm": 20,
+  "effect_text": "<Target> Your weakest foe. //<1-5> Deal 1 damage. //<6-11> Deal 3 damage. //<12+> Deal 1 damage for each card in your play. Return 1 other card in your play to your hand.\n\n\n",
+  "second_effect_text": "",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b1dwe.png",
+  "file_name": "i1b1dwe",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:51",
+    "full_time": {
+      "$date": "2023-06-25T18:51:49.451Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6410c90e478149e0847e243b"
+  },
+  "name": "Healing Backfire!!",
+  "card_class": "Staunch",
+  "hero_id": "FB1",
+  "series_name": "Flamebell//Magic//Quest",
+  "card_number": 1015,
+  "enthusiasm": 0,
+  "effect_text": "Gain 2 HP.",
+  "second_effect_text": "<Trigger>  If you take damage, deal 3 damage to all foes with a Power card(s) in their play.\n\n",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g4fbm.png",
+  "file_name": "",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 29,
+    "time": "23:35",
+    "full_time": {
+      "$date": "2023-06-29T23:35:49.836Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6412232fd762a869c0b2e0b5"
+  },
+  "name": "Thermodynamic Break!!!",
+  "card_class": "Power",
+  "hero_id": "BE1",
+  "series_name": "Burst Esper//Psychic//Energy",
+  "card_number": 1028,
+  "enthusiasm": 13,
+  "effect_text": "<Target> All foes with a larger hand than you (damage is calculated separately for each target). //<1-5> Deal 1 damage. //<6-11> Deal damage equal to the difference. Draw 1 card. //<12+> Deal damage equal to the difference plus 1. Ignore the reaction(s) of defending Fighter(s). Draw 1 card.",
+  "second_effect_text": "",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r3bee.png",
+  "file_name": "i1r3bee",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 17,
+    "time": "04:15",
+    "full_time": {
+      "$date": "2023-07-17T04:15:43.872Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6412927438b70f477bb72e68"
+  },
+  "name": "“Get Behind Me!”",
+  "card_class": "",
+  "hero_id": "GW1",
+  "series_name": "Golden Wall//Cosmic//Defender//Call",
+  "card_number": 1071,
+  "enthusiasm": 0,
+  "effect_text": "<C.Trigger> If you are targeted for damage and your Fighter has 3 or less HP, add 1 card from your hand to your play. The added card takes the damage instead (this does not count as defending). If the card added was a Staunch Fighter, resolve its main effect.",
+  "second_effect_text": "",
+  "illustrator": "Eric Rodrigues",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl02gwe.png",
+  "file_name": "",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:52",
+    "full_time": {
+      "$date": "2023-06-25T18:52:47.394Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64130de7b00a31a52c1b98bf"
+  },
+  "name": "MAX VARIABLE",
+  "card_class": "",
+  "hero_id": "MV1",
+  "series_name": "MAX VARIABLE",
+  "card_number": 1065,
+  "enthusiasm": 0,
+  "effect_text": "Unfurl 4 cards (reveal 4 cards from the top of the Main deck). Add 1 card that matches the type MAX VARIABLE is replacing to your play and add 2 of the other unfurled cards to your hand. Discard MAX VARIABLE and the last unfurled card.",
+  "second_effect_text": "",
+  "illustrator": "mvthwus",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1rb1mv.png",
+  "file_name": "",
+  "card_type": [
+    1005
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1003
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:52",
+    "full_time": {
+      "$date": "2023-06-25T18:52:52.346Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64130eabb00a31a52c1b98d6"
+  },
+  "name": "MAX VARIABLE #2",
+  "card_class": "",
+  "hero_id": "MV1",
+  "series_name": "MAX VARIABLE",
+  "card_number": 1066,
+  "enthusiasm": 0,
+  "effect_text": "\nUnfurl 2 cards (reveal 2 cards from the top of the Main deck). Add 1 card to your play and discard the other card. If the added card matches the type MAX VARIABLE is replacing, draw 1 Pluck. Discard MAX VARIABLE.",
+  "second_effect_text": "",
+  "illustrator": "Dalfovo",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1rb1mvn2.png",
+  "file_name": "",
+  "card_type": [
+    1005
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1003
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 5,
+    "time": "02:15",
+    "full_time": {
+      "$date": "2023-09-05T02:15:41.261Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "641312a7b00a31a52c1b9943"
+  },
+  "name": "\"MAX VARIABLE!!\"",
+  "card_class": "",
+  "hero_id": "MV1",
+  "series_name": "MAX VARIABLE",
+  "card_number": 1116,
+  "enthusiasm": 0,
+  "effect_text": "Discard 2 cards from your hand; add MAX VARIABLEs from the discard pile to your play until you have 4 cards in your play (max of 2). If all cards in your play are MAX VARIABLE, draw 1 Pluck and add 4 to your Focus.",
+  "second_effect_text": "",
+  "illustrator": "Dalfovo",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg2eb.png",
+  "file_name": "",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:53",
+    "full_time": {
+      "$date": "2023-06-25T18:53:03.750Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64133bbbb00a31a52c1b9ad0"
+  },
+  "name": "Max Variable’s Variable Box",
+  "card_class": "",
+  "hero_id": "MV1",
+  "series_name": "MAX VARIABLE",
+  "card_number": 1115,
+  "enthusiasm": 0,
+  "effect_text": "Once per round, if a MAX VARIABLE(s) in any play resolves, roll a die and apply 1 of the following effects based on the result://<1> Gain 1 HP. //<2-3> 1 random card in your play gains damage plus 1. //<4-5> Discard 1 card from your hand; draw 1 Pluck. //<6> Deal 2 damage to all foes, then discard this Item. //Discard this Item after the fourth round of use.",
+  "second_effect_text": "",
+  "illustrator": "mvthwus",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg1i.png",
+  "file_name": "i1plg1i",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:53",
+    "full_time": {
+      "$date": "2023-06-25T18:53:09.084Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413a629b00a31a52c1b9b13"
+  },
+  "name": "Boisterous Call!",
+  "card_class": "Staunch",
+  "hero_id": "PM1",
+  "series_name": "PantheraMan//Nature//Brawler//Call",
+  "card_number": 1002,
+  "enthusiasm": 0,
+  "effect_text": "Gain 1 HP and add 4 to your Focus.",
+  "second_effect_text": "<Trigger> At the start of the round, add 4 to your Enthusiasm and resolve this Aura in your play.",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g1pma.png",
+  "file_name": "",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:54",
+    "full_time": {
+      "$date": "2023-06-25T18:54:34.381Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413a6a7b00a31a52c1b9b32"
+  },
+  "name": "Feasting Claw!!",
+  "card_class": "Staunch",
+  "hero_id": "PM1",
+  "series_name": "PantheraMan//Nature//Brawler",
+  "card_number": 1003,
+  "enthusiasm": 0,
+  "effect_text": "Deal 3 piercing damage to a foe. If you are first to go this round or have the highest Enthusiasm, gain 1 HP.",
+  "second_effect_text": "",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g1pmm.png",
+  "file_name": "",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 8,
+    "day": 31,
+    "time": "17:42",
+    "full_time": {
+      "$date": "2023-08-31T17:42:57.639Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413a730b00a31a52c1b9b47"
+  },
+  "name": "Black Claw Divide!!!",
+  "card_class": "Staunch",
+  "hero_id": "PM1",
+  "series_name": "PantheraMan//Nature//Brawler",
+  "card_number": 1004,
+  "enthusiasm": 17,
+  "effect_text": "<Target> Foe who has yet to go this round. //<1-5> Deal 2 piercing damage. //<6-11> Deal 3 piercing damage. //<12+> Deal 4 piercing damage. The next player's Move(s) and Ending(s) gain damage minus 1 (damage dealt by those cards is reduced by 1 at the end of their resolutions).",
+  "second_effect_text": "",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g1pme.png",
+  "file_name": "i1g1pme",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 1,
+    "time": "14:44",
+    "full_time": {
+      "$date": "2023-09-01T14:44:00.216Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413a82fb00a31a52c1b9b6e"
+  },
+  "name": "Black Note",
+  "card_class": "Canny",
+  "hero_id": "BN1",
+  "series_name": "Black Note//Altered//Quest//Call",
+  "card_number": 1049,
+  "enthusiasm": 0,
+  "effect_text": "All players and their Fighters take 1 damage. Add 3 to your Focus.",
+  "second_effect_text": "<Trigger> At the start of the round or when this card is revealed, damage you and this card take is reduced by 1.\n\n\n",
+  "illustrator": "ahtan_delmundo",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bnf.png",
+  "file_name": "i1p1bnf",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [
+    1002,
+    1002
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:54",
+    "full_time": {
+      "$date": "2023-06-25T18:54:49.794Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413aa1bb00a31a52c1b9bb1"
+  },
+  "name": "Debilitating Sound!",
+  "card_class": "Canny",
+  "hero_id": "BN1",
+  "series_name": "Black Note//Altered//Quest//Call",
+  "card_number": 1050,
+  "enthusiasm": 0,
+  "effect_text": "All players discard 1 Move or MAX VARIABLE replacing a Move from their play. \nIf no card was removed from your play, resolve 1 of the discarded Moves from the owner's discard pile.",
+  "second_effect_text": "",
+  "illustrator": "ahtan_delmundo",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bna.png",
+  "file_name": "i1p1bna",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 14,
+    "time": "16:15",
+    "full_time": {
+      "$date": "2023-09-14T16:15:43.428Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413aa91b00a31a52c1b9bc8"
+  },
+  "name": "Super Sonic Riff!!",
+  "card_class": "Canny",
+  "hero_id": "BN1",
+  "series_name": "Black Note//Altered//Quest//Call",
+  "card_number": 1051,
+  "enthusiasm": 0,
+  "effect_text": "Deal 3 damage to a random foe and you take 2 damage.",
+  "second_effect_text": "<Trigger> At the start of the round, resolve this Move in your play, then discard it. ",
+  "illustrator": "ahtan_delmundo",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bnm.png",
+  "file_name": "i1p1bnm",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:55",
+    "full_time": {
+      "$date": "2023-06-25T18:55:01.747Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413ab47b00a31a52c1b9be7"
+  },
+  "name": "Max Reverb!!!",
+  "card_class": "Canny",
+  "hero_id": "BN1",
+  "series_name": "Black Note//Altered//Quest//Call",
+  "card_number": 1052,
+  "enthusiasm": 5,
+  "effect_text": "<Target> All foes. //If you are at 8 HP or less, add 3 to your Focus. //<1-5> Deal 2 piercing damage. Take 4 damage. //<6-11> Deal 3 piercing damage. Take 3 damage. //<12+> Deal 4 piercing damage and ignore the reaction(s) of defending Fighter(s). Take 2 damage.",
+  "second_effect_text": "",
+  "illustrator": "ahtan_delmundo",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bne.png",
+  "file_name": "i1p1bne",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:55",
+    "full_time": {
+      "$date": "2023-06-25T18:55:06.804Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413ac2fb00a31a52c1b9c06"
+  },
+  "name": "Gravity Enforcer",
+  "card_class": "Canny",
+  "hero_id": "GE1",
+  "series_name": "Gravity Enforcer//Cosmic//Tactical",
+  "card_number": 1061,
+  "enthusiasm": 0,
+  "effect_text": "Foes with Enthusiasm lower than yours can not use reactions. Deal 2 damage to the foe with the lowest Enthusiasm.",
+  "second_effect_text": "<Trigger> At the start of the round or when this card is revealed, lower the Enthusiasm of all foes by 4.",
+  "illustrator": "betomirandaart2",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p4gef.png",
+  "file_name": "i1p4gef",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [
+    1001
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:55",
+    "full_time": {
+      "$date": "2023-06-25T18:55:12.534Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413ad2bb00a31a52c1b9c3d"
+  },
+  "name": "Heavy Aura!",
+  "card_class": "Canny",
+  "hero_id": "GE1",
+  "series_name": "Gravity Enforcer//Cosmic//Tactical",
+  "card_number": 1062,
+  "enthusiasm": 0,
+  "effect_text": "Foes with Enthusiasm lower than yours take 1 damage after resolving an Aura(s) or drawing a card(s). ",
+  "second_effect_text": "<Trigger> At the start of the round, lower the Enthusiasm of all foes by 4 and resolve this Aura in your play.",
+  "illustrator": "betomirandaart2",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p4gea.png",
+  "file_name": "i1p4gea",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 8,
+    "day": 10,
+    "time": "02:57",
+    "full_time": {
+      "$date": "2023-08-10T02:57:42.844Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413adb6b00a31a52c1b9c58"
+  },
+  "name": "Heavy Radius!!",
+  "card_class": "Canny",
+  "hero_id": "GE1",
+  "series_name": "Gravity Enforcer//Cosmic//Tactical",
+  "card_number": 1063,
+  "enthusiasm": 0,
+  "effect_text": "Trigger effects can not be used in response to this card. Deal 3 damage to a foe with Enthusiasm lower than yours. They can not use Items or trigger effects during the next player's turn. ",
+  "second_effect_text": "",
+  "illustrator": "betomirandaart2",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p4gem.png",
+  "file_name": "i1p4gem",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:55",
+    "full_time": {
+      "$date": "2023-06-25T18:55:22.118Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413b79db00a31a52c1b9c77"
+  },
+  "name": "Infinity Mass Press!!!",
+  "card_class": "Canny",
+  "hero_id": "GE1",
+  "series_name": "Gravity Enforcer//Cosmic//Tactical",
+  "card_number": 1064,
+  "enthusiasm": 14,
+  "effect_text": "Reduce the Focus of all foes by 4.",
+  "second_effect_text": "<Target> Foe with Enthusiasm lower than yours. //<1-5> No effect. //<6-11> Deal 4 damage. //<12+> Deal damage equal to the difference (max of 7).",
+  "illustrator": "betomirandaart2",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p4gee.png",
+  "file_name": "i1p4gee",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 1,
+    "time": "14:44",
+    "full_time": {
+      "$date": "2023-09-01T14:44:40.405Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413b968b00a31a52c1b9c96"
+  },
+  "name": "Super Panther Claw",
+  "card_class": "",
+  "hero_id": "PM1",
+  "series_name": "PantheraMan//Nature//Brawler",
+  "card_number": 1067,
+  "enthusiasm": 0,
+  "effect_text": "<Limited> If you have no Moves in your play, deal 2 piercing damage to a foe who has yet to go this round. You can not add Moves to your play this round.",
+  "second_effect_text": "",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl01pmi.png",
+  "file_name": "",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 8,
+    "day": 31,
+    "time": "17:42",
+    "full_time": {
+      "$date": "2023-08-31T17:42:28.674Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413ba34b00a31a52c1b9cbf"
+  },
+  "name": "A Hero’s Entrance",
+  "card_class": "",
+  "hero_id": "PM1",
+  "series_name": "PantheraMan//Nature//Brawler",
+  "card_number": 1068,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> At the start of the round or during a foe's turn, resolve the main effect of 1 Fighter in your play.",
+  "second_effect_text": "<C.Trigger> At the start of the round, you go first.",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl01pme.png",
+  "file_name": "i1pl01pme",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:55",
+    "full_time": {
+      "$date": "2023-06-25T18:55:49.525Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413bac7b00a31a52c1b9ce6"
+  },
+  "name": "Rallying Cry",
+  "card_class": "",
+  "hero_id": "PM1",
+  "series_name": "PantheraMan//Nature//Brawler//Call",
+  "card_number": 1069,
+  "enthusiasm": 0,
+  "effect_text": "This Comeback counts as a Staunch card in your play (this does not count towards play size).",
+  "second_effect_text": "<C.Trigger> At the start of the round or during a foe’s turn, add 8 to your Enthusiasm.",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb1pm.png",
+  "file_name": "",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:55",
+    "full_time": {
+      "$date": "2023-06-25T18:55:55.121Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413bba6b00a31a52c1b9d09"
+  },
+  "name": "Experimental Dual Mode Thruster",
+  "card_class": "",
+  "hero_id": "DW1",
+  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "card_number": 1091,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> At the start of the round, discard 1 card from your hand; resolve one of the following effects: //<> Add 3 to your Focus for your first Focus roll this round. //<> Add 3 to your Enthusiasm this round.",
+  "second_effect_text": "Discard this Item after the third round of use.",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl09dwi.png",
+  "file_name": "i1pl09dwi",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 17,
+    "time": "05:29",
+    "full_time": {
+      "$date": "2023-07-17T05:29:46.782Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413bc36b00a31a52c1b9d24"
+  },
+  "name": "Project HERMES",
+  "card_class": "",
+  "hero_id": "DW1",
+  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "card_number": 1092,
+  "enthusiasm": 0,
+  "effect_text": "Add 1 of the following from their respective discard piles to your hand/ownership: //<>Up to 2 Project cards and 1 Project Pluck except the Event Project HERMES. //<>2 Unity cards. //<>1 MAX VARIABLE and 1 Item.",
+  "second_effect_text": "",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl09dwe.png",
+  "file_name": "i1pl09dwe",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:56",
+    "full_time": {
+      "$date": "2023-06-25T18:56:05.808Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413bcb1b00a31a52c1b9d3b"
+  },
+  "name": "The Survey Crew",
+  "card_class": "",
+  "hero_id": "DW1",
+  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "card_number": 1093,
+  "enthusiasm": 0,
+  "effect_text": "This Comeback counts as a Unity card in your play (this does not count towards play size).",
+  "second_effect_text": "<Critical> Return 1 card from the discard pile to the top of the Main deck.",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb9dw.png",
+  "file_name": "i1cb9dw",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:56",
+    "full_time": {
+      "$date": "2023-06-25T18:56:12.953Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413bd2cb00a31a52c1b9d5a"
+  },
+  "name": "Earplugs",
+  "card_class": "",
+  "hero_id": "BN1",
+  "series_name": "Black Note//Altered//Quest//Call",
+  "card_number": 1103,
+  "enthusiasm": 0,
+  "effect_text": "<Limited> Add 3 to your Focus.",
+  "second_effect_text": "Once per round, if you or your defending Fighter would take damage from a reaction or self inflicted damage, reduce that damage by 2.",
+  "illustrator": "ahtan_delmundo",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl13bni.png",
+  "file_name": "i1pl13bni",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:57",
+    "full_time": {
+      "$date": "2023-06-25T18:57:19.806Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413bdabb00a31a52c1b9d79"
+  },
+  "name": "“1..2..3..”",
+  "card_class": "",
+  "hero_id": "BN1",
+  "series_name": "Black Note//Altered//Quest//Call",
+  "card_number": 1104,
+  "enthusiasm": 0,
+  "effect_text": "All players discard cards from their plays until they have 3 or less cards, then deal 2 damage to all players that discarded card(s) from their play. ",
+  "second_effect_text": "<Critical> All foes and their Fighters take 1 damage.",
+  "illustrator": "ahtan_delmundo",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl13bne.png",
+  "file_name": "i1pl13bne",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:57",
+    "full_time": {
+      "$date": "2023-06-25T18:57:24.796Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413be4fb00a31a52c1b9d98"
+  },
+  "name": "Tuning",
+  "card_class": "",
+  "hero_id": "BN1",
+  "series_name": "Black Note//Altered//Quest//Call",
+  "card_number": 1105,
+  "enthusiasm": 0,
+  "effect_text": "This Comeback counts as a Canny card in your play (this does not count towards play size).",
+  "second_effect_text": "<Critical> Add 3 to your Focus.",
+  "illustrator": "ahtan_delmundo",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb13bn.png",
+  "file_name": "i1cb13bn",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:57",
+    "full_time": {
+      "$date": "2023-06-25T18:57:29.459Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413bee1b00a31a52c1b9db7"
+  },
+  "name": "Gravity Patrol Badge",
+  "card_class": "",
+  "hero_id": "GE1",
+  "series_name": "Gravity Enforcer//Cosmic//Tactical",
+  "card_number": 1112,
+  "enthusiasm": 0,
+  "effect_text": "<L.Trigger> During a foe's turn, card effects can not be resolved more than once this round.",
+  "second_effect_text": "Lower the Enthusiasm of all foes by 2.",
+  "illustrator": "betomirandaart2",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl16gei.png",
+  "file_name": "i1pl16gei",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1001,
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:57",
+    "full_time": {
+      "$date": "2023-06-25T18:57:34.918Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413bf79b00a31a52c1b9de4"
+  },
+  "name": "Ground Collapse",
+  "card_class": "",
+  "hero_id": "GE1",
+  "series_name": "Gravity Enforcer//Cosmic//Tactical",
+  "card_number": 1113,
+  "enthusiasm": 0,
+  "effect_text": "Reduce the focus of all foes by 2. If they have Enthusiasm lower than yours, reduce it by 4 instead.",
+  "second_effect_text": "<Trigger> At the start of the round, lower the Enthusiasm of all foes by 2, then resolve this Event in your ownership.",
+  "illustrator": "betomirandaart2",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl16gee.png",
+  "file_name": "i1pl16gee",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 29,
+    "time": "23:57",
+    "full_time": {
+      "$date": "2023-06-29T23:57:59.577Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413bffeb00a31a52c1b9e03"
+  },
+  "name": "New Equilibrium",
+  "card_class": "",
+  "hero_id": "GE1",
+  "series_name": "Gravity Enforcer//Cosmic//Tactical",
+  "card_number": 1114,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> At the start of the round or during a foe's turn, lower the Enthusiasm of all foes by 2.",
+  "second_effect_text": "<Critical> Your Ending gains damage plus 1 if it deals damage to a foe with Enthusiasm lower than yours.",
+  "illustrator": "betomirandaart2",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb16ge.png",
+  "file_name": "i1cb16ge",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:57",
+    "full_time": {
+      "$date": "2023-06-25T18:57:45.089Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413c0c4b00a31a52c1b9e32"
+  },
+  "name": "The Star-Cat Alliance",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Cosmic//Nature//Team",
+  "card_number": 1123,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> At the start of a round, gain 1 HP and add 2 to your Enthusiasm.",
+  "second_effect_text": "<C.Trigger> At the start of a foe's turn, deal 1 damage to that foe if they have Enthusiasm lower than yours.",
+  "illustrator": "betomirandaart2",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb17g.png",
+  "file_name": "i1cb17g",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 1,
+    "time": "19:31",
+    "full_time": {
+      "$date": "2023-07-01T19:31:56.769Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413c161b00a31a52c1b9e59"
+  },
+  "name": "Old Playbook",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Development",
+  "card_number": 1120,
+  "enthusiasm": 0,
+  "effect_text": "<Limited> This Item counts as a Canny card in your play this round (this does not count towards play size).",
+  "second_effect_text": "Discard this Item; reveal 2 cards in a foe's play.",
+  "illustrator": "prusin_senpai",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg8i.png",
+  "file_name": "i1plg8i",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 17,
+    "time": "05:29",
+    "full_time": {
+      "$date": "2023-07-17T05:29:27.053Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413c1d3b00a31a52c1b9e74"
+  },
+  "name": "Off Duty",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Mystic//Nature//Relaxation",
+  "card_number": 1122,
+  "enthusiasm": 0,
+  "effect_text": "Players can not use the effects of Fighters or reactions. You can not resolve this Event if you defended with a Fighter, resolved the effects of a Fighter(s) or used a reaction(s) this round.",
+  "second_effect_text": "",
+  "illustrator": "betomirandaart2",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg4e.png",
+  "file_name": "i1plg4e",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:58",
+    "full_time": {
+      "$date": "2023-06-25T18:58:01.846Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413c2dcb00a31a52c1b9e8b"
+  },
+  "name": "Ceifeira Preta",
+  "card_class": "Canny",
+  "hero_id": "CP1",
+  "series_name": "Ceifeira Preta//Mystic//Quest",
+  "card_number": 1057,
+  "enthusiasm": 0,
+  "effect_text": "Resolve 1 of the following effects: //<> Gain 1 Comeback and add 1 Fighter from the discard pile to your hand. //<> Discard 2 Comebacks in your ownership; return 3 cards from the discard pile to the top of the Main deck in any order. ",
+  "second_effect_text": "",
+  "illustrator": "Hugo Roberto",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p3cpf.png",
+  "file_name": "i1p3cpf",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [],
+  "reactions": [
+    1004
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:58",
+    "full_time": {
+      "$date": "2023-06-25T18:58:07.789Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6413c34cb00a31a52c1b9eaa"
+  },
+  "name": "Life Cleaving Presence!",
+  "card_class": "Canny",
+  "hero_id": "CP1",
+  "series_name": "Ceifeira Preta//Mystic//Quest",
+  "card_number": 1058,
+  "enthusiasm": 0,
+  "effect_text": "This card cannot target the same foe twice.// Discard 1 card from your strongest or weakest foe's hand  for each Comeback in your ownership (max of 3), then they draw 1 card for each Comeback in their ownership plus 1 (max of 3).",
+  "second_effect_text": "",
+  "illustrator": "Hugo Roberto",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p3cpa.png",
+  "file_name": "i1p3cpa",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 29,
+    "time": "23:53",
+    "full_time": {
+      "$date": "2023-06-29T23:53:14.316Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "641419bfb00a31a52c1b9ec1"
+  },
+  "name": "Reaping Dive!!",
+  "card_class": "Canny",
+  "hero_id": "CP1",
+  "series_name": "Ceifeira Preta//Mystic//Quest",
+  "card_number": 1059,
+  "enthusiasm": 0,
+  "effect_text": "Take 2 damage, then resolve 1 Comeback in your ownership as if you were at critical HP.",
+  "second_effect_text": "<Trigger> If a card(s) is discarded from your hand or play, gain 1 Comeback and resolve this Move in your play.",
+  "illustrator": "Hugo Roberto",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p3cpm.png",
+  "file_name": "i1p3cpm",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 29,
+    "time": "23:53",
+    "full_time": {
+      "$date": "2023-06-29T23:53:47.645Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64141a6ab00a31a52c1b9ee0"
+  },
+  "name": "Psychopomp Chop!!!",
+  "card_class": "Canny",
+  "hero_id": "CP1",
+  "series_name": "Ceifeira Preta//Mystic//Quest",
+  "card_number": 1060,
+  "enthusiasm": 8,
+  "effect_text": "<Target> Your strongest or weakest foe. //<1-5> Deal 1 damage. //<6-11> Deal 3 damage. Gain 1 Comeback. //<12+> Deal 3 damage. Gain 2 Comebacks, then resolve 1 of your Comebacks as if you were at critical HP.",
+  "second_effect_text": "",
+  "illustrator": "Hugo Roberto",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p3cpe.png",
+  "file_name": "i1p3cpe",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:58",
+    "full_time": {
+      "$date": "2023-06-25T18:58:25.121Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64141bb5b00a31a52c1b9eff"
+  },
+  "name": "Portal",
+  "card_class": "Canny",
+  "hero_id": "P01",
+  "series_name": "Warp Family//Cosmic//Psychic",
+  "card_number": 1053,
+  "enthusiasm": 0,
+  "effect_text": "Look at a random foe's hand, then discard 1 card from their hand. That foe draws 1 card.//\nIf you have a Unity card in your play, resolve this card one more time, but the target foe draws 2 cards instead.\n\n\n",
+  "second_effect_text": "",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pf.png",
+  "file_name": "i1p2pf",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [],
+  "reactions": [
+    1002,
+    1004
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 9,
+    "time": "14:45",
+    "full_time": {
+      "$date": "2023-07-09T14:45:45.336Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64141c68b00a31a52c1b9f26"
+  },
+  "name": "Teleporting Mastery!",
+  "card_class": "Canny",
+  "hero_id": "P01",
+  "series_name": "Warp Family//Cosmic//Psychic",
+  "card_number": 1054,
+  "enthusiasm": 0,
+  "effect_text": "Discard 1 Aura, Move or Ending in a foe's play, then that foe adds 1 random card matching the removed card's type or MAX VARIABLE from their hand to their play (the new card is revealed). ",
+  "second_effect_text": "<Trigger> During a foe's turn, resolve this Aura in your play.",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pa.png",
+  "file_name": "",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:58",
+    "full_time": {
+      "$date": "2023-06-25T18:58:34.802Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64141dadb00a31a52c1b9f55"
+  },
+  "name": "Distant Drop-off!!!",
+  "card_class": "Canny",
+  "hero_id": "P01",
+  "series_name": "Warp Family//Cosmic//Psychic",
+  "card_number": 1056,
+  "enthusiasm": 16,
+  "effect_text": "<Target> Random foe. //If you have a Unity card in your play, add 3 to your focus. //<1-5> Deal 3 damage. //<6-11> Deal 3 damage. Discard 1 card from their hand. //<12+> Deal 3 damage. They discard 1 card from their play.",
+  "second_effect_text": "",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pe.png",
+  "file_name": "i1p2pe",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:58",
+    "full_time": {
+      "$date": "2023-06-25T18:58:39.540Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64141e41b00a31a52c1b9f74"
+  },
+  "name": "Spatial Reversal!!",
+  "card_class": "Canny",
+  "hero_id": "P01",
+  "series_name": "Warp Family//Cosmic//Psychic",
+  "card_number": 1055,
+  "enthusiasm": 0,
+  "effect_text": "This card copies the text of a foe's Move on your left or right until the end of your turn (if their Move is face-down, reveal it).",
+  "second_effect_text": "<Trigger> If you are targeted for damage, your Fighter gains Redirect 1 (that card is revealed).",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pm.png",
+  "file_name": "i1p2pm",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:08",
+    "full_time": {
+      "$date": "2023-06-25T19:08:33.350Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6414200db00a31a52c1b9fc3"
+  },
+  "name": "Spirit Channeling and Union!",
+  "card_class": "Staunch",
+  "hero_id": "BW1",
+  "series_name": "Bone Whisperer//Mystic//Nature",
+  "card_number": 1010,
+  "enthusiasm": 0,
+  "effect_text": "Add 1 Pluck from the discard pile to your Active Pluck. You can not resolve it this round.",
+  "second_effect_text": "<Trigger> If a card(s) would be discarded from your hand or play, resolve this Aura in your play, then discard this card instead (max of 1).",
+  "illustrator": "Ranbutam",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g3bwa.png",
+  "file_name": "i1g3bwa",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:08",
+    "full_time": {
+      "$date": "2023-06-25T19:08:39.910Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "641420a2b00a31a52c1b9fe2"
+  },
+  "name": "Umala - Heavy Trampling!!",
+  "card_class": "Staunch",
+  "hero_id": "BW1",
+  "series_name": "Bone Whisperer//Mystic//Nature",
+  "card_number": 1011,
+  "enthusiasm": 0,
+  "effect_text": "You can resolve one additional Event this round.// Deal 1 piercing damage for each Event in your ownership (max of 4) to a random foe, then gain 1 HP.",
+  "second_effect_text": "",
+  "illustrator": "Ranbutam",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g3bwm.png",
+  "file_name": "i1g3bwm",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 4,
+    "time": "22:45",
+    "full_time": {
+      "$date": "2023-09-04T22:45:34.815Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6414212cb00a31a52c1b9ff9"
+  },
+  "name": "Bone Whisperer",
+  "card_class": "Staunch",
+  "hero_id": "BW1",
+  "series_name": "Bone Whisperer//Mystic//Nature",
+  "card_number": 1009,
+  "enthusiasm": 0,
+  "effect_text": "Resolve 1 of the following effects: //<> Discard up to 3 cards from your hand; gain 1 HP for each card discarded. //<>Discard 3 cards from your hand; unfurl 3 Pluck (reveal 3 cards from the top of the Pluck deck). Add 2 Pluck to your ownership and discard the other unfurled Pluck.",
+  "second_effect_text": "",
+  "illustrator": "Ranbutam",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g3bwf.png",
+  "file_name": "i1g3bwf",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [],
+  "reactions": [
+    1001
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:08",
+    "full_time": {
+      "$date": "2023-06-25T19:08:52.534Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6414223fb00a31a52c1ba01e"
+  },
+  "name": "Pitch - Swift Rending!!!",
+  "card_class": "Staunch",
+  "hero_id": "BW1",
+  "series_name": "Bone Whisperer//Mystic//Nature",
+  "card_number": 1012,
+  "enthusiasm": 15,
+  "effect_text": "<Target> Random foe. //<1-5> No effect. //<6-11> Deal 3 damage. Add 1 Event from the discard pile to your ownership. //<12+> Deal 3 piercing damage. Add 1 card and 1 Event from their respective discard piles to your hand/ownership.",
+  "second_effect_text": "",
+  "illustrator": "Ranbutam",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g3bwe.png",
+  "file_name": "i1g3bwe",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:08",
+    "full_time": {
+      "$date": "2023-06-25T19:08:58.859Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64142354b00a31a52c1ba03d"
+  },
+  "name": "Restorative Heat!!!",
+  "card_class": "Staunch",
+  "hero_id": "FB1",
+  "series_name": "Flamebell//Magic//Quest",
+  "card_number": 1016,
+  "enthusiasm": 11,
+  "effect_text": "<Target> Foe of your choice. //All foes with a Power card(s) in their play take 1 damage. //<1-5> Deal 3 damage. //<6-11> Deal 3 damage. Gain 1 HP. //<12+> Deal 4 damage. Gain 2 HP and resolve your Aura one more time.",
+  "second_effect_text": "",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g4fbe.png",
+  "file_name": "i1g4fbe",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 29,
+    "time": "23:36",
+    "full_time": {
+      "$date": "2023-06-29T23:36:43.986Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "641423bdb00a31a52c1ba05c"
+  },
+  "name": "Warm Mending!",
+  "card_class": "Staunch",
+  "hero_id": "FB1",
+  "series_name": "Flamebell//Magic//Quest",
+  "card_number": 1014,
+  "enthusiasm": 0,
+  "effect_text": "Add 1 card from the discard pile to your hand. If the card added was Staunch or Power, gain 2 HP.",
+  "second_effect_text": "",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g4fba.png",
+  "file_name": "",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 29,
+    "time": "23:33",
+    "full_time": {
+      "$date": "2023-06-29T23:33:15.972Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "641425ffb00a31a52c1ba073"
+  },
+  "name": "New Growth",
+  "card_class": "",
+  "hero_id": "BB1",
+  "series_name": "Bolt Blossom//Nature//Energy",
+  "card_number": 1102,
+  "enthusiasm": 0,
+  "effect_text": "Add 2 to the Focus of the next card in your play. ",
+  "second_effect_text": "<Critical> Add the top card of the Main deck to your play.",
+  "illustrator": "Filippo Scalisi",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb12bb.png",
+  "file_name": "i1cb12bb",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:09",
+    "full_time": {
+      "$date": "2023-06-25T19:09:11.835Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64169cb10673ac355a739f21"
+  },
+  "name": "Grimmer Form",
+  "card_class": "",
+  "hero_id": "CP1",
+  "series_name": "Ceifeira Preta//Mystic//Quest//Transformation",
+  "card_number": 1110,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> If you are targeted for damage, apply each of the following effects for each Comeback in your ownership: //<1> Your Fighter is treated as Canny. //<2> Discard 1 card in your strongest or weakest foe's hand. //<3> You can discard 1 card in your play; you are unaffected by the effect(s) of the card targeting you. //<4+> Your next Move and next Ending gain damage plus 1.",
+  "second_effect_text": "",
+  "illustrator": "Hugo Roberto",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl15cpe.png",
+  "file_name": "i1pl15cpe",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:09",
+    "full_time": {
+      "$date": "2023-06-25T19:09:18.581Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6431be08b87f22f9450ff544"
+  },
+  "name": "Blast Mouth",
+  "card_class": "Power",
+  "hero_id": "BM1",
+  "series_name": "Blast Mouth//Altered//Nature",
+  "card_number": 1017,
+  "enthusiasm": 0,
+  "effect_text": "Deal 2 damage to a foe.\nIf you are last to go this round or have the lowest Enthusiasm, deal 1 additional damage and draw 1 Pluck.",
+  "second_effect_text": "",
+  "illustrator": "Znttus",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r1bmf.png",
+  "file_name": "",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [],
+  "reactions": [
+    1002,
+    1002
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 29,
+    "time": "23:38",
+    "full_time": {
+      "$date": "2023-06-29T23:38:25.821Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6439559c3d6559427fc5845f"
+  },
+  "name": "Electric Powered Wildflowers!",
+  "card_class": "Unity",
+  "hero_id": "BB1",
+  "series_name": "Bolt Blossom//Nature//Energy",
+  "card_number": 1046,
+  "enthusiasm": 0,
+  "effect_text": "Add 1 random card from your hand to your play. Add 2 to your Focus.",
+  "second_effect_text": "",
+  "illustrator": "Filippo Scalisi",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b4bba.png",
+  "file_name": "i1b4bba",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:09",
+    "full_time": {
+      "$date": "2023-06-25T19:09:28.245Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643956423d6559427fc58466"
+  },
+  "name": "Mirror Plant!!",
+  "card_class": "Unity",
+  "hero_id": "BB1",
+  "series_name": "Bolt Blossom//Nature//Energy",
+  "card_number": 1047,
+  "enthusiasm": 0,
+  "effect_text": "Resolve 1 of the following effects: //<> This card copies the text of your Aura. //<> Return 2 cards from your hand to the top of the Main deck in any order; resolve your Fighter and reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time).",
+  "second_effect_text": "",
+  "illustrator": "Filippo Scalisi",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b4bbm.png",
+  "file_name": "i1b4bbm",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 1,
+    "time": "14:34",
+    "full_time": {
+      "$date": "2023-09-01T14:34:20.127Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643956e33d6559427fc5846d"
+  },
+  "name": "Precious Potted Plant",
+  "card_class": "",
+  "hero_id": "BB1",
+  "series_name": "Bolt Blossom//Nature//Energy",
+  "card_number": 1100,
+  "enthusiasm": 0,
+  "effect_text": "<Limited> Place 1 card from your hand under this Item (if this Item is discarded or changes ownership, the placed card(s) is discarded).\n\n\n",
+  "second_effect_text": "This Item counts as the class(s) of the card(s) under it in each of your plays (this does not count towards play size).",
+  "illustrator": "Filippo Scalisi",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl12bbi.png",
+  "file_name": "i1pl12bbi",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 17,
+    "time": "04:13",
+    "full_time": {
+      "$date": "2023-07-17T04:13:09.333Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6439583c3d6559427fc584dc"
+  },
+  "name": "Change of Plans ",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Cosmic//Defender//Transformation//Call",
+  "card_number": 1124,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> During a foe's turn; switch 1 card in your play that has yet to be resolved with 1 card in your hand of the same type (the new card can not be used to defend).",
+  "second_effect_text": "<Critical> Discard 1 card from your hand; add 1 MAX VARIABLE from your hand to your play (MAX VARIABLE counts as an Aura).\n",
+  "illustrator": "mvthwus",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb18g.png",
+  "file_name": "i1cb18g",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:07",
+    "full_time": {
+      "$date": "2023-06-25T19:07:47.834Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643959963d6559427fc5852b"
+  },
+  "name": "\"Hau, Scout Ahead!\"",
+  "card_class": "",
+  "hero_id": "BW1",
+  "series_name": "Bone Whisperer//Mystic//Nature//Call",
+  "card_number": 1074,
+  "enthusiasm": 0,
+  "effect_text": "Add 3 to your Focus and reset 1 of your Pluck.\nDiscard up to 2 Pluck in your ownership; select an equal number of foes. Look at their hand(s) and all cards in their play(s), then discard 1 card from their hand(s). ",
+  "second_effect_text": "",
+  "illustrator": "Ranbutam",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl03bwe.png",
+  "file_name": "i1pl03bwe",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:07",
+    "full_time": {
+      "$date": "2023-06-25T19:07:53.925Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64395a0b3d6559427fc58532"
+  },
+  "name": "Spirit Anchor",
+  "card_class": "",
+  "hero_id": "BW1",
+  "series_name": "Bone Whisperer//Mystic//Nature",
+  "card_number": 1073,
+  "enthusiasm": 0,
+  "effect_text": "<Limited> If you resolve an Event this round, place the Event under this Item instead of discarding it at the end of the round (the placed Event(s) count towards your Pluck limit, and if this Item is discarded or changes ownership, the placed Event(s) is discarded).",
+  "second_effect_text": "The Event(s) under this Item can be resolved one more time; the Event is not discarded at the end of the round.",
+  "illustrator": "Ranbutam",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl03bwi.png",
+  "file_name": "i1pl03bwi",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:08",
+    "full_time": {
+      "$date": "2023-06-25T19:08:01.274Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64395a903d6559427fc58539"
+  },
+  "name": "Reconnection                      ",
+  "card_class": "",
+  "hero_id": "BW1",
+  "series_name": "Bone Whisperer//Mystic//Nature//Relaxation",
+  "card_number": 1075,
+  "enthusiasm": 0,
+  "effect_text": "Discard 2 cards from your hand; gain 1 Event.",
+  "second_effect_text": "<Limited> Draw 1 Pluck and you can resolve one additional Event this round.",
+  "illustrator": "Ranbutam",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb3bw.png",
+  "file_name": "i1cb3bw",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:08",
+    "full_time": {
+      "$date": "2023-06-25T19:08:07.721Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64395bc43d6559427fc585a2"
+  },
+  "name": "Muertorn the Soul Returning Scythe",
+  "card_class": "",
+  "hero_id": "CP1",
+  "series_name": "Ceifeira Preta//Mystic//Quest",
+  "card_number": 1109,
+  "enthusiasm": 0,
+  "effect_text": "Once per round, if you gain a Comeback(s), add 1 Fighter from the discard pile to the top of the Main deck.",
+  "second_effect_text": "<Trigger> If a card(s) in your play is discarded before resolving its main effect, discard this Item; resolve that card (max of 1) as if it was in your play.",
+  "illustrator": "Hugo Roberto",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl15cpi.png",
+  "file_name": "i1pl15cpi",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:08",
+    "full_time": {
+      "$date": "2023-06-25T19:08:12.623Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64395c473d6559427fc585a9"
+  },
+  "name": "Returning Souls",
+  "card_class": "",
+  "hero_id": "CP1",
+  "series_name": "Ceifeira Preta//Mystic//Quest",
+  "card_number": 1111,
+  "enthusiasm": 0,
+  "effect_text": "Add 2 Comebacks from the discard pile to your ownership. You can not resolve them this round. ",
+  "second_effect_text": "<Critical> Discard 2 cards from your play; add 1 Aura from the discard pile to your play.",
+  "illustrator": "Hugo Roberto",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb15cp.png",
+  "file_name": "i1cb15cp",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:08",
+    "full_time": {
+      "$date": "2023-06-25T19:08:19.042Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64395cf53d6559427fc585f1"
+  },
+  "name": "Burst Esper",
+  "card_class": "Power",
+  "hero_id": "BE1",
+  "series_name": "Burst Esper//Psychic//Energy",
+  "card_number": 1025,
+  "enthusiasm": 0,
+  "effect_text": "Deal 2 damage to 2 random foes and add 2 to your Focus. Those targeted foes draws 2 cards.",
+  "second_effect_text": "",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r3bef.png",
+  "file_name": "i1r3bef",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [],
+  "reactions": [
+    1004
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 8,
+    "day": 20,
+    "time": "23:06",
+    "full_time": {
+      "$date": "2023-08-20T23:06:14.820Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64395d643d6559427fc585f8"
+  },
+  "name": "Mass Conversion and Release!!",
+  "card_class": "Power",
+  "hero_id": "BE1",
+  "series_name": "Burst Esper//Psychic//Energy",
+  "card_number": 1027,
+  "enthusiasm": 0,
+  "effect_text": "Discard up to 3 cards from your hand, then deal 1 damage to all foes for each card discarded. If you discarded 3 cards, ignore the reaction(s) of defending Fighter(s).",
+  "second_effect_text": "<Trigger> If this card is discarded from your hand or play, deal 2 damage to a random foe.",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r3bem.png",
+  "file_name": "i1r3bem",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 29,
+    "time": "23:45",
+    "full_time": {
+      "$date": "2023-06-29T23:45:01.592Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64395ea73d6559427fc585ff"
+  },
+  "name": "Power Channeling Unit ",
+  "card_class": "",
+  "hero_id": "BE1",
+  "series_name": "Burst Esper//Psychic//Energy",
+  "card_number": 1085,
+  "enthusiasm": 0,
+  "effect_text": "<Limited> Return 1 card from the discard pile to your hand.",
+  "second_effect_text": "Once per round, if a card in your play or ownership randomly chooses a foe(s) or card(s) at, you choose the target(s) instead. ",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl07bei.png",
+  "file_name": "i1pl07bei",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:13",
+    "full_time": {
+      "$date": "2023-06-25T19:13:03.569Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643961c93d6559427fc58618"
+  },
+  "name": "Testing",
+  "card_class": "",
+  "hero_id": "BE1",
+  "series_name": "Burst Esper//Psychic//Energy",
+  "card_number": 1086,
+  "enthusiasm": 0,
+  "effect_text": "Select 1 card in your play (that card is revealed), then unfurl 5 cards. Add all cards matching that card's class to your hand, then return the other unfurled cards to the top or bottom of the Main deck in any order. ",
+  "second_effect_text": "",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl07bee.png",
+  "file_name": "i1pl07bee",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:13",
+    "full_time": {
+      "$date": "2023-06-25T19:13:09.077Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643962953d6559427fc58635"
+  },
+  "name": "Transfer of Bad Energy",
+  "card_class": "",
+  "hero_id": "BE1",
+  "series_name": "Burst Esper//Psychic//Energy//Relaxation",
+  "card_number": 1087,
+  "enthusiasm": 0,
+  "effect_text": "Discard 1 card from your hand; 1 random card in your play gains damage plus 1 (that card deals 1 additional damage at the end of its resolution).  ",
+  "second_effect_text": "<C.Trigger> At the start of the round, your Fighter gains Redirect 1 (that card is revealed).",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb7be.png",
+  "file_name": "i1cb7be",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:13",
+    "full_time": {
+      "$date": "2023-06-25T19:13:13.733Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643976ef3d6559427fc5879c"
+  },
+  "name": "Healing Fire",
+  "card_class": "",
+  "hero_id": "FB1",
+  "series_name": "Flamebell//Magic//Quest",
+  "card_number": 1076,
+  "enthusiasm": 0,
+  "effect_text": "One per round, if you resolve an Aura, gain 1 HP.",
+  "second_effect_text": "<Trigger> If your Fighter would be defeated or removed from your play, discard this Item; your Fighter gains Endure 1 (that card is revealed).",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl04fbi.png",
+  "file_name": "i1pl04fbi",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 29,
+    "time": "23:37",
+    "full_time": {
+      "$date": "2023-06-29T23:37:39.719Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643977593d6559427fc587a3"
+  },
+  "name": "Supernova",
+  "card_class": "",
+  "hero_id": "FB1",
+  "series_name": "Flamebell//Magic//Quest",
+  "card_number": 1077,
+  "enthusiasm": 0,
+  "effect_text": "All foes with a Power card(s) in their play take 1 damage. All Fighters are treated as Power and all effects that increase damage are cancelled.",
+  "second_effect_text": "<Trigger> At the start of the round or if you are targeted for damage, resolve this Event in your ownership.",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl04fbe.png",
+  "file_name": "i1pl04fbe",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:13",
+    "full_time": {
+      "$date": "2023-06-25T19:13:24.834Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643977cc3d6559427fc587aa"
+  },
+  "name": "Rekindled",
+  "card_class": "",
+  "hero_id": "FB1",
+  "series_name": "Flamebell//Magic//Quest",
+  "card_number": 1078,
+  "enthusiasm": 0,
+  "effect_text": "If a player(s) has a Power card(s) in their play, gain 2 HP.",
+  "second_effect_text": "<Critical> Resolve your Aura one more time.",
+  "illustrator": "XIOLI",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb4fb.png",
+  "file_name": "i1cb4fb",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 8,
+    "day": 31,
+    "time": "17:46",
+    "full_time": {
+      "$date": "2023-08-31T17:46:07.901Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64397afc3d6559427fc58825"
+  },
+  "name": "Red Fist",
+  "card_class": "Power",
+  "hero_id": "RF1",
+  "series_name": "Red Fist//Tech//Brawler",
+  "card_number": 1021,
+  "enthusiasm": 0,
+  "effect_text": "Deal 3 damage to your strongest foe, then discard 3 cards from your hand.",
+  "second_effect_text": "<Trigger> Just before using this card’s reaction(s), remove 3 Counter tokens from this card; draw 3 cards.",
+  "illustrator": "gmoshiro",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rff.png",
+  "file_name": "i1r2rff",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [
+    1002,
+    1002,
+    1002
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 29,
+    "time": "23:44",
+    "full_time": {
+      "$date": "2023-06-29T23:44:32.879Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64397b773d6559427fc5885c"
+  },
+  "name": "Hammerspace",
+  "card_class": "Unity",
+  "hero_id": "HS1",
+  "series_name": "Warp Family//Cosmic//Psychic",
+  "card_number": 1041,
+  "enthusiasm": 0,
+  "effect_text": "Draw 1 card and gain 1 Item. \nIf you have a Canny card in your play, reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time).",
+  "second_effect_text": "",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b3hsf.png",
+  "file_name": "i1b3hsf",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [],
+  "reactions": [
+    1002,
+    1004
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 1,
+    "time": "14:33",
+    "full_time": {
+      "$date": "2023-09-01T14:33:48.477Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f53632e72274cabf63893"
+  },
+  "name": "Ignition Left!!",
+  "card_class": "Power",
+  "hero_id": "RF1",
+  "series_name": "Red Fist//Tech//Brawler",
+  "card_number": 1023,
+  "enthusiasm": 0,
+  "effect_text": "<Target> Foe on your left. //<1-5> Deal 1 damage. //<6-11> Deal 3 piercing damage. //<12+> Deal 3 piercing damage. Ignore the reaction(s) of defending Fighter(s) and draw 1 card.",
+  "second_effect_text": "",
+  "illustrator": "gmoshiro",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rfm.png",
+  "file_name": "i1r2rfm",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:11",
+    "full_time": {
+      "$date": "2023-06-25T19:11:54.452Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f54b72e72274cabf6389a"
+  },
+  "name": "Big Bang Right!!!",
+  "card_class": "Power",
+  "hero_id": "RF1",
+  "series_name": "Red Fist//Tech//Brawler",
+  "card_number": 1024,
+  "enthusiasm": 18,
+  "effect_text": "<Target> Foe on your right. //<1-5> Discard 1 card from your hand.  //<6-11> Discard 1 card from your hand. //<12+>  If your hand has 6 or more cards, deal 6 piercing damage. Ignore the reaction(s) of defending Fighter(s).",
+  "second_effect_text": "",
+  "illustrator": "gmoshiro",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rfe.png",
+  "file_name": "i1r2rfe",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 9,
+    "time": "14:41",
+    "full_time": {
+      "$date": "2023-07-09T14:41:16.186Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f54fe2e72274cabf638a1"
+  },
+  "name": "Double Ki Charge!",
+  "card_class": "Power",
+  "hero_id": "RF1",
+  "series_name": "Red Fist//Tech//Brawler",
+  "card_number": 1022,
+  "enthusiasm": 0,
+  "effect_text": "Add 2 to your Focus and your Fighter gains 1 HP.  You can discard 1 Aura from your hand to resolve this effect one more time and your next Move gains damage plus 1.\n\n",
+  "second_effect_text": "",
+  "illustrator": "gmoshiro",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rfa.png",
+  "file_name": "i1r2rfa",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 29,
+    "time": "23:40",
+    "full_time": {
+      "$date": "2023-06-29T23:40:23.964Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f55642e72274cabf638ae"
+  },
+  "name": "Berserk Transformation!",
+  "card_class": "Power",
+  "hero_id": "BM1",
+  "series_name": "Blast Mouth//Altered//Nature//Transformation",
+  "card_number": 1018,
+  "enthusiasm": 0,
+  "effect_text": "The next card in your play gains damage plus 1 (that card deals 1 additional damage at the end of its resolution).   ",
+  "second_effect_text": "<Trigger> If you take damage, resolve 1 other random card in your play. If the resolved card targets a foe(s), the target is now 1 random foe.",
+  "illustrator": "Znttus",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r1bma.png",
+  "file_name": "i1r1bma",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 30,
+    "time": "03:54",
+    "full_time": {
+      "$date": "2023-06-30T03:54:29.067Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f55a42e72274cabf638b5"
+  },
+  "name": "Cinder Crunch!!",
+  "card_class": "Power",
+  "hero_id": "BM1",
+  "series_name": "Blast Mouth//Altered//Nature",
+  "card_number": 1019,
+  "enthusiasm": 0,
+  "effect_text": "Deal 3 piercing damage to a foe who has already gone this round. If this card defeats a Fighter, your Ending gains damage plus 1 (that card deals 1 additional damage at the end of its resolution).",
+  "second_effect_text": "",
+  "illustrator": "Znttus",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r1bmm.png",
+  "file_name": "i1r1bmm",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:12",
+    "full_time": {
+      "$date": "2023-06-25T19:12:18.514Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f56612e72274cabf638cc"
+  },
+  "name": "Burning Impact!!!",
+  "card_class": "Power",
+  "hero_id": "BM1",
+  "series_name": "Blast Mouth//Altered//Nature",
+  "card_number": 1020,
+  "enthusiasm": 6,
+  "effect_text": "<Target> Foe of your choice. //If you are last to go this round, ignore the reaction(s) of defending Fighter(s). //<1-5> Deal 4 damage. //<6-11> Deal 4 piercing damage. //<12+> Deal 5 piercing damage and 1 additional piercing damage if they have already gone this round.",
+  "second_effect_text": "",
+  "illustrator": "Znttus",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r1bme.png",
+  "file_name": "i1r1bme",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:12",
+    "full_time": {
+      "$date": "2023-06-25T19:12:24.353Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f56dc2e72274cabf638d3"
+  },
+  "name": "Revenge Swipe",
+  "card_class": "",
+  "hero_id": "BM1",
+  "series_name": "Blast Mouth//Altered//Nature",
+  "card_number": 1081,
+  "enthusiasm": 0,
+  "effect_text": "Take 2 damage, then deal 2 damage to a foe.",
+  "second_effect_text": "<Critical> Deal 2 piercing damage to a foe.",
+  "illustrator": "Znttus",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb5bm.png",
+  "file_name": "i1cb5bm",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:12",
+    "full_time": {
+      "$date": "2023-06-25T19:12:29.419Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f57342e72274cabf638da"
+  },
+  "name": "Reptilian Super Serum",
+  "card_class": "",
+  "hero_id": "BM1",
+  "series_name": "Blast Mouth//Altered//Nature",
+  "card_number": 1079,
+  "enthusiasm": 0,
+  "effect_text": "Once per round, you can take 2 damage, then your Fighter gains damage plus 1 and is treated as Power for the rest of your turn (that card deals 1 additional damage at the end of its resolution).",
+  "second_effect_text": "",
+  "illustrator": "Znttus",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl05bmi.png",
+  "file_name": "i1pl05bmi",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:12",
+    "full_time": {
+      "$date": "2023-06-25T19:12:35.283Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f57a82e72274cabf638e1"
+  },
+  "name": "Reverting to Normal",
+  "card_class": "",
+  "hero_id": "BM1",
+  "series_name": "Blast Mouth//Altered//Nature//Transformation",
+  "card_number": 1080,
+  "enthusiasm": 0,
+  "effect_text": "Add 1 Fighter from the discard pile to your hand.",
+  "second_effect_text": "<Trigger> If your Fighter would be defeated, return it to your hand instead and add a Fighter with a different class from your hand to your play (this does not count as a defeat; you can not defend with another card this round). ",
+  "illustrator": "Znttus",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl05bme.png",
+  "file_name": "i1pl05bme",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:12",
+    "full_time": {
+      "$date": "2023-06-25T19:12:41.563Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f5a152e72274cabf639e6"
+  },
+  "name": "Extra-Dexterous Non-Combat Arms",
+  "card_class": "",
+  "hero_id": "RF1",
+  "series_name": "Red Fist//Tech//Brawler//Relaxation",
+  "card_number": 1082,
+  "enthusiasm": 0,
+  "effect_text": "If you have a Power Fighter in your play and you discard a card(s) from your hand, you can draw 1 card.",
+  "second_effect_text": "Discard this Item after drawing 3 cards by this effect.",
+  "illustrator": "gmoshiro",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl06rfi.png",
+  "file_name": "i1pl06rfi",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 8,
+    "day": 31,
+    "time": "17:40",
+    "full_time": {
+      "$date": "2023-08-31T17:40:32.224Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f5a7b2e72274cabf639ed"
+  },
+  "name": "Bull in a China Shop",
+  "card_class": "",
+  "hero_id": "RF1",
+  "series_name": "Red Fist//Tech//Brawler",
+  "card_number": 1083,
+  "enthusiasm": 0,
+  "effect_text": "Draw 3 cards, then discard 1 card from your hand.",
+  "second_effect_text": "<Trigger> At the start of the round or during a player’s turn, deal 1 damage to a random foe each time a card(s) is discarded from your hand or removed from your play this round.\n\n\n",
+  "illustrator": "gmoshiro",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl06rfe.png",
+  "file_name": "i1pl06rfe",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:12",
+    "full_time": {
+      "$date": "2023-06-25T19:12:53.579Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f5ae22e72274cabf639f7"
+  },
+  "name": "Peaceful Meditation",
+  "card_class": "",
+  "hero_id": "RF1",
+  "series_name": "Red Fist//Tech//Brawler//Relaxation",
+  "card_number": 1084,
+  "enthusiasm": 0,
+  "effect_text": "This Comeback counts as a Power card in your play (this does not count towards play size).",
+  "second_effect_text": "<Trigger> Draw 3 cards, then discard 1 card from your hand.",
+  "illustrator": "gmoshiro",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb6rf.png",
+  "file_name": "i1cb6rf",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:19",
+    "full_time": {
+      "$date": "2023-06-25T19:19:29.871Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f5d4f2e72274cabf63ac7"
+  },
+  "name": "Reunion",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Magic//Quest//Spoiler",
+  "card_number": 1125,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> During a foe’s turn, discard up to 2 cards from your hand/play; gain 1 HP for each card discarded.",
+  "second_effect_text": "<Critical> Add 1 Staunch card and 1 Power card from the discard pile to your hand.",
+  "illustrator": "Znttus",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb19g.png",
+  "file_name": "i1cb19g",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:19",
+    "full_time": {
+      "$date": "2023-06-25T19:19:35.348Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f5dcc2e72274cabf63ace"
+  },
+  "name": "Strength Training Manual",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Development",
+  "card_number": 1118,
+  "enthusiasm": 0,
+  "effect_text": "<Limited> This Item counts as a Power card in your play this round (this does not count towards play size).",
+  "second_effect_text": "Discard this Item; your Fighter gains 2 HP.",
+  "illustrator": "prusin_senpai",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg6i.png",
+  "file_name": "i1plg6i",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 17,
+    "time": "05:29",
+    "full_time": {
+      "$date": "2023-07-17T05:29:20.464Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f5e5d2e72274cabf63ad9"
+  },
+  "name": "First Aid Kit",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Development",
+  "card_number": 1117,
+  "enthusiasm": 0,
+  "effect_text": "<Limited> This Item counts as a Staunch card in your play this round (this does not count towards play size).",
+  "second_effect_text": "Discard this Item; gain 1 HP and draw 1 card.",
+  "illustrator": "prusin_senpai",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg5i.png",
+  "file_name": "i1plg5i",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 17,
+    "time": "05:29",
+    "full_time": {
+      "$date": "2023-07-17T05:29:34.702Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f612e2e72274cabf63b46"
+  },
+  "name": "“More Training!”",
+  "card_class": "",
+  "hero_id": "BGA",
+  "series_name": "Battle Girl Alice//Magic//Brawler//Call",
+  "card_number": 1090,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> At the start of the round or during a foe's turn, your Fighter gains 1 HP (that card is revealed).",
+  "second_effect_text": "<C.Trigger> At the start of the round or during a foe's turn, your Fighter gains Counter 1 (that card is revealed).\n\n\n",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb8bga.png",
+  "file_name": "i1cb8bga",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:19",
+    "full_time": {
+      "$date": "2023-06-25T19:19:50.352Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f61972e72274cabf63b4d"
+  },
+  "name": "“Battle Greaves!”",
+  "card_class": "",
+  "hero_id": "BGA",
+  "series_name": "Battle Girl Alice//Magic//Brawler//Call",
+  "card_number": 1088,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> At the start of the round or during a foe's turn, your Fighter gains Counter 1 (that card is revealed).",
+  "second_effect_text": "Once per foe's turn, if you have a defending Power Fighter and you are dealt damage, reduce that damage by 1.",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl08bgai.png",
+  "file_name": "i1pl08bgai",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1001,
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:19",
+    "full_time": {
+      "$date": "2023-06-25T19:19:55.272Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "643f61e22e72274cabf63b54"
+  },
+  "name": "Menacingly Cute Pose",
+  "card_class": "",
+  "hero_id": "BGA",
+  "series_name": "Battle Girl Alice//Magic//Brawler",
+  "card_number": 1089,
+  "enthusiasm": 0,
+  "effect_text": "Foes can not use trigger effects or reactions in response to the effects and reactions of your Fighter(s).",
+  "second_effect_text": "<Trigger> If your Fighter defends, cancel all non-damaging effect(s) of card(s) targeting you until the end of this turn.",
+  "illustrator": "mo.moan",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl08bgae.png",
+  "file_name": "i1pl08bgae",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:20",
+    "full_time": {
+      "$date": "2023-06-25T19:20:00.729Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "644004b62e72274cabf63bdd"
+  },
+  "name": "Clustering!",
+  "card_class": "Unity",
+  "hero_id": "H01",
+  "series_name": "Hive//Tech//Nature",
+  "card_number": 1038,
+  "enthusiasm": 0,
+  "effect_text": "Your next Move targets the foes on your left and right instead for its first resolution.",
+  "second_effect_text": "<Trigger> At the start of the round, discard this Aura in your play; draw 2 cards.",
+  "illustrator": "layonsin.art",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2ha.png",
+  "file_name": "i1b2ha",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:20",
+    "full_time": {
+      "$date": "2023-06-25T19:20:05.610Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "644005292e72274cabf63be4"
+  },
+  "name": "Collection Swarm!!",
+  "card_class": "Unity",
+  "hero_id": "H01",
+  "series_name": "Hive//Tech//Nature",
+  "card_number": 1039,
+  "enthusiasm": 0,
+  "effect_text": "Deal 3 damage to a foe, then steal 1 of their Active Items. Discard the Item at the end of the round or when this card is removed from your play.",
+  "second_effect_text": "",
+  "illustrator": "layonsin.art",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2hm.png",
+  "file_name": "i1b2hm",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 12,
+    "time": "22:17",
+    "full_time": {
+      "$date": "2023-09-12T22:17:44.569Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "644005a42e72274cabf63beb"
+  },
+  "name": "Stinger Tornado!!!",
+  "card_class": "Unity",
+  "hero_id": "H01",
+  "series_name": "Hive//Tech//Nature",
+  "card_number": 1040,
+  "enthusiasm": 10,
+  "effect_text": "<Target> 2 foes on your right. //<1-5> Deal 2 damage. //<6-11> Deal 3 piercing damage. //<12+> Deal 3 piercing damage. Reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time).",
+  "second_effect_text": "",
+  "illustrator": "layonsin.art",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2he.png",
+  "file_name": "i1b2he",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 11,
+    "time": "04:17",
+    "full_time": {
+      "$date": "2023-09-11T04:17:49.252Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6440061d2e72274cabf63bf8"
+  },
+  "name": "Self Replicating Mechanical Bees",
+  "card_class": "",
+  "hero_id": "H01",
+  "series_name": "Hive//Tech//Nature",
+  "card_number": 1094,
+  "enthusiasm": 0,
+  "effect_text": "<Limited> Deal 1 piercing damage to a random foe.",
+  "second_effect_text": "<Trigger> If you draw a card(s) or gains Pluck(s), gain 1 HP.",
+  "illustrator": "layonsin.art",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl10hi.png",
+  "file_name": "i1pl10hi",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003,
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 17,
+    "time": "05:29",
+    "full_time": {
+      "$date": "2023-07-17T05:29:51.464Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "644006842e72274cabf63bff"
+  },
+  "name": "Bug in a Cup",
+  "card_class": "",
+  "hero_id": "H01",
+  "series_name": "Hive//Tech//Nature",
+  "card_number": 1095,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> If a foe adds a face-up card(s) to their play, discard 1 Item in your ownership; add that card (max of 1) to your play instead and they draw 2 cards. Discard the added card at the end of the round. ",
+  "second_effect_text": "",
+  "illustrator": "layonsin.art",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl10he.png",
+  "file_name": "i1pl10he",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 9,
+    "day": 14,
+    "time": "02:06",
+    "full_time": {
+      "$date": "2023-09-14T02:06:41.417Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "644006d82e72274cabf63c06"
+  },
+  "name": "Robbing",
+  "card_class": "",
+  "hero_id": "H01",
+  "series_name": "Hive//Tech//Nature",
+  "card_number": 1096,
+  "enthusiasm": 0,
+  "effect_text": "Draw 2 cards, then 2 random foes draw 1 card.",
+  "second_effect_text": "<Critical> Steal 1 Pluck from a foe, then they draw 2 cards. Discard the Pluck at the end of your turn or when this Comeback is removed from your ownership.",
+  "illustrator": "layonsin.art",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb10h.png",
+  "file_name": "i1cb10h",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:20",
+    "full_time": {
+      "$date": "2023-06-25T19:20:28.752Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "644008fb2e72274cabf63cd6"
+  },
+  "name": "Personal Pocket Dimension!",
+  "card_class": "Unity",
+  "hero_id": "HS1",
+  "series_name": "Warp Family//Cosmic//Psychic",
+  "card_number": 1042,
+  "enthusiasm": 0,
+  "effect_text": "Resolve 1 of the following effects for each Item in your Active Pluck or for each different class in your play://1+: Draw 1 Pluck.//2+: Add 1 Aura from your hand to your play.//3+: Add 1 Move from the discard pile to your play.",
+  "second_effect_text": "",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b3hsa.png",
+  "file_name": "i1b3hsa",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 29,
+    "time": "23:48",
+    "full_time": {
+      "$date": "2023-06-29T23:48:48.906Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "644009582e72274cabf63cdd"
+  },
+  "name": "...And The Kitchen Sink!!",
+  "card_class": "Unity",
+  "hero_id": "HS1",
+  "series_name": "Warp Family//Cosmic//Psychic",
+  "card_number": 1043,
+  "enthusiasm": 0,
+  "effect_text": "Deal 2 damage to a foe. If you have 4 or more Items in your ownership, deal 2 additional damage.",
+  "second_effect_text": "<Trigger> At the start of the round, discard this Move in your play; draw 1 Pluck.",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b3hsm.png",
+  "file_name": "i1b3hsm",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:20",
+    "full_time": {
+      "$date": "2023-06-25T19:20:52.218Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "644009d32e72274cabf63ce4"
+  },
+  "name": "Super Heavyweight Drop!!!",
+  "card_class": "Unity",
+  "hero_id": "HS1",
+  "series_name": "Warp Family//Cosmic//Psychic",
+  "card_number": 1044,
+  "enthusiasm": 9,
+  "effect_text": "<Target> Foe of your choice. //If you have a Canny card in your play, add 3 to your focus. //<1-5> Deal 3 damage and they gain 1 Item. Gain 1 Item. //<6-11> Deal 4 damage and they draw 1 Pluck. Gain 1 Item. //<12+> Deal 5 damage. Gain 1 Item or add 1 Item from the discard pile to your ownership.",
+  "second_effect_text": "",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b3hse.png",
+  "file_name": "i1b3hse",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:20",
+    "full_time": {
+      "$date": "2023-06-25T19:20:57.391Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64400a342e72274cabf63ceb"
+  },
+  "name": "Infinite Storage Space",
+  "card_class": "",
+  "hero_id": "HS1",
+  "series_name": "Warp Family//Cosmic//Psychic",
+  "card_number": 1097,
+  "enthusiasm": 0,
+  "effect_text": "<Limited> Draw 1 Pluck.",
+  "second_effect_text": "",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl11hsi.png",
+  "file_name": "i1pl11hsi",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:21",
+    "full_time": {
+      "$date": "2023-06-25T19:21:02.140Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64400a8f2e72274cabf63cf2"
+  },
+  "name": "“Port!”",
+  "card_class": "",
+  "hero_id": "HS1",
+  "series_name": "Warp Family//Cosmic//Psychic//Call",
+  "card_number": 1098,
+  "enthusiasm": 0,
+  "effect_text": "Unfurl 3 cards; add 1 Warp Family series card and 1 Canny card to your hand. Discard the other unfurled cards.",
+  "second_effect_text": "Add 1 random Warp Family series card or random 1 Canny card from your hand to your play.",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl11hse.png",
+  "file_name": "i1pl11hse",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:21",
+    "full_time": {
+      "$date": "2023-06-25T19:21:07.437Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64400ae72e72274cabf63cf9"
+  },
+  "name": "Entering the Inventory",
+  "card_class": "",
+  "hero_id": "HS1",
+  "series_name": "Warp Family//Cosmic//Psychic",
+  "card_number": 1099,
+  "enthusiasm": 0,
+  "effect_text": "Discard 1 card from your hand, then unfurl 2 Pluck. Add 1 Pluck to your ownership and discard the other unfurled Pluck.",
+  "second_effect_text": "<Critical> Draw 1 card and gain 1 Item.",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb11hs.png",
+  "file_name": "i1cb11hs",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:21",
+    "full_time": {
+      "$date": "2023-06-25T19:21:12.570Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64400c802e72274cabf63daf"
+  },
+  "name": "An Opening to Their Blindspot",
+  "card_class": "",
+  "hero_id": "P01",
+  "series_name": "Warp Family//Cosmic//Psychic",
+  "card_number": 1106,
+  "enthusiasm": 0,
+  "effect_text": "<Limited> If you have a Canny Fighter in your play, deal 1 bypassing damage to a foe.",
+  "second_effect_text": "",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl14pi.png",
+  "file_name": "i1pl14pi",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 8,
+    "day": 20,
+    "time": "23:14",
+    "full_time": {
+      "$date": "2023-08-20T23:14:44.076Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64400cda2e72274cabf63db6"
+  },
+  "name": "“Hammer!”",
+  "card_class": "",
+  "hero_id": "P01",
+  "series_name": "Warp Family//Cosmic//Psychic//Call",
+  "card_number": 1107,
+  "enthusiasm": 0,
+  "effect_text": "Unfurl 3 cards; add 1 Warp Family series card and 1 Unity card to your hand. Discard the other unfurled cards.",
+  "second_effect_text": "Add 1 random Warp Family series card or 1 random Unity card from your hand to your play.",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl14pe.png",
+  "file_name": "i1pl14pe",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:21",
+    "full_time": {
+      "$date": "2023-06-25T19:21:21.895Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "64400d4c2e72274cabf63dbd"
+  },
+  "name": "Backdoor Exit",
+  "card_class": "",
+  "hero_id": "P01",
+  "series_name": "Warp Family//Cosmic//Psychic",
+  "card_number": 1108,
+  "enthusiasm": 0,
+  "effect_text": "<Trigger> If a card(s) in your play would be sent to the discard pile during this round, return that card (max of 1) to your hand instead. ",
+  "second_effect_text": "<Critical> Discard 1 card from 2 random foes' hands.",
+  "illustrator": "Undeadsushii",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb14p.png",
+  "file_name": "i1cb14p",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:21",
+    "full_time": {
+      "$date": "2023-06-25T19:21:27.609Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "644010532e72274cabf63e2a"
+  },
+  "name": "Swiss Army Knife",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Development",
+  "card_number": 1119,
+  "enthusiasm": 0,
+  "effect_text": "<Limited> This Item counts as a Unity card in your play this round (this does not count towards play size).",
+  "second_effect_text": "Discard this Item; draw 1 Pluck.",
+  "illustrator": "prusin_senpai",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg7i.png",
+  "file_name": "i1plg7i",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 7,
+    "day": 17,
+    "time": "05:29",
+    "full_time": {
+      "$date": "2023-07-17T05:29:12.729Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6440132e2e72274cabf63e51"
+  },
+  "name": "Surprise Appearance",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Cosmic//Psychic//Quest//Spoiler",
+  "card_number": 1121,
+  "enthusiasm": 0,
+  "effect_text": "Unfurl 3 cards; add 1 card to your hand and discard the other unfurled cards. \nApply the following effects based on the classes of the added card (you can only apply each effect once): \n//<Power> Deal 1 damage to a foe and add 3 to your Focus. \n//<Unity> Return 1 Aura or 1 Move from the discard pile to the top of the Main deck. \n//<Canny> Deal 2 bypassing damage to a foe.",
+  "second_effect_text": "",
+  "illustrator": "mvthwus",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg3e.png",
+  "file_name": "i1plg3e",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": {
+      "$date": "2023-06-25T18:44:06.985Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:21",
+    "full_time": {
+      "$date": "2023-06-25T19:21:39.801Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "644015702e72274cabf63e6e"
+  },
+  "name": "The Next Project",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Tech//Brawler//Spoiler",
+  "card_number": 1126,
+  "enthusiasm": 0,
+  "effect_text": "Discard 1 card from your hand; discard 1 Item in a random foe’s ownership.",
+  "second_effect_text": "<Critical> Add 1 Item from the discard pile to your ownership.",
+  "illustrator": "NightWong",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb20g.png",
+  "file_name": "i1cb20g",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:44",
+    "full_time": "2023-06-25T18:44:06.985000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:21",
+    "full_time": {
+      "$date": "2023-06-25T19:21:39.801Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6440bfa92e72274cabf64017"
+  },
+  "name": "Hive",
+  "card_class": "Unity",
+  "hero_id": "H01",
+  "series_name": "Hive//Tech//Nature",
+  "card_number": 1037,
+  "enthusiasm": 0,
+  "effect_text": "Draw 1 Pluck and reveal it; apply the following effects based on the Pluck revealed: //<Item> Add 1 Move or MAX VARIABLE from your hand to your play (MAX VARIABLE counts as an Move). //<Event> Reset 1 of your Pluck. //<Comeback> Add 1 Aura, Move or MAX VARIABLE from the discard pile to your hand.",
+  "second_effect_text": "",
+  "illustrator": "layonsin.art",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2hf.png",
+  "file_name": "i1b2hf",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [],
+  "reactions": [
+    1002,
+    1002
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "18:09",
+    "full_time": "2023-06-25T18:09:54.986000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 6,
+    "day": 25,
+    "time": "19:21",
+    "full_time": {
+      "$date": "2023-06-25T19:21:51.382Z"
+    }
+  }
+}]

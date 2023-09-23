@@ -6,11 +6,11 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { DeckQueryContext } from "../context/DeckQueryContext";
 import { AuthContext } from "../context/AuthContext";
 import FavoriteDeck from "../Accounts/FavoriteDeck";
+import cards from "../database/cards.json";
 
-function DecksPage() {
+function DecksPage(props) {
 
-    const [decks, setDecks] = useState([]);
-
+    const { decks } = props
     const [deckShowMore, setDeckShowMore] = useState(20);
     const {
         deckQuery,
@@ -23,15 +23,33 @@ function DecksPage() {
 
     const [loading, setLoading] = useState(false)
 
+    const [fullDecks, setFullDecks] = useState([])
+
+    const findCards = (deck) => {
+        const card_names = []
+        const series_names = []
+        const deckCards = deck?.cards.concat(deck?.pluck)
+        for (let cardNumber of deckCards) {
+            const card = cards.find(card => card.card_number === cardNumber)
+            card_names.push(card.name)
+            series_names.push(card.series_name)
+        }
+        return [card_names, series_names]
+    };
+
     const getDecks = async() =>{
         setLoading(true)
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/full_decks/`);
-        const data = await response.json();
+        const preDecks = [...decks]
+        for (let deck of preDecks) {
+            deck["card_names"] = findCards(deck)[0]
+            console.log(deck.name, findCards(deck).length)
+            deck["series_names"] = findCards(deck)[1]
+        }
 
-        const sortedDecks = [...data.decks].sort(deckSortMethods[deckSortState].method);
+        const sortedDecks = preDecks.sort(deckSortMethods[deckSortState].method);
 
         for (let deck of sortedDecks){
-            const date = new Date(deck["created_on"]["full_time"])
+            const date = new Date(deck["created_on"]["full_time"]["$date"])
             const time_now = new Date();
             time_now.setHours(time_now.getHours() + 5);
             // Calculate years, months, days, hours, minutes, and seconds
@@ -61,7 +79,7 @@ function DecksPage() {
             deck["created_on"]["ago"] = "a few seconds ago";
             }
 
-            const updateDate = new Date(deck["updated_on"]["full_time"])
+            const updateDate = new Date(deck["updated_on"]["full_time"]["$date"])
             // Calculate years, months, days, hours, minutes, and seconds
             let updateAgo = Math.abs(time_now - updateDate);
             const updateYears = Math.floor(updateAgo / 31557600000);
@@ -90,7 +108,8 @@ function DecksPage() {
             }
         }
         setLoading(false)
-        setDecks(sortedDecks.reverse());
+        console.log(sortedDecks)
+        setFullDecks(sortedDecks)
     };
 
     const navigate = useNavigate()
@@ -142,7 +161,7 @@ function DecksPage() {
         setDeckShowMore(deckShowMore + 20);
     };
 
-    const all_decks = decks.filter(deck => deck.private ? deck.private === false || deck.account_id === account.id || account && account.roles.includes("admin"): true)
+    const all_decks = fullDecks.filter(deck => deck.private ? deck.private === false || deck.account_id === account.id || account && account.roles.includes("admin"): true)
         .filter(deck => deck.name.toLowerCase().includes(deckQuery.deckName.toLowerCase()))
         .filter(deck => (deck.description).toLowerCase().includes(deckQuery.description.toLowerCase()))
         .filter(deck => deckQuery.cardName ? (deck.card_names && deck.card_names.length > 0 ? deck.card_names.some(name => name.toLowerCase().includes(deckQuery.cardName.toLowerCase())) : false) : true)

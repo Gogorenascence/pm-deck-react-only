@@ -1,7 +1,4 @@
-import {
-    Container,
-    Card,
-} from "react-bootstrap";
+import cards from "../database/cards.json";
 import { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom';
 import ImageWithoutRightClick from "./ImageWithoutRightClick";
@@ -9,24 +6,18 @@ import ImageWithoutRightClick from "./ImageWithoutRightClick";
 
 function CardRow() {
 
-    const [cards, setCards] = useState([]);
-
+    const [newCards, setNewCards] = useState([]);
     const getCards = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/`);
-        const data = await response.json();
-
-        setCards(data.cards.sort((a,b) => new Date(b.updated_on.full_time) - new Date(a.updated_on.full_time)).slice(0, 5));
-    };
-
+        setNewCards(cards.sort((a,b) => new Date(b.updated_on.full_time.$date) - new Date(a.updated_on.full_time.$date)).slice(0, 5));
+    }
     useEffect(() => {
         getCards();
     }, []);
 
-
     return(
         <div className="white-space">
             <div className="cd-inner">
-                {cards.map((card) => {
+                {newCards.map((card) => {
                     return (
                         <div style={{width: "15vw", margin: "0px 5px"}} key={card.name}>
                             <NavLink to={`/cards/${card.card_number}`}>
