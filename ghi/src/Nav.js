@@ -65,11 +65,6 @@ function Nav() {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="dropdown-item" to="/series">
-                    Series
-                  </NavLink>
-                </li>
-                <li>
                   <NavLink className="dropdown-item" to="/cardsets">
                     Card Sets
                   </NavLink>
