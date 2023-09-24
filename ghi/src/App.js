@@ -92,7 +92,7 @@ function App() {
                                                             extra_effects={extra_effects}
                                                             reactions={reactions}
                                                         />} />
-              <Route path="/topcards" element={<TopCardsPage />} />
+              <Route path="/topcards" element={<UnderConstruction />} />
               <Route path="/series" element={<UnderConstruction />} />
               <Route path="/cardsets" element={<SetsPage
                                                 boosterSets={booster_sets}
