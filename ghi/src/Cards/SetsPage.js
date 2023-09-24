@@ -4,9 +4,10 @@ import {
 import { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom';
 
-function SetsPage() {
+function SetsPage(props) {
 
-    const [boosterSets, setBoosterSets] = useState([]);
+    const { boosterSets } = props
+    console.log(boosterSets)
 
     const [boosterSetQuery, setBoosterSetQuery] = useState({
         boosterSetName: "",
@@ -18,18 +19,8 @@ function SetsPage() {
 
     const [noBoosterSet, setNoBoosterSet] = useState(false);
 
-    const getBoosterSets = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/booster_sets/`);
-        const data = await response.json();
-        if (data.booster_sets.length == 0 ) {
-            setNoBoosterSet(true)
-        }
-        const sortedBoosterSets = [...data.booster_sets].sort(boosterSetSortMethods[boosterSetSortState].method);
-        setBoosterSets(sortedBoosterSets.reverse());
-    };
-
     useEffect(() => {
-        getBoosterSets();
+
         document.title = "Card Sets - PM CardBase"
         return () => {
             document.title = "PlayMaker CardBase"
@@ -45,7 +36,7 @@ function SetsPage() {
     };
 
     const handleBoosterSetQuery = (event) => {
-        setBoosterSetShowMore({ ...boosterSetQuery, [event.target.name]: event.target.value });
+        setBoosterSetQuery({ ...boosterSetQuery, [event.target.name]: event.target.value });
     };
 
     const handleBoosterSetQueryReset = (event) => {

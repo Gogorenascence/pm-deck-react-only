@@ -7,8 +7,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import { PullsContext } from "../context/PullsContext";
 import { AuthContext } from "../context/AuthContext";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
+import DeckExport from "../Decks/DeckExport";
 
-function PullsDeckBuilder() {
+function PullsDeckBuilder(props) {
     const [deck, setDeck] = useState({
         name: "",
         account_id: "",
@@ -24,6 +25,7 @@ function PullsDeckBuilder() {
     });
 
     const {card_set_id} = useParams();
+    const {boosterSets} = props
     const {account} = useContext(AuthContext)
 
     const [main_list, setMainList] = useState([]);
@@ -33,6 +35,8 @@ function PullsDeckBuilder() {
 
     const [selectedList, setSelectedList] = useState([]);
     const [selectedCard, setSelectedCard] = useState(null);
+    const [selectedMainCards, setSelectedMainCards] = useState([]);
+    const [selectedPluckCards, setSelectedPluckCards] = useState([]);
 
     const [cards, setCards] = useState([]);
     const {pulls}= useContext(PullsContext);
@@ -44,11 +48,7 @@ function PullsDeckBuilder() {
     const [showMain, setShowMain] = useState(true);
     const [showPluck, setShowPluck] = useState(true);
 
-    const [boosterSet, setBoosterSet] = useState("");
-    const [ultraRares, setUltraRares] = useState([]);
     const [rarity, setRarity] = useState("");
-
-
 
     const [noCards, setNoCards] = useState(false);
 
@@ -80,22 +80,16 @@ function PullsDeckBuilder() {
         tag: "",
     });
 
-    const getBoosterSet = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/booster_sets/${card_set_id}`);
-        const boosterSetData = await response.json();
-        setBoosterSet(boosterSetData)
-        setUltraRares(boosterSetData.ultra_rares)
+    const boosterSet = boosterSets.find(boosterSet => boosterSet.id === card_set_id)
+    const ultraRares = boosterSet.ultra_rares
 
-    };
+
 
     const [sortState, setSortState] = useState("none");
 
     useEffect(() => {
         getCards();
-        console.log(card_set_id)
-        getBoosterSet();
         document.title = "Deck Builder - PM CardBase"
-        console.log(typeof pulls)
         return () => {
             document.title = "PlayMaker CardBase"
         };
@@ -167,7 +161,6 @@ function PullsDeckBuilder() {
 
     const handleCheck = (event) => {
         setDeck({ ...deck, [event.target.name]: event.target.checked });
-        console.log(deck.private)
     };
 
     const handleCoverCardChange = (event) => {
@@ -181,18 +174,19 @@ function PullsDeckBuilder() {
         options = Array.apply(null, options)
         const selectedValues = options.filter(x => x.selected).map(x => x.value);
         setSelectedList(selectedValues);
-        console.log(selectedValues)
     }
 
-    const handleClick = (card) => {
+    const handleClick = (card, index) => {
         if (card.card_type[0] === 1006 ||
             card.card_type[0] === 1007 ||
             card.card_type[0] === 1008){
             setPluckList([...pluck_list, card]);
             console.log(pluck_list);
+            setSelectedPluckCards([...selectedPluckCards, { card, index }]);
         }else{
             setMainList([...main_list, card]);
             console.log(main_list);
+            setSelectedMainCards([...selectedMainCards, { card, index }]);
         }
     }
 
@@ -207,6 +201,14 @@ function PullsDeckBuilder() {
                 if (card.picture_url === selectedCard){
                     setSelectedCard(null)
                 }
+                const firstIndex = selectedPluckCards.findIndex(
+                    (selectedCardItem) => selectedCardItem.card.card_number === card.card_number
+                );
+                if (firstIndex !== -1) {
+                    const updatedSelectedCards = [...selectedPluckCards];
+                    updatedSelectedCards.splice(firstIndex, 1);
+                    setSelectedPluckCards(updatedSelectedCards);
+                }
         }else{
             const mainIndex = main_list.indexOf(card);
             const newMainList = [...main_list];
@@ -215,7 +217,16 @@ function PullsDeckBuilder() {
             if (card.picture_url === selectedCard){
                 setSelectedCard(null)
             }
+            const firstIndex = selectedMainCards.findIndex(
+                (selectedCardItem) => selectedCardItem.card.card_number === card.card_number
+            );
+            if (firstIndex !== -1) {
+                const updatedSelectedCards = [...selectedMainCards];
+                updatedSelectedCards.splice(firstIndex, 1);
+                setSelectedMainCards(updatedSelectedCards);
+            }
         }
+
     }
 
     const clearMain = async() => {
@@ -227,6 +238,7 @@ function PullsDeckBuilder() {
         if (picture_urls.includes(selectedCard)){
             setSelectedCard(null);
         }
+        setSelectedMainCards([])
     }
 
     const clearPluck = async() => {
@@ -238,57 +250,10 @@ function PullsDeckBuilder() {
         if (picture_urls.includes(selectedCard)){
             setSelectedCard(null);
         }
+        setSelectedPluckCards([])
     }
 
-    const navigate = useNavigate()
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        const data = {...deck};
-        const main = []
-        const pluck = []
-        for (let card of main_list){
-            main.push(card.card_number)
-        }
-        for (let card of pluck_list){
-            pluck.push(card.card_number)
-        }
-        data["cards"] = main;
-        data["pluck"] = pluck;
-        data["strategies"] = selectedList
-        account ? data["account_id"] = account.id : data["account_id"] = deck.account_id
-        console.log(data)
-
-        const cardUrl = `${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/`;
-        const fetchConfig = {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
-
-        const response = await fetch(cardUrl, fetchConfig);
-        if (response.ok) {
-            const responseData = await response.json();
-            const deck_id = responseData.id;
-            setDeck({
-                name: "",
-                account_id: "",
-                description: "",
-                strategies: [],
-                cards: [],
-                pluck: [],
-                side: [],
-                views: 0,
-                cover_card: "",
-                parent_id: "",
-            });
-            navigate(`/decks/${deck_id}`);
-        } else {
-            alert("Error in creating deck");
-        }
-    }
 
     const handleListView = (event) => {
         setListView(!listView);
@@ -313,7 +278,17 @@ function PullsDeckBuilder() {
         return text.split("//").join("\n");
     };
 
-    const isQueryEmpty = Object.values(query).every((value) => value === "");
+    function generateRandomString(length) {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let randomString = '';
+
+            for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            randomString += characters.charAt(randomIndex);
+            }
+
+            return randomString;
+        }
 
     return (
         <div className="white-space">
@@ -376,55 +351,24 @@ function PullsDeckBuilder() {
                         <option value="other">other</option>
                     </select>
                     <br/>
-                    <input
-                        style={{margin: "20px 8px 15px 5px"}}
-                        id="private"
-                        type="checkbox"
-                        onChange={handleCheck}
-                        name="private"
-                        checked={deck.private}>
-                    </input>
-                    <label for="private"
-                        className="bold"
-                    >
-                        Make my deck private
-                    </label>
-                    <br/>
-                    {account?
+                    <div style={{display: "flex", marginTop: "3px"}}>
+                        <DeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
                         <button
-                            className="left"
-                            style={{ marginTop: "9px"}}
-                            onClick={handleSubmit}
+                            className="left red"
+                            style={{ marginTop: "5px"}}
+                            onClick={clearMain}
                         >
-                            Create Deck
-                        </button>:
-                        <button
-                        className="left"
-                        style={{ marginTop: "9px"}}
-                        >
-                            Create Deck
+                            Clear Main
                         </button>
-                    }
-                    <button
-                        className="left red"
-                        style={{ marginTop: "9px"}}
-                        onClick={clearMain}
-                    >
-                        Clear Main
-                    </button>
-                    <button
-                        className="left red"
-                        style={{ marginTop: "9px"}}
-                        onClick={clearPluck}
-                    >
-                        Clear Pluck
-                    </button>
-                    <br/>
-                    { !account?
-                        <h6 className="error">You must be logged in to create a deck</h6>:
-                    null
-                    }
+                        <button
+                            className="left red"
+                            style={{ marginTop: "5px"}}
+                            onClick={clearPluck}
+                        >
+                            Clear Pluck
+                        </button>
                     </div>
+                </div>
                 <div>
                     <h2 className="left">Cover Card</h2>
                     {selectedCard ? (
@@ -656,29 +600,25 @@ function PullsDeckBuilder() {
                             <div className={showPool ? "scrollable" : "hidden2"}>
                                 <div style={{margin: "8px"}}>
 
-                                { all_cards.length == 0 && isQueryEmpty && !noCards?
-                                    <div className="loading-container">
-                                        <div className="loading-spinner"></div>
-                                    </div> :
-                                null}
-
                                 <div className="card-pool-fill">
-                                    {all_cards.slice(0, showMore).map((card) => {
+                                    {all_cards.slice(0, showMore).map((card, index) => {
+                                        const isSelectedMain = selectedMainCards.some((selectedCard) => selectedCard.index === index);
+                                        const isSelectedPluck = selectedPluckCards.some((selectedCard) => selectedCard.index === index);
                                         return (
-                                            <div>
+                                            <div key={index}>
                                                 {ultraRares.includes(card.card_number) ?
-                                                    <div className={uniqueList.includes(card) ? "selected ultra2 pointer glow3" : "ultra2 pointer glow3"}
+                                                    <div className={ (isSelectedMain||isSelectedPluck) ? "selected ultra2 pointer glow3" : "ultra2 pointer glow3"}
                                                     style={{display: "flex", justifyContent: "center"}}>
                                                         <img
-                                                            onClick={() => handleClick(card)}
+                                                            onClick={() => handleClick(card, index)}
                                                             className="builder-card4 pointer"
                                                             title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
                                                             src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
                                                             alt={card.name}/>
                                                     </div>:
                                                     <img
-                                                        onClick={() => handleClick(card)}
-                                                        className={uniqueList.includes(card) ? "selected builder-card pointer glow3" : "builder-card pointer glow3"}
+                                                        onClick={() => handleClick(card, index)}
+                                                        className={ (isSelectedMain||isSelectedPluck) ? "selected builder-card pointer glow3" : "builder-card pointer glow3"}
                                                         title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
                                                         src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
                                                         alt={card.name}/>
@@ -733,7 +673,7 @@ function PullsDeckBuilder() {
                                 null}
                             </div>
                             {main_list.length > 0 ?<>
-                                    {main_list.sort((a,b) => a.card_number - b.card_number).map((card) => {
+                                    {main_list.sort((a,b) => a.card_number - b.card_number).map((card, index) => {
                                         return (
                                             <Col style={{padding: "5px"}}>
                                                 <div className="card-container pointer">
@@ -768,7 +708,7 @@ function PullsDeckBuilder() {
                                 null}
                             </div>
                             {pluck_list.length > 0 ?<>
-                                    {pluck_list.sort((a,b) => a.card_number - b.card_number).map((card) => {
+                                    {pluck_list.sort((a,b) => a.card_number - b.card_number).map((card, index) => {
                                         return (
                                             <Col style={{padding: "5px"}}>
                                                 <div className="card-container pointer">

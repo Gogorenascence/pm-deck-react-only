@@ -73,7 +73,10 @@ function App() {
 
             <Routes>
               <Route index element={<MainPage cards={cards} />} />
-              <Route path="/deckbuilder" element={<DeckBuilder />} />
+              <Route path="/deckbuilder" element={<DeckBuilder
+                                                      cards={cards}
+                                                      booster_sets={booster_sets}
+                                                />} />
               <Route path="/decks" element={<DecksPage decks={decks}/>} />
               <Route path="/decks/:deck_id" element={<DeckDetailPage
                                                             decks={decks}
@@ -91,10 +94,20 @@ function App() {
                                                         />} />
               <Route path="/topcards" element={<TopCardsPage />} />
               <Route path="/series" element={<UnderConstruction />} />
-              <Route path="/cardsets" element={<SetsPage />} />
-              <Route path="/cardsets/:card_set_id" element={<SetDetailPage />} />
-              <Route path="/cardsets/:card_set_id/pulls" element={<PullPage />} />
-              <Route path="/cardsets/:card_set_id/pulls/deckbuilder" element={<PullsDeckBuilder />} />
+              <Route path="/cardsets" element={<SetsPage
+                                                boosterSets={booster_sets}
+                                              />} />
+              <Route path="/cardsets/:card_set_id" element={<SetDetailPage
+                                                              cards={cards}
+                                                              boosterSets={booster_sets}
+                                                            />} />
+              <Route path="/cardsets/:card_set_id/pulls" element={<PullPage
+                                                                    cards={cards}
+                                                                    boosterSets={booster_sets}
+                                                                  />} />
+              <Route path="/cardsets/:card_set_id/pulls/deckbuilder" element={<PullsDeckBuilder
+                                                                                boosterSets={booster_sets}
+                                                                              />} />
 
 
             </Routes>

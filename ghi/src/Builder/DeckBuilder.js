@@ -7,8 +7,10 @@ import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 import { AuthContext } from "../context/AuthContext";
 import { BuilderQueryContext } from "../context/BuilderQueryContext";
 import BuilderCardSearch from "./BuilderCardSearch";
+import DeckExport from "../Decks/DeckExport";
 
-function DeckBuilder() {
+
+function DeckBuilder(props) {
     const [deck, setDeck] = useState({
         name: "",
         account_id: "",
@@ -23,6 +25,7 @@ function DeckBuilder() {
         private: false,
     });
 
+    const { cards, booster_sets } = props
     const {account} = useContext(AuthContext)
 
     const {query,
@@ -50,31 +53,11 @@ function DeckBuilder() {
     const [selectedList, setSelectedList] = useState([]);
     const [selectedCard, setSelectedCard] = useState(null);
 
-    const [cards, setCards] = useState([]);
-
     const [showPool, setShowPool] = useState(true);
     const [showMain, setShowMain] = useState(true);
     const [showPluck, setShowPluck] = useState(true);
 
-    const [noCards, setNoCards] = useState(false);
-
-    const getCards = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/`);
-        const data = await response.json();
-
-        if (data.cards.length == 0 ) {
-            setNoCards(true)
-        }
-
-        const sortedCards = [...data.cards].sort(sortMethods[sortState].method);
-
-        setCards(sortedCards);
-    };
-
-
     useEffect(() => {
-        getCards();
-        console.log(account)
         document.title = "Deck Builder - PM CardBase"
         return () => {
             document.title = "PlayMaker CardBase"
@@ -185,55 +168,6 @@ function DeckBuilder() {
         }
     }
 
-    const navigate = useNavigate()
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        const data = {...deck};
-        const main = []
-        const pluck = []
-        for (let card of main_list){
-            main.push(card.card_number)
-        }
-        for (let card of pluck_list){
-            pluck.push(card.card_number)
-        }
-        data["cards"] = main;
-        data["pluck"] = pluck;
-        data["strategies"] = selectedList
-        account ? data["account_id"] = account.id : data["account_id"] = deck.account_id
-
-        const cardUrl = `${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/`;
-        const fetchConfig = {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
-
-        const response = await fetch(cardUrl, fetchConfig);
-        if (response.ok) {
-            const responseData = await response.json();
-            const deck_id = responseData.id;
-            setDeck({
-                name: "",
-                account_id: "",
-                description: "",
-                strategies: [],
-                cards: [],
-                pluck: [],
-                side: [],
-                views: 0,
-                cover_card: "",
-                parent_id: "",
-            });
-            navigate(`/decks/${deck_id}`);
-        } else {
-            alert("Error in creating deck");
-        }
-    }
-
     const handleShowPool = (event) => {
         setShowPool(!showPool);
     };
@@ -250,14 +184,24 @@ function DeckBuilder() {
         return text.split("//").join("\n");
     };
 
-    const isQueryEmpty = Object.values(query).every((value) => value === "");
+    function generateRandomString(length) {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let randomString = '';
+
+            for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            randomString += characters.charAt(randomIndex);
+            }
+
+            return randomString;
+        }
+
 
     return (
         <div className="white-space">
             <h1 className="left-h1">Deck Builder</h1>
                 <div style={{display: "flex", justifyContent: "space-between"}}>
                     <div
-                        // style={{marginBottom: "45px", width: "435px"}}
                         id="create-deck-page">
                         <h2 className="left">Deck Details</h2>
 
@@ -315,54 +259,23 @@ function DeckBuilder() {
                             <option value="other">other</option>
                         </select>
                         <br/>
-                        <input
-                            style={{margin: "20px 8px 15px 5px"}}
-                            id="private"
-                            type="checkbox"
-                            onChange={handleCheck}
-                            name="private"
-                            checked={deck.private}>
-                        </input>
-                        <label for="private"
-                            className="bold"
-                        >
-                            Make my deck private
-                        </label>
-                        <br/>
-                        {account?
+                        <div style={{display: "flex", marginTop: "3px"}}>
+                            <DeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
                             <button
-                                className="left"
-                                style={{ marginTop: "9px"}}
-                                onClick={handleSubmit}
+                                className="left red"
+                                style={{ marginTop: "5px"}}
+                                onClick={clearMain}
                             >
-                                Create Deck
-                            </button>:
-                            <button
-                            className="left"
-                            style={{ marginTop: "9px"}}
-                            >
-                                Create Deck
+                                Clear Main
                             </button>
-                        }
-                        <button
-                            className="left red"
-                            style={{ marginTop: "9px"}}
-                            onClick={clearMain}
-                        >
-                            Clear Main
-                        </button>
-                        <button
-                            className="left red"
-                            style={{ marginTop: "9px"}}
-                            onClick={clearPluck}
-                        >
-                            Clear Pluck
-                        </button>
-                        <br/>
-                        { !account?
-                            <h6 className="error">You must be logged in to create a deck</h6>:
-                        null
-                        }
+                            <button
+                                className="left red"
+                                style={{ marginTop: "5px"}}
+                                onClick={clearPluck}
+                            >
+                                Clear Pluck
+                            </button>
+                        </div>
                     </div>
                     <div>
                         <h2 className="left">Cover Card</h2>
@@ -380,7 +293,7 @@ function DeckBuilder() {
                                 variant="bottom"/>)}
                     </div>
 
-                    <BuilderCardSearch/>
+                    <BuilderCardSearch boosterSets={booster_sets}/>
                 </div>
 
                 <div className={showPool ? "cardpool" : "no-cardpool"}>
@@ -408,12 +321,6 @@ function DeckBuilder() {
                         </div>
                         <div className={showPool ? "scrollable" : "hidden2"}>
                             <div style={{margin: "8px"}}>
-
-                            { all_cards.length == 0 && isQueryEmpty && !noCards?
-                                <div className="loading-container">
-                                    <div className="loading-spinner"></div>
-                                </div> :
-                            null}
 
                             <div className="card-pool-fill">
                                 {all_cards.slice(0, showMore).map((card) => {

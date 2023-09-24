@@ -1,56 +1,63 @@
 import {
-    Col,
-    Row,
     Card,
 } from "react-bootstrap";
 import { useState, useEffect, useRef, useContext } from "react";
 import { NavLink, useParams} from 'react-router-dom';
 import BackButton from "../display/BackButton";
+import PackOpener from "./PackOpener";
 import { PullsContext } from "../context/PullsContext";
 
 
-function PullPage() {
+function PullPage(props) {
 
     const {card_set_id} = useParams();
-    const [boosterSet, setBoosterSet] = useState("");
-    const [maxVariables, setMaxVariables] = useState([]);
-    const [normals, setNormals] = useState([]);
-    const [rares, setRares] = useState([]);
-    const [superRares, setSuperRares] = useState([]);
-    const [ultraRares, setUltraRares] = useState([]);
-    const [date_created, setDateCreated] = useState([]);
-    const [perPack, setPerPack] = useState(0)
+    const { boosterSets, cards } = props
+
     const [num, setNum] = useState("");
     const [savedPulls, setSavedPulls] = useState([]);
-    const {pulls, setPulls}= useContext(PullsContext);
+    const {
+        pulls,
+        setPulls,
+        pullsList,
+        pulling,
+        setPulling,
+    }= useContext(PullsContext);
 
     const [loading, setLoading] = useState(false)
 
     const [listView, setListView] = useState(false);
     const [fullView, setFullView] = useState(false)
 
-    const getBoosterSet = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/booster_sets/${card_set_id}`);
-        const boosterSetData = await response.json();
-        const ratio = boosterSetData.ratio
-        const perPack = ratio.normals + ratio.rares + ratio.supers + ratio.mv
-        setDateCreated(boosterSetData.created_on.date_created)
-        setUltraRares(boosterSetData.ultra_rares)
-        setSuperRares(boosterSetData.super_rares)
-        setRares(boosterSetData.rares)
-        setNormals(boosterSetData.normals)
-        setMaxVariables(boosterSetData.mv)
-        setPerPack(perPack)
-        setBoosterSet(boosterSetData);
-    };
+    const boosterSet = boosterSets.find(boosterSet => boosterSet.id === card_set_id)
+    const ratio = boosterSet.ratio
+    const perPack = ratio.normals + ratio.rares + ratio.supers + ratio.mv
+    const date_created = boosterSet.created_on.date_created
+
+    const maxVariables = []
+    const normals = []
+    const rares = []
+    const superRares = []
+    const ultraRares = []
+    for (let card_number of boosterSet.mv) {
+        maxVariables.push(cards.find(card => card.card_number === card_number))
+    }
+    for (let card_number of boosterSet.normals) {
+        normals.push(cards.find(card => card.card_number === card_number))
+    }
+    for (let card_number of boosterSet.rares) {
+        rares.push(cards.find(card => card.card_number === card_number))
+    }
+    for (let card_number of boosterSet.super_rares) {
+        superRares.push(cards.find(card => card.card_number === card_number))
+    }
+    for (let card_number of boosterSet.ultra_rares) {
+        ultraRares.push(cards.find(card => card.card_number === card_number))
+    }
 
     const getPulls = async() =>{
         setLoading(true)
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/booster_sets/${card_set_id}/open/${num}`);
-        const pullData = await response.json();
-
         const newPulls = []
-        for (let pull of pullData.pulls) {
+        for (let pull of pullsList.pulls) {
             newPulls.push(pull.pulled_cards)
         }
         const allPulls = savedPulls.concat(newPulls)
@@ -58,16 +65,22 @@ function PullPage() {
         setLoading(false)
         setPulls(allPulls)
 
+        if (lastSavedPullRef.current) {
+            lastSavedPullRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+        findUltras()
     }
 
     useEffect(() => {
-        getBoosterSet();
         document.title = `Pack Openings - PM CardBase`
-        console.log(pulls)
         return () => {
             document.title = "PlayMaker CardBase"
         };
     },[]);
+
+    useEffect(() => {
+        getPulls()
+    },[pulling]);
 
     const handleListView = (event) => {
         setListView(!listView);
@@ -83,31 +96,9 @@ function PullPage() {
 
     const lastSavedPullRef = useRef(null);
 
-    const handleSubmit = (event) => {
-        if (num) {
-            getPulls();
-            if (lastSavedPullRef.current) {
-                lastSavedPullRef.current.scrollIntoView({ behavior: 'smooth' });
-            }
-            findUltras()
-        } else {
-            alert("No number of packs selected")
-        }
-    };
-
-    // const findUltras = (pull) => {
-    //     const ultras = []
-    //     for (let card of pull) {
-    //         if (ultraRares.includes(card.card_number)) {
-    //             ultras.push(card)
-    //         }
-    //     }
-    //     return ultras
-    // }
-
     const findUltras = (pull) => {
         return pull.reduce(function(ultras, card, index, arr) {
-            if (ultraRares.includes(card.card_number)) {
+            if (boosterSet.ultra_rares.includes(card.card_number)) {
                 ultras.push(card);
             }
             return ultras;
@@ -123,23 +114,6 @@ function PullPage() {
         setPulls([])
         setSavedPulls([])
     }
-
-    // const getAllCards = (pulls) => {
-    //     const all_cards = []
-    //     for (let pull of pulls) {
-    //         for (let card of pull) {
-    //             all_cards.push(card)
-    //         }
-    //     }
-    //     return all_cards
-    // }
-
-
-    // const getAllCards = (pulls) => {
-        //     return pulls.reduce(function(all_cards, pull, index, arr){
-            //         return all_cards.concat(pull)
-            //     }, [])
-            // }
 
     const getAllCards = (pulls) => {
         return pulls.reduce((all_cards, pull) => all_cards.concat(pull))
@@ -199,11 +173,15 @@ function PullPage() {
                     onChange={handleChangeNum}
                     value={num}>
                 </input>
-                <button
-                    className="left"
-                    onClick={handleSubmit}>
-                        Open
-                </button>
+                <PackOpener
+                    boosterSet={boosterSet}
+                    maxVariables={maxVariables}
+                    normals={normals}
+                    rares={rares}
+                    superRares={superRares}
+                    ultraRares={ultraRares}
+                    num={num}
+                />
                 {/* {listView?
                     <button
                     className="left"
@@ -245,12 +223,6 @@ function PullPage() {
                 <BackButton/>
             </div>
 
-            { loading ?
-                    <div className="loading-container">
-                        <div className="loading-spinner"></div>
-                    </div> :
-                null}
-
             {!fullView && pulls.length > 0?
                 (pulls.map((pull, pullIndex) => {
                     return (
@@ -279,7 +251,7 @@ function PullPage() {
                                             return (
                                                 <div style={{display: "flex", justifyContent: "center"}}>
                                                     <NavLink to={`/cards/${card.card_number}`} key={card.name}>
-                                                        {ultraRares.includes(card.card_number) ?
+                                                        {boosterSet.ultra_rares.includes(card.card_number) ?
                                                             <div className="ultra">
                                                                 <img
                                                                     className="builder-card4"
@@ -331,7 +303,7 @@ function PullPage() {
                                     return (
                                         <div style={{display: "flex", justifyContent: "center"}}>
                                             <NavLink to={`/cards/${card.card_number}`} key={card.name}>
-                                                {ultraRares.includes(card.card_number) ?
+                                                {boosterSet.ultra_rares.includes(card.card_number) ?
                                                     <div className="ultra">
                                                         <img
                                                             className="builder-card4"

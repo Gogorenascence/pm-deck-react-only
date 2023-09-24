@@ -2,15 +2,13 @@ import React, { useEffect, useContext } from 'react';
 import { BuilderQueryContext } from '../context/BuilderQueryContext';
 
 
-function BuilderCardSearch() {
+function BuilderCardSearch(props) {
     const {query,
         setQuery,
         sortState,
         setSortState,
         boosterSet,
         setBoosterSet,
-        boosterSets,
-        setBoosterSets,
         boosterSetId,
         setBoosterSetId,
         rarity,
@@ -20,11 +18,8 @@ function BuilderCardSearch() {
         showMore,
         setShowMore} = useContext(BuilderQueryContext)
 
-    const getBoosterSets = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/booster_sets/`);
-        const data = await response.json();
-        setBoosterSets(data.booster_sets);
-    };
+    const { boosterSets } = props
+    console.log(boosterSets)
 
     const handleBoosterSetChange = (event) => {
         setBoosterSetId(event.target.value)
@@ -37,7 +32,6 @@ function BuilderCardSearch() {
     };
 
     useEffect(() => {
-        getBoosterSets();
     // eslint-disable-next-line
     },[]);
 

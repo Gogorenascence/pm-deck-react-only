@@ -6,16 +6,10 @@ import { NavLink, useParams} from 'react-router-dom';
 import BackButton from "../display/BackButton";
 
 
-function SetDetailPage() {
+function SetDetailPage(props) {
 
     const {card_set_id} = useParams();
-    const [boosterSet, setBoosterSet] = useState("");
-    const [maxVariables, setMaxVariables] = useState([]);
-    const [normals, setNormals] = useState([]);
-    const [rares, setRares] = useState([]);
-    const [superRares, setSuperRares] = useState([]);
-    const [ultraRares, setUltraRares] = useState([]);
-    const [date_created, setDateCreated] = useState([])
+    const { boosterSets, cards } = props
 
     const [listView, setListView] = useState(false);
     const [showMaxVariables, setShowMaxVariables] = useState(false);
@@ -24,31 +18,36 @@ function SetDetailPage() {
     const [showSuperRares, setShowSuperRares] = useState(false);
     const [showUltraRares, setShowUltraRares] = useState(false);
 
-    const [perPack, setPerPack] = useState(0)
+    const boosterSet = boosterSets.find(boosterSet => boosterSet.id === card_set_id)
+    console.log(boosterSet)
+    const ratio = boosterSet.ratio
+    const perPack = ratio.normals + ratio.rares + ratio.supers + ratio.mv
+    const date_created = boosterSet.created_on.date_created
 
-    const getBoosterSet = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/booster_sets/${card_set_id}`);
-        const boosterSetData = await response.json();
-        const ratio = boosterSetData.ratio
-        const perPack = ratio.normals + ratio.rares + ratio.supers + ratio.mv
-        setDateCreated(boosterSetData.created_on.date_created)
-        setPerPack(perPack)
-        setBoosterSet(boosterSetData);
-    };
 
-    const getCardLists = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/booster_sets/${card_set_id}/list`);
-        const listData = await response.json();
-        setMaxVariables(listData.max_variables)
-        setNormals(listData.normals)
-        setRares(listData.rares)
-        setSuperRares(listData.super_rares)
-        setUltraRares(listData.ultra_rares)
+    const maxVariables = []
+    const normals = []
+    const rares = []
+    const superRares = []
+    const ultraRares = []
+    for (let card_number of boosterSet.mv) {
+        maxVariables.push(cards.find(card => card.card_number === card_number))
+    }
+    for (let card_number of boosterSet.normals) {
+        normals.push(cards.find(card => card.card_number === card_number))
+    }
+    for (let card_number of boosterSet.rares) {
+        rares.push(cards.find(card => card.card_number === card_number))
+    }
+    for (let card_number of boosterSet.super_rares) {
+        superRares.push(cards.find(card => card.card_number === card_number))
+    }
+    for (let card_number of boosterSet.ultra_rares) {
+        ultraRares.push(cards.find(card => card.card_number === card_number))
     }
 
+
     useEffect(() => {
-        getBoosterSet();
-        getCardLists();
         console.log(normals)
         document.title = `Card Sets - PM CardBase`
         return () => {
