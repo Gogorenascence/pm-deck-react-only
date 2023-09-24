@@ -368,7 +368,6 @@ function PullsDeckBuilder(props) {
                         >
                             Clear Pluck
                         </button>
-                        <p>{main_list.length}</p>
                     </div>
                 </div>
                 <div>
