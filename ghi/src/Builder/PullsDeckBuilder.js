@@ -7,7 +7,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { PullsContext } from "../context/PullsContext";
 import { AuthContext } from "../context/AuthContext";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
-import DeckExport from "../Decks/DeckExport";
+import FEDeckExport from "../Decks/FEDeckExport";
 
 function PullsDeckBuilder(props) {
     const [deck, setDeck] = useState({
@@ -157,6 +157,7 @@ function PullsDeckBuilder(props) {
 
     const handleChange = (event) => {
         setDeck({ ...deck, [event.target.name]: event.target.value });
+        console.log(deck.cards)
     };
 
     const handleCheck = (event) => {
@@ -352,7 +353,7 @@ function PullsDeckBuilder(props) {
                     </select>
                     <br/>
                     <div style={{display: "flex", marginTop: "3px"}}>
-                        <DeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
+                        <FEDeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
                         <button
                             className="left red"
                             style={{ marginTop: "5px"}}
@@ -367,6 +368,7 @@ function PullsDeckBuilder(props) {
                         >
                             Clear Pluck
                         </button>
+                        <p>{main_list.length}</p>
                     </div>
                 </div>
                 <div>

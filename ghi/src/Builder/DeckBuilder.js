@@ -7,7 +7,7 @@ import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 import { AuthContext } from "../context/AuthContext";
 import { BuilderQueryContext } from "../context/BuilderQueryContext";
 import BuilderCardSearch from "./BuilderCardSearch";
-import DeckExport from "../Decks/DeckExport";
+import FEDeckExport from "../Decks/FEDeckExport";
 
 
 function DeckBuilder(props) {
@@ -260,7 +260,7 @@ function DeckBuilder(props) {
                         </select>
                         <br/>
                         <div style={{display: "flex", marginTop: "3px"}}>
-                            <DeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
+                            <FEDeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
                             <button
                                 className="left red"
                                 style={{ marginTop: "5px"}}
