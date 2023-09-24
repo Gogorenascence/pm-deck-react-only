@@ -606,7 +606,7 @@ function PullsDeckBuilder(props) {
                                         const isSelectedMain = selectedMainCards.some((selectedCard) => selectedCard.index === index);
                                         const isSelectedPluck = selectedPluckCards.some((selectedCard) => selectedCard.index === index);
                                         return (
-                                            <div key={index}>
+                                            <div style={{display: "flex", justifyContent: "center"}} key={index}>
                                                 {ultraRares.includes(card.card_number) ?
                                                     <div className={ (isSelectedMain||isSelectedPluck) ? "selected ultra2 pointer glow3" : "ultra2 pointer glow3"}
                                                     style={{display: "flex", justifyContent: "center"}}>
