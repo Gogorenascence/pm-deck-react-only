@@ -10,7 +10,7 @@ function TopRow() {
           <div style={{width: "15vw", margin: "0px 5px"}}>
             <Link to="/deckbuilder">
               <Card className=" text-white text-center glow3" style={{ width: '15vw', minWidth: "200px"}}>
-                <Card.Img src="mv2.png" alt="Card image" variant="bottom"/>
+                <Card.Img src="1g303Bone Whisper4.png" alt="Card image" variant="bottom"/>
                 <Card.ImgOverlay className="blackfooter mt-auto zindex-0">
                   <Card.Title className="card-img-overlay d-flex flex-column justify-content-end">Deck Builder</Card.Title>
                 </Card.ImgOverlay>
@@ -38,14 +38,14 @@ function TopRow() {
             </Link>
           </div>
           <div style={{width: "15vw", margin: "0px 5px"}}>
-            {/* <Link to="/articles"> */}
-              <Card className="text-white text-center" style={{ width: '15vw', minWidth: "200px"}}>
-                <Card.Img src="gcb20-2.png" alt="Card image" variant="bottom"/>
+            <Link to="/cardsets">
+              <Card className="text-white text-center glow3" style={{ width: '15vw', minWidth: "200px"}}>
+                <Card.Img src="mv2.png" alt="Card image" variant="bottom"/>
                 <Card.ImgOverlay className="blackfooter mt-auto">
-                  <Card.Title className="card-img-overlay d-flex flex-column justify-content-end">Articles</Card.Title>
+                  <Card.Title className="card-img-overlay d-flex flex-column justify-content-end">Card Sets</Card.Title>
                 </Card.ImgOverlay>
               </Card>
-            {/* </Link> */}
+            </Link>
           </div>
           <div style={{width: "15vw", margin: "0px 5px"}}>
             {/* <Link to="/gameplay"> */}
