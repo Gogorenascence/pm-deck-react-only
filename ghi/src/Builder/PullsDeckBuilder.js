@@ -649,7 +649,7 @@ function PullsDeckBuilder(props) {
 
                         </div>
 
-                            <div style={{marginLeft: "20px"}}>
+                            <div>
                             <h4 className="left no-cards">No cards added</h4>
                             </div>
 
