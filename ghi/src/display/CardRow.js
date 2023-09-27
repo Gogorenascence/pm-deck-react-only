@@ -16,10 +16,10 @@ function CardRow() {
 
     return(
         <div className="white-space">
-            <div className="cd-inner">
+            <div className="cards-page-card-list5">
                 {newCards.map((card) => {
                     return (
-                        <div style={{width: "15vw", margin: "0px 5px"}} key={card.name}>
+                        <div key={card.name}>
                             <NavLink to={`/cards/${card.card_number}`}>
                                     <img
                                         className="card-row glow3"

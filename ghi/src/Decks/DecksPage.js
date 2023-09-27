@@ -181,53 +181,48 @@ function DecksPage(props) {
             <h1 className="left-h1">Deck Search</h1>
             <h2 className="left">Search our collection of decks</h2>
             <input
-                className="left"
+                className="left dcbsearch-large"
                 type="text"
                 placeholder=" Deck Name Contains..."
                 name="deckName"
                 value={deckQuery.deckName}
-                onChange={handleDeckQuery}
-                style={{width: "370px", height: "37px"}}>
+                onChange={handleDeckQuery}>
             </input>
             <br/>
             <input
-                className="left"
+                className="left dcbsearch-large"
                 type="text"
                 placeholder=" Creator's Name Contains..."
                 name="user"
                 value={deckQuery.user}
-                onChange={handleDeckQuery}
-                style={{width: "370px", height: "37px"}}>
+                onChange={handleDeckQuery}>
             </input>
             <br/>
             <input
-                className="left"
+                className="left dcbsearch-large"
                 type="text"
                 placeholder=" Description Contains..."
                 name="description"
                 value={deckQuery.description}
-                onChange={handleDeckQuery}
-                style={{width: "370px", height: "37px"}}>
+                onChange={handleDeckQuery}>
             </input>
             <br/>
             <input
-                className="left"
+                className="left dcbsearch-large"
                 type="text"
                 placeholder=" Contains Card Named..."
                 name="cardName"
                 value={deckQuery.cardName}
-                onChange={handleDeckQuery}
-                style={{width: "370px", height: "37px"}}>
+                onChange={handleDeckQuery}>
             </input>
             <br/>
             <input
-                className="left"
+                className="left dcbsearch-large"
                 type="text"
                 placeholder=" Contains Series Named..."
                 name="seriesName"
                 value={deckQuery.seriesName}
-                onChange={handleDeckQuery}
-                style={{width: "370px", height: "37px"}}>
+                onChange={handleDeckQuery}>
             </input>
             <br/>
             <select
@@ -306,9 +301,10 @@ function DecksPage(props) {
                                             variant="bottom"/>
                                     </div>
                                 </div>
-                                <Card.ImgOverlay className="blackfooter2 mt-auto">
+                                <Card.ImgOverlay className="blackfooter2">
                                     <div style={{display: "flex"}}>
-                                        <h3 className="left cd-container-child">{deck.name}</h3>
+                                        <h3 className="left cd-container-child media-margin-top-none"
+                                        >{deck.name}</h3>
                                         { deck.private && deck.private === true ?
                                             <img className="logo4" src="https://i.imgur.com/V3uOVpD.png" alt="private" />:null
                                         }
@@ -345,9 +341,9 @@ function DecksPage(props) {
                                         >
                                             {deck.updated_on.ago} &nbsp; &nbsp;
                                         </h6>
-                                        <img className="logo2" src="https://i.imgur.com/eMGZ7ON.png" alt="created by"/>
+                                        <img className="logo2 none" src="https://i.imgur.com/eMGZ7ON.png" alt="created by"/>
                                         <h6
-                                        className="left justify-content-end"
+                                        className="left justify-content-end none"
                                             style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                                         >
                                             {createdBy(deck)}

@@ -110,9 +110,9 @@ function DeckRow() {
                                             variant="bottom"/>
                                     </div>
                                 </div>
-                                <Card.ImgOverlay className="blackfooter2 mt-auto">
+                                <Card.ImgOverlay className="blackfooter2">
                                     <div style={{display: "flex"}}>
-                                        <h3 className="left cd-container-child"
+                                        <h3 className="left cd-container-child media-margin-top-none"
                                         >{deck.name}</h3>
                                         { deck.private && deck.private === true ?
                                             <img className="logo4"
@@ -148,9 +148,9 @@ function DeckRow() {
                                         >
                                             {deck.updated_on.ago} &nbsp; &nbsp;
                                         </h6>
-                                        <img className="logo2" src="https://i.imgur.com/eMGZ7ON.png" alt="created by"/>
+                                        <img className="logo2 none" src="https://i.imgur.com/eMGZ7ON.png" alt="created by"/>
                                         <h6
-                                        className="left justify-content-end"
+                                        className="left justify-content-end none"
                                             style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                                         >
                                             {createdBy(deck)}
@@ -165,7 +165,7 @@ function DeckRow() {
             <br/>
             <div className="d-grid gap-2">
                 <NavLink to="/decks">
-                    <button variant="dark" size="lg" style={{ width: "100%" }}>
+                    <button style={{ width: "100%" }}>
                         Browse All Decks
                     </button>
                 </NavLink>

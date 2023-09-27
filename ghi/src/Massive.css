@@ -663,6 +663,13 @@ button:hover {
   justify-items: center;
 }
 
+.cd-inner3{
+  display: grid;
+  /* gap: 0% 1%; */
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+}
+
 .cd-card {
   width: 480px;
   border-radius: 4%;
@@ -716,6 +723,12 @@ button:hover {
 .cards-page-card-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 1rem; /* Add any gap you want between the cards */
+}
+
+.cards-page-card-list5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem; /* Add any gap you want between the cards */
 }
 
@@ -1508,3 +1521,97 @@ button:hover {
   .glow3:hover {
     filter: brightness(1.2);
   }
+
+  .top-row {
+    min-width: 200px;
+    width: 15vw;
+  }
+
+  .dcbsearch-x-x-large {
+    width: 740px;
+    height: 37px;
+  }
+
+@media screen and (max-width: 800px) {
+  .cards-page-card-list5 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem; /* Add any gap you want between the cards */
+    justify-items: center;
+  }
+
+  .cards-page-card-list6 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; /* Add any gap you want between the cards */
+    justify-items: center;
+  }
+
+  .card-list2 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem; /* Add any gap you want between the cards */
+  }
+
+  .deck-row-card-list2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem; /* Add any gap you want between the cards */
+  }
+
+  .decks-page-card-list2 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem; /* Add any gap you want between the cards */
+  }
+
+  .media-margin-top-none {
+    margin-top: 0;
+  }
+
+  .media-card-image-wrapper2 {
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* Adjust this value as needed to control the card height */
+  }
+
+  .media-card-image-clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: -20%;
+    height: 50%; /* Adjust this value to show the desired portion of the image */
+    background-color: black; /* Adjust the background color if needed */
+  }
+
+  .media-card-image2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(20%);
+  }
+
+  .top-row {
+    width: 100%;
+  }
+
+  .dcbsearch-large {
+    width: 100%;
+    height: 37px;
+  }
+
+  .dcbsearch-x-x-large {
+    width: 100%;
+    height: 37px;
+  }
+
+  .none {
+    display: none;
+  }
+
+}
