@@ -248,8 +248,8 @@ function CardDetailPage() {
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div className="scrollable" style={{margin: "5% 0%"}}>
+                        <div className="hidden2 media-display">
+                            <div style={{margin: "5% 0%"}}>
                                 <h1 className="centered-h1">Related Cards</h1>
                                 <div className="cd-inner">
                                     <div className="cd-inner card-pool-fill3">
@@ -268,7 +268,7 @@ function CardDetailPage() {
                                 </div>
                                 <div className="cd-inner" style={{marginTop: "3%"}}>
                                     <button
-                                        className="left wide100 heightNorm"
+                                        className="left button100 heightNorm"
                                         style={{ textAlign: "center"}}
                                         onClick={getRandomCard}
                                     >
