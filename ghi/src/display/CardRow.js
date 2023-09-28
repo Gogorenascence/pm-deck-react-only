@@ -16,7 +16,7 @@ function CardRow() {
 
     return(
         <div className="white-space">
-            <div className="cards-page-card-list5">
+            <div className="cards-page-card-list7">
                 {newCards.map((card) => {
                     return (
                         <div key={card.name}>

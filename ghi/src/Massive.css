@@ -1558,13 +1558,20 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem; /* Add any gap you want between the cards */
-    justify-items: center;
   }
 
   .cards-page-card-list6 {
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; /* Add any gap you want between the cards */
+    justify-items: center;
+  }
+
+  .cards-page-card-list7 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem; /* Add any gap you want between the cards */
     justify-items: center;
   }
@@ -1609,7 +1616,33 @@ button:hover {
     background-color: black; /* Adjust the background color if needed */
   }
 
+  .media-card-image-clip2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: -10%;
+    height: 50%; /* Adjust this value to show the desired portion of the image */
+  }
+
+  .media-card-image-clip3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: -45%;
+    height: 50%; /* Adjust this value to show the desired portion of the image */
+    background-color: black; /* Adjust the background color if needed */
+  }
+
   .media-card-image2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* filter: brightness(20%); */
+  }
+
+  .media-card-image3 {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -1626,6 +1659,12 @@ button:hover {
 
   .top-row {
     width: 100%;
+  }
+
+  .top-row-card-list2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem; /* Add any gap you want between the cards */
   }
 
   .dcbsearch-large {
@@ -1663,5 +1702,18 @@ button:hover {
   .media-vert-30 {
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+
+  .blackfooter {
+    background: black;
+    height: 40%;
+    display: flex;
+    justify-content: bottom;
+    z-index: 1;
+    opacity: .80;
+  }
+
+  .media-title {
+    font-size: x-large;
   }
 }

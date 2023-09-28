@@ -201,151 +201,151 @@ function DeckBuilder(props) {
         <div className="white-space">
             <h1 className="left-h1">Deck Builder</h1>
             <div className="between-space">
-                    <div
-                        id="create-deck-page">
-                        <h2 className="left">Deck Details</h2>
+                <div
+                    id="create-deck-page">
+                    <h2 className="left">Deck Details</h2>
 
-                        <h5 className="label">Name </h5>
-                        <input
-                            className="builder-input"
-                            type="text"
-                            placeholder=" Deck Name"
-                            onChange={handleChange}
-                            name="name"
-                            value={deck.name}>
-                        </input>
-                        <br/>
-                        <h5 className="label">Cover Card</h5>
-                        <select
-                            className="builder-input"
-                            type="text"
-                            placeholder=" Cover Card"
-                            onChange={handleCoverCardChange}
-                            name="cover_card"
-                            value={deck.cover_card}>
-                            <option value="">Cover Card</option>
-                            {uniqueList.sort((a,b) => a.card_number - b.card_number).map(function(card)
-                            {return( <option value={card.picture_url}>{card.name}</option>)}
-                                )}
-                        </select>
-                        <br/>
-                        <h5 className="label"> Description </h5>
-                        <textarea
-                            className="builder-text"
-                            type="text"
-                            placeholder=" Deck Description"
-                            onChange={handleChange}
-                            name="description"
-                            value={deck.description}>
-                        </textarea>
-                        <h5 className="label">Strategies </h5>
-                        <h7 className="label"><em>hold ctrl/cmd to select more than one</em></h7>
-                        <br/>
-                        <select
-                            className="builder-text"
-                            multiple
-                            name="strategies"
-                            onChange={handleStrategyChange}
-                            >
-                            <option value="">Strategy</option>
-                            <option value="Aggro">Aggro</option>
-                            <option value="Combo">Combo</option>
-                            <option value="Control">Control</option>
-                            <option value="Mid-range">Mid-range</option>
-                            <option value="Ramp">Ramp</option>
-                            <option value="Second Wind">Second Wind</option>
-                            <option value="Stall">Stall</option>
-                            <option value="Toolbox">Toolbox</option>
-                            <option value="other">other</option>
-                        </select>
-                        <br/>
-                        <div style={{display: "flex", marginTop: "3px"}}>
-                            <FEDeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
-                            <button
-                                className="left red"
-                                style={{ marginTop: "5px"}}
-                                onClick={clearMain}
-                            >
-                                Clear Main
-                            </button>
-                            <button
-                                className="left red"
-                                style={{ marginTop: "5px"}}
-                                onClick={clearPluck}
-                            >
-                                Clear Pluck
-                            </button>
-                        </div>
-                    </div>
-                    <div className="none">
-                        <h2 className="left">Cover Card</h2>
-                        {selectedCard ? (
-                            <img
-                                className="cover-card"
-                                src={selectedCard}
-                                alt={selectedCard.name}
-                                variant="bottom"/>
-                                ):(
-                            <img
-                                className="cover-card"
-                                src={"https://i.imgur.com/krY25iI.png"}
-                                alt="Card"
-                                variant="bottom"/>)}
-                    </div>
-
-                    <BuilderCardSearch boosterSets={booster_sets}/>
-                </div>
-
-                <div className={showPool ? "cardpool" : "no-cardpool"}>
-                    <div style={{marginLeft: "0px"}}>
-                        <div style={{display: "flex", alignItems: "center"}}>
-                            <h2
-                                className="left"
-                                style={{margin: "1% 0px 1% 20px", fontWeight: "700"}}
-                            >Card Pool</h2>
-                            <img className="logo" src="https://i.imgur.com/YpdBflG.png" alt="cards icon"/>
-                            {all_cards.length > 0 ?
-                                <h5
-                                    className="left db-pool-count"
-                                >{all_cards.length}</h5>:
-                                null}
-                            { showPool ?
-                                <h5 className="left db-pool-count"
-                                    onClick={() => handleShowPool()}>
-                                        &nbsp;[Hide]
-                                </h5> :
-                                <h5 className="left db-pool-count"
-                                    onClick={() => handleShowPool()}>
-                                    &nbsp;[Show]
-                                </h5>}
-                        </div>
-                        <div className={showPool ? "scrollable" : "hidden2"}>
-                            <div style={{margin: "8px"}}>
-
-                            <div className="card-pool-fill">
-                                {all_cards.slice(0, showMore).map((card) => {
-                                    return (
-                                        <div style={{display: "flex", justifyContent: "center"}}>
-                                            <img
-                                                onClick={() => handleClick(card)}
-                                                className={uniqueList.includes(card) ? "selected builder-card pointer glow3" : "builder-card pointer glow3"}
-                                                title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
-                                                src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                                alt={card.name}/>
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                            </div>
-                            {showMore < all_cards.length ?
-                                <button
-                                    style={{ width: "97%", margin:".5% 0% .5% 1.5%"}}
-                                    onClick={handleShowMore}>
-                                    Show More Cards ({all_cards.length - showMore} Remaining)
-                                </button> : null }
-                        </div>
+                    <h5 className="label">Name </h5>
+                    <input
+                        className="builder-input"
+                        type="text"
+                        placeholder=" Deck Name"
+                        onChange={handleChange}
+                        name="name"
+                        value={deck.name}>
+                    </input>
+                    <br/>
+                    <h5 className="label">Cover Card</h5>
+                    <select
+                        className="builder-input"
+                        type="text"
+                        placeholder=" Cover Card"
+                        onChange={handleCoverCardChange}
+                        name="cover_card"
+                        value={deck.cover_card}>
+                        <option value="">Cover Card</option>
+                        {uniqueList.sort((a,b) => a.card_number - b.card_number).map(function(card)
+                        {return( <option value={card.picture_url}>{card.name}</option>)}
+                            )}
+                    </select>
+                    <br/>
+                    <h5 className="label"> Description </h5>
+                    <textarea
+                        className="builder-text"
+                        type="text"
+                        placeholder=" Deck Description"
+                        onChange={handleChange}
+                        name="description"
+                        value={deck.description}>
+                    </textarea>
+                    <h5 className="label">Strategies </h5>
+                    <h7 className="label"><em>hold ctrl/cmd to select more than one</em></h7>
+                    <br/>
+                    <select
+                        className="builder-text"
+                        multiple
+                        name="strategies"
+                        onChange={handleStrategyChange}
+                        >
+                        <option value="">Strategy</option>
+                        <option value="Aggro">Aggro</option>
+                        <option value="Combo">Combo</option>
+                        <option value="Control">Control</option>
+                        <option value="Mid-range">Mid-range</option>
+                        <option value="Ramp">Ramp</option>
+                        <option value="Second Wind">Second Wind</option>
+                        <option value="Stall">Stall</option>
+                        <option value="Toolbox">Toolbox</option>
+                        <option value="other">other</option>
+                    </select>
+                    <br/>
+                    <div style={{display: "flex", marginTop: "3px"}}>
+                        <FEDeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
+                        <button
+                            className="left red"
+                            style={{ marginTop: "5px"}}
+                            onClick={clearMain}
+                        >
+                            Clear Main
+                        </button>
+                        <button
+                            className="left red"
+                            style={{ marginTop: "5px"}}
+                            onClick={clearPluck}
+                        >
+                            Clear Pluck
+                        </button>
                     </div>
                 </div>
+                <div className="none">
+                    <h2 className="left">Cover Card</h2>
+                    {selectedCard ? (
+                        <img
+                            className="cover-card"
+                            src={selectedCard}
+                            alt={selectedCard.name}
+                            variant="bottom"/>
+                            ):(
+                        <img
+                            className="cover-card"
+                            src={"https://i.imgur.com/krY25iI.png"}
+                            alt="Card"
+                            variant="bottom"/>)}
+                </div>
+
+                <BuilderCardSearch boosterSets={booster_sets}/>
+            </div>
+
+            <div className={showPool ? "cardpool" : "no-cardpool"}>
+                <div style={{marginLeft: "0px"}}>
+                    <div style={{display: "flex", alignItems: "center"}}>
+                        <h2
+                            className="left"
+                            style={{margin: "1% 0px 1% 20px", fontWeight: "700"}}
+                        >Card Pool</h2>
+                        <img className="logo" src="https://i.imgur.com/YpdBflG.png" alt="cards icon"/>
+                        {all_cards.length > 0 ?
+                            <h5
+                                className="left db-pool-count"
+                            >{all_cards.length}</h5>:
+                            null}
+                        { showPool ?
+                            <h5 className="left db-pool-count"
+                                onClick={() => handleShowPool()}>
+                                    &nbsp;[Hide]
+                            </h5> :
+                            <h5 className="left db-pool-count"
+                                onClick={() => handleShowPool()}>
+                                &nbsp;[Show]
+                            </h5>}
+                    </div>
+                    <div className={showPool ? "scrollable" : "hidden2"}>
+                        <div style={{margin: "8px"}}>
+
+                        <div className="card-pool-fill">
+                            {all_cards.slice(0, showMore).map((card) => {
+                                return (
+                                    <div style={{display: "flex", justifyContent: "center"}}>
+                                        <img
+                                            onClick={() => handleClick(card)}
+                                            className={uniqueList.includes(card) ? "selected builder-card pointer glow3" : "builder-card pointer glow3"}
+                                            title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
+                                            src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                            alt={card.name}/>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        </div>
+                        {showMore < all_cards.length ?
+                            <button
+                                style={{ width: "97%", margin:".5% 0% .5% 1.5%"}}
+                                onClick={handleShowMore}>
+                                Show More Cards ({all_cards.length - showMore} Remaining)
+                            </button> : null }
+                    </div>
+                </div>
+            </div>
                 {listView?
                     <div className="deck-list">
                         <div className="maindeck3">
