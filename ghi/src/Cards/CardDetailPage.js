@@ -105,15 +105,16 @@ function CardDetailPage() {
 
     return (
         <div className="white-space">
-            <div className="cd-container">
-                <div className="cd-container-child" style={{width: "40%"}}>
-                    <div className="cd-inner">
+            <div className="cd-container between-space">
+                <div className="cd-container-child wide40">
+                    <div className="cd-inner media-display">
+                        <h1 className="hidden2 media-display media-center">{card.name}</h1>
                         <img
-                            className="cd-card"
+                            className="cd-card wide100"
                             src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
                             alt={card.name}/>
                     </div>
-                    <div style={{margin: "5% 0%"}}>
+                    <div className="none" style={{margin: "5% 0%"}}>
                             <h1 className="centered-h1">Related Cards</h1>
                         <div className="cd-inner">
                             <div className="cd-inner card-list3" style={{width: "480px"}}>
@@ -145,9 +146,9 @@ function CardDetailPage() {
                         </div>
                     </div>
                 </div>
-                <div className="cd-container-child" style={{width: "55%", marginLeft: "3%"}}>
-                    <div className="cd-inner2">
-                    <h1 >{card.name}</h1>
+                <div className="cd-container-child wide55 margin-left-3P">
+                    <div className="cd-inner2 media-display">
+                    <h1 className="none">{card.name}</h1>
                         <div>
                             <div className="cd-info">
                                 <div className={card.card_class ? card.card_class : "NoClass"}>
@@ -248,7 +249,37 @@ function CardDetailPage() {
                             </div>
                         </div>
                         <div>
+                            <div className="scrollable" style={{margin: "5% 0%"}}>
+                                <h1 className="centered-h1">Related Cards</h1>
+                                <div className="cd-inner">
+                                    <div className="cd-inner card-pool-fill3">
+                                        {relatedCardsList.slice(0,6).map((relatedCard) => {
+                                            return (
+                                                <NavLink to={`/cards/${relatedCard.card_number}`}>
+                                                        <img
+                                                            className="cd-related-card"
+                                                            title={relatedCard.name}
+                                                            src={relatedCard.picture_url ? relatedCard.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                            alt={relatedCard.name}/>
+                                                </NavLink>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                                <div className="cd-inner" style={{marginTop: "3%"}}>
+                                    <button
+                                        className="left wide100 heightNorm"
+                                        style={{ textAlign: "center"}}
+                                        onClick={getRandomCard}
+                                    >
+                                        Random Card
+                                    </button>
+                                    {relatedCardsList.length > 6?
+                                        <RelatedCardModal/>: null
+                                    }
 
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

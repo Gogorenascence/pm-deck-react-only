@@ -1471,6 +1471,14 @@ button:hover {
     margin: 0px 18px 18px 18px;
   }
 
+  .card-pool-fill3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-flow: dense;
+    /* margin-right: 18px; */
+  }
+
   .app-container {
     position: relative;
   }
@@ -1544,6 +1552,18 @@ button:hover {
   .between-space {
     display: flex;
     justify-content: space-between;
+  }
+
+  .wide40 {
+    width: 40%;
+  }
+
+  .wide55 {
+    width: 55%;
+  }
+
+  .margin-left-3P {
+    margin-left: 3%;
   }
 
 @media screen and (max-width: 800px) {
@@ -1851,4 +1871,96 @@ button:hover {
       background-position: -3000px 3000px;
     }
   }
+
+
+  .white-space {
+    max-width: 98%;
+    margin: auto;
+  }
+
+  .wide40 {
+    width: 100%;
+  }
+
+  .wide55 {
+    width: 100%;
+  }
+
+  .wide100 {
+    width: 100%;
+  }
+
+  .media-display {
+    display: block;
+  }
+
+  .cd-info {
+    display: block;
+    width: 100%;
+    margin: 0 0 0 0;
+  }
+
+  .Staunch {
+    width: 100%;
+    margin: 0 0 0 0;
+    background-size: 100%;
+  }
+
+  .Power {
+    width: 100%;
+    margin: 0 0 0 0;
+    background-size: 100%;
+  }
+
+  .Unity {
+    width: 100%;
+    margin: 0 0 0 0;
+    background-size: 100%;
+  }
+
+  .Canny {
+    width: 100%;
+    margin: 0 0 0 0;
+    background-size: 100%;
+  }
+
+  .NoClass {
+    width: 100%;
+    margin: 0 0 0 0;
+    background-size: 100%;
+  }
+
+  .bigStaunch {
+    width: 100%;
+    margin: 0 0 0 0;
+    background-size: 200%;
+  }
+
+  .bigPower {
+    width: 100%;
+    margin: 0 0 0 0;
+    background-size: 200%;
+  }
+
+  .bigUnity {
+    width: 100%;
+    margin: 0 0 0 0;
+    background-size: 200%;
+  }
+
+  .bigCanny {
+    width: 100%;
+    margin: 0 0 0 0;
+    background-size: 200%;
+  }
+
+  .bigNoClass {
+    width: 100%;
+    margin: 0 0 0 0;
+  }
+
+  .margin-left-3P {
+    margin-left: 0;
+  }
+
 }
