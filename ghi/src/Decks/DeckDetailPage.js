@@ -397,7 +397,7 @@ function DeckDetailPage(props) {
                     List View
                 </button>}
             <button
-                    className="left"
+                    className="left none"
                     variant="dark"
                     onClick={getShuffledDeck}
                     style={{marginLeft: ".5%"}}
@@ -428,7 +428,7 @@ function DeckDetailPage(props) {
             <BackButton/>
             </div>
             {listView?
-                        <div className="deck-list">
+                        <div className="deck-list media-display">
                             <div className="maindeck3">
                             <div style={{marginLeft: "20px"}}>
                                 <div style={{display: "flex", alignItems: "center"}}>
@@ -450,7 +450,7 @@ function DeckDetailPage(props) {
                                                     <div className="card-container">
                                                     <h5>{card.info.name} x <b>{card.count}</b></h5>
                                                         <img
-                                                            className="card-image"
+                                                            className="media-card-image"
                                                             src={card.info.picture_url}
                                                             alt={card.info.name}
                                                         />
@@ -484,7 +484,7 @@ function DeckDetailPage(props) {
                                                     <div className="card-container">
                                                     <h5>{card.info.name} x <b>{card.count}</b></h5>
                                                         <img
-                                                            className="card-image"
+                                                            className="media-card-image"
                                                             src={card.info.picture_url}
                                                             alt={card.info.name}
                                                         />
