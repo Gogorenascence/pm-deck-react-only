@@ -196,7 +196,7 @@ function CardsPage(props) {
             </input>
             <br/>
             <select
-                className="left dcbsearch-large"
+                className="left dcbsearch-x-large"
                 type="text"
                 placeholder=" Card Set"
                 onChange={handleBoosterSetChange}

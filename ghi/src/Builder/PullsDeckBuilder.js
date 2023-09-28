@@ -294,7 +294,7 @@ function PullsDeckBuilder(props) {
     return (
         <div className="white-space">
             <h1 className="left-h1">Deck Builder</h1>
-            <div style={{display: "flex", justifyContent: "space-between"}}>
+            <div className="between-space">
                 <div
                     id="create-deck-page">
                     <h2 className="left">Deck Details</h2>
@@ -370,7 +370,7 @@ function PullsDeckBuilder(props) {
                         </button>
                     </div>
                 </div>
-                <div>
+                <div className="none">
                     <h2 className="left">Cover Card</h2>
                     {selectedCard ? (
                         <img
@@ -386,7 +386,7 @@ function PullsDeckBuilder(props) {
                             variant="bottom"/>)}
                 </div>
 
-                <div>
+                <div className="media-vert-30">
                     <h2 className="left">Search for cards</h2>
                     <input
                         className="left dcbsearch-large"

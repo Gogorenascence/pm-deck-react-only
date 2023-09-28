@@ -183,7 +183,7 @@ function PackOpener(props) {
     return (
         <div>
             <button
-                className="left"
+                className="left media-button media-center"
                 onClick={async () => {
                     const result = await openPacks();
                 }}>

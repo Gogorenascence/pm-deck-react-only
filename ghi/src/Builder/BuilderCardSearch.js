@@ -70,7 +70,7 @@ function BuilderCardSearch(props) {
 
     return (
 
-        <div>
+        <div className="media-vert-30">
             <h2 className="left">Search for cards</h2>
             <input
                 className="left dcbsearch-large"

@@ -1532,7 +1532,27 @@ button:hover {
     height: 37px;
   }
 
+  .button-fill {
+    display: flex;
+  }
+
+  .back-button {
+    width: 67px;
+    margin: 5px 5px 5px 7px;
+  }
+
+  .between-space {
+    display: flex;
+    justify-content: space-between;
+  }
+
 @media screen and (max-width: 800px) {
+  .cards-page-card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; /* Add any gap you want between the cards */
+  }
+
   .cards-page-card-list5 {
     margin-top: 20px;
     display: grid;
@@ -1596,22 +1616,52 @@ button:hover {
     filter: brightness(20%);
   }
 
+  .button-fill {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: auto;
+    grid-auto-flow: dense;
+    align-items: center;
+  }
+
   .top-row {
     width: 100%;
   }
 
   .dcbsearch-large {
-    width: 100%;
+    width: 95%;
+    height: 37px;
+  }
+
+  .dcbsearch-x-large {
+    width: 95%;
     height: 37px;
   }
 
   .dcbsearch-x-x-large {
-    width: 100%;
+    width: 95%;
     height: 37px;
+  }
+
+  .media-button{
+    width: 120px;
+    margin-left: 35px;
+  }
+
+  .media-center {
+    text-align: center;
   }
 
   .none {
     display: none;
   }
 
+  .between-space {
+    display: inline;
+  }
+
+  .media-vert-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }

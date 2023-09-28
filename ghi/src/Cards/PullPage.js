@@ -133,7 +133,7 @@ function PullPage(props) {
                     </div>
                 </div>
                 <Card.ImgOverlay className="blackfooter2 mt-auto">
-                        <h3 className="left cd-container-child">{boosterSet.name}</h3>
+                        <h3 className="left cd-container-child media-margin-top-none">{boosterSet.name}</h3>
                         <h6 className="left"
                             style={{margin: '0px 0px 10px 10px', fontWeight: "600"}}
                             >
@@ -165,7 +165,7 @@ function PullPage(props) {
             </div>:
             null}
 
-            <div style={{ display: "flex" }}>
+            <div className="button-fill">
                 <input
                     className="left dcbsearch-medium"
                     type="text"
@@ -197,28 +197,28 @@ function PullPage(props) {
                     </button>} */}
                 {fullView?
                     <button
-                        className="left"
+                        className="left media-button media-center"
                         onClick={handleFullView}
                     >
                         Multiple View
                     </button>:
                     <button
-                        className="left"
+                        className="left media-button media-center"
                         onClick={handleFullView}
                     >
                         Single View
                     </button>}
-                <button onClick={handleSavePulls} className="left">
+                <button onClick={handleSavePulls} className="left media-button media-center">
                     Save Pulls
                 </button>
-                <button onClick={handleClearPulls} className="left">
+                <button onClick={handleClearPulls} className="left media-button media-center">
                     Clear Pulls
                 </button>
                 <NavLink to={`/cardsets/${card_set_id}/pulls/deckbuilder`}>
-                <button
-                    className="left">
-                    Create Deck
-                </button>
+                    <button
+                        className="left media-button media-center">
+                        Create Deck
+                    </button>
                 </NavLink>
                 <BackButton/>
             </div>

@@ -92,7 +92,7 @@ function SetDetailPage(props) {
                     </div>
                 </div>
                 <Card.ImgOverlay className="blackfooter2 mt-auto">
-                        <h3 className="left cd-container-child">{boosterSet.name}</h3>
+                        <h3 className="left cd-container-child media-margin-top-none">{boosterSet.name}</h3>
                         <h6 className="left"
                             style={{margin: '0px 0px 10px 10px', fontWeight: "600"}}
                         >
@@ -231,7 +231,7 @@ function SetDetailPage(props) {
                     </div>
             :<> */}
                 <div className="rarities">
-<div>
+                        <div>
                         <div style={{display: "flex", alignItems: "center", marginLeft: "20px"}}>
                             <h2
                                 className="left"
