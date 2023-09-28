@@ -239,9 +239,9 @@ function DeckDetailPage(props) {
                             variant="bottom"/>
                     </div>
                 </div>
-                <Card.ImgOverlay className="blackfooter2 mt-auto">
+                <Card.ImgOverlay className="blackfooter2">
                         <div style={{display: "flex"}}>
-                            <h3 className="left cd-container-child">{deck.name}</h3>
+                            <h3 className="left cd-container-child media-margin-top-none">{deck.name}</h3>
                             { deck.private && deck.private === true ?
                                 <img className="logo4" src="https://i.imgur.com/V3uOVpD.png" alt="private" />:null
                             }
