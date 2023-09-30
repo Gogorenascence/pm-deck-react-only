@@ -35,8 +35,6 @@ function RelatedCardModal(props) {
                     onClick={handleShow}>
                     Show all Cards
             </button>
-            <Modal.Header closeButton>
-            </Modal.Header>
             <Modal
                 show={show}
                 size="xl"
