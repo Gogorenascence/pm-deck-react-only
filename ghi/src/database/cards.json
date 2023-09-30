@@ -101,7 +101,7 @@
   "hero_id": "GW1",
   "series_name": "Golden Wall//Cosmic//Defender",
   "card_number": 1007,
-  "effect_text": "<Target> Foe on your left or right. //<1-5> No effect. //<6-11> Deal 2 damage. Damage you and your Fighter take this turn is reduced by 1. //<12+> Deal 3 damage. Damage you and your Fighter take this turn is reduced by 1.",
+  "effect_text": "<Target> Foe on your left or right. //<1-5> Deal 2 damage. //<6-11> Deal 2 damage. Damage you and your Fighter take this turn is reduced by 1. //<12+> Deal 3 damage. Damage you and your Fighter take this turn is reduced by 1.",
   "flavor_text": "string",
   "illustrator": "Eric Rodrigues",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g2gwm.png",
@@ -124,17 +124,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:45",
+    "month": 9,
+    "day": 30,
+    "time": "21:34",
     "full_time": {
-      "$date": "2023-06-25T18:45:13.925Z"
+      "$date": "2023-09-30T21:34:37.581Z"
     }
   }
 },
@@ -207,7 +205,7 @@
   ],
   "reactions": [
     1002,
-    1002
+    1003
   ],
   "card_tags": [
     1001
@@ -219,17 +217,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:45",
+    "month": 9,
+    "day": 30,
+    "time": "22:04",
     "full_time": {
-      "$date": "2023-06-25T18:45:34.425Z"
+      "$date": "2023-09-30T22:04:58.305Z"
     }
   }
 },
@@ -293,7 +289,7 @@
   "series_name": "Golden Wall//Cosmic//Defender",
   "card_number": 1070,
   "enthusiasm": 0,
-  "effect_text": "<L. Trigger> When a Fighter in your play is revealed, that Fighter gains 1 HP.",
+  "effect_text": "<L. Trigger> When this Item is played or a Fighter(s) in your play is revealed, 1 Fighter in your play gains 1 HP (that card is revealed).",
   "flavor_text": "string",
   "illustrator": "Eric Rodrigues",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl02gwi.png",
@@ -320,11 +316,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 7,
-    "day": 27,
-    "time": "02:39",
+    "month": 9,
+    "day": 30,
+    "time": "21:56",
     "full_time": {
-      "$date": "2023-07-27T02:39:55.794Z"
+      "$date": "2023-09-30T21:56:13.999Z"
     }
   }
 },
@@ -339,7 +335,7 @@
   "series_name": "Golden Wall//Cosmic//Defender",
   "card_number": 1008,
   "enthusiasm": 7,
-  "effect_text": "<Target> Foes on your left and right. //<1-5> Deal 2 damage. //<6-11> Deal 3 damage and if either target has a defending Fighter, deal 1 bypassing damage to them. //<12+> Deal 3 damage and if either target has a defending Fighter, they both take 1 damage.",
+  "effect_text": "<Target> Foes on your left and right. //<1-5> Deal 3 damage. //<6-11> Deal 3 damage and if either target has a defending Fighter, deal 1 bypassing damage to them. //<12+> Deal 3 damage and if either target has a defending Fighter, they both take 1 damage.",
   "flavor_text": "string",
   "illustrator": "Eric Rodrigues",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g2gwe.png",
@@ -361,17 +357,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:46",
+    "month": 9,
+    "day": 30,
+    "time": "21:31",
     "full_time": {
-      "$date": "2023-06-25T18:46:07.445Z"
+      "$date": "2023-09-30T21:31:35.555Z"
     }
   }
 },
@@ -770,7 +764,7 @@
   "series_name": "Project HERMES//Tech//Tactical//Team",
   "card_number": 1035,
   "enthusiasm": 0,
-  "effect_text": "<Target> Your strongest foe. //<1-5> Deal 2 damage. //<6-11> Deal 2 damage. Draw 1 card. //<12+> Deal 2 damage plus 1 additional damage for each card in your play past 4. Add 1 Unity card from the discard pile to your hand.",
+  "effect_text": "<Target> Your strongest foe. //<1-5> Deal 1 damage. //<6-11> Deal 2 damage. Add 1 Unity Move from your hand to your play, that card can not be resolved this round. //<12+> Deal 2 damage. Add 1 Unity Move from your hand to your play.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b1dwm.png",
@@ -789,17 +783,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:51",
+    "month": 9,
+    "day": 30,
+    "time": "21:44",
     "full_time": {
-      "$date": "2023-06-25T18:51:44.576Z"
+      "$date": "2023-09-30T21:44:17.981Z"
     }
   }
 },
@@ -855,7 +847,7 @@
   "series_name": "Project HERMES//Tech//Tactical//Team",
   "card_number": 1036,
   "enthusiasm": 20,
-  "effect_text": "<Target> Your weakest foe. //<1-5> Deal 1 damage. //<6-11> Deal 3 damage. //<12+> Deal 1 damage for each card in your play. Return 1 other card in your play to your hand.",
+  "effect_text": "<Target> Your weakest foe. //<1-5> Deal 2 damage. //<6-11> Deal 3 damage. //<12+> Deal 1 damage for each card in your play. Return 1 other card in your play to your hand.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b1dwe.png",
@@ -874,17 +866,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:51",
+    "month": 9,
+    "day": 30,
+    "time": "21:35",
     "full_time": {
-      "$date": "2023-06-25T18:51:49.451Z"
+      "$date": "2023-09-30T21:35:16.642Z"
     }
   }
 },
@@ -940,7 +930,7 @@
   "series_name": "Burst Esper//Psychic//Energy",
   "card_number": 1028,
   "enthusiasm": 13,
-  "effect_text": "<Target> All foes with a larger hand than you (damage is calculated separately for each target). //<1-5> Deal 1 damage. //<6-11> Deal damage equal to the difference. Draw 1 card. //<12+> Deal damage equal to the difference plus 1. Ignore the reaction(s) of defending Fighter(s). Draw 1 card.",
+  "effect_text": "<Target> All foes with a larger hand than you (damage is calculated separately for each target). //<1-5> Deal 2 damage. //<6-11> Deal damage equal to the difference. Draw 1 card. //<12+> Deal damage equal to the difference plus 1. Ignore the reaction(s) of defending Fighter(s). Draw 1 card.",
   "second_effect_text": "",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r3bee.png",
@@ -963,11 +953,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 7,
-    "day": 17,
-    "time": "04:15",
+    "month": 9,
+    "day": 30,
+    "time": "21:39",
     "full_time": {
-      "$date": "2023-07-17T04:15:43.872Z"
+      "$date": "2023-09-30T21:39:01.942Z"
     }
   }
 },
@@ -2785,7 +2775,7 @@
   "series_name": "Bone Whisperer//Mystic//Nature",
   "card_number": 1012,
   "enthusiasm": 15,
-  "effect_text": "<Target> Random foe. //<1-5> No effect. //<6-11> Deal 3 damage. Add 1 Event from the discard pile to your ownership. //<12+> Deal 3 piercing damage. Add 1 card and 1 Event from their respective discard piles to your hand/ownership.",
+  "effect_text": "<Target> Random foe. //<1-5> Deal 2 damage. //<6-11> Deal 3 damage. Add 1 Event from the discard pile to your ownership. //<12+> Deal 3 piercing damage. Add 1 card and 1 Event from their respective discard piles to your hand/ownership.",
   "second_effect_text": "",
   "illustrator": "Ranbutam",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g3bwe.png",
@@ -2804,17 +2794,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:08",
+    "month": 9,
+    "day": 30,
+    "time": "21:36",
     "full_time": {
-      "$date": "2023-06-25T19:08:58.859Z"
+      "$date": "2023-09-30T21:36:08.097Z"
     }
   }
 },
@@ -3382,7 +3370,7 @@
   "card_number": 1111,
   "enthusiasm": 0,
   "effect_text": "Add 2 Comebacks from the discard pile to your ownership. You can not resolve them this round. ",
-  "second_effect_text": "<Critical> Discard 2 cards from your play; add 1 Aura from the discard pile to your play.",
+  "second_effect_text": "<Critical> Discard 1 unresolved card from your play; add 1 Aura or Move from the discard pile to your play.",
   "illustrator": "Hugo Roberto",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb15cp.png",
   "file_name": "i1cb15cp",
@@ -3401,17 +3389,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:08",
+    "month": 9,
+    "day": 30,
+    "time": "21:37",
     "full_time": {
-      "$date": "2023-06-25T19:08:19.042Z"
+      "$date": "2023-09-30T21:37:05.172Z"
     }
   }
 },
@@ -3724,7 +3710,7 @@
   "series_name": "Flamebell//Magic//Quest",
   "card_number": 1078,
   "enthusiasm": 0,
-  "effect_text": "If a player(s) has a Power card(s) in their play, gain 2 HP.",
+  "effect_text": "If a player(s) has a Power card(s) in their play, gain 1 HP.",
   "second_effect_text": "<Critical> Resolve your Aura one more time.",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb4fb.png",
@@ -3748,11 +3734,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 8,
-    "day": 31,
-    "time": "17:46",
+    "month": 9,
+    "day": 30,
+    "time": "21:44",
     "full_time": {
-      "$date": "2023-08-31T17:46:07.901Z"
+      "$date": "2023-09-30T21:44:41.531Z"
     }
   }
 },
@@ -3855,7 +3841,7 @@
   "series_name": "Red Fist//Tech//Brawler",
   "card_number": 1023,
   "enthusiasm": 0,
-  "effect_text": "<Target> Foe on your left. //<1-5> Deal 1 damage. //<6-11> Deal 3 piercing damage. //<12+> Deal 3 piercing damage. Ignore the reaction(s) of defending Fighter(s) and draw 1 card.",
+  "effect_text": "<Target> Foe on your left. //<1-5> Deal 1 damage. //<6-11> Deal 3 piercing damage. Draw 1 card. //<12+> Deal 3 piercing damage. Ignore the reaction(s) of defending Fighter(s) and draw 2 cards.",
   "second_effect_text": "",
   "illustrator": "gmoshiro",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rfm.png",
@@ -3874,17 +3860,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:11",
+    "month": 9,
+    "day": 30,
+    "time": "21:30",
     "full_time": {
-      "$date": "2023-06-25T19:11:54.452Z"
+      "$date": "2023-09-30T21:30:58.735Z"
     }
   }
 },
@@ -3898,7 +3882,7 @@
   "series_name": "Red Fist//Tech//Brawler",
   "card_number": 1024,
   "enthusiasm": 18,
-  "effect_text": "<Target> Foe on your right. //<1-5> Discard 1 card from your hand.  //<6-11> Discard 1 card from your hand. //<12+>  If your hand has 6 or more cards, deal 6 piercing damage. Ignore the reaction(s) of defending Fighter(s).",
+  "effect_text": "<Target> Foe on your right. //<1-5> Discard 1 card from your hand.  //<6-11> Deal 2 piercing damage. //<12+>  Deal 3 piercing damage. If your hand has 6 or more cards, deal 3 additional piercing damage. Ignore the reaction(s) of defending Fighter(s).",
   "second_effect_text": "",
   "illustrator": "gmoshiro",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rfe.png",
@@ -3921,11 +3905,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 7,
-    "day": 9,
-    "time": "14:41",
+    "month": 9,
+    "day": 30,
+    "time": "21:40",
     "full_time": {
-      "$date": "2023-07-09T14:41:16.186Z"
+      "$date": "2023-09-30T21:40:35.492Z"
     }
   }
 },
@@ -4063,7 +4047,7 @@
   "series_name": "Blast Mouth//Altered//Nature",
   "card_number": 1020,
   "enthusiasm": 6,
-  "effect_text": "<Target> Foe of your choice. //If you are last to go this round, ignore the reaction(s) of defending Fighter(s). //<1-5> Deal 4 damage. //<6-11> Deal 4 piercing damage. //<12+> Deal 5 piercing damage and 1 additional piercing damage if they have already gone this round.",
+  "effect_text": "<Target> Foe of your choice. //If you are last to go this round, ignore the reaction(s) of defending Fighter(s). //<1-5> Deal 4 damage. //<6-11> Deal 4 piercing damage. //<12+> Deal 5 piercing damage. If they have already gone this round, deal 1 additional piercing damage.",
   "second_effect_text": "",
   "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r1bme.png",
@@ -4082,17 +4066,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:12",
+    "month": 9,
+    "day": 30,
+    "time": "21:41",
     "full_time": {
-      "$date": "2023-06-25T19:12:24.353Z"
+      "$date": "2023-09-30T21:41:50.242Z"
     }
   }
 },
@@ -4584,14 +4566,16 @@
   "card_number": 1089,
   "enthusiasm": 0,
   "effect_text": "Foes can not use trigger effects or reactions in response to the effects and reactions of your Fighter(s).",
-  "second_effect_text": "<Trigger> If your Fighter defends, cancel all non-damaging effect(s) of card(s) targeting you until the end of this turn.",
+  "second_effect_text": "<Trigger> If your Fighter defends, cancel all non-damaging effect(s) of card(s) of all foes' cards(s) until the end of this turn.",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl08bgae.png",
   "file_name": "i1pl08bgae",
   "card_type": [
     1007
   ],
-  "extra_effects": [],
+  "extra_effects": [
+    1001
+  ],
   "reactions": [],
   "card_tags": [
     1005
@@ -4601,17 +4585,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:20",
+    "month": 9,
+    "day": 30,
+    "time": "21:33",
     "full_time": {
-      "$date": "2023-06-25T19:20:00.729Z"
+      "$date": "2023-09-30T21:33:13.723Z"
     }
   }
 },
