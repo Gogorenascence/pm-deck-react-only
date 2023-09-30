@@ -184,7 +184,7 @@ function CardDetailPage() {
                                                 <h5 title={card_tag.rules}
                                                     style={{fontWeight: "400", margin: "18px 12px"}}>
                                                         {
-                                                            card_tag.id === "641292cf38b70f477bb72e6f" ?
+                                                            card_tag.tag_number === "1000" ?
                                                             card_tag.name : card_tag.name + " *"}
                                                 </h5>
                                             );
@@ -275,7 +275,7 @@ function CardDetailPage() {
                                         Random Card
                                     </button>
                                     {relatedCardsList.length > 6?
-                                        <RelatedCardModal/>: null
+                                        <RelatedCardModal relatedCardsList={relatedCardsList}/>: null
                                     }
 
                                 </div>

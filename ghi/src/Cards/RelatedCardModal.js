@@ -6,28 +6,24 @@ import { useParams, NavLink} from 'react-router-dom';
 import React, { useState, useEffect } from 'react'
 
 
-function RelatedCardModal() {
+function RelatedCardModal(props) {
 
-    const {card_number} = useParams();
+    const {relatedCardsList} = props
+    const [relatedCards, setRelatedCards] = useState([]);
 
+    console.log(relatedCards)
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-    const [relatedCards, setRelatedCards] = useState([]);
-
-    const getRelatedCards = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/related_cards/`);
-        const relatedData = await response.json();
-
-        setRelatedCards(relatedData.cards.sort((a,b) => a.card_number - b.card_number));
+    const handleShow = () => {
+        setShow(true)
+        getRelatedCards()
     };
 
-    useEffect(() => {
-        getRelatedCards();
-    // eslint-disable-next-line
-    }, []);
+
+    const getRelatedCards = async() => {
+        setRelatedCards(relatedCardsList)
+    }
 
 
     return (
@@ -50,20 +46,20 @@ function RelatedCardModal() {
                 <Modal.Body closeButton>
                 <h1 className="centered-h1"
                     style={{color: "black"}}>Related Cards</h1>
-                <div style={{margin: "5px"}}>
-                    {relatedCards.map((relatedCard) => {
-                        return (
-                            <NavLink to={`/cards/${relatedCard.card_number}`}>
-                                    <img
-                                        className="cd-related-card"
-                                        style={{marginRight: "5px"}}
-                                        title={relatedCard.name}
-                                        src={relatedCard.picture_url ? relatedCard.picture_url : "logo4p.png"}
-                                        alt={relatedCard.name}
-                                        variant="bottom"/>
-                            </NavLink>
-                        );
-                    })}
+                <div className="cd-inner">
+                    <div className="cd-inner card-pool-fill3">
+                        {relatedCards.map((relatedCard) => {
+                            return (
+                                <NavLink to={`/cards/${relatedCard.card_number}`}>
+                                        <img
+                                            className="cd-related-card"
+                                            title={relatedCard.name}
+                                            src={relatedCard.picture_url ? relatedCard.picture_url : "logo4p.png"}
+                                            alt={relatedCard.name}/>
+                                </NavLink>
+                            );
+                        })}
+                    </div>
                 </div>
                 </Modal.Body>
             </Modal>
