@@ -1701,6 +1701,11 @@ button:hover {
     height: 37px;
   }
 
+  .dcbsearch-switch {
+    width: 178px;
+    height: 37px;
+  }
+
   .media-button{
     width: 120px;
     margin-left: 35px;
@@ -1740,7 +1745,6 @@ button:hover {
     max-width: 98%;
     margin: auto;
   }
-
 
   .media-display {
     display: block;
