@@ -1474,7 +1474,6 @@ button:hover {
   .card-pool-fill3 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
     grid-auto-flow: dense;
     /* margin-right: 18px; */
   }
@@ -1837,7 +1836,7 @@ button:hover {
     }
 
     .cd-related-card {
-      width: 90%px;
+      width: 90%;
       border-radius: 4%;
       overflow: hidden;
       margin: 0px 10px 10px 10px;
