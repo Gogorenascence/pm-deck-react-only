@@ -1888,7 +1888,7 @@ button:hover {
       height: 100%;
       width: 100%;
       background-image: url("./backg.png");
-      background-size: 100%;
+      background-size: cover;
       background-repeat: repeat;
       background-position: center center;
       background-attachment:fixed;
