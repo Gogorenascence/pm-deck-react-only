@@ -19,7 +19,7 @@ import Footer from "./Footer";
 import LightSwitch from "./display/LightSwitch";
 import BackToTop from "./display/BackToTop";
 import "./index.css"
-import "./Massive.scss"
+import "./Massive.css"
 import AppProvider from "./context/AppProvider";
 import PullsDeckBuilder from "./Builder/PullsDeckBuilder";
 import AccountPage from "./Accounts/AccountPage";

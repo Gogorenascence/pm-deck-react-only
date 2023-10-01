@@ -1880,6 +1880,10 @@ button:hover {
       sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      -webkit-background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       color: white;
       content: "";
       position: absolute;
@@ -1888,9 +1892,9 @@ button:hover {
       height: 100%;
       width: 100%;
       background-image: url("./backg.png");
-      background-size: cover;
+      background-size: 50%;
       background-repeat: repeat;
-      background-position: center center;
+      background-position: center;
       background-attachment:fixed;
     z-index: -100;
   }
