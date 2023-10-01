@@ -18,22 +18,22 @@ function LightSwitch() {
     }
 
     return (
-        <div className="none">
-        {!isDark ? (
-            <img
-            className="light-dark"
-            src="https://i.imgur.com/aC79zoE.png"
-            alt="dark"
-            onClick={handleDark}
-            />
-        ) : (
-            <img
-            className="light-dark"
-            src="https://i.imgur.com/bL1Lcll.png"
-            alt="light"
-            onClick={handleDark}
-            />
-        )}
+        <div>
+            {!isDark ? (
+                <img
+                className="light-dark"
+                src="https://i.imgur.com/aC79zoE.png"
+                alt="dark"
+                onClick={handleDark}
+                />
+            ) : (
+                <img
+                className="light-dark"
+                src="https://i.imgur.com/bL1Lcll.png"
+                alt="light"
+                onClick={handleDark}
+                />
+            )}
         </div>
     );
 }

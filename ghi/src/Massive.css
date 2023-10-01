@@ -1229,9 +1229,9 @@ button:hover {
 }
 
 .card-row {
-  width: 15vw;
+  width: 100%;
   min-width: 200px;
-  border-radius: 13px;
+  border-radius: 20px;
   overflow: hidden;
   border: 1px solid white;
 }
@@ -1849,7 +1849,7 @@ button:hover {
   }
 
   .cd-related-card {
-    width: 210px;
+    width: 100%;
     border-radius: 4%;
     overflow: hidden;
     margin: 0px 10px 10px 10px;
@@ -1857,11 +1857,12 @@ button:hover {
   }
 
   .cd-related-card:hover {
+    width: 100%;
+    border-radius: 4%;
     position: static; /* or any other appropriate position value */
     top: auto; /* Reset the top property */
     left: auto; /* Reset the left property */
     transform: none; /* Reset the transform property */
-    width: 210px;
   }
 
   body {
