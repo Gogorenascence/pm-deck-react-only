@@ -1892,7 +1892,6 @@ button:hover {
     background-repeat: repeat;
     background-position: center;
     background-attachment:fixed;
-    backdrop-filter: blur(10px);
     z-index: -100;
   }
 
@@ -1915,7 +1914,6 @@ button:hover {
     background-repeat: repeat;
     background-position: center;
     background-attachment:fixed;
-    backdrop-filter: blur(10px);
     z-index: -100;
   }
 }
