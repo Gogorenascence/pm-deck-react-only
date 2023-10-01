@@ -1566,379 +1566,379 @@ button:hover {
     margin-left: 3%;
   }
 
-@media screen and (max-width: 1333px) {
-  .cards-page-card-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem; /* Add any gap you want between the cards */
-  }
-
-  .cards-page-card-list5 {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem; /* Add any gap you want between the cards */
-  }
-
-  .cards-page-card-list6 {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem; /* Add any gap you want between the cards */
-    justify-items: center;
-  }
-
-  .cards-page-card-list7 {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem; /* Add any gap you want between the cards */
-    justify-items: center;
-  }
-
-  .card-list2 {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem; /* Add any gap you want between the cards */
-  }
-
-  .deck-row-card-list2 {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem; /* Add any gap you want between the cards */
-  }
-
-  .decks-page-card-list2 {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem; /* Add any gap you want between the cards */
-  }
-
-  .media-margin-top-none {
-    margin-top: 0;
-  }
-
-  .media-card-image-wrapper2 {
-    position: relative;
-    overflow: hidden;
-    height: 200px; /* Adjust this value as needed to control the card height */
-  }
-
-  .media-card-image-clip {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-top: -20%;
-    height: 50%; /* Adjust this value to show the desired portion of the image */
-    background-color: black; /* Adjust the background color if needed */
-  }
-
-  .media-card-image-clip2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-top: -10%;
-    height: 50%; /* Adjust this value to show the desired portion of the image */
-  }
-
-  .media-card-image-clip3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-top: -45%;
-    height: 50%; /* Adjust this value to show the desired portion of the image */
-    background-color: black; /* Adjust the background color if needed */
-  }
-
-  .media-card-image2 {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    /* filter: brightness(20%); */
-  }
-
-  .media-card-image3 {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    filter: brightness(20%);
-  }
-
-  .button-fill {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: auto;
-    grid-auto-flow: dense;
-    align-items: center;
-  }
-
-  .top-row {
-    width: 100%;
-  }
-
-  .top-row-card-list2 {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem; /* Add any gap you want between the cards */
-  }
-
-  .dcbsearch-large {
-    width: 95%;
-    height: 37px;
-  }
-
-  .dcbsearch-x-large {
-    width: 95%;
-    height: 37px;
-  }
-
-  .dcbsearch-x-x-large {
-    width: 95%;
-    height: 37px;
-  }
-
-  .media-button{
-    width: 120px;
-    margin-left: 35px;
-  }
-
-  .media-center {
-    text-align: center;
-  }
-
-  .none {
-    display: none;
-  }
-
-  .between-space {
-    display: inline;
-  }
-
-  .media-vert-30 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .blackfooter {
-    background: black;
-    height: 40%;
-    display: flex;
-    justify-content: bottom;
-    z-index: 1;
-    opacity: .80;
-  }
-
-  .media-title {
-    font-size: x-large;
-  }
-
-  .white-space {
-    max-width: 98%;
-    margin: auto;
-  }
-
-  .wide40 {
-    width: 100%;
-  }
-
-  .wide55 {
-    width: 100%;
-  }
-
-  .wide100 {
-    width: 100%;
-  }
-
-  .media-display {
-    display: block;
-  }
-
-  .cd-info {
-    display: block;
-    width: 100%;
-    margin: 0 0 0 0;
-  }
-
-  .Staunch {
-    width: 100%;
-    margin: 0 0 0 0;
-    background-size: 100%;
-  }
-
-  .Power {
-    width: 100%;
-    margin: 0 0 0 0;
-    background-size: 100%;
-  }
-
-  .Unity {
-    width: 100%;
-    margin: 0 0 0 0;
-    background-size: 100%;
-  }
-
-  .Canny {
-    width: 100%;
-    margin: 0 0 0 0;
-    background-size: 100%;
-  }
-
-  .NoClass {
-    width: 100%;
-    margin: 0 0 0 0;
-    background-size: 100%;
-  }
-
-  .bigStaunch {
-    width: 100%;
-    margin: 0 0 0 0;
-    background-size: 200%;
-  }
-
-  .bigPower {
-    width: 100%;
-    margin: 0 0 0 0;
-    background-size: 200%;
-  }
-
-  .bigUnity {
-    width: 100%;
-    margin: 0 0 0 0;
-    background-size: 200%;
-  }
-
-  .bigCanny {
-    width: 100%;
-    margin: 0 0 0 0;
-    background-size: 200%;
-  }
-
-  .bigNoClass {
-    width: 100%;
-    margin: 0 0 0 0;
-  }
-
-  .margin-left-3P {
-    margin-left: 0;
-  }
-
-  .media-card-image {
-    position: fixed;
-    z-index: 200;
-    width: 338px;
-    margin: 2.5% 0px 0px 0%;
-    border-radius: 17px;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    display: none;
-    transform: translate(-50%, -50%);
-    border: 1px solid white;
-  }
-
-  .builder-card2:hover {
-    position: static; /* or any other appropriate position value */
-    top: auto; /* Reset the top property */
-    left: auto; /* Reset the left property */
-    transform: none; /* Reset the transform property */
-  }
-
-  .cd-related-card {
-    width: 90%;
-    border-radius: 4%;
-    overflow: hidden;
-    margin: 0px 10px 10px 10px;
-    border: 1px solid white;
-  }
-
-  .cd-related-card:hover {
-    width: 90%;
-    border-radius: 4%;
-    position: static; /* or any other appropriate position value */
-    top: auto; /* Reset the top property */
-    left: auto; /* Reset the left property */
-    transform: none; /* Reset the transform property */
-  }
-
-  body {
-    background-size: 100%, 60%;
-  }
-
-}
-
-
-@media (prefers-color-scheme: dark) and (max-width: 1333px){
-  body.dark {
-    margin-bottom: 200px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: white;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(to right, rgba(16, 14, 22, 0), rgba(17, 0, 54, 0)), url("./backg.png");
-    background-size: 100%, 100%;
-    background-repeat: no-repeat, repeat;
-    background-position: center center, center center;
-    background-attachment: fixed, fixed;
-    z-index: -1,-100;
-  }
-
-  body.dark::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    background-size: 125px;
-    background-image: url("./frame2.png");
-    background-repeat: repeat;
-    animation: scroll 5000s linear infinite;
-    opacity: .15;
-    z-index: -20;
-    margin-bottom: 200px;
-  }
-  @keyframes scroll {
-    0% {
-      background-position: -3000px 3000px;
+  @media screen and (max-width: 1333px) {
+    .cards-page-card-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem; /* Add any gap you want between the cards */
     }
-    12.5% {
-      background-position: 0px -3000px;
+
+    .cards-page-card-list5 {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem; /* Add any gap you want between the cards */
     }
-    25% {
-      background-position: -3000px 0px;
+
+    .cards-page-card-list6 {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem; /* Add any gap you want between the cards */
+      justify-items: center;
     }
-    37.5% {
-      background-position: 0px 3000px;
+
+    .cards-page-card-list7 {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem; /* Add any gap you want between the cards */
+      justify-items: center;
     }
-    50% {
-      background-position: -3000px 3000px;
+
+    .card-list2 {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem; /* Add any gap you want between the cards */
     }
-    62.5% {
-      background-position: 0px -3000px;
+
+    .deck-row-card-list2 {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem; /* Add any gap you want between the cards */
     }
-    75% {
-      background-position: -3000px 0px;
+
+    .decks-page-card-list2 {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem; /* Add any gap you want between the cards */
     }
-    87.5% {
-      background-position: 0px 3000px;
+
+    .media-margin-top-none {
+      margin-top: 0;
     }
-    100% {
-      background-position: -3000px 3000px;
+
+    .media-card-image-wrapper2 {
+      position: relative;
+      overflow: hidden;
+      height: 200px; /* Adjust this value as needed to control the card height */
+    }
+
+    .media-card-image-clip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin-top: -20%;
+      height: 50%; /* Adjust this value to show the desired portion of the image */
+      background-color: black; /* Adjust the background color if needed */
+    }
+
+    .media-card-image-clip2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin-top: -10%;
+      height: 50%; /* Adjust this value to show the desired portion of the image */
+    }
+
+    .media-card-image-clip3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin-top: -45%;
+      height: 50%; /* Adjust this value to show the desired portion of the image */
+      background-color: black; /* Adjust the background color if needed */
+    }
+
+    .media-card-image2 {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      /* filter: brightness(20%); */
+    }
+
+    .media-card-image3 {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      filter: brightness(20%);
+    }
+
+    .button-fill {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: auto;
+      grid-auto-flow: dense;
+      align-items: center;
+    }
+
+    .top-row {
+      width: 100%;
+    }
+
+    .top-row-card-list2 {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem; /* Add any gap you want between the cards */
+    }
+
+    .dcbsearch-large {
+      width: 95%;
+      height: 37px;
+    }
+
+    .dcbsearch-x-large {
+      width: 95%;
+      height: 37px;
+    }
+
+    .dcbsearch-x-x-large {
+      width: 95%;
+      height: 37px;
+    }
+
+    .media-button{
+      width: 120px;
+      margin-left: 35px;
+    }
+
+    .media-center {
+      text-align: center;
+    }
+
+    .none {
+      display: none;
+    }
+
+    .between-space {
+      display: inline;
+    }
+
+    .media-vert-30 {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .blackfooter {
+      background: black;
+      height: 40%;
+      display: flex;
+      justify-content: bottom;
+      z-index: 1;
+      opacity: .80;
+    }
+
+    .media-title {
+      font-size: x-large;
+    }
+
+    .white-space {
+      max-width: 98%;
+      margin: auto;
+    }
+
+
+    .media-display {
+      display: block;
+    }
+
+    .cd-info {
+      display: block;
+      width: 100%;
+      margin: 0 0 0 0;
+    }
+
+    .Staunch {
+      width: 100%;
+      margin: 0 0 0 0;
+      background-size: 100%;
+    }
+
+    .Power {
+      width: 100%;
+      margin: 0 0 0 0;
+      background-size: 100%;
+    }
+
+    .Unity {
+      width: 100%;
+      margin: 0 0 0 0;
+      background-size: 100%;
+    }
+
+    .Canny {
+      width: 100%;
+      margin: 0 0 0 0;
+      background-size: 100%;
+    }
+
+    .NoClass {
+      width: 100%;
+      margin: 0 0 0 0;
+      background-size: 100%;
+    }
+
+    .bigStaunch {
+      width: 100%;
+      margin: 0 0 0 0;
+      background-size: 200%;
+    }
+
+    .bigPower {
+      width: 100%;
+      margin: 0 0 0 0;
+      background-size: 200%;
+    }
+
+    .bigUnity {
+      width: 100%;
+      margin: 0 0 0 0;
+      background-size: 200%;
+    }
+
+    .bigCanny {
+      width: 100%;
+      margin: 0 0 0 0;
+      background-size: 200%;
+    }
+
+    .bigNoClass {
+      width: 100%;
+      margin: 0 0 0 0;
+    }
+
+    .margin-left-3P {
+      margin-left: 0;
+    }
+
+    .media-card-image {
+      position: fixed;
+      z-index: 200;
+      width: 338px;
+      margin: 2.5% 0px 0px 0%;
+      border-radius: 17px;
+      overflow: hidden;
+      top: 50%;
+      left: 50%;
+      display: none;
+      transform: translate(-50%, -50%);
+      border: 1px solid white;
+    }
+
+    .builder-card2:hover {
+      position: static; /* or any other appropriate position value */
+      top: auto; /* Reset the top property */
+      left: auto; /* Reset the left property */
+      transform: none; /* Reset the transform property */
+    }
+
+    .cd-related-card {
+      width: 90%px;
+      border-radius: 4%;
+      overflow: hidden;
+      margin: 0px 10px 10px 10px;
+      border: 1px solid white;
+      transition: none;
+    }
+
+    .cd-related-card:hover {
+      width: 90%;
+      border-radius: 4%;
+      position: static; /* or any other appropriate position value */
+      top: auto; /* Reset the top property */
+      left: auto; /* Reset the left property */
+      transform: none; /* Reset the transform property */
+    }
+
+    body {
+      background-size: 100%, 60%;
+    }
+
+    .wide40 {
+      width: 100%;
+    }
+
+    .wide55 {
+      width: 100%;
+    }
+
+    .wide100 {
+      width: 100%;
     }
   }
 
-}
+
+  @media (prefers-color-scheme: dark) and (max-width: 1333px){
+    body.dark {
+      margin-bottom: 200px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: white;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(to right, rgba(16, 14, 22, 0), rgba(17, 0, 54, 0)), url("./backg.png");
+        background-size: 100%, 100%;
+        background-repeat: no-repeat, repeat;
+        background-position: center center, center center;
+        background-attachment: fixed, fixed;
+      z-index: -1,-100;
+    }
+
+    body.dark::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      background-size: 125px;
+      background-image: url("./frame2.png");
+      background-repeat: repeat;
+      animation: scroll 5000s linear infinite;
+      opacity: .15;
+      z-index: -20;
+      margin-bottom: 200px;
+    }
+    @keyframes scroll {
+      0% {
+        background-position: -3000px 3000px;
+      }
+      12.5% {
+        background-position: 0px -3000px;
+      }
+      25% {
+        background-position: -3000px 0px;
+      }
+      37.5% {
+        background-position: 0px 3000px;
+      }
+      50% {
+        background-position: -3000px 3000px;
+      }
+      62.5% {
+        background-position: 0px -3000px;
+      }
+      75% {
+        background-position: -3000px 0px;
+      }
+      87.5% {
+        background-position: 0px 3000px;
+      }
+      100% {
+        background-position: -3000px 3000px;
+      }
+    }
+
+  }
