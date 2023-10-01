@@ -18,7 +18,7 @@ function LightSwitch() {
     }
 
     return (
-        <div>
+        <div className="none">
         {!isDark ? (
             <img
             className="light-dark"
