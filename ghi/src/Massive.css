@@ -1857,7 +1857,7 @@ button:hover {
   }
 
   .cd-related-card:hover {
-    width: 100%;
+    width: 90%;
     border-radius: 4%;
     position: static; /* or any other appropriate position value */
     top: auto; /* Reset the top property */
