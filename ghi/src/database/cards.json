@@ -3882,7 +3882,7 @@
   "series_name": "Red Fist//Tech//Brawler",
   "card_number": 1024,
   "enthusiasm": 18,
-  "effect_text": "<Target> Foe on your right. //<1-5> Discard 1 card from your hand.  //<6-11> Deal 2 piercing damage. //<12+>  Deal 3 piercing damage. If your hand has 6 or more cards, deal 3 additional piercing damage. Ignore the reaction(s) of defending Fighter(s).",
+  "effect_text": "<Target> Foe on your right. //<1-5> Discard 1 card from your hand.  //<6-11> Deal 2 piercing damage. //<12+>  Deal 3 piercing damage. If your hand has 6 or more cards, deal 3 additional piercing damage and ignore the reaction(s) of defending Fighter(s).",
   "second_effect_text": "",
   "illustrator": "gmoshiro",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rfe.png",
