@@ -1232,7 +1232,7 @@ button:hover {
 .card-row {
   width: 100%;
   min-width: 200px;
-  border-radius: 17px;
+  border-radius: 13px;
   overflow: hidden;
   border: 1px solid white;
 }
