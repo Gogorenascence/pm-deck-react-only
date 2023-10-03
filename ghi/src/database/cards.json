@@ -1870,7 +1870,7 @@
   "card_number": 1093,
   "enthusiasm": 0,
   "effect_text": "This Comeback counts as a Unity card in your play (this does not count towards play size).",
-  "second_effect_text": "<Critical> Return 1 card from the discard pile to the top of the Main deck.",
+  "second_effect_text": "<Critical> Return 2 cards from the discard pile to the top of the Main deck.",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb9dw.png",
   "file_name": "i1cb9dw",
@@ -1889,17 +1889,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:56",
+    "month": 10,
+    "day": 3,
+    "time": "20:51",
     "full_time": {
-      "$date": "2023-06-25T18:56:12.953Z"
+      "$date": "2023-10-03T20:51:52.960Z"
     }
   }
 },
@@ -3905,11 +3903,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 9,
-    "day": 30,
-    "time": "21:40",
+    "month": 10,
+    "day": 1,
+    "time": "13:34",
     "full_time": {
-      "$date": "2023-09-30T21:40:35.492Z"
+      "$date": "2023-10-01T13:34:46.435Z"
     }
   }
 },
@@ -4415,11 +4413,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 7,
-    "day": 17,
-    "time": "05:29",
+    "month": 10,
+    "day": 3,
+    "time": "00:59",
     "full_time": {
-      "$date": "2023-07-17T05:29:20.464Z"
+      "$date": "2023-10-03T00:59:14.573Z"
     }
   }
 },
@@ -5118,7 +5116,7 @@
   "series_name": "Warp Family//Cosmic//Psychic",
   "card_number": 1106,
   "enthusiasm": 0,
-  "effect_text": "<Limited> If you have a Canny Fighter in your play, deal 1 bypassing damage to a foe.",
+  "effect_text": "<Limited> If you have a Canny card(s) in your play, deal 1 bypassing damage to a foe.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl14pi.png",
@@ -5142,11 +5140,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 8,
-    "day": 20,
-    "time": "23:14",
+    "month": 10,
+    "day": 3,
+    "time": "21:23",
     "full_time": {
-      "$date": "2023-08-20T23:14:44.076Z"
+      "$date": "2023-10-03T21:23:30.215Z"
     }
   }
 },
