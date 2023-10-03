@@ -1178,6 +1178,7 @@ button:hover {
   cursor: pointer;
   opacity: 30%;
   transition: opacity 0.5s;
+  z-index: 900;
 }
 
 .light-dark:hover {
