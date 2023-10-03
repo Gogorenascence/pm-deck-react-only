@@ -4392,7 +4392,7 @@
   "card_number": 1118,
   "enthusiasm": 0,
   "effect_text": "<Limited> This Item counts as a Power card in your play this round (this does not count towards play size).",
-  "second_effect_text": "Discard this Item; your Fighter gains 2 HP.",
+  "second_effect_text": "Discard this Item; deal 1 damage to a foe.",
   "illustrator": "prusin_senpai",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg6i.png",
   "file_name": "i1plg6i",
