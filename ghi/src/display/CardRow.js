@@ -8,7 +8,7 @@ function CardRow() {
 
     const [newCards, setNewCards] = useState([]);
     const getCards = async() =>{
-        setNewCards(cards.sort((a,b) => new Date(b.updated_on.full_time.$date) - new Date(a.updated_on.full_time.$date)).slice(0, 5));
+        setNewCards(cards.sort((a,b) => new Date(b.updated_on.full_time.$date) - new Date(a.updated_on.full_time.$date)));
     }
     useEffect(() => {
         getCards();
@@ -16,8 +16,8 @@ function CardRow() {
 
     return(
         <div className="white-space">
-            <div className="cards-page-card-list5 cards-page-card-list7">
-                {newCards.map((card) => {
+            <div className="cards-page-card-list5 none">
+                {newCards.slice(0, 5).map((card) => {
                     return (
                         <div key={card.name}>
                             <NavLink to={`/cards/${card.card_number}`}>
@@ -30,6 +30,21 @@ function CardRow() {
                         </div>
                     );
                 })}
+            </div>
+            <div className="hidden2 media-display">
+                <div className="cards-page-card-list">
+                    {newCards.slice(0, 6).map(card => {
+                        return (
+                            <NavLink to={`/cards/${card.card_number}`} key={card.name}>
+                                    <img className="card-list-card glow3"
+                                        title={card.name}
+                                        src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                        alt={card.name}
+                                        loading="lazy"/>
+                            </NavLink>
+                        );
+                    })}
+                </div>
             </div>
             <br/>
             <NavLink to="/cards">
