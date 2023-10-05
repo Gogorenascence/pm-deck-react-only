@@ -1612,7 +1612,7 @@
   "series_name": "Gravity Enforcer//Cosmic//Tactical",
   "card_number": 1064,
   "enthusiasm": 14,
-  "effect_text": "Reduce the Focus of all foes by 4.",
+  "effect_text": "Lowered the Focus of all foes by 4.",
   "second_effect_text": "<Target> Foe with Enthusiasm lower than yours. //<1-5> No effect. //<6-11> Deal 4 damage. //<12+> Deal damage equal to the difference (max of 7).",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p4gee.png",
@@ -1635,11 +1635,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 9,
-    "day": 1,
-    "time": "14:44",
+    "month": 10,
+    "day": 5,
+    "time": "00:29",
     "full_time": {
-      "$date": "2023-09-01T14:44:40.405Z"
+      "$date": "2023-10-05T00:29:39.965Z"
     }
   }
 },
@@ -2088,7 +2088,7 @@
   "series_name": "Gravity Enforcer//Cosmic//Tactical",
   "card_number": 1113,
   "enthusiasm": 0,
-  "effect_text": "Reduce the focus of all foes by 2. If they have Enthusiasm lower than yours, reduce it by 4 instead.",
+  "effect_text": "Foes with Enthusiasm lower than yours must resolve the Ending in their plays this round.",
   "second_effect_text": "<Trigger> At the start of the round, lower the Enthusiasm of all foes by 2, then resolve this Event in your ownership.",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl16gee.png",
@@ -2112,11 +2112,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 29,
-    "time": "23:57",
+    "month": 10,
+    "day": 5,
+    "time": "00:30",
     "full_time": {
-      "$date": "2023-06-29T23:57:59.577Z"
+      "$date": "2023-10-05T00:30:06.350Z"
     }
   }
 },

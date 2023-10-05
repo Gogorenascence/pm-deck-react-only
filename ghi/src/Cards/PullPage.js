@@ -167,7 +167,7 @@ function PullPage(props) {
 
             <div className="button-fill">
                 <input
-                    className="left dcbsearch-medium"
+                    className="left dcbsearch-semi"
                     type="text"
                     placeholder=" Number of Packs"
                     onChange={handleChangeNum}

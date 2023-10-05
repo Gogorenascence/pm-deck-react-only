@@ -36,7 +36,7 @@ function CardRow() {
                     {newCards.slice(0, 6).map(card => {
                         return (
                             <NavLink to={`/cards/${card.card_number}`} key={card.name}>
-                                    <img className="card-list-card glow3"
+                                    <img className="card-list-card4 glow3"
                                         title={card.name}
                                         src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
                                         alt={card.name}

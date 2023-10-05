@@ -23,7 +23,7 @@ function MainPage(props) {
           <DeckRow/>
         </div>
         <br/>
-          <h1 className="margin-top-20">Latest Cards</h1>
+          <h1 className="margin-top-20 media-margin-bottom-none">Latest Cards</h1>
         <br/>
         <div>
           <CardRow cards={cards}/>
