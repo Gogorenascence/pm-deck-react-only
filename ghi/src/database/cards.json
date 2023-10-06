@@ -2087,7 +2087,7 @@
   "series_name": "Gravity Enforcer//Cosmic//Tactical",
   "card_number": 1113,
   "enthusiasm": 0,
-  "effect_text": "Foes with Enthusiasm lower than yours must resolve the Ending in their plays this round.",
+  "effect_text": "Foes with Enthusiasm lower than yours have their Focus reduced by 4 and must resolve their Endings in this round.",
   "second_effect_text": "<Trigger> During the Start Phase, lower the Enthusiasm of all foes by 2, then resolve this Event in your ownership.",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl16gee.png",
