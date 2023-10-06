@@ -681,7 +681,7 @@
   "series_name": "Battle Girl Alice//Magic//Brawler",
   "card_number": 1030,
   "enthusiasm": 0,
-  "effect_text": "Resolve 1 of the following effects. If you have yet to deal damage this round, resolve 2 different effects instead: <> Your Fighter gains Counter 1. <> Take 2 damage, then your Fighter gains 2 HP. <> Draw 1 Pluck.",
+  "effect_text": "Resolve 1 of the following effects. If you have yet to deal damage this round, resolve 2 different effects instead: //<> Your Fighter gains Counter 1. //<> Take 2 damage, then your Fighter gains 2 HP. //<> This card copies the effect text of your Fighter.",
   "second_effect_text": "",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r4bgaa.png",
@@ -705,11 +705,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:46",
+    "month": 10,
+    "day": 5,
+    "time": "00:30",
     "full_time": {
-      "$date": "2023-06-25T18:46:56.712Z"
+      "$date": "2023-10-05T00:30:06.350Z"
     }
   }
 },
