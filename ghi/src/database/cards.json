@@ -71,7 +71,7 @@
     1001
   ],
   "enthusiasm": 0,
-  "second_effect_text": "<Trigger> At the start of the round or when this card is revealed, all Power cards gain damage minus 1 (damage dealt by those cards is reduced by 1 at the end of their resolutions).",
+  "second_effect_text": "<Trigger> During the Start Phase or when this card is revealed, all Power cards gain damage minus 1 (damage dealt by those cards is reduced by 1 at the end of their resolutions).",
   "created_on": {
     "year": 2023,
     "month": 6,
@@ -205,7 +205,8 @@
   ],
   "reactions": [
     1002,
-    1003
+    1003,
+    1002
   ],
   "card_tags": [
     1001
@@ -222,10 +223,10 @@
   "updated_on": {
     "year": 2023,
     "month": 10,
-    "day": 3,
-    "time": "23:19",
+    "day": 6,
+    "time": "04:14",
     "full_time": {
-      "$date": "2023-10-03T23:19:27.569Z"
+      "$date": "2023-10-06T04:14:06.148Z"
     }
   }
 },
@@ -240,7 +241,7 @@
   "series_name": "Golden Wall//Cosmic//Defender",
   "card_number": 1005,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> At the start of the round or when this card is revealed, draw 1 card and this card gains 2 HP.",
+  "effect_text": "<Trigger> During the Start Phase or when this card is revealed, draw 1 card and this card gains 2 HP.",
   "flavor_text": "string",
   "illustrator": "Eric Rodrigues",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g2gwf.png",
@@ -1183,7 +1184,7 @@
   "card_number": 1002,
   "enthusiasm": 0,
   "effect_text": "Gain 1 HP and add 4 to your Focus.",
-  "second_effect_text": "<Trigger> At the start of the round, add 4 to your Enthusiasm and resolve this Aura in your play.",
+  "second_effect_text": "<Trigger> During the Start Phase, add 4 to your Enthusiasm and resolve this Aura in your play.",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g1pma.png",
   "file_name": "",
@@ -1226,7 +1227,7 @@
   "series_name": "PantheraMan//Nature//Brawler",
   "card_number": 1003,
   "enthusiasm": 0,
-  "effect_text": "Deal 3 piercing damage to a foe. If you are first to go this round or have the highest Enthusiasm, gain 1 HP.",
+  "effect_text": "Deal 3 piercing damage to a foe. If you are first to go this round or have the highest Enthusiasm, gain 2 HP.",
   "second_effect_text": "",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g1pmm.png",
@@ -1248,11 +1249,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 8,
-    "day": 31,
-    "time": "17:42",
+    "month": 10,
+    "day": 6,
+    "time": "04:17",
     "full_time": {
-      "$date": "2023-08-31T17:42:57.639Z"
+      "$date": "2023-10-06T04:17:08.609Z"
     }
   }
 },
@@ -1308,7 +1309,7 @@
   "card_number": 1049,
   "enthusiasm": 0,
   "effect_text": "All players and their Fighters take 1 damage. Add 3 to your Focus.",
-  "second_effect_text": "<Trigger> At the start of the round or when this card is revealed, damage you and this card take is reduced by 1.",
+  "second_effect_text": "<Trigger> During the Start Phase or when this card is revealed, damage you and this card take is reduced by 1.",
   "illustrator": "ahtan_delmundo",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bnf.png",
   "file_name": "i1p1bnf",
@@ -1396,7 +1397,7 @@
   "card_number": 1051,
   "enthusiasm": 0,
   "effect_text": "Deal 3 damage to a random foe and you take 2 damage.",
-  "second_effect_text": "<Trigger> At the start of the round, resolve this Move in your play, then discard it. ",
+  "second_effect_text": "<Trigger> During the Start Phase, resolve this Move in your play, then discard it. ",
   "illustrator": "ahtan_delmundo",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bnm.png",
   "file_name": "i1p1bnm",
@@ -1483,7 +1484,7 @@
   "card_number": 1061,
   "enthusiasm": 0,
   "effect_text": "Foes with Enthusiasm lower than yours can not use reactions. Deal 2 damage to the foe with the lowest Enthusiasm.",
-  "second_effect_text": "<Trigger> At the start of the round or when this card is revealed, lower the Enthusiasm of all foes by 4.",
+  "second_effect_text": "<Trigger> During the Start Phase or when this card is revealed, lower the Enthusiasm of all foes by 4.",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p4gef.png",
   "file_name": "i1p4gef",
@@ -1529,7 +1530,7 @@
   "card_number": 1062,
   "enthusiasm": 0,
   "effect_text": "Foes with Enthusiasm lower than yours take 1 damage after resolving an Aura(s) or drawing a card(s). ",
-  "second_effect_text": "<Trigger> At the start of the round, lower the Enthusiasm of all foes by 4 and resolve this Aura in your play.",
+  "second_effect_text": "<Trigger> During the Start Phase, lower the Enthusiasm of all foes by 4 and resolve this Aura in your play.",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p4gea.png",
   "file_name": "i1p4gea",
@@ -1612,7 +1613,7 @@
   "series_name": "Gravity Enforcer//Cosmic//Tactical",
   "card_number": 1064,
   "enthusiasm": 14,
-  "effect_text": "Lowered the Focus of all foes by 4.",
+  "effect_text": "Reduce the Focus of all foes by 4.",
   "second_effect_text": "<Target> Foe with Enthusiasm lower than yours. //<1-5> No effect. //<6-11> Deal 4 damage. //<12+> Deal damage equal to the difference (max of 7).",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p4gee.png",
@@ -1695,8 +1696,8 @@
   "series_name": "PantheraMan//Nature//Brawler",
   "card_number": 1068,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> At the start of the round or during a foe's turn, resolve the main effect of 1 Fighter in your play.",
-  "second_effect_text": "<C.Trigger> At the start of the round, you go first.",
+  "effect_text": "<Trigger> During the Start Phase or during a foe's turn, resolve the main effect of 1 Fighter in your play.",
+  "second_effect_text": "<C.Trigger> During the Start Phase, you go first.",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl01pme.png",
   "file_name": "i1pl01pme",
@@ -1741,7 +1742,7 @@
   "card_number": 1069,
   "enthusiasm": 0,
   "effect_text": "This Comeback counts as a Staunch card in your play (this does not count towards play size).",
-  "second_effect_text": "<C.Trigger> At the start of the round or during a foe’s turn, add 8 to your Enthusiasm.",
+  "second_effect_text": "<Critical> If you have no Fighter in your play, add 1 Staunch Fighter from your hand to your play.",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb1pm.png",
   "file_name": "",
@@ -1761,17 +1762,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:55",
+    "month": 10,
+    "day": 6,
+    "time": "01:25",
     "full_time": {
-      "$date": "2023-06-25T18:55:55.121Z"
+      "$date": "2023-10-06T01:25:28.565Z"
     }
   }
 },
@@ -1785,7 +1784,7 @@
   "series_name": "Project HERMES//Tech//Tactical//Team",
   "card_number": 1091,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> At the start of the round, discard 1 card from your hand; resolve one of the following effects: //<> Add 3 to your Focus for your first Focus roll this round. //<> Add 3 to your Enthusiasm this round.",
+  "effect_text": "<Trigger> During the Start Phase, discard 1 card from your hand; resolve one of the following effects: //<> Add 3 to your Focus for your first Focus roll this round. //<> Add 3 to your Enthusiasm this round.",
   "second_effect_text": "Discard this Item after the third round of use.",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl09dwi.png",
@@ -2089,7 +2088,7 @@
   "card_number": 1113,
   "enthusiasm": 0,
   "effect_text": "Foes with Enthusiasm lower than yours must resolve the Ending in their plays this round.",
-  "second_effect_text": "<Trigger> At the start of the round, lower the Enthusiasm of all foes by 2, then resolve this Event in your ownership.",
+  "second_effect_text": "<Trigger> During the Start Phase, lower the Enthusiasm of all foes by 2, then resolve this Event in your ownership.",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl16gee.png",
   "file_name": "i1pl16gee",
@@ -2130,7 +2129,7 @@
   "series_name": "Gravity Enforcer//Cosmic//Tactical",
   "card_number": 1114,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> At the start of the round or during a foe's turn, lower the Enthusiasm of all foes by 2.",
+  "effect_text": "<Trigger> During the Start Phase or during a foe's turn, lower the Enthusiasm of all foes by 2.",
   "second_effect_text": "<Critical> Your Ending gains damage plus 1 if it deals damage to a foe with Enthusiasm lower than yours.",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb16ge.png",
@@ -2175,8 +2174,8 @@
   "series_name": "Cosmic//Nature//Team",
   "card_number": 1123,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> At the start of a round, gain 1 HP and add 2 to your Enthusiasm.",
-  "second_effect_text": "<C.Trigger> At the start of a foe's turn, deal 1 damage to that foe if they have Enthusiasm lower than yours.",
+  "effect_text": "<Trigger> During the Start Phase, if you have the highest enthusiasm, add 2 to your Focus.",
+  "second_effect_text": "<C.Trigger> At the start of a foe's turn, deal 2 damage to that foe if they have Enthusiasm lower than yours.",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb17g.png",
   "file_name": "i1cb17g",
@@ -2200,11 +2199,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 7,
-    "day": 1,
-    "time": "19:31",
+    "month": 10,
+    "day": 6,
+    "time": "04:13",
     "full_time": {
-      "$date": "2023-07-01T19:31:56.769Z"
+      "$date": "2023-10-06T04:13:43.638Z"
     }
   }
 },
@@ -3580,7 +3579,7 @@
   "card_number": 1087,
   "enthusiasm": 0,
   "effect_text": "Discard 1 card from your hand; 1 random card in your play gains damage plus 1 (that card deals 1 additional damage at the end of its resolution).  ",
-  "second_effect_text": "<C.Trigger> At the start of the round, your Fighter gains Redirect 1 (that card is revealed).",
+  "second_effect_text": "<C.Trigger> During the Start Phase, your Fighter gains Redirect 1 (that card is revealed).",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb7be.png",
   "file_name": "i1cb7be",
@@ -3667,7 +3666,7 @@
   "card_number": 1077,
   "enthusiasm": 0,
   "effect_text": "All foes with a Power card(s) in their play take 1 damage. All Fighters are treated as Power and all effects that increase damage are cancelled.",
-  "second_effect_text": "<Trigger> At the start of the round or if you are targeted for damage, resolve this Event in your ownership.",
+  "second_effect_text": "<Trigger> During the Start Phase or if you are targeted for damage, resolve this Event in your ownership.",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl04fbe.png",
   "file_name": "i1pl04fbe",
@@ -4257,7 +4256,7 @@
   "card_number": 1083,
   "enthusiasm": 0,
   "effect_text": "Draw 3 cards, then discard 1 card from your hand.",
-  "second_effect_text": "<Trigger> At the start of the round or during a player’s turn, deal 1 damage to a random foe each time a card(s) is discarded from your hand or removed from your play this round.",
+  "second_effect_text": "<Trigger> During the Start Phase or during a player’s turn, deal 1 damage to a foe each time a card(s) is discarded from your hand or removed from your play this round.",
   "illustrator": "gmoshiro",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl06rfe.png",
   "file_name": "i1pl06rfe",
@@ -4276,17 +4275,15 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:12",
+    "month": 10,
+    "day": 5,
+    "time": "23:00",
     "full_time": {
-      "$date": "2023-06-25T19:12:53.579Z"
+      "$date": "2023-10-05T23:00:30.461Z"
     }
   }
 },
@@ -4473,8 +4470,8 @@
   "series_name": "Battle Girl Alice//Magic//Brawler//Call",
   "card_number": 1090,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> At the start of the round or during a foe's turn, your Fighter gains 1 HP (that card is revealed).",
-  "second_effect_text": "<C.Trigger> At the start of the round or during a foe's turn, your Fighter gains Counter 1 (that card is revealed).",
+  "effect_text": "<Trigger> During the Start Phase or during a foe's turn, your Fighter gains 1 HP (that card is revealed).",
+  "second_effect_text": "<C.Trigger> During the Start Phase or during a foe's turn, your Fighter gains Counter 1 (that card is revealed).",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb8bga.png",
   "file_name": "i1cb8bga",
@@ -4518,7 +4515,7 @@
   "series_name": "Battle Girl Alice//Magic//Brawler//Call",
   "card_number": 1088,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> At the start of the round or during a foe's turn, your Fighter gains Counter 1 (that card is revealed).",
+  "effect_text": "<Trigger> During the Start Phase or during a foe's turn, your Fighter gains Counter 1 (that card is revealed).",
   "second_effect_text": "Once per foe's turn, if you have a defending Power Fighter and you are dealt damage, reduce that damage by 1.",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl08bgai.png",
@@ -4606,7 +4603,7 @@
   "card_number": 1038,
   "enthusiasm": 0,
   "effect_text": "Your next Move targets the foes on your left and right instead for its first resolution.",
-  "second_effect_text": "<Trigger> At the start of the round, discard this Aura in your play; draw 2 cards.",
+  "second_effect_text": "<Trigger> During the Start Phase, discard this Aura in your play; draw 2 cards.",
   "illustrator": "layonsin.art",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2ha.png",
   "file_name": "i1b2ha",
@@ -4900,7 +4897,7 @@
   "card_number": 1043,
   "enthusiasm": 0,
   "effect_text": "Deal 2 damage to a foe. If you have 4 or more Items in your ownership, deal 2 additional damage.",
-  "second_effect_text": "<Trigger> At the start of the round, discard this Move in your play; draw 1 Pluck.",
+  "second_effect_text": "<Trigger> During the Start Phase, discard this Move in your play; draw 1 Pluck.",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b3hsm.png",
   "file_name": "i1b3hsm",

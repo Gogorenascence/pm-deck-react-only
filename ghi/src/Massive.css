@@ -1786,25 +1786,41 @@ button:hover {
   .Staunch {
     width: 100%;
     margin: 0 0 0 0;
-    background-size: 100%;
+    background: none;
+    background-color: rgb(42, 168, 115);
+    border: 7px solid rgb(3, 131, 78);
+    border-radius: 7px;
+    outline: 1px solid white;
   }
 
   .Power {
     width: 100%;
     margin: 0 0 0 0;
-    background-size: 100%;
+    background: none;
+    background-color: rgb(124, 19, 33);
+    border: 7px solid rgb(255, 0, 43);
+    border-radius: 7px;
+    outline: 1px solid white;
   }
 
   .Unity {
     width: 100%;
     margin: 0 0 0 0;
-    background-size: 100%;
+    background: none;
+    background-color: rgb(82, 96, 194);
+    border: 7px solid rgb(28, 40, 78);
+    border-radius: 7px;
+    outline: 1px solid white;
   }
 
   .Canny {
     width: 100%;
     margin: 0 0 0 0;
-    background-size: 100%;
+    background: none;
+    background-color: rgb(101, 56, 131);
+    border: 7px solid rgb(60, 26, 68);
+    border-radius: 7px;
+    outline: 1px solid white;
   }
 
   .NoClass {
@@ -1816,25 +1832,41 @@ button:hover {
   .bigStaunch {
     width: 100%;
     margin: 0 0 0 0;
-    background-size: 200%;
+    background: none;
+    background-color: rgb(42, 168, 115);
+    border: 7px solid rgb(3, 131, 78);
+    border-radius: 7px;
+    outline: 1px solid white;
   }
 
   .bigPower {
     width: 100%;
     margin: 0 0 0 0;
-    background-size: 200%;
+    background: none;
+    background-color: rgb(124, 19, 33);
+    border: 7px solid rgb(255, 0, 43);
+    border-radius: 7px;
+    outline: 1px solid white;
   }
 
   .bigUnity {
     width: 100%;
     margin: 0 0 0 0;
-    background-size: 200%;
+    background: none;
+    background-color: rgb(82, 96, 194);
+    border: 7px solid rgb(28, 40, 78);
+    border-radius: 7px;
+    outline: 1px solid white;
   }
 
   .bigCanny {
     width: 100%;
     margin: 0 0 0 0;
-    background-size: 200%;
+    background: none;
+    background-color: rgb(101, 56, 131);
+    border: 7px solid rgb(60, 26, 68);
+    border-radius: 7px;
+    outline: 1px solid white;
   }
 
   .bigNoClass {
