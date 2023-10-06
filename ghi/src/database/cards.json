@@ -2218,7 +2218,7 @@
   "card_number": 1120,
   "enthusiasm": 0,
   "effect_text": "<Limited> This Item counts as a Canny card in your play this round (this does not count towards play size).",
-  "second_effect_text": "Discard this Item; reveal 2 cards in a foe's play.",
+  "second_effect_text": "Discard this Item; add 1 Aura or Move from the discard pile to your hand, then discard 1 card from your hand.",
   "illustrator": "prusin_senpai",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg8i.png",
   "file_name": "i1plg8i",
@@ -2241,11 +2241,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 7,
-    "day": 17,
-    "time": "05:29",
+    "month": 10,
+    "day": 6,
+    "time": "05:46",
     "full_time": {
-      "$date": "2023-07-17T05:29:27.053Z"
+      "$date": "2023-10-06T05:46:57.555Z"
     }
   }
 },
