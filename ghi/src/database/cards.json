@@ -5475,7 +5475,15 @@
       "$date": "2023-10-08T17:43:21.795Z"
     }
   },
-  "updated_on": {},
+  "updated_on": {
+    "year": 2023,
+    "month": 10,
+    "day": 8,
+    "time": "17:43",
+    "full_time": {
+      "$date": "2023-10-08T17:43:21.795Z"
+    }
+  },
   "alpha": null,
   "beta": null
 }]

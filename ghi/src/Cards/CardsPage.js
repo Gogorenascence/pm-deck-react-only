@@ -107,7 +107,7 @@ function CardsPage(props) {
 
 
     const sortMethods = {
-        none: { method: (a,b) => new Date(b.updated_on.full_time.$date) - new Date(a.updated_on.full_time.$date) },
+        none: { method: (a,b) => new Date(b.updated_on?.full_time.$date) - new Date(a.updated_on?.full_time.$date) },
         newest: { method: (a,b) => b.id.localeCompare(a.id) },
         oldest: { method: (a,b) => a.id.localeCompare(b.id) },
         name: { method: (a,b) => a.name.localeCompare(b.name) },
