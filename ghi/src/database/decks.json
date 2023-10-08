@@ -4452,4 +4452,75 @@
   "card_names": null,
   "series_names": null,
   "private": false
+},
+{
+  "_id": {
+    "$oid": "6522eb7d5e4e9f1d586eef41"
+  },
+  "name": "Training: Treasure Hunter",
+  "account_id": "64ecc30f82c5729f0b36e158",
+  "description": "",
+  "strategies": [
+    "Combo",
+    "Ramp"
+  ],
+  "cards": [
+    1009,
+    1009,
+    1010,
+    1010,
+    1011,
+    1011,
+    1012,
+    1012,
+    1057,
+    1057,
+    1058,
+    1058,
+    1059,
+    1059,
+    1060,
+    1060,
+    1065,
+    1065,
+    1066,
+    1066
+  ],
+  "pluck": [
+    1073,
+    1074,
+    1074,
+    1075,
+    1075,
+    1109,
+    1110,
+    1111,
+    1111,
+    1127
+  ],
+  "side": [],
+  "views": 0,
+  "created_on": {
+    "year": 2023,
+    "month": 10,
+    "day": 8,
+    "time": "17:48",
+    "full_time": {
+      "$date": "2023-10-08T17:48:45.846Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 10,
+    "day": 8,
+    "time": "17:48",
+    "full_time": {
+      "$date": "2023-10-08T17:48:45.846Z"
+    }
+  },
+  "cover_card": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g3bwf.png",
+  "parent_id": "",
+  "card_names": null,
+  "series_names": null,
+  "private": false
 }]

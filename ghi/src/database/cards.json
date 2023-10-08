@@ -5411,7 +5411,7 @@
   "series_name": "Mystic//Quest//Relaxation",
   "card_number": 1127,
   "enthusiasm": null,
-  "effect_text": "Return 8 Mystic cards or pluck with different names from their respective discard piles to the bottom of your Main deck/Pluck deck in any order; all Mystic cards in your play gain damage plus 1 this round (those cards deal 1 additional damage at the end of their resolutions).",
+  "effect_text": "Return 8 Mystic cards or Pluck with different names from their respective discard piles to the bottom of your Main deck/Pluck deck in any order; all Mystic cards in your play gain damage plus 1 this round (those cards deal 1 additional damage at the end of their resolutions).",
   "second_effect_text": "",
   "illustrator": "gogorenascence",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg9e.png",
@@ -5440,6 +5440,42 @@
       "$date": "2023-10-08T00:47:01.635Z"
     }
   },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "6522ea395e4e9f1d586eeee2"
+  },
+  "name": "Lucky Punch",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Brawler//Magic",
+  "card_number": 1128,
+  "enthusiasm": null,
+  "effect_text": "Discard 7 Pluck in your ownership; deal 5 piercing damage to a foe and ignore the reaction(s) of defending Fighter(s). Trigger effects can not be used in response to this Event.",
+  "second_effect_text": "",
+  "illustrator": "gogorenascence",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg10e.png",
+  "file_name": "i1plg10e.png",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 10,
+    "day": 8,
+    "time": "17:43",
+    "full_time": {
+      "$date": "2023-10-08T17:43:21.795Z"
+    }
+  },
+  "updated_on": {},
   "alpha": null,
   "beta": null
 }]
