@@ -592,7 +592,7 @@
   "name": "Side Step Counter!!",
   "card_class": "Power",
   "hero_id": "BGA",
-  "series_name": "Battle Girl Alice",
+  "series_name": "Battle Girl Alice//Magic//Brawler",
   "card_number": 1031,
   "enthusiasm": 0,
   "effect_text": "<Target> Foe on your right. //<1-5> Remove 1 reaction token from your Fighter. //<6-11> Deal 2 damage. Your Fighter gains Counter 1. //<12+> Deal 2 bypassing damage. Your Fighter gains Counter 1.",
@@ -635,7 +635,7 @@
   "name": "Spinning Swallow Tail Deathblow!!!",
   "card_class": "Power",
   "hero_id": "BGA",
-  "series_name": "Battle Girl Alice",
+  "series_name": "Battle Girl Alice//Magic//Brawler",
   "card_number": 1032,
   "enthusiasm": 19,
   "effect_text": "<Target> Foe on your left. //<1-5> Remove 2 reaction tokens from your Fighter. //<6-11> Deal 2 damage. Your Fighter gains Redirect 1. //<12+> Deal 2 bypassing damage. Your Fighter gains Redirect 1.",
@@ -5400,4 +5400,46 @@
       "$date": "2023-06-25T19:21:51.382Z"
     }
   }
+},
+{
+  "_id": {
+    "$oid": "6521fbedca1ea2f2570a9161"
+  },
+  "name": "Chakras Aligned",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Mystic//Quest//Relaxation",
+  "card_number": 1127,
+  "enthusiasm": null,
+  "effect_text": "Return 8 Mystic cards or pluck with different names from their respective discard piles to the bottom of your Main deck/Pluck deck in any order; all Mystic cards in your play gain damage plus 1 this round (those cards deal 1 additional damage at the end of their resolutions).",
+  "second_effect_text": "",
+  "illustrator": "gogorenascence",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg9e.png",
+  "file_name": "i1plg9e.png",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 10,
+    "day": 8,
+    "time": "00:46",
+    "full_time": "2023-10-08T00:46:37.375000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 10,
+    "day": 8,
+    "time": "00:47",
+    "full_time": {
+      "$date": "2023-10-08T00:47:01.635Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
 }]
