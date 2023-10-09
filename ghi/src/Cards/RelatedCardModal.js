@@ -4,27 +4,31 @@ import {
 } from "react-bootstrap";
 import { useParams, NavLink} from 'react-router-dom';
 import React, { useState, useEffect } from 'react'
+import cards from "../database/cards.json";
 
 
-function RelatedCardModal(props) {
+function RelatedCardModal() {
+    const { card_number } = useParams()
+    const [card, setCard] = useState("")
+    const getCard = async() =>{
+        const cardData = cards.find(card => card.card_number.toString() === card_number)
+        console.log(cards)
+        setCard(cardData);
+    };
 
-    const {relatedCardsList} = props
-    const [relatedCards, setRelatedCards] = useState([]);
+    const relatedCardsList = cards?.filter(relatedCard => (card?.hero_id === relatedCard.hero_id) && relatedCard.card_number !== card.card_number)
+    relatedCardsList.sort((a,b) => a.card_number - b.card_number)
 
-    console.log(relatedCards)
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => {
         setShow(true)
-        getRelatedCards()
     };
 
-
-    const getRelatedCards = async() => {
-        setRelatedCards(relatedCardsList)
-    }
-
+    useEffect(() => {
+        getCard();
+    }, [card_number]);
 
     return (
 
@@ -45,8 +49,8 @@ function RelatedCardModal(props) {
                 <Modal.Body closeButton>
                 <h1 className="centered-h1"
                     style={{color: "black"}}>Related Cards</h1>
-                <div className="cd-inner2 card-pool-fill3">
-                    {relatedCards.map((relatedCard) => {
+                <div className="cd-inner2 card-pool-fill2">
+                    {relatedCardsList?.map((relatedCard) => {
                         return (
                             <NavLink to={`/cards/${relatedCard.card_number}`}>
                                     <img
