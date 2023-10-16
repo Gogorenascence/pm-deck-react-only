@@ -678,7 +678,7 @@
   "name": "Battle Girl Transformation!",
   "card_class": "Power",
   "hero_id": "BGA",
-  "series_name": "Battle Girl Alice//Magic//Brawler",
+  "series_name": "Battle Girl Alice//Magic//Brawler//Transformation",
   "card_number": 1030,
   "enthusiasm": 0,
   "effect_text": "Resolve 1 of the following effects. If you have yet to deal damage this round, resolve 2 different effects instead: //<> Your Fighter gains Counter 1. //<> Take 2 damage, then your Fighter gains 2 HP. //<> This card copies the effect text of your Fighter.",
@@ -720,7 +720,7 @@
   "name": "Double Combatants!",
   "card_class": "Unity",
   "hero_id": "DW1",
-  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1034,
   "enthusiasm": 0,
   "effect_text": "Draw 1 card. If you have a Fighter in your play, it is now defending. Add 1 Fighter from your hand to your play.",
@@ -741,19 +741,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:51",
+    "month": 10,
+    "day": 14,
+    "time": "00:26",
     "full_time": {
-      "$date": "2023-06-25T18:51:36.168Z"
+      "$date": "2023-10-14T00:26:48.684Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -762,7 +762,7 @@
   "name": "Dual Wing Strike!!",
   "card_class": "Unity",
   "hero_id": "DW1",
-  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1035,
   "enthusiasm": 0,
   "effect_text": "<Target> Your strongest foe. //<1-5> Deal 1 damage. //<6-11> Deal 2 damage. Add 1 Unity Move from your hand to your play, that card can not be resolved this round. //<12+> Deal 2 damage. Add 1 Unity Move from your hand to your play.",
@@ -788,13 +788,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 9,
-    "day": 30,
-    "time": "21:44",
+    "month": 10,
+    "day": 14,
+    "time": "00:26",
     "full_time": {
-      "$date": "2023-09-30T21:44:17.981Z"
+      "$date": "2023-10-14T00:26:01.675Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -803,7 +805,7 @@
   "name": "Jet and Climber",
   "card_class": "Unity",
   "hero_id": "DW1",
-  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1033,
   "enthusiasm": 0,
   "effect_text": "Add 1 Move or MAX VARIABLE from your hand to your play (MAX VARIABLE counts as a Move).",
@@ -830,13 +832,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 7,
-    "day": 17,
-    "time": "17:22",
+    "month": 10,
+    "day": 14,
+    "time": "00:26",
     "full_time": {
-      "$date": "2023-07-17T17:22:39.536Z"
+      "$date": "2023-10-14T00:26:30.780Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -845,7 +849,7 @@
   "name": "Dive Bomb Finisher!!!",
   "card_class": "Unity",
   "hero_id": "DW1",
-  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1036,
   "enthusiasm": 20,
   "effect_text": "<Target> Your weakest foe. //<1-5> Deal 2 damage. //<6-11> Deal 3 damage. //<12+> Deal 1 damage for each card in your play. Return 1 other card in your play to your hand.",
@@ -871,13 +875,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 9,
-    "day": 30,
-    "time": "21:35",
+    "month": 10,
+    "day": 14,
+    "time": "00:27",
     "full_time": {
-      "$date": "2023-09-30T21:35:16.642Z"
+      "$date": "2023-10-14T00:27:02.052Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1309,7 +1315,7 @@
   "card_number": 1049,
   "enthusiasm": 0,
   "effect_text": "All players and their Fighters take 1 damage. Add 3 to your Focus.",
-  "second_effect_text": "<Trigger> During the Start Phase or when this card is revealed, damage you and this card take is reduced by 1.",
+  "second_effect_text": "<C.Trigger> During the Start Phase or when this card is revealed, damage you and this card take is reduced by 1.",
   "illustrator": "ahtan_delmundo",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bnf.png",
   "file_name": "i1p1bnf",
@@ -1440,7 +1446,7 @@
   "series_name": "Black Note//Altered//Quest//Call",
   "card_number": 1052,
   "enthusiasm": 5,
-  "effect_text": "<Target> All foes. //If you are at 8 HP or less, add 3 to your Focus. //<1-5> Deal 2 piercing damage. Take 4 damage. //<6-11> Deal 3 piercing damage. Take 3 damage. //<12+> Deal 4 piercing damage and ignore the reaction(s) of defending Fighter(s). Take 2 damage.",
+  "effect_text": "<Target> All foes. //If you are at 5 HP or less, ignore the reaction(s) of defending Fighter(s). //<1-5> Deal 2 piercing damage. Take 4 damage. //<6-11> Deal 3 piercing damage. Take 3 damage. //<12+> Deal 4 piercing damage. Take 2 damage.",
   "second_effect_text": "",
   "illustrator": "ahtan_delmundo",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bne.png",
@@ -1459,19 +1465,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:55",
+    "month": 10,
+    "day": 15,
+    "time": "18:30",
     "full_time": {
-      "$date": "2023-06-25T18:55:06.804Z"
+      "$date": "2023-10-15T18:30:59.286Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1654,7 +1660,7 @@
   "series_name": "PantheraMan//Nature//Brawler",
   "card_number": 1067,
   "enthusiasm": 0,
-  "effect_text": "<Limited> If you have no Moves in your play, deal 2 piercing damage to a foe who has yet to go this round. You can not add Moves to your play this round.",
+  "effect_text": "<Limited> If you have no Move(s) in your play, deal 3 piercing damage to a foe who has yet to go this round. You can not add Moves to your play this round.",
   "second_effect_text": "",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl01pmi.png",
@@ -1678,13 +1684,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 8,
-    "day": 31,
-    "time": "17:42",
+    "month": 10,
+    "day": 15,
+    "time": "17:46",
     "full_time": {
-      "$date": "2023-08-31T17:42:28.674Z"
+      "$date": "2023-10-15T17:46:10.104Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1742,7 +1750,7 @@
   "card_number": 1069,
   "enthusiasm": 0,
   "effect_text": "This Comeback counts as a Staunch card in your play (this does not count towards play size).",
-  "second_effect_text": "<Critical> If you have no Fighter in your play, add 1 Staunch Fighter from your hand to your play.",
+  "second_effect_text": "<Critical> If you have no Fighter(s) in your play, add 1 Staunch Fighter from your hand to your play.",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb1pm.png",
   "file_name": "",
@@ -1781,7 +1789,7 @@
   "name": "Experimental Dual Mode Thruster",
   "card_class": "",
   "hero_id": "DW1",
-  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1091,
   "enthusiasm": 0,
   "effect_text": "<Trigger> During the Start Phase, discard 1 card from your hand; resolve one of the following effects: //<> Add 3 to your Focus for your first Focus roll this round. //<> Add 3 to your Enthusiasm this round.",
@@ -1808,13 +1816,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 7,
-    "day": 17,
-    "time": "05:29",
+    "month": 10,
+    "day": 14,
+    "time": "00:27",
     "full_time": {
-      "$date": "2023-07-17T05:29:46.782Z"
+      "$date": "2023-10-14T00:27:16.422Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1823,7 +1833,7 @@
   "name": "Project HERMES",
   "card_class": "",
   "hero_id": "DW1",
-  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1092,
   "enthusiasm": 0,
   "effect_text": "Add 1 of the following from their respective discard piles to your hand/ownership: //<>Up to 2 Project cards and 1 Project Pluck except the Event Project HERMES. //<>2 Unity cards. //<>1 MAX VARIABLE and 1 Item.",
@@ -1844,19 +1854,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:56",
+    "month": 10,
+    "day": 14,
+    "time": "00:27",
     "full_time": {
-      "$date": "2023-06-25T18:56:05.808Z"
+      "$date": "2023-10-14T00:27:28.182Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1865,7 +1875,7 @@
   "name": "The Survey Crew",
   "card_class": "",
   "hero_id": "DW1",
-  "series_name": "Project HERMES//Tech//Tactical//Team",
+  "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1093,
   "enthusiasm": 0,
   "effect_text": "This Comeback counts as a Unity card in your play (this does not count towards play size).",
@@ -1893,12 +1903,14 @@
   "updated_on": {
     "year": 2023,
     "month": 10,
-    "day": 3,
-    "time": "20:51",
+    "day": 14,
+    "time": "00:27",
     "full_time": {
-      "$date": "2023-10-03T20:51:52.960Z"
+      "$date": "2023-10-14T00:27:39.642Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1948,14 +1960,14 @@
   "_id": {
     "$oid": "6413bdabb00a31a52c1b9d79"
   },
-  "name": "“1..2..3..”",
+  "name": "The Globetrotter",
   "card_class": "",
   "hero_id": "BN1",
   "series_name": "Black Note//Altered//Quest//Call",
   "card_number": 1104,
   "enthusiasm": 0,
-  "effect_text": "All players discard cards from their plays until they have 3 or less cards, then deal 2 damage to all players that discarded card(s) from their play. ",
-  "second_effect_text": "<Critical> All foes and their Fighters take 1 damage.",
+  "effect_text": "<Trigger> When a card(s) is removed from your play, add 1 Call or Quest card from your hand to your play.",
+  "second_effect_text": "<Critical> Add 1 Call or Quest card from your Main deck to your hand (the Main deck is then shuffled).\n",
   "illustrator": "ahtan_delmundo",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl13bne.png",
   "file_name": "i1pl13bne",
@@ -1963,6 +1975,7 @@
     1007
   ],
   "extra_effects": [
+    1001,
     1002
   ],
   "reactions": [],
@@ -1974,19 +1987,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:57",
+    "month": 10,
+    "day": 16,
+    "time": "05:49",
     "full_time": {
-      "$date": "2023-06-25T18:57:24.796Z"
+      "$date": "2023-10-16T05:49:02.112Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -2042,7 +2055,7 @@
   "series_name": "Gravity Enforcer//Cosmic//Tactical",
   "card_number": 1112,
   "enthusiasm": 0,
-  "effect_text": "<L.Trigger> During a foe's turn, card effects can not be resolved more than once this round.",
+  "effect_text": "<L.Trigger> During a foe's turn, cards can not be resolved more than once this round.",
   "second_effect_text": "Lower the Enthusiasm of all foes by 2.",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl16gei.png",
@@ -2063,19 +2076,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:57",
+    "month": 10,
+    "day": 15,
+    "time": "19:31",
     "full_time": {
-      "$date": "2023-06-25T18:57:34.918Z"
+      "$date": "2023-10-15T19:31:23.698Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -2345,7 +2358,7 @@
   "series_name": "Ceifeira Preta//Mystic//Quest",
   "card_number": 1058,
   "enthusiasm": 0,
-  "effect_text": "This card cannot target the same foe twice.// Discard 1 card from your strongest or weakest foe's hand  for each Comeback in your ownership (max of 3), then they draw 1 card for each Comeback in their ownership plus 1 (max of 3).",
+  "effect_text": "This card cannot target the same foe twice.//Discard 1 card from your strongest or weakest foe's hand  for each Comeback in your ownership (max of 3), then they draw 1 card for each Comeback in their ownership plus 1 (max of 3).",
   "second_effect_text": "",
   "illustrator": "Hugo Roberto",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p3cpa.png",
@@ -2470,7 +2483,7 @@
   "series_name": "Warp Family//Cosmic//Psychic",
   "card_number": 1053,
   "enthusiasm": 0,
-  "effect_text": "Look at a random foe's hand, then discard 1 card from their hand. That foe draws 1 card.//\nIf you have a Unity card in your play, resolve this card one more time, but the target foe draws 2 cards instead.",
+  "effect_text": "Look at a random foe's hand, then discard 1 card from their hand. That foe draws 1 card.//If you have a Unity card in your play, resolve this card one more time, but the target foe draws 2 cards instead.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pf.png",
@@ -3237,7 +3250,7 @@
   "card_number": 1073,
   "enthusiasm": 0,
   "effect_text": "<Limited> If you resolve an Event this round, place the Event under this Item instead of discarding it at the end of the round (the placed Event(s) count towards your Pluck limit, and if this Item is discarded or changes ownership, the placed Event(s) is discarded).",
-  "second_effect_text": "The Event(s) under this Item can be resolved one more time; the Event is not discarded at the end of the round.",
+  "second_effect_text": "The Event(s) under this Item can be resolved one more time as this card's effect; the Event is not discarded during the End Phase.",
   "illustrator": "Ranbutam",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl03bwi.png",
   "file_name": "i1pl03bwi",
@@ -3256,25 +3269,25 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:08",
+    "month": 10,
+    "day": 15,
+    "time": "17:58",
     "full_time": {
-      "$date": "2023-06-25T19:08:01.274Z"
+      "$date": "2023-10-15T17:58:35.793Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
     "$oid": "64395a903d6559427fc58539"
   },
-  "name": "Reconnection                      ",
+  "name": "Reconnection",
   "card_class": "",
   "hero_id": "BW1",
   "series_name": "Bone Whisperer//Mystic//Nature//Relaxation",
@@ -3492,8 +3505,8 @@
   "series_name": "Burst Esper//Psychic//Energy",
   "card_number": 1085,
   "enthusiasm": 0,
-  "effect_text": "<Limited> Return 1 card from the discard pile to your hand.",
-  "second_effect_text": "Once per round, if a card in your play or ownership randomly chooses a foe(s) or card(s) at, you choose the target(s) instead. ",
+  "effect_text": "<Limited> Return 2 cards from the discard pile to your hand.",
+  "second_effect_text": "Once per round, if a card in your play or ownership randomly chooses a foe(s) or card(s) at, you choose the target(s) instead.//Discard this Item after the third round of use.",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl07bei.png",
   "file_name": "i1pl07bei",
@@ -3512,19 +3525,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:13",
+    "month": 10,
+    "day": 15,
+    "time": "18:34",
     "full_time": {
-      "$date": "2023-06-25T19:13:03.569Z"
+      "$date": "2023-10-15T18:34:02.647Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3665,7 +3678,7 @@
   "series_name": "Flamebell//Magic//Quest",
   "card_number": 1077,
   "enthusiasm": 0,
-  "effect_text": "All foes with a Power card(s) in their play take 1 damage. All Fighters are treated as Power and all effects that increase damage are cancelled.",
+  "effect_text": "All foes with a Power card(s) in their play take 1 damage. All Fighters are treated as Power and damage cards whose original class was Power take this round is increased by 1.",
   "second_effect_text": "<Trigger> During the Start Phase or if you are targeted for damage, resolve this Event in your ownership.",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl04fbe.png",
@@ -3683,19 +3696,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:13",
+    "month": 10,
+    "day": 15,
+    "time": "19:03",
     "full_time": {
-      "$date": "2023-06-25T19:13:24.834Z"
+      "$date": "2023-10-15T19:03:48.749Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3750,7 +3763,7 @@
   "card_number": 1021,
   "enthusiasm": 0,
   "effect_text": "Deal 3 damage to your strongest foe, then discard 3 cards from your hand.",
-  "second_effect_text": "<Trigger> Just before using this card’s reaction(s), remove 3 Counter tokens from this card; draw 3 cards.",
+  "second_effect_text": "<Trigger> During a player's turn, remove 3 Counter tokens from this card; draw 3 cards.",
   "illustrator": "gmoshiro",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rff.png",
   "file_name": "i1r2rff",
@@ -3777,13 +3790,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 29,
-    "time": "23:44",
+    "month": 10,
+    "day": 15,
+    "time": "18:29",
     "full_time": {
-      "$date": "2023-06-29T23:44:32.879Z"
+      "$date": "2023-10-15T18:29:57.506Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4646,7 +4661,7 @@
   "series_name": "Hive//Tech//Nature",
   "card_number": 1039,
   "enthusiasm": 0,
-  "effect_text": "Deal 3 damage to a foe, then steal 1 of their Active Items. Discard the Item at the end of the round or when this card is removed from your play.",
+  "effect_text": "Deal 3 damage to a foe, then steal 1 of their Active Items. Discard the Item during the End Phase or when this card is removed from your play.",
   "second_effect_text": "",
   "illustrator": "layonsin.art",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2hm.png",
@@ -4668,13 +4683,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 9,
-    "day": 12,
-    "time": "22:17",
+    "month": 10,
+    "day": 15,
+    "time": "18:46",
     "full_time": {
-      "$date": "2023-09-12T22:17:44.569Z"
+      "$date": "2023-10-15T18:46:28.724Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4770,7 +4787,7 @@
   "series_name": "Hive//Tech//Nature",
   "card_number": 1095,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> If a foe adds a face-up card(s) to their play, discard 1 Item in your ownership; add that card (max of 1) to your play instead and they draw 2 cards. Discard the added card at the end of the round. ",
+  "effect_text": "<Trigger> If a foe adds a face-up card(s) to their play, discard 1 Item in your ownership; add that card (max of 1) to your play instead and they draw 2 cards. Discard the added card during the End Phase.",
   "second_effect_text": "",
   "illustrator": "layonsin.art",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl10he.png",
@@ -4794,13 +4811,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 9,
-    "day": 14,
-    "time": "02:06",
+    "month": 10,
+    "day": 15,
+    "time": "18:46",
     "full_time": {
-      "$date": "2023-09-14T02:06:41.417Z"
+      "$date": "2023-10-15T18:46:33.504Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -5218,19 +5237,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:21",
+    "month": 10,
+    "day": 15,
+    "time": "19:11",
     "full_time": {
-      "$date": "2023-06-25T19:21:27.609Z"
+      "$date": "2023-10-15T19:11:11.569Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -5284,7 +5303,7 @@
   "series_name": "Cosmic//Psychic//Quest//Spoiler",
   "card_number": 1121,
   "enthusiasm": 0,
-  "effect_text": "Unfurl 3 cards; add 1 card to your hand and discard the other unfurled cards. \nApply the following effects based on the classes of the added card (you can only apply each effect once): \n//<Power> Deal 1 damage to a foe and add 3 to your Focus. \n//<Unity> Return 1 Aura or 1 Move from the discard pile to the top of the Main deck. \n//<Canny> Deal 2 bypassing damage to a foe.",
+  "effect_text": "Unfurl 3 cards; add 1 card to your hand and discard the other unfurled cards. \nApply the following effects based on the classes of the added card (you can only apply each effect once): //<Power> Deal 1 damage to a foe and add 3 to your Focus.//<Unity> Return 1 Aura or 1 Move from the discard pile to the top of the Main deck.//<Canny> Deal 2 bypassing damage to a foe.",
   "second_effect_text": "",
   "illustrator": "mvthwus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg3e.png",
@@ -5302,19 +5321,17 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
     "month": 6,
     "day": 25,
     "time": "19:21",
-    "full_time": {
-      "$date": "2023-06-25T19:21:39.801Z"
-    }
-  }
+    "full_time": "2023-06-25T19:21:39.801000"
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -5411,7 +5428,7 @@
   "series_name": "Mystic//Quest//Relaxation",
   "card_number": 1127,
   "enthusiasm": null,
-  "effect_text": "Return 8 Mystic cards or Pluck with different names from their respective discard piles to the bottom of your Main deck/Pluck deck in any order; all Mystic cards in your play gain damage plus 1 this round (those cards deal 1 additional damage at the end of their resolutions).",
+  "effect_text": "Return 8 Mystic cards and/or Pluck with different names from their respective discard piles to the bottom of your Main deck/Pluck deck in any order; all Mystic cards in your play gain damage plus 1 this round (those cards deal 1 additional damage at the end of their resolutions).",
   "second_effect_text": "",
   "illustrator": "gogorenascence",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg9e.png",
@@ -5435,9 +5452,9 @@
     "year": 2023,
     "month": 10,
     "day": 8,
-    "time": "00:47",
+    "time": "20:54",
     "full_time": {
-      "$date": "2023-10-08T00:47:01.635Z"
+      "$date": "2023-10-08T20:54:58.856Z"
     }
   },
   "alpha": null,
@@ -5471,17 +5488,15 @@
     "month": 10,
     "day": 8,
     "time": "17:43",
-    "full_time": {
-      "$date": "2023-10-08T17:43:21.795Z"
-    }
+    "full_time": "2023-10-08T17:43:21.795000"
   },
   "updated_on": {
     "year": 2023,
     "month": 10,
     "day": 8,
-    "time": "17:43",
+    "time": "20:41",
     "full_time": {
-      "$date": "2023-10-08T17:43:21.795Z"
+      "$date": "2023-10-08T20:41:07.632Z"
     }
   },
   "alpha": null,

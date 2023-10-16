@@ -45,7 +45,7 @@ function DeckExport(props) {
               "scaleY": 1.0,
               "scaleZ": 1.36402035
             },
-            "Nickname": "",
+            "Nickname": `${deck.name} Main`,
             "Description": "",
             "GMNotes": "",
             "AltLookAngle": {
@@ -179,7 +179,7 @@ function DeckExport(props) {
             "scaleY": 1.0,
             "scaleZ": 1.36402035
           },
-          "Nickname": "",
+          "Nickname": `${deck.name} Pluck`,
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
