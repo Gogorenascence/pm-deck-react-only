@@ -9,6 +9,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  padding-top: 62px;
   height: 100%;
   width: 100%;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("./backg.png");
@@ -77,6 +78,7 @@ body.dark {
   position: absolute;
   top: 0;
   left: 0;
+  padding: auto;
   height: 100%;
   width: 100%;
   background-image: linear-gradient(to right, rgba(16, 14, 22, 0.5), rgba(17, 0, 54, 0.4)), url("./backg.png");
@@ -90,7 +92,7 @@ body.dark {
 body.dark::after {
   content: "";
   position: fixed;
-  top: 0;
+  top: 62px;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -136,6 +138,7 @@ body.dark::after {
 :root {
   --window-height: calc(100vh - 100px);
   --window-height-account: calc(100vh - 180px);
+  --window-width200: calc(80vw - 200px);
 }
 
 
@@ -161,11 +164,11 @@ code {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 9900;
 }
 
 Card {
-  padding:0px;
+  padding: 0px;
   height: auto;
   align-items: center;
 }
@@ -244,6 +247,7 @@ button:hover {
 .white-space {
   max-width: 80%;
   margin: auto;
+  top:
 }
 
 .navbar-brand {
@@ -251,14 +255,42 @@ button:hover {
   font-weight: 500;
 }
 
+.navbar-brand2 {
+  font-size: 23px;
+  font-weight: 600;
+  /* margin: 0 10px; */
+  margin: 0 0 0 10px;
+  padding: 0 20px 0 10px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s;
+}
+
+.navbar-brand2:hover {
+  text-decoration: none;
+  color: white;
+}
+
 .nav-item {
   font-size: 20px;
   font-weight: 400;
+  padding: auto;
+  float: left;
+  overflow: hidden;
 }
 
-.dropdown-item {
+.nav-dropdown-item {
   font-size: 20px;
   font-weight: 400;
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin: 0 10px 0 10px;
+}
+
+.nav-dropdown-item:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .semi-bold-20 {
@@ -358,6 +390,22 @@ button:hover {
   outline: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.outScrollable {
+  position: relative; /* Make the container a positioning context */
+  width: 100%; /* Ensure the image container takes the full width of the scrollable div */
+  height: 100%; /* Ensure the image container takes the full height of the scrollable div */
+  /* display: flex; */
+}
+
+.inScrollable {
+  position: relative; /* Make the container a positioning context */
+  width: 100%; /* Ensure the image container takes the full width of the scrollable div */
+  height: 53vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .cardpool {
   margin: 2% 0%;
   background-color: rgba(80, 42, 170, 0.315);
@@ -365,6 +413,7 @@ button:hover {
   border-radius: 5px;
   height: 70vh;
   outline: 1px solid white;
+  transition: all 0.5s;
 }
 
 .no-cardpool {
@@ -373,6 +422,7 @@ button:hover {
   border: 2px solid rgb(68, 17, 206);
   border-radius: 5px;
   outline: 1px solid white;
+  transition: all 0.5s;
 }
 
 .maindeck {
@@ -392,7 +442,6 @@ button:hover {
 }
 
 .maindeck2{
-
   margin: 2% 0%;
   background-color: rgba(173, 73, 73, 0.315);
   border: 2px solid rgb(173, 41, 41);
@@ -555,11 +604,6 @@ button:hover {
   height: 37px;
 }
 
-.dcbsearch-semi {
-  width: 150px;
-  height: 37px;
-}
-
 .dcbsearch-small {
   width: 115px;
   height: 37px;
@@ -636,6 +680,20 @@ button:hover {
   border: none;
 }
 
+@keyframes pulse2 {
+  0% {
+    outline: 7px solid rgb(255, 255, 255);
+  }
+  50% {
+    outline: 7px solid rgba(255, 255, 255, 0.308);
+  }
+  100% {
+    outline: 7px solid rgb(255, 255, 255);
+  }
+}
+
+
+
 .add-comp-button {
   margin: 15px 10px 10px 5px;
   width: 100px;
@@ -700,6 +758,13 @@ button:hover {
   overflow: hidden;
 }
 
+.cd-related-modal-card {
+  width: 140px;
+  border-radius: 4%;
+  overflow: hidden;
+  margin: 0px 10px 10px 10px;
+  border: 1px solid white;
+}
 
 .cd-info {
   display: grid;
@@ -818,10 +883,6 @@ button:hover {
   overflow: hidden;
 }
 
-.hidden2 {
-  display: none;
-}
-
 .logo {
   margin: 2px 4px 4px 5px;
   width: 60px;
@@ -873,6 +934,10 @@ button:hover {
 
 .no-cards {
   margin: 0px 0px 20px 20px;
+}
+
+.no-cards2 {
+  margin: 0px 0px 10px 20px;
 }
 
 .imgwindow {
@@ -971,6 +1036,24 @@ button:hover {
 
 .nav-link {
   text-decoration: none;
+  color: var(--color-body);
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: var(--color-body);
+}
+
+.nav-link2 {
+  text-decoration: none;
+  color: var(--color-body);
+  padding: 0px;
+}
+
+.nav-link2:hover {
+  text-decoration: none;
+  color: var(--color-body);
+  padding: 0px;
 }
 
 .deck-list {
@@ -1257,6 +1340,23 @@ button:hover {
   outline: 1px solid white;
 }
 
+.rarities2 {
+  margin: 2% 0%;
+  background-color: rgba(40, 34, 70, 0.315);
+  border: 2px solid rgb(40, 34, 70);
+  border-radius: 5px;
+  height: 70vh;
+  outline: 1px solid white;
+}
+
+.no-rarities {
+  margin: 2% 0%;
+  background-color: rgba(40, 34, 70, 0.315);
+  border: 2px solid rgb(40, 34, 70);
+  border-radius: 5px;
+  outline: 1px solid white;
+}
+
 .ultra {
   --angle: 0deg;
   display: flex;
@@ -1372,10 +1472,15 @@ button:hover {
   transform: translate(-50%, -50%);
   background-color: rgb(255, 255, 255);
   padding: 20px;
-  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: 3px solid #ffffff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 80%;
+  max-width: 75%;
+
   z-index: 1000;
+  overflow-x: visible;
+  overflow-y: auto;
+  max-height: 80vh;
 }
 
 .large-modal.dark {
@@ -1463,6 +1568,11 @@ button:hover {
     margin-right: 15px;
   }
 
+  .username2 {
+    color: white;
+    text-decoration: none;
+  }
+
   .footer-copy-right {
     font-weight: 500;
     margin-top: 12px;
@@ -1482,6 +1592,9 @@ button:hover {
     grid-auto-flow: dense;
     /* margin-right: 18px; */
     margin: 0px 18px 18px 18px;
+    opacity: 1;
+    /* max-height: 2000px; */
+    transition: all 0.5s;
   }
 
   .card-pool-fill3 {
@@ -1539,8 +1652,20 @@ button:hover {
   }
 
   .glow3:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.3);
   }
+
+  /* @keyframes pulse-glow3 {
+    0% {
+      filter: brightness(1.3);
+    }
+    50% {
+      filter: brightness(1);
+    }
+    100% {
+      filter: brightness(1.3);
+    }
+  } */
 
   .top-row {
     min-width: 200px;
@@ -1578,7 +1703,220 @@ button:hover {
     margin-left: 3%;
   }
 
-@media screen and (max-width: 1333px) {
+  .deck-import {
+    margin: 2% 0%;
+    background-color: rgba(0, 255, 200, 0.315);
+    border: 2px solid rgb(0, 99, 77);
+    border-radius: 5px;
+    outline: 1px solid white;
+  }
+
+  .deck-import-scrollable {
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 99%;
+    min-height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    background-color: rgba(15, 0, 50, 0.315);
+    border-radius: 2px;
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .black-white {
+    color: var(--color-body)
+  }
+
+  .black-white:hover {
+    color: var(--color-body)
+  }
+
+  .table200 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin: 0 0 0 20px;
+    border: 1px solid;
+    border-color: var(--color-body);
+    padding: 0px;
+  }
+
+  .table200p {
+    margin: 0 0 0 20px;
+    border: 1px solid;
+    border-color: var(--color-body);
+    padding: 0px;
+  }
+
+  .text-table {
+    font-weight: 600;
+    margin: 5px 20px 5px 20px;
+  }
+
+  .text-table-2 {
+    font-weight: 600;
+    margin: 5px 20px 0 20px;
+  }
+
+  .support {
+    margin: 2% 0%;
+    background-color: rgba(73, 173, 95, 0.315);
+    border: 2px solid rgb(41, 173, 81);
+    border-radius: 5px;
+    outline: 1px solid white;
+  }
+
+  .anti_support {
+    margin: 2% 0%;
+    background-color: rgba(238, 70, 70, 0.315);
+    border: 2px solid rgb(199, 30, 30);
+    border-radius: 5px;
+    outline: 1px solid white;
+  }
+
+  .large-article {
+    height: 150px;
+    width: 100%;
+  }
+
+  .cat-label {
+    text-align: left;
+    margin: 6px 5px 5px 5px;
+    font-weight: 700;
+  }
+
+  .no-pad {
+    padding: 0px;
+  }
+
+  .navbar {
+    top: 0;
+    height: 66px;
+    width: 100%;
+    padding: 0;
+    background-color: rgb(44, 41, 56);
+    border-bottom: 1px white solid;
+    /* border-bottom: none */
+    position: fixed;
+  }
+
+  .navbar.dark {
+    top: 0;
+    height: 62px;
+    width: 100vw;
+    background-color: rgb(44, 41, 56);
+    border-bottom: 1px white solid;
+  }
+
+  .threebars {
+    height: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  .nav-main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-button100 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .animate {
+    opacity: 1;
+    max-height: 1000px;
+    transition: opacity 0.5s, max-height 0.5s;
+  }
+
+  .wide90p {
+    width: 90%;
+  }
+
+  .navbar-menu {
+    display:flex;
+    margin: auto;
+    padding: 0 0 0 10px;
+  }
+
+  .navbar-menu-item {
+    /* display:block; */
+    margin: auto;
+    padding: 0 10px 0 10px;
+    font-weight: 400;
+    color: white;
+  }
+
+  .nav-dropdown-content {
+    background-color: rgb(80, 74, 102);
+    position: absolute;
+    min-width: 160px;
+    z-index: 9999;
+    top: 66px;
+  }
+
+  .navbar-select {
+    height: 62px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    transition: all 1s;
+  }
+
+  .navbar-select:hover {
+    background-color: rgb(123, 114, 158);
+  }
+
+  .navbar-selected {
+    height: 62px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    animation: pulse 1.5s infinite;
+  }
+
+@keyframes pulse {
+  0% {
+    background-color: rgb(123, 114, 158);
+  }
+  50% {
+    background-color: rgb(44, 41, 56);
+  }
+  100% {
+    background-color: rgb(123, 114, 158)
+  }
+}
+
+  .dropdown-select {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    transition: all 1s;
+  }
+
+  .dropdown-select:hover {
+    background-color: rgb(180, 166, 233);
+    transition: all 1s;
+  }
+
+  .accountbuttons {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  .hidden2 {
+    /* opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s; */
+    display: none;
+  }
+
+@media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1696,11 +2034,10 @@ button:hover {
 
   .button-fill {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    /* gap: 10px; */
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: auto;
     grid-auto-flow: dense;
     align-items: center;
-    justify-content: center;
   }
 
   .top-row {
@@ -1734,15 +2071,12 @@ button:hover {
   }
 
   .media-button{
-    width: 150px;
+    width: 120px;
+    margin-left: 35px;
   }
 
   .media-center {
     text-align: center;
-  }
-
-  .none {
-    display: none;
   }
 
   .between-space {
@@ -1771,7 +2105,6 @@ button:hover {
     max-width: 98%;
     margin: auto;
   }
-
 
   .media-display {
     display: block;
@@ -1917,6 +2250,82 @@ button:hover {
     transform: none; /* Reset the transform property */
   }
 
+  .nav-main {
+    height: 66px;
+    align-items: center;
+  }
+
+  .navbar-menu {
+    display: block;
+    top: 66px;
+    padding: 0;
+  }
+
+  .nav-item {
+    font-size: 20px;
+    font-weight: 400;
+    padding: auto;
+    float: none;
+    overflow: hidden;
+    background-color: rgba(73, 68, 92, 0.945);
+    width: 100vw;
+    outline: .5px solid white;
+  }
+
+  .nav-item2 {
+    display: flex;
+  }
+
+  .navbar-menu-item {
+    margin: 20px;
+    padding: 0;
+  }
+
+  .nav-dropdown-content {
+    background-color: rgba(80, 74, 102, 0.623);
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    top: auto;
+  }
+
+  .dropdown-select {
+    display: flex;
+    justify-content: left;
+  }
+
+  .nav-dropdown-item {
+    margin-left: 20px;
+    transition: all .5s;
+  }
+
+  .nav-dropdown-item:hover {
+    margin-left: 35px;
+    transition: all .5s;
+  }
+
+  .navbar-select {
+    justify-content: left;
+  }
+
+  .navbar-select2 {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(123, 114, 158);
+    width: 50vw;
+    outline: 1px solid white;
+    transition: all 1s;
+  }
+
+  .navbar-select2:hover {
+    background-color: red;
+    transition: all 1s;
+  }
+
+  .dropdown-select:hover {
+    background-color: rgba(255, 0, 0, 0);
+  }
+
   body {
     background-size: 100%, 60%;
   }
@@ -1929,8 +2338,28 @@ button:hover {
     width: 100%;
   }
 
+  .minimize {
+    top: 66px;
+    max-height: 0;
+    max-width: 0;
+    opacity: 0;
+    transition: all .5s;
+  }
+
+  .maximize {
+    top: 66px;
+    max-height: 1333px;
+    max-width: 1333px;
+    opacity: 1;
+    transition: all .5s;
+  }
+
   .wide100 {
     width: 100%;
+  }
+
+  .none {
+    display: none;
   }
 }
 
@@ -1949,7 +2378,7 @@ button:hover {
       left: 0;
       height: 100%;
       width: 100%;
-      background-image: url("./backg2.png");
+      background-image: url("./backg.png");
       background-size: 100%;
       background-repeat: repeat;
       background-position: center center;
@@ -1966,11 +2395,40 @@ button:hover {
     height: 100vh;
     display: flex;
     background-size: 125px;
-    background-image: url("./backg2.png");
+    background-image: url("./frame2.png");
     background-repeat: repeat;
     animation: scroll 5000s linear infinite;
     opacity: .15;
     z-index: -20;
     margin-bottom: 200px;
+  }
+  @keyframes scroll {
+    0% {
+      background-position: -3000px 3000px;
+    }
+    12.5% {
+      background-position: 0px -3000px;
+    }
+    25% {
+      background-position: -3000px 0px;
+    }
+    37.5% {
+      background-position: 0px 3000px;
+    }
+    50% {
+      background-position: -3000px 3000px;
+    }
+    62.5% {
+      background-position: 0px -3000px;
+    }
+    75% {
+      background-position: -3000px 0px;
+    }
+    87.5% {
+      background-position: 0px 3000px;
+    }
+    100% {
+      background-position: -3000px 3000px;
+    }
   }
 }

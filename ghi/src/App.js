@@ -14,7 +14,8 @@ import SetsPage from "./Cards/SetsPage";
 import SetDetailPage from "./Cards/SetDetailPage";
 import PullPage from "./Cards/PullPage";
 import UnderConstruction from "./display/UnderConstruction";
-import Nav from "./Nav";
+// import Nav from "./Nav";
+import NavBar from "./NavBar";
 import Footer from "./Footer";
 import LightSwitch from "./display/LightSwitch";
 import BackToTop from "./display/BackToTop";
@@ -66,7 +67,7 @@ function App() {
 
     <BrowserRouter>
         <div className="content">
-          <Nav/>
+          <NavBar/>
           <LightSwitch/>
           <BackToTop/>
           <div className="App">
