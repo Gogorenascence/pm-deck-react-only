@@ -2267,7 +2267,7 @@ button:hover {
     padding: auto;
     float: none;
     overflow: hidden;
-    background-color: rgba(73, 68, 92, 0.945);
+    background-color: rgb(44, 41, 56);
     width: 100vw;
     outline: .5px solid white;
   }
