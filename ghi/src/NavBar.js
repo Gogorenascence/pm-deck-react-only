@@ -170,16 +170,6 @@ function NavBar() {
                   Search Cards
                 </div>
               </NavLink>
-              <NavLink className="nav-dropdown-item" to="/topcards" onClick={() => handleShowMobileMenu()}>
-                <div className="dropdown-select">
-                  Top Cards
-                </div>
-              </NavLink>
-              <NavLink className="nav-dropdown-item" to="/series" onClick={() => handleShowMobileMenu()}>
-                <div className="dropdown-select">
-                  Series
-                </div>
-              </NavLink>
               <NavLink className="nav-dropdown-item" to="/cardsets" onClick={() => handleShowMobileMenu()}>
                 <div className="dropdown-select">
                   Card Sets
