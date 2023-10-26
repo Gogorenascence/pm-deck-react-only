@@ -18,7 +18,6 @@ function NavBar() {
       show: show,
       section: section
     })
-    console.log(showMenu)
   }
 
   function useOutsideAlerter(ref) {

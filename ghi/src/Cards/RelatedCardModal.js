@@ -1,11 +1,14 @@
 import { useParams, NavLink, useNavigate } from 'react-router-dom';
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import cards from "../database/cards.json";
+// import { useOutsideAlerter } from '../Helpers';
 
 
 function RelatedCardModal() {
     const { card_number } = useParams()
     const [card, setCard] = useState("")
+    const content = useRef(null)
+    useOutsideAlerter(content)
     const navigate = useNavigate()
     const getCard = async() =>{
         const cardData = cards.find(card => card.card_number.toString() === card_number)
@@ -37,6 +40,21 @@ function RelatedCardModal() {
         handleClose()
     }
 
+    function useOutsideAlerter(ref) {
+        useEffect(() => {
+          // Function for click event
+            function handleOutsideClick(event) {
+                if (ref.current && !ref.current.contains(event.target)
+                    && !event.target.closest(".left.button100")) {
+                    handleClose();
+                }
+            }
+          // Adding click event listener
+            document.addEventListener("click", handleOutsideClick);
+                return () => document.removeEventListener("click", handleOutsideClick);
+        }, [ref]);
+    }
+
     return (
 
         <div>
@@ -47,9 +65,8 @@ function RelatedCardModal() {
                     Show all Cards
             </button>
             {show?
-                <div className="large-modal topbar"
-                >
-                    <div className="outScrollable">
+                <div className="large-modal topbar">
+                    <div className="outScrollable"  ref={content}>
                         <h1 className="centered-h1"
                             style={{color: "black"}}>Related Cards</h1>
                         <div>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react";
 
 export function shortenedText(text) {
     if (text.length > 75) {
@@ -20,3 +20,16 @@ export function shortenedText(text) {
 //         return () => document.removeEventListener("click", handleOutsideClick);
 //     }, [ref]);
 // }
+export function useOutsideAlerter(ref, funct) {
+    useEffect(() => {
+      // Function for click event
+        function handleOutsideClick(event) {
+            if (ref.current && !ref.current.contains(event.target)) {
+                funct();
+            }
+        }
+      // Adding click event listener
+        document.addEventListener("click", handleOutsideClick);
+            return () => document.removeEventListener("click", handleOutsideClick);
+    }, [ref]);
+}
