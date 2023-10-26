@@ -5477,7 +5477,7 @@
   "name": "Lucky Punch",
   "card_class": "",
   "hero_id": "GEN",
-  "series_name": "Brawler//Magic",
+  "series_name": "Fortune//Brawler",
   "card_number": 1128,
   "enthusiasm": null,
   "effect_text": "Discard 7 Pluck in your ownership; deal 5 piercing damage to a foe and ignore the reaction(s) of defending Fighter(s). Trigger effects can not be used in response to this Event.",
@@ -5503,10 +5503,10 @@
   "updated_on": {
     "year": 2023,
     "month": 10,
-    "day": 17,
-    "time": "14:19",
+    "day": 24,
+    "time": "23:40",
     "full_time": {
-      "$date": "2023-10-17T14:19:30.275Z"
+      "$date": "2023-10-24T23:40:54.342Z"
     }
   },
   "alpha": null,

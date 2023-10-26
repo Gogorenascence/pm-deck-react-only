@@ -1,16 +1,12 @@
 import {
     Card,
 } from "react-bootstrap";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom';
-import { AuthContext } from "../context/AuthContext";
-import FavoriteDeck from "../Accounts/FavoriteDeck";
 import decks from "../database/decks.json";
 
 
 function DeckRow() {
-
-    const {account, users} = useContext(AuthContext)
     const [newDecks, setNewDecks] = useState([])
 
     const getDecks = async() =>{
@@ -80,13 +76,7 @@ function DeckRow() {
         console.log(decks)
     };
 
-    const all_decks = newDecks.filter(deck => deck.private ? deck.private === false || deck.account_id === account.id || account && account.roles.includes("admin"): true)
-    .slice(-4).reverse()
-
-    const createdBy = (deck) => {
-        const account = deck.account_id? users.find(user => user.id === deck.account_id): null
-        return account? account.username : "TeamPlayMaker"
-    };
+    const all_decks = newDecks.slice(-4).reverse()
 
     useEffect(() => {
         getDecks();
@@ -114,14 +104,6 @@ function DeckRow() {
                                     <div style={{display: "flex"}}>
                                         <h3 className="left cd-container-child media-margin-top-none"
                                         >{deck.name}</h3>
-                                        { deck.private && deck.private === true ?
-                                            <img className="logo4"
-                                                src="https://i.imgur.com/V3uOVpD.png"
-                                                alt="private" />:null
-                                        }
-                                        {account?
-                                            <FavoriteDeck deck={deck}/>: null
-                                        }
                                     </div>
                                     <h6 className="left"
                                         style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
@@ -147,13 +129,6 @@ function DeckRow() {
                                             style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                                         >
                                             {deck.updated_on.ago} &nbsp; &nbsp;
-                                        </h6>
-                                        <img className="logo2 none" src="https://i.imgur.com/eMGZ7ON.png" alt="created by"/>
-                                        <h6
-                                        className="left justify-content-end none"
-                                            style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
-                                        >
-                                            {createdBy(deck)}
                                         </h6>
                                     </div>
                                 </Card.ImgOverlay>

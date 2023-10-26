@@ -7,8 +7,6 @@ import { useState, useEffect, useContext } from "react";
 import { NavLink, useParams, useNavigate } from 'react-router-dom';
 import DeckExport from "./DeckExport";
 import BackButton from "../display/BackButton";
-import { AuthContext } from "../context/AuthContext";
-import FavoriteDeck from "../Accounts/FavoriteDeck";
 
 
 function DeckDetailPage(props) {
@@ -22,8 +20,6 @@ function DeckDetailPage(props) {
     const [listView, setListView] = useState(false);
     const [showMain, setShowMain] = useState(true);
     const [showPluck, setShowPluck] = useState(true);
-
-    const {account, users} = useContext(AuthContext)
 
     const deck = decks.find(deck => deck.id === deck_id)
 
@@ -152,11 +148,6 @@ function DeckDetailPage(props) {
         setOwnership("");
     }
 
-    const createdBy = (deck) => {
-        const account = deck.account_id? users.find(user => user.id === deck.account_id): null
-        return account? account.username : "TeamPlayMaker"
-    };
-
     useEffect(() => {
         getCountedDeckList();
 
@@ -210,22 +201,6 @@ function DeckDetailPage(props) {
 
     const navigate = useNavigate()
 
-    const handleDelete = async (event) => {
-        event.preventDefault();
-        const cardUrl = `${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/${deck_id}/`;
-        const fetchConfig = {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
-
-        const response = await fetch(cardUrl, fetchConfig);
-        if (response.ok) {
-            navigate(`/decks`)
-        };
-    }
-
 
     return (
         <div className="white-space">
@@ -240,48 +215,35 @@ function DeckDetailPage(props) {
                     </div>
                 </div>
                 <Card.ImgOverlay className="blackfooter2">
-                        <div style={{display: "flex"}}>
-                            <h3 className="left cd-container-child media-margin-top-none">{deck.name}</h3>
-                            { deck.private && deck.private === true ?
-                                <img className="logo4" src="https://i.imgur.com/V3uOVpD.png" alt="private" />:null
-                            }
-                            {account?
-                                <FavoriteDeck deck={deck}/>:null
-                            }
-                        </div>
-                        <h6 className="left"
-                            style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
+                    <div style={{display: "flex"}}>
+                        <h3 className="left cd-container-child media-margin-top-none">{deck.name}</h3>
+                    </div>
+                    <h6 className="left"
+                        style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
+                    >
+                        Strategies: {deck.strategies.length > 0 ? deck.strategies.join(', ') : "n/a"}
+                    </h6>
+                    <h6 className="left"
+                        style={{margin: '0px 0px 10px 10px', fontWeight: "600"}}
+                    >
+                        Main Deck: {main_list.length} &nbsp; Pluck Deck: {pluck_list.length}
+                    </h6>
+                    <div style={{ display: "flex" }}>
+                        <img className="logo2" src="https://i.imgur.com/nIY2qSx.png" alt="created on"/>
+                        <h6
+                        className="left justify-content-end"
+                            style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                         >
-                            Strategies: {deck.strategies.length > 0 ? deck.strategies.join(', ') : "n/a"}
+                            {deck.created_on.ago} &nbsp; &nbsp;
                         </h6>
-                        <h6 className="left"
-                            style={{margin: '0px 0px 10px 10px', fontWeight: "600"}}
+                        <img className="logo3" src="https://i.imgur.com/QLa1ciW.png" alt="updated on"/>
+                        <h6
+                        className="left justify-content-end"
+                            style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                         >
-                            Main Deck: {main_list.length} &nbsp; Pluck Deck: {pluck_list.length}
+                            {deck.updated_on.ago} &nbsp; &nbsp;
                         </h6>
-                        <div style={{ display: "flex" }}>
-                            <img className="logo2" src="https://i.imgur.com/nIY2qSx.png" alt="created on"/>
-                            <h6
-                            className="left justify-content-end"
-                                style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
-                            >
-                                {deck.created_on.ago} &nbsp; &nbsp;
-                            </h6>
-                            <img className="logo3" src="https://i.imgur.com/QLa1ciW.png" alt="updated on"/>
-                            <h6
-                            className="left justify-content-end"
-                                style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
-                            >
-                                {deck.updated_on.ago} &nbsp; &nbsp;
-                            </h6>
-                            <img className="logo2" src="https://i.imgur.com/eMGZ7ON.png" alt="created by"/>
-                            <h6
-                            className="left justify-content-end"
-                                style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
-                            >
-                                {createdBy(deck)}
-                            </h6>
-                        </div>
+                    </div>
                 </Card.ImgOverlay>
             </Card>
 
@@ -360,27 +322,6 @@ function DeckDetailPage(props) {
                     null}
             </div>
             <div style={{ display: "flex" }}>
-            { (account && account.roles.includes("admin")) || (account && deck.account_id === account.id)?
-                <>
-                    <NavLink to={`/decks/${deck.id}/edit`}>
-                        <button
-                            className="left heightNorm button100 red"
-                            variant="danger"
-                            style={{marginLeft: ".5%", marginRight: "7px"}}
-                            >
-                            Edit Deck
-                        </button>
-                    </NavLink>
-                    <button
-                        className="left heightNorm button100 red"
-                        onClick={handleDelete}
-                        style={{marginLeft: ".5%", marginRight: "7px"}}
-                        >
-                        Delete Deck
-                    </button>
-                </>
-                :
-            null}
             {listView?
                 <button
                     className="left"

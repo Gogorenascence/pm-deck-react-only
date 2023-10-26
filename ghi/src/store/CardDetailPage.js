@@ -1,19 +1,15 @@
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useParams, useNavigate} from 'react-router-dom';
+import CardEditModal from "./CardEditModal";
 import RelatedCardModal from "./RelatedCardModal";
 import BackButton from "../display/BackButton";
-import cards from "../database/cards.json";
-import card_types from "../database/card_types.json";
-import card_tags from "../database/card_tags.json";
-import extra_effects from "../database/extra_effects.json";
-import reactions from "../database/reactions.json";
-import card_categories from "../database/card_categories.json";
+import { AuthContext } from "../context/AuthContext";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 
 
 function CardDetailPage() {
-    const { card_number } = useParams()
 
+    const {card_number} = useParams();
     const [card, setCard] = useState({
         name: "",
         card_class: "",
@@ -34,11 +30,21 @@ function CardDetailPage() {
         reactions: [],
         card_tags: [],
     });
+    const [relatedCards, setRelatedCards] = useState([]);
+    const [card_type, setCardType] = useState("")
+    const [extra_effects, setExtraEffects] = useState([])
+    const [reactions, setReactions] = useState([])
+    const [card_tags, setCardTags] = useState([])
+    const [card_categories, setCardCategories] = useState([])
+
+    const [cards, setCards] = useState([]);
+
+    const { account } = useContext(AuthContext)
 
     const getCard = async() =>{
+        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/`);
+        const cardData = await response.json();
 
-        const cardData = cards.find(card => card.card_number.toString() === card_number)
-        console.log(cards)
         cardData["seriesNames"] = cardData.series_name.split("//")
         cardData["effectText"] = cardData.effect_text.split("//")
         if (cardData.second_effect_text){
@@ -47,48 +53,55 @@ function CardDetailPage() {
         setCard(cardData);
     };
 
-    const relatedCardsList = cards?.filter(relatedCard => (card?.hero_id === relatedCard.hero_id) && relatedCard.card_number !== card.card_number)
-    relatedCardsList.sort((a,b) => a.card_number - b.card_number)
+    const getRelatedCards = async() =>{
+        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/related_cards/`);
+        const relatedData = await response.json();
 
-    const card_type = card_types.find(card_type => card?.card_type[0] === card_type?.type_number)
+        setRelatedCards(relatedData.cards.sort((a,b) => a.card_number - b.card_number));
+    };
 
-    const extra_effects_list = []
-    for (let extra_effect of extra_effects) {
-        if (card.extra_effects.includes(extra_effect.effect_number) ) {
-            console.log(extra_effect)
-            extra_effects_list.push(extra_effect)
-        }
-    }
+    const getCardType = async() =>{
+        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/get_card_type/`);
+        const cardTypeData = await response.json();
 
-    const reaction_counts = {}
-    for (let reaction_number of card.reactions) {
-        const reaction = reactions.find(reaction => reaction.reaction_number === reaction_number)
-        console.log(reaction)
-            !reaction_counts[reaction.name]?
-                reaction_counts[reaction.name] = {
-                    info: reaction,
-                    count: 1,
+        setCardType(cardTypeData);
+    };
 
-                }:
-                reaction_counts[reaction.name]["count"]++
+    const getExtraEffects = async() =>{
+        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/get_extra_effects/`);
+        const extraEffectData = await response.json();
 
-        console.log(reaction_counts)
-    }
+        setExtraEffects(extraEffectData);
+    };
 
-    const reactions_list = Object.values(reaction_counts)
+    const getReactions = async() =>{
+        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/get_reactions/`);
+        const reactionData = await response.json();
+        reactionData.map(reaction => reaction["rules"] = reaction["rules"].replace("{count}", reaction["count"].toString()))
+        setReactions(reactionData);
+    };
 
-    const reactionRules = (reaction) => {
-        const rules = reaction.info.rules.replace("{count}", reaction.count.toString())
-        return rules
-    }
+    const getCardTags = async() =>{
+        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card_number}/get_tags/`);
+        const cardTagData = await response.json();
 
-    const card_tags_list = []
-    for (let card_tag of card_tags) {
-        console.log(card_tag)
-        if (card.card_tags.includes(card_tag.tag_number) ) {
-            card_tags_list.push(card_tag)
-        }
-    }
+        setCardTags(cardTagData);
+    };
+
+    const getCards = async() =>{
+        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/`);
+        const data = await response.json();
+
+        setCards(data.cards.reverse());
+    };
+
+    const getCardCategories = async() =>{
+        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/card_categories/`);
+        const data = await response.json();
+        const sortedData = [...data.card_categories].sort((a,b) => a.name.localeCompare(b.name));
+        console.log(sortedData.find(category => category.name === "Mystic"))
+        setCardCategories(sortedData);
+    };
 
     const navigate = useNavigate()
 
@@ -99,13 +112,23 @@ function CardDetailPage() {
     }
 
     useEffect(() => {
+        window.scroll(0, 0);
         getCard();
-        console.log(reactions_list)
-        document.title = "Cards - PM CardBase"
+        getRelatedCards();
+        getCardType();
+        getExtraEffects();
+        getReactions();
+        getCardTags();
+        getCards();
+        getCardCategories();
+    }, [card_number]);
+
+    useEffect(() => {
+        document.title = `${card.name} - PM CardBase`
         return () => {
             document.title = "PlayMaker CardBase"
         };
-    }, [card_number]);
+    }, [card])
 
     const matchSeries = (line) => {
         const cardCategory = card_categories?.find(category => category.name === line)
@@ -118,6 +141,7 @@ function CardDetailPage() {
         console.log(card_categories)
         return cardCategory?.id
     }
+
 
     return (
         <div className="white-space">
@@ -134,7 +158,7 @@ function CardDetailPage() {
                             <h1 className="centered-h1">Related Cards</h1>
                         <div className="cd-inner">
                             <div className="cd-inner card-list3" style={{width: "480px"}}>
-                                {relatedCardsList.slice(0,6).map((relatedCard) => {
+                                {relatedCards.slice(0,6).map((relatedCard) => {
                                     return (
                                         <NavLink to={`/cards/${relatedCard.card_number}`}>
                                                 <img
@@ -155,10 +179,16 @@ function CardDetailPage() {
                             >
                                 Random Card
                             </button>
-                            {relatedCardsList.length > 6?
+                            {relatedCards.length > 6?
                                 <RelatedCardModal/>: null
                             }
-
+                            { account && account.roles.includes("admin")?
+                                null:
+                                <BackButton
+                                    className="left button100 heightNorm"
+                                    style={{marginLeft: "5%", textAlign: "center"}}
+                                />
+                            }
                         </div>
                     </div>
                 </div>
@@ -169,12 +199,14 @@ function CardDetailPage() {
                             <div className="cd-info">
                                 <div className={card.card_class ? card.card_class : "NoClass"}>
                                     <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Type</h4>
-                                    <NavLink to={`/cardtypes/${card_type?.id}`} className="nav-link2 glow2">
-                                            <h5 title={card_type?.rules}
-                                                style={{fontWeight: "400", margin: "18px 12px"}}
-                                                >{card_type?.name} *
-                                            </h5>
-                                    </NavLink>
+                                    {card_type?
+                                        <NavLink to={`/cardtypes/${card_type.id}`} className="nav-link2 glow2">
+                                            <h5 title={card_type.rules} style={{fontWeight: "400", margin: "18px 12px"}}
+                                                >{card_type.name} *</h5>
+                                        </NavLink>:
+                                        <h5 title={card_type.rules} style={{fontWeight: "400", margin: "18px 12px"}}
+                                        >{card_type.name} *</h5>
+                                    }
                                 </div>
                                 <div className={card.card_class ? card.card_class : "NoClass"}>
                                     <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Class</h4>
@@ -187,11 +219,11 @@ function CardDetailPage() {
                                 </div>
                                 <div className={card.card_class ? card.card_class : "NoClass"}>
                                     <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Reactions</h4>
-                                    {reactions_list.length ? (
-                                        reactions_list.map((reaction) => (
-                                            <NavLink to={`/reactions/${reaction.info.id}`} className="nav-link2 glow2">
-                                                <h5 title={reactionRules(reaction)} style={{fontWeight: "400", margin: "18px 12px"}} key={reaction.info.name}>
-                                                    {reaction.info.name} {reaction.count} *
+                                    {reactions.length ? (
+                                        reactions.map((reaction) => (
+                                            <NavLink to={`/reactions/${reaction.id}`} className="nav-link2 glow2">
+                                                <h5 title={reaction.rules} style={{fontWeight: "400", margin: "18px 12px"}} key={reaction.name}>
+                                                    {reaction.name} {reaction.count} *
                                                 </h5>
                                             </NavLink>
                                         ))
@@ -205,27 +237,22 @@ function CardDetailPage() {
                                 </div>
                                 <div className={card.card_class ? card.card_class : "NoClass"}>
                                     <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Tags</h4>
-                                    {card_tags_list[0]?.tag_number !== 1000?
+                                    {card_tags[0] !== 1000?
                                         <>
-                                            {card_tags_list.map((card_tag) => {
-                                                return (
-                                                    <NavLink to={`/cardtags/${card_tag.id}`} className="nav-link2 glow2">
-                                                        <h5 title={card_tag.rules}
-                                                            style={{fontWeight: "400", margin: "18px 12px"}}>
-                                                                {
-                                                                    card_tag.tag_number === "1000" ?
-                                                                    card_tag.name : card_tag.name + " *"}
-                                                        </h5>
-                                                    </NavLink>
-
-                                                );
+                                            {card_tags.map((card_tag) => {
+                                                    return (
+                                                        <NavLink to={`/cardtags/${card_tag.id}`} className="nav-link2 glow2">
+                                                            <h5 title={card_tag.rules}
+                                                                style={{fontWeight: "400", margin: "18px 12px"}}>
+                                                                    {card_tag.name} *
+                                                            </h5>
+                                                        </NavLink>
+                                                    );
                                             })}
                                         </>:
                                             <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
-                                                {card_tags_list[0].name}
-                                            </h5>
-                                    }
-
+                                                {card_tags[0].name}
+                                            </h5>}
                                 </div>
                                 <div className={card.card_class ? card.card_class : "NoClass"}>
                                     <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Series</h4>
@@ -233,8 +260,7 @@ function CardDetailPage() {
                                             <NavLink to={`/cardcategories/${matchSeries(line)}`} className="nav-link2 glow2">
                                                 <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
                                                 {line} *</h5>
-                                            </NavLink>)
-                                        }
+                                            </NavLink>)}
                                 </div>
                                 <div className={card.card_class ? card.card_class : "NoClass"}>
                                     <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Card Number</h4>
@@ -259,7 +285,7 @@ function CardDetailPage() {
                                         <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
                                             {line}</h5>)}
 
-
+                                    {/* <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.effect_text}</h5> */}
                                     {card.second_effect_text && (
                                         <div className="borderBlack">
 
@@ -267,21 +293,21 @@ function CardDetailPage() {
                                             <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
                                                 {line}</h5>)}
 
-
+                                            {/* <h5 className="borderBlack"
+                                                style={{fontWeight: "600", margin: "18px 10px 18px 10px"}}>{card.second_effect_text}</h5> */}
                                         </div>
                                     )}
-                                    {extra_effects_list.length ? (
+                                    {extra_effects.length ? (
                                     <>
                                         <h4 style={{fontWeight: "600", margin: "12px"}}>Extra Effect Types</h4>
                                         <div className="borderBlack" style={{display:"flex"}}>
-                                            {extra_effects_list.map((extra_effect) => (
+                                            {extra_effects.map((extra_effect) => (
                                                 <NavLink to={`/extraeffects/${extra_effect.id}`} className="nav-link2 glow2">
                                                     <h5 title={extra_effect.rules}
                                                         style={{fontWeight: "400",
-                                                        height: "22px",
-                                                        margin: "0px 5px 20px 15px"}}>
-                                                        {extra_effect.name} *
-                                                    </h5>
+                                                            height: "22px",
+                                                            margin: "0px 5px 20px 15px"}}>
+                                                        {extra_effect.name} *</h5>
                                                 </NavLink>
                                             ))}
                                         </div>
@@ -290,12 +316,12 @@ function CardDetailPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="hidden2 media-display">
-                            <div style={{margin: "5% 0%"}}>
+                        <div>
+                        <div className="hidden2 media-display" style={{margin: "5% 0%"}}>
                                 <h1 className="centered-h1">Related Cards</h1>
                                 <div className="cd-inner">
                                     <div className="cd-inner card-pool-fill3">
-                                        {relatedCardsList.slice(0,6).map((relatedCard) => {
+                                        {relatedCards.slice(0,6).map((relatedCard) => {
                                             return (
                                                 <NavLink to={`/cards/${relatedCard.card_number}`}>
                                                         <img
@@ -309,6 +335,9 @@ function CardDetailPage() {
                                     </div>
                                 </div>
                                 <div className="cd-inner" style={{marginTop: "3%"}}>
+                                { account && account.roles.includes("admin")?
+                                        <CardEditModal/>:
+                                null}
                                     <button
                                         className="left button100 heightNorm"
                                         style={{ textAlign: "center"}}
@@ -316,12 +345,21 @@ function CardDetailPage() {
                                     >
                                         Random Card
                                     </button>
-                                    {relatedCardsList.length > 6?
-                                        <RelatedCardModal relatedCardsList={relatedCardsList}/>: null
+                                    {relatedCards.length > 6?
+                                        <RelatedCardModal/>: null
                                     }
 
                                 </div>
                             </div>
+                            { account && account.roles.includes("admin")?
+                                <div className="none"
+                                    style={{margin: "2% 0% 2% 2%", width: "662px"}}>
+                                    <div style={{display: "flex", marginBottom: ".75%"}}>
+                                        <CardEditModal/>
+                                        <BackButton/>
+                                    </div>
+                                </div>:
+                            null}
                         </div>
                     </div>
                 </div>

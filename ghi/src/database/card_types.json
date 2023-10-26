@@ -4,62 +4,208 @@
   },
   "name": "Fighter",
   "deck_type": "Main",
+  "description": "Cards representing the actual characters.",
   "rules": "This card belongs in the Main deck.\nOnly one Fighter can be added to your play during the Planning Phase.",
-  "type_number": 1001
+  "type_number": 1001,
+  "support": [
+    1006,
+    1007,
+    1022,
+    1030,
+    1031,
+    1032,
+    1034,
+    1045,
+    1047,
+    1049,
+    1055,
+    1057,
+    1068,
+    1069,
+    1070,
+    1071,
+    1076,
+    1079,
+    1080,
+    1082,
+    1087,
+    1088,
+    1089,
+    1090,
+    1103,
+    1109,
+    1110
+  ],
+  "anti_support": [
+    1008,
+    1013,
+    1019,
+    1020,
+    1023,
+    1024,
+    1027,
+    1028,
+    1048,
+    1049,
+    1052,
+    1077,
+    1104,
+    1122,
+    1128
+  ]
 },{
   "_id": {
     "$oid": "6407a3bbc503d0c6f5a33238"
   },
   "name": "Move",
   "deck_type": "Main",
+  "description": "Cards that are one of a character's attacks.",
   "rules": "This card belongs in the Main deck.\nOnly one Move can be added to your play during the Planning Phase.",
-  "type_number": 1003
+  "type_number": 1003,
+  "support": [
+    1022,
+    1033,
+    1035,
+    1037,
+    1038,
+    1042,
+    1110,
+    1111,
+    1120,
+    1121
+  ],
+  "anti_support": [
+    1004,
+    1050,
+    1054,
+    1055
+  ]
 },{
   "_id": {
     "$oid": "6407bb289b4fb23f5ddab698"
   },
   "name": "Aura",
   "deck_type": "Main",
+  "description": "Cards that represents a character's ability or traits.",
   "rules": "This card belongs in the Main deck.\nOnly one Aura can be added to your play during the Planning Phase.",
-  "type_number": 1002
+  "type_number": 1002,
+  "support": [
+    1016,
+    1022,
+    1037,
+    1042,
+    1047,
+    1076,
+    1078,
+    1111,
+    1120,
+    1121,
+    1124
+  ],
+  "anti_support": [
+    1054,
+    1062
+  ]
 },{
   "_id": {
     "$oid": "640ce41c5f6730657ad8739f"
   },
   "name": "Ending",
   "deck_type": "Main",
+  "description": "Cards that are finishing blows.",
   "rules": "This card belongs in the Main deck.\nOnly one Ending can be added to your play during the Planning Phase.",
-  "type_number": 1004
+  "type_number": 1004,
+  "support": [
+    1019,
+    1110,
+    1114
+  ],
+  "anti_support": [
+    1004,
+    1029,
+    1054,
+    1113
+  ]
 },{
   "_id": {
     "$oid": "640ce4bf5f6730657ad873be"
   },
   "name": "Event",
   "deck_type": "Pluck",
+  "description": "Cards that depict events or activities.",
   "rules": "This card belongs in the Pluck deck.",
-  "type_number": 1007
+  "type_number": 1007,
+  "support": [
+    1011,
+    1012,
+    1037,
+    1073
+  ],
+  "anti_support": []
 },{
   "_id": {
     "$oid": "64108db9159c81c7afebd103"
   },
   "name": "Comeback",
   "deck_type": "Pluck",
+  "description": "Cards represent a character's method of getting back into battle or how they prepare for future battles. ",
   "rules": "This card belongs in the Pluck deck.",
-  "type_number": 1008
+  "type_number": 1008,
+  "support": [
+    1037,
+    1057,
+    1058,
+    1059,
+    1060,
+    1101,
+    1109,
+    1110,
+    1111
+  ],
+  "anti_support": []
 },{
   "_id": {
     "$oid": "64108dee159c81c7afebd104"
   },
   "name": "Item",
   "deck_type": "Pluck",
+  "description": "Cards that are items or equipment belonging to a character.",
   "rules": "This card belongs in the Pluck deck.",
-  "type_number": 1006
+  "type_number": 1006,
+  "support": [
+    1037,
+    1041,
+    1042,
+    1043,
+    1044,
+    1092,
+    1095,
+    1099,
+    1126
+  ],
+  "anti_support": [
+    1039,
+    1063,
+    1126
+  ]
 },{
   "_id": {
     "$oid": "64108e0e159c81c7afebd105"
   },
   "name": "Any Type",
   "deck_type": "Main",
+  "description": "Main deck cards representing Max Variable.",
   "rules": "This card belongs in the Main deck.\nCan be used in place of any card type during the Planning Phase.\nNo limit to the number of Any Types that can be added.",
-  "type_number": 1005
+  "type_number": 1005,
+  "support": [
+    1033,
+    1037,
+    1092,
+    1115,
+    1116,
+    1124
+  ],
+  "anti_support": [
+    1050
+  ]
 }]

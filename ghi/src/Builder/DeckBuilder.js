@@ -4,7 +4,6 @@ import {
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from "react-router-dom";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
-import { AuthContext } from "../context/AuthContext";
 import { BuilderQueryContext } from "../context/BuilderQueryContext";
 import BuilderCardSearch from "./BuilderCardSearch";
 import FEDeckExport from "../Decks/FEDeckExport";
@@ -26,7 +25,6 @@ function DeckBuilder(props) {
     });
 
     const { cards, booster_sets } = props
-    const {account} = useContext(AuthContext)
 
     const {query,
         setQuery,

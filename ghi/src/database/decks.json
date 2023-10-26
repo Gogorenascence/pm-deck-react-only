@@ -4694,4 +4694,72 @@
   "card_names": null,
   "series_names": null,
   "private": true
+},
+{
+  "_id": {
+    "$oid": "6531d465f466a0a0f9c78344"
+  },
+  "name": "Training: Rainbow Assault",
+  "account_id": "64ec3b8382c5729f0b36e155",
+  "description": "",
+  "strategies": [],
+  "cards": [
+    1009,
+    1009,
+    1010,
+    1010,
+    1017,
+    1018,
+    1019,
+    1019,
+    1020,
+    1020,
+    1045,
+    1046,
+    1047,
+    1047,
+    1048,
+    1048,
+    1066,
+    1066,
+    1066,
+    1066
+  ],
+  "pluck": [
+    1073,
+    1074,
+    1079,
+    1080,
+    1100,
+    1101,
+    1102,
+    1120,
+    1120,
+    1125
+  ],
+  "side": [],
+  "views": 0,
+  "created_on": {
+    "year": 2023,
+    "month": 10,
+    "day": 20,
+    "time": "01:14",
+    "full_time": {
+      "$date": "2023-10-20T01:14:13.355Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 10,
+    "day": 20,
+    "time": "01:14",
+    "full_time": {
+      "$date": "2023-10-20T01:14:13.355Z"
+    }
+  },
+  "cover_card": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b4bbe.png",
+  "parent_id": "",
+  "card_names": null,
+  "series_names": null,
+  "private": false
 }]

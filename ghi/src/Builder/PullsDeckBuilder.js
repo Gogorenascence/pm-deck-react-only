@@ -1,11 +1,9 @@
 import {
     Col,
-    Row,
 } from "react-bootstrap";
 import { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import { PullsContext } from "../context/PullsContext";
-import { AuthContext } from "../context/AuthContext";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 import FEDeckExport from "../Decks/FEDeckExport";
 
@@ -26,7 +24,6 @@ function PullsDeckBuilder(props) {
 
     const {card_set_id} = useParams();
     const {boosterSets} = props
-    const {account} = useContext(AuthContext)
 
     const [main_list, setMainList] = useState([]);
     const [pluck_list, setPluckList] = useState([]);

@@ -4,8 +4,6 @@ import {
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { DeckQueryContext } from "../context/DeckQueryContext";
-import { AuthContext } from "../context/AuthContext";
-import FavoriteDeck from "../Accounts/FavoriteDeck";
 import cards from "../database/cards.json";
 
 function DecksPage(props) {
@@ -18,8 +16,6 @@ function DecksPage(props) {
         deckSortState,
         setDeckSortState,
     } = useContext(DeckQueryContext)
-
-    const {account, users} = useContext(AuthContext)
 
     const [loading, setLoading] = useState(false)
 
@@ -161,19 +157,12 @@ function DecksPage(props) {
         setDeckShowMore(deckShowMore + 20);
     };
 
-    const all_decks = fullDecks.filter(deck => deck.private ? deck.private === false || deck.account_id === account.id || account && account.roles.includes("admin"): true)
-        .filter(deck => deck.name.toLowerCase().includes(deckQuery.deckName.toLowerCase()))
+    const all_decks = fullDecks.filter(deck => deck.name.toLowerCase().includes(deckQuery.deckName.toLowerCase()))
         .filter(deck => (deck.description).toLowerCase().includes(deckQuery.description.toLowerCase()))
         .filter(deck => deckQuery.cardName ? (deck.card_names && deck.card_names.length > 0 ? deck.card_names.some(name => name.toLowerCase().includes(deckQuery.cardName.toLowerCase())) : false) : true)
         .filter(deck => deckQuery.strategy? deck.strategies.some(strategy => strategy.includes(deckQuery.strategy)):deck.strategies)
         .filter(deck => deckQuery.seriesName ? (deck.series_names && deck.series_names.length > 0 ? deck.series_names.some(series => series.toLowerCase().includes(deckQuery.seriesName.toLowerCase())) : false) : true)
-        .filter(deck => deckQuery.user? (deck.account_id? users.find(user => user.id === deck.account_id && user.username.toLowerCase().includes(deckQuery.user.toLowerCase())):false):true)
         .sort(deckSortMethods[deckSortState].method)
-
-    const createdBy = (deck) => {
-        const account = deck.account_id? users.find(user => user.id === deck.account_id): null
-        return account? account.username : "TeamPlayMaker"
-    };
 
 
     return (
@@ -305,17 +294,7 @@ function DecksPage(props) {
                                     <div style={{display: "flex"}}>
                                         <h3 className="left cd-container-child media-margin-top-none"
                                         >{deck.name}</h3>
-                                        { deck.private && deck.private === true ?
-                                            <img className="logo4" src="https://i.imgur.com/V3uOVpD.png" alt="private" />:null
-                                        }
-                                        {account?
-                                            <FavoriteDeck deck={deck}/>: null
-                                        }
                                     </div>
-                                    {/* <h6 style={{margin: '0px 0px 5px 0px', fontWeight: "600"}}
-                                    >
-                                        User:
-                                    </h6> */}
                                     <h6 className="left"
                                         style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
                                     >
@@ -342,12 +321,6 @@ function DecksPage(props) {
                                             {deck.updated_on.ago} &nbsp; &nbsp;
                                         </h6>
                                         <img className="logo2 none" src="https://i.imgur.com/eMGZ7ON.png" alt="created by"/>
-                                        <h6
-                                        className="left justify-content-end none"
-                                            style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
-                                        >
-                                            {createdBy(deck)}
-                                        </h6>
                                     </div>
                                 </Card.ImgOverlay>
                             </Card>
