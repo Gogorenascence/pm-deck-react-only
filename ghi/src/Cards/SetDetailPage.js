@@ -48,7 +48,7 @@ function SetDetailPage(props) {
 
 
     useEffect(() => {
-        console.log(normals)
+        window.scroll(0, 0);
         document.title = `Card Sets - PM CardBase`
         return () => {
             document.title = "PlayMaker CardBase"

@@ -149,14 +149,16 @@ function DeckDetailPage(props) {
     }
 
     useEffect(() => {
+        window.scroll(0, 0);
         getCountedDeckList();
+    },[]);
 
-        console.log("Deck Details: ", deck)
+    useEffect(() => {
         document.title = `${deck.name} - PM CardBase`
         return () => {
             document.title = "PlayMaker CardBase"
         };
-    },[]);
+    }, [deck])
 
     const handleMulliganChange = (card) => {
         const deckIndex = shuffledDeck.indexOf(card)

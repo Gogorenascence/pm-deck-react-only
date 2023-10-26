@@ -44,6 +44,7 @@ function ExtraEffectDetails(props) {
     };
 
     useEffect(() => {
+        window.scroll(0, 0);
         getExtraEffect();
     // eslint-disable-next-line
     },[]);

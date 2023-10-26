@@ -14,6 +14,7 @@ function ExtraEffectsPage(props) {
     };
 
     useEffect(() => {
+        window.scroll(0, 0);
         getExtraEffects();
         document.title = "Extra Effects - PM CardBase"
         return () => {

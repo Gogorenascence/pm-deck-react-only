@@ -20,7 +20,7 @@ function SetsPage(props) {
     const [noBoosterSet, setNoBoosterSet] = useState(false);
 
     useEffect(() => {
-
+        window.scroll(0, 0);
         document.title = "Card Sets - PM CardBase"
         return () => {
             document.title = "PlayMaker CardBase"

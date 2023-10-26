@@ -18,6 +18,7 @@ function CardCategoriesPage(props) {
     };
 
     useEffect(() => {
+        window.scroll(0, 0);
         getCardCategories();
         document.title = "Card Categories - PM CardBase"
         return () => {

@@ -14,6 +14,7 @@ function CardTypesPage(props) {
     };
 
     useEffect(() => {
+        window.scroll(0, 0);
         getCardTypes();
         document.title = "Card Types - PM CardBase"
         return () => {

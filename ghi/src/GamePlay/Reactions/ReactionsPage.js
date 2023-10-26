@@ -15,6 +15,7 @@ function ReactionsPage(props) {
     };
 
     useEffect(() => {
+        window.scroll(0, 0);
         getReactions();
         document.title = "Reactions - PM CardBase"
         return () => {

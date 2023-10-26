@@ -46,6 +46,7 @@ function CardTypeDetails(props) {
     };
 
     useEffect(() => {
+        window.scroll(0, 0);
         getCardType();
     // eslint-disable-next-line
     },[]);

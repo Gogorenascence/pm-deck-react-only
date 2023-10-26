@@ -44,6 +44,7 @@ function ReactionDetails(props) {
     };
 
     useEffect(() => {
+        window.scroll(0, 0);
         getReaction();
 
     // eslint-disable-next-line

@@ -53,6 +53,7 @@ function CardCategoryDetail(props) {
     };
 
     useEffect(() => {
+        window.scroll(0, 0);
         getCardCategory();
     // eslint-disable-next-line
     },[]);

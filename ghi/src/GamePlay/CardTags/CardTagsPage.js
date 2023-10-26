@@ -14,6 +14,7 @@ function CardTagsPage(props) {
     };
 
     useEffect(() => {
+        window.scroll(0, 0);
         getCardTags();
         document.title = "Card Tags - PM CardBase"
         return () => {

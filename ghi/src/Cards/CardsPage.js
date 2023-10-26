@@ -96,6 +96,7 @@ function CardsPage(props) {
     }
 
     useEffect(() => {
+        window.scroll(0, 0);
         getCards();
         console.log(cards)
         document.title = "Cards - PM CardBase"

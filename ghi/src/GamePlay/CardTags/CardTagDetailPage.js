@@ -45,6 +45,7 @@ function CardTagDetails(props) {
     };
 
     useEffect(() => {
+        window.scroll(0, 0);
         getCardTag();
     // eslint-disable-next-line
     },[]);
