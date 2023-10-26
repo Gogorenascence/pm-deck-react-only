@@ -40,7 +40,6 @@ function TopRow() {
           <div>
             <Link to="/cards">
 
-
               <Card className=" text-white text-center card-list-card3 glow3 top-row">
                 <div className="media-card-image-wrapper2">
                   <div className="media-card-image-clip2">
