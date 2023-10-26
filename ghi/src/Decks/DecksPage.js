@@ -181,15 +181,6 @@ function DecksPage(props) {
             <input
                 className="left dcbsearch-large"
                 type="text"
-                placeholder=" Creator's Name Contains..."
-                name="user"
-                value={deckQuery.user}
-                onChange={handleDeckQuery}>
-            </input>
-            <br/>
-            <input
-                className="left dcbsearch-large"
-                type="text"
                 placeholder=" Description Contains..."
                 name="description"
                 value={deckQuery.description}
