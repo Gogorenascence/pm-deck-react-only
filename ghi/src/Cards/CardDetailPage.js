@@ -99,6 +99,7 @@ function CardDetailPage() {
     }
 
     useEffect(() => {
+        window.scroll(0, 0);
         getCard();
         console.log(reactions_list)
         document.title = "Cards - PM CardBase"
