@@ -1916,6 +1916,51 @@ button:hover {
     display: none;
   }
 
+  .cardpool2 {
+    margin: 28px 0 14px 30px;
+    background-color: rgba(80, 42, 170, 0.315);
+    border: 2px solid rgb(68, 17, 206);
+    border-radius: 5px;
+    height: 708px;
+    width: 70vw;
+    outline: 1px solid white;
+    transition: all 0.5s;
+  }
+
+  .no-cardpool {
+    margin: 40px 0 14px 30px;
+    background-color: rgba(117, 90, 182, 0.315);
+    border: 2px solid rgb(68, 17, 206);
+    border-radius: 5px;
+    height: 56px;
+    width: 70vw;
+    outline: 1px solid white;
+    transition: all 0.5s;
+  }
+
+  .no-cardpool2 {
+    margin: 40px 0 14px 30px;
+    background-color: rgba(117, 90, 182, 0.315);
+    border: 2px solid rgb(68, 17, 206);
+    border-radius: 5px;
+    height: 95px;
+    width: 70vw;
+    outline: 1px solid white;
+    transition: all 0.5s;
+  }
+
+  .scrollable2 {
+    margin: 0% 0% 0% .5%;
+    width: 99%;
+    height: 632px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    background-color: rgba(15, 0, 50, 0.315);
+    border-radius: 2px;
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;
@@ -2085,6 +2130,9 @@ button:hover {
 
   .media-vert-30 {
     margin-top: 30px;
+  }
+
+  .media-bot-30 {
     margin-bottom: 30px;
   }
 
@@ -2352,6 +2400,42 @@ button:hover {
     max-width: 1333px;
     opacity: 1;
     transition: all .5s;
+  }
+
+  .cardpool2 {
+    margin: 0;
+    background-color: rgba(80, 42, 170, 0.315);
+    border: 2px solid rgb(68, 17, 206);
+    border-radius: 5px;
+    height: 70vh;
+    width: 100%;
+    outline: 1px solid white;
+    transition: all 0.5s;
+  }
+
+  .no-cardpool {
+    margin: 0;
+    background-color: rgba(117, 90, 182, 0.315);
+    border: 2px solid rgb(68, 17, 206);
+    border-radius: 5px;
+    width: 100%;
+    outline: 1px solid white;
+    transition: all 0.5s;
+  }
+
+  .no-cardpool2 {
+    margin: 0;
+    background-color: rgba(117, 90, 182, 0.315);
+    border: 2px solid rgb(68, 17, 206);
+    border-radius: 5px;
+    height: 56px;
+    width: 100%;
+    outline: 1px solid white;
+    transition: all 0.5s;
+  }
+
+  .scrollable2 {
+    height: 56.5vh;
   }
 
   .wide100 {

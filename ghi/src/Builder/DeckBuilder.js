@@ -1,15 +1,62 @@
 import {
     Col,
 } from "react-bootstrap";
-import React, { useState, useEffect, useContext } from 'react';
-import { useNavigate } from "react-router-dom";
-import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import { BuilderQueryContext } from "../context/BuilderQueryContext";
 import BuilderCardSearch from "./BuilderCardSearch";
 import FEDeckExport from "../Decks/FEDeckExport";
+import DeckImport from './DeckImport'
 
 
 function DeckBuilder(props) {
+
+    const [importedDecks, setImportedDecks] = useState([]);
+    const [showDecks, setShowDecks] = useState(false);
+    const fileInput = useRef(null);
+
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+            try {
+                const importedDeck = JSON.parse(e.target.result);
+                setImportedDecks([...importedDecks, importedDeck]);
+            } catch (error) {
+                console.error('Error parsing imported deck JSON:', error);
+            }
+        };
+        reader.readAsText(file);
+        }
+    };
+
+    const importDeck = (importedDeck) => {
+        console.log(importedDeck.ObjectStates[0])
+        const cardIDList = importedDeck.ObjectStates[0].DeckIDs.map(num => num/100)
+        const cardList = cardIDList.map(cardID => cards.find(card => card.card_number === cardID))
+        console.log(cardList)
+        const main = cardList.filter(card => card.card_type[0] === 1001||
+            card.card_type[0] === 1002||
+            card.card_type[0] === 1003||
+            card.card_type[0] === 1004||
+            card.card_type[0] === 1005)
+        console.log(main)
+        setMainList([...main_list, ...main])
+        const pluck = cardList.filter(card => card.card_type[0] === 1006||
+            card.card_type[0] === 1007||
+            card.card_type[0] === 1008)
+        console.log(pluck)
+        setPluckList([...pluck_list, ...pluck])
+    };
+
+    const clearDecks = () => {
+        setImportedDecks([])
+    }
+
+    const handleShowDecks = (event) => {
+        setShowDecks(!showDecks);
+    };
+
     const [deck, setDeck] = useState({
         name: "",
         account_id: "",
@@ -25,21 +72,11 @@ function DeckBuilder(props) {
     });
 
     const { cards, booster_sets } = props
-
     const {query,
-        setQuery,
         sortState,
-        setSortState,
         boosterSet,
-        setBoosterSet,
-        boosterSets,
-        setBoosterSets,
-        boosterSetId,
-        setBoosterSetId,
         rarity,
-        setRarity,
         listView,
-        setListView,
         showMore,
         setShowMore} = useContext(BuilderQueryContext)
 
@@ -94,10 +131,6 @@ function DeckBuilder(props) {
 
     const handleChange = (event) => {
         setDeck({ ...deck, [event.target.name]: event.target.value });
-    };
-
-    const handleCheck = (event) => {
-        setDeck({ ...deck, [event.target.name]: event.target.checked });
     };
 
     const handleCoverCardChange = (event) => {
@@ -197,153 +230,102 @@ function DeckBuilder(props) {
 
     return (
         <div className="white-space">
-            <h1 className="left-h1">Deck Builder</h1>
             <div className="between-space">
-                <div
-                    id="create-deck-page">
-                    <h2 className="left">Deck Details</h2>
-
-                    <h5 className="label">Name </h5>
-                    <input
-                        className="builder-input"
-                        type="text"
-                        placeholder=" Deck Name"
-                        onChange={handleChange}
-                        name="name"
-                        value={deck.name}>
-                    </input>
+                <div id="create-deck-page">
+                    <h1 className="left-h1">Deck Builder</h1>
+                    <BuilderCardSearch boosterSets={booster_sets}/>
                     <br/>
-                    <h5 className="label">Cover Card</h5>
-                    <select
-                        className="builder-input"
-                        type="text"
-                        placeholder=" Cover Card"
-                        onChange={handleCoverCardChange}
-                        name="cover_card"
-                        value={deck.cover_card}>
-                        <option value="">Cover Card</option>
-                        {uniqueList.sort((a,b) => a.card_number - b.card_number).map(function(card)
-                        {return( <option value={card.picture_url}>{card.name}</option>)}
-                            )}
-                    </select>
-                    <br/>
-                    <h5 className="label"> Description </h5>
-                    <textarea
-                        className="builder-text"
-                        type="text"
-                        placeholder=" Deck Description"
-                        onChange={handleChange}
-                        name="description"
-                        value={deck.description}>
-                    </textarea>
-                    <h5 className="label">Strategies </h5>
-                    <h7 className="label"><em>hold ctrl/cmd to select more than one</em></h7>
-                    <br/>
-                    <select
-                        className="builder-text"
-                        multiple
-                        name="strategies"
-                        onChange={handleStrategyChange}
-                        >
-                        <option value="">Strategy</option>
-                        <option value="Aggro">Aggro</option>
-                        <option value="Combo">Combo</option>
-                        <option value="Control">Control</option>
-                        <option value="Mid-range">Mid-range</option>
-                        <option value="Ramp">Ramp</option>
-                        <option value="Second Wind">Second Wind</option>
-                        <option value="Stall">Stall</option>
-                        <option value="Toolbox">Toolbox</option>
-                        <option value="other">other</option>
-                    </select>
-                    <br/>
-                    <div style={{display: "flex", marginTop: "3px"}}>
-                        <FEDeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
-                        <button
-                            className="left red"
-                            style={{ marginTop: "5px"}}
-                            onClick={clearMain}
-                        >
-                            Clear Main
-                        </button>
-                        <button
-                            className="left red"
-                            style={{ marginTop: "5px"}}
-                            onClick={clearPluck}
-                        >
-                            Clear Pluck
-                        </button>
-                    </div>
-                </div>
-                <div className="none">
-                    <h2 className="left">Cover Card</h2>
-                    {selectedCard ? (
-                        <img
-                            className="cover-card"
-                            src={selectedCard}
-                            alt={selectedCard.name}
-                            variant="bottom"/>
-                            ):(
-                        <img
-                            className="cover-card"
-                            src={"https://i.imgur.com/krY25iI.png"}
-                            alt="Card"
-                            variant="bottom"/>)}
-                </div>
-
-                <BuilderCardSearch boosterSets={booster_sets}/>
-            </div>
-
-            <div className={showPool ? "cardpool" : "no-cardpool"}>
-                <div style={{marginLeft: "0px"}}>
-                    <div style={{display: "flex", alignItems: "center"}}>
-                        <h2
-                            className="left"
-                            style={{margin: "1% 0px 1% 20px", fontWeight: "700"}}
-                        >Card Pool</h2>
-                        <img className="logo" src="https://i.imgur.com/YpdBflG.png" alt="cards icon"/>
-                        {all_cards.length > 0 ?
-                            <h5
-                                className="left db-pool-count"
-                            >{all_cards.length}</h5>:
-                            null}
-                        { showPool ?
-                            <h5 className="left db-pool-count"
-                                onClick={() => handleShowPool()}>
-                                    &nbsp;[Hide]
-                            </h5> :
-                            <h5 className="left db-pool-count"
-                                onClick={() => handleShowPool()}>
-                                &nbsp;[Show]
-                            </h5>}
-                    </div>
-                    <div className={showPool ? "scrollable" : "hidden2"}>
-                        <div style={{margin: "8px"}}>
-
-                        <div className="card-pool-fill">
-                            {all_cards.slice(0, showMore).map((card) => {
-                                return (
-                                    <div style={{display: "flex", justifyContent: "center"}}>
-                                        <img
-                                            onClick={() => handleClick(card)}
-                                            className={uniqueList.includes(card) ? "selected builder-card pointer glow3" : "builder-card pointer glow3"}
-                                            title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
-                                            src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                            alt={card.name}/>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                        </div>
-                        {showMore < all_cards.length ?
+                    <div className="media-bot-30">
+                        <h2 className="left media-margin-top-none">Deck Name</h2>
+                        <input
+                            className="builder-input"
+                            type="text"
+                            placeholder=" Deck Name"
+                            onChange={handleChange}
+                            name="name"
+                            value={deck.name}>
+                        </input>
+                        <br/>
+                        <div style={{display: "flex", marginTop: "3px"}}>
+                            <FEDeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
                             <button
-                                style={{ width: "97%", margin:".5% 0% .5% 1.5%"}}
-                                onClick={handleShowMore}>
-                                Show More Cards ({all_cards.length - showMore} Remaining)
-                            </button> : null }
+                                className="left red"
+                                style={{ marginTop: "5px"}}
+                                onClick={clearMain}
+                                >
+                                Clear Main
+                            </button>
+                            <button
+                                className="left red"
+                                style={{ marginTop: "5px"}}
+                                onClick={clearPluck}
+                                >
+                                Clear Pluck
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className={showPool ? "cardpool2" : "no-cardpool"}>
+                    <div style={{marginLeft: "0px"}}>
+                        <div style={{display: "flex", alignItems: "center"}}>
+                            <h2
+                                className="left"
+                                style={{margin: "1% 0px 1% 20px", fontWeight: "700"}}
+                            >Card Pool</h2>
+                            <img className="logo" src="https://i.imgur.com/YpdBflG.png" alt="cards icon"/>
+                            {all_cards.length > 0 ?
+                                <h5
+                                    className="left db-pool-count"
+                                >{all_cards.length}</h5>:
+                                null}
+                            { showPool ?
+                                <h5 className="left db-pool-count hidden2 media-display"
+                                    onClick={() => handleShowPool()}>
+                                        &nbsp;[Hide]
+                                </h5> :
+                                <h5 className="left db-pool-count"
+                                    onClick={() => handleShowPool()}>
+                                    &nbsp;[Show]
+                                </h5>}
+                        </div>
+                        <div className={showPool ? "scrollable2" : "hidden2"}>
+                            <div style={{margin: "8px"}}>
+
+                            <div className="card-pool-fill">
+                                {all_cards.slice(0, showMore).map((card) => {
+                                    return (
+                                        <div style={{display: "flex", justifyContent: "center"}}>
+                                            <img
+                                                onClick={() => handleClick(card)}
+                                                className={uniqueList.includes(card) ? "selected builder-card pointer glow3" : "builder-card pointer glow3"}
+                                                title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
+                                                src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                alt={card.name}/>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                            </div>
+                            {showMore < all_cards.length ?
+                                <button
+                                    style={{ width: "97%", margin:".5% 0% .5% 1.5%"}}
+                                    onClick={handleShowMore}>
+                                    Show More Cards ({all_cards.length - showMore} Remaining)
+                                </button> : null }
+                        </div>
                     </div>
                 </div>
             </div>
+            <DeckImport
+                    fileInput={fileInput}
+                    importDeck={importDeck}
+                    importedDecks={importedDecks}
+                    showDecks={showDecks}
+                    handleFileChange={handleFileChange}
+                    handleShowDecks={handleShowDecks}
+                    clearDecks={clearDecks}
+            />
+
                 {listView?
                     <div className="deck-list">
                         <div className="maindeck3">

@@ -1,13 +1,67 @@
 import {
     Col,
 } from "react-bootstrap";
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, useRef } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import { PullsContext } from "../context/PullsContext";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 import FEDeckExport from "../Decks/FEDeckExport";
+import DeckImport from './DeckImport'
 
 function PullsDeckBuilder(props) {
+
+    const [importedDecks, setImportedDecks] = useState([]);
+    const [showDecks, setShowDecks] = useState(false);
+    const fileInput = useRef(null);
+
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+            try {
+                const importedDeck = JSON.parse(e.target.result);
+                setImportedDecks([...importedDecks, importedDeck]);
+            } catch (error) {
+                console.error('Error parsing imported deck JSON:', error);
+            }
+        };
+        reader.readAsText(file);
+        }
+    };
+
+    const importDeck = (importedDeck) => {
+        console.log(importedDeck.ObjectStates[0])
+        const cardIDList = importedDeck.ObjectStates[0].DeckIDs.map(num => num/100)
+        const cardList = []
+        for (let cardID of cardIDList) {
+            if (cards.find(card => card.card_number === cardID) !== undefined){
+                cardList.push(cards.find(card => card.card_number === cardID))
+            }
+        }
+        console.log(cardList)
+        const main = cardList.filter(card => card.card_type[0] === 1001||
+            card.card_type[0] === 1002||
+            card.card_type[0] === 1003||
+            card.card_type[0] === 1004||
+            card.card_type[0] === 1005)
+        console.log(main)
+        setMainList([...main_list, ...main])
+        const pluck = cardList.filter(card => card.card_type[0] === 1006||
+            card.card_type[0] === 1007||
+            card.card_type[0] === 1008)
+        console.log(pluck)
+        setPluckList([...pluck_list, ...pluck])
+    };
+
+    const clearDecks = () => {
+        setImportedDecks([])
+    }
+
+    const handleShowDecks = (event) => {
+        setShowDecks(!showDecks);
+    };
+
     const [deck, setDeck] = useState({
         name: "",
         account_id: "",
@@ -290,289 +344,227 @@ function PullsDeckBuilder(props) {
 
     return (
         <div className="white-space">
-            <h1 className="left-h1">Deck Builder</h1>
             <div className="between-space">
-                <div
-                    id="create-deck-page">
-                    <h2 className="left">Deck Details</h2>
-                    <h5 className="label">Name </h5>
-                    <input
-                        className="builder-input"
-                        type="text"
-                        placeholder=" Deck Name"
-                        onChange={handleChange}
-                        name="name"
-                        value={deck.name}>
-                    </input>
-                    <br/>
-                    <h5 className="label">Cover Card</h5>
-                    <select
-                        className="builder-input"
-                        type="text"
-                        placeholder=" Cover Card"
-                        onChange={handleCoverCardChange}
-                        name="cover_card"
-                        value={deck.cover_card}>
-                        <option value="">Cover Card</option>
-                        {uniqueList.sort((a,b) => a.card_number - b.card_number).map(function(card)
-                        {return( <option value={card.picture_url}>{card.name}</option>)}
-                            )}
-                    </select>
-                    <br/>
-                    <h5 className="label"> Description </h5>
-                    <textarea
-                        className="builder-text"
-                        type="text"
-                        placeholder=" Deck Description"
-                        onChange={handleChange}
-                        name="description"
-                        value={deck.description}>
-                    </textarea>
-                    <h5 className="label">Strategies </h5>
-                    <h7 className="label"><em>hold ctrl/cmd to select more than one</em></h7>
-                    <br/>
-                    <select
-                        className="builder-text"
-                        multiple
-                        name="strategies"
-                        onChange={handleStrategyChange}
-                        >
-                        <option value="">Strategy</option>
-                        <option value="Aggro">Aggro</option>
-                        <option value="Combo">Combo</option>
-                        <option value="Control">Control</option>
-                        <option value="Mid-range">Mid-range</option>
-                        <option value="Ramp">Ramp</option>
-                        <option value="Second Wind">Second Wind</option>
-                        <option value="Stall">Stall</option>
-                        <option value="Toolbox">Toolbox</option>
-                        <option value="other">other</option>
-                    </select>
-                    <br/>
-                    <div style={{display: "flex", marginTop: "3px"}}>
-                        <FEDeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
+                <div id="create-deck-page">
+                    <h1 className="left-h1">Deck Builder</h1>
+                    <div className="media-vert-30">
+                        <h2 className="left">Search for cards</h2>
+                        <input
+                            className="left dcbsearch-large"
+                            type="text"
+                            placeholder=" Card Name Contains..."
+                            name="cardName"
+                            value={query.cardName}
+                            onChange={handleQuery}>
+                        </input>
+                        <br/>
+                        <input
+                            className="left dcbsearch-large"
+                            type="text"
+                            placeholder=" Card Text Contains..."
+                            name="cardText"
+                            value={query.cardText}
+                            onChange={handleQuery}>
+                        </input>
+                        <br/>
+                        <input
+                            className="left dcbsearch-medium"
+                            type="text"
+                            placeholder=" Card Number"
+                            name="cardNumber"
+                            value={query.cardNumber}
+                            onChange={handleQuery}>
+                        </input>
+                        <input
+                            className="left dcbsearch-medium"
+                            type="text"
+                            placeholder=" Hero ID"
+                            name="heroID"
+                            value={query.heroID}
+                            onChange={handleQuery}>
+                        </input>
+                        <br/>
+                        <input
+                            className="left dcbsearch-medium"
+                            type="text"
+                            placeholder=" Series"
+                            name="series"
+                            value={query.series}
+                            onChange={handleQuery}>
+                        </input>
+                        <input
+                            className="left dcbsearch-medium"
+                            type="text"
+                            placeholder=" Illustrator"
+                            name="illustrator"
+                            value={query.illustrator}
+                            onChange={handleQuery}>
+                        </input>
+                        <br/>
+                        <select
+                            className="left dcbsearch-small"
+                            type="text"
+                            placeholder=" Type"
+                            name="type"
+                            value={query.type}
+                            onChange={handleQuery}>
+                            <option value="">Type</option>
+                            <option value="1001">Fighter</option>
+                            <option value="1002">Aura</option>
+                            <option value="1003">Move</option>
+                            <option value="1004">Ending</option>
+                            <option value="1005">Any Type</option>
+                            <option value="1006">Item</option>
+                            <option value="1007">Event</option>
+                            <option value="1008">Comeback</option>
+                        </select>
+                        <select
+                            className="left dcbsearch-small"
+                            type="text"
+                            placeholder=" Class"
+                            name="cardClass"
+                            value={query.cardClass}
+                            onChange={handleQuery}>
+                            <option value="">Class</option>
+                            <option value="Staunch">Staunch</option>
+                            <option value="Power">Power</option>
+                            <option value="Unity">Unity</option>
+                            <option value="Canny">Canny</option>
+                        </select>
+                        <select
+                            className="left dcbsearch-small"
+                            type="text"
+                            placeholder=" Extra Effect"
+                            name="extraEffect"
+                            value={query.extraEffect}
+                            onChange={handleQuery}>
+                            <option value="">Extra Effect</option>
+                            <option value="1001">Trigger</option>
+                            <option value="1003">Limited</option>
+                            <option value="1002">Critical</option>
+                        </select>
+                        <br/>
+                        <select
+                            className="left dcbsearch-small"
+                            type="text"
+                            placeholder=" Reaction"
+                            name="reaction"
+                            value={query.reaction}
+                            onChange={handleQuery}>
+                            <option value="">Reaction</option>
+                            <option value="1001">Block</option>
+                            <option value="1002">Counter</option>
+                            <option value="1003">Endure</option>
+                            <option value="1004">Redirect</option>
+                        </select>
+                        <select
+                            className="left dcbsearch-small"
+                            type="text"
+                            placeholder=" Tag"
+                            name="tag"
+                            value={query.tag}
+                            onChange={handleQuery}>
+                            <option value="">Tag</option>
+                            <option value="1001">5 HP</option>
+                            <option value="1002">Focus</option>
+                            <option value="1003">Auto</option>
+                            <option value="1004">Stay</option>
+                            <option value="1005">Max</option>
+                        </select>
+                        <select
+                            className="left dcbsearch-small"
+                            type="text"
+                            placeholder=" Sorted By"
+                            value={sortState}
+                            onChange={handleSort}>
+                            <option value="none">Sorted By</option>
+                            <option value="newest">Newest</option>
+                            <option value="oldest">Oldest</option>
+                            <option value="name">A-Z</option>
+                            <option value="card_number">Card Number</option>
+                            <option value="enthusiasm_highest">Enth (High)</option>
+                            <option value="enthusiasm_lowest">Enth (Low)</option>
+                            </select>
+                        <br/>
+                        <br/>
+                        <h5 className="left">Search by Rarity</h5>
+                        <select
+                            className="left dcbsearch-medium"
+                            type="text"
+                            name="boosterSet">
+                            <option value={boosterSet.id}>{boosterSet.name}</option>
+                        </select>
+                        <select
+                            className="left dcbsearch-medium"
+                            type="text"
+                            placeholder=" Rarity"
+                            onChange={handleRarityChange}
+                            name="rarity"
+                            value={rarity}>
+                            <option value="">Rarity</option>
+                            <option value="mv">Max Variables</option>
+                            <option value="normals">Normals</option>
+                            <option value="rares">Rares</option>
+                            <option value="super_rares">Super Rares</option>
+                            <option value="ultra_rares">Ultra Rares</option>
+                        </select>
+                        <br/>
                         <button
-                            className="left red"
-                            style={{ marginTop: "5px"}}
-                            onClick={clearMain}
-                        >
-                            Clear Main
+                            className="left"
+                            variant="dark"
+                            onClick={handleQueryReset}
+                            >
+                            Reset Filters
                         </button>
-                        <button
-                            className="left red"
-                            style={{ marginTop: "5px"}}
-                            onClick={clearPluck}
-                        >
-                            Clear Pluck
-                        </button>
+                        {listView?
+                            <button
+                                className="left"
+                                variant="dark"
+                                onClick={handleListView}
+                            >
+                                Deck Image View
+                            </button>:
+                            <button
+                                className="left"
+                                variant="dark"
+                                onClick={handleListView}
+                            >
+                                Deck List View
+                            </button>}
+                    </div>
+                    <br/>
+                    <div className="media-bot-30">
+                        <h2 className="left">Deck Details</h2>
+                        <input
+                            className="builder-input"
+                            type="text"
+                            placeholder=" Deck Name"
+                            onChange={handleChange}
+                            name="name"
+                            value={deck.name}>
+                        </input>
+                        <br/>
+                        <div style={{display: "flex", marginTop: "3px"}}>
+                            <FEDeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
+                            <button
+                                className="left red"
+                                style={{ marginTop: "5px"}}
+                                onClick={clearMain}
+                            >
+                                Clear Main
+                            </button>
+                            <button
+                                className="left red"
+                                style={{ marginTop: "5px"}}
+                                onClick={clearPluck}
+                            >
+                                Clear Pluck
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div className="none">
-                    <h2 className="left">Cover Card</h2>
-                    {selectedCard ? (
-                        <img
-                            className="cover-card"
-                            src={selectedCard}
-                            alt={selectedCard.name}
-                            variant="bottom"/>
-                            ):(
-                        <img
-                            className="cover-card"
-                            src={"https://i.imgur.com/krY25iI.png"}
-                            alt="Card"
-                            variant="bottom"/>)}
-                </div>
-
-                <div className="media-vert-30">
-                    <h2 className="left">Search for cards</h2>
-                    <input
-                        className="left dcbsearch-large"
-                        type="text"
-                        placeholder=" Card Name Contains..."
-                        name="cardName"
-                        value={query.cardName}
-                        onChange={handleQuery}>
-                    </input>
-                    <br/>
-                    <input
-                        className="left dcbsearch-large"
-                        type="text"
-                        placeholder=" Card Text Contains..."
-                        name="cardText"
-                        value={query.cardText}
-                        onChange={handleQuery}>
-                    </input>
-                    <br/>
-                    <input
-                        className="left dcbsearch-medium"
-                        type="text"
-                        placeholder=" Card Number"
-                        name="cardNumber"
-                        value={query.cardNumber}
-                        onChange={handleQuery}>
-                    </input>
-                    <input
-                        className="left dcbsearch-medium"
-                        type="text"
-                        placeholder=" Hero ID"
-                        name="heroID"
-                        value={query.heroID}
-                        onChange={handleQuery}>
-                    </input>
-                    <br/>
-                    <input
-                        className="left dcbsearch-medium"
-                        type="text"
-                        placeholder=" Series"
-                        name="series"
-                        value={query.series}
-                        onChange={handleQuery}>
-                    </input>
-                    <input
-                        className="left dcbsearch-medium"
-                        type="text"
-                        placeholder=" Illustrator"
-                        name="illustrator"
-                        value={query.illustrator}
-                        onChange={handleQuery}>
-                    </input>
-                    <br/>
-                    <select
-                        className="left dcbsearch-small"
-                        type="text"
-                        placeholder=" Type"
-                        name="type"
-                        value={query.type}
-                        onChange={handleQuery}>
-                        <option value="">Type</option>
-                        <option value="1001">Fighter</option>
-                        <option value="1002">Aura</option>
-                        <option value="1003">Move</option>
-                        <option value="1004">Ending</option>
-                        <option value="1005">Any Type</option>
-                        <option value="1006">Item</option>
-                        <option value="1007">Event</option>
-                        <option value="1008">Comeback</option>
-                    </select>
-                    <select
-                        className="left dcbsearch-small"
-                        type="text"
-                        placeholder=" Class"
-                        name="cardClass"
-                        value={query.cardClass}
-                        onChange={handleQuery}>
-                        <option value="">Class</option>
-                        <option value="Staunch">Staunch</option>
-                        <option value="Power">Power</option>
-                        <option value="Unity">Unity</option>
-                        <option value="Canny">Canny</option>
-                    </select>
-                    <select
-                        className="left dcbsearch-small"
-                        type="text"
-                        placeholder=" Extra Effect"
-                        name="extraEffect"
-                        value={query.extraEffect}
-                        onChange={handleQuery}>
-                        <option value="">Extra Effect</option>
-                        <option value="1001">Trigger</option>
-                        <option value="1003">Limited</option>
-                        <option value="1002">Critical</option>
-                    </select>
-                    <br/>
-                    <select
-                        className="left dcbsearch-small"
-                        type="text"
-                        placeholder=" Reaction"
-                        name="reaction"
-                        value={query.reaction}
-                        onChange={handleQuery}>
-                        <option value="">Reaction</option>
-                        <option value="1001">Block</option>
-                        <option value="1002">Counter</option>
-                        <option value="1003">Endure</option>
-                        <option value="1004">Redirect</option>
-                    </select>
-                    <select
-                        className="left dcbsearch-small"
-                        type="text"
-                        placeholder=" Tag"
-                        name="tag"
-                        value={query.tag}
-                        onChange={handleQuery}>
-                        <option value="">Tag</option>
-                        <option value="1001">5 HP</option>
-                        <option value="1002">Focus</option>
-                        <option value="1003">Auto</option>
-                        <option value="1004">Stay</option>
-                        <option value="1005">Max</option>
-                    </select>
-                    <select
-                        className="left dcbsearch-small"
-                        type="text"
-                        placeholder=" Sorted By"
-                        value={sortState}
-                        onChange={handleSort}>
-                        <option value="none">Sorted By</option>
-                        <option value="newest">Newest</option>
-                        <option value="oldest">Oldest</option>
-                        <option value="name">A-Z</option>
-                        <option value="card_number">Card Number</option>
-                        <option value="enthusiasm_highest">Enth (High)</option>
-                        <option value="enthusiasm_lowest">Enth (Low)</option>
-                        </select>
-                    <br/>
-                    <br/>
-                    <h5 className="left">Search by Rarity</h5>
-                    <select
-                        className="left dcbsearch-medium"
-                        type="text"
-                        name="boosterSet">
-                        <option value={boosterSet.id}>{boosterSet.name}</option>
-                    </select>
-                    <select
-                        className="left dcbsearch-medium"
-                        type="text"
-                        placeholder=" Rarity"
-                        onChange={handleRarityChange}
-                        name="rarity"
-                        value={rarity}>
-                        <option value="">Rarity</option>
-                        <option value="mv">Max Variables</option>
-                        <option value="normals">Normals</option>
-                        <option value="rares">Rares</option>
-                        <option value="super_rares">Super Rares</option>
-                        <option value="ultra_rares">Ultra Rares</option>
-                    </select>
-                    <br/>
-                    <button
-                        className="left"
-                        variant="dark"
-                        onClick={handleQueryReset}
-                        >
-                        Reset Filters
-                    </button>
-                    {listView?
-                        <button
-                            className="left"
-                            variant="dark"
-                            onClick={handleListView}
-                        >
-                            Deck Image View
-                        </button>:
-                        <button
-                            className="left"
-                            variant="dark"
-                            onClick={handleListView}
-                        >
-                            Deck List View
-                        </button>}
-                    <br/>
-                </div>
-
-                </div>
                 {all_cards.length?
-                    <div className={showPool ? "cardpool" : "no-cardpool"}>
+                    <div className={showPool ? "cardpool2" : "no-cardpool2"}>
                         <div style={{marginLeft: "0px"}}>
                             <div style={{display: "flex", alignItems: "center"}}>
                                 <h2
@@ -586,7 +578,7 @@ function PullsDeckBuilder(props) {
                                     >{all_cards.length}</h5>:
                                     null}
                                 { showPool ?
-                                    <h5 className="left db-pool-count"
+                                    <h5 className="left db-pool-count hidden2 media-display"
                                         onClick={() => handleShowPool()}>
                                             &nbsp;[Hide]
                                     </h5> :
@@ -595,7 +587,7 @@ function PullsDeckBuilder(props) {
                                         &nbsp;[Show]
                                     </h5>}
                             </div>
-                            <div className={showPool ? "scrollable" : "hidden2"}>
+                            <div className={showPool ? "scrollable2" : "hidden2"}>
                                 <div style={{margin: "8px"}}>
 
                                 <div className="card-pool-fill">
@@ -635,7 +627,7 @@ function PullsDeckBuilder(props) {
                             </div>
                         </div>
                     </div>:
-                    <div className="no-cardpool">
+                    <div className="no-cardpool2">
                     <div style={{marginLeft: "0px"}}>
                         <div style={{display: "flex", alignItems: "center"}}>
                             <h2
@@ -651,8 +643,18 @@ function PullsDeckBuilder(props) {
                             </div>
 
                     </div>
-                </div>
-                    }
+                    </div>
+                }
+            </div>
+            <DeckImport
+                    fileInput={fileInput}
+                    importDeck={importDeck}
+                    importedDecks={importedDecks}
+                    showDecks={showDecks}
+                    handleFileChange={handleFileChange}
+                    handleShowDecks={handleShowDecks}
+                    clearDecks={clearDecks}
+            />
                 {listView?
                     <div className="deck-list">
                         <div className="maindeck3">
