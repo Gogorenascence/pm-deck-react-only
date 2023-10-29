@@ -377,7 +377,9 @@
   "cat_type": "sub_series",
   "name": "Tech",
   "description": "Cards that use technologically advanced weapons, tools or suits.",
-  "support": [],
+  "support": [
+    1129
+  ],
   "anti_support": [],
   "created_on": {
     "year": 2023,
@@ -389,12 +391,13 @@
   "updated_on": {
     "year": 2023,
     "month": 10,
-    "day": 12,
-    "time": "20:53",
+    "day": 29,
+    "time": "23:50",
     "full_time": {
-      "$date": "2023-10-12T20:53:42.617Z"
+      "$date": "2023-10-29T23:50:05.729Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {
@@ -431,26 +434,27 @@
   "cat_type": "sub_series",
   "name": "Energy",
   "description": "Cards capable of energy manipulation.",
-  "support": [],
+  "support": [
+    1129
+  ],
   "anti_support": [],
   "created_on": {
     "year": 2023,
     "month": 10,
     "day": 11,
     "time": "01:57",
-    "full_time": {
-      "$date": "2023-10-11T01:57:44.674Z"
-    }
+    "full_time": "2023-10-11T01:57:44.674000"
   },
   "updated_on": {
     "year": 2023,
     "month": 10,
-    "day": 11,
-    "time": "01:57",
+    "day": 29,
+    "time": "20:52",
     "full_time": {
-      "$date": "2023-10-11T01:57:44.674Z"
+      "$date": "2023-10-29T20:52:52.932Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {

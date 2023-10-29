@@ -5511,4 +5511,46 @@
   },
   "alpha": null,
   "beta": null
+},
+{
+  "_id": {
+    "$oid": "653ec5e3df8f49911bb60b71"
+  },
+  "name": "Overclock and Overload",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Tech//Energy",
+  "card_number": 1129,
+  "enthusiasm": null,
+  "effect_text": "All Tech and Energy cards in your play gain damage plus 1  (those cards deal 1 additional damage at the end of their resolutions). Take 1 damage and reduce your Focus by 1 each time you resolve a card or Pluck.",
+  "second_effect_text": "",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg11e.png",
+  "file_name": "i1plg11e.png",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 10,
+    "day": 29,
+    "time": "20:51",
+    "full_time": "2023-10-29T20:51:47.203000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 10,
+    "day": 29,
+    "time": "23:34",
+    "full_time": {
+      "$date": "2023-10-29T23:34:09.082Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
 }]
