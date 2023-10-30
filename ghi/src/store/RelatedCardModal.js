@@ -58,12 +58,12 @@ function RelatedCardModal() {
                             <div className="cd-inner2 card-pool-fill">
                                 {relatedCards.map((relatedCard) => {
                                     return (
-                                            <img
-                                                className="cd-related-modal-card pointer"
-                                                onClick={() => selectCard(relatedCard)}
-                                                title={relatedCard.name}
-                                                src={relatedCard.picture_url ? relatedCard.picture_url : "logo4p.png"}
-                                                alt={relatedCard.name}/>
+                                        <img
+                                            className="cd-related-modal-card pointer"
+                                            onClick={() => selectCard(relatedCard)}
+                                            title={relatedCard.name}
+                                            src={relatedCard.picture_url ? relatedCard.picture_url : "logo4p.png"}
+                                            alt={relatedCard.name}/>
                                     );
                                 })}
                             </div>

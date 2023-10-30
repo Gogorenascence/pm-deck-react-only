@@ -194,7 +194,7 @@
   "hero_id": "BGA",
   "series_name": "Battle Girl Alice//Magic//Brawler",
   "card_number": 1029,
-  "effect_text": "Select 1 foe; that foe must resolve their Ending this round with you as the target (other players can still be targeted).",
+  "effect_text": "Provoke 1 Ending (1 select foe must resolve their Ending this round with you as one of the applicable targets).",
   "flavor_text": "string",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r4bgaf.png",
@@ -225,12 +225,14 @@
   "updated_on": {
     "year": 2023,
     "month": 10,
-    "day": 6,
-    "time": "04:14",
+    "day": 30,
+    "time": "22:44",
     "full_time": {
-      "$date": "2023-10-06T04:14:06.148Z"
+      "$date": "2023-10-30T22:44:21.282Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {

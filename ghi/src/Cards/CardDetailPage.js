@@ -125,7 +125,7 @@ function CardDetailPage() {
     return (
         <div className="white-space">
             <div className="cd-container between-space">
-                <div className="cd-container-child wide40">
+                <div className="cd-container-child">
                     <div className="cd-inner media-display">
                         <h1 className="hidden2 media-display media-center">{card.name}</h1>
                         <img
@@ -165,7 +165,7 @@ function CardDetailPage() {
                         </div>
                     </div>
                 </div>
-                <div className="cd-container-child wide55 margin-left-3P">
+                <div className="cd-container-child">
                     <div className="cd-inner2 media-display">
                     <h1 className="none">{card.name}</h1>
                         <div>

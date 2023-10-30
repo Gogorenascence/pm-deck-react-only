@@ -193,6 +193,7 @@ button {
   text-align: center;
   font-size: large;
   padding: 0px 10px;
+  white-space: nowrap;
 }
 
 button:hover {
