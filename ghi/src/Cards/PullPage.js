@@ -182,19 +182,6 @@ function PullPage(props) {
                     ultraRares={ultraRares}
                     num={num}
                 />
-                {/* {listView?
-                    <button
-                    className="left"
-                    onClick={handleListView}
-                    >
-                    Image View
-                    </button>:
-                    <button
-                    className="left"
-                        onClick={handleListView}
-                    >
-                        List View
-                    </button>} */}
                 {fullView?
                     <button
                         className="left media-button media-center"
