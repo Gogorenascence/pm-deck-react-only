@@ -5438,7 +5438,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Mystic//Quest//Relaxation",
-  "card_number": 1127,
+  "card_number": 1131,
   "enthusiasm": null,
   "effect_text": "Return 8 Mystic cards and/or Pluck with different names from their respective discard piles to the bottom of your Main deck/Pluck deck in any order; all Mystic cards in your play gain damage plus 1 this round (those cards deal 1 additional damage at the end of their resolutions).",
   "second_effect_text": "",
@@ -5462,11 +5462,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 8,
-    "time": "20:54",
+    "month": 11,
+    "day": 3,
+    "time": "00:57",
     "full_time": {
-      "$date": "2023-10-08T20:54:58.856Z"
+      "$date": "2023-11-03T00:57:09.238Z"
     }
   },
   "alpha": null,
@@ -5480,7 +5480,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Fortune//Brawler",
-  "card_number": 1128,
+  "card_number": 1132,
   "enthusiasm": null,
   "effect_text": "Discard 7 Pluck in your ownership; deal 5 piercing damage to a foe and ignore the reaction(s) of defending Fighter(s). Trigger effects can not be used in response to this Event.",
   "second_effect_text": "",
@@ -5504,11 +5504,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 24,
-    "time": "23:40",
+    "month": 11,
+    "day": 3,
+    "time": "00:52",
     "full_time": {
-      "$date": "2023-10-24T23:40:54.342Z"
+      "$date": "2023-11-03T00:52:55.685Z"
     }
   },
   "alpha": null,
@@ -5522,9 +5522,9 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Tech//Energy",
-  "card_number": 1129,
+  "card_number": 1133,
   "enthusiasm": null,
-  "effect_text": "All Tech and Energy cards in your play gain damage plus 1  (those cards deal 1 additional damage at the end of their resolutions). Take 1 damage and reduce your Focus by 1 each time you resolve a card or Pluck.",
+  "effect_text": "All Tech and Energy cards in your play gain damage plus 1  (those cards deal 1 additional damage at the end of their resolutions). Take 1 damage and reduce your Focus by 1 each time you resolve a card or Pluck this round.",
   "second_effect_text": "",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg11e.png",
@@ -5546,11 +5546,101 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 29,
-    "time": "23:34",
+    "month": 11,
+    "day": 3,
+    "time": "00:46",
     "full_time": {
-      "$date": "2023-10-29T23:34:09.082Z"
+      "$date": "2023-11-03T00:46:11.214Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "65441f13aaa5c55e3a24ab1f"
+  },
+  "name": "Roar of Nature",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Nature//Call",
+  "card_number": 1134,
+  "enthusiasm": null,
+  "effect_text": "If your play has 3 or more Nature cards, resolve this card as if you were at critical HP.",
+  "second_effect_text": "<C.Trigger> When a card or Pluck is resolving, cancel the non-damaging effects of the resolving card/Pluck.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg12e.png",
+  "file_name": "i1plg12e.png",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 2,
+    "time": "22:13",
+    "full_time": "2023-11-02T22:13:39.951000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 3,
+    "time": "00:46",
+    "full_time": {
+      "$date": "2023-11-03T00:46:36.925Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "654431fdaaa5c55e3a24ab60"
+  },
+  "name": "Miraculous Transformation",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Transformation//Fortune",
+  "card_number": 1135,
+  "enthusiasm": null,
+  "effect_text": "If you take 5 or more damage, resolve this Comeback as if you were at critical HP (quick effect).",
+  "second_effect_text": "<C.Trigger> During the Start Phase or if you take damage, add 1 Transformation card from your hand or discard pile to your play, then resolve its main effect.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg13cb.png",
+  "file_name": "i1plg13cb.png",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 2,
+    "time": "23:34",
+    "full_time": "2023-11-02T23:34:21.259000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 3,
+    "time": "01:57",
+    "full_time": {
+      "$date": "2023-11-03T01:57:42.640Z"
     }
   },
   "alpha": null,

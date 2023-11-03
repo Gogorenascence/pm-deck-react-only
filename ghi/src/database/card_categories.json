@@ -97,7 +97,7 @@
   "name": "Mystic",
   "description": "Cards related to the spiritual and metaphysical. ",
   "support": [
-    1127
+    1131
   ],
   "anti_support": [],
   "created_on": {
@@ -105,19 +105,18 @@
     "month": 10,
     "day": 11,
     "time": "01:13",
-    "full_time": {
-      "$date": "2023-10-11T01:13:21.629Z"
-    }
+    "full_time": "2023-10-11T01:13:21.629000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 11,
-    "time": "01:13",
+    "month": 11,
+    "day": 3,
+    "time": "00:57",
     "full_time": {
-      "$date": "2023-10-11T01:13:21.629Z"
+      "$date": "2023-11-03T00:57:35.205Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {
@@ -126,7 +125,9 @@
   "cat_type": "sub_series",
   "name": "Nature",
   "description": "Cards that derive their power from animals, plant-life or the environment.",
-  "support": [],
+  "support": [
+    1134
+  ],
   "anti_support": [],
   "created_on": {
     "year": 2023,
@@ -137,11 +138,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 24,
-    "time": "23:43",
+    "month": 11,
+    "day": 3,
+    "time": "00:55",
     "full_time": {
-      "$date": "2023-10-24T23:43:57.456Z"
+      "$date": "2023-11-03T00:55:11.166Z"
     }
   },
   "article": null
@@ -209,7 +210,9 @@
   "cat_type": "sub_series",
   "name": "Transformation",
   "description": "Cards that transform.",
-  "support": [],
+  "support": [
+    1135
+  ],
   "anti_support": [],
   "created_on": {
     "year": 2023,
@@ -220,11 +223,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 15,
-    "time": "21:15",
+    "month": 11,
+    "day": 3,
+    "time": "00:42",
     "full_time": {
-      "$date": "2023-10-15T21:15:38.703Z"
+      "$date": "2023-11-03T00:42:45.079Z"
     }
   },
   "article": null
@@ -356,19 +359,18 @@
     "month": 10,
     "day": 11,
     "time": "01:49",
-    "full_time": {
-      "$date": "2023-10-11T01:49:01.264Z"
-    }
+    "full_time": "2023-10-11T01:49:01.264000"
   },
   "updated_on": {
     "year": 2023,
     "month": 10,
-    "day": 11,
-    "time": "01:49",
+    "day": 30,
+    "time": "14:20",
     "full_time": {
-      "$date": "2023-10-11T01:49:01.264Z"
+      "$date": "2023-10-30T14:20:10.610Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {
@@ -378,7 +380,7 @@
   "name": "Tech",
   "description": "Cards that use technologically advanced weapons, tools or suits.",
   "support": [
-    1129
+    1133
   ],
   "anti_support": [],
   "created_on": {
@@ -390,11 +392,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 29,
-    "time": "23:50",
+    "month": 11,
+    "day": 3,
+    "time": "00:55",
     "full_time": {
-      "$date": "2023-10-29T23:50:05.729Z"
+      "$date": "2023-11-03T00:55:49.401Z"
     }
   },
   "article": null
@@ -435,7 +437,7 @@
   "name": "Energy",
   "description": "Cards capable of energy manipulation.",
   "support": [
-    1129
+    1133
   ],
   "anti_support": [],
   "created_on": {
@@ -447,11 +449,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 29,
-    "time": "20:52",
+    "month": 11,
+    "day": 3,
+    "time": "00:55",
     "full_time": {
-      "$date": "2023-10-29T20:52:52.932Z"
+      "$date": "2023-11-03T00:55:30.622Z"
     }
   },
   "article": null
