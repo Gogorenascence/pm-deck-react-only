@@ -16,7 +16,7 @@
     "$oid": "6407a068c503d0c6f5a33231"
   },
   "name": "Counter",
-  "rules": "When you are targeted for damage, the player targeting you is dealt {count} damage before the resolution of their card. \nCan not be used in response to another Counter.",
+  "rules": "When you are targeted for damage, the player targeting you is dealt {count} damage after the resolution of their card. \nCan not be used in response to another Counter.",
   "count": 0,
   "reaction_number": 1002,
   "anti_support": [],
@@ -25,6 +25,7 @@
     1029,
     1030,
     1031,
+    1032,
     1088,
     1090
   ]
@@ -52,7 +53,6 @@
   "reaction_number": 1004,
   "anti_support": [],
   "support": [
-    1032,
     1055,
     1087
   ]

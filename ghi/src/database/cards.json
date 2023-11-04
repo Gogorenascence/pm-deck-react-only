@@ -644,7 +644,7 @@
   "series_name": "Battle Girl Alice//Magic//Brawler",
   "card_number": 1032,
   "enthusiasm": 19,
-  "effect_text": "<Target> Foe on your left. //<1-5> Remove 2 reaction tokens from your Fighter. //<6-11> Deal 2 damage. Your Fighter gains Redirect 1. //<12+> Deal 2 bypassing damage. Your Fighter gains Redirect 1.",
+  "effect_text": "<Target> Foe on your left. //<1-5> Your Fighter gains Counter 1.//<6-11> Deal 2 damage. Your Fighter gains Counter 1. //<12+> Deal 2 bypassing damage. Your Fighter gains Counter 1 and 1 HP.",
   "second_effect_text": "",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r4bgae.png",
@@ -663,19 +663,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:51",
+    "month": 11,
+    "day": 4,
+    "time": "21:25",
     "full_time": {
-      "$date": "2023-06-25T18:51:30.307Z"
+      "$date": "2023-11-04T21:25:38.622Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4623,14 +4623,14 @@
   "_id": {
     "$oid": "644004b62e72274cabf63bdd"
   },
-  "name": "Clustering!",
+  "name": "Clustering Transformation!",
   "card_class": "Unity",
   "hero_id": "H01",
-  "series_name": "Hive//Tech//Nature",
+  "series_name": "Hive//Tech//Nature//Transformation",
   "card_number": 1038,
   "enthusiasm": 0,
-  "effect_text": "Your next Move targets the foes on your left and right instead for its first resolution.",
-  "second_effect_text": "<Trigger> During the Start Phase, discard this Aura in your play; draw 2 cards.",
+  "effect_text": "Discard this Aura in your play; draw 3 cards.",
+  "second_effect_text": "<Trigger> During the Start Phase, discard this Aura in your play; return 1 Pluck from the discard pile to the top of your Pluck deck.",
   "illustrator": "layonsin.art",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2ha.png",
   "file_name": "i1b2ha",
@@ -4649,19 +4649,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:20",
+    "month": 11,
+    "day": 4,
+    "time": "21:02",
     "full_time": {
-      "$date": "2023-06-25T19:20:05.610Z"
+      "$date": "2023-11-04T21:02:13.328Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4673,7 +4673,7 @@
   "series_name": "Hive//Tech//Nature",
   "card_number": 1039,
   "enthusiasm": 0,
-  "effect_text": "Deal 3 damage to a foe, then steal 1 of their Active Items. Discard the Item during the End Phase or when this card is removed from your play.",
+  "effect_text": "Deal 3 damage to a foe, then steal 1 of their Active Items. Return the Item to its owner during the End Phase or when this card is removed from your play.",
   "second_effect_text": "",
   "illustrator": "layonsin.art",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2hm.png",
@@ -4695,11 +4695,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 15,
-    "time": "18:46",
+    "month": 11,
+    "day": 4,
+    "time": "19:51",
     "full_time": {
-      "$date": "2023-10-15T18:46:28.724Z"
+      "$date": "2023-11-04T19:51:27.998Z"
     }
   },
   "alpha": null,
@@ -4709,7 +4709,7 @@
   "_id": {
     "$oid": "644005a42e72274cabf63beb"
   },
-  "name": "Stinger Tornado!!!",
+  "name": "Stinger Mayhem!!!",
   "card_class": "Unity",
   "hero_id": "H01",
   "series_name": "Hive//Tech//Nature",
@@ -4738,13 +4738,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 9,
-    "day": 11,
-    "time": "04:17",
+    "month": 11,
+    "day": 4,
+    "time": "21:03",
     "full_time": {
-      "$date": "2023-09-11T04:17:49.252Z"
+      "$date": "2023-11-04T21:03:10.617Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4799,7 +4801,7 @@
   "series_name": "Hive//Tech//Nature",
   "card_number": 1095,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> If a foe adds a face-up card(s) to their play, discard 1 Item in your ownership; add that card (max of 1) to your play instead and they draw 2 cards. Discard the added card during the End Phase.",
+  "effect_text": "<Trigger> If a foe adds a face-up card(s) to their play, discard 1 other Pluck in your ownership; add that card (max of 1) to your play instead and they draw 2 cards. Discard the added card during the End Phase or when this Event is removed from your ownership. ",
   "second_effect_text": "",
   "illustrator": "layonsin.art",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl10he.png",
@@ -4823,11 +4825,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 15,
-    "time": "18:46",
+    "month": 11,
+    "day": 4,
+    "time": "21:21",
     "full_time": {
-      "$date": "2023-10-15T18:46:33.504Z"
+      "$date": "2023-11-04T21:21:16.572Z"
     }
   },
   "alpha": null,
@@ -5608,11 +5610,11 @@
   "name": "Miraculous Transformation",
   "card_class": "",
   "hero_id": "GEN",
-  "series_name": "Transformation//Fortune",
+  "series_name": "Transformation//Fortune//Magic//Brawler",
   "card_number": 1135,
   "enthusiasm": null,
-  "effect_text": "If you take 5 or more damage, resolve this Comeback as if you were at critical HP (quick effect).",
-  "second_effect_text": "<C.Trigger> During the Start Phase or if you take damage, add 1 Transformation card from your hand or discard pile to your play, then resolve its main effect.",
+  "effect_text": "If you are targeted for 4 or more damage, resolve this Comeback as if you were at critical HP (quick effect).",
+  "second_effect_text": "<C.Trigger> If you targeted for damage, add 1 Transformation card from your hand or discard pile to your play, then resolve its main effect.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg13cb.png",
   "file_name": "i1plg13cb.png",
@@ -5638,9 +5640,9 @@
     "year": 2023,
     "month": 11,
     "day": 3,
-    "time": "01:57",
+    "time": "22:31",
     "full_time": {
-      "$date": "2023-11-03T01:57:42.640Z"
+      "$date": "2023-11-03T22:31:02.285Z"
     }
   },
   "alpha": null,
