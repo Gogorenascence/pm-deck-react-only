@@ -36,6 +36,7 @@ function DeckImport({
                     <input
                         type="file"
                         accept=".json"
+                        multiple={true}
                         onChange={handleFileChange}
                         style={{ display: 'none' }}
                         ref={fileInput}

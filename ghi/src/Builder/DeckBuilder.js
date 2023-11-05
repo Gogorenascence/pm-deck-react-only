@@ -15,18 +15,29 @@ function DeckBuilder(props) {
     const fileInput = useRef(null);
 
     const handleFileChange = (event) => {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
+        const files = event.target.files;
+        if (files.length > 0) {
+            const importedDecksArray = [];
+
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+
             reader.onload = (e) => {
-            try {
-                const importedDeck = JSON.parse(e.target.result);
-                setImportedDecks([...importedDecks, importedDeck]);
-            } catch (error) {
-                console.error('Error parsing imported deck JSON:', error);
+                try {
+                    const importedDeck = JSON.parse(e.target.result);
+                    importedDecksArray.push(importedDeck);
+                    // If all files have been read, update the state
+                    if (importedDecksArray.length === files.length) {
+                        setImportedDecks((prevDecks) => [...prevDecks, ...importedDecksArray]);
+                    }
+                } catch (error) {
+                    console.error('Error parsing imported deck JSON:', error);
+                }
+            };
+
+                reader.readAsText(file);
             }
-        };
-        reader.readAsText(file);
         }
     };
 
