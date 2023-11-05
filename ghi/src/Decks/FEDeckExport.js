@@ -231,7 +231,7 @@ function FEDeckExport(props) {
   for (let card of pluck_list){
     pluckExport["ObjectStates"][0]["CustomDeck"][card.card_number.toString()] = {
       "FaceURL": "",
-      "BackURL": "https://kornan.dreamhosters.com/plucks4/",
+      "BackURL": "https://playmakercards.s3.us-west-1.amazonaws.com/plucks4-1.png",
       "NumWidth": 1,
       "NumHeight": 1,
       "BackIsHidden": true,
@@ -292,7 +292,7 @@ function FEDeckExport(props) {
     cardToAdd["GUID"] = card.id.slice(0,7)
     cardToAdd[card.card_number] = {
       "FaceURL": "",
-      "BackURL": "https://kornan.dreamhosters.com/plucks4/",
+      "BackURL": "https://playmakercards.s3.us-west-1.amazonaws.com/plucks4-1.png",
       "NumWidth": 1,
       "NumHeight": 1,
       "BackIsHidden": true,
