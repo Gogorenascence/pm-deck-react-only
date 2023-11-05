@@ -1546,6 +1546,13 @@ button:hover {
     text-align: center;
   }
 
+  .error2 {
+    color: white;
+    margin: 0 0 0 5px;
+    padding: 0;
+    /* text-align: center; */
+  }
+
   .account-split{
     display: flex;
   }
