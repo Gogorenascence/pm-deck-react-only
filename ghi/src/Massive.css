@@ -1547,7 +1547,7 @@ button:hover {
   }
 
   .error2 {
-    color: white;
+    /* color: white; */
     margin: 0 0 0 5px;
     padding: 0;
     /* text-align: center; */

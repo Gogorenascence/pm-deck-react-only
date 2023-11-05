@@ -91,7 +91,7 @@ function DeckImport({
                                     Clear Decks
                                 </button>:null
                         }
-                        <h6 className="error2">Select or Drag Over a Deck</h6>
+                        <h6 className="error2 none">Select or Drag Over a Deck</h6>
                     </div>
                 </>:null
             }
