@@ -3132,8 +3132,8 @@
   "series_name": "Bolt Blossom//Nature//Energy",
   "card_number": 1100,
   "enthusiasm": 0,
-  "effect_text": "<Limited> Place 1 card from your hand under this Item (if this Item is discarded or changes ownership, the placed card(s) is discarded).",
-  "second_effect_text": "This Item counts as the class(s) of the card(s) under it in each of your plays (this does not count towards play size).",
+  "effect_text": "<Limited> Place 1 card from your hand under this Item (if this Item is removed from your Active Pluck or changes ownership, the placed card(s) is discarded).\n\n",
+  "second_effect_text": "This Item counts as the class(s) of its placed card(s) in each of your plays (this does not count towards play size).",
   "illustrator": "Filippo Scalisi",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl12bbi.png",
   "file_name": "i1pl12bbi",
@@ -3156,13 +3156,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 7,
-    "day": 17,
-    "time": "04:13",
+    "month": 11,
+    "day": 7,
+    "time": "04:49",
     "full_time": {
-      "$date": "2023-07-17T04:13:09.333Z"
+      "$date": "2023-11-07T04:49:43.625Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3261,8 +3263,8 @@
   "series_name": "Bone Whisperer//Mystic//Nature",
   "card_number": 1073,
   "enthusiasm": 0,
-  "effect_text": "<Limited> If you resolve an Event this round, place the Event under this Item instead of discarding it at the end of the round (the placed Event(s) count towards your Pluck limit, and if this Item is discarded or changes ownership, the placed Event(s) is discarded).",
-  "second_effect_text": "The Event(s) under this Item can be resolved one more time as this card's effect; the Event is not discarded during the End Phase.",
+  "effect_text": "<Limited> If you resolve an Event this round, place the Event under this Item instead of discarding it during the End Phase (if this Item is removed from your Active Pluck or changes ownership, the placed Event(s) is discarded).\n \n\n",
+  "second_effect_text": "This Item's placed Event(s) count towards your Pluck limit and can be resolved one more time as this card's effect; the Event is not discarded during the End Phase.",
   "illustrator": "Ranbutam",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl03bwi.png",
   "file_name": "i1pl03bwi",
@@ -3285,11 +3287,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 15,
-    "time": "17:58",
+    "month": 11,
+    "day": 7,
+    "time": "04:58",
     "full_time": {
-      "$date": "2023-10-15T17:58:35.793Z"
+      "$date": "2023-11-07T04:58:38.291Z"
     }
   },
   "alpha": null,
@@ -3349,7 +3351,7 @@
   "series_name": "Ceifeira Preta//Mystic//Quest",
   "card_number": 1109,
   "enthusiasm": 0,
-  "effect_text": "Once per round, if you gain a Comeback(s), add 1 Fighter from the discard pile to the top of the Main deck.",
+  "effect_text": "If you draw or gain a Comeback(s), return 1 Fighter from the discard pile to the top of the Main deck.",
   "second_effect_text": "<Trigger> If a card(s) in your play is discarded before resolving its main effect, discard this Item; resolve that card (max of 1) as if it was in your play.",
   "illustrator": "Hugo Roberto",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl15cpi.png",
@@ -3367,19 +3369,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:08",
+    "month": 11,
+    "day": 7,
+    "time": "04:39",
     "full_time": {
-      "$date": "2023-06-25T19:08:12.623Z"
+      "$date": "2023-11-07T04:39:53.548Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3517,7 +3519,7 @@
   "series_name": "Burst Esper//Psychic//Energy",
   "card_number": 1085,
   "enthusiasm": 0,
-  "effect_text": "<Limited> Return 2 cards from the discard pile to your hand.",
+  "effect_text": "<Limited> Add 2 cards from the discard pile to your hand.",
   "second_effect_text": "Once per round, if a card in your play or ownership randomly chooses a foe(s) or card(s) at, you choose the target(s) instead.//Discard this Item after the third round of use.",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl07bei.png",
@@ -3541,11 +3543,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 15,
-    "time": "18:34",
+    "month": 11,
+    "day": 7,
+    "time": "04:42",
     "full_time": {
-      "$date": "2023-10-15T18:34:02.647Z"
+      "$date": "2023-11-07T04:42:27.967Z"
     }
   },
   "alpha": null,
@@ -5230,7 +5232,7 @@
   "series_name": "Warp Family//Cosmic//Psychic",
   "card_number": 1108,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> If a card(s) in your play would be sent to the discard pile during this round, return that card (max of 1) to your hand instead. ",
+  "effect_text": "<Trigger> If a card(s) in your play would be sent to the discard pile during this round, add that card to your hand instead (max of 1). ",
   "second_effect_text": "<Critical> Discard 1 card from 2 random foes' hands.",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb14p.png",
@@ -5255,11 +5257,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 15,
-    "time": "19:11",
+    "month": 11,
+    "day": 7,
+    "time": "04:45",
     "full_time": {
-      "$date": "2023-10-15T19:11:11.569Z"
+      "$date": "2023-11-07T04:45:39.551Z"
     }
   },
   "alpha": null,
@@ -5442,7 +5444,7 @@
   "series_name": "Mystic//Quest//Relaxation",
   "card_number": 1131,
   "enthusiasm": null,
-  "effect_text": "Return 8 Mystic cards and/or Pluck with different names from their respective discard piles to the bottom of your Main deck/Pluck deck in any order; all Mystic cards in your play gain damage plus 1 this round (those cards deal 1 additional damage at the end of their resolutions).",
+  "effect_text": "Return 8 Mystic cards/Pluck with different names from their respective discard piles to the bottom of your Main deck/Pluck deck in any order; all Mystic cards in your play gain damage plus 1 this round (those cards deal 1 additional damage at the end of their resolutions).",
   "second_effect_text": "",
   "illustrator": "gogorenascence",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg9e.png",
@@ -5465,10 +5467,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 3,
-    "time": "00:57",
+    "day": 7,
+    "time": "04:38",
     "full_time": {
-      "$date": "2023-11-03T00:57:09.238Z"
+      "$date": "2023-11-07T04:38:30.884Z"
     }
   },
   "alpha": null,
@@ -5569,7 +5571,7 @@
   "card_number": 1134,
   "enthusiasm": null,
   "effect_text": "If your play has 3 or more Nature cards, resolve this card as if you were at critical HP.",
-  "second_effect_text": "<C.Trigger> When a card or Pluck is resolving, cancel the non-damaging effects of the resolving card/Pluck.",
+  "second_effect_text": "<C.Trigger> When a card or Pluck is resolving, cancel the non-damaging effects of the resolving card/Pluck. Nature Moves and Endings gain damage plus 1 this round.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg12e.png",
   "file_name": "i1plg12e.png",
@@ -5594,10 +5596,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 3,
-    "time": "00:46",
+    "day": 7,
+    "time": "04:44",
     "full_time": {
-      "$date": "2023-11-03T00:46:36.925Z"
+      "$date": "2023-11-07T04:44:55.183Z"
     }
   },
   "alpha": null,
@@ -5643,6 +5645,143 @@
     "time": "22:31",
     "full_time": {
       "$date": "2023-11-03T22:31:02.285Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "6549c51bd1e4918fc3f51dce"
+  },
+  "name": "A.A.A. Power Dampener",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Tech//Defender",
+  "card_number": 1127,
+  "enthusiasm": null,
+  "effect_text": "<Limited> Place up to 3 cards from your hand under this Item (if this Item is removed from your Active Pluck or changes ownership, the placed cards are discarded).",
+  "second_effect_text": "All Cosmic, Magic and Mystic cards take 1 damage and gain damage minus 1 when they are revealed. \nDiscard 1 of this Item's placed card during the End Phase or send this Item to the discard pile.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg14i.png",
+  "file_name": "i1plg14i.png",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 7,
+    "time": "05:03",
+    "full_time": "2023-11-07T05:03:23.676000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 7,
+    "time": "05:26",
+    "full_time": {
+      "$date": "2023-11-07T05:26:01.862Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "6549c626d1e4918fc3f51ddf"
+  },
+  "name": "Star Map",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Cosmic//Mystic//Fortune",
+  "card_number": 1128,
+  "enthusiasm": null,
+  "effect_text": "Discard this Item and 1 card in your play; damage dealt by 1 Mystic or Cosmic Move in your play is treated as bypassing damage. ",
+  "second_effect_text": "<Trigger> During the Start Phase, if you have 7 or more Mystic/Cosmic cards in your hand/play, return this Item to your Active Pluck. ",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg15i.png",
+  "file_name": "i1plg15i.png",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 7,
+    "time": "05:07",
+    "full_time": {
+      "$date": "2023-11-07T05:07:50.499Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 7,
+    "time": "05:07",
+    "full_time": {
+      "$date": "2023-11-07T05:07:50.499Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "6549c802d1e4918fc3f51df0"
+  },
+  "name": "Adaptive Battle Sense",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Brawler//Tactical//Tech",
+  "card_number": 1136,
+  "enthusiasm": null,
+  "effect_text": "Add 1 Brawler or Tactical card from the discard pile to your hand. Provoke 1 Move (1 select foe must resolve their Move this round with you as one of the applicable targets).",
+  "second_effect_text": "<Trigger> If you targeted for damage, your Brawler or Tactical Fighter gains Redirect 1 (that card is revealed).",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg16cb.png",
+  "file_name": "i1plg16cb.png",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 7,
+    "time": "05:15",
+    "full_time": {
+      "$date": "2023-11-07T05:15:46.977Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 7,
+    "time": "05:15",
+    "full_time": {
+      "$date": "2023-11-07T05:15:46.977Z"
     }
   },
   "alpha": null,

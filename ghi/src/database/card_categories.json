@@ -97,9 +97,12 @@
   "name": "Mystic",
   "description": "Cards related to the spiritual and metaphysical. ",
   "support": [
+    1128,
     1131
   ],
-  "anti_support": [],
+  "anti_support": [
+    1127
+  ],
   "created_on": {
     "year": 2023,
     "month": 10,
@@ -110,10 +113,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 3,
-    "time": "00:57",
+    "day": 7,
+    "time": "05:25",
     "full_time": {
-      "$date": "2023-11-03T00:57:35.205Z"
+      "$date": "2023-11-07T05:25:29.510Z"
     }
   },
   "article": null
@@ -154,26 +157,27 @@
   "cat_type": "sub_series",
   "name": "Brawler",
   "description": "Cards that excel at physical combat or rely on brute force.",
-  "support": [],
+  "support": [
+    1136
+  ],
   "anti_support": [],
   "created_on": {
     "year": 2023,
     "month": 10,
     "day": 11,
     "time": "01:24",
-    "full_time": {
-      "$date": "2023-10-11T01:24:21.167Z"
-    }
+    "full_time": "2023-10-11T01:24:21.167000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 11,
-    "time": "01:24",
+    "month": 11,
+    "day": 7,
+    "time": "05:17",
     "full_time": {
-      "$date": "2023-10-11T01:24:21.167Z"
+      "$date": "2023-11-07T05:17:46.074Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {
@@ -182,26 +186,29 @@
   "cat_type": "sub_series",
   "name": "Cosmic",
   "description": "Cards with origins tied to space and aliens.",
-  "support": [],
-  "anti_support": [],
+  "support": [
+    1128
+  ],
+  "anti_support": [
+    1127
+  ],
   "created_on": {
     "year": 2023,
     "month": 10,
     "day": 11,
     "time": "01:25",
-    "full_time": {
-      "$date": "2023-10-11T01:25:43.410Z"
-    }
+    "full_time": "2023-10-11T01:25:43.410000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 11,
-    "time": "01:25",
+    "month": 11,
+    "day": 7,
+    "time": "05:18",
     "full_time": {
-      "$date": "2023-10-11T01:25:43.410Z"
+      "$date": "2023-11-07T05:18:33.206Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {
@@ -297,7 +304,9 @@
   "name": "Magic",
   "description": "Cards whose origins are tied to magical realms, creatures or artifacts.",
   "support": [],
-  "anti_support": [],
+  "anti_support": [
+    1127
+  ],
   "created_on": {
     "year": 2023,
     "month": 10,
@@ -307,11 +316,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 24,
-    "time": "23:43",
+    "month": 11,
+    "day": 7,
+    "time": "05:19",
     "full_time": {
-      "$date": "2023-10-24T23:43:20.542Z"
+      "$date": "2023-11-07T05:19:03.649Z"
     }
   },
   "article": null
@@ -520,26 +529,27 @@
   "cat_type": "sub_series",
   "name": "Tactical",
   "description": "Cards with a knack for strategy and improvisation in the heat of combat.",
-  "support": [],
+  "support": [
+    1136
+  ],
   "anti_support": [],
   "created_on": {
     "year": 2023,
     "month": 10,
     "day": 11,
     "time": "02:03",
-    "full_time": {
-      "$date": "2023-10-11T02:03:33.218Z"
-    }
+    "full_time": "2023-10-11T02:03:33.218000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 11,
-    "time": "02:03",
+    "month": 11,
+    "day": 7,
+    "time": "05:20",
     "full_time": {
-      "$date": "2023-10-11T02:03:33.218Z"
+      "$date": "2023-11-07T05:20:21.488Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {
