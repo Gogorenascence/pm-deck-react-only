@@ -5359,7 +5359,7 @@
   "series_name": "Tech//Brawler//Spoiler",
   "card_number": 1126,
   "enthusiasm": 0,
-  "effect_text": "Discard 1 card from your hand; discard 1 Item in a random foe’s ownership.",
+  "effect_text": "Discard 1 card from your hand; discard 1 Active Item in a foe’s ownership.",
   "second_effect_text": "<Critical> Add 1 Item from the discard pile to your ownership.",
   "illustrator": "NightWong",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb20g.png",
@@ -5383,13 +5383,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:21",
+    "month": 11,
+    "day": 7,
+    "time": "06:02",
     "full_time": {
-      "$date": "2023-06-25T19:21:39.801Z"
+      "$date": "2023-11-07T06:02:46.297Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -5686,9 +5688,9 @@
     "year": 2023,
     "month": 11,
     "day": 7,
-    "time": "05:26",
+    "time": "05:52",
     "full_time": {
-      "$date": "2023-11-07T05:26:01.862Z"
+      "$date": "2023-11-07T05:52:11.868Z"
     }
   },
   "alpha": null,
@@ -5771,17 +5773,15 @@
     "month": 11,
     "day": 7,
     "time": "05:15",
-    "full_time": {
-      "$date": "2023-11-07T05:15:46.977Z"
-    }
+    "full_time": "2023-11-07T05:15:46.977000"
   },
   "updated_on": {
     "year": 2023,
     "month": 11,
     "day": 7,
-    "time": "05:15",
+    "time": "05:47",
     "full_time": {
-      "$date": "2023-11-07T05:15:46.977Z"
+      "$date": "2023-11-07T05:47:26.270Z"
     }
   },
   "alpha": null,
