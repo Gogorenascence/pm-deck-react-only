@@ -5572,7 +5572,7 @@
   "series_name": "Nature//Call",
   "card_number": 1134,
   "enthusiasm": null,
-  "effect_text": "If your play has 3 or more Nature cards, resolve this card as if you were at critical HP.",
+  "effect_text": "If your play has 3 or more Nature cards, resolve this card as if you were at critical HP (quick effect).",
   "second_effect_text": "<C.Trigger> When a card or Pluck is resolving, cancel the non-damaging effects of the resolving card/Pluck. Nature Moves and Endings gain damage plus 1 this round.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg12e.png",
@@ -5599,9 +5599,9 @@
     "year": 2023,
     "month": 11,
     "day": 7,
-    "time": "04:44",
+    "time": "06:13",
     "full_time": {
-      "$date": "2023-11-07T04:44:55.183Z"
+      "$date": "2023-11-07T06:13:16.867Z"
     }
   },
   "alpha": null,
