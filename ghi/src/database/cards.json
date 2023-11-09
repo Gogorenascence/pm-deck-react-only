@@ -5884,7 +5884,7 @@
   "card_number": 1137,
   "enthusiasm": null,
   "effect_text": "If you have a Psychic card in your play, return 1 Active Item in a foe's ownership to the top of their Pluck deck.",
-  "second_effect_text": "<C.Trigger> If you have a Psychic card in your play, return 1 Active Item in a player's ownership to the top or bottom of their Pluck deck.",
+  "second_effect_text": "<Critical> If you have a Psychic card in your play, return 1 Active Item in a player's ownership to the top or bottom of their Pluck deck.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg19cb.png",
   "file_name": "i1plg19cb.png",
@@ -5892,7 +5892,6 @@
     1008
   ],
   "extra_effects": [
-    1001,
     1002
   ],
   "reactions": [],
