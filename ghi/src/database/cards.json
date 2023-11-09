@@ -1802,7 +1802,7 @@
   "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1091,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> During the Start Phase, discard 1 card from your hand; resolve one of the following effects: //<> Add 3 to your Focus for your first Focus roll this round. //<> Add 3 to your Enthusiasm this round.",
+  "effect_text": "<Trigger> During the Start Phase, discard 1 card from your hand; resolve one of the following effects://<> Add 3 to your next Focus roll.//<> Add 3 to your Enthusiasm this round.",
   "second_effect_text": "Discard this Item after the third round of use.",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl09dwi.png",
@@ -1826,11 +1826,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 14,
-    "time": "00:27",
+    "month": 11,
+    "day": 9,
+    "time": "01:07",
     "full_time": {
-      "$date": "2023-10-14T00:27:16.422Z"
+      "$date": "2023-11-09T01:07:34.837Z"
     }
   },
   "alpha": null,
@@ -2919,7 +2919,7 @@
   "series_name": "Bolt Blossom//Nature//Energy",
   "card_number": 1102,
   "enthusiasm": 0,
-  "effect_text": "Add 2 to the Focus of the next card in your play. ",
+  "effect_text": "Add 2 to your next Focus roll.",
   "second_effect_text": "<Critical> Add the top card of the Main deck to your play.",
   "illustrator": "Filippo Scalisi",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb12bb.png",
@@ -2939,19 +2939,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:09",
+    "month": 11,
+    "day": 9,
+    "time": "01:06",
     "full_time": {
-      "$date": "2023-06-25T19:09:11.835Z"
+      "$date": "2023-11-09T01:06:49.241Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3176,7 +3176,7 @@
   "series_name": "Cosmic//Defender//Transformation//Call",
   "card_number": 1124,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> During a foe's turn; switch 1 card in your play that has yet to be resolved with 1 card in your hand of the same type (the new card can not be used to defend).",
+  "effect_text": "<Trigger> During a foe's turn; switch 1 unresolved card in your play with 1 card in your hand of the same type (the new card can not be used to defend).",
   "second_effect_text": "<Critical> Discard 1 card from your hand; add 1 MAX VARIABLE from your hand to your play (MAX VARIABLE counts as an Aura).",
   "illustrator": "mvthwus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb18g.png",
@@ -3197,19 +3197,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:07",
+    "month": 11,
+    "day": 8,
+    "time": "00:46",
     "full_time": {
-      "$date": "2023-06-25T19:07:47.834Z"
+      "$date": "2023-11-08T00:46:59.870Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -5663,7 +5663,7 @@
   "card_number": 1127,
   "enthusiasm": null,
   "effect_text": "<Limited> Place up to 3 cards from your hand under this Item (if this Item is removed from your Active Pluck or changes ownership, the placed cards are discarded).",
-  "second_effect_text": "All Cosmic, Magic and Mystic cards take 1 damage and gain damage minus 1 when they are revealed. \nDiscard 1 of this Item's placed card during the End Phase or send this Item to the discard pile.",
+  "second_effect_text": "All Cosmic, Magic and Mystic cards take 1 damage and gain damage minus 1 when they are revealed. \nDiscard 1 of this Item's placed card during the End Phase or discard this Item.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg14i.png",
   "file_name": "i1plg14i.png",
@@ -5687,10 +5687,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 7,
-    "time": "05:52",
+    "day": 8,
+    "time": "15:42",
     "full_time": {
-      "$date": "2023-11-07T05:52:11.868Z"
+      "$date": "2023-11-08T15:42:29.161Z"
     }
   },
   "alpha": null,
@@ -5706,7 +5706,7 @@
   "series_name": "Cosmic//Mystic//Fortune",
   "card_number": 1128,
   "enthusiasm": null,
-  "effect_text": "Discard this Item and 1 card in your play; damage dealt by 1 Mystic or Cosmic Move in your play is treated as bypassing damage. ",
+  "effect_text": "Discard this Item and 1 unresolved card in your play; damage dealt by 1 Mystic or Cosmic Move in your play is treated as bypassing damage. ",
   "second_effect_text": "<Trigger> During the Start Phase, if you have 7 or more Mystic/Cosmic cards in your hand/play, return this Item to your Active Pluck. ",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg15i.png",
@@ -5726,17 +5726,15 @@
     "month": 11,
     "day": 7,
     "time": "05:07",
-    "full_time": {
-      "$date": "2023-11-07T05:07:50.499Z"
-    }
+    "full_time": "2023-11-07T05:07:50.499000"
   },
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 7,
-    "time": "05:07",
+    "day": 8,
+    "time": "00:48",
     "full_time": {
-      "$date": "2023-11-07T05:07:50.499Z"
+      "$date": "2023-11-08T00:48:33.410Z"
     }
   },
   "alpha": null,
@@ -5782,6 +5780,188 @@
     "time": "05:47",
     "full_time": {
       "$date": "2023-11-07T05:47:26.270Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "654bad4e48ad43a85cf651e3"
+  },
+  "name": "The Entry Hidden in the Mist",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Magic//Fortune",
+  "card_number": 1129,
+  "enthusiasm": null,
+  "effect_text": "All Magic Auras and Moves gain damage plus 1. \nIf your play has no Magic cards, discard this Item.",
+  "second_effect_text": "<Trigger>During the Start Phase, if you have 7 or more Magic cards in your hand/play, return this Item to your Active Pluck.  ",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg17i.png",
+  "file_name": "i1plg17i.png",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 8,
+    "time": "15:46",
+    "full_time": "2023-11-08T15:46:22.671000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 8,
+    "time": "17:59",
+    "full_time": {
+      "$date": "2023-11-08T17:59:50.237Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "654bc64d48ad43a85cf65268"
+  },
+  "name": "Genetic Capture Device ",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Altered//Nature//Tech",
+  "card_number": 1130,
+  "enthusiasm": null,
+  "effect_text": "<Limited> Place 1 Altered Fighter or Aura from your hand under this Item (if this Item is removed from your Active Pluck or changes ownership, the placed card(s) is discarded). \n\n\n\n",
+  "second_effect_text": "When this Item is discarded, resolve the main effect of this Item's placed card(s).",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg18i.png",
+  "file_name": "i1plg18i.png",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 8,
+    "time": "17:33",
+    "full_time": "2023-11-08T17:33:01.524000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 8,
+    "time": "22:42",
+    "full_time": {
+      "$date": "2023-11-08T22:42:32.906Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "654c2efd48ad43a85cf6532d"
+  },
+  "name": "Mind Over Matter",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Psychic//Energy",
+  "card_number": 1137,
+  "enthusiasm": null,
+  "effect_text": "If you have a Psychic card in your play, return 1 Active Item in a foe's ownership to the top of their Pluck deck.",
+  "second_effect_text": "<C.Trigger> If you have a Psychic card in your play, return 1 Active Item in a player's ownership to the top or bottom of their Pluck deck.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg19cb.png",
+  "file_name": "i1plg19cb.png",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 9,
+    "time": "00:59",
+    "full_time": {
+      "$date": "2023-11-09T00:59:41.949Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 9,
+    "time": "00:59",
+    "full_time": {
+      "$date": "2023-11-09T00:59:41.949Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "654c2f9f48ad43a85cf65336"
+  },
+  "name": "Packed for the Next Trip",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Quest//Relaxation",
+  "card_number": 1138,
+  "enthusiasm": null,
+  "effect_text": "If you resolve the effect of a Quest/Relaxation card/Pluck this turn, add 2 to your next Focus roll.",
+  "second_effect_text": "<Trigger> During the End Phase, if your hand has no cards, draw 1 card for each Quest/Relaxation card/Pluck you discard for End Phase maintenance (max of 4).",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg20cb.png",
+  "file_name": "i1plg20cb.png",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 9,
+    "time": "01:02",
+    "full_time": {
+      "$date": "2023-11-09T01:02:23.581Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 9,
+    "time": "01:02",
+    "full_time": {
+      "$date": "2023-11-09T01:02:23.581Z"
     }
   },
   "alpha": null,

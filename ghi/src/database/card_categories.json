@@ -303,7 +303,9 @@
   "cat_type": "sub_series",
   "name": "Magic",
   "description": "Cards whose origins are tied to magical realms, creatures or artifacts.",
-  "support": [],
+  "support": [
+    1129
+  ],
   "anti_support": [
     1127
   ],
@@ -317,10 +319,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 7,
-    "time": "05:19",
+    "day": 8,
+    "time": "15:48",
     "full_time": {
-      "$date": "2023-11-07T05:19:03.649Z"
+      "$date": "2023-11-08T15:48:11.130Z"
     }
   },
   "article": null
@@ -333,7 +335,8 @@
   "name": "Quest",
   "description": "Cards that are on a journey, searching for someone or something, or have a task that must be completed.",
   "support": [
-    1104
+    1104,
+    1138
   ],
   "anti_support": [],
   "created_on": {
@@ -345,11 +348,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 16,
-    "time": "05:49",
+    "month": 11,
+    "day": 9,
+    "time": "01:02",
     "full_time": {
-      "$date": "2023-10-16T05:49:53.053Z"
+      "$date": "2023-11-09T01:02:52.011Z"
     }
   },
   "article": null
@@ -361,7 +364,9 @@
   "cat_type": "sub_series",
   "name": "Altered",
   "description": "Cards that have been physically changed by artificial means.",
-  "support": [],
+  "support": [
+    1130
+  ],
   "anti_support": [],
   "created_on": {
     "year": 2023,
@@ -372,11 +377,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 30,
-    "time": "14:20",
+    "month": 11,
+    "day": 8,
+    "time": "17:33",
     "full_time": {
-      "$date": "2023-10-30T14:20:10.610Z"
+      "$date": "2023-11-08T17:33:43.758Z"
     }
   },
   "article": null
@@ -417,26 +422,27 @@
   "cat_type": "sub_series",
   "name": "Psychic",
   "description": "Cards with psychic abilities.",
-  "support": [],
+  "support": [
+    1137
+  ],
   "anti_support": [],
   "created_on": {
     "year": 2023,
     "month": 10,
     "day": 11,
     "time": "01:55",
-    "full_time": {
-      "$date": "2023-10-11T01:55:35.912Z"
-    }
+    "full_time": "2023-10-11T01:55:35.912000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 11,
-    "time": "01:55",
+    "month": 11,
+    "day": 9,
+    "time": "01:00",
     "full_time": {
-      "$date": "2023-10-11T01:55:35.912Z"
+      "$date": "2023-11-09T01:00:18.674Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {
@@ -474,26 +480,27 @@
   "cat_type": "sub_series",
   "name": "Relaxation",
   "description": "Cards relaxing, reducing stress or taking part in leisure.",
-  "support": [],
+  "support": [
+    1138
+  ],
   "anti_support": [],
   "created_on": {
     "year": 2023,
     "month": 10,
     "day": 11,
     "time": "01:59",
-    "full_time": {
-      "$date": "2023-10-11T01:59:30.814Z"
-    }
+    "full_time": "2023-10-11T01:59:30.814000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 11,
-    "time": "01:59",
+    "month": 11,
+    "day": 9,
+    "time": "01:03",
     "full_time": {
-      "$date": "2023-10-11T01:59:30.814Z"
+      "$date": "2023-11-09T01:03:11.577Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {
