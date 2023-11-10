@@ -401,7 +401,7 @@ button:hover {
 .inScrollable {
   position: relative; /* Make the container a positioning context */
   width: 100%; /* Ensure the image container takes the full width of the scrollable div */
-  height: 53vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1988,6 +1988,17 @@ button:hover {
     transition: all 0.5s;
   }
 
+  .no-cardpool3 {
+    margin: 28px 0 14px 30px;
+    background-color: rgba(117, 90, 182, 0.315);
+    border: 2px solid rgb(68, 17, 206);
+    border-radius: 5px;
+    height: 708px;
+    width: 100%;
+    outline: 1px solid white;
+    transition: all 0.5s;
+  }
+
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;
@@ -2466,12 +2477,32 @@ button:hover {
     transition: all 0.5s;
   }
 
+  .no-cardpool3 {
+    margin: 0;
+    background-color: rgba(117, 90, 182, 0.315);
+    border: 2px solid rgb(68, 17, 206);
+    border-radius: 5px;
+    height: auto;
+    width: 100%;
+    outline: 1px solid white;
+    transition: all 0.5s;
+  }
+
   .scrollable2 {
     height: 56.5vh;
   }
 
   .wide100 {
     width: 100%;
+  }
+
+  .inScrollable {
+    position: relative; /* Make the container a positioning context */
+    width: 100%; /* Ensure the image container takes the full width of the scrollable div */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .none {

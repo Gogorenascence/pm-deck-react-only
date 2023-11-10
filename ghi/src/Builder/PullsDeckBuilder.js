@@ -2,7 +2,7 @@ import {
     Col,
 } from "react-bootstrap";
 import { useState, useEffect, useContext, useRef } from 'react';
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { PullsContext } from "../context/PullsContext";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 import FEDeckExport from "../Decks/FEDeckExport";
@@ -598,7 +598,7 @@ function PullsDeckBuilder(props) {
                             </div>
                         </div>
                     </div>:
-                    <div className="no-cardpool2">
+                    <div className="no-cardpool3">
                         <div style={{marginLeft: "0px"}}>
                             <div style={{display: "flex", alignItems: "center"}}>
                                 <h2
@@ -606,13 +606,16 @@ function PullsDeckBuilder(props) {
                                     style={{margin: "1% 0px 1% 20px", fontWeight: "700"}}
                                 >Card Pool</h2>
                                 <img className="logo" src="https://i.imgur.com/YpdBflG.png" alt="cards icon"/>
-
                             </div>
-
-                                <div>
-                                <h4 className="left no-cards">No cards added</h4>
-                                </div>
-
+                            <div className="inScrollable">
+                                <NavLink to="/cardsets"
+                                    className="black-white nav-link margin-bottom-20">
+                                    <div>
+                                        <h1>No pulled cards</h1>
+                                        <h1 >Click here for Card Set Search</h1>
+                                    </div>
+                                </NavLink>
+                            </div>
                         </div>
                     </div>
                 }
