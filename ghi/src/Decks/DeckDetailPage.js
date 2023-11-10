@@ -3,10 +3,11 @@ import {
     Row,
     Card,
 } from "react-bootstrap";
-import { useState, useEffect, useContext } from "react";
-import { NavLink, useParams, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { NavLink, useParams } from 'react-router-dom';
 import DeckExport from "./DeckExport";
 import BackButton from "../display/BackButton";
+import StatsPanel from "./StatsPanel";
 
 
 function DeckDetailPage(props) {
@@ -116,15 +117,6 @@ function DeckDetailPage(props) {
     }
     const countedPluckList = Object.values(pluckCount)
 
-
-
-    const getCountedDeckList = async() =>{
-        // const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/${deck_id}/counted_list/`);
-        // const deckListData = await response.json();
-        // setCountedMainList(deckListData[0])
-        // setCountedPluckList(deckListData[1])
-    };
-
     const getShuffledDeck = async() =>{
         const shuffledDeck = main_list.slice(0)
         let currentIndex = shuffledDeck.length,  randomIndex;
@@ -150,10 +142,6 @@ function DeckDetailPage(props) {
 
     useEffect(() => {
         window.scroll(0, 0);
-        getCountedDeckList();
-    },[]);
-
-    useEffect(() => {
         document.title = `${deck.name} - PM CardBase`
         return () => {
             document.title = "PlayMaker CardBase"
@@ -200,8 +188,6 @@ function DeckDetailPage(props) {
     const handleShowPluck = (event) => {
         setShowPluck(!showPluck);
     };
-
-    const navigate = useNavigate()
 
 
     return (
@@ -370,6 +356,10 @@ function DeckDetailPage(props) {
             <DeckExport deck_id={deck_id} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
             <BackButton/>
             </div>
+            <StatsPanel
+                main_list={main_list}
+                pluck_list={pluck_list}
+            />
             {listView?
                         <div className="deck-list media-display">
                             <div className="maindeck3">

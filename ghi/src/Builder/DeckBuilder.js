@@ -6,13 +6,21 @@ import { BuilderQueryContext } from "../context/BuilderQueryContext";
 import BuilderCardSearch from "./BuilderCardSearch";
 import FEDeckExport from "../Decks/FEDeckExport";
 import DeckImport from './DeckImport'
+import StatsPanel from "./StatsPanel";
 
 
 function DeckBuilder(props) {
+    const {query,
+        sortState,
+        boosterSet,
+        rarity,
+        listView,
+        showMore,
+        setShowMore} = useContext(BuilderQueryContext)
 
+    const fileInput = useRef(null);
     const [importedDecks, setImportedDecks] = useState([]);
     const [showDecks, setShowDecks] = useState(false);
-    const fileInput = useRef(null);
 
     const handleFileChange = (event) => {
         const files = event.target.files;
@@ -23,19 +31,18 @@ function DeckBuilder(props) {
                 const file = files[i];
                 const reader = new FileReader();
 
-            reader.onload = (e) => {
-                try {
-                    const importedDeck = JSON.parse(e.target.result);
-                    importedDecksArray.push(importedDeck);
-                    // If all files have been read, update the state
-                    if (importedDecksArray.length === files.length) {
-                        setImportedDecks((prevDecks) => [...prevDecks, ...importedDecksArray]);
+                reader.onload = (e) => {
+                    try {
+                        const importedDeck = JSON.parse(e.target.result);
+                        importedDecksArray.push(importedDeck);
+                        // If all files have been read, update the state
+                        if (importedDecksArray.length === files.length) {
+                            setImportedDecks((prevDecks) => [...prevDecks, ...importedDecksArray]);
+                        }
+                    } catch (error) {
+                        console.error('Error parsing imported deck JSON:', error);
                     }
-                } catch (error) {
-                    console.error('Error parsing imported deck JSON:', error);
-                }
-            };
-
+                };
                 reader.readAsText(file);
             }
         }
@@ -83,20 +90,13 @@ function DeckBuilder(props) {
     });
 
     const { cards, booster_sets } = props
-    const {query,
-        sortState,
-        boosterSet,
-        rarity,
-        listView,
-        showMore,
-        setShowMore} = useContext(BuilderQueryContext)
+
 
     const [main_list, setMainList] = useState([]);
     const [pluck_list, setPluckList] = useState([]);
     const combinedList = main_list.concat(pluck_list);
     const uniqueList = [...new Set(combinedList)];
 
-    const [selectedList, setSelectedList] = useState([]);
     const [selectedCard, setSelectedCard] = useState(null);
 
     const [showPool, setShowPool] = useState(true);
@@ -127,11 +127,11 @@ function DeckBuilder(props) {
         .filter(card => card.hero_id.toLowerCase().includes(query.heroID.toLowerCase()))
         .filter(card => card.series_name.toLowerCase().includes(query.series.toLowerCase()))
         .filter(card => card.illustrator.toLowerCase().includes(query.illustrator.toLowerCase()))
-        .filter(card => query.type? card.card_type.some(type => type.toString() == query.type):card.card_type)
+        .filter(card => query.type? card.card_type.some(type => type.toString() === query.type):card.card_type)
         .filter(card => card.card_class.includes(query.cardClass))
-        .filter(card => query.extraEffect? card.extra_effects.some(effect => effect.toString() == query.extraEffect):card.extra_effects)
-        .filter(card => query.reaction? card.reactions.some(reaction => reaction.toString() == query.reaction):card.reactions)
-        .filter(card => query.tag? card.card_tags.some(tag => tag.toString() == query.tag):card.card_tags)
+        .filter(card => query.extraEffect? card.extra_effects.some(effect => effect.toString() === query.extraEffect):card.extra_effects)
+        .filter(card => query.reaction? card.reactions.some(reaction => reaction.toString() === query.reaction):card.reactions)
+        .filter(card => query.tag? card.card_tags.some(tag => tag.toString() === query.tag):card.card_tags)
         .filter(card => boosterSet && !rarity ? boosterSet.all_cards.includes(card.card_number):card.card_number)
         .filter(card => boosterSet && rarity ? boosterSet[rarity].includes(card.card_number):card.card_number)
         .sort(sortMethods[sortState].method)
@@ -143,18 +143,6 @@ function DeckBuilder(props) {
     const handleChange = (event) => {
         setDeck({ ...deck, [event.target.name]: event.target.value });
     };
-
-    const handleCoverCardChange = (event) => {
-        setSelectedCard( event.target.value );
-        setDeck({ ...deck, [event.target.name]: event.target.value });
-    };
-
-    const handleStrategyChange = e => {
-        let { options } = e.target;
-        options = Array.apply(null, options)
-        const selectedValues = options.filter(x => x.selected).map(x => x.value);
-        setSelectedList(selectedValues);
-    }
 
     const handleClick = (card) => {
         if (card.card_type[0] === 1006 ||
@@ -238,44 +226,45 @@ function DeckBuilder(props) {
             return randomString;
         }
 
-
     return (
         <div className="white-space">
             <div className="between-space">
-                <div id="create-deck-page">
-                    <h1 className="left-h1">Deck Builder</h1>
-                    <BuilderCardSearch boosterSets={booster_sets}/>
-                    <br/>
-                    <div className="media-bot-30">
-                        <h2 className="left media-margin-top-none">Deck Name</h2>
-                        <input
-                            className="builder-input"
-                            type="text"
-                            placeholder=" Deck Name"
-                            onChange={handleChange}
-                            name="name"
-                            value={deck.name}>
-                        </input>
+                <span className="media-flex-center">
+                    <div>
+                        <h1 className="left-h1">Deck Builder</h1>
+                        <BuilderCardSearch boosterSets={booster_sets}/>
                         <br/>
-                        <div style={{display: "flex", marginTop: "3px"}}>
-                            <FEDeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
-                            <button
-                                className="left red"
-                                style={{ marginTop: "5px"}}
-                                onClick={clearMain}
-                                >
-                                Clear Main
-                            </button>
-                            <button
-                                className="left red"
-                                style={{ marginTop: "5px"}}
-                                onClick={clearPluck}
-                                >
-                                Clear Pluck
-                            </button>
+                        <div className="media-bot-30">
+                            <h2 className="left media-margin-top-none">Deck Name</h2>
+                            <input
+                                className="builder-input"
+                                type="text"
+                                placeholder=" Deck Name"
+                                onChange={handleChange}
+                                name="name"
+                                value={deck.name}>
+                            </input>
+                            <br/>
+                            <div style={{display: "flex", marginTop: "3px"}}>
+                                <FEDeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
+                                <button
+                                    className="left red"
+                                    style={{ marginTop: "5px"}}
+                                    onClick={clearMain}
+                                    >
+                                    Clear Main
+                                </button>
+                                <button
+                                    className="left red"
+                                    style={{ marginTop: "5px"}}
+                                    onClick={clearPluck}
+                                    >
+                                    Clear Pluck
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </span>
                 <div className={showPool ? "cardpool2" : "no-cardpool"}>
                     <div style={{marginLeft: "0px"}}>
                         <div style={{display: "flex", alignItems: "center"}}>
@@ -328,17 +317,21 @@ function DeckBuilder(props) {
                 </div>
             </div>
             <DeckImport
-                    fileInput={fileInput}
-                    importDeck={importDeck}
-                    importedDecks={importedDecks}
-                    showDecks={showDecks}
-                    handleFileChange={handleFileChange}
-                    handleShowDecks={handleShowDecks}
-                    clearDecks={clearDecks}
+                fileInput={fileInput}
+                importDeck={importDeck}
+                importedDecks={importedDecks}
+                showDecks={showDecks}
+                handleFileChange={handleFileChange}
+                handleShowDecks={handleShowDecks}
+                clearDecks={clearDecks}
             />
-
-                {listView?
-                    <div className="deck-list">
+            <StatsPanel
+                main_list={main_list}
+                pluck_list={pluck_list}
+                handleRemoveCard={handleRemoveCard}
+            />
+            {listView?
+                <div className="deck-list">
                         <div className="maindeck3">
                         <div style={{marginLeft: "20px"}}>
                             <div style={{display: "flex", alignItems: "center"}}>
@@ -409,7 +402,7 @@ function DeckBuilder(props) {
                         </div>
                     </div>
                 </div>
-                :<>
+            :<>
                     <div className="maindeck">
                         <div>
                             <div style={{display: "flex", alignItems: "center", marginLeft: "20px"}}>

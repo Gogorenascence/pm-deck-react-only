@@ -1969,6 +1969,25 @@ button:hover {
     outline: 1px solid rgba(255, 255, 255, 0.3);
   }
 
+  .logo6 {
+    margin: 2px 4px 4px 5px;
+    width: 54px;
+    z-index: -1;
+  }
+
+  .card-pool-fill4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+    grid-auto-flow: dense;
+    /* margin-right: 18px; */
+    justify-self: center;
+    margin: 10px;
+    opacity: 1;
+    /* max-height: 2000px; */
+    transition: all 0.5s;
+  }
+
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;
@@ -2306,6 +2325,11 @@ button:hover {
     transform: none; /* Reset the transform property */
   }
 
+  .media-flex-center {
+    display: flex;
+    justify-content: center;
+  }
+
   .nav-main {
     height: 66px;
     align-items: center;
@@ -2436,7 +2460,7 @@ button:hover {
     background-color: rgba(117, 90, 182, 0.315);
     border: 2px solid rgb(68, 17, 206);
     border-radius: 5px;
-    height: 56px;
+    height: 95px;
     width: 100%;
     outline: 1px solid white;
     transition: all 0.5s;

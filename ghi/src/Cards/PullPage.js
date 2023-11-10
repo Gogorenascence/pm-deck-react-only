@@ -20,12 +20,9 @@ function PullPage(props) {
         setPulls,
         pullsList,
         pulling,
-        setPulling,
-    }= useContext(PullsContext);
+    } = useContext(PullsContext);
 
     const [loading, setLoading] = useState(false)
-
-    const [listView, setListView] = useState(false);
     const [fullView, setFullView] = useState(false)
 
     const boosterSet = boosterSets.find(boosterSet => boosterSet.id === card_set_id)
@@ -62,7 +59,7 @@ function PullPage(props) {
         }
         const allPulls = savedPulls.concat(newPulls)
         console.log(allPulls)
-        setLoading(false)
+
         setPulls(allPulls)
 
         if (lastSavedPullRef.current) {
@@ -81,10 +78,6 @@ function PullPage(props) {
     useEffect(() => {
         getPulls()
     },[pulling]);
-
-    const handleListView = (event) => {
-        setListView(!listView);
-    };
 
     const handleFullView = (event) => {
         setFullView(!fullView);
@@ -118,7 +111,6 @@ function PullPage(props) {
     const getAllCards = (pulls) => {
         return pulls.reduce((all_cards, pull) => all_cards.concat(pull))
     }
-
 
     return (
         <div className="white-space">
