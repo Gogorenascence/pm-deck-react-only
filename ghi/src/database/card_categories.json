@@ -218,6 +218,7 @@
   "name": "Transformation",
   "description": "Cards that transform.",
   "support": [
+    1124,
     1135
   ],
   "anti_support": [],
@@ -231,10 +232,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 3,
-    "time": "00:42",
+    "day": 11,
+    "time": "00:14",
     "full_time": {
-      "$date": "2023-11-03T00:42:45.079Z"
+      "$date": "2023-11-11T00:14:29.192Z"
     }
   },
   "article": null
@@ -273,28 +274,29 @@
     "$oid": "6525fa97cb646354b039b88e"
   },
   "cat_type": "sub_series",
-  "name": "Defender",
-  "description": "Cards that boast a formidable defense.",
-  "support": [],
+  "name": "Support",
+  "description": "Cards that focus on defending, healing and other kinds of support.",
+  "support": [
+    1124
+  ],
   "anti_support": [],
   "created_on": {
     "year": 2023,
     "month": 10,
     "day": 11,
     "time": "01:29",
-    "full_time": {
-      "$date": "2023-10-11T01:29:59.595Z"
-    }
+    "full_time": "2023-10-11T01:29:59.595000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
+    "month": 11,
     "day": 11,
-    "time": "01:29",
+    "time": "00:14",
     "full_time": {
-      "$date": "2023-10-11T01:29:59.595Z"
+      "$date": "2023-11-11T00:14:43.256Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {
@@ -481,6 +483,7 @@
   "name": "Relaxation",
   "description": "Cards relaxing, reducing stress or taking part in leisure.",
   "support": [
+    1122,
     1138
   ],
   "anti_support": [],
@@ -494,10 +497,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 9,
-    "time": "01:03",
+    "day": 10,
+    "time": "19:37",
     "full_time": {
-      "$date": "2023-11-09T01:03:11.577Z"
+      "$date": "2023-11-10T19:37:53.180Z"
     }
   },
   "article": null
@@ -707,7 +710,6 @@
     1098,
     1101,
     1105,
-    1106,
     1110,
     1120,
     1121
@@ -718,19 +720,18 @@
     "month": 10,
     "day": 11,
     "time": "03:49",
-    "full_time": {
-      "$date": "2023-10-11T03:49:28.498Z"
-    }
+    "full_time": "2023-10-11T03:49:28.498000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
+    "month": 11,
     "day": 11,
-    "time": "03:49",
+    "time": "01:22",
     "full_time": {
-      "$date": "2023-10-11T03:49:28.498Z"
+      "$date": "2023-11-11T01:22:41.819Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {
@@ -851,26 +852,34 @@
   "cat_type": "series",
   "name": "MAX VARIABLE",
   "description": "Cards that are a part of the 'Max Variable' continuity. ",
-  "support": [],
-  "anti_support": [],
+  "support": [
+    1033,
+    1037,
+    1092,
+    1115,
+    1116
+  ],
+  "anti_support": [
+    1050,
+    1054
+  ],
   "created_on": {
     "year": 2023,
     "month": 10,
     "day": 12,
     "time": "23:27",
-    "full_time": {
-      "$date": "2023-10-12T23:27:27.137Z"
-    }
+    "full_time": "2023-10-12T23:27:27.137000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 12,
-    "time": "23:27",
+    "month": 11,
+    "day": 11,
+    "time": "00:46",
     "full_time": {
-      "$date": "2023-10-12T23:27:27.137Z"
+      "$date": "2023-11-11T00:46:26.823Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {
