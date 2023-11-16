@@ -277,7 +277,8 @@
   "name": "Support",
   "description": "Cards that focus on defending, healing and other kinds of support.",
   "support": [
-    1124
+    1124,
+    1171
   ],
   "anti_support": [],
   "created_on": {
@@ -290,10 +291,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 11,
-    "time": "00:14",
+    "day": 16,
+    "time": "03:35",
     "full_time": {
-      "$date": "2023-11-11T00:14:43.256Z"
+      "$date": "2023-11-16T03:35:44.079Z"
     }
   },
   "article": null
@@ -512,7 +513,9 @@
   "cat_type": "sub_series",
   "name": "Team",
   "description": "Cards composed of more than one person.",
-  "support": [],
+  "support": [
+    1171
+  ],
   "anti_support": [],
   "created_on": {
     "year": 2023,
@@ -523,11 +526,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 15,
-    "time": "21:32",
+    "month": 11,
+    "day": 16,
+    "time": "03:35",
     "full_time": {
-      "$date": "2023-10-15T21:32:59.193Z"
+      "$date": "2023-11-16T03:35:53.680Z"
     }
   },
   "article": null
