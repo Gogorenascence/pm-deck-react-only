@@ -1333,7 +1333,7 @@
   "card_number": 1049,
   "enthusiasm": 0,
   "effect_text": "All players and their Fighters take 1 damage. Add 3 to your Focus.",
-  "second_effect_text": "<C.Trigger> During the Start Phase or when this card is revealed, damage you and this card take is reduced by 1.",
+  "second_effect_text": "<C.Trigger> During the Start Phase or when this card is revealed, damage you and this card take this round is reduced by 1.",
   "illustrator": "ahtan_delmundo",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bnf.png",
   "file_name": "i1p1bnf",
@@ -1356,19 +1356,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:54",
+    "month": 11,
+    "day": 17,
+    "time": "16:17",
     "full_time": {
-      "$date": "2023-06-25T18:54:49.794Z"
+      "$date": "2023-11-17T16:17:37.274Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -6037,6 +6037,286 @@
     "time": "03:35",
     "full_time": {
       "$date": "2023-11-16T03:35:14.284Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "6557a428213995376071e6cb"
+  },
+  "name": "Recoil",
+  "card_class": "Power",
+  "hero_id": "R01",
+  "series_name": "Recoil//Energy//Brawler//Support",
+  "card_number": 1143,
+  "enthusiasm": null,
+  "effect_text": "If you have damage tokens on this card, deal 3 damage to your strongest foe.",
+  "second_effect_text": "<Trigger> During the Start Phase or during a foe's turn, 1  random card in your play gains damage plus 1 and add 1 to your Focus each time you or this card would take damage this round.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5rf.png",
+  "file_name": "i1r5rf.png",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [
+    1003
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 17,
+    "time": "17:34",
+    "full_time": {
+      "$date": "2023-11-17T17:34:32.497Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 17,
+    "time": "17:34",
+    "full_time": {
+      "$date": "2023-11-17T17:34:32.497Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "6557a7b5213995376071e6d4"
+  },
+  "name": "Kinetic Absorption!",
+  "card_class": "Power",
+  "hero_id": "R01",
+  "series_name": "Recoil//Energy//Brawler//Support",
+  "card_number": 1144,
+  "enthusiasm": null,
+  "effect_text": "Draw 1 card for each damage token on this card (max of 3).",
+  "second_effect_text": "<Trigger> When you would take damage, you place that damage on this Aura in your play instead and resolve this Aura's reaction.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5ra.png",
+  "file_name": "i1r5ra.png",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [
+    1002,
+    1002
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 17,
+    "time": "17:49",
+    "full_time": "2023-11-17T17:49:41.050000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 17,
+    "time": "17:51",
+    "full_time": {
+      "$date": "2023-11-17T17:51:46.107Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "6557a86c213995376071e6e5"
+  },
+  "name": "Inertian Fist!!",
+  "card_class": "Power",
+  "hero_id": "R01",
+  "series_name": "Recoil//Energy//Brawler//Support",
+  "card_number": 1145,
+  "enthusiasm": null,
+  "effect_text": "Deal 1 piercing damage to a foe for each damage token on your 1 Fighter or 1 Energy card in your play.",
+  "second_effect_text": "<Trigger> When you resolve a trigger effect, resolve the main effect of 1 Power card or Energy card in your play.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5rm.png",
+  "file_name": "i1r5rm.png",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 17,
+    "time": "17:52",
+    "full_time": {
+      "$date": "2023-11-17T17:52:44.742Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 17,
+    "time": "17:52",
+    "full_time": {
+      "$date": "2023-11-17T17:52:44.742Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "6557a94a213995376071e6ee"
+  },
+  "name": "\"Unleash Your Power!!!\"",
+  "card_class": "Power",
+  "hero_id": "R01",
+  "series_name": "Recoil//Energy//Brawler//Call",
+  "card_number": 1146,
+  "enthusiasm": 7,
+  "effect_text": "Target: All foes.//Damage dealt by this card can not be reduced.//1-5: Deal 2 damage.//6-11: Deal 1 piercing damage for each damage token on 1 card in your play.//12+: Deal 1 piercing damage for each damage token on 1 card in your play. Ignore the reaction(s) of defending Fighter(s).",
+  "second_effect_text": "",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5re.png",
+  "file_name": "i1r5re.png",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1002,
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 17,
+    "time": "17:56",
+    "full_time": {
+      "$date": "2023-11-17T17:56:26.248Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 17,
+    "time": "17:56",
+    "full_time": {
+      "$date": "2023-11-17T17:56:26.248Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "6557ba77213995376071e730"
+  },
+  "name": "The Last One Standing",
+  "card_class": "",
+  "hero_id": "R01",
+  "series_name": "Recoil//Energy//Brawler//Support",
+  "card_number": 1159,
+  "enthusiasm": null,
+  "effect_text": "<C.Trigger> During the Start Phase, Provoke All Moves (all foes must resolve their Move this round with you as one of the applicable targets). Damage you take this round is reduce by 1 and if your Fighter would be defeated, that Fighter gains Endure 1 (that Fighter is revealed).",
+  "second_effect_text": "",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl18re.png",
+  "file_name": "i1pl18re.png",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 17,
+    "time": "19:09",
+    "full_time": {
+      "$date": "2023-11-17T19:09:43.352Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 17,
+    "time": "19:09",
+    "full_time": {
+      "$date": "2023-11-17T19:09:43.352Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "655805fd213995376071ebe5"
+  },
+  "name": "Bio-Electric Aura",
+  "card_class": "",
+  "hero_id": "R01",
+  "series_name": "Recoil//Energy//Brawler//Support",
+  "card_number": 1158,
+  "enthusiasm": null,
+  "effect_text": "<Trigger> If you are targeted for 3 or more damage, discard this Item; reduce that damage by 2 and add 1 Energy Aura from your hand to your play.",
+  "second_effect_text": "",
+  "illustrator": "",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl18ri.png",
+  "file_name": "i1pl18ri.png",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 18,
+    "time": "00:31",
+    "full_time": {
+      "$date": "2023-11-18T00:31:57.439Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 18,
+    "time": "00:31",
+    "full_time": {
+      "$date": "2023-11-18T00:31:57.439Z"
     }
   },
   "alpha": null,

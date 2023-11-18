@@ -455,7 +455,9 @@
   "name": "Energy",
   "description": "Cards capable of energy manipulation.",
   "support": [
-    1133
+    1133,
+    1145,
+    1158
   ],
   "anti_support": [],
   "created_on": {
@@ -468,10 +470,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 3,
-    "time": "00:55",
+    "day": 18,
+    "time": "00:34",
     "full_time": {
-      "$date": "2023-11-03T00:55:30.622Z"
+      "$date": "2023-11-18T00:34:22.635Z"
     }
   },
   "article": null
@@ -637,7 +639,8 @@
     1101,
     1118,
     1121,
-    1125
+    1125,
+    1145
   ],
   "anti_support": [
     1013,
@@ -654,11 +657,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 13,
-    "time": "00:05",
+    "month": 11,
+    "day": 17,
+    "time": "17:59",
     "full_time": {
-      "$date": "2023-10-13T00:05:05.531Z"
+      "$date": "2023-11-17T17:59:23.192Z"
     }
   },
   "article": null
@@ -1164,6 +1167,35 @@
     "time": "23:42",
     "full_time": {
       "$date": "2023-10-24T23:42:07.504Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6557aac3213995376071e70b"
+  },
+  "cat_type": "series",
+  "name": "Recoil",
+  "description": "Cards that are a part of the 'Recoil' continuity.",
+  "article": "",
+  "support": [],
+  "anti_support": [],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 17,
+    "time": "18:02",
+    "full_time": {
+      "$date": "2023-11-17T18:02:43.433Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 17,
+    "time": "18:02",
+    "full_time": {
+      "$date": "2023-11-17T18:02:43.433Z"
     }
   }
 }]
