@@ -1329,11 +1329,11 @@
   "name": "Black Note",
   "card_class": "Canny",
   "hero_id": "BN1",
-  "series_name": "Black Note//Altered//Quest//Call",
+  "series_name": "Black Note//Altered//Call//Quest",
   "card_number": 1049,
   "enthusiasm": 0,
   "effect_text": "All players and their Fighters take 1 damage. Add 3 to your Focus.",
-  "second_effect_text": "<C.Trigger> During the Start Phase or when this card is revealed, damage you and this card take this round is reduced by 1.",
+  "second_effect_text": "<C.Trigger> During the Start Phase or during a player's turn, damage you and this card take this round is reduced by 1.",
   "illustrator": "ahtan_delmundo",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bnf.png",
   "file_name": "i1p1bnf",
@@ -1361,10 +1361,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 17,
-    "time": "16:17",
+    "day": 19,
+    "time": "23:11",
     "full_time": {
-      "$date": "2023-11-17T16:17:37.274Z"
+      "$date": "2023-11-19T23:11:26.634Z"
     }
   },
   "alpha": null,
@@ -1377,7 +1377,7 @@
   "name": "Debilitating Sound!",
   "card_class": "Canny",
   "hero_id": "BN1",
-  "series_name": "Black Note//Altered//Quest//Call",
+  "series_name": "Black Note//Altered//Call//Quest",
   "card_number": 1050,
   "enthusiasm": 0,
   "effect_text": "All players discard 1 Move or MAX VARIABLE replacing a Move from their play. \nIf no card was removed from your play, resolve 1 of the discarded Moves from the owner's discard pile.",
@@ -1402,13 +1402,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 9,
-    "day": 14,
-    "time": "16:15",
+    "month": 11,
+    "day": 19,
+    "time": "20:23",
     "full_time": {
-      "$date": "2023-09-14T16:15:43.428Z"
+      "$date": "2023-11-19T20:23:56.373Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1417,7 +1419,7 @@
   "name": "Super Sonic Riff!!",
   "card_class": "Canny",
   "hero_id": "BN1",
-  "series_name": "Black Note//Altered//Quest//Call",
+  "series_name": "Black Note//Altered//Call//Quest",
   "card_number": 1051,
   "enthusiasm": 0,
   "effect_text": "Deal 3 damage to a random foe and you take 2 damage.",
@@ -1440,19 +1442,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:55",
+    "month": 11,
+    "day": 19,
+    "time": "20:24",
     "full_time": {
-      "$date": "2023-06-25T18:55:01.747Z"
+      "$date": "2023-11-19T20:24:07.633Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1461,7 +1463,7 @@
   "name": "Max Reverb!!!",
   "card_class": "Canny",
   "hero_id": "BN1",
-  "series_name": "Black Note//Altered//Quest//Call",
+  "series_name": "Black Note//Altered//Call//Quest",
   "card_number": 1052,
   "enthusiasm": 5,
   "effect_text": "<Target> All foes. //If you are at critical HP, ignore the reaction(s) of defending Fighter(s) and reduce damage you take this round by 1.  //<1-5> Deal 2 piercing damage. Take 4 damage. //<6-11> Deal 3 piercing damage. Take 3 damage. //<12+> Deal 4 piercing damage. Take 2 damage.",
@@ -1487,11 +1489,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
+    "month": 11,
     "day": 19,
-    "time": "00:30",
+    "time": "20:24",
     "full_time": {
-      "$date": "2023-10-19T00:30:23.930Z"
+      "$date": "2023-11-19T20:24:21.963Z"
     }
   },
   "alpha": null,
@@ -1939,10 +1941,10 @@
   "name": "Earplugs",
   "card_class": "",
   "hero_id": "BN1",
-  "series_name": "Black Note//Altered//Quest//Call",
+  "series_name": "Black Note//Altered//Call//Quest",
   "card_number": 1103,
   "enthusiasm": 0,
-  "effect_text": "<Limited> Add 3 to your Focus.",
+  "effect_text": "<Limited> 1 Call card in your play gains damage plus 1.",
   "second_effect_text": "Once per round, if you or your defending Fighter would take damage from a reaction or self inflicted damage, reduce that damage by 2.",
   "illustrator": "ahtan_delmundo",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl13bni.png",
@@ -1962,19 +1964,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:57",
+    "month": 11,
+    "day": 19,
+    "time": "20:24",
     "full_time": {
-      "$date": "2023-06-25T18:57:19.806Z"
+      "$date": "2023-11-19T20:24:34.113Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1983,7 +1985,7 @@
   "name": "The Globetrotter",
   "card_class": "",
   "hero_id": "BN1",
-  "series_name": "Black Note//Altered//Quest//Call",
+  "series_name": "Black Note//Altered//Call//Quest",
   "card_number": 1104,
   "enthusiasm": 0,
   "effect_text": "<Trigger> When a card(s) is removed from your play, add 1 Call or Quest card from your hand to your play.",
@@ -2012,10 +2014,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 11,
-    "time": "00:08",
+    "day": 19,
+    "time": "20:24",
     "full_time": {
-      "$date": "2023-11-11T00:08:31.987Z"
+      "$date": "2023-11-19T20:24:43.983Z"
     }
   },
   "alpha": null,
@@ -2028,7 +2030,7 @@
   "name": "Tuning",
   "card_class": "",
   "hero_id": "BN1",
-  "series_name": "Black Note//Altered//Quest//Call",
+  "series_name": "Black Note//Altered//Call//Quest",
   "card_number": 1105,
   "enthusiasm": 0,
   "effect_text": "This Comeback counts as a Canny card in your play (this does not count towards play size).",
@@ -2051,19 +2053,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:57",
+    "month": 11,
+    "day": 19,
+    "time": "20:25",
     "full_time": {
-      "$date": "2023-06-25T18:57:29.459Z"
+      "$date": "2023-11-19T20:25:03.093Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -2205,7 +2207,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Cosmic//Nature//Team",
-  "card_number": 1123,
+  "card_number": 1125,
   "enthusiasm": 0,
   "effect_text": "<Trigger> During the Start Phase, if you have the highest Enthusiasm, add 2 to your Focus.",
   "second_effect_text": "<C.Trigger> At the start of a foe's turn, deal 2 damage to that foe if they have Enthusiasm lower than yours.",
@@ -2382,7 +2384,7 @@
   "series_name": "Ceifeira Preta//Mystic//Quest",
   "card_number": 1058,
   "enthusiasm": 0,
-  "effect_text": "This card can not target the same foe twice.//Discard 1 card from your strongest or weakest foe's hand  for each Comeback in your ownership (max of 3), then they draw 1 card for each Comeback in their ownership plus 1 (max of 3).",
+  "effect_text": "This card can not target the same foe twice.//Gain 1 Comeback, then discard 1 card from your strongest or weakest foe's hand  for each Comeback in your ownership (max of 3). That targeted foe draws 1 card for each Comeback in their ownership plus 1 (max of 3). ",
   "second_effect_text": "",
   "illustrator": "Hugo Roberto",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p3cpa.png",
@@ -2405,10 +2407,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 11,
-    "time": "00:17",
+    "day": 23,
+    "time": "14:22",
     "full_time": {
-      "$date": "2023-11-11T00:17:23.455Z"
+      "$date": "2023-11-23T14:22:14.006Z"
     }
   },
   "alpha": null,
@@ -3196,7 +3198,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Cosmic//Support//Transformation//Call",
-  "card_number": 1124,
+  "card_number": 1126,
   "enthusiasm": 0,
   "effect_text": "<Trigger> During a foe's turn; switch 1 unresolved card in your play with 1 card in your hand of the same type (the new card can not be used to defend).",
   "second_effect_text": "<Critical> Discard 1 card from your hand; gain 1 Support or Transformation card.",
@@ -4394,7 +4396,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Magic//Quest//Spoiler",
-  "card_number": 1125,
+  "card_number": 1127,
   "enthusiasm": 0,
   "effect_text": "<Trigger> During a foe’s turn, discard up to 2 cards from your hand/play; gain 1 HP for each card discarded.",
   "second_effect_text": "<Critical> Add 1 Staunch card and 1 Power card from the discard pile to your hand.",
@@ -4955,10 +4957,10 @@
   "_id": {
     "$oid": "644009582e72274cabf63cdd"
   },
-  "name": "...And The Kitchen Sink!!",
+  "name": "\"...And The Kitchen Sink!!\"",
   "card_class": "Unity",
   "hero_id": "HS1",
-  "series_name": "Warp Family//Cosmic//Psychic",
+  "series_name": "Warp Family//Cosmic//Psychic//Call",
   "card_number": 1043,
   "enthusiasm": 0,
   "effect_text": "Deal 2 damage to a foe. If you have 4 or more Items in your ownership, deal 2 additional damage.",
@@ -4981,19 +4983,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:20",
+    "month": 11,
+    "day": 19,
+    "time": "19:28",
     "full_time": {
-      "$date": "2023-06-25T19:20:52.218Z"
+      "$date": "2023-11-19T19:28:21.223Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -5393,7 +5395,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Tech//Brawler//Spoiler",
-  "card_number": 1126,
+  "card_number": 1128,
   "enthusiasm": 0,
   "effect_text": "Discard 1 card from your hand; discard 1 Active Item in a foe’s ownership.",
   "second_effect_text": "<Critical> Add 1 Item from the discard pile to your ownership.",
@@ -5480,7 +5482,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Mystic//Quest//Relaxation",
-  "card_number": 1131,
+  "card_number": 1123,
   "enthusiasm": null,
   "effect_text": "Return 8 Mystic cards/Pluck with different names from their respective discard piles to the bottom of your Main deck/Pluck deck in any order; all Mystic cards in your play gain damage plus 1 this round (those cards deal 1 additional damage at the end of their resolutions).",
   "second_effect_text": "",
@@ -5522,7 +5524,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Fortune//Brawler",
-  "card_number": 1132,
+  "card_number": 1124,
   "enthusiasm": null,
   "effect_text": "Discard 7 Pluck in your ownership; deal 5 piercing damage to a foe and ignore the reaction(s) of defending Fighter(s). Trigger effects can not be used in response to this Event.",
   "second_effect_text": "",
@@ -5651,7 +5653,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Transformation//Fortune//Magic//Brawler",
-  "card_number": 1135,
+  "card_number": 1137,
   "enthusiasm": null,
   "effect_text": "If you are targeted for 4 or more damage, resolve this Comeback as if you were at critical HP (quick effect).",
   "second_effect_text": "<C.Trigger> If you targeted for damage, add 1 Transformation card from your hand or discard pile to your play, then resolve its main effect.",
@@ -5696,7 +5698,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Tech//Support",
-  "card_number": 1127,
+  "card_number": 1129,
   "enthusiasm": null,
   "effect_text": "<Limited> Place up to 3 cards from your hand under this Item (if this Item is removed from your Active Pluck or changes ownership, the placed cards are discarded).",
   "second_effect_text": "All Cosmic, Magic and Mystic cards take 1 damage and gain damage minus 1 when they are revealed. \nDiscard 1 of this Item's placed card during the End Phase or discard this Item.",
@@ -5740,7 +5742,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Cosmic//Mystic//Fortune",
-  "card_number": 1128,
+  "card_number": 1130,
   "enthusiasm": null,
   "effect_text": "Discard this Item and 1 unresolved card in your play; damage dealt by 1 Cosmic or Mystic Move in your play is treated as bypassing damage. ",
   "second_effect_text": "<Trigger> During the Start Phase, if you have 7 or more Cosmic/Mystic cards in your hand/play, return this Item to your Active Pluck. ",
@@ -5784,7 +5786,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Brawler//Tactical//Tech",
-  "card_number": 1136,
+  "card_number": 1138,
   "enthusiasm": null,
   "effect_text": "Add 1 Brawler or Tactical card from the discard pile to your hand. Provoke 1 Move (1 select foe must resolve their Move this round with you as one of the applicable targets).",
   "second_effect_text": "<C.Trigger> If you targeted for damage, your Brawler or Tactical Fighter gains Redirect 1 (that card is revealed).",
@@ -5829,7 +5831,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Magic//Fortune//Quest",
-  "card_number": 1129,
+  "card_number": 1131,
   "enthusiasm": null,
   "effect_text": "All Magic Auras and Moves gain damage plus 1. \nIf your play has no Magic cards, discard this Item.",
   "second_effect_text": "<Trigger>During the Start Phase, if you have 7 or more Magic cards in your hand/play, return this Item to your Active Pluck.  ",
@@ -5873,7 +5875,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Altered//Nature//Tech",
-  "card_number": 1130,
+  "card_number": 1132,
   "enthusiasm": null,
   "effect_text": "<Limited> Place 1 Altered Fighter or Aura from your hand under this Item (if this Item is removed from your Active Pluck or changes ownership, the placed card(s) is discarded).",
   "second_effect_text": "When this Item is removed from your Active Pluck, add this Item's placed card(s) to your play.",
@@ -5917,7 +5919,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Psychic//Energy",
-  "card_number": 1137,
+  "card_number": 1139,
   "enthusiasm": null,
   "effect_text": "If you have a Psychic card in your play, return 1 Active Item in a player's ownership to the top of their Pluck deck.",
   "second_effect_text": "<C.Trigger> When a Item is resolving, If you have a Psychic card in your play, cancel the non-damaging effects of the resolving Item and send it to the discard pile.",
@@ -5961,7 +5963,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Quest//Relaxation",
-  "card_number": 1138,
+  "card_number": 1140,
   "enthusiasm": null,
   "effect_text": "Add 1 to your next Focus roll for each Quest/Relaxation card/Pluck you resolve this turn (max of 4).",
   "second_effect_text": "<Trigger> During the End Phase, if your hand has no cards, draw 1 card for each Quest/Relaxation card/Pluck you discard for End Phase maintenance (max of 4).",
@@ -6006,7 +6008,7 @@
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Support//Team//Brawler//Tactical",
-  "card_number": 1171,
+  "card_number": 1135,
   "enthusiasm": null,
   "effect_text": "If you have 2 or more Support/Team cards in your play, all non-Support/Team cards in your play gains damage plus 1 and add 2 to your Focus for each Support/Team card in your play (max of 4).",
   "second_effect_text": "",
@@ -6100,8 +6102,8 @@
   "series_name": "Recoil//Energy//Brawler//Support",
   "card_number": 1144,
   "enthusiasm": null,
-  "effect_text": "Draw 1 card for each damage token on this card (max of 3).",
-  "second_effect_text": "<Trigger> When you would take damage, you place that damage on this Aura in your play instead and resolve this Aura's reaction.",
+  "effect_text": "Draw 1 card for each damage token on this card (max of 2).",
+  "second_effect_text": "<Trigger> When you would take damage, place 2 of the damage tokens on this Aura in your play instead and resolve this Aura's reaction.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5ra.png",
   "file_name": "i1r5ra.png",
@@ -6128,10 +6130,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 17,
-    "time": "17:51",
+    "day": 23,
+    "time": "04:26",
     "full_time": {
-      "$date": "2023-11-17T17:51:46.107Z"
+      "$date": "2023-11-23T04:26:38.736Z"
     }
   },
   "alpha": null,
@@ -6147,7 +6149,7 @@
   "series_name": "Recoil//Energy//Brawler//Support",
   "card_number": 1145,
   "enthusiasm": null,
-  "effect_text": "Deal 1 piercing damage to a foe for each damage token on your 1 Fighter or 1 Energy card in your play.",
+  "effect_text": "Deal 1 piercing damage to a foe for each damage token on your defending Fighter or 1 Energy card in your play.",
   "second_effect_text": "<Trigger> When you resolve a trigger effect, resolve the main effect of 1 Power card or Energy card in your play.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5rm.png",
@@ -6168,17 +6170,15 @@
     "month": 11,
     "day": 17,
     "time": "17:52",
-    "full_time": {
-      "$date": "2023-11-17T17:52:44.742Z"
-    }
+    "full_time": "2023-11-17T17:52:44.742000"
   },
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 17,
-    "time": "17:52",
+    "day": 19,
+    "time": "21:59",
     "full_time": {
-      "$date": "2023-11-17T17:52:44.742Z"
+      "$date": "2023-11-19T21:59:12.624Z"
     }
   },
   "alpha": null,
@@ -6239,7 +6239,7 @@
   "series_name": "Recoil//Energy//Brawler//Support",
   "card_number": 1159,
   "enthusiasm": null,
-  "effect_text": "<C.Trigger> During the Start Phase, Provoke All Moves (all foes must resolve their Move this round with you as one of the applicable targets). Damage you take this round is reduce by 1 and if your Fighter would be defeated, that Fighter gains Endure 1 (that Fighter is revealed).",
+  "effect_text": "<C.Trigger> During a player's turn, Provoke All Moves (all foes must resolve their Move this round with you as one of the applicable targets). If the only Fighter in your play is Power or Energy, damage you take this round is reduced by 1 and your Fighter gains Endure 1 (that Fighter is revealed).",
   "second_effect_text": "",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl18re.png",
@@ -6260,17 +6260,15 @@
     "month": 11,
     "day": 17,
     "time": "19:09",
-    "full_time": {
-      "$date": "2023-11-17T19:09:43.352Z"
-    }
+    "full_time": "2023-11-17T19:09:43.352000"
   },
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 17,
-    "time": "19:09",
+    "day": 23,
+    "time": "14:48",
     "full_time": {
-      "$date": "2023-11-17T19:09:43.352Z"
+      "$date": "2023-11-23T14:48:32.853Z"
     }
   },
   "alpha": null,
@@ -6286,7 +6284,7 @@
   "series_name": "Recoil//Energy//Brawler//Support",
   "card_number": 1158,
   "enthusiasm": null,
-  "effect_text": "<Trigger> If you are targeted for 3 or more damage, discard this Item; reduce that damage by 2 and add 1 Energy Aura from your hand to your play.",
+  "effect_text": "<Trigger> If you are targeted for 3 or more damage, discard this Item; reduce that damage by 1 and add 1 Energy Aura from your hand to your play.",
   "second_effect_text": "",
   "illustrator": "",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl18ri.png",
@@ -6306,17 +6304,60 @@
     "month": 11,
     "day": 18,
     "time": "00:31",
-    "full_time": {
-      "$date": "2023-11-18T00:31:57.439Z"
-    }
+    "full_time": "2023-11-18T00:31:57.439000"
   },
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 18,
-    "time": "00:31",
+    "day": 23,
+    "time": "04:27",
     "full_time": {
-      "$date": "2023-11-18T00:31:57.439Z"
+      "$date": "2023-11-23T04:27:50.195Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "655a45d616fc04a6626deaa1"
+  },
+  "name": "Right Back Up!",
+  "card_class": "",
+  "hero_id": "R01",
+  "series_name": "Recoil//Energy//Brawler//Support",
+  "card_number": 1160,
+  "enthusiasm": null,
+  "effect_text": "Take 2 damage; add 2 to your Focus.",
+  "second_effect_text": "<C.Trigger> If a card in your play is defeated, add that card from the discard pile to your play with 4 damage tokens. The added card can not be resolved or used towards focus this round (you can not defend with the added card).",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl18rcb.png",
+  "file_name": "i1pl18rcb.png",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1001,
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 19,
+    "time": "17:28",
+    "full_time": "2023-11-19T17:28:54.250000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 11,
+    "day": 23,
+    "time": "04:27",
+    "full_time": {
+      "$date": "2023-11-23T04:27:20.855Z"
     }
   },
   "alpha": null,
