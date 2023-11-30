@@ -1814,7 +1814,7 @@
   "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1091,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> During the Start Phase, discard 1 card from your hand; resolve one of the following effects://<> Add 3 to your next Focus roll.//<> Add 3 to your Enthusiasm this round.",
+  "effect_text": "<Trigger> During the Start Phase, discard 1 card from your hand; resolve 1 of the following effects://<> Add 3 to your next Focus roll.//<> Add 3 to your Enthusiasm this round.",
   "second_effect_text": "Discard this Item after the third round of use.",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl09dwi.png",
@@ -1839,10 +1839,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 9,
-    "time": "01:07",
+    "day": 26,
+    "time": "17:09",
     "full_time": {
-      "$date": "2023-11-09T01:07:34.837Z"
+      "$date": "2023-11-26T17:09:59.599Z"
     }
   },
   "alpha": null,
@@ -6329,7 +6329,7 @@
   "card_number": 1160,
   "enthusiasm": null,
   "effect_text": "Take 2 damage; add 2 to your Focus.",
-  "second_effect_text": "<C.Trigger> If a card in your play is defeated, add that card from the discard pile to your play with 4 damage tokens. The added card can not be resolved or used towards focus this round (you can not defend with the added card).",
+  "second_effect_text": "<C.Trigger> If a card in your play is discarded, add that card from the discard pile to your play and place 4 damage tokens on (you can not defend with the added card).",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl18rcb.png",
   "file_name": "i1pl18rcb.png",
@@ -6354,10 +6354,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 23,
-    "time": "04:27",
+    "day": 30,
+    "time": "00:11",
     "full_time": {
-      "$date": "2023-11-23T04:27:20.855Z"
+      "$date": "2023-11-30T00:11:19.412Z"
     }
   },
   "alpha": null,
