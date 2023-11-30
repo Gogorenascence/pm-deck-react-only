@@ -777,7 +777,7 @@
   "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1035,
   "enthusiasm": 0,
-  "effect_text": "<Target> Your strongest foe. //<1-5> Deal 1 damage. //<6-11> Deal 2 damage. Add 1 Unity Move from your hand to your play, that card can not be resolved this round. //<12+> Deal 2 damage. Add 1 Unity Move from your hand to your play.",
+  "effect_text": "<Target> Your strongest foe. //<1-5> Deal 1 damage. //<6-11> Deal 2 damage. Add 1 Unity Move from your hand to your play, that card can not be resolved this round. //<12+> Deal 2 damage. Add 1 Unity Move or MAX VARIABLE as a Move from your hand to your play.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b1dwm.png",
@@ -800,11 +800,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 14,
-    "time": "00:26",
+    "month": 11,
+    "day": 30,
+    "time": "04:16",
     "full_time": {
-      "$date": "2023-10-14T00:26:01.675Z"
+      "$date": "2023-11-30T04:16:00.216Z"
     }
   },
   "alpha": null,
@@ -820,7 +820,7 @@
   "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1033,
   "enthusiasm": 0,
-  "effect_text": "Add 1 Move or MAX VARIABLE from your hand to your play (MAX VARIABLE counts as a Move).",
+  "effect_text": "Add 1 Move or MAX VARIABLE as a Move from your hand to your play.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b1dwf.png",
@@ -844,11 +844,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 14,
-    "time": "00:26",
+    "month": 11,
+    "day": 30,
+    "time": "04:14",
     "full_time": {
-      "$date": "2023-10-14T00:26:30.780Z"
+      "$date": "2023-11-30T04:14:36.803Z"
     }
   },
   "alpha": null,
@@ -2554,7 +2554,7 @@
   "series_name": "Warp Family//Cosmic//Psychic",
   "card_number": 1054,
   "enthusiasm": 0,
-  "effect_text": "Discard 1 Aura, Move or Ending in a foe's play, then that foe adds 1 random card matching the removed card's type or MAX VARIABLE from their hand to their play (the new card is revealed). ",
+  "effect_text": "Discard 1 Aura, Move or Ending in a foe's play, then that foe adds 1 random card matching the removed card's type or MAX VARIABLE as the removed card's type from their hand to their play.",
   "second_effect_text": "<Trigger> During a foe's turn, resolve this Aura in your play.",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pa.png",
@@ -2574,19 +2574,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:58",
+    "month": 11,
+    "day": 30,
+    "time": "04:13",
     "full_time": {
-      "$date": "2023-06-25T18:58:34.802Z"
+      "$date": "2023-11-30T04:13:28.997Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -2987,7 +2987,7 @@
   "series_name": "Ceifeira Preta//Mystic//Quest//Transformation",
   "card_number": 1110,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> If you are targeted for damage, apply each of the following effects for each Comeback in your ownership: //<1> Your Fighter is treated as Canny. //<2> Discard 1 card in your strongest or weakest foe's hand. //<3> You can discard 1 card in your play; you are unaffected by the effect(s) of the card targeting you. //<4+> Your next Move and next Ending gain damage plus 1.",
+  "effect_text": "<Trigger> If you are targeted for damage, apply each of the following effects for each Comeback in your ownership: //<1> Your Fighter is treated as Canny. //<2> Discard 1 card in your strongest or weakest foe's hand.//<3> Your Aura, Move and Ending gain damage plus 1.//<4+> Discard 1 unresolved card from your play; you are unaffected by the effect(s) of the card targeting you.",
   "second_effect_text": "",
   "illustrator": "Hugo Roberto",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl15cpe.png",
@@ -3007,19 +3007,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:09",
+    "month": 11,
+    "day": 30,
+    "time": "04:30",
     "full_time": {
-      "$date": "2023-06-25T19:09:18.581Z"
+      "$date": "2023-11-30T04:30:42.493Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4835,7 +4835,7 @@
   "series_name": "Hive//Tech//Nature",
   "card_number": 1095,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> If a foe adds a face-up card(s) to their play, discard 1 other Pluck in your ownership; add that card (max of 1) to your play instead and they draw 2 cards. Discard the added card during the End Phase or when this Event is removed from your Active Pluck. ",
+  "effect_text": "<Trigger> If a foe adds a card(s) to their hand or face-up to their play, discard 1 Item in your Active Pluck; add that card (max of 1) to your play instead and they draw 2 cards. Discard the added card during the End Phase or when this Event is removed from your Active Pluck.",
   "second_effect_text": "",
   "illustrator": "layonsin.art",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl10he.png",
@@ -4860,10 +4860,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 10,
-    "time": "17:50",
+    "day": 30,
+    "time": "03:34",
     "full_time": {
-      "$date": "2023-11-10T17:50:39.213Z"
+      "$date": "2023-11-30T03:34:51.271Z"
     }
   },
   "alpha": null,
@@ -5441,7 +5441,7 @@
   "series_name": "Hive//Tech//Nature",
   "card_number": 1037,
   "enthusiasm": 0,
-  "effect_text": "Draw 1 Pluck and reveal it; apply the following effects based on the Pluck revealed: //<Item> Add 1 Move or MAX VARIABLE from your hand to your play (MAX VARIABLE counts as an Move). //<Event> Reset 1 of your Pluck. //<Comeback> Add 1 Aura, Move or MAX VARIABLE from the discard pile to your hand.",
+  "effect_text": "Draw 1 Pluck and reveal it; apply the following effects based on the Pluck revealed: //<Item>  Add 1 Move or MAX VARIABLE as a Move from your hand to your play.//<Event> Reset 1 of your Pluck. //<Comeback> Add 1 Aura, Move or MAX VARIABLE from the discard pile to your hand.",
   "second_effect_text": "",
   "illustrator": "layonsin.art",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2hf.png",
@@ -5466,13 +5466,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:21",
+    "month": 11,
+    "day": 30,
+    "time": "04:14",
     "full_time": {
-      "$date": "2023-06-25T19:21:51.382Z"
+      "$date": "2023-11-30T04:14:13.515Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -5568,7 +5570,7 @@
   "series_name": "Tech//Energy",
   "card_number": 1133,
   "enthusiasm": null,
-  "effect_text": "All Tech and Energy cards in your play gain damage plus 1  (those cards deal 1 additional damage at the end of their resolutions). Take 1 damage and reduce your Focus by 1 each time you resolve a card or Pluck this round.",
+  "effect_text": "Add 1 card from the discard pile to your hand.\nAll Tech and Energy cards in your play gain damage plus 1 (those cards deal 1 additional damage at the end of their resolutions). Take 1 damage 1 each time you resolve a card.",
   "second_effect_text": "",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg11e.png",
@@ -5591,10 +5593,10 @@
   "updated_on": {
     "year": 2023,
     "month": 11,
-    "day": 3,
-    "time": "00:46",
+    "day": 30,
+    "time": "04:12",
     "full_time": {
-      "$date": "2023-11-03T00:46:11.214Z"
+      "$date": "2023-11-30T04:12:04.246Z"
     }
   },
   "alpha": null,
