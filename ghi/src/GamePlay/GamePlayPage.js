@@ -31,6 +31,11 @@ function GamePlayPage() {
                     title="Reactions"
                     imageSRC="https://i.imgur.com/8wqd1sD.png"
                 />
+                <SectionCard
+                    link="/simulator"
+                    title="Simulator"
+                    imageSRC="https://i.imgur.com/8wqd1sD.png"
+                />
             </div>
         </div>
     );

@@ -104,6 +104,7 @@ function CardDetailPage() {
     }, [card_number]);
 
     useEffect(() => {
+        console.log(card)
         document.title = `${card.name} - PM CardBase`
         return () => {
             document.title = "PlayMaker CardBase"

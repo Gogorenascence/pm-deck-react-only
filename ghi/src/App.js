@@ -26,6 +26,7 @@ import ExtraEffectsPage from "./GamePlay/ExtraEffects/ExtraEffectsPage";
 import ExtraEffectDetails from "./GamePlay/ExtraEffects/ExtraEffectDetailPage";
 import ReactionsPage from "./GamePlay/Reactions/ReactionsPage";
 import ReactionDetails from "./GamePlay/Reactions/ReactionDetailPage";
+import SimulatorPage from "./Simulator/SimulatorPage";
 import UnderConstruction from "./display/UnderConstruction";
 
 
@@ -63,8 +64,6 @@ function App() {
     {deck["id"] = deck._id.$oid
     return deck
   })
-
-
 
   return (
 
@@ -137,6 +136,14 @@ function App() {
                                                               reactionProps={reactions}
                                                               cards={cards}
                                                             />} />
+              <Route path="/simulator" element={<SimulatorPage
+                                                decks={decks}
+                                                pre_processed_cards={cards}
+                                                card_types={card_types}
+                                                card_tags={card_tags}
+                                                extra_effects={extra_effects}
+                                                reactions={reactions}
+                                                />} />
 
             </Routes>
 
