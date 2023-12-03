@@ -265,7 +265,7 @@ function DeckBuilder(props) {
                         </div>
                     </div>
                 </span>
-                <div className={showPool ? "cardpool2" : "no-cardpool"}>
+                <div className={showPool ? "cardpool2-ro" : "no-cardpool-ro"}>
                     <div style={{marginLeft: "0px"}}>
                         <div style={{display: "flex", alignItems: "center"}}>
                             <h2

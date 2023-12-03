@@ -536,7 +536,7 @@ function PullsDeckBuilder(props) {
                     </div>
                 </span>
                 {all_cards.length?
-                    <div className={showPool ? "cardpool2" : "no-cardpool2"}>
+                    <div className={showPool ? "cardpool2-ro" : "no-cardpool2-ro"}>
                         <div style={{marginLeft: "0px"}}>
                             <div style={{display: "flex", alignItems: "center"}}>
                                 <h2
@@ -598,7 +598,7 @@ function PullsDeckBuilder(props) {
                             </div>
                         </div>
                     </div>:
-                    <div className="no-cardpool3">
+                    <div className="no-cardpool3-ro">
                         <div style={{marginLeft: "0px"}}>
                             <div style={{display: "flex", alignItems: "center"}}>
                                 <h2
