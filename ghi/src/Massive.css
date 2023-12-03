@@ -683,20 +683,6 @@ button:hover {
   border: none;
 }
 
-@keyframes pulse2 {
-  0% {
-    outline: 7px solid rgb(255, 255, 255);
-  }
-  50% {
-    outline: 7px solid rgba(255, 255, 255, 0.308);
-  }
-  100% {
-    outline: 7px solid rgb(255, 255, 255);
-  }
-}
-
-
-
 .add-comp-button {
   margin: 15px 10px 10px 5px;
   width: 100px;
@@ -1801,6 +1787,18 @@ button:hover {
     padding: 0px;
   }
 
+  .margin-top-93 {
+    margin-top: 93px;
+  }
+
+  .margin-left {
+    margin-left: 20px;
+  }
+
+  .margin-bottom-0 {
+    margin-bottom: 0px;
+  }
+
   .navbar {
     top: 0;
     height: 66px;
@@ -1842,6 +1840,7 @@ button:hover {
     max-height: 1000px;
     transition: opacity 0.5s, max-height 0.5s;
   }
+
 
   .wide90p {
     width: 90%;
@@ -2688,6 +2687,76 @@ button:hover {
     border-radius: 7px;
     overflow: hidden;
     border: 1px solid white;
+  }
+
+
+  @keyframes pulse2 {
+    0% {
+      outline: 7px solid rgb(255, 255, 255);
+    }
+    50% {
+      outline: 7px solid rgba(255, 255, 255, 0.308);
+    }
+    100% {
+      outline: 7px solid rgb(255, 255, 255);
+    }
+  }
+
+  @keyframes pulse3 {
+    0% {
+      filter: brightness(1.5);
+    }
+    50% {
+      filter: brightness(0.5);
+    }
+    100% {
+      filter: brightness(1.5);
+    }
+  }
+
+  @keyframes pulse4 {
+    0% {
+      filter: brightness(1.5);
+      background-color: rgba(255, 255, 255, 0.171);
+    }
+    50% {
+      filter: brightness(0.5);
+      background-color: rgba(255, 255, 255, 0);
+    }
+    100% {
+      filter: brightness(1.5);
+      background-color: rgba(255, 255, 255, 0.171);
+    }
+  }
+
+  @keyframes pulse5 {
+    0% {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    50% {
+      background-color: rgba(0, 0, 0, 0.75);
+    }
+    100% {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translate(-1500px, 0);
+    }
+    10% {
+      transform: translate(-1500px, 0);
+    }
+    25% {
+      transform: translate(0, 0);
+    }
+    75% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(1500px, 0);
+    }
   }
 
 @media screen and (max-width: 1330px) {
