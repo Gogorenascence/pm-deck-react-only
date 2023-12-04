@@ -45,6 +45,7 @@ function DeckBuilder(props) {
                 };
                 reader.readAsText(file);
             }
+            setShowDecks(true)
         }
     };
 
@@ -321,6 +322,7 @@ function DeckBuilder(props) {
                 importDeck={importDeck}
                 importedDecks={importedDecks}
                 showDecks={showDecks}
+                setShowDecks={setShowDecks}
                 handleFileChange={handleFileChange}
                 handleShowDecks={handleShowDecks}
                 clearDecks={clearDecks}

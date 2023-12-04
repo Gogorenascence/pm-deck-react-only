@@ -47,6 +47,7 @@ function DeckCopy(props) {
                 };
                 reader.readAsText(file);
             }
+            setShowDecks(true)
         }
     };
 
