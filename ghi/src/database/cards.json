@@ -1380,7 +1380,7 @@
   "series_name": "Black Note//Altered//Call//Quest",
   "card_number": 1050,
   "enthusiasm": 0,
-  "effect_text": "All players discard 1 Move or MAX VARIABLE replacing a Move from their play. \nIf no card was removed from your play, resolve 1 of the discarded Moves from the owner's discard pile.",
+  "effect_text": "All players discard 1 Move from their play. If no card was removed from your play, resolve 1 of the discarded Moves from the owner's discard pile.",
   "second_effect_text": "",
   "illustrator": "ahtan_delmundo",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bna.png",
@@ -1402,11 +1402,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 19,
-    "time": "20:23",
+    "month": 12,
+    "day": 4,
+    "time": "17:26",
     "full_time": {
-      "$date": "2023-11-19T20:23:56.373Z"
+      "$date": "2023-12-04T17:26:21.445Z"
     }
   },
   "alpha": null,
@@ -2298,7 +2298,7 @@
   "series_name": "Relaxation//Mystic//Nature//Team",
   "card_number": 1122,
   "enthusiasm": 0,
-  "effect_text": "Gain 1 Relaxation Pluck.//Players can not use the effects of Fighters, MAX VARIABLE replacing a Fighter or reactions this round.//You can not resolve this Event if you used the effect(s) of a Fighter(s) or a reaction(s) this round.",
+  "effect_text": "Gain 1 Relaxation Pluck. Return all non-defending Fighters to their owner's hands. Players can not use the effects of Fighters or reactions this round. You can not resolve this Event if your play has a Fighter(s) or a foe(s) has 1 or less cards in their play.",
   "second_effect_text": "",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg4e.png",
@@ -2320,11 +2320,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 16,
-    "time": "03:12",
+    "month": 12,
+    "day": 4,
+    "time": "18:23",
     "full_time": {
-      "$date": "2023-11-16T03:12:59.491Z"
+      "$date": "2023-12-04T18:23:29.517Z"
     }
   },
   "alpha": null,
@@ -2598,7 +2598,7 @@
   "series_name": "Warp Family//Cosmic//Psychic",
   "card_number": 1056,
   "enthusiasm": 16,
-  "effect_text": "<Target> Random foe. //If you have a Unity card in your play, add 3 to your focus. //<1-5> Deal 3 damage. //<6-11> Deal 3 damage. Discard 1 card from their hand. //<12+> Deal 3 damage. They discard 1 card from their play.",
+  "effect_text": "<Target> Random foe. //If you have a Unity card in your play, add 3 to your focus. //<1-5> Deal 3 damage. //<6-11> Deal 3 damage. Discard 1 card from their hand. //<12+> Deal 3 damage. They discard 1 card from their play and 1 card from their hand.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pe.png",
@@ -2617,19 +2617,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:58",
+    "month": 12,
+    "day": 4,
+    "time": "15:30",
     "full_time": {
-      "$date": "2023-06-25T18:58:39.540Z"
+      "$date": "2023-12-04T15:30:28.876Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -2641,7 +2641,7 @@
   "series_name": "Warp Family//Cosmic//Psychic",
   "card_number": 1055,
   "enthusiasm": 0,
-  "effect_text": "This card copies the text of a foe's Move on your left or right until the end of your turn (if their Move is face-down, reveal it).",
+  "effect_text": "This card copies the effect text of a foe's Aura or Move until the end of your turn (if the the selected card is face-down, reveal it).",
   "second_effect_text": "<Trigger> If you are targeted for damage, your Fighter gains Redirect 1 (that card is revealed).",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pm.png",
@@ -2661,19 +2661,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:08",
+    "month": 12,
+    "day": 4,
+    "time": "15:29",
     "full_time": {
-      "$date": "2023-06-25T19:08:33.350Z"
+      "$date": "2023-12-04T15:29:51.807Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
