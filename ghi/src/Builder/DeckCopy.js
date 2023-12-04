@@ -117,12 +117,12 @@ function DeckCopy(props) {
 
     useEffect(() => {
         getDeck()
-        document.title = "Deck Builder - PM CardBase"
+        document.title = "Deck Copy - PM CardBase"
         return () => {
             document.title = "PlayMaker CardBase"
         };
     // eslint-disable-next-line
-    },[deck_id, showPool]);
+    },[deck_id]);
 
     const sortMethods = {
         none: { method: (a,b) => a.card_number - b.card_number },
@@ -244,7 +244,7 @@ function DeckCopy(props) {
             <div className="between-space">
                 <span className="media-flex-center">
                     <div>
-                        <h1 className="left-h1">Deck Builder</h1>
+                        <h1 className="left-h1">Deck Copy</h1>
                         <BuilderCardSearch boosterSets={booster_sets}/>
                         <br/>
                         <div className="media-bot-30">
