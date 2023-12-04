@@ -31,10 +31,6 @@ function BuilderCardSearch(props) {
         setRarity(event.target.value);
     };
 
-    useEffect(() => {
-    // eslint-disable-next-line
-    },[]);
-
     const handleQuery = (event) => {
         setQuery({ ...query, [event.target.name]: event.target.value });
         setShowMore(20)

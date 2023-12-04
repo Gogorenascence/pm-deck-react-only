@@ -8,6 +8,7 @@ import MainPage from "./MainPage";
 import DeckBuilder from "./Builder/DeckBuilder"
 import DecksPage from "./Decks/DecksPage"
 import DeckDetailPage from "./Decks/DeckDetailPage";
+import DeckCopy from "./Builder/DeckCopy";
 import CardsPage from "./Cards/CardsPage"
 import CardDetailPage from "./Cards/CardDetailPage";
 import SetsPage from "./Cards/SetsPage";
@@ -87,6 +88,11 @@ function App() {
                                                             decks={decks}
                                                             cards={cards}
                                                     />} />
+              <Route path="/decks/:deck_id/copy" element={<DeckCopy
+                                                      decks={decks}
+                                                      cards={cards}
+                                                      booster_sets={booster_sets}
+                                                />} />
               <Route path="/cards" element={<CardsPage cards={cards}  booster_sets={booster_sets}/>} />
               <Route path="/cards/:card_number" element={<CardDetailPage
                                                             cards={cards}

@@ -354,6 +354,14 @@ function DeckDetailPage(props) {
                 </>: null
             }
             <DeckExport deck_id={deck_id} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
+            <NavLink to={`/decks/${deck.id}/copy`}>
+                    <button
+                            className="left"
+                            style={{marginLeft: ".5%", textAlign: "center"}}
+                            >
+                            Copy Decks
+                    </button>
+                </NavLink>
             <BackButton/>
             </div>
             <StatsPanel
