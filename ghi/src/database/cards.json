@@ -6012,7 +6012,7 @@
   "series_name": "Support//Team//Brawler//Tactical",
   "card_number": 1135,
   "enthusiasm": null,
-  "effect_text": "If you have 2 or more Support/Team cards in your play, all non-Support/Team cards in your play gains damage plus 1 and add 2 to your Focus for each Support/Team card in your play (max of 4).",
+  "effect_text": "Add 3 to your Focus. If you have 2 or more Support/Team cards in your play, all non-Support/Team cards in your play gains damage plus 1 and ignore the reactions of defending Fighters. ",
   "second_effect_text": "",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg21e.png",
@@ -6030,17 +6030,15 @@
     "month": 11,
     "day": 16,
     "time": "03:35",
-    "full_time": {
-      "$date": "2023-11-16T03:35:14.284Z"
-    }
+    "full_time": "2023-11-16T03:35:14.284000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 16,
-    "time": "03:35",
+    "month": 12,
+    "day": 6,
+    "time": "00:48",
     "full_time": {
-      "$date": "2023-11-16T03:35:14.284Z"
+      "$date": "2023-12-06T00:48:40.177Z"
     }
   },
   "alpha": null,
@@ -6360,6 +6358,48 @@
     "time": "00:11",
     "full_time": {
       "$date": "2023-11-30T00:11:19.412Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "656f45446d049e2cda0ade07"
+  },
+  "name": "Rainbow Scatter",
+  "card_class": "",
+  "hero_id": "GEN",
+  "series_name": "Energy//Nature//Psychic//Team",
+  "card_number": 1136,
+  "enthusiasm": null,
+  "effect_text": "Place 1 card from your hand or play under this Event (if this Event is removed from your Active Pluck or changes ownership, the placed cards are discarded); deal 1 piercing damage to a foe. ",
+  "second_effect_text": "You can resolve this effect again (no limit) if you place a card from your hand or play with a class different to this Event's placed cards under this Event. Cards placed under this Event count as being discarded.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg22e.png",
+  "file_name": "i1plg22e.png",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 5,
+    "time": "15:44",
+    "full_time": "2023-12-05T15:44:04.505000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 5,
+    "time": "18:27",
+    "full_time": {
+      "$date": "2023-12-05T18:27:21.782Z"
     }
   },
   "alpha": null,
