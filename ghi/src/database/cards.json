@@ -2468,7 +2468,7 @@
   "series_name": "Ceifeira Preta//Mystic//Quest",
   "card_number": 1060,
   "enthusiasm": 8,
-  "effect_text": "<Target> Your strongest or weakest foe. //<1-5> Deal 3 damage. //<6-11> Deal 3 damage. Gain 1 Comeback. //<12+> Deal 3 damage. Gain 2 Comebacks, then resolve 1 of your Comebacks as if you were at critical HP.",
+  "effect_text": "<Target> Your strongest or weakest foe.//You can resolve 1 critical effect this round.//<1-5> Deal 2 damage.//<6-11> Deal 3 damage. Gain 1 Comeback.//<12+> Deal 4 damage. Gain 2 Comebacks.",
   "second_effect_text": "",
   "illustrator": "Hugo Roberto",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p3cpe.png",
@@ -2487,19 +2487,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:58",
+    "month": 12,
+    "day": 7,
+    "time": "00:30",
     "full_time": {
-      "$date": "2023-06-25T18:58:25.121Z"
+      "$date": "2023-12-07T00:30:01.220Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
