@@ -1201,4 +1201,33 @@
       "$date": "2023-11-17T18:02:43.433Z"
     }
   }
+},
+{
+  "_id": {
+    "$oid": "6574f3d01a08f1b65d03f1df"
+  },
+  "cat_type": "series",
+  "name": "Fog Palace",
+  "description": "Cards that are a part of the 'Fog Palace' continuity.",
+  "article": "",
+  "support": [],
+  "anti_support": [],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 9,
+    "time": "23:10",
+    "full_time": {
+      "$date": "2023-12-09T23:10:08.821Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 9,
+    "time": "23:10",
+    "full_time": {
+      "$date": "2023-12-09T23:10:08.821Z"
+    }
+  }
 }]
