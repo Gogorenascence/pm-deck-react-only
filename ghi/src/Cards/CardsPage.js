@@ -333,6 +333,7 @@ function CardsPage(props) {
                 <option value="1003">Auto</option>
                 <option value="1004">Stay</option>
                 <option value="1005">Max</option>
+                <option value="1006">Cycle</option>
             </select>
             <select
                 className="left"
