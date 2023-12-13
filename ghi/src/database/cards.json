@@ -8,7 +8,7 @@
   "hero_id": "PM1",
   "series_name": "PantheraMan//Nature//Brawler",
   "card_number": 1001,
-  "effect_text": "If you are first to go this round or you have the highest Enthusiasm, resolve 1 of the following effects://<> Deal 2 piercing damage to a foe.//<> Gain 1 HP and draw 1 Pluck.",
+  "effect_text": "If you are first to go this round or you have the highest Enthusiasm, resolve 1 of the following effects://● Deal 2 piercing damage to a foe.//● Gain 1 HP and draw 1 Pluck.",
   "flavor_text": "string",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g1pmf.png",
@@ -694,7 +694,7 @@
   "series_name": "Battle Girl Alice//Magic//Brawler//Transformation",
   "card_number": 1030,
   "enthusiasm": 0,
-  "effect_text": "Resolve 1 of the following effects. If you have yet to deal damage this round, resolve 2 different effects instead: //<> Your Fighter gains Counter 1. //<> Take 2 damage, then your Fighter gains 2 HP. //<> This card copies the effect text of your Fighter.",
+  "effect_text": "Resolve 1 of the following effects. If you have yet to deal damage this round, resolve 2 different effects instead: //● Your Fighter gains Counter 1. //● Take 2 damage, then your Fighter gains 2 HP. //● This card copies the effect text of your Fighter.",
   "second_effect_text": "",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r4bgaa.png",
@@ -1816,7 +1816,7 @@
   "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1091,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> During the Start Phase, discard 1 card from your hand; resolve 1 of the following effects://<> Add 3 to your next Focus roll.//<> Add 3 to your Enthusiasm this round.",
+  "effect_text": "<Trigger> During the Start Phase, discard 1 card from your hand; resolve 1 of the following effects://● Add 3 to your next Focus roll.//● Add 3 to your Enthusiasm this round.",
   "second_effect_text": "Discard this Item after the third round of use.",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl09dwi.png",
@@ -2081,7 +2081,7 @@
   "series_name": "Gravity Enforcer//Cosmic//Tactical",
   "card_number": 1112,
   "enthusiasm": 0,
-  "effect_text": "<L.Trigger> When a card or Pluck is resolving, cancel the non-damaging effects of the resolving card or Pluck.",
+  "effect_text": "<L. Trigger> When a card or Pluck is resolving, cancel the non-damaging effects of the resolving card or Pluck.",
   "second_effect_text": "Lower the Enthusiasm of all foes by 2.",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl16gei.png",
@@ -2344,7 +2344,7 @@
   "series_name": "Ceifeira Preta//Mystic//Quest",
   "card_number": 1057,
   "enthusiasm": 0,
-  "effect_text": "Resolve 1 of the following effects: //<> Gain 1 Comeback and add 1 Fighter from the discard pile to your hand. //<> Discard 2 Comebacks in your ownership; return 3 cards from the discard pile to the top of the Main deck in any order. ",
+  "effect_text": "Resolve 1 of the following effects://● Gain 1 Comeback and add 1 Fighter from the discard pile to your hand.//● Discard 2 Comebacks in your ownership; return 3 cards from the discard pile to the top of the Main deck in any order.",
   "second_effect_text": "",
   "illustrator": "Hugo Roberto",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p3cpf.png",
@@ -2775,7 +2775,7 @@
   "series_name": "Bone Whisperer//Mystic//Nature//Team",
   "card_number": 1009,
   "enthusiasm": 0,
-  "effect_text": "Resolve 1 of the following effects: //<> Discard up to 3 cards from your hand; gain 1 HP for each card discarded. //<> Discard 3 cards from your hand; unfurl 3 Pluck (reveal 3 cards from the top of the Pluck deck). Add 2 Pluck to your ownership and discard the other unfurled Pluck.",
+  "effect_text": "Resolve 1 of the following effects: //● Discard up to 3 cards from your hand; gain 1 HP for each card discarded. //● Discard 3 cards from your hand; unfurl 3 Pluck (reveal 3 cards from the top of the Pluck deck). Add 2 Pluck to your ownership and discard the other unfurled Pluck.",
   "second_effect_text": "",
   "illustrator": "Ranbutam",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g3bwf.png",
@@ -3120,7 +3120,7 @@
   "series_name": "Bolt Blossom//Nature//Energy",
   "card_number": 1047,
   "enthusiasm": 0,
-  "effect_text": "Resolve 1 of the following effects: //<> This card copies the text of your Aura. //<> Return 2 cards from your hand to the top of the Main deck in any order; resolve your Fighter and reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time).",
+  "effect_text": "Resolve 1 of the following effects: //● This card copies the effect text of your Aura. //● Return 2 cards from your hand to the top of the Main deck in any order; resolve your Fighter and reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time).",
   "second_effect_text": "",
   "illustrator": "Filippo Scalisi",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b4bbm.png",
@@ -4807,7 +4807,7 @@
   "series_name": "Hive//Tech//Nature",
   "card_number": 1094,
   "enthusiasm": 0,
-  "effect_text": "<Limited> Deal 1 piercing damage to a random foe.",
+  "effect_text": "<Limited> Deal 1 piercing damage to a foe.",
   "second_effect_text": "<Trigger> If you draw a card(s) or gains Pluck(s), gain 1 HP.",
   "illustrator": "layonsin.art",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl10hi.png",
@@ -4834,10 +4834,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 11,
-    "time": "23:35",
+    "day": 13,
+    "time": "16:34",
     "full_time": {
-      "$date": "2023-12-11T23:35:57.502Z"
+      "$date": "2023-12-13T16:34:08.692Z"
     }
   },
   "alpha": null,
@@ -6426,7 +6426,7 @@
   "_id": {
     "$oid": "6574f2191a08f1b65d03f1c4"
   },
-  "name": "Ninja Art of Substitution!",
+  "name": "Shinobi Art of Substitution!",
   "card_class": "Canny",
   "hero_id": "FBW",
   "series_name": "Fog Palace//Magic//Tactical//Transformation",
@@ -6457,10 +6457,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 10,
-    "time": "15:24",
+    "day": 13,
+    "time": "11:22",
     "full_time": {
-      "$date": "2023-12-10T15:24:40.329Z"
+      "$date": "2023-12-13T11:22:01.842Z"
     }
   },
   "alpha": null,
@@ -6591,6 +6591,143 @@
     "time": "16:07",
     "full_time": {
       "$date": "2023-12-10T16:07:36.247Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "65798ee2c1009279313ce554"
+  },
+  "name": "Feza of the Black Winds",
+  "card_class": "Canny",
+  "hero_id": "FBW",
+  "series_name": "Fog Palace//Magic//Tactical",
+  "card_number": 1151,
+  "enthusiasm": null,
+  "effect_text": "Provoke 1 Fighter or Aura (1 select foe must resolve their Fighter or Aura this round with you as one of the applicable targets).",
+  "second_effect_text": "<Trigger> When a card in foe's play is resolving, the effect text of that foe's Fighter or Aura becomes the following://● Discard up to 1 card from your hand; your foe discards 1 card in their play.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5ff.png",
+  "file_name": "i1p5ff.png",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [
+    1004
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 13,
+    "time": "11:00",
+    "full_time": {
+      "$date": "2023-12-13T11:00:50.961Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 13,
+    "time": "11:00",
+    "full_time": {
+      "$date": "2023-12-13T11:00:50.961Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "65799b3fc1009279313ce5c5"
+  },
+  "name": "Shinobi Scroll of Duplication",
+  "card_class": "",
+  "hero_id": "FBW",
+  "series_name": "Fog Palace//Magic//Tactical",
+  "card_number": 1164,
+  "enthusiasm": null,
+  "effect_text": "<L. Trigger> During the Start Phase or during a foe's turn, discard 1 unresolved card; this Item copies the effect of 1 Fighter or Aura in your play until the end of the round.",
+  "second_effect_text": "",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl20fi.png",
+  "file_name": "i1pl20fi.png",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1001,
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 13,
+    "time": "11:53",
+    "full_time": "2023-12-13T11:53:35.409000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 13,
+    "time": "16:29",
+    "full_time": {
+      "$date": "2023-12-13T16:29:39.878Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "6579e4bbc1009279313ce63a"
+  },
+  "name": "Mantra of Summoning",
+  "card_class": "",
+  "hero_id": "FBW",
+  "series_name": "Fog Palace//Magic//Tactical",
+  "card_number": 1165,
+  "enthusiasm": null,
+  "effect_text": "Add up to 2 Canny cards from your discard pile to your play, then take 2 damage for each card added this way. You can not resolve the added cards this round.",
+  "second_effect_text": "",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl20fe.png",
+  "file_name": "i1pl20fe.png",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 13,
+    "time": "17:07",
+    "full_time": {
+      "$date": "2023-12-13T17:07:07.959Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 13,
+    "time": "17:07",
+    "full_time": {
+      "$date": "2023-12-13T17:07:07.959Z"
     }
   },
   "alpha": null,
