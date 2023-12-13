@@ -73,7 +73,7 @@
     1001
   ],
   "enthusiasm": 0,
-  "second_effect_text": "<Trigger> During the Start Phase or when this card is revealed, all Power cards gain damage minus 1 (damage dealt by those cards is reduced by 1 at the end of their resolutions).",
+  "second_effect_text": "<Trigger> During the Start Phase or when this card is revealed, all Power cards gain damage minus 1 this round (damage dealt by those cards is reduced by 1 at the end of their resolutions).",
   "created_on": {
     "year": 2023,
     "month": 6,
@@ -83,11 +83,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 10,
-    "time": "21:10",
+    "month": 12,
+    "day": 12,
+    "time": "02:54",
     "full_time": {
-      "$date": "2023-11-10T21:10:36.020Z"
+      "$date": "2023-12-12T02:54:14.199Z"
     }
   },
   "alpha": null,
@@ -4325,7 +4325,7 @@
   "card_number": 1083,
   "enthusiasm": 0,
   "effect_text": "Draw 3 cards, then discard 1 card from your hand.",
-  "second_effect_text": "<Trigger> During the Start Phase or during a player’s turn, deal 1 damage to a foe each time a card(s) is discarded from your hand or removed from your play this round.",
+  "second_effect_text": "<Trigger> During the Start Phase or during a player’s turn, each time a card(s) is discarded from your hand or play this round, deal 1 damage to a random foe and discard 1 Item in their Active Pluck.",
   "illustrator": "gmoshiro",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl06rfe.png",
   "file_name": "i1pl06rfe",
@@ -4348,13 +4348,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 5,
-    "time": "23:00",
+    "month": 12,
+    "day": 12,
+    "time": "03:32",
     "full_time": {
-      "$date": "2023-10-05T23:00:30.461Z"
+      "$date": "2023-12-12T03:32:21.662Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -6072,7 +6074,7 @@
   "card_number": 1143,
   "enthusiasm": null,
   "effect_text": "If you have damage tokens on this card, deal 3 damage to your strongest foe.",
-  "second_effect_text": "<Trigger> During the Start Phase or during a foe's turn, 1 random card in your play gains damage plus 1 and add 1 to your Focus each time you or this card would take damage this round.",
+  "second_effect_text": "<Trigger> During the Start Phase or during a foe's turn, each time you or this card would take damage this round, 1 random card in your play gains damage plus 1 and add 1 to your Focus.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5rf.png",
   "file_name": "i1r5rf.png",
@@ -6098,10 +6100,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 7,
-    "time": "15:32",
+    "day": 12,
+    "time": "03:33",
     "full_time": {
-      "$date": "2023-12-07T15:32:50.683Z"
+      "$date": "2023-12-12T03:33:02.854Z"
     }
   },
   "alpha": null,
@@ -6475,7 +6477,7 @@
   "card_number": 1153,
   "enthusiasm": null,
   "effect_text": "Provoke 1 Move and 3 damage to a foe.",
-  "second_effect_text": "<Trigger> If this card is discarded from your play; deal 2 damage to a foe. If this card was discarded by a foe's card effect, deal piercing 3 damage instead.",
+  "second_effect_text": "<Trigger> If this card is discarded from your play, deal 2 damage to a foe. If this card was discarded by a foe's card effect, deal piercing 3 damage instead.",
   "illustrator": "",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5fm.png",
   "file_name": "i1p5fm.png",
@@ -6494,17 +6496,15 @@
     "month": 12,
     "day": 9,
     "time": "23:05",
-    "full_time": {
-      "$date": "2023-12-09T23:05:16.928Z"
-    }
+    "full_time": "2023-12-09T23:05:16.928000"
   },
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 9,
-    "time": "23:05",
+    "day": 12,
+    "time": "03:02",
     "full_time": {
-      "$date": "2023-12-09T23:05:16.928Z"
+      "$date": "2023-12-12T03:02:41.897Z"
     }
   },
   "alpha": null,

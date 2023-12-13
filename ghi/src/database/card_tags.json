@@ -87,7 +87,7 @@
     "$oid": "657793799691c90c6b0ce76d"
   },
   "name": "Cycle",
-  "rules": "The effects of this card (Limited effects excluded) can be resolved again at the start of a new round.",
+  "rules": "The effects of this card (Limited effects excluded) can be resolved each round.",
   "tag_number": 1006,
   "support": [],
   "anti_support": []
