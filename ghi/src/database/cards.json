@@ -6470,7 +6470,7 @@
   "_id": {
     "$oid": "6574f2ac1a08f1b65d03f1cd"
   },
-  "name": "Suprise Smoke Bomb!!",
+  "name": "Secret Sword!!",
   "card_class": "Canny",
   "hero_id": "FBW",
   "series_name": "Fog Palace//Magic//Tactical",
@@ -6501,10 +6501,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 12,
-    "time": "03:02",
+    "day": 14,
+    "time": "00:18",
     "full_time": {
-      "$date": "2023-12-12T03:02:41.897Z"
+      "$date": "2023-12-14T00:18:07.885Z"
     }
   },
   "alpha": null,
@@ -6514,7 +6514,7 @@
   "_id": {
     "$oid": "6574f37f1a08f1b65d03f1d6"
   },
-  "name": "Mantra of Returning Strength",
+  "name": "Strength Returning Mantra",
   "card_class": "",
   "hero_id": "FBW",
   "series_name": "Fog Palace//Magic//Mystic//Call",
@@ -6544,10 +6544,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 9,
-    "time": "23:33",
+    "day": 14,
+    "time": "00:18",
     "full_time": {
-      "$date": "2023-12-09T23:33:39.700Z"
+      "$date": "2023-12-14T00:18:41.195Z"
     }
   },
   "alpha": null,
@@ -6607,7 +6607,7 @@
   "card_number": 1151,
   "enthusiasm": null,
   "effect_text": "Provoke 1 Fighter or Aura (1 select foe must resolve their Fighter or Aura this round with you as one of the applicable targets).",
-  "second_effect_text": "<Trigger> When a card in foe's play is resolving, the effect text of that foe's Fighter or Aura becomes the following://● Discard up to 1 card from your hand; your foe discards 1 card in their play.",
+  "second_effect_text": "<Trigger> When a card in foe's play is resolving, the effect text of that foe's Fighter or Aura becomes the following://● Discard up to 1 card from your hand; 1 foe whose play has a Magic card(s) discards 1 card in their play.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5ff.png",
   "file_name": "i1p5ff.png",
@@ -6628,17 +6628,15 @@
     "month": 12,
     "day": 13,
     "time": "11:00",
-    "full_time": {
-      "$date": "2023-12-13T11:00:50.961Z"
-    }
+    "full_time": "2023-12-13T11:00:50.961000"
   },
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 13,
-    "time": "11:00",
+    "day": 14,
+    "time": "00:26",
     "full_time": {
-      "$date": "2023-12-13T11:00:50.961Z"
+      "$date": "2023-12-14T00:26:36.055Z"
     }
   },
   "alpha": null,
@@ -6693,13 +6691,13 @@
   "_id": {
     "$oid": "6579e4bbc1009279313ce63a"
   },
-  "name": "Mantra of Summoning",
+  "name": "Summoning Mantra",
   "card_class": "",
   "hero_id": "FBW",
-  "series_name": "Fog Palace//Magic//Tactical",
+  "series_name": "Fog Palace//Magic//Mystic//Call",
   "card_number": 1165,
   "enthusiasm": null,
-  "effect_text": "Add up to 2 Canny cards from your discard pile to your play, then take 2 damage for each card added this way. You can not resolve the added cards this round.",
+  "effect_text": "Add up to 2 Canny cards from your discard pile to your play, then take 2 damage for each card added this way. You can not resolve the added cards or use them for your Focus roll this round.",
   "second_effect_text": "",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl20fe.png",
@@ -6717,17 +6715,15 @@
     "month": 12,
     "day": 13,
     "time": "17:07",
-    "full_time": {
-      "$date": "2023-12-13T17:07:07.959Z"
-    }
+    "full_time": "2023-12-13T17:07:07.959000"
   },
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 13,
-    "time": "17:07",
+    "day": 14,
+    "time": "00:35",
     "full_time": {
-      "$date": "2023-12-13T17:07:07.959Z"
+      "$date": "2023-12-14T00:35:16.895Z"
     }
   },
   "alpha": null,
