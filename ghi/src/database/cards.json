@@ -6728,4 +6728,191 @@
   },
   "alpha": null,
   "beta": null
+},
+{
+  "_id": {
+    "$oid": "657b924c262ee8020b1b36a4"
+  },
+  "name": "Gizma the Finder",
+  "card_class": "Unity",
+  "hero_id": "GTF",
+  "series_name": "Gizma//Magic//Mystic",
+  "card_number": 1147,
+  "enthusiasm": null,
+  "effect_text": "Resolve the Main effect of 1 Fighter, Aura or Move in your placed cards as if was in your play, then discard it.",
+  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card of the same type from your hand or discard pile under this card (if this card is removed from your play or changes control, the placed card(s) is discarded).",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gf.png",
+  "file_name": "i1b5gf.png",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [
+    1001
+  ],
+  "card_tags": [
+    1001,
+    1006
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 14,
+    "time": "23:39",
+    "full_time": "2023-12-14T23:39:56.046000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 16,
+    "time": "17:00",
+    "full_time": {
+      "$date": "2023-12-16T17:00:17.406Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "657dd828e24e1d2b1a802008"
+  },
+  "name": "Master of Shadows!",
+  "card_class": "Unity",
+  "hero_id": "GTF",
+  "series_name": "Gizma//Magic//Mystic",
+  "card_number": 1148,
+  "enthusiasm": null,
+  "effect_text": "Add 1 of your placed cards to your play, then place another card from your hand under a card in your play (if that card is removed from your play or changes control, the placed card(s) is discarded).",
+  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card of the same type from your hand under a card in your play.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5ga.png",
+  "file_name": "i1b5ga.png",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 16,
+    "time": "17:02",
+    "full_time": {
+      "$date": "2023-12-16T17:02:32.856Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 16,
+    "time": "17:02",
+    "full_time": {
+      "$date": "2023-12-16T17:02:32.856Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "657dd898e24e1d2b1a802011"
+  },
+  "name": "Shadow Strike!!",
+  "card_class": "Unity",
+  "hero_id": "GTF",
+  "series_name": "Gizma//Magic//Mystic",
+  "card_number": 1149,
+  "enthusiasm": null,
+  "effect_text": "Deal 1 piercing damage to a random foe for each of your placed cards/Pluck (max of 4).",
+  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card or Pluck from their respective discard pile under 1 applicable target (if that card/Pluck is removed from your play/Active Pluck or changes control/ownership, the placed card(s) is discarded).",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gm.png",
+  "file_name": "i1b5gm.png",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001,
+    1006
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 16,
+    "time": "17:04",
+    "full_time": {
+      "$date": "2023-12-16T17:04:24.015Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 16,
+    "time": "17:04",
+    "full_time": {
+      "$date": "2023-12-16T17:04:24.015Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "657dd936e24e1d2b1a80201a"
+  },
+  "name": "Karmic Crash!!!",
+  "card_class": "Unity",
+  "hero_id": "GTF",
+  "series_name": "Gizma//Magic//Mystic",
+  "card_number": 1150,
+  "enthusiasm": 12,
+  "effect_text": "Target: Strongest foe. //1-5: Deal 2 damage.//6-11: Deal 1 piercing damage for each of your placed cards/Pluck (max of 5). Add 1 placed card to your hand.//12+: Deal 1 piercing damage for each of your placed cards/Pluck (max of 5). Add 1 placed card to your play.",
+  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card from your hand or discard pile under a card in your play.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5ge.png",
+  "file_name": "i1b5ge.png",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001,
+    1002
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 16,
+    "time": "17:07",
+    "full_time": {
+      "$date": "2023-12-16T17:07:02.895Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 16,
+    "time": "17:07",
+    "full_time": {
+      "$date": "2023-12-16T17:07:02.895Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
 }]

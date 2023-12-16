@@ -1231,4 +1231,33 @@
       "$date": "2023-12-09T23:10:08.821Z"
     }
   }
+},
+{
+  "_id": {
+    "$oid": "657ba8c1262ee8020b1b36cd"
+  },
+  "cat_type": "series",
+  "name": "Gizma",
+  "description": "Cards that are a part of the 'Gizma' continuity.",
+  "article": "",
+  "support": [],
+  "anti_support": [],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 15,
+    "time": "01:15",
+    "full_time": {
+      "$date": "2023-12-15T01:15:45.210Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 15,
+    "time": "01:15",
+    "full_time": {
+      "$date": "2023-12-15T01:15:45.210Z"
+    }
+  }
 }]
