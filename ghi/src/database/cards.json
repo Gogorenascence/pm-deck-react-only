@@ -6780,7 +6780,7 @@
   "_id": {
     "$oid": "657dd828e24e1d2b1a802008"
   },
-  "name": "Master of Shadows!",
+  "name": "Shuffling Shadows!",
   "card_class": "Unity",
   "hero_id": "GTF",
   "series_name": "Gizma//Magic//Mystic",
@@ -6812,9 +6812,9 @@
     "year": 2023,
     "month": 12,
     "day": 17,
-    "time": "00:10",
+    "time": "00:48",
     "full_time": {
-      "$date": "2023-12-17T00:10:00.966Z"
+      "$date": "2023-12-17T00:48:05.052Z"
     }
   },
   "alpha": null,
@@ -6923,7 +6923,7 @@
   "card_number": 1161,
   "enthusiasm": null,
   "effect_text": "<Trigger> During the Start Phase or during a player's turn, cards can not be discarded from your hand or play by your foes' card effects this round.",
-  "second_effect_text": "Once per round, placed 1 card or Pluck to your hand/ownership under a card or pluck in play/ownership, then draw 1 card.",
+  "second_effect_text": "Once per round, add 1 placed card or Pluck to your hand/ownership.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl19gi.png",
   "file_name": "i1pl19gi.png",
@@ -6944,17 +6944,15 @@
     "month": 12,
     "day": 17,
     "time": "00:32",
-    "full_time": {
-      "$date": "2023-12-17T00:32:08.350Z"
-    }
+    "full_time": "2023-12-17T00:32:08.350000"
   },
   "updated_on": {
     "year": 2023,
     "month": 12,
     "day": 17,
-    "time": "00:32",
+    "time": "00:44",
     "full_time": {
-      "$date": "2023-12-17T00:32:08.350Z"
+      "$date": "2023-12-17T00:44:00.292Z"
     }
   },
   "alpha": null,
