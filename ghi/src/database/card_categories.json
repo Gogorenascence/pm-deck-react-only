@@ -129,7 +129,8 @@
   "name": "Nature",
   "description": "Cards that derive their power from animals, plant-life or the environment.",
   "support": [
-    1134
+    1134,
+    1162
   ],
   "anti_support": [],
   "created_on": {
@@ -141,11 +142,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 3,
-    "time": "00:55",
+    "month": 12,
+    "day": 17,
+    "time": "07:01",
     "full_time": {
-      "$date": "2023-11-03T00:55:11.166Z"
+      "$date": "2023-12-17T07:01:49.081Z"
     }
   },
   "article": null
@@ -308,7 +309,8 @@
   "name": "Magic",
   "description": "Cards whose origins are tied to magical realms, creatures or artifacts.",
   "support": [
-    1131
+    1131,
+    1162
   ],
   "anti_support": [
     1129
@@ -322,11 +324,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 23,
-    "time": "16:36",
+    "month": 12,
+    "day": 17,
+    "time": "07:01",
     "full_time": {
-      "$date": "2023-11-23T16:36:56.222Z"
+      "$date": "2023-12-17T07:01:22.981Z"
     }
   },
   "article": null

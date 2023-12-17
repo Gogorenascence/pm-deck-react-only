@@ -1038,7 +1038,7 @@
   "series_name": "MAX VARIABLE",
   "card_number": 1065,
   "enthusiasm": 0,
-  "effect_text": "Unfurl 4 cards (reveal 4 cards from the top of the Main deck). Add 1 card that matches the type MAX VARIABLE is replacing to your play and add 2 of the other unfurled cards to your hand. Discard MAX VARIABLE and the last unfurled card.",
+  "effect_text": "Unfurl 4 cards (reveal 4 cards from the top of the Main deck). Add 1 card with the same type MAX VARIABLE is replacing to your play and add 2 of the other unfurled cards to your hand. Discard MAX VARIABLE and the last unfurled card.",
   "second_effect_text": "",
   "illustrator": "mvthwus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1rb1mv.png",
@@ -1056,19 +1056,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:52",
+    "month": 12,
+    "day": 17,
+    "time": "07:23",
     "full_time": {
-      "$date": "2023-06-25T18:52:52.346Z"
+      "$date": "2023-12-17T07:23:02.515Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1080,7 +1080,7 @@
   "series_name": "MAX VARIABLE",
   "card_number": 1066,
   "enthusiasm": 0,
-  "effect_text": "Unfurl 2 cards (reveal 2 cards from the top of the Main deck). Add 1 card to your play and discard the other card. If the added card matches the type MAX VARIABLE is replacing, draw 1 Pluck. Discard MAX VARIABLE.",
+  "effect_text": "Unfurl 2 cards (reveal 2 cards from the top of the Main deck). Add 1 card to your play and discard the other card. If the added card is the same type MAX VARIABLE is replacing, draw 1 Pluck. Discard MAX VARIABLE.",
   "second_effect_text": "",
   "illustrator": "Dalfovo",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1rb1mvn2.png",
@@ -1102,11 +1102,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 11,
-    "time": "00:23",
+    "month": 12,
+    "day": 17,
+    "time": "07:14",
     "full_time": {
-      "$date": "2023-11-11T00:23:19.155Z"
+      "$date": "2023-12-17T07:14:53.939Z"
     }
   },
   "alpha": null,
@@ -2558,7 +2558,7 @@
   "series_name": "Warp Family//Cosmic//Psychic",
   "card_number": 1054,
   "enthusiasm": 0,
-  "effect_text": "Discard 1 Aura, Move or Ending in a foe's play, then that foe adds 1 random card matching the removed card's type or MAX VARIABLE as the removed card's type from their hand to their play.",
+  "effect_text": "Discard 1 Aura, Move or Ending in a foe's play, then that foe adds 1 random card with the same type as the removed card or MAX VARIABLE as the removed card's type from their hand to their play. ",
   "second_effect_text": "<Trigger> During a foe's turn, resolve this Aura in your play.",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pa.png",
@@ -2582,11 +2582,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 30,
-    "time": "04:13",
+    "month": 12,
+    "day": 17,
+    "time": "07:13",
     "full_time": {
-      "$date": "2023-11-30T04:13:28.997Z"
+      "$date": "2023-12-17T07:13:57.979Z"
     }
   },
   "alpha": null,
@@ -3594,7 +3594,7 @@
   "series_name": "Burst Esper//Psychic//Energy",
   "card_number": 1086,
   "enthusiasm": 0,
-  "effect_text": "Select 1 card in your play (that card is revealed), then unfurl 5 cards. Add all cards matching that card's class to your hand, then return the other unfurled cards to the top or bottom of the Main deck in any order. ",
+  "effect_text": "Select 1 card in your play (that card is revealed), then unfurl 5 cards. Add all cards with the same class as the selected card to your hand, then return the other unfurled cards to the top or bottom of the Main deck in any order. ",
   "second_effect_text": "",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl07bee.png",
@@ -3612,19 +3612,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:13",
+    "month": 12,
+    "day": 17,
+    "time": "07:09",
     "full_time": {
-      "$date": "2023-06-25T19:13:09.077Z"
+      "$date": "2023-12-17T07:09:51.060Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -6780,7 +6780,7 @@
   "_id": {
     "$oid": "657dd828e24e1d2b1a802008"
   },
-  "name": "Shuffling Shadows!",
+  "name": "Master of Shadows!",
   "card_class": "Unity",
   "hero_id": "GTF",
   "series_name": "Gizma//Magic//Mystic",
@@ -6812,9 +6812,9 @@
     "year": 2023,
     "month": 12,
     "day": 17,
-    "time": "00:48",
+    "time": "07:15",
     "full_time": {
-      "$date": "2023-12-17T00:48:05.052Z"
+      "$date": "2023-12-17T07:15:33.772Z"
     }
   },
   "alpha": null,
@@ -6953,6 +6953,48 @@
     "time": "00:44",
     "full_time": {
       "$date": "2023-12-17T00:44:00.292Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "657e9c23f9d389f0f3416e51"
+  },
+  "name": "The Kitten Lost in the Mist",
+  "card_class": "",
+  "hero_id": "GTF",
+  "series_name": "Gizma//Magic//Mystic//Quest",
+  "card_number": 1162,
+  "enthusiasm": null,
+  "effect_text": "Resolve 1 of the following://●Discard 1 card from your hand; gain 1 Magic card.//●Discard 1 Nature card from your play; add 1 Magic card of the same type from your Main deck to your play.//●Place 1 card from your hand under 1 card or Pluck in your play/Active Pluck (if that card/Pluck is removed from your play/Active Pluck, the placed card(s) is discarded).",
+  "second_effect_text": "",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl19ge.png",
+  "file_name": "i1pl19ge.png",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 17,
+    "time": "06:58",
+    "full_time": "2023-12-17T06:58:43.252000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 17,
+    "time": "07:00",
+    "full_time": {
+      "$date": "2023-12-17T07:00:35.024Z"
     }
   },
   "alpha": null,
