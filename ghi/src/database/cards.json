@@ -3160,7 +3160,7 @@
   "series_name": "Bolt Blossom//Nature//Energy",
   "card_number": 1100,
   "enthusiasm": 0,
-  "effect_text": "<Limited> Place 1 card from your hand under this Item (if this Item is removed from your Active Pluck or changes ownership, the placed card(s) is discarded).\n\n",
+  "effect_text": "<Limited> Place 1 card from your hand under this Item (if this Item is removed from your Active Pluck, the placed card(s) is discarded).\n\n",
   "second_effect_text": "This Item counts as the class(s) of its placed card(s) in each of your plays (this does not count towards play size).",
   "illustrator": "Filippo Scalisi",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl12bbi.png",
@@ -3184,11 +3184,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 7,
-    "time": "04:49",
+    "month": 12,
+    "day": 17,
+    "time": "00:10",
     "full_time": {
-      "$date": "2023-11-07T04:49:43.625Z"
+      "$date": "2023-12-17T00:10:49.946Z"
     }
   },
   "alpha": null,
@@ -3291,7 +3291,7 @@
   "series_name": "Bone Whisperer//Mystic//Nature//Team",
   "card_number": 1073,
   "enthusiasm": 0,
-  "effect_text": "<Limited> If you resolve an Event this round, place the Event under this Item instead of discarding it during the End Phase (if this Item is removed from your Active Pluck or changes ownership, the placed Event(s) is discarded).\n \n\n",
+  "effect_text": "<Limited> If you resolve an Event this round, place the Event under this Item instead of discarding it during the End Phase (if this Item is removed from your Active Pluck, the placed Event(s) is discarded).\n \n\n",
   "second_effect_text": "Once per round, this Item copies the effect text of its placed event. The event is discarded during the End Phase. This Item's placed Event(s) count towards your Pluck limit.\n",
   "illustrator": "Ranbutam",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl03bwi.png",
@@ -3317,10 +3317,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 11,
-    "time": "23:39",
+    "day": 17,
+    "time": "00:10",
     "full_time": {
-      "$date": "2023-12-11T23:39:37.111Z"
+      "$date": "2023-12-17T00:10:34.916Z"
     }
   },
   "alpha": null,
@@ -5720,7 +5720,7 @@
   "series_name": "Tech//Support",
   "card_number": 1129,
   "enthusiasm": null,
-  "effect_text": "<Limited> Place up to 3 cards from your hand under this Item (if this Item is removed from your Active Pluck or changes ownership, the placed cards are discarded).",
+  "effect_text": "<Limited> Place up to 3 cards from your hand under this Item (if this Item is removed from your Active Pluck, the placed cards are discarded).",
   "second_effect_text": "All Cosmic, Magic and Mystic cards take 1 damage and gain damage minus 1 when they are revealed. \nDiscard 1 of this Item's placed card during the End Phase or discard this Item.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg14i.png",
@@ -5744,11 +5744,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 10,
-    "time": "21:09",
+    "month": 12,
+    "day": 17,
+    "time": "00:11",
     "full_time": {
-      "$date": "2023-11-10T21:09:06.022Z"
+      "$date": "2023-12-17T00:11:18.496Z"
     }
   },
   "alpha": null,
@@ -5898,7 +5898,7 @@
   "series_name": "Altered//Nature//Tech",
   "card_number": 1132,
   "enthusiasm": null,
-  "effect_text": "<Limited> Place 1 Altered Fighter or Aura from your hand under this Item (if this Item is removed from your Active Pluck or changes ownership, the placed card(s) is discarded).",
+  "effect_text": "<Limited> Place 1 Altered Fighter or Aura from your hand under this Item (if this Item is removed from your Active Pluck, the placed card(s) is discarded).",
   "second_effect_text": "When this Item is removed from your Active Pluck, add this Item's placed card(s) to your play.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg18i.png",
@@ -5922,11 +5922,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 10,
-    "time": "17:06",
+    "month": 12,
+    "day": 17,
+    "time": "00:11",
     "full_time": {
-      "$date": "2023-11-10T17:06:47.035Z"
+      "$date": "2023-12-17T00:11:30.575Z"
     }
   },
   "alpha": null,
@@ -6390,7 +6390,7 @@
   "series_name": "Energy//Nature//Psychic//Team",
   "card_number": 1136,
   "enthusiasm": null,
-  "effect_text": "Place 1 card from your hand or play under this Event (if this Event is removed from your Active Pluck or changes ownership, the placed cards are discarded); deal 1 piercing damage to a foe. ",
+  "effect_text": "Place 1 card from your hand or play under this Event (if this Event is removed from your Active Pluck, the placed cards are discarded); deal 1 piercing damage to a foe. ",
   "second_effect_text": "You can resolve this effect again (no limit) if you place a card from your hand or play with a class different to this Event's placed cards under this Event. Cards placed under this Event count as being discarded.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg22e.png",
@@ -6413,10 +6413,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 5,
-    "time": "18:27",
+    "day": 17,
+    "time": "00:11",
     "full_time": {
-      "$date": "2023-12-05T18:27:21.782Z"
+      "$date": "2023-12-17T00:11:03.286Z"
     }
   },
   "alpha": null,
@@ -6740,7 +6740,7 @@
   "card_number": 1147,
   "enthusiasm": null,
   "effect_text": "Resolve the Main effect of 1 Fighter, Aura or Move in your placed cards as if was in your play, then discard it.",
-  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card of the same type from your hand or discard pile under this card (if this card is removed from your play or changes control, the placed card(s) is discarded).",
+  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card of the same type from your hand or discard pile under this card (if this card is removed from your play, the placed card(s) is discarded).",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gf.png",
   "file_name": "i1b5gf.png",
@@ -6767,10 +6767,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 16,
-    "time": "17:00",
+    "day": 17,
+    "time": "00:10",
     "full_time": {
-      "$date": "2023-12-16T17:00:17.406Z"
+      "$date": "2023-12-17T00:10:20.106Z"
     }
   },
   "alpha": null,
@@ -6786,7 +6786,7 @@
   "series_name": "Gizma//Magic//Mystic",
   "card_number": 1148,
   "enthusiasm": null,
-  "effect_text": "Add 1 of your placed cards to your play, then place another card from your hand under a card in your play (if that card is removed from your play or changes control, the placed card(s) is discarded).",
+  "effect_text": "Add 1 of your placed cards to your play, then place another card from your hand under a card in your play (if that card is removed from your play, the placed card(s) is discarded).",
   "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card of the same type from your hand under a card in your play.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5ga.png",
@@ -6806,17 +6806,15 @@
     "month": 12,
     "day": 16,
     "time": "17:02",
-    "full_time": {
-      "$date": "2023-12-16T17:02:32.856Z"
-    }
+    "full_time": "2023-12-16T17:02:32.856000"
   },
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 16,
-    "time": "17:02",
+    "day": 17,
+    "time": "00:10",
     "full_time": {
-      "$date": "2023-12-16T17:02:32.856Z"
+      "$date": "2023-12-17T00:10:00.966Z"
     }
   },
   "alpha": null,
@@ -6833,7 +6831,7 @@
   "card_number": 1149,
   "enthusiasm": null,
   "effect_text": "Deal 1 piercing damage to a random foe for each of your placed cards/Pluck (max of 4).",
-  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card or Pluck from their respective discard pile under 1 applicable target (if that card/Pluck is removed from your play/Active Pluck or changes control/ownership, the placed card(s) is discarded).",
+  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your play/Active Pluck. ",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gm.png",
   "file_name": "i1b5gm.png",
@@ -6853,17 +6851,15 @@
     "month": 12,
     "day": 16,
     "time": "17:04",
-    "full_time": {
-      "$date": "2023-12-16T17:04:24.015Z"
-    }
+    "full_time": "2023-12-16T17:04:24.015000"
   },
   "updated_on": {
     "year": 2023,
     "month": 12,
     "day": 16,
-    "time": "17:04",
+    "time": "22:51",
     "full_time": {
-      "$date": "2023-12-16T17:04:24.015Z"
+      "$date": "2023-12-16T22:51:18.126Z"
     }
   },
   "alpha": null,
@@ -6911,6 +6907,54 @@
     "time": "17:07",
     "full_time": {
       "$date": "2023-12-16T17:07:02.895Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "657e4188f9d389f0f3416de4"
+  },
+  "name": "Old Collar",
+  "card_class": "",
+  "hero_id": "GTF",
+  "series_name": "Gizma//Magic//Mystic",
+  "card_number": 1161,
+  "enthusiasm": null,
+  "effect_text": "<Trigger> During the Start Phase or during a player's turn, cards can not be discarded from your hand or play by your foes' card effects this round.",
+  "second_effect_text": "Once per round, placed 1 card or Pluck to your hand/ownership under a card or pluck in play/ownership, then draw 1 card.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl19gi.png",
+  "file_name": "i1pl19gi.png",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1001,
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004,
+    1006
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 17,
+    "time": "00:32",
+    "full_time": {
+      "$date": "2023-12-17T00:32:08.350Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 17,
+    "time": "00:32",
+    "full_time": {
+      "$date": "2023-12-17T00:32:08.350Z"
     }
   },
   "alpha": null,
