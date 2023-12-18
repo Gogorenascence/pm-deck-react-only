@@ -429,6 +429,7 @@
   "name": "Psychic",
   "description": "Cards with psychic abilities.",
   "support": [
+    1085,
     1139
   ],
   "anti_support": [],
@@ -441,11 +442,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 23,
-    "time": "16:38",
+    "month": 12,
+    "day": 18,
+    "time": "21:19",
     "full_time": {
-      "$date": "2023-11-23T16:38:45.278Z"
+      "$date": "2023-12-18T21:19:24.547Z"
     }
   },
   "article": null
