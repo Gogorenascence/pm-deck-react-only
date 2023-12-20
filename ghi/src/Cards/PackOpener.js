@@ -48,13 +48,14 @@ function PackOpener(props) {
                 "pluck_deck_cards": 0
             }
         }
-
-        for (let i = 0; i < boosterSet.ratio["mv"]; i++) {
-            const randomIndex = Math.floor(Math.random() * maxVariables.length);
-            const card = maxVariables[randomIndex]
-            openedPack["pulled_cards"].push(card)
-            openedPack["pull_list"].push(card.card_number)
-            openedPack["pull_stats"]["max_variables"]++
+        if (maxVariables.length) {
+            for (let i = 0; i < boosterSet.ratio["mv"]; i++) {
+                const randomIndex = Math.floor(Math.random() * maxVariables.length);
+                const card = maxVariables[randomIndex]
+                openedPack["pulled_cards"].push(card)
+                openedPack["pull_list"].push(card.card_number)
+                openedPack["pull_stats"]["max_variables"]++
+            }
         }
         for (let i = 0; i < boosterSet.ratio["normals"]; i++) {
             const randomIndex = Math.floor(Math.random() * normals.length);
