@@ -3552,7 +3552,7 @@
   "name": "Power Channeling Unit",
   "card_class": "",
   "hero_id": "BE1",
-  "series_name": "Burst Esper//Psychic//Energy",
+  "series_name": "Burst Esper//Psychic//Energy//Tech",
   "card_number": 1085,
   "enthusiasm": 0,
   "effect_text": "<Limited> Place up to 3 Psychic cards from your hand or discard pile under this Item (if this Item is removed from your Active Pluck, the placed cards are discarded). \n\n\n",
@@ -3580,10 +3580,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 18,
-    "time": "16:04",
+    "day": 20,
+    "time": "15:34",
     "full_time": {
-      "$date": "2023-12-18T16:04:49.618Z"
+      "$date": "2023-12-20T15:34:02.212Z"
     }
   },
   "alpha": null,
