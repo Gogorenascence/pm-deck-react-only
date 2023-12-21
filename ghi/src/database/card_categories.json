@@ -39,7 +39,8 @@
     1071,
     1101,
     1117,
-    1125
+    1125,
+    1142
   ],
   "anti_support": [],
   "created_on": {
@@ -51,11 +52,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 13,
-    "time": "00:05",
+    "month": 12,
+    "day": 21,
+    "time": "22:32",
     "full_time": {
-      "$date": "2023-10-13T00:05:17.704Z"
+      "$date": "2023-12-21T22:32:25.329Z"
     }
   },
   "article": null
@@ -550,7 +551,8 @@
   "name": "Tactical",
   "description": "Cards with a knack for strategy and improvisation in the heat of combat.",
   "support": [
-    1138
+    1138,
+    1142
   ],
   "anti_support": [],
   "created_on": {
@@ -562,11 +564,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 23,
-    "time": "16:40",
+    "month": 12,
+    "day": 21,
+    "time": "22:30",
     "full_time": {
-      "$date": "2023-11-23T16:40:30.142Z"
+      "$date": "2023-12-21T22:30:35.566Z"
     }
   },
   "article": null
@@ -1261,6 +1263,35 @@
     "time": "01:15",
     "full_time": {
       "$date": "2023-12-15T01:15:45.210Z"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6584bd511df6bfa47c975e72"
+  },
+  "cat_type": "series",
+  "name": "The Spider",
+  "description": "Cards that are a part of the 'The Spider' continuity.",
+  "article": "",
+  "support": [],
+  "anti_support": [],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 21,
+    "time": "22:33",
+    "full_time": {
+      "$date": "2023-12-21T22:33:53.894Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 21,
+    "time": "22:33",
+    "full_time": {
+      "$date": "2023-12-21T22:33:53.894Z"
     }
   }
 }]

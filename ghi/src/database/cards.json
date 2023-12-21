@@ -7054,4 +7054,96 @@
   },
   "alpha": null,
   "beta": null
+},
+{
+  "_id": {
+    "$oid": "6584bb8d1df6bfa47c975422"
+  },
+  "name": "Wire Rain!!",
+  "card_class": "Staunch",
+  "hero_id": "TS1",
+  "series_name": "The Spider//Tech//Tactical//Support",
+  "card_number": 1143,
+  "enthusiasm": null,
+  "effect_text": "Deal 3 damage to a random foe. The next player's Move gains damage minus 1 (damage dealt by that card is reduced by 1 at the end of its resolution).",
+  "second_effect_text": "<Trigger> During a foe's turn, reveal this card in your hand; all foes whose cards have damage minus take 1 damage, then discard this card.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tsm.png",
+  "file_name": "i1g5tsm.png",
+  "card_type": [
+    1003
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 21,
+    "time": "22:26",
+    "full_time": {
+      "$date": "2023-12-21T22:26:21.474Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 21,
+    "time": "22:26",
+    "full_time": {
+      "$date": "2023-12-21T22:26:21.474Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "6584bc061df6bfa47c97542b"
+  },
+  "name": "The Remote Battler!",
+  "card_class": "Staunch",
+  "hero_id": "TS1",
+  "series_name": "The Spider//Tech//Tactical//Support",
+  "card_number": 1142,
+  "enthusiasm": null,
+  "effect_text": "Gain 1 Tactical card and heal 2 HP if that card was a Fighter or Move.",
+  "second_effect_text": "<Trigger> During a player's turn, reveal this card in your hand; resolve main effect of 1 Tactical or Staunch Move in your discard pile as if it was in your play, return this card and resolved card to bottom of the Main deck.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tsa.png",
+  "file_name": "i1g5tsa.png",
+  "card_type": [
+    1002
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 21,
+    "time": "22:28",
+    "full_time": {
+      "$date": "2023-12-21T22:28:22.658Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 21,
+    "time": "22:28",
+    "full_time": {
+      "$date": "2023-12-21T22:28:22.658Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
 }]
