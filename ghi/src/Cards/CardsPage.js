@@ -130,7 +130,7 @@ function CardsPage(props) {
             cardNumber: "",
             heroID: "",
             series: "",
-            illustrator: "",
+            startingNum: "",
             type: "",
             cardClass: "",
             extraEffect: "",
@@ -162,7 +162,7 @@ function CardsPage(props) {
         .filter(card => card.card_number.toString().includes(query.cardNumber))
         .filter(card => card.hero_id.toLowerCase().includes(query.heroID.toLowerCase()))
         .filter((card, index, arr) => card.series_name.toLowerCase().includes(query.series.toLowerCase()))
-        .filter(card => card.illustrator.toLowerCase().includes(query.illustrator.toLowerCase()))
+        .filter(card => card.card_number > query.startingNum - 1)
         .filter(card => query.type? card.card_type.some(type => type.toString() == query.type):card.card_type)
         .filter(card => card.card_class.includes(query.cardClass))
         .filter(card => query.extraEffect? card.extra_effects.some(effect => effect.toString() == query.extraEffect):card.extra_effects)
@@ -234,6 +234,15 @@ function CardsPage(props) {
             </input>
             <input
                 className="left"
+                type="number"
+                placeholder=" Starting Number"
+                style={{width: "177px", height: "37px"}}
+                name="startingNum"
+                value={query.startingNum}
+                onChange={handleQuery}>
+            </input>
+            <input
+                className="left"
                 type="text"
                 placeholder=" Hero ID"
                 style={{width: "177px", height: "37px"}}
@@ -248,15 +257,6 @@ function CardsPage(props) {
                 style={{width: "177px", height: "37px"}}
                 name="series"
                 value={query.series}
-                onChange={handleQuery}>
-            </input>
-            <input
-                className="left"
-                type="text"
-                placeholder=" Illustrator"
-                style={{width: "177px", height: "37px"}}
-                name="illustrator"
-                value={query.illustrator}
                 onChange={handleQuery}>
             </input>
             <br/>

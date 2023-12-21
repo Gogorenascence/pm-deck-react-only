@@ -130,7 +130,7 @@
   "description": "Cards that derive their power from animals, plant-life or the environment.",
   "support": [
     1134,
-    1162
+    1164
   ],
   "anti_support": [],
   "created_on": {
@@ -310,7 +310,7 @@
   "description": "Cards whose origins are tied to magical realms, creatures or artifacts.",
   "support": [
     1131,
-    1162
+    1164
   ],
   "anti_support": [
     1129
@@ -460,9 +460,9 @@
   "description": "Cards capable of energy manipulation.",
   "support": [
     1133,
-    1145,
-    1158,
-    1159
+    1147,
+    1160,
+    1161
   ],
   "anti_support": [],
   "created_on": {
@@ -645,8 +645,8 @@
     1118,
     1121,
     1127,
-    1145,
-    1159
+    1147,
+    1161
   ],
   "anti_support": [
     1013,
@@ -725,7 +725,7 @@
     1110,
     1120,
     1121,
-    1165
+    1167
   ],
   "anti_support": [],
   "created_on": {
