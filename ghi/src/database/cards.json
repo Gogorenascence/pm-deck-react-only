@@ -3385,7 +3385,7 @@
   "card_number": 1109,
   "enthusiasm": 0,
   "effect_text": "Once per round, if you draw or gain a Comeback(s), \nreturn 1 Fighter from the discard pile to the top of the Main deck.",
-  "second_effect_text": "<Trigger> If a card(s) in your play is discarded before resolving its main effect, discard this Item; resolve that card (max of 1) as if it was in your play.",
+  "second_effect_text": "<Trigger> If a card(s) in your play is discarded before resolving its main effect, discard this Item; resolve that card (max of 1) from the your discard pile.",
   "illustrator": "Hugo Roberto",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl15cpi.png",
   "file_name": "i1pl15cpi",
@@ -3408,10 +3408,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 11,
-    "time": "23:24",
+    "day": 22,
+    "time": "00:26",
     "full_time": {
-      "$date": "2023-12-11T23:24:40.922Z"
+      "$date": "2023-12-22T00:26:32.818Z"
     }
   },
   "alpha": null,
@@ -4598,7 +4598,7 @@
   "card_number": 1088,
   "enthusiasm": 0,
   "effect_text": "<Trigger> During the Start Phase or during a foe's turn, your Fighter gains Counter 1 (that card is revealed).",
-  "second_effect_text": "Once per foe's turn, if you have a defending Power Fighter and you are dealt damage, reduce that damage by 1.",
+  "second_effect_text": "Once per foe's turn, if you have a defending Power Fighter or Brawler Fighter and you are dealt damage, reduce that damage by 1.",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl08bgai.png",
   "file_name": "i1pl08bgai",
@@ -4624,10 +4624,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 11,
-    "time": "23:25",
+    "day": 22,
+    "time": "09:29",
     "full_time": {
-      "$date": "2023-12-11T23:25:46.782Z"
+      "$date": "2023-12-22T09:29:39.542Z"
     }
   },
   "alpha": null,
@@ -6747,7 +6747,7 @@
   "series_name": "Gizma//Magic//Mystic",
   "card_number": 1149,
   "enthusiasm": null,
-  "effect_text": "Resolve the Main effect of 1 Fighter, Aura or Move in your placed cards as if was in your play, then discard it.",
+  "effect_text": "Resolve the Main effect of 1 Fighter, Aura or Move in your placed cards, then discard it.",
   "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card of the same type from your hand or discard pile under this card (if this card is removed from your play, the placed card(s) is discarded).",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gf.png",
@@ -6775,10 +6775,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 17,
-    "time": "00:10",
+    "day": 22,
+    "time": "00:25",
     "full_time": {
-      "$date": "2023-12-17T00:10:20.106Z"
+      "$date": "2023-12-22T00:25:58.838Z"
     }
   },
   "alpha": null,
@@ -7065,8 +7065,8 @@
   "series_name": "The Spider//Tech//Tactical//Support",
   "card_number": 1143,
   "enthusiasm": null,
-  "effect_text": "Deal 3 damage to a random foe. The next player's Move gains damage minus 1 (damage dealt by that card is reduced by 1 at the end of its resolution).",
-  "second_effect_text": "<Trigger> During a foe's turn, reveal this card in your hand; all foes whose cards have damage minus take 1 damage, then discard this card.",
+  "effect_text": "Deal 3 damage to a random foe. The targeted foe's Move gains damage minus 1 (damage dealt by that card is reduced by 1 at the end of its resolution).  ",
+  "second_effect_text": "<Trigger> During a foe's turn, all foes whose cards have damage minus take 1 damage. This effect can be resolved from your hand, then this card is discarded.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tsm.png",
   "file_name": "i1g5tsm.png",
@@ -7085,17 +7085,15 @@
     "month": 12,
     "day": 21,
     "time": "22:26",
-    "full_time": {
-      "$date": "2023-12-21T22:26:21.474Z"
-    }
+    "full_time": "2023-12-21T22:26:21.474000"
   },
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 21,
-    "time": "22:26",
+    "day": 22,
+    "time": "07:20",
     "full_time": {
-      "$date": "2023-12-21T22:26:21.474Z"
+      "$date": "2023-12-22T07:20:55.191Z"
     }
   },
   "alpha": null,
@@ -7105,14 +7103,14 @@
   "_id": {
     "$oid": "6584bc061df6bfa47c97542b"
   },
-  "name": "The Remote Battler!",
+  "name": "Remote Trapper!",
   "card_class": "Staunch",
   "hero_id": "TS1",
   "series_name": "The Spider//Tech//Tactical//Support",
   "card_number": 1142,
   "enthusiasm": null,
-  "effect_text": "Gain 1 Tactical card and heal 2 HP if that card was a Fighter or Move.",
-  "second_effect_text": "<Trigger> During a player's turn, reveal this card in your hand; resolve main effect of 1 Tactical or Staunch Move in your discard pile as if it was in your play, return this card and resolved card to bottom of the Main deck.",
+  "effect_text": "Heal 2 HP and Provoke 1 Fighter or Move.",
+  "second_effect_text": "<Trigger> During a foe's turn, reveal 1 Staunch or Tactical card in your hand (the card stays revealed); all cards of the same type in a foe's play gain damage minus 1 as long as the revealed card is in your hand. ",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tsa.png",
   "file_name": "i1g5tsa.png",
@@ -7131,17 +7129,110 @@
     "month": 12,
     "day": 21,
     "time": "22:28",
+    "full_time": "2023-12-21T22:28:22.658000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 22,
+    "time": "09:22",
     "full_time": {
-      "$date": "2023-12-21T22:28:22.658Z"
+      "$date": "2023-12-22T09:22:23.812Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "6585539b1df6bfa47c975efb"
+  },
+  "name": "Cable Crusher!!!",
+  "card_class": "Staunch",
+  "hero_id": "TS1",
+  "series_name": "The Spider//Tech//Tactical//Support",
+  "card_number": 1144,
+  "enthusiasm": 13,
+  "effect_text": "Target: Foe of your choice.//1-5: Deal 3 piercing damage.//6-11: Deal 3 piercing damage. Provoke 1 Ending.//12+: Deal 3 piercing damage. Provoke 1 Move or Ending.",
+  "second_effect_text": "<Trigger> If you are targeted by a foe's card, that card gains damage minus 1.",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tse.png",
+  "file_name": "i1g5tse.png",
+  "card_type": [
+    1004
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1001,
+    1002
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 22,
+    "time": "09:15",
+    "full_time": {
+      "$date": "2023-12-22T09:15:07.342Z"
     }
   },
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 21,
-    "time": "22:28",
+    "day": 22,
+    "time": "09:15",
     "full_time": {
-      "$date": "2023-12-21T22:28:22.658Z"
+      "$date": "2023-12-22T09:15:07.342Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "658554441df6bfa47c975f04"
+  },
+  "name": "The Spider",
+  "card_class": "Staunch",
+  "hero_id": "TS1",
+  "series_name": "The Spider//Tech//Tactical//Support",
+  "card_number": 1141,
+  "enthusiasm": null,
+  "effect_text": "Gain 1 Tactical card or 1 The Spider Pluck.",
+  "second_effect_text": "<Trigger> During the Start Phase, resolve the main effect of 1 Staunch or Tactical Move from the discard pile, then return that card to bottom of the Main deck. This effect can be resolved from the hand, then this card is discarded.\n",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tsf.png",
+  "file_name": "i1g5tsf.png",
+  "card_type": [
+    1001
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [
+    1004
+  ],
+  "card_tags": [
+    1001
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 22,
+    "time": "09:17",
+    "full_time": {
+      "$date": "2023-12-22T09:17:56.301Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 22,
+    "time": "09:17",
+    "full_time": {
+      "$date": "2023-12-22T09:17:56.301Z"
     }
   },
   "alpha": null,
