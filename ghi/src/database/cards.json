@@ -7059,7 +7059,7 @@
   "_id": {
     "$oid": "6584bb8d1df6bfa47c975422"
   },
-  "name": "Wire Rain!!",
+  "name": "The Wire Shooter!!",
   "card_class": "Staunch",
   "hero_id": "TS1",
   "series_name": "The Spider//Tech//Tactical//Support",
@@ -7091,9 +7091,9 @@
     "year": 2023,
     "month": 12,
     "day": 22,
-    "time": "07:20",
+    "time": "23:31",
     "full_time": {
-      "$date": "2023-12-22T07:20:55.191Z"
+      "$date": "2023-12-22T23:31:13.293Z"
     }
   },
   "alpha": null,
@@ -7103,7 +7103,7 @@
   "_id": {
     "$oid": "6584bc061df6bfa47c97542b"
   },
-  "name": "Remote Trapper!",
+  "name": "The Trapper!",
   "card_class": "Staunch",
   "hero_id": "TS1",
   "series_name": "The Spider//Tech//Tactical//Support",
@@ -7135,9 +7135,9 @@
     "year": 2023,
     "month": 12,
     "day": 22,
-    "time": "09:22",
+    "time": "23:34",
     "full_time": {
-      "$date": "2023-12-22T09:22:23.812Z"
+      "$date": "2023-12-22T23:34:12.122Z"
     }
   },
   "alpha": null,
@@ -7147,7 +7147,7 @@
   "_id": {
     "$oid": "6585539b1df6bfa47c975efb"
   },
-  "name": "Cable Crusher!!!",
+  "name": "The Cable Crusher!!!",
   "card_class": "Staunch",
   "hero_id": "TS1",
   "series_name": "The Spider//Tech//Tactical//Support",
@@ -7174,17 +7174,15 @@
     "month": 12,
     "day": 22,
     "time": "09:15",
-    "full_time": {
-      "$date": "2023-12-22T09:15:07.342Z"
-    }
+    "full_time": "2023-12-22T09:15:07.342000"
   },
   "updated_on": {
     "year": 2023,
     "month": 12,
     "day": 22,
-    "time": "09:15",
+    "time": "16:48",
     "full_time": {
-      "$date": "2023-12-22T09:15:07.342Z"
+      "$date": "2023-12-22T16:48:12.413Z"
     }
   },
   "alpha": null,
@@ -7201,7 +7199,7 @@
   "card_number": 1141,
   "enthusiasm": null,
   "effect_text": "Gain 1 Tactical card or 1 The Spider Pluck.",
-  "second_effect_text": "<Trigger> During the Start Phase, resolve the main effect of 1 Staunch or Tactical Move from the discard pile, then return that card to bottom of the Main deck. This effect can be resolved from the hand, then this card is discarded.\n",
+  "second_effect_text": "<Trigger> During a foe's turn, resolve the main effect of 1 Staunch or Tactical Move from the discard pile, then return that card to bottom of the Main deck. This effect can be resolved from the hand, then this card is discarded.\n",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tsf.png",
   "file_name": "i1g5tsf.png",
@@ -7215,24 +7213,69 @@
     1004
   ],
   "card_tags": [
-    1001
+    1001,
+    1005
   ],
   "created_on": {
     "year": 2023,
     "month": 12,
     "day": 22,
     "time": "09:17",
-    "full_time": {
-      "$date": "2023-12-22T09:17:56.301Z"
-    }
+    "full_time": "2023-12-22T09:17:56.301000"
   },
   "updated_on": {
     "year": 2023,
     "month": 12,
     "day": 22,
-    "time": "09:17",
+    "time": "17:35",
     "full_time": {
-      "$date": "2023-12-22T09:17:56.301Z"
+      "$date": "2023-12-22T17:35:13.932Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "65863a071df6bfa47c975f91"
+  },
+  "name": "The Recharge",
+  "card_class": "",
+  "hero_id": "TS1",
+  "series_name": "The Spider//Tech//Tactical//Relaxation",
+  "card_number": 1159,
+  "enthusiasm": null,
+  "effect_text": "Return 1 card in your play to your hand.",
+  "second_effect_text": "<Critical> Return 1 Item in your Active Pluck to bottom of the Pluck deck; reset 1 card in your play (you can resolve the extra effects of 1 card one more time).",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl17tscb.png",
+  "file_name": "i1pl17tscb.png",
+  "card_type": [
+    1008
+  ],
+  "extra_effects": [
+    1002
+  ],
+  "reactions": [],
+  "card_tags": [
+    1000
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 23,
+    "time": "01:38",
+    "full_time": {
+      "$date": "2023-12-23T01:38:15.463Z"
+    }
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 23,
+    "time": "01:38",
+    "full_time": {
+      "$date": "2023-12-23T01:38:15.463Z"
     }
   },
   "alpha": null,
