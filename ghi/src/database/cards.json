@@ -4643,7 +4643,7 @@
   "series_name": "Battle Girl Alice//Magic//Brawler",
   "card_number": 1089,
   "enthusiasm": 0,
-  "effect_text": "Foes can not use trigger effects or reactions in response to the effects and reactions of your Fighter(s).",
+  "effect_text": "Provoke 1 Move or Ending. Foes can not use trigger effects or reactions in response to the effects and reactions of your Fighter(s) this round.",
   "second_effect_text": "<Trigger> If your Fighter defends, cancel all non-damaging effect(s) of card(s) of all foes' cards(s) until the end of this turn.",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl08bgae.png",
@@ -4667,13 +4667,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 9,
-    "day": 30,
-    "time": "21:33",
+    "month": 12,
+    "day": 23,
+    "time": "18:36",
     "full_time": {
-      "$date": "2023-09-30T21:33:13.723Z"
+      "$date": "2023-12-23T18:36:58.352Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -6747,7 +6749,7 @@
   "series_name": "Gizma//Magic//Mystic",
   "card_number": 1149,
   "enthusiasm": null,
-  "effect_text": "Resolve the Main effect of 1 Fighter, Aura or Move in your placed cards, then discard it.",
+  "effect_text": "Resolve the main effect of 1 Fighter, Aura or Move in your placed cards, then discard it.",
   "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card of the same type from your hand or discard pile under this card (if this card is removed from your play, the placed card(s) is discarded).",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gf.png",
@@ -6775,10 +6777,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 22,
-    "time": "00:25",
+    "day": 23,
+    "time": "18:32",
     "full_time": {
-      "$date": "2023-12-22T00:25:58.838Z"
+      "$date": "2023-12-23T18:32:14.449Z"
     }
   },
   "alpha": null,
@@ -7066,7 +7068,7 @@
   "card_number": 1143,
   "enthusiasm": null,
   "effect_text": "Deal 3 damage to a random foe. The targeted foe's Move gains damage minus 1 (damage dealt by that card is reduced by 1 at the end of its resolution).  ",
-  "second_effect_text": "<Trigger> During a foe's turn, all foes whose cards have damage minus take 1 damage. This effect can be resolved from your hand, then this card is discarded.",
+  "second_effect_text": "<Trigger> During a foe's turn, all foes whose cards have damage minus take 1 damage.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tsm.png",
   "file_name": "i1g5tsm.png",
@@ -7090,10 +7092,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 22,
-    "time": "23:31",
+    "day": 23,
+    "time": "15:45",
     "full_time": {
-      "$date": "2023-12-22T23:31:13.293Z"
+      "$date": "2023-12-23T15:45:01.123Z"
     }
   },
   "alpha": null,
@@ -7199,7 +7201,7 @@
   "card_number": 1141,
   "enthusiasm": null,
   "effect_text": "Gain 1 Tactical card or 1 The Spider Pluck.",
-  "second_effect_text": "<Trigger> During a foe's turn, resolve the main effect of 1 Staunch or Tactical Move from the discard pile, then return that card to bottom of the Main deck. This effect can be resolved from the hand, then this card is discarded.\n",
+  "second_effect_text": "<Trigger> During the Start Phase, place 1 Tactical card from your hand or discard pile under this Fighter (if this card is removed from your play, the placed card(s) is discarded); this card copies the trigger effect text of its placed card. Discard the placed card at during the End Phase.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tsf.png",
   "file_name": "i1g5tsf.png",
@@ -7213,8 +7215,7 @@
     1004
   ],
   "card_tags": [
-    1001,
-    1005
+    1001
   ],
   "created_on": {
     "year": 2023,
@@ -7226,10 +7227,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 22,
-    "time": "17:35",
+    "day": 23,
+    "time": "15:52",
     "full_time": {
-      "$date": "2023-12-22T17:35:13.932Z"
+      "$date": "2023-12-23T15:52:06.020Z"
     }
   },
   "alpha": null,
@@ -7246,7 +7247,7 @@
   "card_number": 1159,
   "enthusiasm": null,
   "effect_text": "Return 1 card in your play to your hand.",
-  "second_effect_text": "<Critical> Return 1 Item in your Active Pluck to bottom of the Pluck deck; reset 1 card in your play (you can resolve the extra effects of 1 card one more time).",
+  "second_effect_text": "<Critical> Return 1 Item in your Active Pluck to bottom of the Pluck deck; resolve the main effect of 1 Fighter in your play one more time.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl17tscb.png",
   "file_name": "i1pl17tscb.png",
@@ -7265,17 +7266,106 @@
     "month": 12,
     "day": 23,
     "time": "01:38",
+    "full_time": "2023-12-23T01:38:15.463000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 23,
+    "time": "18:30",
     "full_time": {
-      "$date": "2023-12-23T01:38:15.463Z"
+      "$date": "2023-12-23T18:30:37.079Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "658708d21df6bfa47c978a43"
+  },
+  "name": "\"The Trap is Set!\"",
+  "card_class": "",
+  "hero_id": "TS1",
+  "series_name": "The Spider//Tech//Tactical//Call",
+  "card_number": 1158,
+  "enthusiasm": null,
+  "effect_text": "Gain 1 The Spider card.",
+  "second_effect_text": "<Trigger> During a foe's turn, deal 1 damage to that foe equal to total amount damage minus across all cards in their play (max of 3).",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl17tse.png",
+  "file_name": "i1pl17tse.png",
+  "card_type": [
+    1007
+  ],
+  "extra_effects": [
+    1001
+  ],
+  "reactions": [],
+  "card_tags": [
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 23,
+    "time": "16:20",
+    "full_time": "2023-12-23T16:20:34.085000"
+  },
+  "updated_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 23,
+    "time": "18:17",
+    "full_time": {
+      "$date": "2023-12-23T18:17:38.097Z"
+    }
+  },
+  "alpha": null,
+  "beta": null
+},
+{
+  "_id": {
+    "$oid": "658723f91df6bfa47c978a94"
+  },
+  "name": "The Battler",
+  "card_class": "",
+  "hero_id": "TS1",
+  "series_name": "The Spider//Tech//Tactical//Support",
+  "card_number": 1157,
+  "enthusiasm": null,
+  "effect_text": "<L. Trigger>  If you have a Tactical Fighter in your play, place 1 Tactical Move from your hand or the discard pile under this Item (if this Item is removed from your Active Pluck, the placed card is discarded).",
+  "second_effect_text": "This Item copies the effect text of its placed card. ",
+  "illustrator": "TBD",
+  "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl17tsi.png",
+  "file_name": "i1pl17tsi.png",
+  "card_type": [
+    1006
+  ],
+  "extra_effects": [
+    1003
+  ],
+  "reactions": [],
+  "card_tags": [
+    1004,
+    1005
+  ],
+  "created_on": {
+    "year": 2023,
+    "month": 12,
+    "day": 23,
+    "time": "18:16",
+    "full_time": {
+      "$date": "2023-12-23T18:16:25.484Z"
     }
   },
   "updated_on": {
     "year": 2023,
     "month": 12,
     "day": 23,
-    "time": "01:38",
+    "time": "18:16",
     "full_time": {
-      "$date": "2023-12-23T01:38:15.463Z"
+      "$date": "2023-12-23T18:16:25.484Z"
     }
   },
   "alpha": null,
