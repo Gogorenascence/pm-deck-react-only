@@ -2,7 +2,7 @@ import {
     Card,
 } from "react-bootstrap";
 import { useState, useEffect, useRef, useContext } from "react";
-import { NavLink, useParams} from 'react-router-dom';
+import { NavLink, useParams, useNavigate } from 'react-router-dom';
 import BackButton from "../display/BackButton";
 import PackOpener from "./PackOpener";
 import { PullsContext } from "../context/PullsContext";
@@ -21,6 +21,8 @@ function PullPage(props) {
         pullsList,
         pulling,
     } = useContext(PullsContext);
+
+    const navigate = useNavigate()
 
     const [loading, setLoading] = useState(false)
     const [fullView, setFullView] = useState(false)
@@ -176,29 +178,29 @@ function PullPage(props) {
                 />
                 {fullView?
                     <button
-                        className="left media-button media-center"
+                        className="left media-center"
                         onClick={handleFullView}
                     >
                         Multiple View
                     </button>:
                     <button
-                        className="left media-button media-center"
+                        className="left media-center"
                         onClick={handleFullView}
                     >
                         Single View
                     </button>}
-                <button onClick={handleSavePulls} className="left media-button media-center">
+                <button onClick={handleSavePulls} className="left media-center">
                     Save Pulls
                 </button>
-                <button onClick={handleClearPulls} className="left media-button media-center">
+                <button onClick={handleClearPulls} className="left media-center">
                     Clear Pulls
                 </button>
-                <NavLink to={`/cardsets/${card_set_id}/pulls/deckbuilder`}>
-                    <button
-                        className="left media-button media-center">
-                        Create Deck
-                    </button>
-                </NavLink>
+                <button
+                    className="left media-center"
+                    onClick={() => navigate(`/cardsets/${card_set_id}/pulls/deckbuilder`)}>
+                    Create Deck
+                </button>
+
                 <BackButton/>
             </div>
 
