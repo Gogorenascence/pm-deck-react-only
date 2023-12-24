@@ -7061,7 +7061,7 @@
   "_id": {
     "$oid": "6584bb8d1df6bfa47c975422"
   },
-  "name": "The Wire Shooter!!",
+  "name": "The Remote Trapper!!",
   "card_class": "Staunch",
   "hero_id": "TS1",
   "series_name": "The Spider//Tech//Tactical//Support",
@@ -7092,10 +7092,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 23,
-    "time": "15:45",
+    "day": 24,
+    "time": "22:45",
     "full_time": {
-      "$date": "2023-12-23T15:45:01.123Z"
+      "$date": "2023-12-24T22:45:46.217Z"
     }
   },
   "alpha": null,
@@ -7105,7 +7105,7 @@
   "_id": {
     "$oid": "6584bc061df6bfa47c97542b"
   },
-  "name": "The Trapper!",
+  "name": "The Wire Shooter!",
   "card_class": "Staunch",
   "hero_id": "TS1",
   "series_name": "The Spider//Tech//Tactical//Support",
@@ -7137,9 +7137,9 @@
     "year": 2023,
     "month": 12,
     "day": 24,
-    "time": "21:30",
+    "time": "22:45",
     "full_time": {
-      "$date": "2023-12-24T21:30:40.326Z"
+      "$date": "2023-12-24T22:45:02.468Z"
     }
   },
   "alpha": null,
