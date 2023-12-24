@@ -2031,6 +2031,17 @@ button:hover {
   /* margin-bottom: 100px; */
 }
 
+.dd-button-row {
+  overflow-x: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.dd-button-row::-webkit-scrollbar {
+  display: none;
+}
+
 .play-area2 {
   height: 70vh;
   margin-top: 50px;

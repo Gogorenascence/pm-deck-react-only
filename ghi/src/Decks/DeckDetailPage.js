@@ -308,61 +308,71 @@ function DeckDetailPage(props) {
                     </div>:
                     null}
             </div>
-            <div style={{ display: "flex" }}>
-            {listView?
-                <button
-                    className="left"
-                    variant="dark"
-                    onClick={handleListView}
-                >
-                    Image View
-                </button>:
-                <button
-                    className="left"
-                    variant="dark"
-                    onClick={handleListView}
-                >
-                    List View
-                </button>
-            }
-            <button
-                    className="left none"
-                    variant="dark"
-                    onClick={getShuffledDeck}
-                    style={{marginLeft: ".5%"}}
+            <div className="dd-button-row flex">
+                {listView?
+                    <button
+                        className="left"
+                        variant="dark"
+                        onClick={handleListView}
                     >
-                    Test Hand
-            </button>
-            {shuffledDeck.length > 0 ?
-                <>
+                        Image View
+                    </button>:
                     <button
-                            className="left"
-                            variant="dark"
-                            onClick={mulligan}
-                            style={{marginLeft: ".5%"}}
-                            >
-                            Mulligan
+                        className="left"
+                        variant="dark"
+                        onClick={handleListView}
+                    >
+                        List View
                     </button>
-                    <button
-                            className="left"
-                            variant="dark"
-                            onClick={clearShuffledDeck}
-                            style={{marginLeft: ".5%", width: '108px', textAlign: "center"}}
-                            >
-                            Hide Hand
-                    </button>
-                </>: null
-            }
-            <DeckExport deck_id={deck_id} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
-            <NavLink to={`/decks/${deck.id}/copy`}>
-                    <button
-                            className="left"
-                            style={{marginLeft: ".5%", textAlign: "center"}}
-                            >
-                            Copy Decks
-                    </button>
-                </NavLink>
-            <BackButton/>
+                }
+                <button
+                        className="left none"
+                        variant="dark"
+                        onClick={getShuffledDeck}
+                        style={{marginLeft: ".5%"}}
+                        >
+                        Test Hand
+                </button>
+                {shuffledDeck.length > 0 ?
+                    <>
+                        <button
+                                className="left"
+                                variant="dark"
+                                onClick={mulligan}
+                                style={{marginLeft: ".5%"}}
+                                >
+                                Mulligan
+                        </button>
+                        <button
+                                className="left"
+                                variant="dark"
+                                onClick={clearShuffledDeck}
+                                style={{marginLeft: ".5%", width: '108px', textAlign: "center"}}
+                                >
+                                Hide Hand
+                        </button>
+                    </>: null
+                }
+                <DeckExport deck_id={deck_id} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
+                <NavLink to={`/decks/${deck.id}/copy`}>
+                        <button
+                                className="left"
+                                style={{marginLeft: ".5%", textAlign: "center"}}
+                                >
+                                Copy Decks
+                        </button>
+                    </NavLink>
+                <BackButton/>
+                <DeckExport deck_id={deck_id} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
+                <NavLink to={`/decks/${deck.id}/copy`}>
+                        <button
+                                className="left"
+                                style={{marginLeft: ".5%", textAlign: "center"}}
+                                >
+                                Copy Decks
+                        </button>
+                    </NavLink>
+                <BackButton/>
             </div>
             <StatsPanel
                 main_list={main_list}
