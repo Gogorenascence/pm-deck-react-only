@@ -6486,8 +6486,8 @@
   "series_name": "Fog Palace//Magic//Tactical",
   "card_number": 1155,
   "enthusiasm": null,
-  "effect_text": "Provoke 1 Move and 3 damage to a foe.",
-  "second_effect_text": "<Trigger> If this card is discarded from your play, deal 2 damage to a foe. If this card was discarded by a foe's card effect, deal piercing 3 damage instead.",
+  "effect_text": "Deal 3 damage to a foe and Provoke 1 Move.",
+  "second_effect_text": "<Trigger> If this card is discarded from your play, deal 2 damage to a foe. If this card was discarded by a foe's card effect, deal 3 piercing damage instead.",
   "illustrator": "",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5fm.png",
   "file_name": "i1p5fm.png",
@@ -6511,10 +6511,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 14,
-    "time": "00:18",
+    "day": 24,
+    "time": "18:12",
     "full_time": {
-      "$date": "2023-12-14T00:18:07.885Z"
+      "$date": "2023-12-24T18:12:06.107Z"
     }
   },
   "alpha": null,
@@ -7284,7 +7284,7 @@
   "_id": {
     "$oid": "658708d21df6bfa47c978a43"
   },
-  "name": "\"The Trap is Set!\"",
+  "name": "\"The Trap Is Set!\"",
   "card_class": "",
   "hero_id": "TS1",
   "series_name": "The Spider//Tech//Tactical//Call",
@@ -7315,10 +7315,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 23,
-    "time": "18:17",
+    "day": 24,
+    "time": "14:49",
     "full_time": {
-      "$date": "2023-12-23T18:17:38.097Z"
+      "$date": "2023-12-24T14:49:36.406Z"
     }
   },
   "alpha": null,
