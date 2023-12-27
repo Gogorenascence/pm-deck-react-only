@@ -177,10 +177,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 19,
-    "time": "02:02",
+    "day": 26,
+    "time": "19:58",
     "full_time": {
-      "$date": "2023-12-19T02:02:07.219Z"
+      "$date": "2023-12-26T19:58:39.068Z"
     }
   },
   "alpha": null,
@@ -719,10 +719,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 19,
-    "time": "02:09",
+    "day": 26,
+    "time": "19:58",
     "full_time": {
-      "$date": "2023-12-19T02:09:09.690Z"
+      "$date": "2023-12-26T19:58:01.978Z"
     }
   },
   "alpha": null,
@@ -1977,10 +1977,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 11,
-    "time": "23:11",
+    "day": 27,
+    "time": "02:13",
     "full_time": {
-      "$date": "2023-12-11T23:11:50.809Z"
+      "$date": "2023-12-27T02:13:14.741Z"
     }
   },
   "alpha": null,
@@ -2131,7 +2131,7 @@
   "card_number": 1113,
   "enthusiasm": 0,
   "effect_text": "Foes with Enthusiasm lower than yours have their Focus reduced by 4 and must resolve their Endings in this round.",
-  "second_effect_text": "<Trigger> During the Start Phase, lower the Enthusiasm of all foes by 2, then resolve this Event in your ownership.",
+  "second_effect_text": "<Trigger> During the Start Phase, lower the Enthusiasm of all foes by 4, then resolve this Event in your ownership.",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl16gee.png",
   "file_name": "i1pl16gee",
@@ -2154,13 +2154,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 5,
-    "time": "00:30",
+    "month": 12,
+    "day": 26,
+    "time": "20:21",
     "full_time": {
-      "$date": "2023-10-05T00:30:06.350Z"
+      "$date": "2023-12-26T20:21:19.755Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -2516,7 +2518,7 @@
   "name": "Portal",
   "card_class": "Canny",
   "hero_id": "P01",
-  "series_name": "Warp Family//Cosmic//Psychic",
+  "series_name": "Warp Family//Cosmic//Psychic//Tactical",
   "card_number": 1053,
   "enthusiasm": 0,
   "effect_text": "Look at a random foe's hand, then discard 1 card from their hand. That foe draws 1 card.//If you have a Unity card in your play, resolve this card one more time, but the target foe draws 2 cards instead.",
@@ -2544,13 +2546,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 7,
-    "day": 9,
-    "time": "14:45",
+    "month": 12,
+    "day": 27,
+    "time": "02:45",
     "full_time": {
-      "$date": "2023-07-09T14:45:45.336Z"
+      "$date": "2023-12-27T02:45:06.246Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -2559,7 +2563,7 @@
   "name": "Teleporting Mastery!",
   "card_class": "Canny",
   "hero_id": "P01",
-  "series_name": "Warp Family//Cosmic//Psychic",
+  "series_name": "Warp Family//Cosmic//Psychic//Tactical",
   "card_number": 1054,
   "enthusiasm": 0,
   "effect_text": "Discard 1 Aura, Move or Ending in a foe's play, then that foe adds 1 random card with the same type as the removed card or MAX VARIABLE as the removed card's type from their hand to their play. ",
@@ -2587,10 +2591,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 17,
-    "time": "07:13",
+    "day": 27,
+    "time": "02:43",
     "full_time": {
-      "$date": "2023-12-17T07:13:57.979Z"
+      "$date": "2023-12-27T02:43:35.237Z"
     }
   },
   "alpha": null,
@@ -2603,7 +2607,7 @@
   "name": "Distant Drop-off!!!",
   "card_class": "Canny",
   "hero_id": "P01",
-  "series_name": "Warp Family//Cosmic//Psychic",
+  "series_name": "Warp Family//Cosmic//Psychic//Tactical",
   "card_number": 1056,
   "enthusiasm": 16,
   "effect_text": "<Target> Random foe. //If you have a Unity card in your play, add 3 to your focus. //<1-5> Deal 3 damage. //<6-11> Deal 3 damage. Discard 1 card from their hand. //<12+> Deal 3 damage. They discard 1 card from their play and 1 card from their hand.",
@@ -2630,10 +2634,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 4,
-    "time": "15:30",
+    "day": 27,
+    "time": "02:43",
     "full_time": {
-      "$date": "2023-12-04T15:30:28.876Z"
+      "$date": "2023-12-27T02:43:27.857Z"
     }
   },
   "alpha": null,
@@ -2646,7 +2650,7 @@
   "name": "Spatial Reversal!!",
   "card_class": "Canny",
   "hero_id": "P01",
-  "series_name": "Warp Family//Cosmic//Psychic",
+  "series_name": "Warp Family//Cosmic//Psychic//Tactical",
   "card_number": 1055,
   "enthusiasm": 0,
   "effect_text": "This card copies the effect text of a foe's Aura or Move until the end of your turn (if the the selected card is face-down, reveal it).",
@@ -2674,10 +2678,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 4,
-    "time": "15:29",
+    "day": 27,
+    "time": "02:43",
     "full_time": {
-      "$date": "2023-12-04T15:29:51.807Z"
+      "$date": "2023-12-27T02:43:44.377Z"
     }
   },
   "alpha": null,
@@ -3019,11 +3023,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 30,
-    "time": "04:30",
+    "month": 12,
+    "day": 26,
+    "time": "19:58",
     "full_time": {
-      "$date": "2023-11-30T04:30:42.493Z"
+      "$date": "2023-12-26T19:58:50.338Z"
     }
   },
   "alpha": null,
@@ -3036,7 +3040,7 @@
   "name": "Blast Mouth",
   "card_class": "Power",
   "hero_id": "BM1",
-  "series_name": "Blast Mouth//Altered//Nature",
+  "series_name": "Blast Mouth//Altered//Nature//Brawler",
   "card_number": 1017,
   "enthusiasm": 0,
   "effect_text": "Deal 2 damage to a foe.\nIf you are last to go this round or have the lowest Enthusiasm, deal 1 additional damage and draw 1 Pluck.",
@@ -3064,13 +3068,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 29,
-    "time": "23:38",
+    "month": 12,
+    "day": 26,
+    "time": "17:31",
     "full_time": {
-      "$date": "2023-06-29T23:38:25.821Z"
+      "$date": "2023-12-26T17:31:01.734Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3202,14 +3208,14 @@
   "_id": {
     "$oid": "6439583c3d6559427fc584dc"
   },
-  "name": "\"Emergency!\"",
+  "name": "\"Change of Plans!\"",
   "card_class": "",
   "hero_id": "GEN",
   "series_name": "Cosmic//Support//Transformation//Call",
   "card_number": 1126,
   "enthusiasm": 0,
   "effect_text": "<Trigger> During a foe's turn; switch 1 unresolved card in your play with 1 card in your hand of the same type (the new card can not be used to defend).",
-  "second_effect_text": "<Critical> Discard 1 card from your hand; gain 1 Support or Transformation card.",
+  "second_effect_text": "<Critical> Discard 1 card from your hand; gain 1 Support or Transformation card/Pluck.",
   "illustrator": "mvthwus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb18g.png",
   "file_name": "i1cb18g",
@@ -3233,11 +3239,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 11,
-    "time": "00:17",
+    "month": 12,
+    "day": 26,
+    "time": "19:57",
     "full_time": {
-      "$date": "2023-11-11T00:17:17.758Z"
+      "$date": "2023-12-26T19:57:50.227Z"
     }
   },
   "alpha": null,
@@ -3862,7 +3868,7 @@
   "name": "Hammerspace",
   "card_class": "Unity",
   "hero_id": "HS1",
-  "series_name": "Warp Family//Cosmic//Psychic",
+  "series_name": "Warp Family//Cosmic//Psychic//Support",
   "card_number": 1041,
   "enthusiasm": 0,
   "effect_text": "Draw 1 card and gain 1 Item. \nIf you have a Canny card in your play, reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time).",
@@ -3890,13 +3896,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 9,
-    "day": 1,
-    "time": "14:33",
+    "month": 12,
+    "day": 27,
+    "time": "02:42",
     "full_time": {
-      "$date": "2023-09-01T14:33:48.477Z"
+      "$date": "2023-12-27T02:42:03.368Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4056,13 +4064,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 30,
-    "time": "03:54",
+    "month": 12,
+    "day": 26,
+    "time": "19:58",
     "full_time": {
-      "$date": "2023-06-30T03:54:29.067Z"
+      "$date": "2023-12-26T19:58:20.448Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4071,7 +4081,7 @@
   "name": "Cinder Crunch!!",
   "card_class": "Power",
   "hero_id": "BM1",
-  "series_name": "Blast Mouth//Altered//Nature",
+  "series_name": "Blast Mouth//Altered//Nature//Brawler",
   "card_number": 1019,
   "enthusiasm": 0,
   "effect_text": "Deal 3 piercing damage to a foe who has already gone this round. If this card defeats a Fighter, your Ending gains damage plus 1 (that card deals 1 additional damage at the end of its resolution).",
@@ -4092,19 +4102,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:12",
+    "month": 12,
+    "day": 26,
+    "time": "17:31",
     "full_time": {
-      "$date": "2023-06-25T19:12:18.514Z"
+      "$date": "2023-12-26T17:31:10.263Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4113,7 +4123,7 @@
   "name": "Burning Impact!!!",
   "card_class": "Power",
   "hero_id": "BM1",
-  "series_name": "Blast Mouth//Altered//Nature",
+  "series_name": "Blast Mouth//Altered//Nature//Brawler",
   "card_number": 1020,
   "enthusiasm": 6,
   "effect_text": "<Target> Foe of your choice. //If you are last to go this round, ignore the reaction(s) of defending Fighter(s). //<1-5> Deal 4 damage. //<6-11> Deal 4 piercing damage. //<12+> Deal 5 piercing damage. If they have already gone this round, deal 1 additional piercing damage.",
@@ -4139,13 +4149,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 9,
-    "day": 30,
-    "time": "21:41",
+    "month": 12,
+    "day": 26,
+    "time": "17:31",
     "full_time": {
-      "$date": "2023-09-30T21:41:50.242Z"
+      "$date": "2023-12-26T17:31:20.861Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4198,7 +4210,7 @@
   "name": "Reptilian Super Serum",
   "card_class": "",
   "hero_id": "BM1",
-  "series_name": "Blast Mouth//Altered//Nature",
+  "series_name": "Blast Mouth//Altered//Nature//Transformation",
   "card_number": 1079,
   "enthusiasm": 0,
   "effect_text": "Once per round, you can take 2 damage, then your Fighter gains damage plus 1 and is treated as Power for the rest of your turn (that card deals 1 additional damage at the end of its resolution).",
@@ -4225,10 +4237,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 11,
-    "time": "23:25",
+    "day": 26,
+    "time": "19:59",
     "full_time": {
-      "$date": "2023-12-11T23:25:57.941Z"
+      "$date": "2023-12-26T19:59:33.467Z"
     }
   },
   "alpha": null,
@@ -4244,7 +4256,7 @@
   "series_name": "Blast Mouth//Altered//Nature//Transformation",
   "card_number": 1080,
   "enthusiasm": 0,
-  "effect_text": "Add 1 Fighter from the discard pile to your hand.",
+  "effect_text": "Gain 1 Altered or Transformation card.",
   "second_effect_text": "<Trigger> If your Fighter would be defeated, return it to your hand instead and add a Fighter with a different class from your hand to your play (this does not count as a defeat; you can not defend with another card this round). ",
   "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl05bme.png",
@@ -4264,19 +4276,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:12",
+    "month": 12,
+    "day": 26,
+    "time": "19:59",
     "full_time": {
-      "$date": "2023-06-25T19:12:41.563Z"
+      "$date": "2023-12-26T19:59:57.288Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4416,7 +4428,7 @@
   "name": "Reunion",
   "card_class": "",
   "hero_id": "GEN",
-  "series_name": "Magic//Quest//Spoiler",
+  "series_name": "Magic//Quest//Future",
   "card_number": 1127,
   "enthusiasm": 0,
   "effect_text": "<Trigger> During a foe’s turn, discard up to 2 cards from your hand/play; heal 1 HP for each card discarded.",
@@ -4445,10 +4457,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 19,
-    "time": "02:11",
+    "day": 26,
+    "time": "16:07",
     "full_time": {
-      "$date": "2023-12-19T02:11:44.207Z"
+      "$date": "2023-12-26T16:07:40.803Z"
     }
   },
   "alpha": null,
@@ -4711,11 +4723,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 4,
-    "time": "21:02",
+    "month": 12,
+    "day": 26,
+    "time": "19:58",
     "full_time": {
-      "$date": "2023-11-04T21:02:13.328Z"
+      "$date": "2023-12-26T19:58:29.827Z"
     }
   },
   "alpha": null,
@@ -4947,7 +4959,7 @@
   "name": "Personal Pocket Dimension!",
   "card_class": "Unity",
   "hero_id": "HS1",
-  "series_name": "Warp Family//Cosmic//Psychic",
+  "series_name": "Warp Family//Cosmic//Psychic//Support",
   "card_number": 1042,
   "enthusiasm": 0,
   "effect_text": "Resolve 1 of the following effects for each Item in your Active Pluck or for each different class in your play://1+: Draw 1 Pluck.//2+: Add 1 Aura from your hand to your play.//3+: Add 1 Move from the discard pile to your play.",
@@ -4972,13 +4984,15 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 29,
-    "time": "23:48",
+    "month": 12,
+    "day": 27,
+    "time": "02:42",
     "full_time": {
-      "$date": "2023-06-29T23:48:48.906Z"
+      "$date": "2023-12-27T02:42:20.597Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -5031,7 +5045,7 @@
   "name": "Super Heavyweight Drop!!!",
   "card_class": "Unity",
   "hero_id": "HS1",
-  "series_name": "Warp Family//Cosmic//Psychic",
+  "series_name": "Warp Family//Cosmic//Psychic//Support",
   "card_number": 1044,
   "enthusiasm": 9,
   "effect_text": "<Target> Foe of your choice. //If you have a Canny card in your play, add 3 to your focus. //<1-5> Deal 3 damage and they gain 1 Item. Gain 1 Item. //<6-11> Deal 4 damage and they draw 1 Pluck. Gain 1 Item. //<12+> Deal 5 damage. Gain 1 Item or add 1 Item from the discard pile to your ownership.",
@@ -5053,19 +5067,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:20",
+    "month": 12,
+    "day": 27,
+    "time": "02:42",
     "full_time": {
-      "$date": "2023-06-25T19:20:57.391Z"
+      "$date": "2023-12-27T02:42:29.757Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -5074,7 +5088,7 @@
   "name": "Infinite Storage Space",
   "card_class": "",
   "hero_id": "HS1",
-  "series_name": "Warp Family//Cosmic//Psychic",
+  "series_name": "Warp Family//Cosmic//Psychic//Support",
   "card_number": 1097,
   "enthusiasm": 0,
   "effect_text": "<Limited> Draw 1 Pluck.",
@@ -5097,19 +5111,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:21",
+    "month": 12,
+    "day": 27,
+    "time": "02:42",
     "full_time": {
-      "$date": "2023-06-25T19:21:02.140Z"
+      "$date": "2023-12-27T02:42:38.384Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -5160,7 +5174,7 @@
   "name": "Entering the Inventory",
   "card_class": "",
   "hero_id": "HS1",
-  "series_name": "Warp Family//Cosmic//Psychic",
+  "series_name": "Warp Family//Cosmic//Psychic//Support",
   "card_number": 1099,
   "enthusiasm": 0,
   "effect_text": "Discard 1 card from your hand, then unfurl 2 Pluck. Add 1 Pluck to your ownership and discard the other unfurled Pluck.",
@@ -5183,19 +5197,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:21",
+    "month": 12,
+    "day": 27,
+    "time": "02:42",
     "full_time": {
-      "$date": "2023-06-25T19:21:12.570Z"
+      "$date": "2023-12-27T02:42:48.757Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -5204,7 +5218,7 @@
   "name": "An Opening to Their Blindspot",
   "card_class": "",
   "hero_id": "P01",
-  "series_name": "Warp Family//Cosmic//Psychic",
+  "series_name": "Warp Family//Cosmic//Psychic//Tactical",
   "card_number": 1106,
   "enthusiasm": 0,
   "effect_text": "<Limited> Deal 1 bypassing damage to a foe.",
@@ -5231,11 +5245,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 11,
-    "time": "01:21",
+    "month": 12,
+    "day": 27,
+    "time": "02:43",
     "full_time": {
-      "$date": "2023-11-11T01:21:57.313Z"
+      "$date": "2023-12-27T02:43:10.759Z"
     }
   },
   "alpha": null,
@@ -5290,7 +5304,7 @@
   "name": "Backdoor Exit",
   "card_class": "",
   "hero_id": "P01",
-  "series_name": "Warp Family//Cosmic//Psychic",
+  "series_name": "Warp Family//Cosmic//Psychic//Tactical",
   "card_number": 1108,
   "enthusiasm": 0,
   "effect_text": "<Trigger> If a card(s) in your play would be sent to the discard pile during this round, add that card to your hand instead (max of 1). ",
@@ -5318,11 +5332,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 7,
-    "time": "04:45",
+    "month": 12,
+    "day": 27,
+    "time": "02:43",
     "full_time": {
-      "$date": "2023-11-07T04:45:39.551Z"
+      "$date": "2023-12-27T02:43:17.569Z"
     }
   },
   "alpha": null,
@@ -5379,7 +5393,7 @@
   "name": "Surprise Appearance",
   "card_class": "",
   "hero_id": "GEN",
-  "series_name": "Cosmic//Psychic//Quest//Spoiler",
+  "series_name": "Cosmic//Psychic//Quest//Future",
   "card_number": 1121,
   "enthusiasm": 0,
   "effect_text": "Unfurl 3 cards; add 2 cards to your hand and discard the other unfurled card. \nApply the following effects based on the classes of the added cards (you can only apply each effect once): //<Power> Add 3 to your Focus.//<Unity> Return 1 Aura or 1 Move from the discard pile to the top of the Main deck.//<Canny> Deal 2 bypassing damage to a foe.",
@@ -5404,11 +5418,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 10,
-    "time": "18:44",
+    "month": 12,
+    "day": 26,
+    "time": "16:07",
     "full_time": {
-      "$date": "2023-11-10T18:44:36.479Z"
+      "$date": "2023-12-26T16:07:14.613Z"
     }
   },
   "alpha": null,
@@ -5421,7 +5435,7 @@
   "name": "The Next Project",
   "card_class": "",
   "hero_id": "GEN",
-  "series_name": "Tech//Brawler//Spoiler",
+  "series_name": "Tech//Brawler//Future",
   "card_number": 1128,
   "enthusiasm": 0,
   "effect_text": "Discard 1 Item in a foe’s Active Pluck.",
@@ -5449,10 +5463,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 18,
-    "time": "23:02",
+    "day": 26,
+    "time": "16:07",
     "full_time": {
-      "$date": "2023-12-18T23:02:51.075Z"
+      "$date": "2023-12-26T16:07:52.099Z"
     }
   },
   "alpha": null,
@@ -5513,7 +5527,7 @@
   "series_name": "Mystic//Quest//Relaxation",
   "card_number": 1123,
   "enthusiasm": null,
-  "effect_text": "Return 8 Mystic cards/Pluck with different names from their respective discard piles to the bottom of your Main deck/Pluck deck in any order; all Mystic cards in your play gain damage plus 1 this round (those cards deal 1 additional damage at the end of their resolutions).",
+  "effect_text": "Return 8 Mystic cards/Pluck from their respective discard piles to the bottom of your Main deck/Pluck deck in any order; all Mystic cards in your play gain damage plus 1 this round (those cards deal 1 additional damage at the end of their resolutions).",
   "second_effect_text": "",
   "illustrator": "gogorenascence",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg9e.png",
@@ -5535,11 +5549,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 7,
-    "time": "04:38",
+    "month": 12,
+    "day": 26,
+    "time": "15:29",
     "full_time": {
-      "$date": "2023-11-07T04:38:30.884Z"
+      "$date": "2023-12-26T15:29:36.137Z"
     }
   },
   "alpha": null,
@@ -5709,11 +5723,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 3,
-    "time": "22:31",
+    "month": 12,
+    "day": 26,
+    "time": "19:59",
     "full_time": {
-      "$date": "2023-11-03T22:31:02.285Z"
+      "$date": "2023-12-26T19:59:19.028Z"
     }
   },
   "alpha": null,
@@ -6467,10 +6481,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 13,
-    "time": "11:22",
+    "day": 26,
+    "time": "20:00",
     "full_time": {
-      "$date": "2023-12-13T11:22:01.842Z"
+      "$date": "2023-12-26T20:00:09.218Z"
     }
   },
   "alpha": null,
@@ -7093,9 +7107,9 @@
     "year": 2023,
     "month": 12,
     "day": 24,
-    "time": "22:45",
+    "time": "23:07",
     "full_time": {
-      "$date": "2023-12-24T22:45:46.217Z"
+      "$date": "2023-12-24T23:07:11.636Z"
     }
   },
   "alpha": null,
@@ -7137,9 +7151,9 @@
     "year": 2023,
     "month": 12,
     "day": 24,
-    "time": "22:45",
+    "time": "23:06",
     "full_time": {
-      "$date": "2023-12-24T22:45:02.468Z"
+      "$date": "2023-12-24T23:06:52.720Z"
     }
   },
   "alpha": null,

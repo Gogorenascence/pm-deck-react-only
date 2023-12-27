@@ -220,6 +220,7 @@
   "name": "Transformation",
   "description": "Cards that transform.",
   "support": [
+    1080,
     1126,
     1137
   ],
@@ -233,11 +234,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 23,
-    "time": "16:34",
+    "month": 12,
+    "day": 26,
+    "time": "20:00",
     "full_time": {
-      "$date": "2023-11-23T16:34:51.996Z"
+      "$date": "2023-12-26T20:00:46.822Z"
     }
   },
   "article": null
@@ -372,6 +373,7 @@
   "name": "Altered",
   "description": "Cards that have been physically changed by artificial means.",
   "support": [
+    1080,
     1132
   ],
   "anti_support": [],
@@ -384,11 +386,11 @@
   },
   "updated_on": {
     "year": 2023,
-    "month": 11,
-    "day": 23,
-    "time": "16:37",
+    "month": 12,
+    "day": 26,
+    "time": "18:45",
     "full_time": {
-      "$date": "2023-11-23T16:37:46.874Z"
+      "$date": "2023-12-26T18:45:24.942Z"
     }
   },
   "article": null
@@ -554,8 +556,7 @@
     1138,
     1141,
     1142,
-    1157,
-    1158
+    1157
   ],
   "anti_support": [],
   "created_on": {
@@ -568,10 +569,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 23,
-    "time": "22:13",
+    "day": 26,
+    "time": "20:18",
     "full_time": {
-      "$date": "2023-12-23T22:13:07.958Z"
+      "$date": "2023-12-26T20:18:00.534Z"
     }
   },
   "article": null
@@ -609,7 +610,7 @@
     "$oid": "6526031ecb646354b039b899"
   },
   "cat_type": "sub_series",
-  "name": "Spoiler",
+  "name": "Future",
   "description": "Cards that point towards future events or new characters.",
   "support": [],
   "anti_support": [],
@@ -618,19 +619,18 @@
     "month": 10,
     "day": 11,
     "time": "02:06",
-    "full_time": {
-      "$date": "2023-10-11T02:06:22.833Z"
-    }
+    "full_time": "2023-10-11T02:06:22.833000"
   },
   "updated_on": {
     "year": 2023,
-    "month": 10,
-    "day": 11,
-    "time": "02:06",
+    "month": 12,
+    "day": 26,
+    "time": "15:51",
     "full_time": {
-      "$date": "2023-10-11T02:06:22.833Z"
+      "$date": "2023-12-26T15:51:11.456Z"
     }
-  }
+  },
+  "article": null
 },
 {
   "_id": {
