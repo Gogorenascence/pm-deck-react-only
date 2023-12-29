@@ -5740,7 +5740,7 @@
   "name": "A.A.A. Power Dampener Unit",
   "card_class": "",
   "hero_id": "GEN",
-  "series_name": "Tech//Support",
+  "series_name": "Tech//Tactical//Support",
   "card_number": 1129,
   "enthusiasm": null,
   "effect_text": "<Limited> Place up to 3 cards from your hand under this Item (if this Item is removed from your Active Pluck, the placed cards are discarded).",
@@ -5768,10 +5768,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 18,
-    "time": "16:09",
+    "day": 28,
+    "time": "15:48",
     "full_time": {
-      "$date": "2023-12-18T16:09:09.049Z"
+      "$date": "2023-12-28T15:48:28.907Z"
     }
   },
   "alpha": null,
@@ -6055,7 +6055,7 @@
   "series_name": "Support//Team//Brawler//Tactical",
   "card_number": 1135,
   "enthusiasm": null,
-  "effect_text": "Add 3 to your Focus. If you have 2 or more Support/Team cards in your play, all non-Support/Team cards in your play gains damage plus 1 and ignore the reactions of defending Fighters. ",
+  "effect_text": "If you have 2 or more Support/Team cards in your play, all non-Support/Team cards in your play gain damage plus 1 and ignore the reactions of defending Fighters. ",
   "second_effect_text": "",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg21e.png",
@@ -6078,10 +6078,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 6,
-    "time": "00:48",
+    "day": 28,
+    "time": "15:26",
     "full_time": {
-      "$date": "2023-12-06T00:48:40.177Z"
+      "$date": "2023-12-28T15:26:43.096Z"
     }
   },
   "alpha": null,
@@ -6598,8 +6598,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001,
-    1002
+    1002,
+    1001
   ],
   "created_on": {
     "year": 2023,
@@ -6611,10 +6611,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 10,
-    "time": "16:07",
+    "day": 28,
+    "time": "15:45",
     "full_time": {
-      "$date": "2023-12-10T16:07:36.247Z"
+      "$date": "2023-12-28T15:45:04.529Z"
     }
   },
   "alpha": null,
@@ -7182,8 +7182,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001,
-    1002
+    1002,
+    1001
   ],
   "created_on": {
     "year": 2023,
@@ -7195,10 +7195,10 @@
   "updated_on": {
     "year": 2023,
     "month": 12,
-    "day": 22,
-    "time": "16:48",
+    "day": 28,
+    "time": "15:44",
     "full_time": {
-      "$date": "2023-12-22T16:48:12.413Z"
+      "$date": "2023-12-28T15:44:05.836Z"
     }
   },
   "alpha": null,
