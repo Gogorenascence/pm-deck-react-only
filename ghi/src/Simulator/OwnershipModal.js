@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
-
+import React, { useState, useEffect, useRef, useContext } from 'react'
+import { PluckActionsContext } from '../context/PluckActionsContext';
 
 function OwnershipModal({
     ownership,
@@ -18,6 +18,7 @@ function OwnershipModal({
 
     const content = useRef(null)
     useOutsideAlerter(content)
+    const {swapping, swapPluckInOwnership} = useContext(PluckActionsContext)
 
     function useOutsideAlerter(ref) {
         useEffect(() => {
@@ -25,7 +26,8 @@ function OwnershipModal({
             function handleOutsideClick(event) {
                 if (ref.current &&
                     !ref.current.contains(event.target)&&
-                    !event.target.closest(".matCardOverlay")
+                    !event.target.closest(".matCardOverlay")&&
+                    !event.target.closest(".card-menu-item")
                     // !event.target.closest(".cd-related-modal-card")
                 ) {
                     handleClose();
@@ -85,7 +87,10 @@ function OwnershipModal({
                                                 ><p>{selectedPluckIndex === index? "Cancel" : "Play"}</p></div>
                                                 <div className="card-menu-item"><p>Place</p></div>
                                                 <div className="card-menu-item"
-                                                    onClick={() => discardPluckFromOwnership(index)}
+                                                    onClick={() => {
+                                                        discardPluckFromOwnership(index)
+                                                        handleShowCardMenu(index)
+                                                    }}
                                                 ><p>Discard</p></div>
                                                 <div className="card-menu-item"
                                                     onClick={() => returnPluckToDeck(index, "top")}
@@ -95,7 +100,9 @@ function OwnershipModal({
                                                 ><p>Deckbottom</p></div>
                                             </div>
                                             <img
-                                                onClick={() => handleShowCardMenu(index)}
+                                                onClick={() => {!swapping.cardToSwap?
+                                                                        handleShowCardMenu(index):
+                                                                        swapPluckInOwnership(index)}}
                                                 onMouseEnter={() => handleHoveredCard(card)}
                                                 onDoubleClick={() => handlePluck(index)}
                                                 className={

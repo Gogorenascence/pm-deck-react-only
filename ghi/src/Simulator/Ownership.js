@@ -42,7 +42,8 @@ function Ownership({
         }
     }, [ownership]);
 
-    const handleOpen = () => {
+    const handleOpen = (event) => {
+        event.preventDefault()
         setShowOwnershipModal(true)
         menuSound(volume)
         document.body.style.overflow = 'hidden';
@@ -57,7 +58,8 @@ function Ownership({
     return(
         <div>
             <div className="matCard pointer"
-                onClick={() => handleOpen()}
+                onClick={(event) => handleOpen(event)}
+                onContextMenu={(event) => handleOpen(event)}
                 style={{marginLeft: "-160px", marginRight: "20px"}}
             >
                 {full_ownership.length > 0 ?

@@ -143,7 +143,7 @@ function App() {
                                                               cards={cards}
                                                             />} />
               <Route path="/simulator" element={<SimulatorPage
-                                                decks={decks}
+                                                pre_decks={decks}
                                                 pre_processed_cards={cards}
                                                 card_types={card_types}
                                                 card_tags={card_tags}

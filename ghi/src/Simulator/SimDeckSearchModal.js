@@ -1,7 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 import {
-    menuSound
+    menuSound,
+    activateSound,
 } from "../Sounds/Sounds";
+import { GameStateContext } from '../context/GameStateContext';
 
 
 function SimDeckSearchModal({
@@ -25,6 +27,7 @@ function SimDeckSearchModal({
 
     const content = useRef(null)
     useOutsideAlerter(content)
+    const {faceDown, player, addToLog} = useContext(GameStateContext)
     const [showDeckMenu, setShowDeckMenu] = useState(null)
     const [showDiscardMenu, setShowDiscardMenu] = useState(null)
 
@@ -125,7 +128,16 @@ function SimDeckSearchModal({
                                 return (
                                     <div style={{display: "flex", justifyContent: "center"}}>
                                         <div>
-                                            <div className={showDiscardMenu === index ? "deck-menu4Items": "hidden2"}>
+                                            <div className={showDiscardMenu === index ? "deck-menu5Items": "hidden2"}>
+                                                <div className="card-menu-item"
+                                                    onClick={() => {
+                                                        activateSound(volume)
+                                                        addToLog(
+                                                            "System",
+                                                            "system",
+                                                            `${player.name} is resolving "${mainDiscard[index].name}" from the Discard pile`)
+                                                    }}
+                                                ><p>Resolve</p></div>
                                                 <div className="card-menu-item"
                                                     onClick={() => handleAddCardFromDiscard(index)}
                                                 ><p>Add to Hand</p></div>

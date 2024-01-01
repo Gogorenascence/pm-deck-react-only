@@ -1,14 +1,18 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import { SimulatorActionsContext } from '../context/SimulatorActionsContext';
 import Slider from '@mui/material/Slider';
 
 
 function PositionSlider({
     handleChangePosition,
     handleChangeScale,
-    handleChangeTransformRotateX
+    handleChangeTransformRotateX,
+    volume
 }){
 
     const [show, setShow] = useState(true)
+
+    const {mute} = useContext(SimulatorActionsContext)
 
     const handleWheel = (event) => {
         event.preventDefault();
@@ -68,6 +72,11 @@ function PositionSlider({
                         max={80}
                     />
                 </div>
+                <img
+                    className="volume"
+                    src={ volume > 0? "https://i.imgur.com/O2EDSc6.png":'https://i.imgur.com/UJoc11y.png'}
+                    onClick={() => mute()}
+                />
             </div>
         </div>
     )

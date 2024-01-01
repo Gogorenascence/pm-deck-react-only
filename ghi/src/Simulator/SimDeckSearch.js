@@ -84,7 +84,8 @@ function SimDeckSearch({
         document.body.style.overflow = 'auto';
     };
 
-    const handleOpenDiscard = () => {
+    const handleOpenDiscard = (event) => {
+        event.preventDefault()
         setShowDiscardModal(true)
         setShowDiscardMenu(false)
         menuSound(volume)
@@ -100,8 +101,9 @@ function SimDeckSearch({
     return(
         <div className='flex'>
             <span>
-                <div className="matCard margin-left"
-                    onClick={() => handleOpenDiscard()}
+                <div className="matCard margin-left pointer"
+                    onClick={(event) => handleOpenDiscard(event)}
+                    onContextMenu={(event) => handleOpenDiscard(event)}
                     onMouseEnter={() => mainDiscard.length > 0 ? handleHoveredCard(mainDiscard[mainDiscard.length-1]): null}
                 >
                     {mainDiscard.length > 1 ?
@@ -135,7 +137,7 @@ function SimDeckSearch({
                         onClick={() => shuffleMainDeck()}
                     ><p>Shuffle</p></div>
                 </div>
-                <div className="matCard"
+                <div className="matCard pointer"
                     onContextMenu={(event) => handleShowCardMenu(event)}
                     onClick={() => setShowDeckMenu(false)}
                     onDoubleClick={() => drawCard()}

@@ -4,22 +4,34 @@ import { QueryContextProvider } from "./QueryContext";
 import { DeckQueryContextProvider } from "./DeckQueryContext";
 import { BuilderQueryContextProvider } from "./BuilderQueryContext";
 import { GameStateContextProvider } from "./GameStateContext";
+import { SimulatorActionsContextProvider } from "./SimulatorActionsContext";
+import { MainActionsContextProvider } from "./MainActionsContext";
+import { PluckActionsContextProvider } from "./PluckActionsContext";
+import { AppContextProvider } from "./AppContext";
 import { APIContextProvider } from "./APIContext";
 
 const AppProvider = ({ children }) => {
     return (
         <APIContextProvider>
-            <BuilderQueryContextProvider>
-                <PullsContextProvider>
-                    <QueryContextProvider>
-                        <DeckQueryContextProvider>
-                            <GameStateContextProvider>
-                                {children}
-                            </GameStateContextProvider>
-                        </DeckQueryContextProvider>
-                    </QueryContextProvider>
-                </PullsContextProvider>
-            </BuilderQueryContextProvider>
+            <AppContextProvider>
+                <BuilderQueryContextProvider>
+                    <PullsContextProvider>
+                        <QueryContextProvider>
+                            <DeckQueryContextProvider>
+                                <GameStateContextProvider>
+                                    <SimulatorActionsContextProvider>
+                                        <MainActionsContextProvider>
+                                            <PluckActionsContextProvider>
+                                                {children}
+                                            </PluckActionsContextProvider>
+                                        </MainActionsContextProvider>
+                                    </SimulatorActionsContextProvider>
+                                </GameStateContextProvider>
+                            </DeckQueryContextProvider>
+                        </QueryContextProvider>
+                    </PullsContextProvider>
+                </BuilderQueryContextProvider>
+            </AppContextProvider>
         </APIContextProvider>
     );
 };
