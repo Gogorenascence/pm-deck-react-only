@@ -14,7 +14,6 @@ export function adjustFontSize() {
     if (textElement && containerElement) {
         const textWidth = textMeasure.scrollWidth;
         const containerWidth = containerElement.offsetWidth;
-        console.log(textWidth, containerWidth)
         if (textWidth > containerWidth) {
             const fontSize = 37;
             textElement.style.fontSize = fontSize + 'px';

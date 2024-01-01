@@ -19,7 +19,6 @@ function BuilderCardSearch(props) {
         setShowMore} = useContext(BuilderQueryContext)
 
     const { boosterSets } = props
-    console.log(boosterSets)
 
     const handleBoosterSetChange = (event) => {
         setBoosterSetId(event.target.value)

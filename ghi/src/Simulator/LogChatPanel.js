@@ -97,7 +97,6 @@ function LogChatPanel({
         if (event.key === "Enter" && !event.shiftKey && /^(-)?\d+$/.test(damage)) {
             event.preventDefault();
             const damageTaken = parseInt(damage, 10);
-            console.log(damageTaken)
             if (defender === "self"){
                 setPlayer({...player, hp: player.hp - damageTaken})
                 setDamage("")

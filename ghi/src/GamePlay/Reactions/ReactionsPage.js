@@ -24,8 +24,6 @@ function ReactionsPage(props) {
     // eslint-disable-next-line
     },[]);
 
-    console.log(reactions)
-
     return (
         <div className="white-space">
             <h1 className="left-h1">Reactions</h1>

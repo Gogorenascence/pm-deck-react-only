@@ -8,7 +8,7 @@ const BackButton = () => {
     return (
         <button
             onClick={handleGoBack}
-            className="heightNorm back-button media-button none"
+            className="left media-button none"
         >
             Back
         </button>

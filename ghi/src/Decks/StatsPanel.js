@@ -95,7 +95,6 @@ pluck_list
 
     const handleShowStats = (event) => {
         setShowStats(!showStats)
-        console.log(isDark)
     }
 
     const handleClose = () => {

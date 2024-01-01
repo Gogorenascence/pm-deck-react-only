@@ -8,6 +8,7 @@ import { NavLink, useParams } from 'react-router-dom';
 import DeckExport from "./DeckExport";
 import BackButton from "../display/BackButton";
 import StatsPanel from "./StatsPanel";
+import SimulateButton from "../Simulator/SimulateButton";
 
 
 function DeckDetailPage(props) {
@@ -246,65 +247,60 @@ function DeckDetailPage(props) {
                         {shuffledDeck.length > 0 ?
                 <div className="maindeck" style={{width: "90%"}}>
                     <div style={{marginLeft: "10px"}}>
-
-                                <h4
-                                    className="left"
-                                    style={{margin: "10px 10px", fontWeight: "700"}}
-                                    >Test Hand
-                                </h4>
-                                <div style={{width: "95%", marginLeft: "20px"}}>
-                                    <Row xs="auto" className="justify-content-start">
-                                        {shuffledDeck.slice(0,6).map((card) => {
-                                            return (
-                                                <Col
-                                                    style={{padding: "2px 5px 8px 5px"}}>
-                                                    <img
-                                                        style={{
-                                                            width: '115px',
-                                                            margin: '10px 0px 10px 0px',
-                                                            borderRadius: "7px",
-                                                            overflow: "hidden"}}
-                                                        onClick={() => handleMulliganChange(card)}
-                                                        className={mulliganList.includes(shuffledDeck.indexOf(card)) ? "selected builder-card3" : "builder-card3"}
-                                                        title={card.name}
-                                                        src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                                        alt={card.name}/>
-                                                </Col>
-                                            );
-                                        })}
-                                    </Row>
-                                </div>
-
+                        <h4
+                            className="left"
+                            style={{margin: "10px 10px", fontWeight: "700"}}
+                            >Test Hand
+                        </h4>
+                        <div style={{width: "95%", marginLeft: "20px"}}>
+                            <Row xs="auto" className="justify-content-start">
+                                {shuffledDeck.slice(0,6).map((card) => {
+                                    return (
+                                        <Col
+                                            style={{padding: "2px 5px 8px 5px"}}>
+                                            <img
+                                                style={{
+                                                    width: '115px',
+                                                    margin: '10px 0px 10px 0px',
+                                                    borderRadius: "7px",
+                                                    overflow: "hidden"}}
+                                                onClick={() => handleMulliganChange(card)}
+                                                className={mulliganList.includes(shuffledDeck.indexOf(card)) ? "selected builder-card3" : "builder-card3"}
+                                                title={card.name}
+                                                src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                alt={card.name}/>
+                                        </Col>
+                                    );
+                                })}
+                            </Row>
+                        </div>
                     </div>
                 </div>:
                         null}
                     {ownership ?
 
                     <div className="pluckdeck" style={{marginLeft: ".5%"}}>
+                        <h4
+                            className="left"
+                            style={{margin: "10px 10px", fontWeight: "700"}}
+                            >Ownwership
+                        </h4>
+                        <Row xs="auto" className="justify-content-center">
+                            <Col style={{paddingTop: "2px"}}>
+                                <img
+                                    className="builder-card3"
+                                    style={{ width: '115px',
+                                    margin: '10px 0px 10px 0px',
+                                    borderRadius: "7px",
+                                    overflow: "hidden"}}
 
-                                        <h4
-                                            className="left"
-                                            style={{margin: "10px 10px", fontWeight: "700"}}
-                                            >Ownwership
-                                        </h4>
-                                        <Row xs="auto" className="justify-content-center">
-                                            <Col style={{paddingTop: "2px"}}>
-                                                <img
-                                                    className="builder-card3"
-                                                    style={{ width: '115px',
-                                                    margin: '10px 0px 10px 0px',
-                                                    borderRadius: "7px",
-                                                    overflow: "hidden"}}
+                                    title={ownership.name}
+                                    src={ownership.picture_url ? ownership.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                    alt={ownership.name}
+                                    variant="bottom"/>
 
-                                                    title={ownership.name}
-                                                    src={ownership.picture_url ? ownership.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                                    alt={ownership.name}
-                                                    variant="bottom"/>
-
-                                            </Col>
-                                        </Row>
-
-
+                            </Col>
+                        </Row>
                     </div>:
                     null}
             </div>
@@ -312,14 +308,12 @@ function DeckDetailPage(props) {
                 {listView?
                     <button
                         className="left"
-                        variant="dark"
                         onClick={handleListView}
                     >
                         Image View
                     </button>:
                     <button
                         className="left"
-                        variant="dark"
                         onClick={handleListView}
                     >
                         List View
@@ -327,7 +321,6 @@ function DeckDetailPage(props) {
                 }
                 <button
                         className="left none"
-                        variant="dark"
                         onClick={getShuffledDeck}
                         style={{marginLeft: ".5%"}}
                         >
@@ -336,32 +329,35 @@ function DeckDetailPage(props) {
                 {shuffledDeck.length > 0 ?
                     <>
                         <button
-                                className="left"
-                                variant="dark"
-                                onClick={mulligan}
-                                style={{marginLeft: ".5%"}}
-                                >
-                                Mulligan
+                            className="left"
+                            onClick={mulligan}
+                            style={{marginLeft: ".5%"}}
+                            >
+                            Mulligan
                         </button>
                         <button
-                                className="left"
-                                variant="dark"
-                                onClick={clearShuffledDeck}
-                                style={{marginLeft: ".5%", width: '108px', textAlign: "center"}}
-                                >
-                                Hide Hand
+                            className="left"
+                            onClick={clearShuffledDeck}
+                            style={{marginLeft: ".5%", width: '108px', textAlign: "center"}}
+                            >
+                            Hide Hand
                         </button>
                     </>: null
                 }
                 <DeckExport deck_id={deck_id} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
                 <NavLink to={`/decks/${deck.id}/copy`}>
-                        <button
-                                className="left"
-                                style={{marginLeft: ".5%", textAlign: "center"}}
-                                >
-                                Copy Decks
-                        </button>
-                    </NavLink>
+                    <button
+                        className="left heightNorm"
+                        style={{marginLeft: ".5%", textAlign: "center"}}
+                        >
+                        Copy Decks
+                    </button>
+                </NavLink>
+                <SimulateButton
+                    deckName={deck.name}
+                    main_list={deck.cards}
+                    pluck_list={deck.pluck}
+                    />
                 <BackButton/>
             </div>
             <StatsPanel

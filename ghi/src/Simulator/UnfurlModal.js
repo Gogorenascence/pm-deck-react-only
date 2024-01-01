@@ -135,13 +135,13 @@ function UnfurlModal({
                         </div>
                         </div>
                         <div className="cd-inner margin-top-20">
-                            <button className="margin-bottom-20" onClick={handleUnfurl}>
+                            <button className="margin-bottom-20 front-button" onClick={handleUnfurl}>
                                 Unfurl
                             </button>
-                            <button className="margin-bottom-20" onClick={() =>(setUnfurlCount(1))}>
+                            <button className="margin-bottom-20 middle-button" onClick={() =>(setUnfurlCount(1))}>
                                 Clear
                             </button>
-                            <button className="margin-bottom-20" onClick={handleClose}>
+                            <button className="margin-bottom-20 end-button" onClick={handleClose}>
                                 Close
                             </button>
                         </div>

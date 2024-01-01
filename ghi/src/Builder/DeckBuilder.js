@@ -54,21 +54,17 @@ function DeckBuilder(props) {
     };
 
     const importDeck = (importedDeck) => {
-        console.log(importedDeck.ObjectStates[0])
         const cardIDList = importedDeck.ObjectStates[0].DeckIDs.map(num => num/100)
         const cardList = cardIDList.map(cardID => cards.find(card => card.card_number === cardID))
-        console.log(cardList)
         const main = cardList.filter(card => card.card_type[0] === 1001||
             card.card_type[0] === 1002||
             card.card_type[0] === 1003||
             card.card_type[0] === 1004||
             card.card_type[0] === 1005)
-        console.log(main)
         setMainList([...main_list, ...main])
         const pluck = cardList.filter(card => card.card_type[0] === 1006||
             card.card_type[0] === 1007||
             card.card_type[0] === 1008)
-        console.log(pluck)
         setPluckList([...pluck_list, ...pluck])
     };
 

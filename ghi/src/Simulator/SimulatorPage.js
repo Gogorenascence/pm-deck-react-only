@@ -153,7 +153,6 @@ function SimulatorPage(props) {
             processedCards.push(cardData)
         }
         setCards(processedCards)
-        console.log(processedCards)
     }
 
     useEffect(() => {
@@ -209,15 +208,15 @@ function SimulatorPage(props) {
                             <option value={deck.id}>{deck.name}</option>
                             ))}
                     </select>
-                    <button onClick={fillDecks}>Get Deck</button>
+                    <button className="front-button" onClick={fillDecks}>Get Deck</button>
 
                     {player.mainDeck.length > 0 ?
                         <>
-                            <button onClick={!game? gameStart: resetPlayer}>{!game? "Game Start": "Reset Player"}</button>
+                            <button className="middle-button" onClick={!game? gameStart: resetPlayer}>{!game? "Game Start": "Reset Player"}</button>
                         </>:null
                     }
 
-                    <button onClick={checkPlayer}>Player Info</button>
+                    <button className="end-button" onClick={checkPlayer}>Player Info</button>
                 </div>
                 <div className={loading && decks.length < 1? "deckSelect2": "hidden2"}>
                 {/* <div className="deckSelect2"> */}

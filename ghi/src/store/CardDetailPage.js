@@ -99,7 +99,6 @@ function CardDetailPage() {
         const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/card_categories/`);
         const data = await response.json();
         const sortedData = [...data.card_categories].sort((a,b) => a.name.localeCompare(b.name));
-        console.log(sortedData.find(category => category.name === "Mystic"))
         setCardCategories(sortedData);
     };
 
@@ -132,13 +131,11 @@ function CardDetailPage() {
 
     const matchSeries = (line) => {
         const cardCategory = card_categories?.find(category => category.name === line)
-        console.log(card_categories)
         return cardCategory?.id
     };
 
     const matchClass = (card_class) => {
         const cardCategory = card_categories?.find(category => category.name === card_class)
-        console.log(card_categories)
         return cardCategory?.id
     }
 

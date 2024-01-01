@@ -38,7 +38,6 @@ function CardDetailPage() {
     const getCard = async() =>{
 
         const cardData = cards.find(card => card.card_number.toString() === card_number)
-        console.log(cards)
         cardData["seriesNames"] = cardData.series_name.split("//")
         cardData["effectText"] = cardData.effect_text.split("//")
         if (cardData.second_effect_text){
@@ -55,7 +54,6 @@ function CardDetailPage() {
     const extra_effects_list = []
     for (let extra_effect of extra_effects) {
         if (card.extra_effects.includes(extra_effect.effect_number) ) {
-            console.log(extra_effect)
             extra_effects_list.push(extra_effect)
         }
     }
@@ -63,7 +61,6 @@ function CardDetailPage() {
     const reaction_counts = {}
     for (let reaction_number of card.reactions) {
         const reaction = reactions.find(reaction => reaction.reaction_number === reaction_number)
-        console.log(reaction)
             !reaction_counts[reaction.name]?
                 reaction_counts[reaction.name] = {
                     info: reaction,
@@ -84,7 +81,6 @@ function CardDetailPage() {
 
     const card_tags_list = []
     for (let card_tag of card_tags) {
-        console.log(card_tag)
         if (card.card_tags.includes(card_tag.tag_number) ) {
             card_tags_list.push(card_tag)
         }

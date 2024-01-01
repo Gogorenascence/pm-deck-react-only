@@ -10,7 +10,6 @@ function CardInfoPanel({
 
     const handleShowPanel = () => {
         setShowPanel(!showPanel)
-        console.log(hoveredCard)
     }
 
     const processText = (text) => {

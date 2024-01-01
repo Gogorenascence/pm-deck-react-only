@@ -4,9 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 function SectionCard({link, title, imageSRC}) {
 
-    console.log(typeof link)
-    console.log(typeof title)
-    console.log(typeof imageSRC)
 
     return (
         <div>

@@ -160,7 +160,6 @@ function DeckExport(props) {
       deckExportContainedObjects.push(cardToAdd)
     }
     deckExport["ObjectStates"]["ContainedObjects"] = deckExportContainedObjects
-    console.log(deckExport)
 
     getDeckIDsPluckList()
     let pluckExport = {
@@ -294,7 +293,6 @@ function DeckExport(props) {
     pluckExportContainedObjects.push(cardToAdd)
   }
   pluckExport["ObjectStates"]["ContainedObjects"] = pluckExportContainedObjects
-  console.log(pluckExport)
 
 
   // // Download image for the first card in main_list

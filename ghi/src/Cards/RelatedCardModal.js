@@ -1,18 +1,19 @@
 import { useParams, NavLink, useNavigate } from 'react-router-dom';
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 import cards from "../database/cards.json";
-// import { useOutsideAlerter } from '../Helpers';
+import { AppContext } from '../context/AppContext';
 
 
 function RelatedCardModal() {
     const { card_number } = useParams()
     const [card, setCard] = useState("")
     const content = useRef(null)
+    const {isDark} = useContext(AppContext)
+
     useOutsideAlerter(content)
     const navigate = useNavigate()
     const getCard = async() =>{
         const cardData = cards.find(card => card.card_number.toString() === card_number)
-        console.log(cards)
         setCard(cardData);
     };
 
@@ -28,6 +29,7 @@ function RelatedCardModal() {
     const handleShow = async() => {
         setShow(true)
         document.body.style.overflow = 'hidden';
+        console.log(isDark)
     };
 
     useEffect(() => {
@@ -65,10 +67,9 @@ function RelatedCardModal() {
                     Show all Cards
             </button>
             {show?
-                <div className="large-modal topbar">
+                <div className={!isDark? "large-modal topbar":"large-modal-dark topbar"}>
                     <div className="outScrollable"  ref={content}>
-                        <h1 className="centered-h1"
-                            style={{color: "black"}}>Related Cards</h1>
+                        <h1 className="centered-h1">Related Cards</h1>
                         <div>
                             <div className="cd-inner2 card-pool-fill">
                                 {relatedCardsList.map((relatedCard) => {

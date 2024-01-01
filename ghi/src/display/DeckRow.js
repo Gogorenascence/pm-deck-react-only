@@ -73,7 +73,6 @@ function DeckRow() {
             }
         }
         setNewDecks(deckData);
-        console.log(decks)
     };
 
     const all_decks = newDecks.slice(-4).reverse()

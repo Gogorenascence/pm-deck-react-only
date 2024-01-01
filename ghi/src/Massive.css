@@ -2957,6 +2957,18 @@ button:hover {
   border-radius: 0 5px 5px 0;
 }
 
+.front-button {
+  border-radius: 5px 0 0 5px;
+}
+
+.middle-button {
+  border-radius: 0;
+}
+
+.end-button {
+  border-radius: 0 5px 5px 0;
+}
+
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;
