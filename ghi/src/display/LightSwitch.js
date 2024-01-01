@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 
 function LightSwitch() {
-    const [isDark, setIsDark] = useState(() => {
-        const savedDarkMode = localStorage.getItem("darkMode");
-        return savedDarkMode ? JSON.parse(savedDarkMode) : false;
-    });
+    const {isDark, setIsDark} = useContext(AppContext)
 
     const handleDark = () => {
         setIsDark(!isDark);

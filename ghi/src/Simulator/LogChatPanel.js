@@ -7,7 +7,7 @@ function LogChatPanel({
     // hoveredCard
 }) {
 
-    const [showPanel, setShowPanel] = useState(true)
+    const [showPanel, setShowPanel] = useState(false)
     const [newMessage, setNewMessage] = useState(false)
     const [message, setMessage] = useState("")
 

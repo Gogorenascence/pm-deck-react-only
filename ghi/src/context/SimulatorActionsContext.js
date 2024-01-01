@@ -68,11 +68,11 @@ const SimulatorActionsContextProvider = ({ children }) => {
         const deckFound = decks.find(deck => deck.id === deckID)
         console.log(deckID)
         setSelectedMainDeck({
-            name: deckFound.name + " Main",
+            name: deckFound.name,
             cards: deckFound.cards
         });
         setSelectedPluckDeck({
-            name: deckFound.name + " Pluck",
+            name: deckFound.name,
             cards: deckFound.pluck
         })
     };

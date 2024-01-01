@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { AppContext } from '../context/AppContext';
 
 
 function StatsPanel({
@@ -7,6 +8,7 @@ main_list,
 pluck_list
 }) {
 
+    const {isDark} = useContext(AppContext)
     const stats = {
         fighters: 0,
         auras: 0,
@@ -93,6 +95,7 @@ pluck_list
 
     const handleShowStats = (event) => {
         setShowStats(!showStats)
+        console.log(isDark)
     }
 
     const handleClose = () => {
@@ -146,11 +149,9 @@ pluck_list
     return(
         <div>
             {showModal.show?
-                <div className="large-modal topbar"
-                >
+                <div className={!isDark? "large-modal topbar":"large-modal-dark topbar"}>
                     <div className="outScrollable" ref={content}>
-                        <h1 className="centered-h1"
-                            style={{color: "black"}}>{showModal.label}</h1>
+                        <h1 className="centered-h1">{showModal.label}</h1>
                         <div>
                             <div className="cd-inner2 card-pool-fill">
                                 {filteredCards.map((card) => {

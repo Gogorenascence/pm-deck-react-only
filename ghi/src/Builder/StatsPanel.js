@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
+import { AppContext } from '../context/AppContext';
+import { NavLink } from 'react-router-dom';
 
 
 function StatsPanel({
@@ -6,6 +8,8 @@ main_list,
 pluck_list,
 handleRemoveCard
 }) {
+
+    const {isDark} = useContext(AppContext)
     const [filteredCards, setFilteredCards] = useState([]); // Initialize as an empty array
     const stats = {
         fighters: 0,
@@ -49,14 +53,13 @@ handleRemoveCard
         }, [ref]);
     }
 
-
     useEffect(() => {
       // Update filteredCards based on your filtering criteria
         const card_list = main_list.concat(pluck_list)
         const newFilteredCards = card_list.filter((card) =>
             (showModal.card_type ? card.card_type[0] === showModal.card_type : true))
             .filter((card) => (showModal.card_class ? card.card_class === showModal.card_class : true));
-        setFilteredCards(newFilteredCards);
+        setFilteredCards(() => newFilteredCards);
     }, [showModal, main_list, pluck_list]); // Include showModal and card_list as dependencies
 
     useEffect(() => {
@@ -154,11 +157,9 @@ handleRemoveCard
     return(
         <div>
             {showModal.show ?
-                <div className="large-modal topbar"
-                >
+                <div className={!isDark? "large-modal topbar":"large-modal-dark topbar"}>
                     <div className="outScrollable" ref={content}>
-                        <h1 className="centered-h1"
-                            style={{color: "black"}}>{showModal.label}</h1>
+                        <h1 className="centered-h1">{showModal.label}</h1>
                         <div>
                             <div className="cd-inner2 card-pool-fill">
                                 {filteredCards.map((card) => {

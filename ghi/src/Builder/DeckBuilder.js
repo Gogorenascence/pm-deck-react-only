@@ -5,11 +5,15 @@ import React, { useState, useEffect, useContext, useRef } from 'react';
 import { BuilderQueryContext } from "../context/BuilderQueryContext";
 import BuilderCardSearch from "./BuilderCardSearch";
 import FEDeckExport from "../Decks/FEDeckExport";
-import DeckImport from './DeckImport'
+import DeckImport from './DeckImport';
 import StatsPanel from "./StatsPanel";
+import {beforeLeaving} from '../Helpers';
+import { saveDeckToSessionStorage, loadDeckFromSessionStorage } from '../Storage';
+
 
 
 function DeckBuilder(props) {
+    const savedDeckState = JSON.parse(sessionStorage.getItem('savedDeckState')) || {};
     const {query,
         sortState,
         boosterSet,
@@ -76,25 +80,44 @@ function DeckBuilder(props) {
         setShowDecks(!showDecks);
     };
 
-    const [deck, setDeck] = useState({
-        name: "",
-        account_id: "",
-        description: "",
-        strategies: [],
-        cards: [],
-        pluck: [],
-        side: [],
-        views: 0,
-        cover_card: null,
-        parent_id: "",
-        private: false,
-    });
+    const [deck, setDeck] = useState(
+        savedDeckState?
+            {
+                name: savedDeckState.name,
+                account_id: savedDeckState.account_id,
+                description: savedDeckState.description,
+                strategies: [],
+                cards: [],
+                pluck: [],
+                side: [],
+                views: 0,
+                cover_card: savedDeckState.cover_card,
+                parent_id: savedDeckState.parent_id,
+                private: false,
+            }
+        :
+            {
+                name: "",
+                account_id: "",
+                description: "",
+                strategies: [],
+                cards: [],
+                pluck: [],
+                side: [],
+                views: 0,
+                cover_card: null,
+                parent_id: "",
+                private: false,
+            }
+    );
 
     const { cards, booster_sets } = props
 
 
-    const [main_list, setMainList] = useState([]);
-    const [pluck_list, setPluckList] = useState([]);
+    const [main_list, setMainList] = useState(
+        savedDeckState.main_list ?? []);
+    const [pluck_list, setPluckList] = useState(
+        savedDeckState.pluck_list?? []);
     const combinedList = main_list.concat(pluck_list);
     const uniqueList = [...new Set(combinedList)];
 
@@ -105,12 +128,29 @@ function DeckBuilder(props) {
     const [showPluck, setShowPluck] = useState(true);
 
     useEffect(() => {
+        loadDeckFromSessionStorage(
+            deck,
+            setDeck,
+            setMainList,
+            setPluckList
+        );
+        window.scroll(0, 0);
+        beforeLeaving()
+        document.body.style.overflow = 'auto';
         document.title = "Deck Builder - PM CardBase"
         return () => {
             document.title = "PlayMaker CardBase"
         };
     // eslint-disable-next-line
     },[]);
+
+    useEffect(() => {
+        saveDeckToSessionStorage(
+            deck,
+            main_list,
+            pluck_list
+        );
+    }, [deck, main_list, pluck_list]);
 
     const sortMethods = {
         none: { method: (a,b) => a.card_number - b.card_number },
