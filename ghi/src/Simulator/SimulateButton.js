@@ -13,11 +13,11 @@ const SimulateButton = ({deckName, main_list, pluck_list}) => {
 
     const handleSimulator = () => {
         setSelectedMainDeck({
-            name: deckName + " Main",
+            name: deckName,
             cards: main_list
         });
         setSelectedPluckDeck({
-            name: deckName + " Pluck",
+            name: deckName,
             cards: pluck_list
         })
         fillDecks()
