@@ -6099,7 +6099,7 @@
   "enthusiasm": null,
   "effect_text": "If you have damage tokens on this card, deal 3 damage to your strongest foe.",
   "second_effect_text": "<Trigger> During the Start Phase or during a foe's turn, each time you or this card would take damage this round, 1 random card in your play gains damage plus 1 and add 1 to your Focus.",
-  "illustrator": "TBD",
+  "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5rf.png",
   "file_name": "i1r5rf.png",
   "card_type": [
@@ -6122,12 +6122,12 @@
     "full_time": "2023-11-17T17:34:32.497000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 12,
-    "time": "03:33",
+    "year": 2024,
+    "month": 1,
+    "day": 1,
+    "time": "00:21",
     "full_time": {
-      "$date": "2023-12-12T03:33:02.854Z"
+      "$date": "2024-01-01T00:21:55.697Z"
     }
   },
   "alpha": null,
@@ -6145,7 +6145,7 @@
   "enthusiasm": null,
   "effect_text": "Draw 1 card for each damage token on this card (max of 2).",
   "second_effect_text": "<Trigger> When you would take damage, place 2 of the damage tokens on this Aura in your play instead and resolve this Aura's reaction.",
-  "illustrator": "TBD",
+  "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5ra.png",
   "file_name": "i1r5ra.png",
   "card_type": [
@@ -6169,12 +6169,12 @@
     "full_time": "2023-11-17T17:49:41.050000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 23,
-    "time": "04:26",
+    "year": 2024,
+    "month": 1,
+    "day": 1,
+    "time": "00:19",
     "full_time": {
-      "$date": "2023-11-23T04:26:38.736Z"
+      "$date": "2024-01-01T00:19:27.879Z"
     }
   },
   "alpha": null,
@@ -6192,7 +6192,7 @@
   "enthusiasm": null,
   "effect_text": "Deal 1 piercing damage to a foe for each damage token on your defending Fighter or 1 Energy card in your play.",
   "second_effect_text": "<Trigger> When you resolve a trigger effect, resolve the main effect of 1 Power card or Energy card in your play.",
-  "illustrator": "TBD",
+  "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5rm.png",
   "file_name": "i1r5rm.png",
   "card_type": [
@@ -6214,12 +6214,12 @@
     "full_time": "2023-11-17T17:52:44.742000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 19,
-    "time": "21:59",
+    "year": 2024,
+    "month": 1,
+    "day": 1,
+    "time": "00:19",
     "full_time": {
-      "$date": "2023-11-19T21:59:12.624Z"
+      "$date": "2024-01-01T00:19:45.350Z"
     }
   },
   "alpha": null,
@@ -6235,9 +6235,9 @@
   "series_name": "Recoil//Energy//Brawler//Call",
   "card_number": 1148,
   "enthusiasm": 7,
-  "effect_text": "Target: All foes.//Damage dealt by this card can not be reduced.//1-5: Deal 2 damage.//6-11: Deal 1 piercing damage for each damage token on 1 card in your play.//12+: Deal 1 piercing damage for each damage token on 1 card in your play. Ignore the reaction(s) of defending Fighter(s).",
+  "effect_text": "Target: All foes.//Ignore the reaction(s) of defending Fighter(s).//1-5: Deal 2 damage.//6-11: Deal 2 piercing damage.//12+: Deal piercing damage equal to the total number of damage tokens on 1 card in your play. Damage dealt by this card can not be reduced.",
   "second_effect_text": "",
-  "illustrator": "TBD",
+  "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5re.png",
   "file_name": "i1r5re.png",
   "card_type": [
@@ -6254,17 +6254,15 @@
     "month": 11,
     "day": 17,
     "time": "17:56",
-    "full_time": {
-      "$date": "2023-11-17T17:56:26.248Z"
-    }
+    "full_time": "2023-11-17T17:56:26.248000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 17,
-    "time": "17:56",
+    "year": 2024,
+    "month": 1,
+    "day": 1,
+    "time": "00:21",
     "full_time": {
-      "$date": "2023-11-17T17:56:26.248Z"
+      "$date": "2024-01-01T00:21:45.757Z"
     }
   },
   "alpha": null,
@@ -6282,7 +6280,7 @@
   "enthusiasm": null,
   "effect_text": "<C.Trigger> During a player's turn, Provoke All Moves (all foes must resolve their Move this round with you as one of the applicable targets). If the only Fighter in your play is Power or Energy, damage you take this round is reduced by 1 and your Fighter gains Endure 1 (that Fighter is revealed).",
   "second_effect_text": "",
-  "illustrator": "TBD",
+  "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl18re.png",
   "file_name": "i1pl18re.png",
   "card_type": [
@@ -6304,12 +6302,12 @@
     "full_time": "2023-11-17T19:09:43.352000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 23,
-    "time": "14:48",
+    "year": 2024,
+    "month": 1,
+    "day": 1,
+    "time": "00:21",
     "full_time": {
-      "$date": "2023-11-23T14:48:32.853Z"
+      "$date": "2024-01-01T00:21:26.567Z"
     }
   },
   "alpha": null,
@@ -6327,7 +6325,7 @@
   "enthusiasm": null,
   "effect_text": "<Trigger> If you are targeted for 3 or more damage, discard this Item; reduce that damage by 1 and add 1 Energy Aura from your hand to your play.",
   "second_effect_text": "",
-  "illustrator": "",
+  "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl18ri.png",
   "file_name": "i1pl18ri.png",
   "card_type": [
@@ -6348,12 +6346,12 @@
     "full_time": "2023-11-18T00:31:57.439000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 23,
-    "time": "04:27",
+    "year": 2024,
+    "month": 1,
+    "day": 1,
+    "time": "00:20",
     "full_time": {
-      "$date": "2023-11-23T04:27:50.195Z"
+      "$date": "2024-01-01T00:20:02.329Z"
     }
   },
   "alpha": null,
@@ -6371,7 +6369,7 @@
   "enthusiasm": null,
   "effect_text": "Take 2 damage; add 2 to your Focus.",
   "second_effect_text": "<C.Trigger> If a card in your play is discarded, add that card from the discard pile to your play and place 4 damage tokens on (you can not defend with the added card).",
-  "illustrator": "TBD",
+  "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl18rcb.png",
   "file_name": "i1pl18rcb.png",
   "card_type": [
@@ -6393,12 +6391,12 @@
     "full_time": "2023-11-19T17:28:54.250000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 30,
-    "time": "00:11",
+    "year": 2024,
+    "month": 1,
+    "day": 1,
+    "time": "00:21",
     "full_time": {
-      "$date": "2023-11-30T00:11:19.412Z"
+      "$date": "2024-01-01T00:21:06.537Z"
     }
   },
   "alpha": null,
