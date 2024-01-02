@@ -129,7 +129,8 @@ function LogChatPanel({
                     addToLog(
                         "System",
                         "system",
-                        `${player.name}'s defending card took ${damageTaken} damage and was defeated`)
+                        `${player.name}'s defending card took ${damageTaken} damage and was defeated`
+                    )
                     setDefending({...defending, [defendingCard.slot]: false})
                     setDefendingCard({
                         card: "",
