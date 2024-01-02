@@ -7346,7 +7346,7 @@
   "series_name": "The Spider//Tech//Tactical//Support",
   "card_number": 1157,
   "enthusiasm": null,
-  "effect_text": "<L. Trigger>  If you have a Tactical Fighter in your play, place 1 Tactical Move from your hand or the discard pile under this Item (if this Item is removed from your Active Pluck, the placed card is discarded).",
+  "effect_text": "<L. Trigger> If you have a Staunch or Tactical Fighter in your play, place 1 Tactical Move from your hand or the discard pile under this Item (if this Item is removed from your Active Pluck, the placed card is discarded).",
   "second_effect_text": "This Item copies the effect text of its placed card. ",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl17tsi.png",
@@ -7367,17 +7367,15 @@
     "month": 12,
     "day": 23,
     "time": "18:16",
-    "full_time": {
-      "$date": "2023-12-23T18:16:25.484Z"
-    }
+    "full_time": "2023-12-23T18:16:25.484000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 23,
-    "time": "18:16",
+    "year": 2024,
+    "month": 1,
+    "day": 2,
+    "time": "21:31",
     "full_time": {
-      "$date": "2023-12-23T18:16:25.484Z"
+      "$date": "2024-01-02T21:31:57.291Z"
     }
   },
   "alpha": null,
