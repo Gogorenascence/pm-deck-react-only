@@ -76,6 +76,7 @@ const GameStateContextProvider = ({ children }) => {
         counter: 0,
         endure: 0,
         redirect: 0,
+        slot: ""
     })
 
     const handleDefending = (slot) => {
@@ -87,13 +88,15 @@ const GameStateContextProvider = ({ children }) => {
                 counter: 0,
                 endure: 0,
                 redirect: 0,
+                slot: ""
             }
             if (playArea[slot][0]) {
                 const card = playArea[slot][0]
+                newDefendingCard["slot"] = slot
                 newDefendingCard["card"] = card
                 for (let reaction of card.reactions) {
-                    if (reaction.info.name) {
-                        const newReaction = reaction.info.name.toLowerCase()
+                    if (reaction.name) {
+                        const newReaction = reaction.name.toLowerCase()
                         newDefendingCard[newReaction] = reaction.count
                     }
                 }
@@ -111,6 +114,7 @@ const GameStateContextProvider = ({ children }) => {
                 counter: 0,
                 endure: 0,
                 redirect: 0,
+                slot: ""
             })
         }
     }

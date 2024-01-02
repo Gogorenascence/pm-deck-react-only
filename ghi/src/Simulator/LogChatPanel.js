@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext, useRef } from "react";
 import { GameStateContext } from "../context/GameStateContext";
+import { MainActionsContext } from "../context/MainActionsContext";
 import { damageSound, gainSound, rollSound, chatSound } from "../Sounds/Sounds";
 
 
@@ -7,19 +8,24 @@ function LogChatPanel({
     // hoveredCard
 }) {
 
-    const [showPanel, setShowPanel] = useState(false)
+    const [showPanel, setShowPanel] = useState(true)
     const [newMessage, setNewMessage] = useState(false)
     const [message, setMessage] = useState("")
 
     const {
         player,
         setPlayer,
+        defending,
+        setDefending,
         defendingCard,
         setDefendingCard,
         log,
         addToLog,
         volume
     } = useContext(GameStateContext)
+
+    const {discardCard} = useContext(MainActionsContext)
+
     const [logLength, setLogLength] = useState(log.length)
 
     const [damage, setDamage] = useState("")
@@ -97,6 +103,7 @@ function LogChatPanel({
         if (event.key === "Enter" && !event.shiftKey && /^(-)?\d+$/.test(damage)) {
             event.preventDefault();
             const damageTaken = parseInt(damage, 10);
+            console.log(damageTaken)
             if (defender === "self"){
                 setPlayer({...player, hp: player.hp - damageTaken})
                 setDamage("")
@@ -107,7 +114,7 @@ function LogChatPanel({
                     gainSound(volume*2)
                     addToLog("System", "system", `${player.name} gained ${-damageTaken} HP`)
                 }
-            } else {
+            } else if (defender === "card" && defendingCard.card.name){
                 setDefendingCard({...defendingCard, hp: defendingCard.hp - damageTaken})
                 setDamage("")
                 if (damageTaken > 0) {
@@ -116,6 +123,23 @@ function LogChatPanel({
                 } else if (damageTaken < 0) {
                     gainSound(volume*2)
                     addToLog("System", "system", `${player.name}'s defending card gained ${-damageTaken} HP`)
+                }
+                if (damageTaken >= defendingCard.hp) {
+                    discardCard(player.playArea[defendingCard.slot][0], 0, defendingCard.slot)
+                    addToLog(
+                        "System",
+                        "system",
+                        `${player.name}'s defending card took ${damageTaken} damage and was defeated`)
+                    setDefending({...defending, [defendingCard.slot]: false})
+                    setDefendingCard({
+                        card: "",
+                        hp: 5,
+                        block: 0,
+                        counter: 0,
+                        endure: 0,
+                        redirect: 0,
+                        slot: ""
+                    })
                 }
             }
         }
