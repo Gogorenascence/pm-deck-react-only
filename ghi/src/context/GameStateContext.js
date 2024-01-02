@@ -100,6 +100,7 @@ const GameStateContextProvider = ({ children }) => {
                 endure: 0,
                 redirect: 0,
                 slot: ""
+
             }
             if (playArea[slot][0]) {
                 const card = playArea[slot][0]
