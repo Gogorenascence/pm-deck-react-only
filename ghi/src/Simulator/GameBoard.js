@@ -179,19 +179,19 @@ function GameBoard({
                     <div
                         className={defending.slot_5? "matLabel selected4 pointer":"matLabel pointer"}
                         onClick={() => handleDefending("slot_5")}
-                    ><h5 className="margin-bottom-0">{defending.slot_5? "Defending":""}</h5></div>
+                    ><h5 className="margin-bottom-0">{defending.slot_5? "Defending":"Defend"}</h5></div>
                     <div
                         className={defending.slot_6? "matLabel selected4 pointer":"matLabel pointer"}
                         onClick={() => handleDefending("slot_6")}
-                    ><h5 className="margin-bottom-0">{defending.slot_6? "Defending":""}</h5></div>
+                    ><h5 className="margin-bottom-0">{defending.slot_6? "Defending":"Defend"}</h5></div>
                     <div
                         className={defending.slot_7? "matLabel selected4 pointer":"matLabel pointer"}
                         onClick={() => handleDefending("slot_7")}
-                    ><h5 className="margin-bottom-0">{defending.slot_7? "Defending":""}</h5></div>
+                    ><h5 className="margin-bottom-0">{defending.slot_7? "Defending":"Defend"}</h5></div>
                     <div
                         className={defending.slot_8? "matLabel selected4 pointer":"matLabel pointer"}
                         onClick={() => handleDefending("slot_8")}
-                    ><h5 className="margin-bottom-0">{defending.slot_8? "Defending":""}</h5></div>
+                    ><h5 className="margin-bottom-0">{defending.slot_8? "Defending":"Defend"}</h5></div>
                 </div>
                 <div className={showExtra? "flex": "hidden2"}>
                     <ExtraZone
@@ -243,19 +243,19 @@ function GameBoard({
                     <div
                         className={defending.fighter_slot? "matLabel selected4 pointer":"matLabel pointer"}
                         onClick={() => handleDefending("fighter_slot")}
-                    ><h5 className="margin-bottom-0">{defending.fighter_slot? "Defending":""}</h5></div>
+                    ><h5 className="margin-bottom-0">{defending.fighter_slot? "Defending":"Defend"}</h5></div>
                     <div
                         className={defending.aura_slot? "matLabel selected4 pointer":"matLabel pointer"}
                         onClick={() => handleDefending("aura_slot")}
-                    ><h5 className="margin-bottom-0">{defending.aura_slot? "Defending":""}</h5></div>
+                    ><h5 className="margin-bottom-0">{defending.aura_slot? "Defending":"Defend"}</h5></div>
                     <div
                         className={defending.move_slot? "matLabel selected4 pointer":"matLabel pointer"}
                         onClick={() => handleDefending("move_slot")}
-                    ><h5 className="margin-bottom-0">{defending.move_slot? "Defending":""}</h5></div>
+                    ><h5 className="margin-bottom-0">{defending.move_slot? "Defending":"Defend"}</h5></div>
                     <div
                         className={defending.ending_slot? "matLabel selected4 pointer":"matLabel pointer"}
                         onClick={() => handleDefending("ending_slot")}
-                    ><h5 className="margin-bottom-0">{defending.ending_slot? "Defending":""}</h5></div>
+                    ><h5 className="margin-bottom-0">{defending.ending_slot? "Defending":"Defend"}</h5></div>
                 </div>
                 <div style={{display: "flex"}}>
                     <div className={ totalSlotLength > 0 && !showExtra? "notify" : null}
