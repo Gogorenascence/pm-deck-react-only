@@ -7302,7 +7302,7 @@
   "series_name": "The Spider//Tech//Tactical//Call",
   "card_number": 1158,
   "enthusiasm": null,
-  "effect_text": "Gain 1 The Spider card.",
+  "effect_text": "Gain 1 The Spider card or 1 The Spider Pluck except the Event \"The Trap Is Set!\".",
   "second_effect_text": "<Trigger> During a foe's turn, deal 1 damage to that foe equal to total amount damage minus across all cards in their play (max of 3).",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl17tse.png",
@@ -7325,12 +7325,12 @@
     "full_time": "2023-12-23T16:20:34.085000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 24,
-    "time": "14:49",
+    "year": 2024,
+    "month": 1,
+    "day": 3,
+    "time": "01:11",
     "full_time": {
-      "$date": "2023-12-24T14:49:36.406Z"
+      "$date": "2024-01-03T01:11:36.230Z"
     }
   },
   "alpha": null,
