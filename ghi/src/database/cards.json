@@ -7168,7 +7168,7 @@
   "card_number": 1144,
   "enthusiasm": 13,
   "effect_text": "Target: Foe of your choice.//1-5: Deal 3 piercing damage.//6-11: Deal 3 piercing damage. Provoke 1 Ending.//12+: Deal 3 piercing damage. Provoke 1 Move or Ending.",
-  "second_effect_text": "<Trigger> If you are targeted by a foe's card, that card gains damage minus 1.",
+  "second_effect_text": "<Trigger> If you are targeted by a foe's card, 1 card in that foe's play gains damage minus 1.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tse.png",
   "file_name": "i1g5tse.png",
@@ -7191,12 +7191,12 @@
     "full_time": "2023-12-22T09:15:07.342000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 28,
-    "time": "15:44",
+    "year": 2024,
+    "month": 1,
+    "day": 3,
+    "time": "03:17",
     "full_time": {
-      "$date": "2023-12-28T15:44:05.836Z"
+      "$date": "2024-01-03T03:17:39.618Z"
     }
   },
   "alpha": null,
