@@ -1211,7 +1211,7 @@
   "series_name": "PantheraMan//Nature//Brawler//Call",
   "card_number": 1002,
   "enthusiasm": 0,
-  "effect_text": "Heal 1 HP and add 4 to your Focus.",
+  "effect_text": "Add 4 to your Focus and your next foe's Move gains damage minus 1 (damage dealt by that card is reduced by 1 at the end of its resolution).",
   "second_effect_text": "<Trigger> During the Start Phase, add 4 to your Enthusiasm and resolve this Aura in your play.",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g1pma.png",
@@ -1234,12 +1234,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 19,
-    "time": "02:01",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "17:52",
     "full_time": {
-      "$date": "2023-12-19T02:01:27.400Z"
+      "$date": "2024-01-04T17:52:31.607Z"
     }
   },
   "alpha": null,
