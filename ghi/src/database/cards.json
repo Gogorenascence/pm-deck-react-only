@@ -525,7 +525,7 @@
   "series_name": "Bolt Blossom//Nature//Energy",
   "card_number": 1048,
   "enthusiasm": 12,
-  "effect_text": "<Target> Your strongest foe. //Add 1 to your Focus for each non-Unity class in your play. //<1-5> Deal 1 damage for each non-Unity class in your play. //<6-11> Deal 2 damage for each different class in your play. //<12+> Deal 3 damage for each different class in your play. Ignore the reaction(s) of defending Fighter(s).",
+  "effect_text": "<Target> Your strongest foe. //Add 1 to your Focus for each non-Unity class in your play. //<1-5> Deal 1 damage for each non-Unity class in your play. //<6-11> Deal 2 damage for each different class in your play. //<12+> Deal 3 true damage for each different class in your play and return 1 other card in your play to your hand.",
   "second_effect_text": "",
   "illustrator": "Fililppo Scalisi",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b4bbe.png",
@@ -547,12 +547,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 10,
-    "day": 19,
-    "time": "02:44",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "01:08",
     "full_time": {
-      "$date": "2023-10-19T02:44:36.590Z"
+      "$date": "2024-01-04T01:08:39.172Z"
     }
   },
   "alpha": null,
@@ -954,7 +954,7 @@
   "series_name": "Burst Esper//Psychic//Energy",
   "card_number": 1028,
   "enthusiasm": 13,
-  "effect_text": "<Target> All foes with a larger hand than you (damage is calculated separately for each target). //<1-5> Deal 2 damage. //<6-11> Deal damage equal to the difference. Draw 1 card. //<12+> Deal damage equal to the difference plus 1. Ignore the reaction(s) of defending Fighter(s). Draw 1 card.",
+  "effect_text": "<Target> All foes with a larger hand than you (damage is calculated separately for each target). //<1-5> Deal 2 damage. //<6-11> Deal damage equal to the difference. Draw 1 card. //<12+> Deal true damage equal to the difference plus 1. Draw 2 cards.",
   "second_effect_text": "",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r3bee.png",
@@ -976,14 +976,16 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 9,
-    "day": 30,
-    "time": "21:39",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "00:57",
     "full_time": {
-      "$date": "2023-09-30T21:39:01.942Z"
+      "$date": "2024-01-04T00:57:15.594Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1472,15 +1474,17 @@
   "series_name": "Black Note//Altered//Call//Quest",
   "card_number": 1052,
   "enthusiasm": 5,
-  "effect_text": "<Target> All foes. //If you are at critical HP, ignore the reaction(s) of defending Fighter(s) and reduce damage you take this round by 1.  //<1-5> Deal 2 piercing damage. Take 4 damage. //<6-11> Deal 3 piercing damage. Take 3 damage. //<12+> Deal 4 piercing damage. Take 2 damage.",
-  "second_effect_text": "",
+  "effect_text": "<Target> All foes. //<1-5> Deal 2 piercing damage. Take 4 damage. //<6-11> Deal 3 piercing damage. Take 3 damage. //<12+> Deal 4 piercing damage. Take 2 damage.",
+  "second_effect_text": "<Critical> This card deals true and reduce damage you take this round by 1.",
   "illustrator": "ahtan_delmundo",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bne.png",
   "file_name": "i1p1bne",
   "card_type": [
     1004
   ],
-  "extra_effects": [],
+  "extra_effects": [
+    1002
+  ],
   "reactions": [],
   "card_tags": [
     1002,
@@ -1494,12 +1498,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 19,
-    "time": "20:24",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "01:02",
     "full_time": {
-      "$date": "2023-11-19T20:24:21.963Z"
+      "$date": "2024-01-04T01:02:24.929Z"
     }
   },
   "alpha": null,
@@ -1605,7 +1609,7 @@
   "series_name": "Gravity Enforcer//Cosmic//Tactical",
   "card_number": 1063,
   "enthusiasm": 0,
-  "effect_text": "Trigger effects can not be used in response to this card. Deal 3 damage to a foe with Enthusiasm lower than yours. They can not use Items or trigger effects during the next player's turn. ",
+  "effect_text": "Deal 3 damage to a foe with Enthusiasm lower than yours. They can not use Items or trigger effects during the next player's turn. ",
   "second_effect_text": "",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p4gem.png",
@@ -1616,26 +1620,27 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1003
   ],
   "created_on": {
     "year": 2023,
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:55",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "01:02",
     "full_time": {
-      "$date": "2023-06-25T18:55:22.118Z"
+      "$date": "2024-01-04T01:02:51.522Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3519,7 +3524,7 @@
   "series_name": "Burst Esper//Psychic//Energy",
   "card_number": 1027,
   "enthusiasm": 0,
-  "effect_text": "Discard up to 3 cards from your hand, then deal 1 damage to all foes for each card discarded. If you discarded 3 cards, ignore the reaction(s) of defending Fighter(s).",
+  "effect_text": "Discard up to 3 cards from your hand, then deal 1 damage to all foes for each card discarded. If you discarded 3 cards, this card deals true damage.",
   "second_effect_text": "<Trigger> If this card is discarded from your hand or play, deal 2 damage to a random foe.",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r3bem.png",
@@ -3542,14 +3547,16 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 6,
-    "day": 29,
-    "time": "23:45",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "00:56",
     "full_time": {
-      "$date": "2023-06-29T23:45:01.592Z"
+      "$date": "2024-01-04T00:56:16.715Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3916,7 +3923,7 @@
   "series_name": "Red Fist//Tech//Brawler",
   "card_number": 1023,
   "enthusiasm": 0,
-  "effect_text": "<Target> Foe on your left. //<1-5> Deal 1 damage. //<6-11> Deal 3 piercing damage. Draw 1 card. //<12+> Deal 3 piercing damage. Ignore the reaction(s) of defending Fighter(s) and draw 2 cards.",
+  "effect_text": "<Target> Foe on your left. //<1-5> Deal 1 damage. //<6-11> Deal 3 piercing damage. Draw 1 card. //<12+> Deal 3 true, piercing damage. Draw 2 cards.",
   "second_effect_text": "",
   "illustrator": "gmoshiro",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rfm.png",
@@ -3938,14 +3945,16 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 9,
-    "day": 30,
-    "time": "21:30",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "00:55",
     "full_time": {
-      "$date": "2023-09-30T21:30:58.735Z"
+      "$date": "2024-01-04T00:55:32.176Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3957,7 +3966,7 @@
   "series_name": "Red Fist//Tech//Brawler",
   "card_number": 1024,
   "enthusiasm": 18,
-  "effect_text": "<Target> Foe on your right. //<1-5> Discard 1 card from your hand.  //<6-11> Deal 2 piercing damage. //<12+>  Deal 3 piercing damage. If your hand has 6 or more cards, deal 3 additional piercing damage and ignore the reaction(s) of defending Fighter(s).",
+  "effect_text": "<Target> Foe on your right. //<1-5> Discard 1 card from your hand.  //<6-11> Deal 2 true, piercing damage. //<12+>  Deal 3 true, piercing damage. If your hand has 6 or more cards, deal 3 additional true, piercing damage.",
   "second_effect_text": "",
   "illustrator": "gmoshiro",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rfe.png",
@@ -3979,14 +3988,16 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 10,
-    "day": 1,
-    "time": "13:34",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "00:51",
     "full_time": {
-      "$date": "2023-10-01T13:34:46.435Z"
+      "$date": "2024-01-04T00:51:06.351Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4053,7 +4064,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1003
   ],
   "created_on": {
     "year": 2023,
@@ -4063,12 +4075,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "19:58",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "00:49",
     "full_time": {
-      "$date": "2023-12-26T19:58:20.448Z"
+      "$date": "2024-01-04T00:49:45.142Z"
     }
   },
   "alpha": null,
@@ -4126,7 +4138,7 @@
   "series_name": "Blast Mouth//Altered//Nature//Brawler",
   "card_number": 1020,
   "enthusiasm": 6,
-  "effect_text": "<Target> Foe of your choice. //If you are last to go this round, ignore the reaction(s) of defending Fighter(s). //<1-5> Deal 4 damage. //<6-11> Deal 4 piercing damage. //<12+> Deal 5 piercing damage. If they have already gone this round, deal 1 additional piercing damage.",
+  "effect_text": "<Target> Foe of your choice. //<1-5> Deal 4 damage. //<6-11> Deal 4 true, piercing damage. //<12+> Deal 5 true, piercing damage. If they have already gone this round, deal 1 additional piercing damage.",
   "second_effect_text": "",
   "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r1bme.png",
@@ -4148,12 +4160,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "17:31",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "00:52",
     "full_time": {
-      "$date": "2023-12-26T17:31:20.861Z"
+      "$date": "2024-01-04T00:52:25.652Z"
     }
   },
   "alpha": null,
@@ -4269,7 +4281,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1005
+    1005,
+    1003
   ],
   "created_on": {
     "year": 2023,
@@ -4279,12 +4292,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "19:59",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "00:54",
     "full_time": {
-      "$date": "2023-12-26T19:59:57.288Z"
+      "$date": "2024-01-04T00:54:55.097Z"
     }
   },
   "alpha": null,
@@ -4649,7 +4662,7 @@
   "_id": {
     "$oid": "643f61e22e72274cabf63b54"
   },
-  "name": "Menacingly Cute Pose",
+  "name": "Menacingly Cuteness",
   "card_class": "",
   "hero_id": "BGA",
   "series_name": "Battle Girl Alice//Magic//Brawler",
@@ -4668,7 +4681,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1005
+    1005,
+    1003
   ],
   "created_on": {
     "year": 2023,
@@ -4678,12 +4692,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 23,
-    "time": "18:36",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "01:04",
     "full_time": {
-      "$date": "2023-12-23T18:36:58.352Z"
+      "$date": "2024-01-04T01:04:15.252Z"
     }
   },
   "alpha": null,
@@ -5569,7 +5583,7 @@
   "series_name": "Fortune//Brawler",
   "card_number": 1124,
   "enthusiasm": null,
-  "effect_text": "Discard 7 Pluck in your ownership; deal 5 piercing damage to a foe and ignore the reaction(s) of defending Fighter(s). Trigger effects can not be used in response to this Event.",
+  "effect_text": "Discard 7 Pluck in your ownership; deal 5 true, piercing damage to a foe.",
   "second_effect_text": "",
   "illustrator": "prusin_senpai",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg10e.png",
@@ -5580,7 +5594,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1005
+    1005,
+    1003
   ],
   "created_on": {
     "year": 2023,
@@ -5590,12 +5605,12 @@
     "full_time": "2023-10-08T17:43:21.795000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 3,
-    "time": "00:52",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "00:47",
     "full_time": {
-      "$date": "2023-11-03T00:52:55.685Z"
+      "$date": "2024-01-04T00:47:10.653Z"
     }
   },
   "alpha": null,
@@ -6055,7 +6070,7 @@
   "series_name": "Support//Team//Brawler//Tactical",
   "card_number": 1135,
   "enthusiasm": null,
-  "effect_text": "If you have 2 or more Support/Team cards in your play, all non-Support/Team cards in your play gain damage plus 1 and ignore the reactions of defending Fighters. ",
+  "effect_text": "If you have 2 or more Support/Team cards in your play, all non-Support/Team cards in your play gain damage plus 1 and deal true damage. ",
   "second_effect_text": "",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg21e.png",
@@ -6076,12 +6091,12 @@
     "full_time": "2023-11-16T03:35:14.284000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 28,
-    "time": "15:26",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "00:45",
     "full_time": {
-      "$date": "2023-12-28T15:26:43.096Z"
+      "$date": "2024-01-04T00:45:10.895Z"
     }
   },
   "alpha": null,
@@ -6235,7 +6250,7 @@
   "series_name": "Recoil//Energy//Brawler//Call",
   "card_number": 1148,
   "enthusiasm": 7,
-  "effect_text": "Target: All foes.//Ignore the reaction(s) of defending Fighter(s).//1-5: Deal 2 damage.//6-11: Deal 2 piercing damage.//12+: Deal piercing damage equal to the total number of damage tokens on 1 card in your play. Damage dealt by this card can not be reduced.",
+  "effect_text": "Target: All foes.//Ignore the reaction(s) of defending Fighter(s).//1-5: Deal 2 true damage.//6-11: Deal 2 true, piercing damage.//12+: Deal true, piercing damage equal to the total number of damage tokens on 1 card in your play. Damage dealt by this card can not be reduced.",
   "second_effect_text": "",
   "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5re.png",
@@ -6259,10 +6274,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 1,
-    "time": "00:21",
+    "day": 4,
+    "time": "00:49",
     "full_time": {
-      "$date": "2024-01-01T00:21:45.757Z"
+      "$date": "2024-01-04T00:49:25.943Z"
     }
   },
   "alpha": null,
@@ -6412,8 +6427,8 @@
   "series_name": "Energy//Nature//Psychic//Team",
   "card_number": 1136,
   "enthusiasm": null,
-  "effect_text": "Place 1 card from your hand or play under this Event (if this Event is removed from your Active Pluck, the placed cards are discarded); deal 1 piercing damage to a foe. ",
-  "second_effect_text": "You can resolve this effect again (no limit) if you place a card from your hand or play with a class different to this Event's placed cards under this Event. Cards placed under this Event count as being discarded.",
+  "effect_text": "Discard 1 card from your hand or play; deal 1 piercing damage to a foe. You can resolve this effect again (no limit) if you discard a card from your hand or play with a class different to the cards already discarded for this effect. ",
+  "second_effect_text": "",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg22e.png",
   "file_name": "i1plg22e.png",
@@ -6433,12 +6448,12 @@
     "full_time": "2023-12-05T15:44:04.505000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 17,
-    "time": "00:11",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "01:33",
     "full_time": {
-      "$date": "2023-12-17T00:11:03.286Z"
+      "$date": "2024-01-04T01:33:20.320Z"
     }
   },
   "alpha": null,
