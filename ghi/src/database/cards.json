@@ -3830,8 +3830,8 @@
   "series_name": "Red Fist//Tech//Brawler",
   "card_number": 1021,
   "enthusiasm": 0,
-  "effect_text": "Deal 3 damage to your strongest foe, then discard 3 cards from your hand.",
-  "second_effect_text": "<Trigger> During a player's turn, remove 3 Counter tokens from this card; draw 3 cards.",
+  "effect_text": "Deal 3 damage to your strongest foe, then discard 2 cards from your hand.",
+  "second_effect_text": "<Trigger> During a player's turn, remove 3 Counter tokens from this card; draw 2 cards.",
   "illustrator": "gmoshiro",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rff.png",
   "file_name": "i1r2rff",
@@ -3857,12 +3857,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 10,
-    "day": 15,
-    "time": "18:29",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "16:33",
     "full_time": {
-      "$date": "2023-10-15T18:29:57.506Z"
+      "$date": "2024-01-04T16:33:29.070Z"
     }
   },
   "alpha": null,
@@ -4662,7 +4662,7 @@
   "_id": {
     "$oid": "643f61e22e72274cabf63b54"
   },
-  "name": "Menacingly Cuteness",
+  "name": "Menacing Cuteness",
   "card_class": "",
   "hero_id": "BGA",
   "series_name": "Battle Girl Alice//Magic//Brawler",
@@ -4695,9 +4695,9 @@
     "year": 2024,
     "month": 1,
     "day": 4,
-    "time": "01:04",
+    "time": "01:38",
     "full_time": {
-      "$date": "2024-01-04T01:04:15.252Z"
+      "$date": "2024-01-04T01:38:02.746Z"
     }
   },
   "alpha": null,
