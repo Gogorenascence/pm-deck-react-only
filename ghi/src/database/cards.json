@@ -103,7 +103,7 @@
   "hero_id": "GW1",
   "series_name": "Golden Wall//Cosmic//Support",
   "card_number": 1007,
-  "effect_text": "<Target> Foe on your left or right. //<1-5> Deal 2 damage. //<6-11> Deal 2 damage. Damage you and your Fighter take this turn is reduced by 1. //<12+> Deal 3 damage. Damage you and your Fighter take this turn is reduced by 1.",
+  "effect_text": "<Target> Foe on your left or right. //<1-5> Deal 2 damage. //<6-11> Deal 2 damage. 1 select foe's Move and Ending gains damage minus 1 this turn.//<12+> Deal 3 damage. Damage you and your Fighter take this turn is reduced by 1.",
   "flavor_text": "string",
   "illustrator": "Eric Rodrigues",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g2gwm.png",
@@ -129,12 +129,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 3,
-    "time": "21:54",
+    "year": 2024,
+    "month": 1,
+    "day": 4,
+    "time": "23:25",
     "full_time": {
-      "$date": "2023-12-03T21:54:04.280Z"
+      "$date": "2024-01-04T23:25:49.269Z"
     }
   },
   "alpha": null,
