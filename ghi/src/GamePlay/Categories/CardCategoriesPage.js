@@ -63,11 +63,11 @@ function CardCategoriesPage(props) {
                     </h5>}
             </div>
             {showClasses?
-                <div>
+                <div className="colorBorder">
                     {cardCategories.filter(cardCategory => cardCategory.cat_type === "card_class")
                         .map(function(cardCategory, index, arr) {
                             return (
-                                <NavLink to={`/cardcategories/${cardCategory.id}`} className="nav-link glow2 no-pad" key={cardCategory.name}>
+                                <NavLink to={`/cardcategories/${cardCategory.id}`} className="nav-link no-pad" key={cardCategory.name}>
                                     <div style={{display: "flex"}}>
                                         <div className="table200">
                                             <h5 className="text-table">{cardCategory.name}</h5>
@@ -76,7 +76,7 @@ function CardCategoriesPage(props) {
                                             <h5 className="text-table-2">{shortenedText(cardCategory.description)}</h5>
                                         </div>
                                     </div>
-                            </NavLink>
+                                </NavLink>
                         );
                     })}
                 </div>:null
@@ -95,19 +95,19 @@ function CardCategoriesPage(props) {
                     </h5>}
             </div>
             {showSeries?
-                <div>
+                <div className="colorBorder">
                     {cardCategories.filter(cardCategory => cardCategory.cat_type === "series")
                         .map(function(cardCategory, index, arr) {
                         return (
-                            <NavLink to={`/cardcategories/${cardCategory.id}`} className="nav-link glow2 no-pad" key={cardCategory.name}>
-                                    <div style={{display: "flex"}}>
-                                        <div className="table200">
-                                            <h5 className="text-table">{cardCategory.name}</h5>
-                                        </div>
-                                        <div className="tableText">
-                                            <h5 className="text-table-2">{shortenedText(cardCategory.description)}</h5>
-                                        </div>
+                            <NavLink to={`/cardcategories/${cardCategory.id}`} className="nav-link no-pad" key={cardCategory.name}>
+                                <div style={{display: "flex"}}>
+                                    <div className="table200">
+                                        <h5 className="text-table">{cardCategory.name}</h5>
                                     </div>
+                                    <div className="tableText">
+                                        <h5 className="text-table-2">{shortenedText(cardCategory.description)}</h5>
+                                    </div>
+                                </div>
                             </NavLink>
                         );
                     })}
@@ -127,11 +127,11 @@ function CardCategoriesPage(props) {
                     </h5>}
             </div>
             {showSubSeries?
-                <div>
+                <div className="colorBorder">
                     {cardCategories.filter(cardCategory => cardCategory.cat_type === "sub_series")
                         .map(function(cardCategory, index, arr) {
                             return (
-                                <NavLink to={`/cardcategories/${cardCategory.id}`} className="nav-link glow2 no-pad" key={cardCategory.name}>
+                                <NavLink to={`/cardcategories/${cardCategory.id}`} className="nav-link no-pad" key={cardCategory.name}>
                                     <div style={{display: "flex"}}>
                                         <div className="table200">
                                             <h5 className="text-table">{cardCategory.name}</h5>
@@ -140,7 +140,7 @@ function CardCategoriesPage(props) {
                                             <h5 className="text-table-2">{shortenedText(cardCategory.description)}</h5>
                                         </div>
                                     </div>
-                            </NavLink>
+                                </NavLink>
                         );
                     })}
                 </div>:null

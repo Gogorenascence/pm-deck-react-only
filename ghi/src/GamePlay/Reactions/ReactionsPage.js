@@ -28,18 +28,18 @@ function ReactionsPage(props) {
         <div className="white-space">
             <h1 className="left-h1">Reactions</h1>
 
-            <div>
+            <div className="colorBorder">
                 {reactions.map(function(reaction, index, arr) {
-                        return (
-                            <NavLink to={`/reactions/${reaction.id}`} className="nav-link glow2 no-pad" key={reaction.name}>
-                                <div style={{display: "flex"}}>
-                                    <div className="table200">
-                                        <h5 className="text-table">{reaction.name}</h5>
-                                    </div>
-                                    <div className="tableText">
-                                        <h5 className="text-table-2">{shortenedText(reaction.rules)}</h5>
-                                    </div>
+                    return (
+                        <NavLink to={`/reactions/${reaction.id}`} className="nav-link no-pad" key={reaction.name}>
+                            <div style={{display: "flex"}}>
+                                <div className="table200">
+                                    <h5 className="text-table">{reaction.name}</h5>
                                 </div>
+                                <div className="tableText">
+                                    <h5 className="text-table-2">{shortenedText(reaction.rules)}</h5>
+                                </div>
+                            </div>
                         </NavLink>
                     );
                 })}

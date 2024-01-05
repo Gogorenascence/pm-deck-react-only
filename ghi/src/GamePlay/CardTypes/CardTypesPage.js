@@ -28,10 +28,10 @@ function CardTypesPage(props) {
         <div className="white-space">
             <h1 className="left-h1">Card Types</h1>
 
-            <div>
+            <div className="colorBorder">
                 {cardTypes.map(function(cardType, index, arr) {
                         return (
-                            <NavLink to={`/cardtypes/${cardType.id}`} className="nav-link glow2 no-pad" key={cardType.name}>
+                            <NavLink to={`/cardtypes/${cardType.id}`} className="nav-link no-pad" key={cardType.name}>
                                 <div style={{display: "flex"}}>
                                     <div className="table200">
                                         <h5 className="text-table">{cardType.name}</h5>
