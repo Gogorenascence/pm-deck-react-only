@@ -310,6 +310,8 @@ const MainActionsContextProvider = ({ children }) => {
                 }
                 if (zoneFaceDown){
                     setFaceDown({...faceDown, [zoneFaceDown]: true})
+                } else {
+                    setFaceDown({...faceDown, [zone]: false})
                 }
                 setHand(newHand.filter((_, i) => i !== selectedIndex))
                 setSelectedIndex(null)
@@ -339,7 +341,11 @@ const MainActionsContextProvider = ({ children }) => {
                     [moving.zone]: false
                 })
             } else {
-                setFaceDown({...faceDown, [moving.zone]: false})
+                setFaceDown({
+                    ...faceDown,
+                    [nextZone]: false,
+                    [moving.zone]: false
+                })
             }
 
             nextSelectZone.push(moving.cardToMove)
