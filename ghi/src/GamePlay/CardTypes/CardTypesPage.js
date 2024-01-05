@@ -28,7 +28,7 @@ function CardTypesPage(props) {
         <div className="white-space">
             <h1 className="left-h1">Card Types</h1>
 
-            <div className="colorBorder">
+            <div className="fullTableBorder">
                 {cardTypes.map(function(cardType, index, arr) {
                         return (
                             <NavLink to={`/cardtypes/${cardType.id}`} className="nav-link no-pad" key={cardType.name}>
@@ -37,7 +37,7 @@ function CardTypesPage(props) {
                                         <h5 className="text-table">{cardType.name}</h5>
                                     </div>
                                     <div className="tableText">
-                                        <h5 className="text-table-2">{shortenedText(cardType.description)}</h5>
+                                        <h5 className="text-table-2">{cardType.description}</h5>
                                     </div>
                                 </div>
                         </NavLink>

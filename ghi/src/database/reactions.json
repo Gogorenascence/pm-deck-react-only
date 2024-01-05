@@ -3,7 +3,7 @@
     "$oid": "64079f9fb2b376b6cd0454f8"
   },
   "name": "Block",
-  "rules": "When you are targeted for damage, no damage is taken.\nThe number of available activations is {count}.\nCan be triggered without defending.",
+  "rules": "When you are targeted for damage, no damage is taken.\nThe number of available activations is {count}.",
   "count": 0,
   "reaction_number": 1001,
   "anti_support": [],
@@ -35,7 +35,7 @@
     "$oid": "6407a0a9c503d0c6f5a33232"
   },
   "name": "Endure",
-  "rules": "If your card would be defeated, their HP is reduced to 1 instead. \nIf a card effect would discard or remove a card in your play, Endure can be used to prevent that removal. \nCan be triggered without defending.\nThe number of available activations is {count}.",
+  "rules": "If your card would be defeated, their HP is reduced to 1 instead. \nThe number of available activations is {count}.",
   "count": 0,
   "reaction_number": 1003,
   "anti_support": [],

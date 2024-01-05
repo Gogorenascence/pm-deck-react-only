@@ -63,17 +63,17 @@ function CardCategoriesPage(props) {
                     </h5>}
             </div>
             {showClasses?
-                <div className="colorBorder">
+                <div className="fullTableBorder">
                     {cardCategories.filter(cardCategory => cardCategory.cat_type === "card_class")
                         .map(function(cardCategory, index, arr) {
                             return (
                                 <NavLink to={`/cardcategories/${cardCategory.id}`} className="nav-link no-pad" key={cardCategory.name}>
-                                    <div style={{display: "flex"}}>
+                                    <div className="flex">
                                         <div className="table200">
                                             <h5 className="text-table">{cardCategory.name}</h5>
                                         </div>
                                         <div className="tableText">
-                                            <h5 className="text-table-2">{shortenedText(cardCategory.description)}</h5>
+                                            <h5 className="text-table-2">{cardCategory.description}</h5>
                                         </div>
                                     </div>
                                 </NavLink>
@@ -95,7 +95,7 @@ function CardCategoriesPage(props) {
                     </h5>}
             </div>
             {showSeries?
-                <div className="colorBorder">
+                <div className="fullTableBorder">
                     {cardCategories.filter(cardCategory => cardCategory.cat_type === "series")
                         .map(function(cardCategory, index, arr) {
                         return (
@@ -105,7 +105,7 @@ function CardCategoriesPage(props) {
                                         <h5 className="text-table">{cardCategory.name}</h5>
                                     </div>
                                     <div className="tableText">
-                                        <h5 className="text-table-2">{shortenedText(cardCategory.description)}</h5>
+                                        <h5 className="text-table-2">{cardCategory.description}</h5>
                                     </div>
                                 </div>
                             </NavLink>
@@ -127,7 +127,7 @@ function CardCategoriesPage(props) {
                     </h5>}
             </div>
             {showSubSeries?
-                <div className="colorBorder">
+                <div className="fullTableBorder">
                     {cardCategories.filter(cardCategory => cardCategory.cat_type === "sub_series")
                         .map(function(cardCategory, index, arr) {
                             return (
@@ -137,7 +137,7 @@ function CardCategoriesPage(props) {
                                             <h5 className="text-table">{cardCategory.name}</h5>
                                         </div>
                                         <div className="tableText">
-                                            <h5 className="text-table-2">{shortenedText(cardCategory.description)}</h5>
+                                            <h5 className="text-table-2">{cardCategory.description}</h5>
                                         </div>
                                     </div>
                                 </NavLink>

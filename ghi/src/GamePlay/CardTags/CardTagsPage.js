@@ -28,7 +28,7 @@ function CardTagsPage(props) {
         <div className="white-space">
             <h1 className="left-h1">Card Tags</h1>
 
-            <div className="colorBorder">
+            <div className="fullTableBorder">
                 {cardTags.map(function(cardTag, index, arr) {
                     return (
                         <NavLink to={`/cardtags/${cardTag.id}`} className="nav-link no-pad" key={cardTag.name}>

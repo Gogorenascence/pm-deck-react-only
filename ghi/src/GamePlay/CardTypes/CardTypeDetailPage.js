@@ -78,33 +78,29 @@ function CardTypeDetails(props) {
     return (
         <div className="white-space">
             <h1 className="margin-top-40">{cardType.name}</h1>
-            <h2 className="margin-top-20">{cardType.description}</h2>
-                <div style={{display: "flex", justifyContent: "center"}}>
-
-                </div>
-                <div className={showPool ? "rarities" : "no-rarities"}>
-
-                        <div style={{display: "flex", alignItems: "center"}}>
-                            <h2
-                                className="left"
-                                style={{margin: "1% 0px 1% 20px", fontWeight: "700"}}
-                            >Members</h2>
-                            <img className="logo" src="https://i.imgur.com/YpdBflG.png" alt="cards icon"/>
-                            {members.length > 0 ?
-                                <h5
-                                    className="left db-pool-count"
-                                >{members.length}</h5>:
-                                null}
-                            { showPool ?
-                                <h5 className="left db-pool-count"
-                                    onClick={() => handleShowPool()}>
-                                        &nbsp;[Hide]
-                                </h5> :
-                                <h5 className="left db-pool-count"
-                                    onClick={() => handleShowPool()}>
-                                    &nbsp;[Show]
-                                </h5>}
-                        </div>
+            <h2>{cardType.description}</h2>
+                <div className={showPool ? "rarities" : "no-rarities"} style={{marginTop: "20px"}}>
+                    <div style={{display: "flex", alignItems: "center"}}>
+                        <h2
+                            className="left"
+                            style={{margin: "1% 0px 1% 20px", fontWeight: "700"}}
+                        >Members</h2>
+                        <img className="logo" src="https://i.imgur.com/YpdBflG.png" alt="cards icon"/>
+                        {members.length > 0 ?
+                            <h5
+                                className="left db-pool-count"
+                            >{members.length}</h5>:
+                            null}
+                        { showPool ?
+                            <h5 className="left db-pool-count"
+                                onClick={() => handleShowPool()}>
+                                    &nbsp;[Hide]
+                            </h5> :
+                            <h5 className="left db-pool-count"
+                                onClick={() => handleShowPool()}>
+                                &nbsp;[Show]
+                            </h5>}
+                    </div>
                         <div className={showPool ? "card-pool-fill2" : "hidden2"}>
                                 {members.map((card) => {
                                     return (

@@ -52,6 +52,8 @@ function ReactionDetails(props) {
 
     useEffect(() => {;
         document.title = `${reaction.name} - PM CardBase`
+        console.log(reaction.rules)
+        console.log(preprocessCompText(replaceCount(reaction)))
         return () => {
             document.title = "PlayMaker CardBase"
         };
@@ -72,18 +74,26 @@ function ReactionDetails(props) {
         setShowAntiSupport(!showAntiSupport);
     };
 
+    const preprocessCompText = (text) => {
+        return text.split("\n");
+    };
+
     const preprocessText = (text) => {
         return text.split("//").join("\n");
     };
 
+    const replaceCount = (reaction) => {
+        return reaction.rules.replace("{count}", `X, where "X" is the count of ${reaction.name}`)
+    }
+
     return (
         <div className="white-space">
             <h1 className="margin-top-40">{reaction.name}</h1>
-            <h2 className="margin-top-20">{reaction.rules}</h2>
-                <div style={{display: "flex", justifyContent: "center"}}>
-
-                </div>
-                <div className={showPool ? "rarities" : "no-rarities"}>
+            <div>
+                {preprocessCompText(replaceCount(reaction)).map(line => {
+                    return(<h2>{line}</h2>)})}
+            </div>
+                <div className={showPool ? "rarities" : "no-rarities"} style={{marginTop: "20px"}}>
 
                         <div style={{display: "flex", alignItems: "center"}}>
                             <h2

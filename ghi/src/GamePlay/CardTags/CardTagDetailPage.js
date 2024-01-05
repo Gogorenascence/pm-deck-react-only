@@ -79,11 +79,8 @@ function CardTagDetails(props) {
     return (
         <div className="white-space">
             <h1 className="margin-top-40">{cardTag.name}</h1>
-            <h2 className="margin-top-20">{cardTag.rules}</h2>
-                <div style={{display: "flex", justifyContent: "center"}}>
-
-                </div>
-                <div className={showPool ? "rarities" : "no-rarities"}>
+            <h2>{cardTag.rules}</h2>
+                <div className={showPool ? "rarities" : "no-rarities"} style={{marginTop: "20px"}}>
 
                         <div style={{display: "flex", alignItems: "center"}}>
                             <h2

@@ -73,14 +73,18 @@ function ExtraEffectDetails(props) {
         return text.split("//").join("\n");
     };
 
+    const preprocessCompText = (text) => {
+        return text.split("\n");
+    };
+
     return (
         <div className="white-space">
             <h1 className="margin-top-40">{extraEffect.name}</h1>
-            <h2 className="margin-top-20">{extraEffect.rules}</h2>
-                <div style={{display: "flex", justifyContent: "center"}}>
-
-                </div>
-                <div className={showPool ? "rarities" : "no-rarities"}>
+            <div>
+                {preprocessCompText(extraEffect.rules).map(line => {
+                    return(<h2>{line}</h2>)})}
+            </div>
+                <div className={showPool ? "rarities" : "no-rarities"} style={{marginTop: "20px"}}>
 
                         <div style={{display: "flex", alignItems: "center"}}>
                             <h2
