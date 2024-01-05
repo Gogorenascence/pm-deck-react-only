@@ -46,7 +46,7 @@
     "$oid": "6407ac305139f66679d6ac54"
   },
   "name": "Auto",
-  "rules": "This card resolves immediately after being revealed in a play.",
+  "rules": "This card resolves immediately after being revealed in a play or Active Pluck.",
   "tag_number": 1003,
   "support": [],
   "anti_support": []
@@ -86,7 +86,7 @@
     "$oid": "657793799691c90c6b0ce76d"
   },
   "name": "Cycle",
-  "rules": "The effects of this card (Limited effects excluded) can be resolved each round.",
+  "rules": "The effects of this card (limited effects excluded) can be resolved each round.",
   "tag_number": 1006,
   "support": [],
   "anti_support": []
