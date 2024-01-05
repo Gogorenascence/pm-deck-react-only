@@ -36,7 +36,7 @@ function ReactionsPage(props) {
                                     <div className="table200">
                                         <h5 className="text-table">{reaction.name}</h5>
                                     </div>
-                                    <div>
+                                    <div className="tableText">
                                         <h5 className="text-table-2">{shortenedText(reaction.rules)}</h5>
                                     </div>
                                 </div>

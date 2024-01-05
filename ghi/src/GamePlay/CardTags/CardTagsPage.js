@@ -36,7 +36,7 @@ function CardTagsPage(props) {
                                     <div className="table200">
                                         <h5 className="text-table">{cardTag.name}</h5>
                                     </div>
-                                    <div>
+                                    <div className="tableText">
                                         <h5 className="text-table-2">{shortenedText(cardTag.rules)}</h5>
                                     </div>
                                 </div>

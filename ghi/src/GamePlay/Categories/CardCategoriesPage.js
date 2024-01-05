@@ -48,7 +48,7 @@ function CardCategoriesPage(props) {
         <div className="white-space">
             <h1 className="left-h1">Card Categories</h1>
 
-            <div style={{margin: "20px"}}>
+            <div className="catTable">
 
             <div style={{display: "flex", marginTop: "20px"}}>
                 <h3 className="cat-label">Card Classes</h3>
@@ -72,7 +72,7 @@ function CardCategoriesPage(props) {
                                         <div className="table200">
                                             <h5 className="text-table">{cardCategory.name}</h5>
                                         </div>
-                                        <div>
+                                        <div className="tableText">
                                             <h5 className="text-table-2">{shortenedText(cardCategory.description)}</h5>
                                         </div>
                                     </div>
@@ -104,7 +104,7 @@ function CardCategoriesPage(props) {
                                         <div className="table200">
                                             <h5 className="text-table">{cardCategory.name}</h5>
                                         </div>
-                                        <div>
+                                        <div className="tableText">
                                             <h5 className="text-table-2">{shortenedText(cardCategory.description)}</h5>
                                         </div>
                                     </div>
@@ -136,7 +136,7 @@ function CardCategoriesPage(props) {
                                         <div className="table200">
                                             <h5 className="text-table">{cardCategory.name}</h5>
                                         </div>
-                                        <div>
+                                        <div className="tableText">
                                             <h5 className="text-table-2">{shortenedText(cardCategory.description)}</h5>
                                         </div>
                                     </div>
