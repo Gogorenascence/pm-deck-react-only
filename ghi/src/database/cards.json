@@ -5937,7 +5937,7 @@
   "series_name": "Altered//Nature//Tech",
   "card_number": 1132,
   "enthusiasm": null,
-  "effect_text": "<Limited> Place 1 Altered Fighter or Aura from your hand under this Item (if this Item is removed from your Active Pluck, the placed card(s) is discarded).",
+  "effect_text": "<Limited> Place 1 Altered Fighter or Aura from your hand under this Item.",
   "second_effect_text": "When this Item is removed from your Active Pluck, add this Item's placed card(s) to your play.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg18i.png",
@@ -5960,12 +5960,12 @@
     "full_time": "2023-11-08T17:33:01.524000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 17,
-    "time": "00:11",
+    "year": 2024,
+    "month": 1,
+    "day": 6,
+    "time": "03:07",
     "full_time": {
-      "$date": "2023-12-17T00:11:30.575Z"
+      "$date": "2024-01-06T03:07:08.724Z"
     }
   },
   "alpha": null,
