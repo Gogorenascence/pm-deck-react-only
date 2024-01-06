@@ -6824,7 +6824,7 @@
   "card_number": 1150,
   "enthusiasm": null,
   "effect_text": "Add 1 of your placed cards to your play, then place another card from your hand under a card in your play (if that card is removed from your play, the placed card(s) is discarded).",
-  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card of the same type from your hand under a card in your play.",
+  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card of the same type from your hand or discard pile under a card in your play.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5ga.png",
   "file_name": "i1b5ga.png",
@@ -6846,12 +6846,12 @@
     "full_time": "2023-12-16T17:02:32.856000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 17,
-    "time": "07:15",
+    "year": 2024,
+    "month": 1,
+    "day": 6,
+    "time": "17:38",
     "full_time": {
-      "$date": "2023-12-17T07:15:33.772Z"
+      "$date": "2024-01-06T17:38:04.443Z"
     }
   },
   "alpha": null,
@@ -6913,7 +6913,7 @@
   "card_number": 1152,
   "enthusiasm": 12,
   "effect_text": "Target: Strongest foe. //1-5: Deal 2 damage.//6-11: Deal 1 piercing damage for each of your placed cards/Pluck (max of 5). Add 1 placed card to your hand.//12+: Deal 1 piercing damage for each of your placed cards/Pluck (max of 5). Add 1 placed card to your play.",
-  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card from your hand or discard pile under a card in your play.",
+  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or play, place 1 card of the same type from your hand or discard pile under a card in your play.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5ge.png",
   "file_name": "i1b5ge.png",
@@ -6933,17 +6933,15 @@
     "month": 12,
     "day": 16,
     "time": "17:07",
-    "full_time": {
-      "$date": "2023-12-16T17:07:02.895Z"
-    }
+    "full_time": "2023-12-16T17:07:02.895000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 16,
-    "time": "17:07",
+    "year": 2024,
+    "month": 1,
+    "day": 6,
+    "time": "17:37",
     "full_time": {
-      "$date": "2023-12-16T17:07:02.895Z"
+      "$date": "2024-01-06T17:37:43.039Z"
     }
   },
   "alpha": null,
