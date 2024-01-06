@@ -4976,7 +4976,7 @@
   "series_name": "Warp Family//Cosmic//Psychic//Support",
   "card_number": 1042,
   "enthusiasm": 0,
-  "effect_text": "Resolve 1 of the following effects for each Item in your Active Pluck or for each different class in your play://1+: Draw 1 Pluck.//2+: Add 1 Aura from the discard pile to your play.//3+: Add 1 Move from the discard pile to your play.",
+  "effect_text": "Resolve 1 of the following effects for each Item in your Active Pluck or for each different class in your play://1+: Draw 1 Pluck.//2+: Add the top card of the Main deck pile to your play.//3+: Add 1 Move from the discard pile to your play.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b3hsa.png",
@@ -5000,9 +5000,9 @@
     "year": 2024,
     "month": 1,
     "day": 6,
-    "time": "21:14",
+    "time": "21:33",
     "full_time": {
-      "$date": "2024-01-06T21:14:16.178Z"
+      "$date": "2024-01-06T21:33:06.444Z"
     }
   },
   "alpha": null,
