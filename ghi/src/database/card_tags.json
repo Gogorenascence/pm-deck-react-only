@@ -46,7 +46,7 @@
     "$oid": "6407ac305139f66679d6ac54"
   },
   "name": "Auto",
-  "rules": "This card resolves immediately after being revealed in a play or Active Pluck.",
+  "rules": "This card's main effect resolves immediately after being revealed in a play or Active Pluck.",
   "tag_number": 1003,
   "support": [],
   "anti_support": []

@@ -2399,7 +2399,7 @@
   "series_name": "Ceifeira Preta//Mystic//Quest",
   "card_number": 1058,
   "enthusiasm": 0,
-  "effect_text": "This card can not target the same foe twice.//Gain 1 Comeback, then discard 1 card from your strongest or weakest foe's hand  for each Comeback in your ownership (max of 3). That targeted foe draws 1 card for each Comeback in their ownership plus 1 (max of 3). ",
+  "effect_text": "Gain 1 Comeback, then discard 1 card from your strongest or weakest foe's hand for each Comeback in your ownership (max of 3). That targeted foe draws 2 cards. ",
   "second_effect_text": "",
   "illustrator": "Hugo Roberto",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p3cpa.png",
@@ -2420,12 +2420,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 23,
-    "time": "14:22",
+    "year": 2024,
+    "month": 1,
+    "day": 9,
+    "time": "01:15",
     "full_time": {
-      "$date": "2023-11-23T14:22:14.006Z"
+      "$date": "2024-01-09T01:15:30.923Z"
     }
   },
   "alpha": null,
