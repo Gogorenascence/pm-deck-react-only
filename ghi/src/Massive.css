@@ -3033,7 +3033,7 @@ button:hover {
 
 .mask {
   z-index: -3;
-  animation: slide2 infinite 2s;
+  animation: slide2 infinite 1s;
 }
 
 @keyframes slide2 {
