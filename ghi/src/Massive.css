@@ -3014,9 +3014,35 @@ button:hover {
 }
 
 .fullTableBorder {
-  border: 1px solid;
+  border: 2px solid;
   border-color: var(--color-body);
   width: var(--window-width600);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.maskContainer {
+  height: 196px;
+  width: 140px;
+  z-index: 3;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.mask {
+  z-index: -3;
+  animation: slide2 infinite 2s;
+}
+
+@keyframes slide2 {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
 }
 
 @media screen and (max-width: 1330px) {

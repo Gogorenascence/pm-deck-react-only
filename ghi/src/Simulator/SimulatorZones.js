@@ -22,7 +22,13 @@ faceDown,
 discardCard
 }){
 
-    const {player, volume, addToLog} = useContext(GameStateContext)
+    const {
+        player,
+        volume,
+        addToLog,
+        activating,
+        handleActivating
+    } = useContext(GameStateContext)
 
     const {
         addCardFromPlay,
@@ -62,6 +68,7 @@ discardCard
                 <div className="card-menu-item"
                     onClick={() => {
                         activateSound(volume)
+                        handleActivating(objectName)
                         addToLog("System", "system", `${player.name} is resolving "${zoneArray[0].name}"`)
                     }}
                 ><p>Resolve</p></div>
@@ -109,6 +116,11 @@ discardCard
                         handleMenuClose()
                     }}
                 ><p>Discard</p></div>
+            </div>
+            <div className={activating[objectName]? "maskContainer": "hidden2"}>
+                <img
+                    className="mask"
+                    src="mask0.png"/>
             </div>
             <div className={selectedIndex === null? "matCard" : "matCardSelect"}
                 onClick={() => { if (!moving.cardToMove) {
@@ -183,7 +195,14 @@ function ActivePluckZone({
     setShowOwnershipModal
 }){
 
-    const {player, volume, addToLog} = useContext(GameStateContext)
+    const {
+        player,
+        volume,
+        addToLog,
+        activating,
+        handleActivating
+    } = useContext(GameStateContext)
+
     const {
         addPluckFromActivePluck,
         swapping,
@@ -230,6 +249,7 @@ function ActivePluckZone({
             <div className={showActivePluckMenu[objectName] && zoneArray.length > 0? "zone-menu2": "hidden2"}>
                 <div className="card-menu-item"
                     onClick={() => {
+                        handleActivating(objectName)
                         activateSound(volume)
                         addToLog("System", "system", `${player.name} is resolving "${zoneArray[0].name}"`)
                     }}
@@ -270,6 +290,11 @@ function ActivePluckZone({
                         handleMenuClose()
                     }}
                 ><p>Discard</p></div>
+            </div>
+            <div className={activating[objectName]? "maskContainer": "hidden2"}>
+                <img
+                    className="mask"
+                    src="mask0.png"/>
             </div>
             <div className={selectedPluckIndex === null? "matCard":"matCardSelect"}
                 onClick={() => {
@@ -323,7 +348,13 @@ function ExtraZone({
     playingFaceDown
 }){
 
-    const {player, volume, addToLog} = useContext(GameStateContext)
+    const {
+        player,
+        volume,
+        addToLog,
+        activating,
+        handleActivating
+    } = useContext(GameStateContext)
 
     const {
         addCardFromPlay,
@@ -361,6 +392,7 @@ function ExtraZone({
             <div className={showPlayAreaMenu[objectName] && zoneArray.length === 1 ? "zone-menu2": "hidden2"}>
                 <div className="card-menu-item"
                     onClick={() => {
+                        handleActivating(objectName)
                         activateSound(volume)
                         addToLog("System", "system", `${player.name} is resolving "${zoneArray[0].name}"`)
                     }}
@@ -397,6 +429,11 @@ function ExtraZone({
                         handleMenuClose()
                     }}
                 ><p>Discard</p></div>
+            </div>
+            <div className={activating[objectName]? "maskContainer": "hidden2"}>
+                <img
+                    className="mask"
+                    src="mask0.png"/>
             </div>
             <div className={selectedIndex === null? "matCard" : "matCardSelect"}
                 onClick={() => { if (!moving.cardToMove) {

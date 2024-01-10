@@ -131,6 +131,49 @@ const GameStateContextProvider = ({ children }) => {
         }
     }
 
+    const [activating, setActivating] = useState({
+        fighter_slot: false,
+        aura_slot: false,
+        move_slot: false,
+        ending_slot: false,
+        slot_5: false,
+        slot_6: false,
+        slot_7: false,
+        slot_8: false,
+        slot_1: false,
+        slot_2: false,
+        slot_3: false,
+        slot_4: false,
+    })
+
+    const handleActivating = (zone) => {
+        setActivating(prevActivating => {
+            const newActivating = {
+                ...prevActivating,
+                fighter_slot: false,
+                aura_slot: false,
+                move_slot: false,
+                ending_slot: false,
+                slot_5: false,
+                slot_6: false,
+                slot_7: false,
+                slot_8: false,
+                slot_1: false,
+                slot_2: false,
+                slot_3: false,
+                slot_4: false,
+            };
+            newActivating[zone] = true;
+            setTimeout(() => {
+                setActivating(prevActivating => ({
+                    ...prevActivating,
+                    [zone]: false,
+                }));
+            }, 1000);
+            return newActivating;
+        });
+    }
+
     const [log, setLog] = useState([])
 
     const addToLog = (user, role, message) => {
@@ -235,6 +278,8 @@ const GameStateContextProvider = ({ children }) => {
             defendingCard,
             setDefendingCard,
             handleDefending,
+            activating,
+            handleActivating,
             playingFaceDown,
             setPlayingFaceDown,
             handleChangeTransformRotateX,
