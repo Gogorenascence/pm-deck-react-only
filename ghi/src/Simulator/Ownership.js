@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 import {
     menuSound
 } from "../Sounds/Sounds";
+import { PluckActionsContext } from '../context/PluckActionsContext';
 
 
 function Ownership({
     ownership,
-    selectPluck,
     selectedPluckIndex,
     setShowOwnershipModal,
     volume
@@ -16,6 +16,8 @@ function Ownership({
 
     const content = useRef(null)
     useOutsideAlerter(content)
+
+    const {swapping} = useContext(PluckActionsContext)
 
     function useOutsideAlerter(ref) {
         useEffect(() => {
@@ -57,7 +59,7 @@ function Ownership({
 
     return(
         <div>
-            <div className="matCard pointer"
+            <div className={!swapping.cardToSwap? "matCard pointer" : "matCardSelect pointer notify"}
                 onClick={(event) => handleOpen(event)}
                 onContextMenu={(event) => handleOpen(event)}
                 style={{marginLeft: "-160px", marginRight: "20px"}}

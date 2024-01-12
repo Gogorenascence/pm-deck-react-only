@@ -24,8 +24,12 @@ const PluckActionsContextProvider = ({ children }) => {
         playerPluckDeck,
         setPlayerPluckDeck,
         setActivePluck,
-        volume,
+        playArea,
+        setPlayArea,
         addToLog,
+        volume,
+        faceDown,
+        setFaceDown,
     } = useContext(GameStateContext)
 
     const {
@@ -244,22 +248,35 @@ const PluckActionsContextProvider = ({ children }) => {
         }
     }
 
-    const movePluck = (nextZone) => {
+    const movePluck = (nextZone, main) => {
         if (movingPluck.pluckToMove) {
             const newActivePluck = {...player.activePluck}
+            const newPlayArea = main? {...playArea}: null
             const selectZone = newActivePluck[movingPluck.zone]
-            const nextSelectZone = newActivePluck[nextZone]
-
+            const nextSelectZone = !main?
+                newActivePluck[nextZone]:
+                newPlayArea[nextZone]
+            if (movingPluck && main){
+                setFaceDown({
+                    ...faceDown,
+                    [nextZone]: false
+                })
+            }
             nextSelectZone.push(movingPluck.pluckToMove)
             const newSelectZone = selectZone.filter((_, i) => i !== movingPluck.index)
-
-            newActivePluck[movingPluck.zone] = newSelectZone
-            newActivePluck[nextZone] = nextSelectZone
-            setActivePluck(newActivePluck)
-
+            if (!main) {
+                newActivePluck[movingPluck.zone] = newSelectZone
+                newActivePluck[nextZone] = nextSelectZone
+                setActivePluck(newActivePluck)
+            } else {
+                newActivePluck[movingPluck.zone] = newSelectZone
+                newPlayArea[nextZone] = nextSelectZone
+                setActivePluck(newActivePluck)
+                setPlayArea(newPlayArea)
+            }
             {nextSelectZone.length > 1?
                 equipSound(volume*1.5):
-                drawSound(volume)};
+                specialSound(volume)};
 
             setMovingPluck({
                 pluckToMove: "",

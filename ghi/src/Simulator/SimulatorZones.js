@@ -39,6 +39,8 @@ discardCard
         moveCard
     } = useContext(MainActionsContext)
 
+    const {movePluck, movingPluck} = useContext(PluckActionsContext)
+
     const [showPlayAreaMenu, setShowPlayAreaMenu] = useState({
         fighter_slot: false,
         aura_slot: false,
@@ -69,6 +71,7 @@ discardCard
                     onClick={() => {
                         activateSound(volume)
                         handleActivating(objectName)
+                        setFaceDown({...faceDown, [objectName]: false})
                         addToLog("System", "system", `${player.name} is resolving "${zoneArray[0].name}"`)
                     }}
                 ><p>Resolve</p></div>
@@ -123,18 +126,21 @@ discardCard
                     src="mask0.png"/>
             </div>
             <div className={selectedIndex === null? "matCard" : "matCardSelect"}
-                onClick={() => { if (!moving.cardToMove) {
-                                    if (!playingFaceDown && selectedIndex) {
-                                        playCard(objectName)
-                                        setFaceDown({...faceDown, [objectName]: false})
-                                    } else {
-                                        playCard(objectName, objectName)
-                                    }
-                                } else if (moving.zone !== objectName) {
-                                    moveCard(objectName)
-                                }
+                onClick={() => {
+                        if (!moving.cardToMove && !movingPluck.pluckToMove) {
+                            if (!playingFaceDown && selectedIndex) {
+                                playCard(objectName)
+                                setFaceDown({...faceDown, [objectName]: false})
+                            } else {
+                                playCard(objectName, objectName)
                             }
+                        } else if (moving.cardToMove && moving.zone !== objectName) {
+                            moveCard(objectName)
+                        } else if (movingPluck.pluckToMove && movingPluck.zone !== objectName) {
+                            movePluck(objectName, true)
                         }
+                    }
+                }
             >
                 {zoneArray.length > 0 ?
                     <>
@@ -192,6 +198,7 @@ function ActivePluckZone({
     discardPluck,
     handleHoveredCard,
     showOwnershipModal,
+    setShowActivePluckModal,
     setShowOwnershipModal
 }){
 
@@ -237,16 +244,16 @@ function ActivePluckZone({
         })
     }
 
-    const handleOpenOwnership = (event) => {
-        event.preventDefault()
-        setShowOwnershipModal(true)
-        menuSound(volume)
-        document.body.style.overflow = 'hidden';
-    };
+    // const handleOpenOwnership = (event) => {
+    //     event.preventDefault()
+    //     setShowOwnershipModal(true)
+    //     menuSound(volume)
+    //     document.body.style.overflow = 'hidden';
+    // };
 
     return(
         <div>
-            <div className={showActivePluckMenu[objectName] && zoneArray.length > 0? "zone-menu2": "hidden2"}>
+            <div className={showActivePluckMenu[objectName] && zoneArray.length === 1 ? "zone-menu2": "hidden2"}>
                 <div className="card-menu-item"
                     onClick={() => {
                         handleActivating(objectName)
@@ -312,7 +319,10 @@ function ActivePluckZone({
                     <>
                         {zoneArray.length > 1 ?
                             <div className="matCardOverlay"
-                                // onClick={() => setShowActivePluck({name: stringName, zone: zoneArray})}
+                                onClick={() => setShowActivePluckModal({
+                                    name: stringName,
+                                    objectName: objectName
+                                })}
                                 onMouseEnter={() => handleHoveredCard(zoneArray[0])}
                             >
                                 <h1 className="fontSize60">{zoneArray.length}</h1>
@@ -364,6 +374,8 @@ function ExtraZone({
         setMoving,
         moveCard
     } = useContext(MainActionsContext)
+
+    const {movePluck, movingPluck} = useContext(PluckActionsContext)
 
     const [showPlayAreaMenu, setShowPlayAreaMenu] = useState({
         slot_5: false,
@@ -436,12 +448,14 @@ function ExtraZone({
                     src="mask0.png"/>
             </div>
             <div className={selectedIndex === null? "matCard" : "matCardSelect"}
-                onClick={() => { if (!moving.cardToMove) {
+                onClick={() => { if (!moving.cardToMove && !movingPluck.pluckToMove) {
                                     !playingFaceDown?
                                         playCard(objectName):
                                         playCard(objectName, objectName)
-                                } else if (moving.zone !== objectName){
+                                } else if (moving.cardToMove && moving.zone !== objectName){
                                     moveCard(objectName)
+                                } else if (movingPluck.pluckToMove && movingPluck.zone !== objectName) {
+                                    movePluck(objectName, true)
                                 }
                             }
                         }
