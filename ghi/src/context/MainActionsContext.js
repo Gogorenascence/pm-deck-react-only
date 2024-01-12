@@ -39,6 +39,7 @@ const MainActionsContextProvider = ({ children }) => {
         setHand,
         discard,
         setDiscard,
+        setPluckDiscard,
         selectedIndex,
         setSelectedIndex,
         setPrompt,
@@ -368,7 +369,6 @@ const MainActionsContextProvider = ({ children }) => {
                 cardToMove: "",
                 zone: "",
                 index: null,
-                pluck: false,
                 zoneFaceDown: false
             })
         }
@@ -378,15 +378,24 @@ const MainActionsContextProvider = ({ children }) => {
         const newPlayArea = {...player.playArea}
         const selectZone = newPlayArea[zone]
         const newDiscardPile = [...player.mainDiscard]
-
-        newDiscardPile.push(card)
-        const newSelectZone = selectZone.filter((_, i) => i !== index)
-        destroySound(volume)
-        newPlayArea[zone] = newSelectZone
-
-        setDiscard(newDiscardPile)
-        setPlayArea(newPlayArea)
-        addToLog("System", "system", `${player.name} discarded "${card.name}" from their play`)
+        const newPluckDiscardPile = [...player.pluckDiscard]
+        if (card.card_type[0].type_number < 1006) {
+            newDiscardPile.push(card)
+            const newSelectZone = selectZone.filter((_, i) => i !== index)
+            destroySound(volume)
+            newPlayArea[zone] = newSelectZone
+            setDiscard(newDiscardPile)
+            setPlayArea(newPlayArea)
+            addToLog("System", "system", `${player.name} discarded "${card.name}" from their play`)
+        } else {
+            newPluckDiscardPile.push(card)
+            const newSelectZone = selectZone.filter((_, i) => i !== index)
+            destroySound(volume)
+            newPlayArea[zone] = newSelectZone
+            setPluckDiscard(newPluckDiscardPile)
+            setPlayArea(newPlayArea)
+            addToLog("System", "system", `${player.name} discarded "${card.name}" from their play`)
+        }
     }
 
     const discardCardFromHand = (index) => {

@@ -38,6 +38,7 @@ const PluckActionsContextProvider = ({ children }) => {
         setOwnership,
         pluckDiscard,
         setPluckDiscard,
+        setDiscard,
         selectedPluckIndex,
         setSelectedPluckIndex,
         setPrompt,
@@ -290,14 +291,24 @@ const PluckActionsContextProvider = ({ children }) => {
         const newActivePluck = {...player.activePluck}
         const selectZone = newActivePluck[zone]
         const newDiscardPile = [...player.pluckDiscard]
-
-        newDiscardPile.push(card)
-        const newSelectZone = selectZone.filter((_, i) => i !== index)
-        newActivePluck[zone] = newSelectZone
-        destroySound(volume)
-        setPluckDiscard(newDiscardPile)
-        setActivePluck(newActivePluck)
-        addToLog("System", "system", `${player.name} discarded "${card.name}" from their Active Pluck`)
+        const newMainDiscardPile = [...player.mainDiscard]
+        if (card.card_type[0].type_number > 1005) {
+            newDiscardPile.push(card)
+            const newSelectZone = selectZone.filter((_, i) => i !== index)
+            destroySound(volume)
+            newActivePluck[zone] = newSelectZone
+            setPluckDiscard(newDiscardPile)
+            setActivePluck(newActivePluck)
+            addToLog("System", "system", `${player.name} discarded "${card.name}" from their Active Pluck`)
+        } else {
+            newMainDiscardPile.push(card)
+            const newSelectZone = selectZone.filter((_, i) => i !== index)
+            destroySound(volume)
+            newActivePluck[zone] = newSelectZone
+            setDiscard(newMainDiscardPile)
+            setActivePluck(newActivePluck)
+            addToLog("System", "system", `${player.name} discarded "${card.name}" from their Active Pluck`)
+        }
     }
 
     const discardPluckFromOwnership = (index) => {

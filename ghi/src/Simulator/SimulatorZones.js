@@ -146,10 +146,14 @@ discardCard
                     <>
                         {zoneArray.length > 1 ?
                             <div className="matCardOverlay"
-                                onClick={() => setShowPlayAreaModal({
-                                    name: stringName,
-                                    objectName: objectName
-                                })}
+                                onClick={() => {
+                                    if (selectedIndex === null && !moving.cardToMove && !movingPluck.pluckToMove) {
+                                        setShowPlayAreaModal({
+                                            name: stringName,
+                                            objectName: objectName
+                                        })
+                                    }
+                                }}
                                 onMouseEnter={() => handleHoveredCard(zoneArray[0])}
                             >
                                 <h1 className="fontSize60">{zoneArray.length}</h1>
@@ -258,6 +262,7 @@ function ActivePluckZone({
                     onClick={() => {
                         handleActivating(objectName)
                         activateSound(volume)
+                        console.log(zoneArray[0].card_type)
                         addToLog("System", "system", `${player.name} is resolving "${zoneArray[0].name}"`)
                     }}
                 ><p>Resolve</p></div>
@@ -319,10 +324,14 @@ function ActivePluckZone({
                     <>
                         {zoneArray.length > 1 ?
                             <div className="matCardOverlay"
-                                onClick={() => setShowActivePluckModal({
-                                    name: stringName,
-                                    objectName: objectName
-                                })}
+                                onClick={() => {
+                                    if (selectedPluckIndex === null && !movingPluck.pluckToMove && !moving.cardToMove) {
+                                        setShowActivePluckModal({
+                                            name: stringName,
+                                            objectName: objectName
+                                        })
+                                    }
+                                }}
                                 onMouseEnter={() => handleHoveredCard(zoneArray[0])}
                             >
                                 <h1 className="fontSize60">{zoneArray.length}</h1>
@@ -466,10 +475,14 @@ function ExtraZone({
                             <div className={moving.zone === objectName?
                                     "matCardOverlay selected3" :
                                     "matCardOverlay"}
-                                onClick={() => setShowPlayAreaModal({
-                                    name: stringName,
-                                    objectName: objectName
-                                })}
+                                    onClick={() => {
+                                        if (selectedIndex === null && !moving.cardToMove && !movingPluck.pluckToMove) {
+                                            setShowPlayAreaModal({
+                                                name: stringName,
+                                                objectName: objectName
+                                            })
+                                        }
+                                    }}
                                 onMouseEnter={() => handleHoveredCard(zoneArray[0])}
                             >
                                 <h1 className="fontSize60">{zoneArray.length}</h1>
