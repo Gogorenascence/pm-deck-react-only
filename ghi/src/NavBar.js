@@ -121,6 +121,15 @@ function NavBar() {
                 </div>:null
               }
             </li>
+            <li className="nav-item">
+                <NavLink className="username2" to="/simulator" onClick={() => followLink()}>
+              <div className="navbar-select pointer">
+                  <h5 className="navbar-menu-item">
+                    Simulator
+                  </h5>
+              </div>
+                </NavLink>
+            </li>
           </ul>
         </div>
 
