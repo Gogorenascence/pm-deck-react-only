@@ -128,7 +128,7 @@ discardCard
             <div className={selectedIndex === null? "matCard" : "matCardSelect"}
                 onClick={() => {
                         if (!moving.cardToMove && !movingPluck.pluckToMove) {
-                            if (!playingFaceDown && selectedIndex) {
+                            if (!playingFaceDown && selectedIndex !== null) {
                                 playCard(objectName)
                                 setFaceDown({...faceDown, [objectName]: false})
                             } else {
@@ -458,7 +458,7 @@ function ExtraZone({
             </div>
             <div className={selectedIndex === null? "matCard" : "matCardSelect"}
                 onClick={() => { if (!moving.cardToMove && !movingPluck.pluckToMove) {
-                                    !playingFaceDown?
+                                    playingFaceDown === false ?
                                         playCard(objectName):
                                         playCard(objectName, objectName)
                                 } else if (moving.cardToMove && moving.zone !== objectName){
