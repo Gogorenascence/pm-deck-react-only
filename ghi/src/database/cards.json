@@ -5194,7 +5194,7 @@
   "card_number": 1099,
   "enthusiasm": 0,
   "effect_text": "Discard 1 card from your hand, then unfurl 2 Pluck. Add 1 Pluck to your ownership and discard the other unfurled Pluck.",
-  "second_effect_text": "<Critical> Draw 1 card and search 1 Item (add the Item from the Pluck deck to your ownership, then shuffle the Pluck deck).",
+  "second_effect_text": "<Critical> Draw 1 card and pull 1 Item (add the Item from the Pluck deck to your ownership, then shuffle the Pluck deck).",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb11hs.png",
   "file_name": "i1cb11hs",
