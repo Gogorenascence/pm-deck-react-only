@@ -123,7 +123,8 @@ discardCard
             <div className={activating[objectName]? "maskContainer": "hidden2"}>
                 <img
                     className="mask"
-                    src="mask0.png"/>
+                    src="mask0.png"
+                    alt="mask"/>
             </div>
             <div className={selectedIndex === null? "matCard" : "matCardSelect"}
                 onClick={() => {
@@ -306,7 +307,8 @@ function ActivePluckZone({
             <div className={activating[objectName]? "maskContainer": "hidden2"}>
                 <img
                     className="mask"
-                    src="mask0.png"/>
+                    src="mask0.png"
+                    alt="mask"/>
             </div>
             <div className={selectedPluckIndex === null? "matCard":"matCardSelect"}
                 onClick={() => {
@@ -454,7 +456,8 @@ function ExtraZone({
             <div className={activating[objectName]? "maskContainer": "hidden2"}>
                 <img
                     className="mask"
-                    src="mask0.png"/>
+                    src="mask0.png"
+                    alt="mask"/>
             </div>
             <div className={selectedIndex === null? "matCard" : "matCardSelect"}
                 onClick={() => { if (!moving.cardToMove && !movingPluck.pluckToMove) {

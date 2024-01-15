@@ -7,7 +7,6 @@ import BuilderCardSearch from "./BuilderCardSearch";
 import FEDeckExport from "../Decks/FEDeckExport";
 import DeckImport from './DeckImport';
 import StatsPanel from "./StatsPanel";
-import {beforeLeaving} from '../Helpers';
 import { saveDeckToSessionStorage, loadDeckFromSessionStorage } from '../Storage';
 
 
@@ -131,7 +130,6 @@ function DeckBuilder(props) {
             setPluckList
         );
         window.scroll(0, 0);
-        beforeLeaving()
         document.body.style.overflow = 'auto';
         document.title = "Deck Builder - PM CardBase"
         return () => {
