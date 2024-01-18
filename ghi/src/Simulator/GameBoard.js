@@ -350,7 +350,7 @@ function GameBoard({
                     <div className="matLabel margin-top-20"
                         style={{marginLeft: "-160px", marginRight: "20px"}}
                     >
-                        <h5 className="margin-bottom-0">Ownership</h5>
+                        <h5 className="margin-bottom-0">Reserve</h5>
                     </div>
                     <div className="matLabel2 margin-top-20"><h5 className="margin-bottom-0">Active Pluck</h5></div>
                 </div>

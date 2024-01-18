@@ -29,6 +29,7 @@ import ReactionsPage from "./GamePlay/Reactions/ReactionsPage";
 import ReactionDetails from "./GamePlay/Reactions/ReactionDetailPage";
 import SimulatorPage from "./Simulator/SimulatorPage";
 import UnderConstruction from "./display/UnderConstruction";
+import TermsPage from "./GamePlay/TermsPage";
 
 
 function App() {
@@ -64,6 +65,10 @@ function App() {
   let decks = require('./database/decks.json').map(deck =>
     {deck["id"] = deck._id.$oid
     return deck
+  })
+  let terms = require('./database/terms.json').map(term =>
+    {term["id"] = term._id.$oid
+    return term
   })
 
   return (
@@ -117,6 +122,7 @@ function App() {
                                                                                 boosterSets={booster_sets}
                                                                               />} />
               <Route path="/gameplay" element={<GamePlayPage />} />
+              <Route path="/glossary" element={<TermsPage terms={terms}/>} />
               <Route path="/cardcategories" element={<CardCategoriesPage card_categories={card_categories}/>} />
               <Route path="/cardcategories/:card_category_id" element={<CardCategoryDetail
                                                                           card_categories={card_categories}

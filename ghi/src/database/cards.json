@@ -131,10 +131,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:26",
+    "day": 17,
+    "time": "23:27",
     "full_time": {
-      "$date": "2024-01-15T18:26:57.348Z"
+      "$date": "2024-01-17T23:27:36.495Z"
     }
   },
   "alpha": null,
@@ -323,12 +323,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 19,
-    "time": "02:09",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:13",
     "full_time": {
-      "$date": "2023-12-19T02:09:39.229Z"
+      "$date": "2024-01-18T00:13:12.658Z"
     }
   },
   "alpha": null,
@@ -417,12 +417,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 19,
-    "time": "02:10",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:07",
     "full_time": {
-      "$date": "2023-12-19T02:10:04.007Z"
+      "$date": "2024-01-18T00:07:57.624Z"
     }
   },
   "alpha": null,
@@ -504,12 +504,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 3,
-    "time": "22:00",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:26",
     "full_time": {
-      "$date": "2023-12-03T22:00:34.709Z"
+      "$date": "2024-01-17T23:26:05.466Z"
     }
   },
   "alpha": null,
@@ -549,10 +549,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 4,
-    "time": "01:08",
+    "day": 17,
+    "time": "23:36",
     "full_time": {
-      "$date": "2024-01-04T01:08:39.172Z"
+      "$date": "2024-01-17T23:36:39.230Z"
     }
   },
   "alpha": null,
@@ -591,10 +591,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:19",
+    "day": 18,
+    "time": "00:25",
     "full_time": {
-      "$date": "2024-01-15T18:19:55.372Z"
+      "$date": "2024-01-18T00:25:36.056Z"
     }
   },
   "alpha": null,
@@ -635,9 +635,9 @@
     "year": 2024,
     "month": 1,
     "day": 17,
-    "time": "16:18",
+    "time": "23:50",
     "full_time": {
-      "$date": "2024-01-17T16:18:02.360Z"
+      "$date": "2024-01-17T23:50:42.904Z"
     }
   },
   "alpha": null,
@@ -678,9 +678,9 @@
     "year": 2024,
     "month": 1,
     "day": 17,
-    "time": "16:18",
+    "time": "23:50",
     "full_time": {
-      "$date": "2024-01-17T16:18:12.395Z"
+      "$date": "2024-01-17T23:50:37.494Z"
     }
   },
   "alpha": null,
@@ -696,7 +696,7 @@
   "series_name": "Battle Girl Alice//Magic//Brawler//Transformation",
   "card_number": 1030,
   "enthusiasm": 0,
-  "effect_text": "Resolve 1 of the following effects. If you have yet to deal damage this round, resolve 2 different effects instead://● Your Fighter gains Counter 1.//● Take 2 damage, then your Fighter heals 2 HP.//● This card copies the effect text of your Fighter.",
+  "effect_text": "Resolve 1 of the following effects. If you dealt no damage this round, resolve 2 different effects instead://● Your Fighter gains Counter 1.//● Take 2 damage, then your Fighter heals 2 HP.//● This card copies the effect text of your Fighter.",
   "second_effect_text": "",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r4bgaa.png",
@@ -717,12 +717,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "19:58",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:26",
     "full_time": {
-      "$date": "2023-12-26T19:58:01.978Z"
+      "$date": "2024-01-17T23:26:00.098Z"
     }
   },
   "alpha": null,
@@ -738,7 +738,7 @@
   "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1034,
   "enthusiasm": 0,
-  "effect_text": "Draw 1 card. If you have a Fighter in your String, it is now defending. Add 1 Fighter from your hand to your String.",
+  "effect_text": "Draw 1 card. If your String has a Fighter(s), it is now defending. Add 1 Fighter from your hand to your String.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b1dwa.png",
@@ -759,12 +759,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 10,
-    "day": 14,
-    "time": "00:26",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:56",
     "full_time": {
-      "$date": "2023-10-14T00:26:48.684Z"
+      "$date": "2024-01-17T23:56:07.216Z"
     }
   },
   "alpha": null,
@@ -802,12 +802,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 30,
-    "time": "04:16",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:25",
     "full_time": {
-      "$date": "2023-11-30T04:16:00.216Z"
+      "$date": "2024-01-17T23:25:39.876Z"
     }
   },
   "alpha": null,
@@ -846,12 +846,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 30,
-    "time": "04:14",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:25",
     "full_time": {
-      "$date": "2023-11-30T04:14:36.803Z"
+      "$date": "2024-01-17T23:25:31.691Z"
     }
   },
   "alpha": null,
@@ -889,12 +889,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 10,
-    "day": 14,
-    "time": "00:27",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:35",
     "full_time": {
-      "$date": "2023-10-14T00:27:02.052Z"
+      "$date": "2024-01-17T23:35:36.180Z"
     }
   },
   "alpha": null,
@@ -1021,12 +1021,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 10,
-    "time": "21:10",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:12",
     "full_time": {
-      "$date": "2023-11-10T21:10:18.141Z"
+      "$date": "2024-01-18T00:12:36.768Z"
     }
   },
   "alpha": null,
@@ -1063,12 +1063,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
+    "year": 2024,
+    "month": 1,
     "day": 17,
-    "time": "07:23",
+    "time": "23:51",
     "full_time": {
-      "$date": "2023-12-17T07:23:02.515Z"
+      "$date": "2024-01-17T23:51:52.554Z"
     }
   },
   "alpha": null,
@@ -1105,12 +1105,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
+    "year": 2024,
+    "month": 1,
     "day": 17,
-    "time": "07:14",
+    "time": "23:51",
     "full_time": {
-      "$date": "2023-12-17T07:14:53.939Z"
+      "$date": "2024-01-17T23:51:57.730Z"
     }
   },
   "alpha": null,
@@ -1144,19 +1144,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:53",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:43",
     "full_time": {
-      "$date": "2023-06-25T18:53:03.750Z"
+      "$date": "2024-01-18T00:43:03.893Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1190,12 +1190,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 19,
-    "time": "02:12",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:43",
     "full_time": {
-      "$date": "2023-12-19T02:12:13.016Z"
+      "$date": "2024-01-18T00:43:31.785Z"
     }
   },
   "alpha": null,
@@ -1236,10 +1236,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 4,
-    "time": "17:52",
+    "day": 17,
+    "time": "23:27",
     "full_time": {
-      "$date": "2024-01-04T17:52:31.607Z"
+      "$date": "2024-01-17T23:27:19.184Z"
     }
   },
   "alpha": null,
@@ -1297,7 +1297,7 @@
   "series_name": "PantheraMan//Nature//Brawler",
   "card_number": 1004,
   "enthusiasm": 17,
-  "effect_text": "<Target> Foe who has yet to go this round.//If you have the highest Enthusiasm, target a foe of your choice instead.",
+  "effect_text": "<Target> Foe who has not gone this round.//If you have the highest Enthusiasm, target a foe of your choice instead.",
   "second_effect_text": "<1-5> Deal 2 piercing damage.//<6-11> Deal 3 piercing damage.//<12+> Deal 4 piercing damage. The next player's Move and Ending gain damage minus 1 (damage dealt by those cards is reduced by 1 at the end of their resolutions).",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g1pme.png",
@@ -1319,12 +1319,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 10,
-    "day": 19,
-    "time": "02:42",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:54",
     "full_time": {
-      "$date": "2023-10-19T02:42:51.680Z"
+      "$date": "2024-01-17T23:54:40.672Z"
     }
   },
   "alpha": null,
@@ -1367,12 +1367,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 19,
-    "time": "23:11",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:52",
     "full_time": {
-      "$date": "2023-11-19T23:11:26.634Z"
+      "$date": "2024-01-17T23:52:46.021Z"
     }
   },
   "alpha": null,
@@ -1409,12 +1409,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 4,
-    "time": "17:26",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:26",
     "full_time": {
-      "$date": "2023-12-04T17:26:21.445Z"
+      "$date": "2024-01-17T23:26:13.106Z"
     }
   },
   "alpha": null,
@@ -1453,12 +1453,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 19,
-    "time": "20:24",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:27",
     "full_time": {
-      "$date": "2023-11-19T20:24:07.633Z"
+      "$date": "2024-01-17T23:27:23.985Z"
     }
   },
   "alpha": null,
@@ -1547,9 +1547,9 @@
     "year": 2024,
     "month": 1,
     "day": 17,
-    "time": "16:21",
+    "time": "23:27",
     "full_time": {
-      "$date": "2024-01-17T16:21:08.243Z"
+      "$date": "2024-01-17T23:27:41.349Z"
     }
   },
   "alpha": null,
@@ -1591,9 +1591,9 @@
     "year": 2024,
     "month": 1,
     "day": 17,
-    "time": "16:20",
+    "time": "23:53",
     "full_time": {
-      "$date": "2024-01-17T16:20:36.013Z"
+      "$date": "2024-01-17T23:53:06.990Z"
     }
   },
   "alpha": null,
@@ -1634,9 +1634,9 @@
     "year": 2024,
     "month": 1,
     "day": 17,
-    "time": "16:18",
+    "time": "23:46",
     "full_time": {
-      "$date": "2024-01-17T16:18:39.183Z"
+      "$date": "2024-01-17T23:46:43.248Z"
     }
   },
   "alpha": null,
@@ -1677,9 +1677,9 @@
     "year": 2024,
     "month": 1,
     "day": 17,
-    "time": "16:19",
+    "time": "23:27",
     "full_time": {
-      "$date": "2024-01-17T16:19:29.763Z"
+      "$date": "2024-01-17T23:27:45.845Z"
     }
   },
   "alpha": null,
@@ -1695,7 +1695,7 @@
   "series_name": "PantheraMan//Nature//Brawler",
   "card_number": 1067,
   "enthusiasm": 0,
-  "effect_text": "<Limited> If you have no Move(s) in your String, deal 3 piercing damage to a foe who has yet to go this round. You can not add Moves to your String this round.",
+  "effect_text": "<Limited> If your String has no Move(s), deal 3 piercing damage to a foe who has not gone this round. You can not add Moves to your String this round.",
   "second_effect_text": "",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl01pmi.png",
@@ -1718,12 +1718,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 10,
-    "day": 15,
-    "time": "17:46",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:54",
     "full_time": {
-      "$date": "2023-10-15T17:46:10.104Z"
+      "$date": "2024-01-18T00:54:14.133Z"
     }
   },
   "alpha": null,
@@ -1760,19 +1760,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "18:55",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:18",
     "full_time": {
-      "$date": "2023-06-25T18:55:49.525Z"
+      "$date": "2024-01-18T00:18:12.063Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1785,7 +1785,7 @@
   "card_number": 1069,
   "enthusiasm": 0,
   "effect_text": "This Comeback counts as a Staunch card in your String (this does not count towards String size).",
-  "second_effect_text": "<Critical> If you have no Fighter(s) in your String, add 1 Staunch Fighter from your hand to your String.",
+  "second_effect_text": "<Critical> If your String has no Fighter(s), add 1 Staunch Fighter from your hand to your String.",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb1pm.png",
   "file_name": "",
@@ -1808,14 +1808,16 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 10,
-    "day": 6,
-    "time": "01:25",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:07",
     "full_time": {
-      "$date": "2023-10-06T01:25:28.565Z"
+      "$date": "2024-01-18T00:07:51.495Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -1893,12 +1895,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 1,
-    "time": "17:58",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:25",
     "full_time": {
-      "$date": "2023-12-01T17:58:53.165Z"
+      "$date": "2024-01-18T00:25:54.476Z"
     }
   },
   "alpha": null,
@@ -1937,12 +1939,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 10,
-    "day": 14,
-    "time": "00:27",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:08",
     "full_time": {
-      "$date": "2023-10-14T00:27:39.642Z"
+      "$date": "2024-01-18T00:08:24.575Z"
     }
   },
   "alpha": null,
@@ -1982,12 +1984,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 27,
-    "time": "02:13",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:26",
     "full_time": {
-      "$date": "2023-12-27T02:13:14.741Z"
+      "$date": "2024-01-18T00:26:57.968Z"
     }
   },
   "alpha": null,
@@ -2029,10 +2031,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "17:37",
+    "day": 18,
+    "time": "00:26",
     "full_time": {
-      "$date": "2024-01-15T17:37:52.736Z"
+      "$date": "2024-01-18T00:26:35.388Z"
     }
   },
   "alpha": null,
@@ -2071,12 +2073,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 19,
-    "time": "20:25",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:08",
     "full_time": {
-      "$date": "2023-11-19T20:25:03.093Z"
+      "$date": "2024-01-18T00:08:44.922Z"
     }
   },
   "alpha": null,
@@ -2093,7 +2095,7 @@
   "card_number": 1112,
   "enthusiasm": 0,
   "effect_text": "<L. Trigger> When a card or Pluck is resolving, cancel the non-damaging effects of the resolving card or Pluck.",
-  "second_effect_text": "All foes gain Enthusiasm minus 2.\n",
+  "second_effect_text": "All foes gain Enthusiasm minus 2 (lower the Enthusiasm of all foes by 2).\n",
   "illustrator": "betomirandaart2",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl16gei.png",
   "file_name": "i1pl16gei",
@@ -2118,10 +2120,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "16:22",
+    "day": 18,
+    "time": "00:17",
     "full_time": {
-      "$date": "2024-01-17T16:22:09.592Z"
+      "$date": "2024-01-18T00:17:51.427Z"
     }
   },
   "alpha": null,
@@ -2162,10 +2164,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "16:24",
+    "day": 18,
+    "time": "00:04",
     "full_time": {
-      "$date": "2024-01-17T16:24:42.122Z"
+      "$date": "2024-01-18T00:04:06.997Z"
     }
   },
   "alpha": null,
@@ -2207,10 +2209,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "16:21",
+    "day": 18,
+    "time": "00:09",
     "full_time": {
-      "$date": "2024-01-17T16:21:38.223Z"
+      "$date": "2024-01-18T00:09:28.620Z"
     }
   },
   "alpha": null,
@@ -2250,12 +2252,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 10,
-    "day": 19,
-    "time": "03:05",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:04",
     "full_time": {
-      "$date": "2023-10-19T03:05:20.499Z"
+      "$date": "2024-01-18T00:04:17.037Z"
     }
   },
   "alpha": null,
@@ -2296,10 +2298,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "17:47",
+    "day": 18,
+    "time": "00:51",
     "full_time": {
-      "$date": "2024-01-15T17:47:27.081Z"
+      "$date": "2024-01-18T00:51:39.634Z"
     }
   },
   "alpha": null,
@@ -2338,10 +2340,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:18",
+    "day": 18,
+    "time": "00:42",
     "full_time": {
-      "$date": "2024-01-15T18:18:29.652Z"
+      "$date": "2024-01-18T00:42:03.236Z"
     }
   },
   "alpha": null,
@@ -2468,10 +2470,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:10",
+    "day": 17,
+    "time": "23:33",
     "full_time": {
-      "$date": "2024-01-15T18:10:57.982Z"
+      "$date": "2024-01-17T23:33:25.483Z"
     }
   },
   "alpha": null,
@@ -2487,7 +2489,7 @@
   "series_name": "Ceifeira Preta//Mystic//Quest",
   "card_number": 1060,
   "enthusiasm": 8,
-  "effect_text": "<Target> Your strongest or weakest foe.//You can resolve 1 Critical effect this round.//<1-5> Deal 2 damage.//<6-11> Deal 3 damage. Pull 1 Comeback.//<12+> Deal 4 damage. Pull 2 Comebacks.",
+  "effect_text": "<Target> Your strongest or weakest foe.//You can resolve 1 Critical effect this round.//<1-5> Deal 2 damage.//<6-11> Deal 3 damage. Pull 1 Comeback.//<12+> Deal 4 damage. Pull 2 Comebacks (add those Comebacks from the Pluck deck to your Reserve, then shuffle the Pluck deck).",
   "second_effect_text": "",
   "illustrator": "Hugo Roberto",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p3cpe.png",
@@ -2511,10 +2513,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:20",
+    "day": 17,
+    "time": "23:33",
     "full_time": {
-      "$date": "2024-01-15T18:20:40.712Z"
+      "$date": "2024-01-17T23:33:07.892Z"
     }
   },
   "alpha": null,
@@ -2530,7 +2532,7 @@
   "series_name": "Warp Family//Cosmic//Psychic//Tactical",
   "card_number": 1053,
   "enthusiasm": 0,
-  "effect_text": "Look at a random foe's hand, then discard 1 card from their hand. That foe draws 1 card.//If you have a Unity card in your String, resolve this card one more time, but the target foe draws 2 cards instead.",
+  "effect_text": "Look at a random foe's hand, then discard 1 card from their hand. That foe draws 1 card.//If your String has a Unity card(s), resolve this card one more time, but the target foe draws 2 cards instead.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pf.png",
@@ -2554,12 +2556,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 27,
-    "time": "02:45",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:55",
     "full_time": {
-      "$date": "2023-12-27T02:45:06.246Z"
+      "$date": "2024-01-17T23:55:31.739Z"
     }
   },
   "alpha": null,
@@ -2598,12 +2600,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 27,
-    "time": "02:43",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:27",
     "full_time": {
-      "$date": "2023-12-27T02:43:35.237Z"
+      "$date": "2024-01-17T23:27:52.085Z"
     }
   },
   "alpha": null,
@@ -2619,7 +2621,7 @@
   "series_name": "Warp Family//Cosmic//Psychic//Tactical",
   "card_number": 1056,
   "enthusiasm": 16,
-  "effect_text": "<Target> Random foe.//If you have a Unity card in your String, Focus plus 3.//<1-5> Deal 3 damage.//<6-11> Deal 3 damage. Discard 1 card from their hand.//<12+> Deal 3 damage. They discard 1 card from their String and 1 card from their hand.",
+  "effect_text": "<Target> Random foe.//If your String has a Unity card(s), Focus plus 3.//<1-5> Deal 3 damage.//<6-11> Deal 3 damage. Discard 1 card from their hand.//<12+> Deal 3 damage. They discard 1 card from their String and 1 card from their hand.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pe.png",
@@ -2641,12 +2643,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 27,
-    "time": "02:43",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:55",
     "full_time": {
-      "$date": "2023-12-27T02:43:27.857Z"
+      "$date": "2024-01-17T23:55:46.639Z"
     }
   },
   "alpha": null,
@@ -2685,12 +2687,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 27,
-    "time": "02:43",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:27",
     "full_time": {
-      "$date": "2023-12-27T02:43:44.377Z"
+      "$date": "2024-01-17T23:27:14.444Z"
     }
   },
   "alpha": null,
@@ -2729,12 +2731,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 16,
-    "time": "03:00",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:27",
     "full_time": {
-      "$date": "2023-11-16T03:00:58.093Z"
+      "$date": "2024-01-17T23:27:29.174Z"
     }
   },
   "alpha": null,
@@ -2771,12 +2773,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 19,
-    "time": "02:06",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:26",
     "full_time": {
-      "$date": "2023-12-19T02:06:11.903Z"
+      "$date": "2024-01-17T23:26:37.566Z"
     }
   },
   "alpha": null,
@@ -2815,12 +2817,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 19,
-    "time": "02:05",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:26",
     "full_time": {
-      "$date": "2023-12-19T02:05:59.324Z"
+      "$date": "2024-01-17T23:26:30.366Z"
     }
   },
   "alpha": null,
@@ -2858,12 +2860,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 16,
-    "time": "03:00",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:26",
     "full_time": {
-      "$date": "2023-11-16T03:00:22.793Z"
+      "$date": "2024-01-17T23:26:20.316Z"
     }
   },
   "alpha": null,
@@ -2987,12 +2989,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 9,
-    "time": "01:06",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:08",
     "full_time": {
-      "$date": "2023-11-09T01:06:49.241Z"
+      "$date": "2024-01-18T00:08:53.555Z"
     }
   },
   "alpha": null,
@@ -3031,12 +3033,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "19:58",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:27",
     "full_time": {
-      "$date": "2023-12-26T19:58:50.338Z"
+      "$date": "2024-01-18T00:27:50.148Z"
     }
   },
   "alpha": null,
@@ -3115,19 +3117,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:09",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:52",
     "full_time": {
-      "$date": "2023-06-25T19:09:28.245Z"
+      "$date": "2024-01-17T23:52:24.943Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3202,12 +3204,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 17,
-    "time": "00:10",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:26",
     "full_time": {
-      "$date": "2023-12-17T00:10:49.946Z"
+      "$date": "2024-01-18T00:26:11.457Z"
     }
   },
   "alpha": null,
@@ -3249,10 +3251,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:20",
+    "day": 18,
+    "time": "00:09",
     "full_time": {
-      "$date": "2024-01-15T18:20:59.172Z"
+      "$date": "2024-01-18T00:09:36.570Z"
     }
   },
   "alpha": null,
@@ -3286,19 +3288,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:07",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:13",
     "full_time": {
-      "$date": "2023-06-25T19:07:53.925Z"
+      "$date": "2024-01-18T00:13:36.028Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3334,12 +3336,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 17,
-    "time": "00:10",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:03",
     "full_time": {
-      "$date": "2023-12-17T00:10:34.916Z"
+      "$date": "2024-01-18T00:03:26.958Z"
     }
   },
   "alpha": null,
@@ -3380,10 +3382,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "17:51",
+    "day": 18,
+    "time": "00:08",
     "full_time": {
-      "$date": "2024-01-15T17:51:04.600Z"
+      "$date": "2024-01-18T00:08:06.013Z"
     }
   },
   "alpha": null,
@@ -3399,8 +3401,8 @@
   "series_name": "Ceifeira Preta//Mystic//Quest",
   "card_number": 1109,
   "enthusiasm": 0,
-  "effect_text": "Once per round, if you draw or gain a Comeback(s), \nreturn 1 Fighter from the discard pile to the top of the Main deck.",
-  "second_effect_text": "<Trigger> If a card(s) in your String is discarded before resolving its main effect, discard this Item; resolve that card (max of 1) from the your discard pile.",
+  "effect_text": "Once per round, if you draw or pull a Comeback(s), \nreturn 1 Fighter or Aura from the discard pile to the top of the Main deck.",
+  "second_effect_text": "<Trigger> If a card(s) in your String is discarded before resolving its main effect, discard this Item; resolve that card (max of 1) from the discard pile.",
   "illustrator": "Hugo Roberto",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl15cpi.png",
   "file_name": "i1pl15cpi",
@@ -3421,12 +3423,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 22,
-    "time": "00:26",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:57",
     "full_time": {
-      "$date": "2023-12-22T00:26:32.818Z"
+      "$date": "2024-01-18T00:57:20.404Z"
     }
   },
   "alpha": null,
@@ -3465,14 +3467,16 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 9,
-    "day": 30,
-    "time": "21:37",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:09",
     "full_time": {
-      "$date": "2023-09-30T21:37:05.172Z"
+      "$date": "2024-01-18T00:09:21.901Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3509,10 +3513,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:29",
+    "day": 17,
+    "time": "23:34",
     "full_time": {
-      "$date": "2024-01-15T18:29:48.571Z"
+      "$date": "2024-01-17T23:34:43.333Z"
     }
   },
   "alpha": null,
@@ -3572,8 +3576,8 @@
   "series_name": "Burst Esper//Psychic//Energy//Tech",
   "card_number": 1085,
   "enthusiasm": 0,
-  "effect_text": "<Limited> Place up to 3 Psychic cards from your hand or discard pile under this Item (if this Item is removed from your Active Pluck, the placed cards are discarded). \n\n\n",
-  "second_effect_text": "If a card in your String or Reserve randomly chooses a foe(s) or card(s), you choose the foe(s)/card(s) instead. Add 1 of this Item's placed cards to your hand during each End Phase or discard this Item.",
+  "effect_text": "<Limited> Place up to 3 Psychic cards from your hand or discard pile under this Item. \n\n\n",
+  "second_effect_text": "If a card in your String or Reserve randomly chooses a foe(s) or card(s), you choose the foe(s)/card(s) instead.//Add 1 of this Item's placed cards to your hand during each End Phase or discard this Item.",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl07bei.png",
   "file_name": "i1pl07bei",
@@ -3595,12 +3599,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 20,
-    "time": "15:34",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:21",
     "full_time": {
-      "$date": "2023-12-20T15:34:02.212Z"
+      "$date": "2024-01-18T00:21:01.436Z"
     }
   },
   "alpha": null,
@@ -3679,32 +3683,32 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:13",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:08",
     "full_time": {
-      "$date": "2023-06-25T19:13:13.733Z"
+      "$date": "2024-01-18T00:08:19.333Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
     "$oid": "643976ef3d6559427fc5879c"
   },
-  "name": "Healing Fire",
+  "name": "Fairy's Flame",
   "card_class": "",
   "hero_id": "FB1",
   "series_name": "Flamebell//Magic//Support//Quest",
   "card_number": 1076,
   "enthusiasm": 0,
-  "effect_text": "One per round, if you resolve an Aura, heal 1 HP.",
-  "second_effect_text": "<Trigger> If your Fighter would be defeated or removed from your String, discard this Item; your Fighter gains Endure 1 (that card is revealed).",
+  "effect_text": "<L. Trigger> During the Start Phase, 1 card in a player's String is treated as a Power card (that card is revealed).",
+  "second_effect_text": "One per round, if you resolve an Aura, heal 1 HP.",
   "illustrator": "XIOLI",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl04fbi.png",
   "file_name": "i1pl04fbi",
@@ -3727,12 +3731,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 19,
-    "time": "02:10",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:53",
     "full_time": {
-      "$date": "2023-12-19T02:10:18.928Z"
+      "$date": "2024-01-18T00:53:59.114Z"
     }
   },
   "alpha": null,
@@ -3769,12 +3773,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 10,
-    "time": "21:09",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:14",
     "full_time": {
-      "$date": "2023-11-10T21:09:35.521Z"
+      "$date": "2024-01-18T00:14:10.878Z"
     }
   },
   "alpha": null,
@@ -3882,7 +3886,7 @@
   "series_name": "Warp Family//Cosmic//Psychic//Support",
   "card_number": 1041,
   "enthusiasm": 0,
-  "effect_text": "Draw 1 card and pull 1 Item (add the Item from the Pluck deck to your Reserve, then shuffle the Pluck deck).//If you have a Canny card in your String, reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time).",
+  "effect_text": "Draw 1 card and pull 1 Item (add the Item from the Pluck deck to your Reserve, then shuffle the Pluck deck).//If your String has a Canny card(s), reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time).",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b3hsf.png",
@@ -3908,10 +3912,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:43",
+    "day": 17,
+    "time": "23:55",
     "full_time": {
-      "$date": "2024-01-15T18:43:31.135Z"
+      "$date": "2024-01-17T23:55:04.509Z"
     }
   },
   "alpha": null,
@@ -4036,10 +4040,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:02",
+    "day": 17,
+    "time": "23:52",
     "full_time": {
-      "$date": "2024-01-15T18:02:21.618Z"
+      "$date": "2024-01-17T23:52:35.051Z"
     }
   },
   "alpha": null,
@@ -4081,10 +4085,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 4,
-    "time": "00:49",
+    "day": 17,
+    "time": "23:34",
     "full_time": {
-      "$date": "2024-01-04T00:49:45.142Z"
+      "$date": "2024-01-17T23:34:29.491Z"
     }
   },
   "alpha": null,
@@ -4298,10 +4302,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:21",
+    "day": 18,
+    "time": "00:16",
     "full_time": {
-      "$date": "2024-01-15T18:21:16.622Z"
+      "$date": "2024-01-18T00:16:59.017Z"
     }
   },
   "alpha": null,
@@ -4317,7 +4321,7 @@
   "series_name": "Red Fist//Tech//Brawler//Relaxation",
   "card_number": 1082,
   "enthusiasm": 0,
-  "effect_text": "If you have a Power Fighter in your String and you discard a card(s) from your hand, you can draw 1 card.",
+  "effect_text": "If your String has a Power card(s) and you discard a card(s) from your hand/String, you can draw 1 card.",
   "second_effect_text": "Discard this Item after drawing 3 cards by this effect.",
   "illustrator": "gmoshiro",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl06rfi.png",
@@ -4339,12 +4343,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 11,
-    "time": "23:24",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:19",
     "full_time": {
-      "$date": "2023-12-11T23:24:54.762Z"
+      "$date": "2024-01-18T00:19:27.887Z"
     }
   },
   "alpha": null,
@@ -4383,12 +4387,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 12,
-    "time": "03:32",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:18",
     "full_time": {
-      "$date": "2023-12-12T03:32:21.662Z"
+      "$date": "2024-01-18T00:18:42.617Z"
     }
   },
   "alpha": null,
@@ -4424,19 +4428,19 @@
     "month": 6,
     "day": 25,
     "time": "18:44",
-    "full_time": {
-      "$date": "2023-06-25T18:44:06.985Z"
-    }
+    "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 6,
-    "day": 25,
-    "time": "19:19",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:08",
     "full_time": {
-      "$date": "2023-06-25T19:19:29.871Z"
+      "$date": "2024-01-18T00:08:14.413Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -4448,7 +4452,7 @@
   "series_name": "Magic//Quest//Future",
   "card_number": 1127,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> During a foe’s turn, discard up to 2 cards from your hand/play; heal 1 HP for each card discarded.",
+  "effect_text": "<Trigger> During a foe’s turn, discard up to 2 cards from your hand/String; heal 1 HP for each card discarded.",
   "second_effect_text": "<Critical> Add 1 Staunch card and 1 Power card from the discard pile to your hand.",
   "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb19g.png",
@@ -4472,12 +4476,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "16:07",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:09",
     "full_time": {
-      "$date": "2023-12-26T16:07:40.803Z"
+      "$date": "2024-01-18T00:09:43.230Z"
     }
   },
   "alpha": null,
@@ -4518,10 +4522,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "17:49",
+    "day": 18,
+    "time": "00:52",
     "full_time": {
-      "$date": "2024-01-15T17:49:00.231Z"
+      "$date": "2024-01-18T00:52:22.794Z"
     }
   },
   "alpha": null,
@@ -4562,10 +4566,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "17:39",
+    "day": 18,
+    "time": "00:52",
     "full_time": {
-      "$date": "2024-01-15T17:39:10.025Z"
+      "$date": "2024-01-18T00:52:18.644Z"
     }
   },
   "alpha": null,
@@ -4627,7 +4631,7 @@
   "card_number": 1088,
   "enthusiasm": 0,
   "effect_text": "<Trigger> During the Start Phase or during a foe's turn, your Fighter gains Counter 1 (that card is revealed).",
-  "second_effect_text": "Once per foe's turn, if you have a defending Power Fighter or Brawler Fighter and you are dealt damage, reduce that damage by 1.",
+  "second_effect_text": "Once per foe's turn, if your String has a defending Power or Brawler Fighter(s) and you are dealt damage, reduce that damage by 1.",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl08bgai.png",
   "file_name": "i1pl08bgai",
@@ -4651,12 +4655,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 22,
-    "time": "09:29",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:56",
     "full_time": {
-      "$date": "2023-12-22T09:29:39.542Z"
+      "$date": "2024-01-18T00:56:15.655Z"
     }
   },
   "alpha": null,
@@ -4698,10 +4702,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 4,
-    "time": "01:38",
+    "day": 18,
+    "time": "00:03",
     "full_time": {
-      "$date": "2024-01-04T01:38:02.746Z"
+      "$date": "2024-01-18T00:03:56.077Z"
     }
   },
   "alpha": null,
@@ -4740,12 +4744,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "19:58",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:36",
     "full_time": {
-      "$date": "2023-12-26T19:58:29.827Z"
+      "$date": "2024-01-17T23:36:05.770Z"
     }
   },
   "alpha": null,
@@ -4782,12 +4786,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 18,
-    "time": "23:01",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:36",
     "full_time": {
-      "$date": "2023-12-18T23:01:39.219Z"
+      "$date": "2024-01-17T23:36:16.990Z"
     }
   },
   "alpha": null,
@@ -4825,12 +4829,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 4,
-    "time": "21:03",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:36",
     "full_time": {
-      "$date": "2023-11-04T21:03:10.617Z"
+      "$date": "2024-01-17T23:36:23.580Z"
     }
   },
   "alpha": null,
@@ -4871,12 +4875,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 19,
-    "time": "02:12",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:04",
     "full_time": {
-      "$date": "2023-12-19T02:12:51.066Z"
+      "$date": "2024-01-18T00:04:35.698Z"
     }
   },
   "alpha": null,
@@ -4915,12 +4919,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 30,
-    "time": "03:34",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:04",
     "full_time": {
-      "$date": "2023-11-30T03:34:51.271Z"
+      "$date": "2024-01-18T00:04:27.947Z"
     }
   },
   "alpha": null,
@@ -4959,12 +4963,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
+    "year": 2024,
+    "month": 1,
     "day": 18,
-    "time": "23:00",
+    "time": "00:04",
     "full_time": {
-      "$date": "2023-12-18T23:00:50.689Z"
+      "$date": "2024-01-18T00:04:42.898Z"
     }
   },
   "alpha": null,
@@ -5003,10 +5007,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 6,
-    "time": "21:33",
+    "day": 17,
+    "time": "23:25",
     "full_time": {
-      "$date": "2024-01-06T21:33:06.444Z"
+      "$date": "2024-01-17T23:25:45.876Z"
     }
   },
   "alpha": null,
@@ -5022,7 +5026,7 @@
   "series_name": "Warp Family//Cosmic//Psychic//Call",
   "card_number": 1043,
   "enthusiasm": 0,
-  "effect_text": "Deal 2 damage to a foe. If you have 4 or more Items in your Reserve, deal 2 additional damage.",
+  "effect_text": "Deal 2 damage to a foe. If your Reserve has 4 or more Items, deal 2 additional damage.",
   "second_effect_text": "<Trigger> During the Start Phase, discard this Move in your String; draw 1 Pluck.",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b3hsm.png",
@@ -5045,12 +5049,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 19,
-    "time": "19:28",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:54",
     "full_time": {
-      "$date": "2023-11-19T19:28:21.223Z"
+      "$date": "2024-01-17T23:54:53.460Z"
     }
   },
   "alpha": null,
@@ -5066,7 +5070,7 @@
   "series_name": "Warp Family//Cosmic//Psychic//Support",
   "card_number": 1044,
   "enthusiasm": 9,
-  "effect_text": "<Target> Foe of your choice.//If you have a Canny card in your String, Focus plus 3.//<1-5> Deal 3 damage. You both Pull 1 Item.//<6-11> Deal 4 damage. Pull 1 Item and they draw 1 Pluck.//<12+> Deal 5 damage. Pull 1 Item or add 1 Item from the discard pile to your Reserve.",
+  "effect_text": "<Target> Foe of your choice.//If your String has have a Canny card(s), Focus plus 3.//<1-5> Deal 3 damage. You both Pull 1 Item.//<6-11> Deal 4 damage. Pull 1 Item and they draw 1 Pluck.//<12+> Deal 5 damage. Pull 1 Item or add 1 Item from the discard pile to your Reserve.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b3hse.png",
@@ -5090,10 +5094,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:04",
+    "day": 17,
+    "time": "23:55",
     "full_time": {
-      "$date": "2024-01-15T18:04:42.445Z"
+      "$date": "2024-01-17T23:55:22.329Z"
     }
   },
   "alpha": null,
@@ -5176,10 +5180,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:09",
+    "day": 18,
+    "time": "00:24",
     "full_time": {
-      "$date": "2024-01-15T18:09:25.061Z"
+      "$date": "2024-01-18T00:24:41.857Z"
     }
   },
   "alpha": null,
@@ -5220,10 +5224,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "17:40",
+    "day": 18,
+    "time": "00:08",
     "full_time": {
-      "$date": "2024-01-15T17:40:32.705Z"
+      "$date": "2024-01-18T00:08:33.592Z"
     }
   },
   "alpha": null,
@@ -5306,10 +5310,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:10",
+    "day": 18,
+    "time": "00:27",
     "full_time": {
-      "$date": "2024-01-15T18:10:13.922Z"
+      "$date": "2024-01-18T00:27:21.128Z"
     }
   },
   "alpha": null,
@@ -5349,12 +5353,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 27,
-    "time": "02:43",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:09",
     "full_time": {
-      "$date": "2023-12-27T02:43:17.569Z"
+      "$date": "2024-01-18T00:09:00.912Z"
     }
   },
   "alpha": null,
@@ -5395,10 +5399,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "17:46",
+    "day": 18,
+    "time": "00:51",
     "full_time": {
-      "$date": "2024-01-15T17:46:52.901Z"
+      "$date": "2024-01-18T00:51:49.154Z"
     }
   },
   "alpha": null,
@@ -5414,7 +5418,7 @@
   "series_name": "Cosmic//Psychic//Quest//Future",
   "card_number": 1121,
   "enthusiasm": 0,
-  "effect_text": "Unfurl 3 cards; add 2 cards to your hand and discard the other unfurled card. \nApply the following effects based on the classes of the added cards (you can only apply each effect once)://<Power> Focus plus 3 (add 3 to your Focus).//<Unity> Return 1 Aura or 1 Move from the discard pile to the top of the Main deck.//<Canny> Deal 2 bypassing damage to a foe.",
+  "effect_text": "Unfurl 3 cards; add 2 cards to your hand and discard the other unfurled card. Apply the following effects based on the classes of the added cards (you can only apply each effect once)://<Power> Focus plus 3 (add 3 to your Focus).//<Unity> Return 1 Aura or 1 Move from the discard pile to the top of the Main deck.//<Canny> Deal 2 bypassing damage to a foe.",
   "second_effect_text": "",
   "illustrator": "mvthwus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg3e.png",
@@ -5435,12 +5439,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "16:07",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:52",
     "full_time": {
-      "$date": "2023-12-26T16:07:14.613Z"
+      "$date": "2024-01-18T00:52:50.183Z"
     }
   },
   "alpha": null,
@@ -5479,12 +5483,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "16:07",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:10",
     "full_time": {
-      "$date": "2023-12-26T16:07:52.099Z"
+      "$date": "2024-01-18T00:10:13.815Z"
     }
   },
   "alpha": null,
@@ -5524,12 +5528,12 @@
     "full_time": "2023-06-25T18:09:54.986000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 30,
-    "time": "04:14",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:35",
     "full_time": {
-      "$date": "2023-11-30T04:14:13.515Z"
+      "$date": "2024-01-17T23:35:43.400Z"
     }
   },
   "alpha": null,
@@ -5566,12 +5570,12 @@
     "full_time": "2023-10-08T00:46:37.375000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "15:29",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:39",
     "full_time": {
-      "$date": "2023-12-26T15:29:36.137Z"
+      "$date": "2024-01-18T00:39:08.146Z"
     }
   },
   "alpha": null,
@@ -5611,10 +5615,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 4,
-    "time": "00:47",
+    "day": 18,
+    "time": "00:38",
     "full_time": {
-      "$date": "2024-01-04T00:47:10.653Z"
+      "$date": "2024-01-18T00:38:52.245Z"
     }
   },
   "alpha": null,
@@ -5651,12 +5655,12 @@
     "full_time": "2023-10-29T20:51:47.203000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 30,
-    "time": "04:12",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:46",
     "full_time": {
-      "$date": "2023-11-30T04:12:04.246Z"
+      "$date": "2024-01-18T00:46:30.244Z"
     }
   },
   "alpha": null,
@@ -5696,12 +5700,12 @@
     "full_time": "2023-11-02T22:13:39.951000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 11,
-    "time": "01:15",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:46",
     "full_time": {
-      "$date": "2023-11-11T01:15:11.738Z"
+      "$date": "2024-01-18T00:46:53.184Z"
     }
   },
   "alpha": null,
@@ -5741,12 +5745,12 @@
     "full_time": "2023-11-02T23:34:21.259000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "19:59",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:47",
     "full_time": {
-      "$date": "2023-12-26T19:59:19.028Z"
+      "$date": "2024-01-18T00:47:13.714Z"
     }
   },
   "alpha": null,
@@ -5763,7 +5767,7 @@
   "card_number": 1129,
   "enthusiasm": null,
   "effect_text": "<Limited> Place up to 3 cards from your hand under this Item (if this Item is removed from your Active Pluck, the placed cards are discarded).",
-  "second_effect_text": "All Cosmic, Magic and Mystic cards take 1 damage and gain damage minus 1 when they are revealed. \nDiscard 1 of this Item's placed card during each End Phase or discard this Item.",
+  "second_effect_text": "All Cosmic, Magic and Mystic cards take 1 damage and gain damage minus 1 when they are revealed.//Discard 1 of this Item's placed card during each End Phase or discard this Item.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg14i.png",
   "file_name": "i1plg14i.png",
@@ -5785,12 +5789,12 @@
     "full_time": "2023-11-07T05:03:23.676000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 28,
-    "time": "15:48",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:51",
     "full_time": {
-      "$date": "2023-12-28T15:48:28.907Z"
+      "$date": "2024-01-18T00:51:15.654Z"
     }
   },
   "alpha": null,
@@ -5807,7 +5811,7 @@
   "card_number": 1130,
   "enthusiasm": null,
   "effect_text": "Discard this Item and 1 unresolved card in your String; damage dealt by 1 Cosmic or Mystic Move in your String is treated as bypassing damage. ",
-  "second_effect_text": "<Trigger> During the Start Phase, if you have 7 or more Cosmic/Mystic cards in your hand/play, return this Item to your Active Pluck. ",
+  "second_effect_text": "<Trigger> During the Start Phase, if your hand/String has 7 or more Cosmic/Mystic cards, return this Item to your Active Pluck. ",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg15i.png",
   "file_name": "i1plg15i.png",
@@ -5830,12 +5834,12 @@
     "full_time": "2023-11-07T05:07:50.499000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 17,
-    "time": "17:08",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:54",
     "full_time": {
-      "$date": "2023-12-17T17:08:57.145Z"
+      "$date": "2024-01-18T00:54:42.903Z"
     }
   },
   "alpha": null,
@@ -5875,12 +5879,12 @@
     "full_time": "2023-11-07T05:15:46.977000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 7,
-    "time": "05:47",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:03",
     "full_time": {
-      "$date": "2023-11-07T05:47:26.270Z"
+      "$date": "2024-01-18T00:03:14.568Z"
     }
   },
   "alpha": null,
@@ -5896,8 +5900,8 @@
   "series_name": "Magic//Fortune//Quest",
   "card_number": 1131,
   "enthusiasm": null,
-  "effect_text": "All Magic Auras and Moves gain damage plus 1. \nIf your String has no Magic cards, discard this Item.",
-  "second_effect_text": "<Trigger> During the Start Phase, if you have 7 or more Magic cards in your hand/play, add this Item from your discard pile to your Active Pluck.",
+  "effect_text": "All Magic Auras and Moves gain damage plus 1. If your String has no Magic cards, discard this Item.",
+  "second_effect_text": "<Trigger> During the Start Phase, if your hand/String has 7 or more Magic cards, add this Item from your discard pile to your Active Pluck.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg17i.png",
   "file_name": "i1plg17i.png",
@@ -5920,12 +5924,12 @@
     "full_time": "2023-11-08T15:46:22.671000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 10,
-    "time": "15:27",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:56",
     "full_time": {
-      "$date": "2023-12-10T15:27:26.939Z"
+      "$date": "2024-01-18T00:56:26.334Z"
     }
   },
   "alpha": null,
@@ -5966,10 +5970,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 6,
-    "time": "03:07",
+    "day": 18,
+    "time": "00:50",
     "full_time": {
-      "$date": "2024-01-06T03:07:08.724Z"
+      "$date": "2024-01-18T00:50:31.643Z"
     }
   },
   "alpha": null,
@@ -5985,8 +5989,8 @@
   "series_name": "Psychic//Energy",
   "card_number": 1139,
   "enthusiasm": null,
-  "effect_text": "If you have a Psychic card in your String, return 1 Active Item in a player's Reserve to the top of their Pluck deck.",
-  "second_effect_text": "<C.Trigger> When a Item is resolving, If you have a Psychic card in your String, cancel the non-damaging effects of the resolving Item and send it to the discard pile.",
+  "effect_text": "If your String has a Psychic card(s), return 1 Active Item in a player's Reserve to the top of their Pluck deck.",
+  "second_effect_text": "<C.Trigger> When a Item is resolving, if your String has a Psychic card(s), cancel the non-damaging effects of the resolving Item and send it to the discard pile.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg19cb.png",
   "file_name": "i1plg19cb.png",
@@ -6008,12 +6012,12 @@
     "full_time": "2023-11-09T00:59:41.949000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 11,
-    "time": "01:13",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:55",
     "full_time": {
-      "$date": "2023-11-11T01:13:54.552Z"
+      "$date": "2024-01-18T00:55:02.573Z"
     }
   },
   "alpha": null,
@@ -6074,7 +6078,7 @@
   "series_name": "Support//Team//Brawler//Tactical",
   "card_number": 1135,
   "enthusiasm": null,
-  "effect_text": "If you have 2 or more Support/Team cards in your String, all non-Support/Team cards in your String gain damage plus 1 and deal true damage. ",
+  "effect_text": "If your String has 2 or more Support/Team cards, all non-Support/Team cards in your String gain damage plus 1 and deal true damage.",
   "second_effect_text": "",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg21e.png",
@@ -6097,10 +6101,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 4,
-    "time": "00:45",
+    "day": 18,
+    "time": "00:53",
     "full_time": {
-      "$date": "2024-01-04T00:45:10.895Z"
+      "$date": "2024-01-18T00:53:42.604Z"
     }
   },
   "alpha": null,
@@ -6116,7 +6120,7 @@
   "series_name": "Recoil//Energy//Brawler//Support",
   "card_number": 1145,
   "enthusiasm": null,
-  "effect_text": "If you have damage tokens on this card, deal 3 damage to your strongest foe.",
+  "effect_text": "If this card has damage token(s), deal 3 damage to your strongest foe.",
   "second_effect_text": "<Trigger> During the Start Phase or during a foe's turn, each time you or this card would take damage this round, Focus plus 1 and 1 random card in your String gains damage plus 1.",
   "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5rf.png",
@@ -6143,10 +6147,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 1,
-    "time": "00:21",
+    "day": 17,
+    "time": "23:55",
     "full_time": {
-      "$date": "2024-01-01T00:21:55.697Z"
+      "$date": "2024-01-17T23:55:58.789Z"
     }
   },
   "alpha": null,
@@ -6323,10 +6327,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 1,
-    "time": "00:21",
+    "day": 18,
+    "time": "00:37",
     "full_time": {
-      "$date": "2024-01-01T00:21:26.567Z"
+      "$date": "2024-01-18T00:37:08.816Z"
     }
   },
   "alpha": null,
@@ -6367,10 +6371,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 1,
-    "time": "00:20",
+    "day": 18,
+    "time": "00:37",
     "full_time": {
-      "$date": "2024-01-01T00:20:02.329Z"
+      "$date": "2024-01-18T00:37:04.226Z"
     }
   },
   "alpha": null,
@@ -6412,10 +6416,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 1,
-    "time": "00:21",
+    "day": 18,
+    "time": "00:53",
     "full_time": {
-      "$date": "2024-01-01T00:21:06.537Z"
+      "$date": "2024-01-18T00:53:18.184Z"
     }
   },
   "alpha": null,
@@ -6454,10 +6458,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 4,
-    "time": "01:33",
+    "day": 18,
+    "time": "00:49",
     "full_time": {
-      "$date": "2024-01-04T01:33:20.320Z"
+      "$date": "2024-01-18T00:49:55.534Z"
     }
   },
   "alpha": null,
@@ -6498,10 +6502,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 5,
-    "time": "02:57",
+    "day": 17,
+    "time": "23:52",
     "full_time": {
-      "$date": "2024-01-05T02:57:17.505Z"
+      "$date": "2024-01-17T23:52:52.181Z"
     }
   },
   "alpha": null,
@@ -6540,12 +6544,12 @@
     "full_time": "2023-12-09T23:05:16.928000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 24,
-    "time": "18:12",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:26",
     "full_time": {
-      "$date": "2023-12-24T18:12:06.107Z"
+      "$date": "2024-01-17T23:26:53.006Z"
     }
   },
   "alpha": null,
@@ -6562,7 +6566,7 @@
   "card_number": 1168,
   "enthusiasm": null,
   "effect_text": "<Trigger> If a card(s) in your String is discarded, return that card (max of 1) to the top of the Main deck.",
-  "second_effect_text": "<Trigger> If a card(s) or Pluck(s) is discarded from your hand/play/Active Pluck, the next card in your String gains damage plus 1.",
+  "second_effect_text": "<Trigger> If a card(s) or Pluck(s) is discarded from your hand/String/Active Pluck, the next card in your String gains damage plus 1.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl20fcb.png",
   "file_name": "i1pl20fcb.png",
@@ -6583,12 +6587,12 @@
     "full_time": "2023-12-09T23:08:47.609000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 14,
-    "time": "00:18",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:36",
     "full_time": {
-      "$date": "2023-12-14T00:18:41.195Z"
+      "$date": "2024-01-18T00:36:21.016Z"
     }
   },
   "alpha": null,
@@ -6626,12 +6630,12 @@
     "full_time": "2023-12-10T16:06:37.839000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 28,
-    "time": "15:45",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:27",
     "full_time": {
-      "$date": "2023-12-28T15:45:04.529Z"
+      "$date": "2024-01-17T23:27:08.524Z"
     }
   },
   "alpha": null,
@@ -6672,12 +6676,12 @@
     "full_time": "2023-12-13T11:00:50.961000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 14,
-    "time": "00:26",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:26",
     "full_time": {
-      "$date": "2023-12-14T00:26:36.055Z"
+      "$date": "2024-01-17T23:26:58.046Z"
     }
   },
   "alpha": null,
@@ -6717,12 +6721,12 @@
     "full_time": "2023-12-13T11:53:35.409000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 13,
-    "time": "16:29",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:36",
     "full_time": {
-      "$date": "2023-12-13T16:29:39.878Z"
+      "$date": "2024-01-18T00:36:35.916Z"
     }
   },
   "alpha": null,
@@ -6759,12 +6763,12 @@
     "full_time": "2023-12-13T17:07:07.959000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 14,
-    "time": "00:35",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:36",
     "full_time": {
-      "$date": "2023-12-14T00:35:16.895Z"
+      "$date": "2024-01-18T00:36:28.436Z"
     }
   },
   "alpha": null,
@@ -6806,12 +6810,12 @@
     "full_time": "2023-12-14T23:39:56.046000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 23,
-    "time": "18:32",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:37",
     "full_time": {
-      "$date": "2023-12-23T18:32:14.449Z"
+      "$date": "2024-01-17T23:37:17.088Z"
     }
   },
   "alpha": null,
@@ -6895,12 +6899,12 @@
     "full_time": "2023-12-16T17:04:24.015000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 16,
-    "time": "22:51",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:37",
     "full_time": {
-      "$date": "2023-12-16T22:51:18.126Z"
+      "$date": "2024-01-17T23:37:04.498Z"
     }
   },
   "alpha": null,
@@ -6942,10 +6946,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 6,
-    "time": "17:37",
+    "day": 17,
+    "time": "23:51",
     "full_time": {
-      "$date": "2024-01-06T17:37:43.039Z"
+      "$date": "2024-01-17T23:51:29.573Z"
     }
   },
   "alpha": null,
@@ -6986,12 +6990,12 @@
     "full_time": "2023-12-17T00:32:08.350000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 17,
-    "time": "00:44",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:35",
     "full_time": {
-      "$date": "2023-12-17T00:44:00.292Z"
+      "$date": "2024-01-18T00:35:40.806Z"
     }
   },
   "alpha": null,
@@ -7030,10 +7034,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "17:34",
+    "day": 18,
+    "time": "00:35",
     "full_time": {
-      "$date": "2024-01-15T17:34:32.768Z"
+      "$date": "2024-01-18T00:35:33.916Z"
     }
   },
   "alpha": null,
@@ -7070,17 +7074,15 @@
     "month": 12,
     "day": 17,
     "time": "16:53",
-    "full_time": {
-      "$date": "2023-12-17T16:53:26.545Z"
-    }
+    "full_time": "2023-12-17T16:53:26.545000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 17,
-    "time": "16:53",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:36",
     "full_time": {
-      "$date": "2023-12-17T16:53:26.545Z"
+      "$date": "2024-01-18T00:36:51.496Z"
     }
   },
   "alpha": null,
@@ -7163,12 +7165,12 @@
     "full_time": "2023-12-21T22:28:22.658000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 24,
-    "time": "23:06",
+    "year": 2024,
+    "month": 1,
+    "day": 17,
+    "time": "23:35",
     "full_time": {
-      "$date": "2023-12-24T23:06:52.720Z"
+      "$date": "2024-01-17T23:35:16.810Z"
     }
   },
   "alpha": null,
@@ -7210,10 +7212,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 3,
-    "time": "03:17",
+    "day": 17,
+    "time": "23:35",
     "full_time": {
-      "$date": "2024-01-03T03:17:39.618Z"
+      "$date": "2024-01-17T23:35:05.630Z"
     }
   },
   "alpha": null,
@@ -7256,10 +7258,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:19",
+    "day": 17,
+    "time": "23:45",
     "full_time": {
-      "$date": "2024-01-15T18:19:29.712Z"
+      "$date": "2024-01-17T23:45:39.367Z"
     }
   },
   "alpha": null,
@@ -7298,12 +7300,12 @@
     "full_time": "2023-12-23T01:38:15.463000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 23,
-    "time": "18:30",
+    "year": 2024,
+    "month": 1,
+    "day": 18,
+    "time": "00:38",
     "full_time": {
-      "$date": "2023-12-23T18:30:37.079Z"
+      "$date": "2024-01-18T00:38:08.446Z"
     }
   },
   "alpha": null,
@@ -7344,10 +7346,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "17:35",
+    "day": 18,
+    "time": "00:37",
     "full_time": {
-      "$date": "2024-01-15T17:35:07.525Z"
+      "$date": "2024-01-18T00:37:16.046Z"
     }
   },
   "alpha": null,
@@ -7363,7 +7365,7 @@
   "series_name": "The Spider//Tech//Tactical//Support",
   "card_number": 1157,
   "enthusiasm": null,
-  "effect_text": "<L. Trigger> If you have a Staunch or Tactical Fighter in your String, place 1 Tactical Move from your hand or the discard pile under this Item (if this Item is removed from your Active Pluck, the placed card is discarded).",
+  "effect_text": "<L. Trigger> If your String has a Staunch or Tactical Fighter(s), place 1 Tactical Move from your hand or the discard pile under this Item (if this Item is removed from your Active Pluck, the placed card is discarded).",
   "second_effect_text": "This Item copies the effect text of its placed card. ",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl17tsi.png",
@@ -7389,10 +7391,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 2,
-    "time": "21:31",
+    "day": 18,
+    "time": "00:55",
     "full_time": {
-      "$date": "2024-01-02T21:31:57.291Z"
+      "$date": "2024-01-18T00:55:28.994Z"
     }
   },
   "alpha": null,
