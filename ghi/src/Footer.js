@@ -6,7 +6,7 @@ function Footer() {
 
     return (
         <div className="footer">
-            <p className="footer-copy-right">&copy;{current_year} JotH: PlayMaker &nbsp;</p>
+            <p className="footer-copy-right">&copy;2023 JotH: PlayMaker &nbsp;</p>
             <img
                 title="https://discord.gg/hVfTNEZG9p"
                 onClick={() => openInNewTab("https://discord.gg/hVfTNEZG9p")}
