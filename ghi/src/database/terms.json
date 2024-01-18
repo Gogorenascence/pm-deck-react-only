@@ -131,7 +131,7 @@
     "$oid": "65a5f2bbd0b0525bb535d63a"
   },
   "name": "Active Effects",
-  "text": "The effects of a card or Pluck are no longer active if the card is discarded, returned to the hand/ownership or returned to its respective deck.",
+  "text": "The effects of a card or Pluck are no longer active if the card is discarded, returned to the hand/Reserve or returned to its respective deck.",
   "term_number": 1017
 },
 {
