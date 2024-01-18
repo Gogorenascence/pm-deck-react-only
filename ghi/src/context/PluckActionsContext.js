@@ -98,7 +98,7 @@ const PluckActionsContextProvider = ({ children }) => {
             addToLog(
                 "System",
                 "system",
-                "You can have more than 8 Pluck between in your Ownership and Active Pluck."
+                "You can not have more than 8 Pluck in your Reserve."
             )
         }
     }
@@ -128,13 +128,13 @@ const PluckActionsContextProvider = ({ children }) => {
                 cards: newShuffledPluckDeck
             });
             !unfurling?
-                addToLog("System", "system", `"${cardToAdd.name}" was added from Pluck deck to ${player.name}'s ownership`):
-                addToLog("System", "system", `"${cardToAdd.name}" was added from the unfurled Pluck to ${player.name}'s ownership`)
+                addToLog("System", "system", `"${cardToAdd.name}" was added from Pluck deck to ${player.name}'s Reserve`):
+                addToLog("System", "system", `"${cardToAdd.name}" was added from the unfurled Pluck to ${player.name}'s Reserve`)
             } else {
             addToLog(
                 "System",
                 "system",
-                "You can have more than 8 Pluck between in your Ownership and Active Pluck."
+                "You can not have more than 8 Pluck in your Reserve."
             )
         }
     }
@@ -148,12 +148,12 @@ const PluckActionsContextProvider = ({ children }) => {
             setOwnership(newOwnership)
             gainSound(volume)
             setPluckDiscard(newDiscardPile.filter((_, i) => i !== index));
-            addToLog("System", "system", `"${cardToAdd.name}" was added from Pluck discard pile to ${player.name}'s ownership`)
+            addToLog("System", "system", `"${cardToAdd.name}" was added from Pluck discard pile to ${player.name}'s Reserve`)
         } else {
             addToLog(
                 "System",
                 "system",
-                "You can have more than 8 Pluck between in your Ownership and Active Pluck."
+                "You can not have more than 8 Pluck in your Reserve."
             )
         }
     }
@@ -173,7 +173,7 @@ const PluckActionsContextProvider = ({ children }) => {
             setActivePluck(newActivePluck)
             addToLog("System", "system", `"${player.name} returned "${card.name}" from their Active Pluck.`)
         } else {
-            addToLog("You can have more than 8 Pluck between in your Ownership and Active Pluck.")
+            addToLog("You can not have more than 8 Pluck in your Reserve.")
         }
     }
 
@@ -203,7 +203,7 @@ const PluckActionsContextProvider = ({ children }) => {
             "System",
             "system",
             `"${player.name} swapped "${cardInPlay.name}"
-            from their Active Pluck with "${cardInOwnership.name}" from their ownership.`)
+            from their Active Pluck with "${cardInOwnership.name}" from their Reserve.`)
     }
 
     const discardFromPluckDeck = (index) => {
@@ -319,7 +319,7 @@ const PluckActionsContextProvider = ({ children }) => {
         setOwnership(newOwnership.filter((_, i) => i !== index))
         discardSound(volume)
         setPluckDiscard(newDiscardPile)
-        addToLog("System", "system", `${player.name} discarded "${discardedPluck.name}" from their ownership`)
+        addToLog("System", "system", `${player.name} discarded "${discardedPluck.name}" from their Reserve`)
     }
 
     const returnPluckToDeck = (index, position) => {

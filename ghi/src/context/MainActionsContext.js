@@ -166,7 +166,7 @@ const MainActionsContextProvider = ({ children }) => {
             drawSound(volume);
 
             setPlayArea(newPlayArea)
-            addToLog("System", "system", `"${player.name} returned "${card.name}" from their play to their hand.`)
+            addToLog("System", "system", `"${player.name} returned "${card.name}" from their String to their hand.`)
         } else {
             addToLog("System", "system", "You can have more than 8 cards in your hand.")
         }
@@ -198,7 +198,7 @@ const MainActionsContextProvider = ({ children }) => {
             "System",
             "system",
             `"${player.name} swapped "${cardInPlay.name}"
-            from their play with "${cardInHand.name}" from their hand.`)
+            from their String with "${cardInHand.name}" from their hand.`)
     }
 
     const discardFromDeck = (index) => {
@@ -386,7 +386,7 @@ const MainActionsContextProvider = ({ children }) => {
             newPlayArea[zone] = newSelectZone
             setDiscard(newDiscardPile)
             setPlayArea(newPlayArea)
-            addToLog("System", "system", `${player.name} discarded "${card.name}" from their play`)
+            addToLog("System", "system", `${player.name} discarded "${card.name}" from their String`)
         } else {
             newPluckDiscardPile.push(card)
             const newSelectZone = selectZone.filter((_, i) => i !== index)
@@ -394,7 +394,7 @@ const MainActionsContextProvider = ({ children }) => {
             newPlayArea[zone] = newSelectZone
             setPluckDiscard(newPluckDiscardPile)
             setPlayArea(newPlayArea)
-            addToLog("System", "system", `${player.name} discarded "${card.name}" from their play`)
+            addToLog("System", "system", `${player.name} discarded "${card.name}" from their String`)
         }
     }
 
