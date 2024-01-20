@@ -123,11 +123,11 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <div className="navbar-select pointer">
-              <NavLink className="username2" to="/simulator">
-                <h5 className="navbar-menu-item">
-                  Simulator
-                </h5>
-              </NavLink>
+                <NavLink className="username2" to="/simulator">
+                  <h5 className="navbar-menu-item">
+                    Simulator
+                  </h5>
+                </NavLink>
               </div>
             </li>
           </ul>
