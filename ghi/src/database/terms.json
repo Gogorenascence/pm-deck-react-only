@@ -381,4 +381,28 @@
   "name": "Provoke all card type",
   "text": "All foes must resolve their noted card type this round with the player as one of the applicable targets.",
   "term_number": 1048
+},
+{
+  "_id": {
+    "$oid": "65a95102a2c671a5f9d7b92f"
+  },
+  "name": "Place X",
+  "text": "Putting X under 1 card or Pluck.",
+  "term_number": 1049
+},
+{
+  "_id": {
+    "$oid": "65a9516fa2c671a5f9d7b930"
+  },
+  "name": "Placed card or Pluck",
+  "text": "Card or Pluck underneath another card/Pluck.\nPlaced cards do count as being a part of a String or Active Pluck unless noted otherwise. \nIf a card or Pluck with placed cards is removed from play all of its placed cards are discarded.",
+  "term_number": 1050
+},
+{
+  "_id": {
+    "$oid": "65a9525aa2c671a5f9d7b931"
+  },
+  "name": "Hero ID",
+  "text": "Indicator of card's or Pluck's group. If a Pluck's Hero ID is not GEN, in order for the Pluck to legally added to a Pluck deck is the have 4 cards with the same Hero ID in the Main deck.",
+  "term_number": 1051
 }]
