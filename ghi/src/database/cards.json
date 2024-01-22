@@ -2752,7 +2752,7 @@
   "series_name": "Bone Whisperer//Mystic//Nature//Team",
   "card_number": 1011,
   "enthusiasm": 0,
-  "effect_text": "You can resolve one additional Event this round.//Deal 1 piercing damage for each Event in your Reserve (max of 4) to a random foe, then heal 1 HP.",
+  "effect_text": "You can resolve 1 additional Event this round.//Deal 1 piercing damage for each Event in your Reserve (max of 4) to a random foe, then heal 1 HP.",
   "second_effect_text": "",
   "illustrator": "Ranbutam",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g3bwm.png",
@@ -2775,10 +2775,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:26",
+    "day": 22,
+    "time": "18:57",
     "full_time": {
-      "$date": "2024-01-17T23:26:37.566Z"
+      "$date": "2024-01-22T18:57:21.368Z"
     }
   },
   "alpha": null,
@@ -3358,7 +3358,7 @@
   "card_number": 1075,
   "enthusiasm": 0,
   "effect_text": "Discard 2 cards from your hand; pull 1 Event (add the Event from the Pluck deck to your Reserve, then shuffle the Pluck deck).",
-  "second_effect_text": "<Limited> Draw 1 Pluck and you can resolve one additional Event this round.",
+  "second_effect_text": "<Limited> Draw 1 Pluck and you can resolve 1 additional Event this round.",
   "illustrator": "Ranbutam",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb3bw.png",
   "file_name": "i1cb3bw",
@@ -3382,10 +3382,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 18,
-    "time": "00:08",
+    "day": 22,
+    "time": "18:57",
     "full_time": {
-      "$date": "2024-01-18T00:08:06.013Z"
+      "$date": "2024-01-22T18:57:04.509Z"
     }
   },
   "alpha": null,
@@ -4277,7 +4277,7 @@
   "card_number": 1080,
   "enthusiasm": 0,
   "effect_text": "Pull 1 Altered or Transformation card.",
-  "second_effect_text": "<Trigger> If your Fighter is defeated, return it to your hand instead and add a Fighter with a different class from your hand to your String.",
+  "second_effect_text": "<Trigger> If your Fighter is defeated, return it to your hand instead and add a Fighter with a different class from your hand to your String. You can resolve 1 additional Event this round.",
   "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl05bme.png",
   "file_name": "i1pl05bme",
@@ -4302,9 +4302,9 @@
     "year": 2024,
     "month": 1,
     "day": 22,
-    "time": "17:03",
+    "time": "18:56",
     "full_time": {
-      "$date": "2024-01-22T17:03:47.026Z"
+      "$date": "2024-01-22T18:56:29.431Z"
     }
   },
   "alpha": null,
