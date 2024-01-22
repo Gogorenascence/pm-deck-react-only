@@ -997,7 +997,7 @@
   "series_name": "Golden Wall//Cosmic//Support//Call",
   "card_number": 1071,
   "enthusiasm": 0,
-  "effect_text": "<C.Trigger> If you are targeted for damage and your Fighter has 3 or less HP, add 1 card from your hand to your String. The added card takes the damage instead (this does not count as defending). If the card added was a Staunch Fighter, resolve its main effect.",
+  "effect_text": "<C.Trigger> If you are targeted for damage and your Fighter has 3 or less HP, add 1 Support card from your hand to your String. The added card takes the damage instead and is now your defending card. If the card added was a Staunch Fighter, resolve its main effect.",
   "second_effect_text": "",
   "illustrator": "Eric Rodrigues",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl02gwe.png",
@@ -1023,10 +1023,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 18,
-    "time": "00:12",
+    "day": 22,
+    "time": "16:58",
     "full_time": {
-      "$date": "2024-01-18T00:12:36.768Z"
+      "$date": "2024-01-22T16:58:12.578Z"
     }
   },
   "alpha": null,
@@ -3839,7 +3839,7 @@
   "card_number": 1021,
   "enthusiasm": 0,
   "effect_text": "Deal 3 damage to your strongest foe, then discard 2 cards from your hand.",
-  "second_effect_text": "<Trigger> During a player's turn, remove 3 Counter tokens from this card; draw 2 cards.",
+  "second_effect_text": "<Trigger> During the start of a foe's turn, remove 3 Counter tokens from this card; draw 2 cards.",
   "illustrator": "gmoshiro",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rff.png",
   "file_name": "i1r2rff",
@@ -3867,10 +3867,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 4,
-    "time": "16:33",
+    "day": 22,
+    "time": "17:32",
     "full_time": {
-      "$date": "2024-01-04T16:33:29.070Z"
+      "$date": "2024-01-22T17:32:20.193Z"
     }
   },
   "alpha": null,
@@ -4277,7 +4277,7 @@
   "card_number": 1080,
   "enthusiasm": 0,
   "effect_text": "Pull 1 Altered or Transformation card.",
-  "second_effect_text": "<Trigger> If your Fighter would be defeated, return it to your hand instead and add a Fighter with a different class from your hand to your String (this does not count as a defeat; you can not defend with another card this round). ",
+  "second_effect_text": "<Trigger> If your Fighter is defeated, return it to your hand instead and add a Fighter with a different class from your hand to your String.",
   "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl05bme.png",
   "file_name": "i1pl05bme",
@@ -4289,8 +4289,7 @@
   ],
   "reactions": [],
   "card_tags": [
-    1005,
-    1003
+    1005
   ],
   "created_on": {
     "year": 2023,
@@ -4302,10 +4301,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 18,
-    "time": "00:16",
+    "day": 22,
+    "time": "17:03",
     "full_time": {
-      "$date": "2024-01-18T00:16:59.017Z"
+      "$date": "2024-01-22T17:03:47.026Z"
     }
   },
   "alpha": null,
@@ -4630,7 +4629,7 @@
   "series_name": "Battle Girl Alice//Magic//Brawler//Call",
   "card_number": 1088,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> During the Start Phase or during a foe's turn, your Fighter gains Counter 1 (that card is revealed).",
+  "effect_text": "<Trigger> During a foe's turn, damage dealt to you is treated as normal damage until the end of the round.",
   "second_effect_text": "Once per foe's turn, if your String has a defending Power or Brawler Fighter(s) and you are dealt damage, reduce that damage by 1.",
   "illustrator": "mo.moan",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl08bgai.png",
@@ -4657,10 +4656,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 18,
-    "time": "00:56",
+    "day": 22,
+    "time": "17:04",
     "full_time": {
-      "$date": "2024-01-18T00:56:15.655Z"
+      "$date": "2024-01-22T17:04:49.106Z"
     }
   },
   "alpha": null,

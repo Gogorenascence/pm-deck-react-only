@@ -282,6 +282,7 @@
   "name": "Support",
   "description": "Cards that focus on defending, healing and other kinds of support.",
   "support": [
+    1071,
     1126,
     1135
   ],
@@ -294,12 +295,12 @@
     "full_time": "2023-10-11T01:29:59.595000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 23,
-    "time": "16:35",
+    "year": 2024,
+    "month": 1,
+    "day": 22,
+    "time": "16:58",
     "full_time": {
-      "$date": "2023-11-23T16:35:47.370Z"
+      "$date": "2024-01-22T16:58:37.779Z"
     }
   },
   "article": null
