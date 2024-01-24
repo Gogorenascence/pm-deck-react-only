@@ -3839,7 +3839,7 @@
   "card_number": 1021,
   "enthusiasm": 0,
   "effect_text": "Deal 3 damage to your strongest foe, then discard 2 cards from your hand.",
-  "second_effect_text": "<Trigger> During the start of a foe's turn, remove 3 Counter tokens from this card; draw 2 cards.",
+  "second_effect_text": "<Trigger> When this card is revealed, remove 3 Counter tokens from this card; draw 2 cards.",
   "illustrator": "gmoshiro",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rff.png",
   "file_name": "i1r2rff",
@@ -3867,10 +3867,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 22,
-    "time": "17:32",
+    "day": 24,
+    "time": "05:11",
     "full_time": {
-      "$date": "2024-01-22T17:32:20.193Z"
+      "$date": "2024-01-24T05:11:11.976Z"
     }
   },
   "alpha": null,
