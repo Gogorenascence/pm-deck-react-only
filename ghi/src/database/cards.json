@@ -73,7 +73,7 @@
     1001
   ],
   "enthusiasm": 0,
-  "second_effect_text": "<Trigger> During the Start Phase or when this card is revealed, all Power cards gain damage minus 1 this round.",
+  "second_effect_text": "<Trigger> During the Start Phase or when this card is revealed, all foes' Power cards gain damage minus 1 this round.",
   "created_on": {
     "year": 2023,
     "month": 6,
@@ -84,10 +84,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "16:34",
+    "day": 28,
+    "time": "19:01",
     "full_time": {
-      "$date": "2024-01-17T16:34:14.911Z"
+      "$date": "2024-01-28T19:01:30.218Z"
     }
   },
   "alpha": null,
@@ -6476,7 +6476,7 @@
   "series_name": "Fog Palace//Magic//Tactical//Transformation",
   "card_number": 1154,
   "enthusiasm": null,
-  "effect_text": "Discard 1 unresolved card in your String; add 1 card of the same type from your hand to your String and place original card's damage tokens on this card. ",
+  "effect_text": "Discard 1 unresolved card in your String; add 1 card of the same type from your hand to your String and place original card's damage tokens on the added card. ",
   "second_effect_text": "<Trigger> If you are targeted by a foe's card, resolve this card's main effect and you are unaffected by all non-damaging effects of the card targeting you this turn.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5fa.png",
@@ -6501,10 +6501,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:52",
+    "day": 26,
+    "time": "15:59",
     "full_time": {
-      "$date": "2024-01-17T23:52:52.181Z"
+      "$date": "2024-01-26T15:59:13.938Z"
     }
   },
   "alpha": null,
