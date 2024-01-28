@@ -6741,7 +6741,7 @@
   "series_name": "Fog Palace//Magic//Mystic//Call",
   "card_number": 1167,
   "enthusiasm": null,
-  "effect_text": "Add up to 2 Canny cards from your discard pile to your String, then take 2 damage for each card added this way. You can not resolve the added cards or use them for your Focus roll this round.",
+  "effect_text": "Add up to 2 Canny cards from your discard pile to your String, then take 2 damage for each card added this way. You can not resolve the added cards in your String or use them for your Focus roll this round.",
   "second_effect_text": "",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl20fe.png",
@@ -6764,10 +6764,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 18,
-    "time": "00:36",
+    "day": 28,
+    "time": "21:21",
     "full_time": {
-      "$date": "2024-01-18T00:36:28.436Z"
+      "$date": "2024-01-28T21:21:25.392Z"
     }
   },
   "alpha": null,
