@@ -6829,7 +6829,7 @@
   "_id": {
     "$oid": "657b924c262ee8020b1b36a4"
   },
-  "name": "Gizma the Finder",
+  "name": "Gizma",
   "card_class": "Unity",
   "hero_id": "GTF",
   "series_name": "Gizma//Magic//Mystic",
@@ -6851,7 +6851,7 @@
   ],
   "card_tags": [
     1001,
-    1006
+    1004
   ],
   "created_on": {
     "year": 2023,
@@ -6863,10 +6863,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:37",
+    "day": 29,
+    "time": "04:10",
     "full_time": {
-      "$date": "2024-01-17T23:37:17.088Z"
+      "$date": "2024-01-29T04:10:35.185Z"
     }
   },
   "alpha": null,
@@ -6927,7 +6927,7 @@
   "series_name": "Gizma//Magic//Mystic",
   "card_number": 1151,
   "enthusiasm": null,
-  "effect_text": "Deal 1 piercing damage to a random foe for each of your placed cards/Pluck (max of 4).",
+  "effect_text": "Deal 1 piercing damage to your strongest foe for each of your placed cards/Pluck (max of 4).",
   "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or String, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your String/Active Pluck. ",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gm.png",
@@ -6941,7 +6941,7 @@
   "reactions": [],
   "card_tags": [
     1001,
-    1006
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -6953,10 +6953,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:37",
+    "day": 29,
+    "time": "04:56",
     "full_time": {
-      "$date": "2024-01-17T23:37:04.498Z"
+      "$date": "2024-01-29T04:56:11.128Z"
     }
   },
   "alpha": null,
