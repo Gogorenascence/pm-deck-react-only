@@ -6835,7 +6835,7 @@
   "series_name": "Gizma//Magic//Mystic",
   "card_number": 1149,
   "enthusiasm": null,
-  "effect_text": "Resolve the main effect of 1 Fighter, Aura or Move in your placed cards, then discard it.",
+  "effect_text": "Resolve the main effect of 1 card in your placed cards, then discard it.",
   "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under this card (if this card is removed from your String, the placed card(s) is discarded).",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gf.png",
@@ -6864,9 +6864,9 @@
     "year": 2024,
     "month": 1,
     "day": 29,
-    "time": "17:55",
+    "time": "19:00",
     "full_time": {
-      "$date": "2024-01-29T17:55:13.006Z"
+      "$date": "2024-01-29T19:00:30.956Z"
     }
   },
   "alpha": null,
