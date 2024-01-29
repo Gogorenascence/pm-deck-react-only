@@ -90,4 +90,14 @@
   "tag_number": 1006,
   "support": [],
   "anti_support": []
+},
+{
+  "_id": {
+    "$oid": "65b70deee2ecede8e472ac23"
+  },
+  "name": "Hit 1",
+  "rules": "If this card is not defending, you can deal 1 damage to a foe instead of resolving its main effect (you can not defend or resolve the main effect of this card this round).",
+  "tag_number": 1007,
+  "support": [],
+  "anti_support": []
 }]

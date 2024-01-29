@@ -21,7 +21,8 @@
     1003
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "enthusiasm": 0,
   "second_effect_text": "",
@@ -33,12 +34,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 19,
-    "time": "02:00",
+    "year": 2024,
+    "month": 1,
+    "day": 29,
+    "time": "02:46",
     "full_time": {
-      "$date": "2023-12-19T02:00:55.550Z"
+      "$date": "2024-01-29T02:46:06.180Z"
     }
   },
   "alpha": null,
@@ -70,7 +71,8 @@
     1003
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "enthusiasm": 0,
   "second_effect_text": "<Trigger> During the Start Phase or when this card is revealed, all foes' Power cards gain damage minus 1 this round.",
@@ -84,10 +86,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 28,
-    "time": "19:01",
+    "day": 29,
+    "time": "02:48",
     "full_time": {
-      "$date": "2024-01-28T19:01:30.218Z"
+      "$date": "2024-01-29T02:48:17.209Z"
     }
   },
   "alpha": null,
@@ -213,7 +215,8 @@
     1002
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "enthusiasm": 0,
   "second_effect_text": "<Trigger> If you defend with this card, Counter damage this card deals is treated as bypassing damage (once only).",
@@ -225,12 +228,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 10,
-    "day": 30,
-    "time": "22:44",
+    "year": 2024,
+    "month": 1,
+    "day": 29,
+    "time": "02:58",
     "full_time": {
-      "$date": "2023-10-30T22:44:21.282Z"
+      "$date": "2024-01-29T02:58:17.729Z"
     }
   },
   "alpha": null,
@@ -451,7 +454,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "second_effect_text": "<Trigger> If this card is discarded from your hand or String, deal 2 damage to a random foe.",
   "created_on": {
@@ -462,14 +466,16 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 9,
-    "day": 14,
-    "time": "16:14",
+    "year": 2024,
+    "month": 1,
+    "day": 29,
+    "time": "02:57",
     "full_time": {
-      "$date": "2023-09-14T16:14:53.989Z"
+      "$date": "2024-01-29T02:57:53.288Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -494,7 +500,8 @@
     1003
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -506,10 +513,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:26",
+    "day": 29,
+    "time": "02:45",
     "full_time": {
-      "$date": "2024-01-17T23:26:05.466Z"
+      "$date": "2024-01-29T02:45:16.908Z"
     }
   },
   "alpha": null,
@@ -707,7 +714,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -719,10 +727,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:26",
+    "day": 29,
+    "time": "02:58",
     "full_time": {
-      "$date": "2024-01-17T23:26:00.098Z"
+      "$date": "2024-01-29T02:58:30.838Z"
     }
   },
   "alpha": null,
@@ -749,7 +757,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -761,10 +770,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:56",
+    "day": 29,
+    "time": "02:39",
     "full_time": {
-      "$date": "2024-01-17T23:56:07.216Z"
+      "$date": "2024-01-29T02:39:50.034Z"
     }
   },
   "alpha": null,
@@ -836,7 +845,8 @@
     1003
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -848,10 +858,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:25",
+    "day": 29,
+    "time": "02:43",
     "full_time": {
-      "$date": "2024-01-17T23:25:31.691Z"
+      "$date": "2024-01-29T02:43:05.244Z"
     }
   },
   "alpha": null,
@@ -923,7 +933,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -935,10 +946,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "16:33",
+    "day": 29,
+    "time": "02:48",
     "full_time": {
-      "$date": "2024-01-17T16:33:59.666Z"
+      "$date": "2024-01-29T02:48:47.721Z"
     }
   },
   "alpha": null,
@@ -1224,7 +1235,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -1236,10 +1248,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:27",
+    "day": 29,
+    "time": "02:46",
     "full_time": {
-      "$date": "2024-01-17T23:27:19.184Z"
+      "$date": "2024-01-29T02:46:18.299Z"
     }
   },
   "alpha": null,
@@ -1266,7 +1278,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -1276,12 +1289,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 19,
-    "time": "02:01",
+    "year": 2024,
+    "month": 1,
+    "day": 29,
+    "time": "02:46",
     "full_time": {
-      "$date": "2023-12-19T02:01:42.869Z"
+      "$date": "2024-01-29T02:46:45.811Z"
     }
   },
   "alpha": null,
@@ -1357,7 +1370,8 @@
     1002
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -1369,10 +1383,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:52",
+    "day": 29,
+    "time": "02:49",
     "full_time": {
-      "$date": "2024-01-17T23:52:46.021Z"
+      "$date": "2024-01-29T02:49:31.919Z"
     }
   },
   "alpha": null,
@@ -1399,7 +1413,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -1411,10 +1426,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:26",
+    "day": 29,
+    "time": "02:49",
     "full_time": {
-      "$date": "2024-01-17T23:26:13.106Z"
+      "$date": "2024-01-29T02:49:43.599Z"
     }
   },
   "alpha": null,
@@ -1443,7 +1458,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -1455,10 +1471,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:27",
+    "day": 29,
+    "time": "02:50",
     "full_time": {
-      "$date": "2024-01-17T23:27:23.985Z"
+      "$date": "2024-01-29T02:50:12.110Z"
     }
   },
   "alpha": null,
@@ -1534,7 +1550,8 @@
     1001
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -1546,10 +1563,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:27",
+    "day": 29,
+    "time": "02:55",
     "full_time": {
-      "$date": "2024-01-17T23:27:41.349Z"
+      "$date": "2024-01-29T02:55:16.678Z"
     }
   },
   "alpha": null,
@@ -1578,7 +1595,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -1590,10 +1608,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:53",
+    "day": 29,
+    "time": "02:55",
     "full_time": {
-      "$date": "2024-01-17T23:53:06.990Z"
+      "$date": "2024-01-29T02:55:28.069Z"
     }
   },
   "alpha": null,
@@ -2372,7 +2390,8 @@
     1004
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -2384,10 +2403,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:05",
+    "day": 29,
+    "time": "02:54",
     "full_time": {
-      "$date": "2024-01-15T18:05:53.164Z"
+      "$date": "2024-01-29T02:54:25.648Z"
     }
   },
   "alpha": null,
@@ -2414,7 +2433,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -2426,10 +2446,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:24",
+    "day": 29,
+    "time": "02:54",
     "full_time": {
-      "$date": "2024-01-15T18:24:06.850Z"
+      "$date": "2024-01-29T02:54:39.118Z"
     }
   },
   "alpha": null,
@@ -2458,7 +2478,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -2470,10 +2491,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:33",
+    "day": 29,
+    "time": "02:54",
     "full_time": {
-      "$date": "2024-01-17T23:33:25.483Z"
+      "$date": "2024-01-29T02:54:59.390Z"
     }
   },
   "alpha": null,
@@ -2546,7 +2567,8 @@
     1004
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -2558,10 +2580,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:55",
+    "day": 29,
+    "time": "02:50",
     "full_time": {
-      "$date": "2024-01-17T23:55:31.739Z"
+      "$date": "2024-01-29T02:50:35.619Z"
     }
   },
   "alpha": null,
@@ -2590,7 +2612,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -2602,10 +2625,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:27",
+    "day": 29,
+    "time": "02:50",
     "full_time": {
-      "$date": "2024-01-17T23:27:52.085Z"
+      "$date": "2024-01-29T02:50:47.159Z"
     }
   },
   "alpha": null,
@@ -2677,7 +2700,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -2689,10 +2713,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:27",
+    "day": 29,
+    "time": "02:50",
     "full_time": {
-      "$date": "2024-01-17T23:27:14.444Z"
+      "$date": "2024-01-29T02:50:58.068Z"
     }
   },
   "alpha": null,
@@ -2721,7 +2745,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -2733,10 +2758,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:27",
+    "day": 29,
+    "time": "02:47",
     "full_time": {
-      "$date": "2024-01-17T23:27:29.174Z"
+      "$date": "2024-01-29T02:47:22.695Z"
     }
   },
   "alpha": null,
@@ -2763,7 +2788,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -2775,10 +2801,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 22,
-    "time": "18:57",
+    "day": 29,
+    "time": "02:47",
     "full_time": {
-      "$date": "2024-01-22T18:57:21.368Z"
+      "$date": "2024-01-29T02:47:45.949Z"
     }
   },
   "alpha": null,
@@ -2807,7 +2833,8 @@
     1001
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -2819,10 +2846,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:26",
+    "day": 29,
+    "time": "02:47",
     "full_time": {
-      "$date": "2024-01-17T23:26:30.366Z"
+      "$date": "2024-01-29T02:47:09.190Z"
     }
   },
   "alpha": null,
@@ -2935,7 +2962,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -2945,12 +2973,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 19,
-    "time": "02:06",
+    "year": 2024,
+    "month": 1,
+    "day": 29,
+    "time": "02:48",
     "full_time": {
-      "$date": "2023-12-19T02:06:35.943Z"
+      "$date": "2024-01-29T02:48:31.000Z"
     }
   },
   "alpha": null,
@@ -3068,7 +3096,8 @@
     1002
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -3078,12 +3107,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "17:31",
+    "year": 2024,
+    "month": 1,
+    "day": 29,
+    "time": "02:56",
     "full_time": {
-      "$date": "2023-12-26T17:31:01.734Z"
+      "$date": "2024-01-29T02:56:41.828Z"
     }
   },
   "alpha": null,
@@ -3110,7 +3139,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -3122,10 +3152,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:52",
+    "day": 29,
+    "time": "02:45",
     "full_time": {
-      "$date": "2024-01-17T23:52:24.943Z"
+      "$date": "2024-01-29T02:45:30.734Z"
     }
   },
   "alpha": null,
@@ -3152,7 +3182,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -3162,14 +3193,16 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 9,
-    "day": 1,
-    "time": "14:34",
+    "year": 2024,
+    "month": 1,
+    "day": 29,
+    "time": "02:45",
     "full_time": {
-      "$date": "2023-09-01T14:34:20.127Z"
+      "$date": "2024-01-29T02:45:45.247Z"
     }
-  }
+  },
+  "alpha": null,
+  "beta": null
 },
 {
   "_id": {
@@ -3501,7 +3534,8 @@
     1004
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -3513,10 +3547,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:34",
+    "day": 29,
+    "time": "02:57",
     "full_time": {
-      "$date": "2024-01-17T23:34:43.333Z"
+      "$date": "2024-01-29T02:57:42.122Z"
     }
   },
   "alpha": null,
@@ -3545,7 +3579,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -3557,10 +3592,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "16:35",
+    "day": 29,
+    "time": "02:58",
     "full_time": {
-      "$date": "2024-01-17T16:35:31.991Z"
+      "$date": "2024-01-29T02:58:04.698Z"
     }
   },
   "alpha": null,
@@ -3855,7 +3890,8 @@
     1002
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -3867,10 +3903,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 24,
-    "time": "05:11",
+    "day": 29,
+    "time": "02:57",
     "full_time": {
-      "$date": "2024-01-24T05:11:11.976Z"
+      "$date": "2024-01-29T02:57:13.948Z"
     }
   },
   "alpha": null,
@@ -3900,7 +3936,8 @@
     1004
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -3912,10 +3949,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:55",
+    "day": 29,
+    "time": "02:44",
     "full_time": {
-      "$date": "2024-01-17T23:55:04.509Z"
+      "$date": "2024-01-29T02:44:32.009Z"
     }
   },
   "alpha": null,
@@ -4028,7 +4065,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -4040,10 +4078,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:52",
+    "day": 29,
+    "time": "02:57",
     "full_time": {
-      "$date": "2024-01-17T23:52:35.051Z"
+      "$date": "2024-01-29T02:57:24.039Z"
     }
   },
   "alpha": null,
@@ -4059,7 +4097,7 @@
   "series_name": "Blast Mouth//Altered//Nature//Transformation",
   "card_number": 1018,
   "enthusiasm": 0,
-  "effect_text": "The next card in your String gains damage plus 1 (that card deals 1 additional damage at the end of its resolution).   ",
+  "effect_text": "The next resolved card in your String gains damage plus 1 (that card deals 1 additional damage at the end of its resolution).   ",
   "second_effect_text": "<Trigger> If you take damage, resolve 1 other random card in your String. If the resolved card targets a foe(s), the target is now 1 random foe.",
   "illustrator": "Znttus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r1bma.png",
@@ -4085,10 +4123,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:34",
+    "day": 29,
+    "time": "01:53",
     "full_time": {
-      "$date": "2024-01-17T23:34:29.491Z"
+      "$date": "2024-01-29T01:53:38.512Z"
     }
   },
   "alpha": null,
@@ -4115,7 +4153,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -4125,12 +4164,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "17:31",
+    "year": 2024,
+    "month": 1,
+    "day": 29,
+    "time": "02:56",
     "full_time": {
-      "$date": "2023-12-26T17:31:10.263Z"
+      "$date": "2024-01-29T02:56:54.238Z"
     }
   },
   "alpha": null,
@@ -4733,7 +4772,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -4745,10 +4785,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:36",
+    "day": 29,
+    "time": "02:43",
     "full_time": {
-      "$date": "2024-01-17T23:36:05.770Z"
+      "$date": "2024-01-29T02:43:59.131Z"
     }
   },
   "alpha": null,
@@ -4775,7 +4815,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -4787,10 +4828,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:36",
+    "day": 29,
+    "time": "02:44",
     "full_time": {
-      "$date": "2024-01-17T23:36:16.990Z"
+      "$date": "2024-01-29T02:44:11.071Z"
     }
   },
   "alpha": null,
@@ -4994,7 +5035,8 @@
   "extra_effects": [],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -5006,10 +5048,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:25",
+    "day": 29,
+    "time": "02:44",
     "full_time": {
-      "$date": "2024-01-17T23:25:45.876Z"
+      "$date": "2024-01-29T02:44:44.089Z"
     }
   },
   "alpha": null,
@@ -5038,7 +5080,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -5050,10 +5093,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:54",
+    "day": 29,
+    "time": "02:44",
     "full_time": {
-      "$date": "2024-01-17T23:54:53.460Z"
+      "$date": "2024-01-29T02:44:56.818Z"
     }
   },
   "alpha": null,
@@ -5517,7 +5560,8 @@
     1002
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -5529,10 +5573,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:35",
+    "day": 29,
+    "time": "02:43",
     "full_time": {
-      "$date": "2024-01-17T23:35:43.400Z"
+      "$date": "2024-01-29T02:43:46.322Z"
     }
   },
   "alpha": null,
@@ -6134,7 +6178,8 @@
     1003
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -6146,10 +6191,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:55",
+    "day": 29,
+    "time": "02:58",
     "full_time": {
-      "$date": "2024-01-17T23:55:58.789Z"
+      "$date": "2024-01-29T02:58:43.388Z"
     }
   },
   "alpha": null,
@@ -6181,7 +6226,8 @@
     1002
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -6193,10 +6239,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 1,
-    "time": "00:19",
+    "day": 29,
+    "time": "02:58",
     "full_time": {
-      "$date": "2024-01-01T00:19:27.879Z"
+      "$date": "2024-01-29T02:58:56.518Z"
     }
   },
   "alpha": null,
@@ -6226,7 +6272,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -6238,10 +6285,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 1,
-    "time": "00:19",
+    "day": 29,
+    "time": "02:59",
     "full_time": {
-      "$date": "2024-01-01T00:19:45.350Z"
+      "$date": "2024-01-29T02:59:07.997Z"
     }
   },
   "alpha": null,
@@ -6489,7 +6536,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -6501,10 +6549,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 26,
-    "time": "15:59",
+    "day": 29,
+    "time": "02:56",
     "full_time": {
-      "$date": "2024-01-26T15:59:13.938Z"
+      "$date": "2024-01-29T02:56:03.728Z"
     }
   },
   "alpha": null,
@@ -6533,7 +6581,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -6545,10 +6594,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:26",
+    "day": 29,
+    "time": "02:56",
     "full_time": {
-      "$date": "2024-01-17T23:26:53.006Z"
+      "$date": "2024-01-29T02:56:15.918Z"
     }
   },
   "alpha": null,
@@ -6665,7 +6714,8 @@
     1004
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -6677,10 +6727,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:26",
+    "day": 29,
+    "time": "02:55",
     "full_time": {
-      "$date": "2024-01-17T23:26:58.046Z"
+      "$date": "2024-01-29T02:55:45.268Z"
     }
   },
   "alpha": null,
@@ -6843,7 +6893,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -6855,10 +6906,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 6,
-    "time": "17:38",
+    "day": 29,
+    "time": "02:53",
     "full_time": {
-      "$date": "2024-01-06T17:38:04.443Z"
+      "$date": "2024-01-29T02:53:14.128Z"
     }
   },
   "alpha": null,
@@ -7110,7 +7161,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -7122,10 +7174,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 15,
-    "time": "18:28",
+    "day": 29,
+    "time": "02:52",
     "full_time": {
-      "$date": "2024-01-15T18:28:24.917Z"
+      "$date": "2024-01-29T02:52:27.628Z"
     }
   },
   "alpha": null,
@@ -7154,7 +7206,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -7166,10 +7219,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:35",
+    "day": 29,
+    "time": "02:52",
     "full_time": {
-      "$date": "2024-01-17T23:35:16.810Z"
+      "$date": "2024-01-29T02:52:14.308Z"
     }
   },
   "alpha": null,
@@ -7245,7 +7298,8 @@
     1004
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -7257,10 +7311,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 17,
-    "time": "23:45",
+    "day": 29,
+    "time": "02:52",
     "full_time": {
-      "$date": "2024-01-17T23:45:39.367Z"
+      "$date": "2024-01-29T02:52:00.229Z"
     }
   },
   "alpha": null,
