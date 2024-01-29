@@ -165,7 +165,8 @@
   ],
   "reactions": [],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "enthusiasm": 0,
   "second_effect_text": "<Trigger> If you are targeted for damage, your Fighter gains Block 1 (that card is revealed).",
@@ -177,12 +178,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 26,
-    "time": "19:58",
+    "year": 2024,
+    "month": 1,
+    "day": 29,
+    "time": "03:13",
     "full_time": {
-      "$date": "2023-12-26T19:58:39.068Z"
+      "$date": "2024-01-29T03:13:33.406Z"
     }
   },
   "alpha": null,
@@ -266,7 +267,8 @@
     1001
   ],
   "card_tags": [
-    1001
+    1001,
+    1007
   ],
   "second_effect_text": "<Critical> You can 1 damage to a random foe each time you resolve a Staunch card or defend with this card this round.",
   "created_on": {
@@ -277,12 +279,12 @@
     "full_time": "2023-06-25T18:44:06.985000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 19,
-    "time": "02:01",
+    "year": 2024,
+    "month": 1,
+    "day": 29,
+    "time": "03:13",
     "full_time": {
-      "$date": "2023-12-19T02:01:56.080Z"
+      "$date": "2024-01-29T03:13:20.966Z"
     }
   },
   "alpha": null,
