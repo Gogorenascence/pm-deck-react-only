@@ -5462,7 +5462,7 @@
   "series_name": "Cosmic//Psychic//Quest//Future",
   "card_number": 1121,
   "enthusiasm": 0,
-  "effect_text": "Unfurl 3 cards; add 2 cards to your hand and discard the other unfurled card. Apply the following effects based on the classes of the added cards (you can only apply each effect once)://<Power> Focus plus 3 (add 3 to your Focus).//<Unity> Return 1 Aura or 1 Move from the discard pile to the top of the Main deck.//<Canny> Deal 2 bypassing damage to a foe.",
+  "effect_text": "Unfurl 3 cards; add 2 cards to your hand and discard the other unfurled card, then apply the following effects based on the classes of the added cards (you can only apply each effect once)://<Power> Focus plus 3 (add 3 to your Focus).//<Unity> Return 1 Aura or 1 Move from the discard pile to the top of the Main deck.//<Canny> Deal 2 bypassing damage to a foe.",
   "second_effect_text": "",
   "illustrator": "mvthwus",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg3e.png",
@@ -5485,10 +5485,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 18,
-    "time": "00:52",
+    "day": 29,
+    "time": "05:27",
     "full_time": {
-      "$date": "2024-01-18T00:52:50.183Z"
+      "$date": "2024-01-29T05:27:01.802Z"
     }
   },
   "alpha": null,
@@ -6928,7 +6928,7 @@
   "card_number": 1151,
   "enthusiasm": null,
   "effect_text": "Deal 1 piercing damage to your strongest foe for each of your placed cards/Pluck (max of 4).",
-  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or String, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your String/Active Pluck. ",
+  "second_effect_text": "<Trigger> If you discard a card(s) from your hand or String, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your String/Active Pluck. ",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gm.png",
   "file_name": "i1b5gm.png",
@@ -6954,9 +6954,9 @@
     "year": 2024,
     "month": 1,
     "day": 29,
-    "time": "04:56",
+    "time": "05:13",
     "full_time": {
-      "$date": "2024-01-29T04:56:11.128Z"
+      "$date": "2024-01-29T05:13:21.938Z"
     }
   },
   "alpha": null,
