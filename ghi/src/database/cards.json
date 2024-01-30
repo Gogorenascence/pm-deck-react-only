@@ -6835,7 +6835,7 @@
   "series_name": "Gizma//Magic//Mystic",
   "card_number": 1149,
   "enthusiasm": null,
-  "effect_text": "Resolve the main effect of 1 card in your placed cards, then discard it.",
+  "effect_text": "Select 1 of your placed cards; resolve that card's main effect, then discard it.",
   "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under this card (if this card is removed from your String, the placed card(s) is discarded).",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gf.png",
@@ -6863,10 +6863,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 29,
-    "time": "19:00",
+    "day": 30,
+    "time": "00:52",
     "full_time": {
-      "$date": "2024-01-29T19:00:30.956Z"
+      "$date": "2024-01-30T00:52:43.985Z"
     }
   },
   "alpha": null,
@@ -7018,7 +7018,7 @@
   "card_number": 1163,
   "enthusiasm": null,
   "effect_text": "<Trigger> During the Start Phase or during a player's turn, cards can not be discarded from your hand or String by your foes' card effects this round.",
-  "second_effect_text": "Once per round, add 1 placed card or Pluck to your hand/Reserve.",
+  "second_effect_text": "Once per round, add 1 of your placed cards/Pluck to your hand/Reserve.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl19gi.png",
   "file_name": "i1pl19gi.png",
@@ -7044,10 +7044,10 @@
   "updated_on": {
     "year": 2024,
     "month": 1,
-    "day": 18,
-    "time": "00:35",
+    "day": 30,
+    "time": "00:55",
     "full_time": {
-      "$date": "2024-01-18T00:35:40.806Z"
+      "$date": "2024-01-30T00:55:59.350Z"
     }
   },
   "alpha": null,
