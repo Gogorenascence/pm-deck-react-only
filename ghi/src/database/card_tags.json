@@ -96,7 +96,7 @@
     "$oid": "65b70deee2ecede8e472ac23"
   },
   "name": "Hit 1",
-  "rules": "If this card is not defending, you can deal 1 damage to a foe instead of resolving its main effect (you can not defend or resolve the main effect of this card this round).",
+  "rules": "If this card is not defending or has not resolved its main effect, deal 1 damage to a foe. You can't defend with or resolve the main effect of this card for the rest of the round.",
   "tag_number": 1007,
   "support": [],
   "anti_support": []
