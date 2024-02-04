@@ -577,7 +577,7 @@
   "series_name": "Bolt Blossom//Nature//Energy",
   "card_number": 1101,
   "enthusiasm": 0,
-  "effect_text": "Apply the following effects based on each different class in your String (you can only apply each effect once)://<Staunch> Heal 2 HP and draw 1 card.//<Power> Deal 2 damage to a foe or Focus plus 2.//<Unity> Reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time).//<Canny> Pull 1 Comeback.",
+  "effect_text": "Apply the following effects based on each different class in your String (you can only apply each effect once)://<Staunch> Heal 2 HP and draw 1 card.//<Power> Deal 2 damage to a foe or Focus plus 2.//<Unity> Reset 1 Item (you can resolve the effects of 1 Item in your Reserve one more time).//<Canny> Pull 1 Comeback.",
   "second_effect_text": "",
   "illustrator": "Fililppo Scalisi",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl12bbe.png",
@@ -599,11 +599,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 18,
-    "time": "00:25",
+    "month": 2,
+    "day": 4,
+    "time": "20:19",
     "full_time": {
-      "$date": "2024-01-18T00:25:36.056Z"
+      "$date": "2024-02-04T20:19:22.358Z"
     }
   },
   "alpha": null,
@@ -3173,7 +3173,7 @@
   "series_name": "Bolt Blossom//Nature//Energy",
   "card_number": 1047,
   "enthusiasm": 0,
-  "effect_text": "Resolve 1 of the following effects://● This card copies the effect text of your Aura.//● Return 2 cards from your hand to the top of the Main deck in any order; resolve your Fighter and reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time).",
+  "effect_text": "Resolve 1 of the following effects://● This card copies the effect text of your Aura.//● Return 2 cards from your hand to the top of the Main deck in any order; resolve your Fighter and reset 1 Item (you can resolve the effects of 1 Item in your Reserve one more time).",
   "second_effect_text": "",
   "illustrator": "Filippo Scalisi",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b4bbm.png",
@@ -3196,11 +3196,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 29,
-    "time": "02:45",
+    "month": 2,
+    "day": 4,
+    "time": "20:18",
     "full_time": {
-      "$date": "2024-01-29T02:45:45.247Z"
+      "$date": "2024-02-04T20:18:22.189Z"
     }
   },
   "alpha": null,
@@ -3305,7 +3305,7 @@
   "series_name": "Bone Whisperer//Mystic//Nature//Call",
   "card_number": 1074,
   "enthusiasm": 0,
-  "effect_text": "Focus plus 3 and reset 1 of your Pluck.\nDiscard up to 2 Pluck in your Reserve; select an equal number of foes. Look at their hand(s) and all cards in their String(s), then discard 1 card from their hand(s). ",
+  "effect_text": "Focus plus 3 and reset 1 Item.\nDiscard up to 2 Pluck in your Reserve; select an equal number of foes. Look at their hand(s) and all cards in their String(s), then discard 1 card from their hand(s). ",
   "second_effect_text": "",
   "illustrator": "Ranbutam",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl03bwe.png",
@@ -3327,11 +3327,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 18,
-    "time": "00:13",
+    "month": 2,
+    "day": 4,
+    "time": "20:19",
     "full_time": {
-      "$date": "2024-01-18T00:13:36.028Z"
+      "$date": "2024-02-04T20:19:36.299Z"
     }
   },
   "alpha": null,
@@ -3924,7 +3924,7 @@
   "series_name": "Warp Family//Cosmic//Psychic//Support",
   "card_number": 1041,
   "enthusiasm": 0,
-  "effect_text": "Draw 1 card and pull 1 Item (add the Item from the Pluck deck to your Reserve, then shuffle the Pluck deck).//If your String has a Canny card(s), reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time).",
+  "effect_text": "Draw 1 card and pull 1 Item (add the Item from the Pluck deck to your Reserve, then shuffle the Pluck deck).//If your String has a Canny card(s), reset 1 Item (you can resolve the effects of 1 Item in your Reserve one more time).",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b3hsf.png",
@@ -3950,11 +3950,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 29,
-    "time": "02:44",
+    "month": 2,
+    "day": 4,
+    "time": "20:18",
     "full_time": {
-      "$date": "2024-01-29T02:44:32.009Z"
+      "$date": "2024-02-04T20:18:33.368Z"
     }
   },
   "alpha": null,
@@ -4445,7 +4445,7 @@
   "name": "Peaceful Meditation",
   "card_class": "",
   "hero_id": "RF1",
-  "series_name": "Red Fist//Tech//Brawler//Relaxation",
+  "series_name": "Red Fist//Tech//Mystic//Relaxation",
   "card_number": 1084,
   "enthusiasm": 0,
   "effect_text": "This Comeback counts as a Power card in your String (this does not count towards String size).",
@@ -4472,11 +4472,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 18,
-    "time": "00:08",
+    "month": 2,
+    "day": 4,
+    "time": "21:05",
     "full_time": {
-      "$date": "2024-01-18T00:08:14.413Z"
+      "$date": "2024-02-04T21:05:30.582Z"
     }
   },
   "alpha": null,
@@ -4849,7 +4849,7 @@
   "series_name": "Hive//Tech//Nature",
   "card_number": 1040,
   "enthusiasm": 10,
-  "effect_text": "<Target> 2 foes on your right.//<1-5> Deal 2 damage.//<6-11> Deal 3 piercing damage.//<12+> Deal 3 piercing damage. Reset 1 of your Pluck (you can resolve the extra effects of 1 Pluck one more time).",
+  "effect_text": "<Target> 2 foes on your right.//<1-5> Deal 2 damage.//<6-11> Deal 3 piercing damage.//<12+> Deal 3 piercing damage. Reset 1 Item (you can resolve the effects of 1 Item in your Reserve one more time).",
   "second_effect_text": "",
   "illustrator": "layonsin.art",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2he.png",
@@ -4873,10 +4873,10 @@
   "updated_on": {
     "year": 2024,
     "month": 2,
-    "day": 1,
-    "time": "01:03",
+    "day": 4,
+    "time": "20:18",
     "full_time": {
-      "$date": "2024-02-01T01:03:12.099Z"
+      "$date": "2024-02-04T20:18:06.929Z"
     }
   },
   "alpha": null,
@@ -5548,7 +5548,7 @@
   "series_name": "Hive//Tech//Nature",
   "card_number": 1037,
   "enthusiasm": 0,
-  "effect_text": "Draw 1 Pluck and reveal it; apply the following effects based on the Pluck revealed://<Item>  Add 1 Move or MAX VARIABLE as a Move from your hand to your String.//<Event> Reset 1 of your Pluck.//<Comeback> Add 1 Aura, Move or MAX VARIABLE from the discard pile to your hand.",
+  "effect_text": "Draw 1 Pluck and reveal it; apply the following effects based on the Pluck revealed://<Item>  Add 1 Move or MAX VARIABLE as a Move from your hand to your String.//<Event> Reset 1 Item.//<Comeback> Add 1 Aura, Move or MAX VARIABLE from the discard pile to your hand.",
   "second_effect_text": "",
   "illustrator": "layonsin.art",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2hf.png",
@@ -5574,11 +5574,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 29,
-    "time": "02:43",
+    "month": 2,
+    "day": 4,
+    "time": "20:18",
     "full_time": {
-      "$date": "2024-01-29T02:43:46.322Z"
+      "$date": "2024-02-04T20:18:56.788Z"
     }
   },
   "alpha": null,

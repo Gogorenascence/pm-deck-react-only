@@ -331,7 +331,7 @@
     "$oid": "65a894a2a2c671a5f9d7b3a4"
   },
   "name": "Reset",
-  "text": "Allows the player to resolve the extra effects of a card or Pluck one more time.",
+  "text": "Allows the player to resolve the effects (including limited effects) of a card or Pluck one more time.\nReset floats.",
   "term_number": 1042
 },
 {
