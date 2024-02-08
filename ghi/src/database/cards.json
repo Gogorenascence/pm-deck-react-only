@@ -7152,7 +7152,7 @@
   "enthusiasm": null,
   "effect_text": "Deal 3 damage to a random foe. That foe's Move gains damage minus 1 (damage dealt by that card is reduced by 1 at the end of its resolution).  ",
   "second_effect_text": "<Trigger> During a foe's turn, all foes whose cards have damage minus take 1 damage.",
-  "illustrator": "TBD",
+  "illustrator": "Bricis",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tsm.png",
   "file_name": "i1g5tsm.png",
   "card_type": [
@@ -7175,11 +7175,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 29,
-    "time": "02:52",
+    "month": 2,
+    "day": 8,
+    "time": "04:06",
     "full_time": {
-      "$date": "2024-01-29T02:52:27.628Z"
+      "$date": "2024-02-08T04:06:48.878Z"
     }
   },
   "alpha": null,
@@ -7197,7 +7197,7 @@
   "enthusiasm": null,
   "effect_text": "Heal 2 HP and Provoke 1 Fighter or Move.",
   "second_effect_text": "<Trigger> During a foe's turn, reveal 1 Staunch or Tactical card in your hand (the card stays revealed); all cards of the same type in all foes' Strings gain damage minus 1 as long as the revealed card is in your hand. ",
-  "illustrator": "TBD",
+  "illustrator": "Bricis",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tsa.png",
   "file_name": "i1g5tsa.png",
   "card_type": [
@@ -7220,11 +7220,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 29,
-    "time": "02:52",
+    "month": 2,
+    "day": 8,
+    "time": "04:06",
     "full_time": {
-      "$date": "2024-01-29T02:52:14.308Z"
+      "$date": "2024-02-08T04:06:57.947Z"
     }
   },
   "alpha": null,
@@ -7242,7 +7242,7 @@
   "enthusiasm": 13,
   "effect_text": "Target: Foe of your choice.//1-5: Deal 3 piercing damage.//6-11: Deal 3 piercing damage. Provoke 1 Ending.//12+: Deal 3 piercing damage. Provoke 1 Move or Ending.",
   "second_effect_text": "<Trigger> If you are targeted by a foe's card, 1 card in that foe's String gains damage minus 1.",
-  "illustrator": "TBD",
+  "illustrator": "Bricis",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tse.png",
   "file_name": "i1g5tse.png",
   "card_type": [
@@ -7266,10 +7266,10 @@
   "updated_on": {
     "year": 2024,
     "month": 2,
-    "day": 1,
-    "time": "01:03",
+    "day": 8,
+    "time": "04:06",
     "full_time": {
-      "$date": "2024-02-01T01:03:41.339Z"
+      "$date": "2024-02-08T04:06:30.147Z"
     }
   },
   "alpha": null,
@@ -7286,8 +7286,8 @@
   "card_number": 1141,
   "enthusiasm": null,
   "effect_text": "Pull 1 Tactical card or 1 The Spider Pluck.",
-  "second_effect_text": "<Trigger> During the Start Phase, place 1 Tactical card from your hand or discard pile under this Fighter (if this card is removed from your String, the placed card(s) is discarded); this card copies the Trigger effect text of its placed card. Discard the placed card at during the End Phase.",
-  "illustrator": "TBD",
+  "second_effect_text": "<Trigger> During the Start Phase, place 1 Tactical card from your hand or discard pile under this Fighter (if this card is removed from your String, the placed card(s) is discarded); this card copies the Trigger effect text of its placed card. Discard the placed card during the End Phase.",
+  "illustrator": "Bricis",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tsf.png",
   "file_name": "i1g5tsf.png",
   "card_type": [
@@ -7312,11 +7312,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 29,
-    "time": "02:52",
+    "month": 2,
+    "day": 8,
+    "time": "04:07",
     "full_time": {
-      "$date": "2024-01-29T02:52:00.229Z"
+      "$date": "2024-02-08T04:07:54.594Z"
     }
   },
   "alpha": null,
@@ -7334,7 +7334,7 @@
   "enthusiasm": null,
   "effect_text": "Return 1 card in your String to your hand.",
   "second_effect_text": "<Critical> Return 1 Item in your Active Pluck to bottom of the Pluck deck; resolve the main effect of 1 Fighter in your String one more time.",
-  "illustrator": "TBD",
+  "illustrator": "Bricis",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl17tscb.png",
   "file_name": "i1pl17tscb.png",
   "card_type": [
@@ -7356,11 +7356,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 18,
-    "time": "00:38",
+    "month": 2,
+    "day": 8,
+    "time": "04:07",
     "full_time": {
-      "$date": "2024-01-18T00:38:08.446Z"
+      "$date": "2024-02-08T04:07:41.094Z"
     }
   },
   "alpha": null,
@@ -7378,7 +7378,7 @@
   "enthusiasm": null,
   "effect_text": "Pull 1 The Spider card/Pluck except the Event \"The Trap Is Set!\" (add the card/Pluck from the respective deck to your hand/Reserve, then shuffle the deck).",
   "second_effect_text": "<Trigger> During a foe's turn, deal 1 damage to that foe equal to total amount damage minus across all cards in their String (max of 3).",
-  "illustrator": "TBD",
+  "illustrator": "Bricis",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl17tse.png",
   "file_name": "i1pl17tse.png",
   "card_type": [
@@ -7400,11 +7400,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 18,
-    "time": "00:37",
+    "month": 2,
+    "day": 8,
+    "time": "04:06",
     "full_time": {
-      "$date": "2024-01-18T00:37:16.046Z"
+      "$date": "2024-02-08T04:06:14.009Z"
     }
   },
   "alpha": null,
@@ -7422,7 +7422,7 @@
   "enthusiasm": null,
   "effect_text": "<L. Trigger> If your String has a Staunch or Tactical Fighter(s), place 1 Tactical Move from your hand or the discard pile under this Item (if this Item is removed from your Active Pluck, the placed card is discarded).",
   "second_effect_text": "This Item copies the effect text of its placed card. ",
-  "illustrator": "TBD",
+  "illustrator": "Bricis",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl17tsi.png",
   "file_name": "i1pl17tsi.png",
   "card_type": [
@@ -7445,11 +7445,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 18,
-    "time": "00:55",
+    "month": 2,
+    "day": 8,
+    "time": "04:07",
     "full_time": {
-      "$date": "2024-01-18T00:55:28.994Z"
+      "$date": "2024-02-08T04:07:11.065Z"
     }
   },
   "alpha": null,
