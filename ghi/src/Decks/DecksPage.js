@@ -130,7 +130,7 @@ function DecksPage(props) {
         newest: { method: (a,b) => b.id.localeCompare(a.id) },
         oldest: { method: (a,b) => a.id.localeCompare(b.id) },
         name: { method: (a,b) => a.name.localeCompare(b.name) },
-        updated: { method: (a,b) => new Date(b.updated_on.full_time) - new Date(a.updated_on.full_time) },
+        updated: { method: (a,b) => new Date(b.updated_on?.full_time.$date) - new Date(a.updated_on?.full_time.$date) },
     };
 
     const handleDeckQuery = (event) => {
@@ -151,6 +151,8 @@ function DecksPage(props) {
 
     const handleDeckSort = (event) => {
         setDeckSortState(event.target.value);
+        // const updated = decks.map(deck => deck.updated_on)
+        console.log(decks)
     };
 
     const handleDeckShowMore = (event) => {
