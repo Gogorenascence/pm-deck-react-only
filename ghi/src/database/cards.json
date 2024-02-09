@@ -7240,8 +7240,8 @@
   "series_name": "The Spider//Tech//Tactical//Support",
   "card_number": 1144,
   "enthusiasm": 13,
-  "effect_text": "Target: Foe of your choice.//1-5: Deal 3 piercing damage.//6-11: Deal 3 piercing damage. Provoke 1 Ending.//12+: Deal 3 piercing damage. Provoke 1 Move or Ending.",
-  "second_effect_text": "<Trigger> If you are targeted by a foe's card, 1 card in that foe's String gains damage minus 1.",
+  "effect_text": "Target: Foe of your choice.//1-5: Deal 3 damage.//6-11: Deal 3 piercing damage. Provoke 1 Ending.//12+: Deal 3 piercing damage. Provoke 1 Move or Ending.",
+  "second_effect_text": "<Trigger> If you are targeted by a card in a foe's String, that card gains damage minus 1.",
   "illustrator": "Bricis",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g5tse.png",
   "file_name": "i1g5tse.png",
@@ -7266,10 +7266,10 @@
   "updated_on": {
     "year": 2024,
     "month": 2,
-    "day": 8,
-    "time": "04:06",
+    "day": 9,
+    "time": "03:53",
     "full_time": {
-      "$date": "2024-02-08T04:06:30.147Z"
+      "$date": "2024-02-09T03:53:36.580Z"
     }
   },
   "alpha": null,
