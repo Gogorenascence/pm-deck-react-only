@@ -75,7 +75,7 @@ function DeckRow() {
         setNewDecks(deckData);
     };
 
-    const all_decks = newDecks.slice(-4).reverse()
+    const all_decks = newDecks.sort((a,b) => new Date(a.updated_on?.full_time.$date) - new Date(b.updated_on?.full_time.$date)).slice(-4).reverse()
 
     useEffect(() => {
         getDecks();
