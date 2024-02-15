@@ -6659,14 +6659,16 @@
   "card_number": 1156,
   "enthusiasm": 20,
   "effect_text": "Target: 2 random foes.//1-5: Deal 1 piercing damage.//6-11: Deal 2 damage.//12+: Deal 2 damage. You can discard 2 cards from your String to resolve this card one more time.",
-  "second_effect_text": "",
+  "second_effect_text": "If this card is discarded from your String, deal 2 damage to a foe.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5fe.png",
   "file_name": "i1p5fe.png",
   "card_type": [
     1004
   ],
-  "extra_effects": [],
+  "extra_effects": [
+    1001
+  ],
   "reactions": [],
   "card_tags": [
     1001,
@@ -6682,10 +6684,10 @@
   "updated_on": {
     "year": 2024,
     "month": 2,
-    "day": 1,
-    "time": "01:04",
+    "day": 15,
+    "time": "15:01",
     "full_time": {
-      "$date": "2024-02-01T01:04:28.899Z"
+      "$date": "2024-02-15T15:01:43.097Z"
     }
   },
   "alpha": null,
@@ -6702,7 +6704,7 @@
   "card_number": 1153,
   "enthusiasm": null,
   "effect_text": "Provoke 1 Fighter or Aura (1 select foe must resolve their Fighter or Aura this round with you as one of the applicable targets).",
-  "second_effect_text": "<Trigger> When a card in foe's String is resolving, the effect text of that foe's Fighter or Aura becomes the following://● Discard up to 1 card from your hand; 1 foe whose String has a Magic card(s) discards 1 card in their String.",
+  "second_effect_text": "<Trigger> When a card in foe's String is resolving, the effect text of that foe's Fighter or Aura becomes the following://● Discard 1 card from your hand, then 1 foe whose String has a Magic card(s) discards 1 card in their String.",
   "illustrator": "TBD",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5ff.png",
   "file_name": "i1p5ff.png",
@@ -6728,11 +6730,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 29,
-    "time": "02:55",
+    "month": 2,
+    "day": 15,
+    "time": "15:00",
     "full_time": {
-      "$date": "2024-01-29T02:55:45.268Z"
+      "$date": "2024-02-15T15:00:44.168Z"
     }
   },
   "alpha": null,
@@ -6832,7 +6834,7 @@
   "name": "Gizma",
   "card_class": "Unity",
   "hero_id": "GTF",
-  "series_name": "Gizma//Magic//Mystic",
+  "series_name": "Gizma//Magic//Mystic//Quest",
   "card_number": 1149,
   "enthusiasm": null,
   "effect_text": "Select 1 of your placed cards; resolve that card's main effect, then discard it.",
@@ -6862,11 +6864,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 30,
-    "time": "00:52",
+    "month": 2,
+    "day": 10,
+    "time": "00:33",
     "full_time": {
-      "$date": "2024-01-30T00:52:43.985Z"
+      "$date": "2024-02-10T00:33:40.583Z"
     }
   },
   "alpha": null,
@@ -6879,7 +6881,7 @@
   "name": "Master of Shadows!",
   "card_class": "Unity",
   "hero_id": "GTF",
-  "series_name": "Gizma//Magic//Mystic",
+  "series_name": "Gizma//Magic//Mystic//Quest",
   "card_number": 1150,
   "enthusiasm": null,
   "effect_text": "Add 1 of your placed cards to your String, then place another card from your hand under a card in your String (if that card is removed from your String, the placed card(s) is discarded).",
@@ -6907,11 +6909,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 29,
-    "time": "02:53",
+    "month": 2,
+    "day": 10,
+    "time": "00:33",
     "full_time": {
-      "$date": "2024-01-29T02:53:14.128Z"
+      "$date": "2024-02-10T00:33:47.463Z"
     }
   },
   "alpha": null,
@@ -6924,7 +6926,7 @@
   "name": "Shadow Strike!!",
   "card_class": "Unity",
   "hero_id": "GTF",
-  "series_name": "Gizma//Magic//Mystic",
+  "series_name": "Gizma//Magic//Mystic//Quest",
   "card_number": 1151,
   "enthusiasm": null,
   "effect_text": "Deal 1 piercing damage to your strongest foe for each of your placed cards/Pluck (max of 4).",
@@ -6952,11 +6954,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 29,
-    "time": "05:13",
+    "month": 2,
+    "day": 10,
+    "time": "00:33",
     "full_time": {
-      "$date": "2024-01-29T05:13:21.938Z"
+      "$date": "2024-02-10T00:33:28.343Z"
     }
   },
   "alpha": null,
@@ -6969,7 +6971,7 @@
   "name": "Karmic Crash!!!",
   "card_class": "Unity",
   "hero_id": "GTF",
-  "series_name": "Gizma//Magic//Mystic",
+  "series_name": "Gizma//Magic//Mystic//Quest",
   "card_number": 1152,
   "enthusiasm": 12,
   "effect_text": "Target: Strongest foe.//1-5: Deal 2 damage.//6-11: Deal 1 piercing damage for each of your placed cards/Pluck (max of 5). Add 1 placed card to your hand.//12+: Deal 1 piercing damage for each of your placed cards/Pluck (max of 5). Add 1 placed card to your String.",
@@ -6997,11 +6999,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 17,
-    "time": "23:51",
+    "month": 2,
+    "day": 10,
+    "time": "00:33",
     "full_time": {
-      "$date": "2024-01-17T23:51:29.573Z"
+      "$date": "2024-02-10T00:33:55.384Z"
     }
   },
   "alpha": null,
@@ -7014,7 +7016,7 @@
   "name": "Old Collar",
   "card_class": "",
   "hero_id": "GTF",
-  "series_name": "Gizma//Magic//Mystic",
+  "series_name": "Gizma//Magic//Mystic//Quest",
   "card_number": 1163,
   "enthusiasm": null,
   "effect_text": "<Trigger> During the Start Phase or during a player's turn, cards can not be discarded from your hand or String by your foes' card effects this round.",
@@ -7043,11 +7045,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 30,
-    "time": "00:55",
+    "month": 2,
+    "day": 10,
+    "time": "00:34",
     "full_time": {
-      "$date": "2024-01-30T00:55:59.350Z"
+      "$date": "2024-02-10T00:34:03.504Z"
     }
   },
   "alpha": null,
@@ -7102,7 +7104,7 @@
   "name": "Shadow Clone",
   "card_class": "",
   "hero_id": "GTF",
-  "series_name": "Gizma//Magic//Mystic",
+  "series_name": "Gizma//Magic//Mystic//Quest",
   "card_number": 1165,
   "enthusiasm": null,
   "effect_text": "<Trigger> If you would take damage, discard 1 of your placed cards to reduce that damage by 1.",
@@ -7130,11 +7132,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 18,
-    "time": "00:36",
+    "month": 2,
+    "day": 10,
+    "time": "00:34",
     "full_time": {
-      "$date": "2024-01-18T00:36:51.496Z"
+      "$date": "2024-02-10T00:34:12.484Z"
     }
   },
   "alpha": null,
