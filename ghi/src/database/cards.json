@@ -6526,7 +6526,7 @@
   "card_number": 1154,
   "enthusiasm": null,
   "effect_text": "Discard 1 unresolved card in your String; add 1 card of the same type from your hand to your String and place original card's damage tokens on the added card. ",
-  "second_effect_text": "<Trigger> If you are targeted by a foe's card, resolve this card's main effect and you are unaffected by all non-damaging effects of the card targeting you this turn.",
+  "second_effect_text": "<Trigger> If you are targeted by a foe's card, resolve this card's main effect and you are unaffected by all non-damaging effects of cards targeting you this turn.",
   "illustrator": "Ham West",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5fa.png",
   "file_name": "i1p5fa.png",
@@ -6552,9 +6552,9 @@
     "year": 2024,
     "month": 2,
     "day": 19,
-    "time": "02:04",
+    "time": "06:05",
     "full_time": {
-      "$date": "2024-02-19T02:04:52.833Z"
+      "$date": "2024-02-19T06:05:54.921Z"
     }
   },
   "alpha": null,
