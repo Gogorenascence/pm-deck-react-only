@@ -6527,7 +6527,7 @@
   "enthusiasm": null,
   "effect_text": "Discard 1 unresolved card in your String; add 1 card of the same type from your hand to your String and place original card's damage tokens on the added card. ",
   "second_effect_text": "<Trigger> If you are targeted by a foe's card, resolve this card's main effect and you are unaffected by all non-damaging effects of the card targeting you this turn.",
-  "illustrator": "TBD",
+  "illustrator": "Ham West",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5fa.png",
   "file_name": "i1p5fa.png",
   "card_type": [
@@ -6550,11 +6550,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 29,
-    "time": "02:56",
+    "month": 2,
+    "day": 19,
+    "time": "02:04",
     "full_time": {
-      "$date": "2024-01-29T02:56:03.728Z"
+      "$date": "2024-02-19T02:04:52.833Z"
     }
   },
   "alpha": null,
@@ -6572,7 +6572,7 @@
   "enthusiasm": null,
   "effect_text": "Deal 3 damage to a foe and Provoke 1 Move.",
   "second_effect_text": "<Trigger> If this card is discarded from your String, deal 2 damage to a foe. If this card was discarded by a foe's card effect, deal 3 piercing damage instead.",
-  "illustrator": "",
+  "illustrator": "Ham West",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5fm.png",
   "file_name": "i1p5fm.png",
   "card_type": [
@@ -6595,11 +6595,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 29,
-    "time": "02:56",
+    "month": 2,
+    "day": 19,
+    "time": "02:05",
     "full_time": {
-      "$date": "2024-01-29T02:56:15.918Z"
+      "$date": "2024-02-19T02:05:07.863Z"
     }
   },
   "alpha": null,
@@ -6617,7 +6617,7 @@
   "enthusiasm": null,
   "effect_text": "<Trigger> If a card(s) in your String is discarded, return that card (max of 1) to the top of the Main deck.",
   "second_effect_text": "<Trigger> If a card(s) or Pluck(s) is discarded from your hand/String/Active Pluck, the next card in your String gains damage plus 1.",
-  "illustrator": "TBD",
+  "illustrator": "Ham West",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl20fcb.png",
   "file_name": "i1pl20fcb.png",
   "card_type": [
@@ -6638,11 +6638,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 18,
-    "time": "00:36",
+    "month": 2,
+    "day": 19,
+    "time": "02:05",
     "full_time": {
-      "$date": "2024-01-18T00:36:21.016Z"
+      "$date": "2024-02-19T02:05:48.583Z"
     }
   },
   "alpha": null,
@@ -6659,8 +6659,8 @@
   "card_number": 1156,
   "enthusiasm": 20,
   "effect_text": "Target: 2 random foes.//1-5: Deal 1 piercing damage.//6-11: Deal 2 damage.//12+: Deal 2 damage. You can discard 2 cards from your String to resolve this card one more time.",
-  "second_effect_text": "If this card is discarded from your String, deal 2 damage to a foe.",
-  "illustrator": "TBD",
+  "second_effect_text": "<Trigger> If this card is discarded from your String, deal 2 damage to a foe.",
+  "illustrator": "Ham West",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5fe.png",
   "file_name": "i1p5fe.png",
   "card_type": [
@@ -6684,10 +6684,10 @@
   "updated_on": {
     "year": 2024,
     "month": 2,
-    "day": 15,
-    "time": "15:01",
+    "day": 19,
+    "time": "02:05",
     "full_time": {
-      "$date": "2024-02-15T15:01:43.097Z"
+      "$date": "2024-02-19T02:05:15.793Z"
     }
   },
   "alpha": null,
@@ -6705,7 +6705,7 @@
   "enthusiasm": null,
   "effect_text": "Provoke 1 Fighter or Aura (1 select foe must resolve their Fighter or Aura this round with you as one of the applicable targets).",
   "second_effect_text": "<Trigger> When a card in foe's String is resolving, the effect text of that foe's Fighter or Aura becomes the following://● Discard 1 card from your hand, then 1 foe whose String has a Magic card(s) discards 1 card in their String.",
-  "illustrator": "TBD",
+  "illustrator": "Ham West",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5ff.png",
   "file_name": "i1p5ff.png",
   "card_type": [
@@ -6731,10 +6731,10 @@
   "updated_on": {
     "year": 2024,
     "month": 2,
-    "day": 15,
-    "time": "15:00",
+    "day": 19,
+    "time": "02:04",
     "full_time": {
-      "$date": "2024-02-15T15:00:44.168Z"
+      "$date": "2024-02-19T02:04:40.795Z"
     }
   },
   "alpha": null,
@@ -6752,7 +6752,7 @@
   "enthusiasm": null,
   "effect_text": "<L. Trigger> During the Start Phase or during a foe's turn, discard 1 unresolved card; this Item copies the effect of 1 Fighter or Aura in your String until the end of the round.",
   "second_effect_text": "",
-  "illustrator": "TBD",
+  "illustrator": "Ham West",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl20fi.png",
   "file_name": "i1pl20fi.png",
   "card_type": [
@@ -6775,11 +6775,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 18,
-    "time": "00:36",
+    "month": 2,
+    "day": 19,
+    "time": "02:05",
     "full_time": {
-      "$date": "2024-01-18T00:36:35.916Z"
+      "$date": "2024-02-19T02:05:25.183Z"
     }
   },
   "alpha": null,
@@ -6797,7 +6797,7 @@
   "enthusiasm": null,
   "effect_text": "Add up to 2 Canny cards from your discard pile to your String, then take 2 damage for each card added this way. You can not resolve the added cards in your String or use them for your Focus roll this round.",
   "second_effect_text": "",
-  "illustrator": "TBD",
+  "illustrator": "Ham West",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl20fe.png",
   "file_name": "i1pl20fe.png",
   "card_type": [
@@ -6817,11 +6817,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 28,
-    "time": "21:21",
+    "month": 2,
+    "day": 19,
+    "time": "02:05",
     "full_time": {
-      "$date": "2024-01-28T21:21:25.392Z"
+      "$date": "2024-02-19T02:05:34.383Z"
     }
   },
   "alpha": null,
