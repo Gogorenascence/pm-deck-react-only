@@ -8,6 +8,7 @@ import BuilderCardSearch from "./BuilderCardSearch";
 import FEDeckExport from "../Decks/FEDeckExport";
 import DeckImport from './DeckImport'
 import StatsPanel from "./StatsPanel";
+import FEDeckSheetPage from "../Decks/FEDeckSheetPage";
 
 
 function DeckCopy(props) {
@@ -256,6 +257,7 @@ function DeckCopy(props) {
                             <br/>
                             <div style={{display: "flex", marginTop: "3px"}}>
                                 <FEDeckExport deck_id={generateRandomString(16)} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
+                                <FEDeckSheetPage deck={deck} main_list={main_list} pluck_list={pluck_list}/>
                                 <button
                                     className="left red"
                                     style={{ marginTop: "5px"}}

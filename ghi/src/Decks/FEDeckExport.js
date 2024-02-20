@@ -368,7 +368,7 @@ function FEDeckExport(props) {
         style={{marginRight: "10px", marginLeft: "6px" }}
         onClick={exportDeck}
       >
-        Export Decks
+        JSON
       </button>
 </div>
 );

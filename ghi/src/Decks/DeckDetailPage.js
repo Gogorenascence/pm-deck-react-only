@@ -9,6 +9,7 @@ import DeckExport from "./DeckExport";
 import BackButton from "../display/BackButton";
 import StatsPanel from "./StatsPanel";
 import SimulateButton from "../Simulator/SimulateButton";
+import DeckSheetPage from "./DeckSheetPage";
 
 
 function DeckDetailPage(props) {
@@ -345,6 +346,7 @@ function DeckDetailPage(props) {
                     </>: null
                 }
                 <DeckExport deck_id={deck_id} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
+                <DeckSheetPage name={deck.name} main_list={main_list} pluck_list={pluck_list}/>
                 <NavLink to={`/decks/${deck.id}/copy`}>
                     <button
                         className="left heightNorm"
