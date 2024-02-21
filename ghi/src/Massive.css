@@ -3045,6 +3045,166 @@ button:hover {
   }
 }
 
+
+.wide100-2 {
+  width: 100vw;
+}
+
+.wide100-3 {
+  width: 100%;
+}
+
+.newsRow {
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+.newsItem {
+  width: calc(100% - 8px);
+  min-height: 70px;
+  margin: 10px 0px 10px 4px;
+  border: 5px solid;
+  border-color: white;
+  border-radius: 25px 0px;
+  outline: 2px solid white;
+  filter: brightness(90%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.4));
+}
+
+.newsText {
+  margin: 0 10px;
+  color: white;
+}
+
+.newsRow::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.newsRow::-webkit-scrollbar-thumb {
+  background: rgb(81, 76, 104);
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* .newsRow {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+.newsRow:hover {
+  scrollbar-color: #555 transparent;
+}
+
+.newsRow::-moz-scrollbar {
+  width: 10px;
+}
+
+.newsRow::-moz-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+  width: 100%;
+} */
+
+/* *::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgb(81, 76, 104);
+  border-radius: 5px;
+  width: 100%;
+} */
+
+/* *:hover::-webkit-scrollbar-thumb {
+  background: #555;
+} */
+
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+*:hover {
+  scrollbar-color: #555 transparent;
+}
+
+*::-moz-scrollbar {
+  width: 10px;
+}
+
+*::-moz-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+  width: 100%;
+} */
+
+
+.newsSection {
+  height: 55px;
+  margin: 0 -10px 0 -20px;
+}
+
+.newsSection2 {
+  margin: 10px 2.5%;
+}
+
+.newsText2 {
+  font-size: 23px;
+}
+
+.newsText3 {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.newsText4 {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.newsText5 {
+  font-size: 27px;
+  margin-bottom: 0;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.simulator {
+  position: absolute;
+  top: 66px;
+  width: 100vw;
+}
+
+.newsImageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 1%;
+  margin: 10px;
+}
+
+.newsImage {
+  width: 300px;
+  margin: 2.25px 0px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid white;
+}
+
+.ellipsis {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: calc(90%); /* The trick is here! */
+}
+
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;

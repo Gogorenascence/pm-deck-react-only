@@ -30,6 +30,7 @@ import ReactionDetails from "./GamePlay/Reactions/ReactionDetailPage";
 import SimulatorPage from "./Simulator/SimulatorPage";
 import UnderConstruction from "./display/UnderConstruction";
 import TermsPage from "./GamePlay/TermsPage";
+import ArticlesPage from "./Articles/ArticlesPage";
 
 
 function App() {
@@ -71,6 +72,11 @@ function App() {
     return term
   })
 
+  let articles = require('./database/articles.json').map(article =>
+    {article["id"] = article._id.$oid
+    return article
+  })
+
   return (
 
     <AppProvider>
@@ -83,7 +89,9 @@ function App() {
           <div className="App">
 
             <Routes>
-              <Route index element={<MainPage cards={cards} />} />
+              <Route index element={<MainPage cards={cards}
+                                              articles={articles}
+                                    />} />
               <Route path="/deckbuilder" element={<DeckBuilder
                                                       cards={cards}
                                                       booster_sets={booster_sets}
@@ -156,7 +164,7 @@ function App() {
                                                 extra_effects={extra_effects}
                                                 reactions={reactions}
                                                 />} />
-
+              <Route path="/articles" element={<ArticlesPage articles={articles}/>} />
             </Routes>
 
           </div>

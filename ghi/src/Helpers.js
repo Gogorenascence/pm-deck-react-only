@@ -62,3 +62,11 @@ export function getKeyByValue(obj1, obj2) {
 //         window.removeEventListener('resize', adjustFontSize);
 //     };
 // }, []);
+
+export function todaysFormattedDate() {
+    const timeZone = 'America/Chicago';
+    const options = { timeZone: timeZone, year: 'numeric', month: '2-digit', day: '2-digit' };
+    const adjustedDate = new Intl.DateTimeFormat('en-US', options).format(new Date());
+    const formattedDate = new Date(adjustedDate).toISOString().split('T')[0];
+    return formattedDate;
+}

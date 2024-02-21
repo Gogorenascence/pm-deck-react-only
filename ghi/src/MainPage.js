@@ -1,11 +1,13 @@
 import TopRow from "./display/TopRow";
 import DeckRow from "./display/DeckRow";
 import CardRow from "./display/CardRow";
+import NewsRow from "./display/NewsRow";
 
 
-function MainPage(props) {
-
-  const { cards } = props
+function MainPage({
+  cards,
+  articles
+}) {
 
     return (
       <div>
@@ -15,6 +17,12 @@ function MainPage(props) {
         <br/>
         <div>
           <TopRow/>
+        </div>
+        <br/>
+        <h1 className="margin-top-20">CardBase News</h1>
+        <br/>
+        <div>
+          <NewsRow articles={articles}/>
         </div>
         <br/>
           <h1 className="margin-top-20">Latest Decks</h1>

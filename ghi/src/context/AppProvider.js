@@ -9,6 +9,7 @@ import { MainActionsContextProvider } from "./MainActionsContext";
 import { PluckActionsContextProvider } from "./PluckActionsContext";
 import { AppContextProvider } from "./AppContext";
 import { APIContextProvider } from "./APIContext";
+import { NewsQueryContextProvider } from "./NewsQueryContext";
 
 const AppProvider = ({ children }) => {
     return (
@@ -22,7 +23,9 @@ const AppProvider = ({ children }) => {
                                     <SimulatorActionsContextProvider>
                                         <MainActionsContextProvider>
                                             <PluckActionsContextProvider>
-                                                {children}
+                                                <NewsQueryContextProvider>
+                                                    {children}
+                                                </NewsQueryContextProvider>
                                             </PluckActionsContextProvider>
                                         </MainActionsContextProvider>
                                     </SimulatorActionsContextProvider>

@@ -5373,7 +5373,7 @@
   "series_name": "Warp Family//Cosmic//Psychic//Tactical",
   "card_number": 1108,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> If a card(s) in your String would be sent to the discard pile during this round, add that card to your hand instead (max of 1). ",
+  "effect_text": "<Trigger> If a card(s) in your String is discarded, add that card to your hand instead (max of 1). ",
   "second_effect_text": "<Critical> Discard 1 card from 2 random foes' hands.",
   "illustrator": "Undeadsushii",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb14p.png",
@@ -5398,11 +5398,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 18,
-    "time": "00:09",
+    "month": 2,
+    "day": 20,
+    "time": "23:34",
     "full_time": {
-      "$date": "2024-01-18T00:09:00.912Z"
+      "$date": "2024-02-20T23:34:11.110Z"
     }
   },
   "alpha": null,
@@ -6615,7 +6615,7 @@
   "series_name": "Fog Palace//Magic//Mystic//Call",
   "card_number": 1168,
   "enthusiasm": null,
-  "effect_text": "<Trigger> If a card(s) in your String is discarded, return that card (max of 1) to the top of the Main deck.",
+  "effect_text": "<Trigger> If a card(s) in your String is discarded, Focus plus 2 (add 2 to your Focus) and draw 1 card.",
   "second_effect_text": "<Trigger> If a card(s) or Pluck(s) is discarded from your hand/String/Active Pluck, the next card in your String gains damage plus 1.",
   "illustrator": "Ham West",
   "picture_url": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl20fcb.png",
@@ -6639,10 +6639,10 @@
   "updated_on": {
     "year": 2024,
     "month": 2,
-    "day": 19,
-    "time": "02:05",
+    "day": 21,
+    "time": "01:27",
     "full_time": {
-      "$date": "2024-02-19T02:05:48.583Z"
+      "$date": "2024-02-21T01:27:06.889Z"
     }
   },
   "alpha": null,
