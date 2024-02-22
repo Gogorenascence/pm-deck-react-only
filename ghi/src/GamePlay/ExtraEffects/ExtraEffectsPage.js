@@ -26,7 +26,7 @@ function ExtraEffectsPage(props) {
 
     return (
         <div className="white-space">
-            <h1 className="left-h1">Extra Effects</h1>
+            <h1 className="left-h1-2">Extra Effects</h1>
 
             <div className="fullTableBorder">
                 {extraEffects.map(function(extraEffect, index, arr) {

@@ -26,7 +26,7 @@ function CardTypesPage(props) {
 
     return (
         <div className="white-space">
-            <h1 className="left-h1">Card Types</h1>
+            <h1 className="left-h1-2">Card Types</h1>
 
             <div className="fullTableBorder">
                 {cardTypes.map(function(cardType, index, arr) {

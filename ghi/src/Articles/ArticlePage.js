@@ -1,12 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
-import { AuthContext } from "../Context/AuthContext";
 import { Card } from "react-bootstrap";
 
-function ArticlePage() {
+function ArticlePage({
+    articles
+}) {
 
     const { article_id } = useParams()
-    const { account } = useContext(AuthContext)
 
     const [article, setArticle] = useState({
         title: "",
@@ -26,10 +26,8 @@ function ArticlePage() {
     })
 
     const getArticle = async() =>{
-        const articleResponse = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/articles/${article_id}/`);
-        const articleData = await articleResponse.json();
+        const articleData = articles.find(article => article.id === article_id)
         setArticle(articleData);
-        console.log(articleData)
 
         const processedImages = []
         for (let keyName of Object.keys(articleData.images)) {
@@ -46,18 +44,14 @@ function ArticlePage() {
             }
         }
         setImages(processedImages)
-
-        const usersResponse = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/accountswithout/`);
-        const usersData = await usersResponse.json();
-        setAuthor(usersData.find(user => user.id === articleData.author) ?? {username: "TeamPlayMaker"})
-    };
+    }
 
     useEffect(() => {
         window.scroll(0, 0);
         document.body.style.overflow = 'auto';
-        getArticle();
+        getArticle()
     // eslint-disable-next-line
-    },[]);
+    },[article_id]);
 
     useEffect(() => {
         document.title = `${article.title} - PM CardBase`
@@ -106,11 +100,6 @@ function ArticlePage() {
                         {/* {account?
                             <FavoriteDeck deck={deck}/>:null
                         } */}
-                        { account && account.roles.includes("admin")?
-                            <NavLink className="nav-link" to={`/articles/${article.id}/edit`}>
-                                <h5>[Edit]</h5>
-                            </NavLink>
-                        :null}
                     </div>
                     {/* <h6 className="left"
                         style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}

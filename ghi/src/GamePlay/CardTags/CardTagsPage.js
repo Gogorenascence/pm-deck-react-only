@@ -26,7 +26,7 @@ function CardTagsPage(props) {
 
     return (
         <div className="white-space">
-            <h1 className="left-h1">Card Tags</h1>
+            <h1 className="left-h1-2">Card Tags</h1>
 
             <div className="fullTableBorder">
                 {cardTags.map(function(cardTag, index, arr) {

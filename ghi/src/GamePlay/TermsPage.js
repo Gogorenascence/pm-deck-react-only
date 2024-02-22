@@ -20,7 +20,7 @@ function TermsPage(props) {
     return (
         <div className="white-space">
             <div className="flex-items">
-                <h1 className="left-h1 margin-top-20">Glossary and Rulings</h1>
+                <h1 className="left-h1-2">Glossary and Rulings</h1>
             </div>
 
             <div className="fullTableBorder">

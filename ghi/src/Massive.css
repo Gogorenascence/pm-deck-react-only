@@ -9,7 +9,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 62px;
   height: 100%;
   width: 100%;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("./backg.png");
@@ -136,13 +135,14 @@ body.dark::after {
 }
 
 :root {
-  --window-height: calc(100vh - 100px);
+  --window-height: calc(100vh - 190px);
   --window-height-account: calc(100vh - 180px);
   --window-widthx00: calc(100vw - 800px);
   --window-width200: calc(100vw - 200px);
   --window-width600: calc(100vw - 600px);
   --window-height2: calc(100vh - 62px);
   --window-heightChat: calc(100vh - 245px);
+  /* --color-body: #fff; */
 }
 
 
@@ -162,6 +162,10 @@ code {
 
 .bold {
   font-weight: 500;
+}
+
+.bolder {
+  font-weight: 700;
 }
 
 .topbar{
@@ -227,6 +231,11 @@ button:hover {
 .left-h1{
   text-align: left;
   margin: 30px 5px 20px 5px;
+}
+
+.left-h1-2{
+  text-align: left;
+  margin: 0px 5px 20px 5px;
 }
 
 .left-h2{
@@ -1268,6 +1277,18 @@ button:hover {
   margin-bottom: 20px;
 }
 
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
 .db-pool-count {
   margin: 1% 0%;
   font-weight: 700;
@@ -1686,8 +1707,8 @@ button:hover {
   transition: all 0.5s;
 }
 
-.app-container {
-  position: relative;
+.app{
+  margin-top: 90px;
 }
 
 .content {
@@ -1888,7 +1909,7 @@ button:hover {
 }
 
 .large-article {
-  height: 150px;
+  height: 300px;
   width: 100%;
 }
 
@@ -1900,6 +1921,10 @@ button:hover {
 
 .no-pad {
   padding: 0px;
+}
+
+.margin-top-63 {
+  margin-top: 63px;
 }
 
 .margin-top-93 {
@@ -2080,7 +2105,6 @@ button:hover {
 
 .deckSelect {
   position: absolute;
-  top: 62px;
 }
 
 .deckSelect2 {
@@ -2093,7 +2117,7 @@ button:hover {
 
 .deckSelect3 {
   position: absolute;
-  top: 155px;
+  top: 90px;
 }
 
 .deckSelect3 p {
@@ -2534,6 +2558,14 @@ button:hover {
   margin: 10px;
 }
 
+.margin-20 {
+  margin: 20px;
+}
+
+.margin-5p {
+  margin: 5%;
+}
+
 .card-menu {
   width: 115px;
   position: relative;
@@ -2898,7 +2930,7 @@ button:hover {
 }
 
 .cardpool2-ro {
-  margin: 28px 0 14px 30px;
+  margin: 0px 0 14px 30px;
   background-color: rgba(80, 42, 170, 0.315);
   border: 2px solid rgb(68, 17, 206);
   border-radius: 5px;
@@ -2909,7 +2941,7 @@ button:hover {
 }
 
 .no-cardpool-ro {
-  margin: 40px 0 14px 30px;
+  margin: 12px 0 14px 30px;
   background-color: rgba(117, 90, 182, 0.315);
   border: 2px solid rgb(68, 17, 206);
   border-radius: 5px;
@@ -2920,7 +2952,7 @@ button:hover {
 }
 
 .no-cardpool2-ro {
-  margin: 40px 0 14px 30px;
+  margin: 12px 0 14px 30px;
   background-color: rgba(117, 90, 182, 0.315);
   border: 2px solid rgb(68, 17, 206);
   border-radius: 5px;
@@ -2931,7 +2963,7 @@ button:hover {
 }
 
 .no-cardpool3-ro {
-  margin: 28px 0 14px 30px;
+  margin: 0px 0 14px 30px;
   background-color: rgba(117, 90, 182, 0.315);
   border: 2px solid rgb(68, 17, 206);
   border-radius: 5px;
@@ -2948,7 +2980,7 @@ button:hover {
   overflow-x: hidden;
   overflow-y: auto;
   border: 1px solid rgba(0, 0, 0, 0.212);
-  background-color: rgba(15, 0, 50, 0.315);
+  background-color: rgba(15,0,50,.315);
   border-radius: 2px;
   outline: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -3033,7 +3065,7 @@ button:hover {
 
 .mask {
   z-index: -3;
-  animation: slide2 infinite 1s;
+  animation: slide2 infinite 2s;
 }
 
 @keyframes slide2 {
@@ -3044,7 +3076,6 @@ button:hover {
     transform: translate(100%, 0);
   }
 }
-
 
 .wide100-2 {
   width: 100vw;
@@ -3203,6 +3234,82 @@ button:hover {
   overflow: hidden;
   white-space: nowrap;
   max-width: calc(90%); /* The trick is here! */
+}
+
+.sim-back-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 200px; /* Adjust this value as needed to control the card height */
+  width: 100%;
+  outline: 1px white solid;
+  border-radius: 7px;
+}
+
+.sim-back {
+  position: relative;
+  overflow: hidden;
+  height: 200px; /* Adjust this value as needed to control the card height */
+  background-image: url("./net.png");
+  background-size: 100%;
+}
+
+.sim-back::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  background-size: 1200px;
+  background-image: url("./frames.png");
+  background-repeat: repeat;
+  animation: scroll2 1000s linear infinite;
+  opacity: .175;
+  z-index: 2;
+}
+
+@keyframes scroll2 {
+  0% {
+    background-position: 3000px 0px;
+  }
+  50% {
+    background-position: 3000px 3000px;
+  }
+  100% {
+    background-position: 3000px 0px;
+  }
+}
+
+.sim-row-link {
+  text-decoration: none;
+  color: white;
+}
+
+.sim-row-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.sim-row-text {
+  z-index: 10;
+  font-size: 60px;
+}
+
+.card-image-clip4 {
+  margin-top: -20%;
+  height: 50%;
+  background-color: black; /* Adjust the background color if needed */
+}
+
+.cardSheet {
+  height: 1080px;
+  width: 792px;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(336px, 240px));
+  gap: 0;
+  grid-auto-flow: dense; */
 }
 
 @media screen and (max-width: 1330px) {
@@ -3631,7 +3738,11 @@ button:hover {
     width: 100%;
   }
 
-  .margin-top-93 {
+  .wide100 {
+    width: 100%;
+  }
+
+  .margin-top-63 {
     margin-top: 50px;
     margin-bottom: 50px;
   }
@@ -3654,10 +3765,6 @@ button:hover {
 
   .media-bot-30 {
     margin-bottom: 30px;
-  }
-
-  .wide100 {
-    width: 100%;
   }
 
   .wide400p {

@@ -31,6 +31,7 @@ import SimulatorPage from "./Simulator/SimulatorPage";
 import UnderConstruction from "./display/UnderConstruction";
 import TermsPage from "./GamePlay/TermsPage";
 import ArticlesPage from "./Articles/ArticlesPage";
+import ArticlePage from "./Articles/ArticlePage";
 
 
 function App() {
@@ -86,7 +87,7 @@ function App() {
           <NavBar/>
           <LightSwitch/>
           <BackToTop/>
-          <div className="App">
+          <div className="app">
 
             <Routes>
               <Route index element={<MainPage cards={cards}
@@ -165,6 +166,7 @@ function App() {
                                                 reactions={reactions}
                                                 />} />
               <Route path="/articles" element={<ArticlesPage articles={articles}/>} />
+              <Route path="/articles/:article_id" element={<ArticlePage articles={articles}/>} />
             </Routes>
 
           </div>

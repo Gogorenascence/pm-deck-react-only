@@ -187,7 +187,7 @@ function SimulatorPage(props) {
     }, [playerMainDeck, playerPluckDeck, hand, ownership, playArea, activePluck, discard, pluckDiscard]);
 
     return (
-        <div className="cd-inner">
+        <div className="flex-content simulator">
             <CardInfoPanel hoveredCard={hoveredCard}/>
             <div className={prompt.message? "promptBar pointer": "noPromptBar"}
                 onClick={() => setPrompt({message: "", action: ""})}

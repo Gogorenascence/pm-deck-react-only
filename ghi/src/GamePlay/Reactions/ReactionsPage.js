@@ -30,7 +30,7 @@ function ReactionsPage(props) {
 
     return (
         <div className="white-space">
-            <h1 className="left-h1">Reactions</h1>
+            <h1 className="left-h1-2">Reactions</h1>
 
             <div className="fullTableBorder">
                 {reactions.map(function(reaction, index, arr) {
