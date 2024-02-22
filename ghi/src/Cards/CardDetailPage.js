@@ -2,16 +2,17 @@ import { useState, useEffect, useContext } from "react";
 import { NavLink, useParams, useNavigate} from 'react-router-dom';
 import RelatedCardModal from "./RelatedCardModal";
 import BackButton from "../display/BackButton";
-import cards from "../database/cards.json";
-import card_types from "../database/card_types.json";
-import card_tags from "../database/card_tags.json";
-import extra_effects from "../database/extra_effects.json";
-import reactions from "../database/reactions.json";
 import card_categories from "../database/card_categories.json";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 
 
-function CardDetailPage() {
+function CardDetailPage({
+    cards,
+    card_types,
+    card_tags,
+    extra_effects,
+    reactions
+}) {
     const { card_number } = useParams()
 
     const [card, setCard] = useState({

@@ -39,7 +39,11 @@ function App() {
   let cards = require('./database/cards.json').map(card =>
     {card["id"] = card._id.$oid
     return card
-  })
+  }).map(card => ({
+      ...card,
+      picture_url: card.picture_url.replace("https://playmakercards","https://compressedplaymakercards")
+          .replace("png", "jpg")
+  }))
   let card_categories = require('./database/card_categories.json').map(category =>
     {category["id"] = category._id.$oid
     return category
