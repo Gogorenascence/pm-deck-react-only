@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useLocation } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 
 function LightSwitch() {
@@ -16,7 +17,7 @@ function LightSwitch() {
     }
 
     return (
-        <div>
+        <div className={location.pathname === "/simulator"? "hidden2":null}>
             {!isDark ? (
                 <img
                 className="light-dark"
