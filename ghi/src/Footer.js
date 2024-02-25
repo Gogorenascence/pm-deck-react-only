@@ -1,11 +1,14 @@
+import { useLocation } from "react-router-dom";
+
 function Footer() {
+    const location = useLocation();
     const openInNewTab = (url) => {
         window.open(url, "_blank", "noreferrer");
     };
     const current_year = new Date().getFullYear()
 
     return (
-        <div className="footer">
+        <div className={location.pathname === "/simulator"? "hidden2": "footer"}>
             <p className="footer-copy-right">&copy;2023 JotH: PlayMaker &nbsp;</p>
             <img
                 title="https://discord.gg/hVfTNEZG9p"
