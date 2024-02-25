@@ -4,6 +4,7 @@ import { AppContext } from "../context/AppContext";
 
 function LightSwitch() {
     const {isDark, setIsDark} = useContext(AppContext)
+    const location = useLocation()
 
     const handleDark = () => {
         setIsDark(!isDark);
