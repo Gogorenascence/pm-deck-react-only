@@ -1122,10 +1122,10 @@
   "title": "Card changes: 2/18 - 2/24",
   "subtitle": "",
   "author": "TeamPlayMaker",
-  "story_date": "2024-02-20",
-  "updated": "2024-02-20",
+  "story_date": "2024-02-24",
+  "updated": "2024-02-27",
   "section": "releases",
-  "content": "Change in card effects:@@]]//\nShinobi Art of Substitution!]]//\nPrevious: <Trigger> If you are targeted by a foe's card, resolve this card's main effect and you are unaffected by all non-damaging effects of the card targeting you this turn.//\nNew: <Trigger> If you are targeted by a foe's card, resolve this card's main effect and you are unaffected by all non-damaging effects of cards targeting you this turn.//\n\nChanges in wording:@@]]//\nBackdoor Exit]]//\nPrevious: <Trigger> If a card(s) in your String would be sent to the discard pile during this round, add that card to your hand instead (max of 1).//\nNew: <Trigger> If a card(s) in your String is discarded, add that card to your hand instead (max of 1).//",
+  "content": "Change in card effects:@@]]//\nShinobi Art of Substitution!]]//\nPrevious: <Trigger> If you are targeted by a foe's card, resolve this card's main effect and you are unaffected by all non-damaging effects of the card targeting you this turn.//\nNew: <Trigger> If you are targeted by a foe's card, resolve this card's main effect and you are unaffected by all non-damaging effects of cards targeting you this turn.//\n\nRainbow Scatter]]//\nPrevious: You can resolve this effect again (no limit) if you discard a card from your hand or String with a class different to the cards already discarded for this effect.//\nNew: You can resolve this effect again (no limit) if you discard a card from your String with a class different to the cards already discarded for this effect each time.//\n\nCollection Swarm!!]]//\nPrevious: Deal 3 damage to a foe and take 1 Item in their Active Pluck. Return the Item to its owner during the End Phase or when this card is removed from your String.//\nNew: Deal 3 damage to a foe and take 1 of their Active Pluck. Return the Pluck to its owner during the End Phase or when this card is removed from your String.//\n\nSummoning Mantra]]//\nPrevious: You can not resolve the added cards in your String or use them for your Focus roll this round.//\nNew: You can not resolve any of their effects in your String or use them for your Focus roll this round.//\n\n\"MAX VARIABLE!!\"]]//\nPrevious: Discard 2 cards from your hand; add MAX VARIABLEs from the discard pile to your String until you have 4 cards in your String (max of 2).//\nNew: Discard 4 cards from your hand; add MAX VARIABLEs from the discard pile to your String until you have 4 cards in your String (max of 2).//\n\n\"Unleash Your Power!!!\"]]//\nPrevious: <12+> Deal true, piercing damage equal to the total number of damage tokens on 1 card in your String. Damage dealt by this card can not be reduced.//\nNew: <12+> Deal 1 true, piercing damage for each damage token on 1 card in your String.//\n\nDistant Drop-Off!!!]]//\nPrevious: <12+> Deal 3 damage. They discard 1 card from their String and 1 card from their hand.//\nNew: <12+> Deal 3 damage. They discard 1 unresolved non-Fighter card from their String.//\n\nChanges in Tags:@@]]//\n\"MAX VARIABLE!!\"]]//\nAuto tag added.//\n\nChanges in wording:@@]]//\nBackdoor Exit]]//\nPrevious: <Trigger> If a card(s) in your String would be sent to the discard pile during this round, add that card to your hand instead (max of 1).//\nNew: <Trigger> If a card(s) in your String is discarded, add that card to your hand instead (max of 1).//",
   "images": {
     "1": [
       {
@@ -1136,12 +1136,75 @@
         "alt_text": "Shinobi Art of Substitution!"
       }
     ],
-    "5": [
+    "4": [
+      {
+        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg22e.png",
+        "caption": null,
+        "link": null,
+        "order": 0,
+        "alt_text": "Rainbow Scatter"
+      }
+    ],
+    "7": [
+      {
+        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2hm.png",
+        "caption": null,
+        "link": null,
+        "order": 0,
+        "alt_text": "Collection Swarm!!"
+      }
+    ],
+    "10": [
+      {
+        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl20fe.png",
+        "caption": null,
+        "link": null,
+        "order": 0,
+        "alt_text": "Summoning Mantra"
+      }
+    ],
+    "13": [
+      {
+        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg2eb.png",
+        "caption": null,
+        "link": null,
+        "order": 0,
+        "alt_text": "\"MAX VARIABLE!!\""
+      }
+    ],
+    "16": [
+      {
+        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5re.png",
+        "caption": null,
+        "link": null,
+        "order": 0,
+        "alt_text": "\"Unleash Your Power!!!\""
+      }
+    ],
+    "19": [
+      {
+        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pe.png",
+        "caption": null,
+        "link": null,
+        "order": 0,
+        "alt_text": "Distant Drop-Off!!!"
+      }
+    ],
+    "23": [
+      {
+        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg2eb.png",
+        "caption": null,
+        "link": null,
+        "order": 0,
+        "alt_text": "\"MAX VARIABLE!!\""
+      }
+    ],
+    "26": [
       {
         "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb14p.png",
         "caption": null,
         "link": null,
-        "order": 1,
+        "order": 0,
         "alt_text": "Backdoor Exit"
       }
     ]
