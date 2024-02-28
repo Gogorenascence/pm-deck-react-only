@@ -80,6 +80,13 @@ function ArticlePage({
         return `${month}-${day}-${year}`
     }
 
+    const getLink = (link) => {
+        let newLink = ""
+        link.includes("https://www.jothplaymaker.com/")?
+            newLink = link.replace("https://www.jothplaymaker.com", `${process.env.PUBLIC_URL}`):
+            newLink = link
+        return newLink
+    }
 
 
     return (
@@ -158,16 +165,29 @@ function ArticlePage({
                                 }
                                 <div className="newsImageContainer">
                                     {article.images[index.toString()] ?
-                                        article.images[index.toString()].sort((a,b) => a.order - b.order).map(image =>
-                                            <div className="margin-top-10 margin-bottom-10">
-                                                <img className="newsImage"
-                                                    src={image.src}
-                                                    title={image.alt_text}
-                                                    alt={image.alt_text}
-                                                />
-                                                {image.caption? <p className="newsText3">{image.caption}</p>: null}
-                                            </div>
-
+                                        article.images[index.toString()].sort((a,b) => a.order - b.order).map(image => {
+                                            return (
+                                                image.link?
+                                                <a href={getLink(image.link)}>
+                                                    <div className="margin-top-10 margin-bottom-10">
+                                                        <img className="newsImage"
+                                                            src={image.src}
+                                                            title={image.alt_text}
+                                                            alt={image.alt_text}
+                                                        />
+                                                        {image.caption? <p className="newsText3">{image.caption}</p>: null}
+                                                    </div>
+                                                </a>
+                                                :
+                                                <div className="margin-top-10 margin-bottom-10">
+                                                    <img className="newsImage"
+                                                        src={image.src}
+                                                        title={image.alt_text}
+                                                        alt={image.alt_text}
+                                                    />
+                                                    {image.caption? <p className="newsText3">{image.caption}</p>: null}
+                                                </div>
+                                            )}
                                         ):null
                                     }
                                 </div>

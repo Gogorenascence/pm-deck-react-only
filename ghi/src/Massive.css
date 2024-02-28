@@ -3215,7 +3215,7 @@ button:hover {
 .newsImageContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: space-between;
   gap: 1%;
   margin: 10px;
 }
@@ -3906,6 +3906,58 @@ button:hover {
     border-color: var(--color-body);
     width: auto;
   }
+
+  .newsSection {
+    height: 55px;
+    margin: 0 -10px 0 -20px;
+  }
+
+  .newsSection2 {
+    margin: 10px 2.5%;
+  }
+
+  .newsText2 {
+    font-size: 23px;
+  }
+
+  .newsText3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+
+  .newsText4 {
+    text-align: center;
+  }
+
+  .newsText5 {
+    text-align: center;
+  }
+
+  .no-wrap {
+    white-space: nowrap;
+  }
+
+  .simulator {
+    position: absolute;
+    top: 66px;
+    width: 100vw;
+  }
+
+  .newsImageContainer {
+    justify-content: space-around;
+  }
+
+  .newsImage {
+    width: 300px;
+    margin: 2.25px auto;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid white;
+  }
+
+
 }
 
 /* @media (prefers-color-scheme: dark) and (max-width: 1333px){
