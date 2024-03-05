@@ -507,7 +507,7 @@
   "images": {
     "1": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5ff.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p5ff.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1153",
         "order": 0,
@@ -516,7 +516,7 @@
     ],
     "4": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5fe.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p5fe.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1156",
         "order": 0,
@@ -525,42 +525,42 @@
     ],
     "7": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gf.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gf.jpg",
         "caption": "Gizma",
         "link": "https://www.jothplaymaker.com/cards/1149",
         "order": 0,
         "alt_text": "Gizma"
       },
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5ga.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5ga.jpg",
         "caption": "Master of Shadows!",
         "link": "https://www.jothplaymaker.com/cards/1150",
         "order": 1,
         "alt_text": "Master of Shadows!"
       },
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gm.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gm.jpg",
         "caption": "Shadow Strike!!",
         "link": "https://www.jothplaymaker.com/cards/1151",
         "order": 2,
         "alt_text": "Shadow Strike!!"
       },
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5ge.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5ge.jpg",
         "caption": "Karmic Crash!!!",
         "link": "https://www.jothplaymaker.com/cards/1152",
         "order": 3,
         "alt_text": "Karmic Crash!!!"
       },
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl19gi.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl19gi.jpg",
         "caption": "Old Collar",
         "link": "https://www.jothplaymaker.com/cards/1163",
         "order": 4,
         "alt_text": "Old Collar"
       },
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl19gcb.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl19gcb.jpg",
         "caption": "Shadow Clone",
         "link": "https://www.jothplaymaker.com/cards/1165",
         "order": 5,
@@ -585,7 +585,7 @@
   "images": {
     "1": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl12bbe.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl12bbe.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1101",
         "order": 0,
@@ -594,7 +594,7 @@
     ],
     "4": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b4bbm.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b4bbm.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1047",
         "order": 0,
@@ -603,7 +603,7 @@
     ],
     "7": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl03bwe.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl03bwe.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1074",
         "order": 0,
@@ -612,7 +612,7 @@
     ],
     "10": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b3hsf.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b3hsf.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1041",
         "order": 0,
@@ -621,7 +621,7 @@
     ],
     "13": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2hf.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b2hf.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1037",
         "order": 0,
@@ -630,7 +630,7 @@
     ],
     "16": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2he.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b2he.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1040",
         "order": 0,
@@ -639,7 +639,7 @@
     ],
     "20": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb6rf.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb6rf.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1084",
         "order": 0,
@@ -664,7 +664,7 @@
   "images": {
     "1": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b5gf.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gf.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1149",
         "order": 0,
@@ -689,7 +689,7 @@
   "images": {
     "1": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g2gwm.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g2gwm.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1007",
         "order": 0,
@@ -698,7 +698,7 @@
     ],
     "4": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g2gwe.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g2gwe.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1008",
         "order": 0,
@@ -707,7 +707,7 @@
     ],
     "7": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl02gwi.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl02gwi.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1070",
         "order": 0,
@@ -716,7 +716,7 @@
     ],
     "10": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b1dwm.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b1dwm.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1035",
         "order": 0,
@@ -725,7 +725,7 @@
     ],
     "13": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b1dwe.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b1dwe.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1036",
         "order": 0,
@@ -734,7 +734,7 @@
     ],
     "16": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r3bee.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r3bee.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1028",
         "order": 0,
@@ -743,7 +743,7 @@
     ],
     "19": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g3bwe.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g3bwe.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1012",
         "order": 0,
@@ -752,7 +752,7 @@
     ],
     "22": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb15cp.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb15cp.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1111",
         "order": 0,
@@ -761,7 +761,7 @@
     ],
     "25": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb4fb.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb4fb.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1078",
         "order": 0,
@@ -770,7 +770,7 @@
     ],
     "28": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rfm.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r2rfm.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1023",
         "order": 0,
@@ -779,7 +779,7 @@
     ],
     "31": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r2rfe.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r2rfe.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1024",
         "order": 0,
@@ -804,7 +804,7 @@
   "images": {
     "1": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg6i.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg6i.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1118",
         "order": 0,
@@ -813,7 +813,7 @@
     ],
     "4": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r4bgaf.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r4bgaf.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1029",
         "order": 0,
@@ -822,7 +822,7 @@
     ],
     "7": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb9dw.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb9dw.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1093",
         "order": 0,
@@ -831,7 +831,7 @@
     ],
     "10": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl14pi.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl14pi.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1106",
         "order": 0,
@@ -840,7 +840,7 @@
     ],
     "13": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl16gee.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl16gee.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1113",
         "order": 0,
@@ -849,7 +849,7 @@
     ],
     "16": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg8i.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg8i.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1120",
         "order": 0,
@@ -858,7 +858,7 @@
     ],
     "19": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r4bgaa.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r4bgaa.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1030",
         "order": 0,
@@ -867,7 +867,7 @@
     ],
     "22": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb1pm.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb1pm.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1069",
         "order": 0,
@@ -876,7 +876,7 @@
     ],
     "25": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb17g.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb17g.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1125",
         "order": 0,
@@ -885,7 +885,7 @@
     ],
     "28": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl06rfe.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl06rfe.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1083",
         "order": 0,
@@ -910,7 +910,7 @@
   "images": {
     "0": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg9e.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg9e.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1123",
         "order": 0,
@@ -919,7 +919,7 @@
     ],
     "11": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg10e.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg10e.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1124",
         "order": 0,
@@ -959,7 +959,7 @@
   "images": {
     "1": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g1pmf.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g1pmf.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1001",
         "order": 0,
@@ -968,7 +968,7 @@
     ],
     "4": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1g1pme.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g1pme.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1004",
         "order": 0,
@@ -977,7 +977,7 @@
     ],
     "7": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bne.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p1bne.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1052",
         "order": 0,
@@ -986,7 +986,7 @@
     ],
     "10": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p4gea.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p4gea.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1062",
         "order": 0,
@@ -1011,7 +1011,7 @@
   "images": {
     "0": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg11e.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg11e.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1133",
         "order": 0,
@@ -1020,7 +1020,7 @@
     ],
     "11": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg12e.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg12e.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1134",
         "order": 0,
@@ -1029,7 +1029,7 @@
     ],
     "22": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg13cb.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg13cb.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1137",
         "order": 0,
@@ -1129,7 +1129,7 @@
   "images": {
     "1": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p5fa.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p5fa.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1154",
         "order": 0,
@@ -1138,7 +1138,7 @@
     ],
     "4": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg22e.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg22e.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1136",
         "order": 0,
@@ -1147,7 +1147,7 @@
     ],
     "7": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1b2hm.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b2hm.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1039",
         "order": 0,
@@ -1156,7 +1156,7 @@
     ],
     "10": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1pl20fe.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl20fe.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1167",
         "order": 0,
@@ -1165,7 +1165,7 @@
     ],
     "13": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg2eb.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg2eb.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1116",
         "order": 0,
@@ -1174,7 +1174,7 @@
     ],
     "16": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1r5re.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r5re.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1148",
         "order": 0,
@@ -1183,7 +1183,7 @@
     ],
     "19": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p2pe.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p2pe.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1056",
         "order": 0,
@@ -1192,7 +1192,7 @@
     ],
     "23": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1plg2eb.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg2eb.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1116",
         "order": 0,
@@ -1201,7 +1201,7 @@
     ],
     "26": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1cb14p.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb14p.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1108",
         "order": 0,
@@ -1210,7 +1210,7 @@
     ],
     "29": [
       {
-        "src": "https://playmakercards.s3.us-west-1.amazonaws.com/i1p1bna.png",
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p1bna.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1050",
         "order": 0,
@@ -1248,6 +1248,46 @@
   "section": "admin",
   "content": "",
   "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65dea31f3ee977ec9ef3cc67"
+  },
+  "title": "Article Images are now clickable",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-02-27",
+  "updated": null,
+  "section": "admin",
+  "content": "",
+  "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65e63edbf9422fdbb5d4a28a"
+  },
+  "title": "Card change: Infinity Mass Press!!!",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-03-04",
+  "updated": null,
+  "section": "releases",
+  "content": "Change in card effects:@@]]//\nInfinity Mass Press!!!]]//\nPrevious: <12+> Deal damage equal to the difference (max of 7).//\nNew: <12+> Deal 4 damage. If they have an Ending, deal damage equal to the difference instead (max of 7).//",
+  "images": {
+    "1": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p4gee.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1064",
+        "order": 0,
+        "alt_text": "Infinity Mass Press!!!"
+      }
+    ]
+  },
   "news": true,
   "site_link": ""
 }]

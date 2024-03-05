@@ -1674,7 +1674,7 @@
   "card_number": 1064,
   "enthusiasm": 14,
   "effect_text": "All foes gain Focus minus 4.",
-  "second_effect_text": "<Target> Foe with Enthusiasm lower than yours.//<1-5> No effect.//<6-11> Deal 4 damage.//<12+> Deal damage equal to the difference (max of 7).",
+  "second_effect_text": "<Target> Foe with Enthusiasm lower than yours.//<1-5> No effect.//<6-11> Deal 4 damage.//<12+> Deal 4 damage. If they have an Ending, deal damage equal to the difference instead (max of 7).",
   "illustrator": "betomirandaart2",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p4gee.jpg",
   "file_name": "i1p4gee",
@@ -1696,11 +1696,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 17,
-    "time": "23:27",
+    "month": 3,
+    "day": 4,
+    "time": "21:40",
     "full_time": {
-      "$date": "2024-01-17T23:27:45.845Z"
+      "$date": "2024-03-04T21:40:31.194Z"
     }
   },
   "alpha": null,
@@ -1895,7 +1895,7 @@
   "series_name": "Project//Tech//Tactical//Team",
   "card_number": 1092,
   "enthusiasm": 0,
-  "effect_text": "Add 1 of the following from their respective discard piles to your hand/Reserve://<>Up to 3 Project cards and 1 Project Pluck except the Event Project HERMES.//<>2 Unity cards.//<>1 MAX VARIABLE and 1 Item.",
+  "effect_text": "Add 1 of the following from their respective discard piles to your hand/Reserve://● Up to 3 Project cards and 1 Project Pluck except the Event Project HERMES.//● 2 Unity cards.//● 1 MAX VARIABLE and 1 Item.",
   "second_effect_text": "",
   "illustrator": "Undeadsushii",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl09dwe.jpg",
@@ -4844,7 +4844,7 @@
   "_id": {
     "$oid": "644005a42e72274cabf63beb"
   },
-  "name": "Stinger Mayhem!!!",
+  "name": "Stinger Tornado!!!",
   "card_class": "Unity",
   "hero_id": "H01",
   "series_name": "Hive//Tech//Nature",
@@ -4874,10 +4874,10 @@
   "updated_on": {
     "year": 2024,
     "month": 2,
-    "day": 4,
-    "time": "20:18",
+    "day": 28,
+    "time": "02:56",
     "full_time": {
-      "$date": "2024-02-04T20:18:06.929Z"
+      "$date": "2024-02-28T02:56:35.370Z"
     }
   },
   "alpha": null,
@@ -5399,11 +5399,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 27,
-    "time": "16:28",
+    "month": 3,
+    "day": 4,
+    "time": "21:29",
     "full_time": {
-      "$date": "2024-02-27T16:28:35.619Z"
+      "$date": "2024-03-04T21:29:54.843Z"
     }
   },
   "alpha": null,
@@ -6659,7 +6659,7 @@
   "series_name": "Fog Palace//Magic//Tactical",
   "card_number": 1156,
   "enthusiasm": 20,
-  "effect_text": "Target: 2 random foes.//1-5: Deal 1 piercing damage.//6-11: Deal 2 damage.//12+: Deal 2 damage. You can discard 2 cards from your String to resolve this card one more time.",
+  "effect_text": "Target: 2 random foes.//<1-5> Deal 1 piercing damage.//<6-11> Deal 2 damage.//<12+> Deal 2 damage. You can discard 2 cards from your String to resolve this card one more time.",
   "second_effect_text": "<Trigger> If this card is discarded from your String, deal 2 damage to a foe.",
   "illustrator": "Ham West",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p5fe.jpg",
@@ -6975,7 +6975,7 @@
   "series_name": "Gizma//Magic//Mystic//Quest",
   "card_number": 1152,
   "enthusiasm": 12,
-  "effect_text": "Target: Strongest foe.//1-5: Deal 2 damage.//6-11: Deal 1 piercing damage for each of your placed cards/Pluck (max of 5). Add 1 placed card to your hand.//12+: Deal 1 piercing damage for each of your placed cards/Pluck (max of 5). Add 1 placed card to your String.",
+  "effect_text": "Target: Strongest foe.//<1-5> Deal 2 damage.//<6-11> Deal 1 piercing damage for each of your placed cards/Pluck (max of 5). Add 1 placed card to your hand.//<12+> Deal 1 piercing damage for each of your placed cards/Pluck (max of 5). Add 1 placed card to your String.",
   "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.",
   "illustrator": "TBD",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5ge.jpg",
@@ -7243,7 +7243,7 @@
   "series_name": "The Spider//Tech//Tactical//Support",
   "card_number": 1144,
   "enthusiasm": 13,
-  "effect_text": "Target: Foe of your choice.//1-5: Deal 3 damage.//6-11: Deal 3 piercing damage. Provoke 1 Ending.//12+: Deal 3 piercing damage. Provoke 1 Move or Ending.",
+  "effect_text": "Target: Foe of your choice.//<1-5> Deal 3 damage.//<6-11> Deal 3 piercing damage. Provoke 1 Ending.//<12+> Deal 3 piercing damage. Provoke 1 Move or Ending.",
   "second_effect_text": "<Trigger> If you are targeted by a card in a foe's String, that card gains damage minus 1.",
   "illustrator": "Bricis",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g5tse.jpg",
