@@ -15,14 +15,16 @@ function FEDeckSheetPage({
         console.log(pluck_list)
         const imageList = []
         for (let card of main_list) {
-            const compressedLink = card.picture_url.replace("https://playmakercards","https://compressedplaymakercards")
-                .replace("png", "jpg")
-            imageList.push(compressedLink)
+            const imageLink = card.picture_url.replace(
+                "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/", process.env.PUBLIC_URL + "/card_images/"
+            )
+            imageList.push(imageLink)
         }
         for (let card of pluck_list) {
-            const compressedLink = card.picture_url.replace("https://playmakercards","https://compressedplaymakercards")
-                .replace("png", "jpg")
-            imageList.push(compressedLink)
+            const imageLink = card.picture_url.replace(
+                "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/", process.env.PUBLIC_URL + "/card_images/"
+            )
+            imageList.push(imageLink)
         }
         let sheet = []
         const sheetList = []

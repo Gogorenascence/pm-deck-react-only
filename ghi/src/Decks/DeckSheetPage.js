@@ -9,22 +9,22 @@ function DeckSheetPage({
     pluck_list
 }) {
 
-    const {deck_id} = useParams();
 
     const getDeck = async() =>{
-        console.log(main_list)
-        console.log(pluck_list)
         const imageList = []
         for (let card of main_list) {
-            const compressedLink = card.picture_url.replace("https://playmakercards","https://compressedplaymakercards")
-                .replace("png", "jpg")
-            imageList.push(compressedLink)
+            const imageLink = card.picture_url.replace(
+                "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/", process.env.PUBLIC_URL + "/card_images/"
+            )
+            imageList.push(imageLink)
         }
         for (let card of pluck_list) {
-            const compressedLink = card.picture_url.replace("https://playmakercards","https://compressedplaymakercards")
-                .replace("png", "jpg")
-            imageList.push(compressedLink)
+            const imageLink = card.picture_url.replace(
+                "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/", process.env.PUBLIC_URL + "/card_images/"
+            )
+            imageList.push(imageLink)
         }
+        console.log(imageList)
         let sheet = []
         const sheetList = []
         for (let i = 0; i < imageList.length; i++) {
@@ -53,25 +53,6 @@ function DeckSheetPage({
         doc.save(`${name}.pdf`);
     };
 
-    // useEffect(() => {
-    //     getDeck();
-    // },[deck_id]);
-
-    // const getPDF = () => {
-    //     const doc = new jsPDF('p', 'mm', 'a4', true, true);
-
-    //     sheets.forEach((sheet, index) => {
-    //         if (index > 0) {
-    //             doc.addPage();
-    //         }
-    //         sheet.forEach((image, i) => {
-    //             const x = (i % 3) * 2.5 * 25.4 + 12.7; // 2.5 inches converted to mm plus half inch margin
-    //             const y = Math.floor(i / 3) * 3.5 * 25.4 + 6.35; // 3.5 inches converted to mm plus half inch margin
-    //             doc.addImage(image, 'JPEG', x, y, 2.5 * 25.4, 3.5 * 25.4, undefined, "FAST");
-    //         });
-    //     });
-    //     doc.save(`${name}.pdf`);
-    // }
 
     return (
         <>
