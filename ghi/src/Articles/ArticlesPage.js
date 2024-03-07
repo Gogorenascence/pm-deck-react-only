@@ -15,6 +15,7 @@ function ArticlesPage({
         setNewsSortState,
         handleResetNewsQuery,
         someMoreNews,
+        setSomeMoreNews,
         handleSomeMoreNews,
     } = useContext(NewsQueryContext)
 
@@ -30,7 +31,13 @@ function ArticlesPage({
     }
 
     const filteredArticles = articles.filter(article => article.section !== "admin")
-        .sort((a,b) => new Date(b.story_date) - new Date(a.story_date))
+        .sort((a,b) => {
+            let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
+            if (comparedArticles === 0) {
+                comparedArticles = b.id.localeCompare(a.id)
+            }
+            return comparedArticles
+        })
 
     const newsColors = {
         guide: "rgba(42, 168, 115, 0.70)",
@@ -77,6 +84,7 @@ function ArticlesPage({
 
     const handleNewsQuery = (event) => {
         setNewsQuery({ ...newsQuery, [event.target.name]: event.target.value });
+        setSomeMoreNews(20)
     };
 
     const handleNewsCheck = (event) => {

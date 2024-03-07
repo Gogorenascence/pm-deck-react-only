@@ -10,6 +10,7 @@ import { PluckActionsContextProvider } from "./PluckActionsContext";
 import { AppContextProvider } from "./AppContext";
 import { APIContextProvider } from "./APIContext";
 import { NewsQueryContextProvider } from "./NewsQueryContext";
+import { HowToQueryContextProvider } from "./HowToQueryContext.js";
 
 const AppProvider = ({ children }) => {
     return (
@@ -24,7 +25,9 @@ const AppProvider = ({ children }) => {
                                         <MainActionsContextProvider>
                                             <PluckActionsContextProvider>
                                                 <NewsQueryContextProvider>
-                                                    {children}
+                                                    <HowToQueryContextProvider>
+                                                        {children}
+                                                    </HowToQueryContextProvider>
                                                 </NewsQueryContextProvider>
                                             </PluckActionsContextProvider>
                                         </MainActionsContextProvider>

@@ -1225,7 +1225,7 @@
   "_id": {
     "$oid": "65d534c5ebdf4798dd742580"
   },
-  "title": "PDF generator added to Deck pages and Deck Builder",
+  "title": "PDF generator added to Deck pages and Deck Builer",
   "subtitle": "",
   "author": "TeamPlayMaker",
   "story_date": "2024-02-20",
@@ -1288,6 +1288,36 @@
       }
     ]
   },
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65e7cda19f6d332477527394"
+  },
+  "title": "Rulebook section coming soon",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-03-05",
+  "updated": null,
+  "section": "game",
+  "content": "",
+  "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65e7cde19f6d332477527395"
+  },
+  "title": "Rulebook create, edit and detail pages completed",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-03-05",
+  "updated": null,
+  "section": "admin",
+  "content": "",
+  "images": {},
   "news": true,
   "site_link": ""
 }]

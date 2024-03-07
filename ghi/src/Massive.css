@@ -3312,6 +3312,12 @@ button:hover {
   grid-auto-flow: dense; */
 }
 
+.skill_level {
+  height: 55px;
+  margin: 0 -22px 0 -20px;
+}
+
+
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;

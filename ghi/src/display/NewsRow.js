@@ -9,7 +9,13 @@ function NewsRow({articles}) {
     const { newsQuery, setNewsQuery } = useContext(NewsQueryContext)
     const navigate = useNavigate()
     const stories = articles.filter(story => story.news === true)
-        .sort((a,b) => new Date(b.story_date) - new Date(a.story_date))
+        .sort((a,b) => {
+            let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
+            if (comparedArticles === 0) {
+                comparedArticles = b.id.localeCompare(a.id)
+            }
+            return comparedArticles
+        })
 
     const formatDate = (date) => {
         const month = date.slice(5,7);

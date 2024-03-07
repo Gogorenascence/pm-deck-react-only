@@ -32,6 +32,8 @@ import UnderConstruction from "./display/UnderConstruction";
 import TermsPage from "./GamePlay/TermsPage";
 import ArticlesPage from "./Articles/ArticlesPage";
 import ArticlePage from "./Articles/ArticlePage";
+import HowToPage from "./GamePlay/HowTos/HowToPage";
+import HowTosPage from "./GamePlay/HowTos/HowTosPage";
 
 
 function App() {
@@ -80,6 +82,11 @@ function App() {
   let articles = require('./database/articles.json').map(article =>
     {article["id"] = article._id.$oid
     return article
+  })
+
+  let howTos = require('./database/how_tos.json').map(howTo =>
+    {howTo["id"] = howTo._id.$oid
+    return howTo
   })
 
   return (
@@ -171,6 +178,8 @@ function App() {
                                                 />} />
               <Route path="/articles" element={<ArticlesPage articles={articles}/>} />
               <Route path="/articles/:article_id" element={<ArticlePage articles={articles}/>} />
+              <Route path="/rulebooks" element={<HowTosPage howTos={howTos.sort((a,b) => a.how_to_number - b.how_to_number)}/>} />
+              <Route path="/rulebooks/:how_to_id" element={<HowToPage howTos={howTos}/>} />
             </Routes>
 
           </div>
