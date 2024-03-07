@@ -42,7 +42,7 @@ function HowToPage({
     };
 
     useEffect(() => {
-        // window.scroll(0, 0);
+        window.scroll(0, 0);
         document.body.style.overflow = 'auto';
         getHowTo();
     // eslint-disable-next-line
