@@ -460,7 +460,7 @@
   "section": "admin",
   "content": "The news model for the site has been changed to an article model.  Article create page created and all news instances have been converted into articles.",
   "images": {},
-  "news": false,
+  "news": true,
   "site_link": ""
 },
 {
@@ -490,7 +490,7 @@
   "section": "site",
   "content": "The each article and news item with more than a headline will a full page. If an article has more information it will now be clickable.",
   "images": {},
-  "news": false,
+  "news": true,
   "site_link": ""
 },
 {
@@ -1270,13 +1270,13 @@
   "_id": {
     "$oid": "65e63edbf9422fdbb5d4a28a"
   },
-  "title": "Card change: Infinity Mass Press!!!",
+  "title": "Card changes: 3/3 - 3/9",
   "subtitle": "",
   "author": "TeamPlayMaker",
-  "story_date": "2024-03-04",
-  "updated": null,
+  "story_date": "2024-03-08",
+  "updated": "2024-03-08",
   "section": "releases",
-  "content": "Change in card effects:@@]]//\nInfinity Mass Press!!!]]//\nPrevious: <12+> Deal damage equal to the difference (max of 7).//\nNew: <12+> Deal 4 damage. If they have an Ending, deal damage equal to the difference instead (max of 7).//",
+  "content": "Change in card effects:@@]]//\nInfinity Mass Press!!!]]//\nPrevious: <12+> Deal damage equal to the difference (max of 7).//\nNew: <12+> Deal 4 damage. If they have an Ending, deal damage equal to the difference instead (max of 7).//\n\nBurst Esper]]//\n\"<Trigger> If this card is discarded from your hand, deal 2 damage to a random foe.\" added.//\n\nGizma]]//\nPrevious: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under this card (if this card is removed from your String, the placed card(s) is discarded).//\nNew: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String (if that card is removed from your String, the placed card(s) is discarded).//\n\nShadow Strike!!]]//\nPrevious: <Trigger> If you discard a card(s) from your hand or String, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your String/Active Pluck.//\nNew: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.//\n\nMaster of Shadows!]]//\nPrevious: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.//\nNew: <Trigger> If you discard a card(s) from your hand or String, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your String/Active Pluck.//\n\nChange in card tags@@]]//\nGizma]]//\nCycle tag removed and Hit 1 tag added.//\n\nMaster of Shadows]]//\nHit 1 tag removed and Cycle tag added.",
   "images": {
     "1": [
       {
@@ -1285,6 +1285,60 @@
         "link": "https://www.jothplaymaker.com/cards/1064",
         "order": 0,
         "alt_text": "Infinity Mass Press!!!"
+      }
+    ],
+    "4": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r3bef.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1025",
+        "order": 1,
+        "alt_text": "Burst Esper"
+      }
+    ],
+    "6": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gf.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1149",
+        "order": 0,
+        "alt_text": "Gizma"
+      }
+    ],
+    "9": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gm.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1151",
+        "order": 0,
+        "alt_text": "Shadow Strike!!"
+      }
+    ],
+    "13": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5ga.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1150",
+        "order": 0,
+        "alt_text": "Master of Shadows!"
+      }
+    ],
+    "16": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gf.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1149",
+        "order": 0,
+        "alt_text": "Gizma"
+      }
+    ],
+    "18": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5ga.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1150",
+        "order": 0,
+        "alt_text": "Master of Shadows"
       }
     ]
   },
@@ -1316,6 +1370,21 @@
   "story_date": "2024-03-05",
   "updated": null,
   "section": "admin",
+  "content": "",
+  "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65ea1ec848f148842b8189e2"
+  },
+  "title": "Rulebook Section added to the Game Play Portal",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-03-07",
+  "updated": null,
+  "section": "site",
   "content": "",
   "images": {},
   "news": true,

@@ -3525,14 +3525,16 @@
   "card_number": 1025,
   "enthusiasm": 0,
   "effect_text": "Deal 2 damage to 2 random foes and Focus plus 2 (add 2 to your Focus). Those foes draw 1 card.",
-  "second_effect_text": "",
+  "second_effect_text": "<Trigger> If this card is discarded from your hand, deal 2 damage to a random foe.",
   "illustrator": "mo.moan",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r3bef.jpg",
   "file_name": "i1r3bef",
   "card_type": [
     1001
   ],
-  "extra_effects": [],
+  "extra_effects": [
+    1001
+  ],
   "reactions": [
     1004
   ],
@@ -3549,11 +3551,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 29,
-    "time": "02:57",
+    "month": 3,
+    "day": 8,
+    "time": "16:07",
     "full_time": {
-      "$date": "2024-01-29T02:57:42.122Z"
+      "$date": "2024-03-08T16:07:52.137Z"
     }
   },
   "alpha": null,
@@ -6839,7 +6841,7 @@
   "card_number": 1149,
   "enthusiasm": null,
   "effect_text": "Select 1 of your placed cards; resolve that card's main effect, then discard it.",
-  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under this card (if this card is removed from your String, the placed card(s) is discarded).",
+  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String (if that card is removed from your String, the placed card(s) is discarded).",
   "illustrator": "TBD",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gf.jpg",
   "file_name": "i1b5gf.jpg",
@@ -6854,7 +6856,7 @@
   ],
   "card_tags": [
     1001,
-    1006
+    1007
   ],
   "created_on": {
     "year": 2023,
@@ -6865,11 +6867,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 10,
-    "time": "00:33",
+    "month": 3,
+    "day": 8,
+    "time": "16:08",
     "full_time": {
-      "$date": "2024-02-10T00:33:40.583Z"
+      "$date": "2024-03-08T16:08:26.297Z"
     }
   },
   "alpha": null,
@@ -6886,7 +6888,7 @@
   "card_number": 1150,
   "enthusiasm": null,
   "effect_text": "Add 1 of your placed cards to your String, then place another card from your hand under a card in your String (if that card is removed from your String, the placed card(s) is discarded).",
-  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.",
+  "second_effect_text": "<Trigger> If you discard a card(s) from your hand or String, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your String/Active Pluck. ",
   "illustrator": "TBD",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5ga.jpg",
   "file_name": "i1b5ga.jpg",
@@ -6899,7 +6901,7 @@
   "reactions": [],
   "card_tags": [
     1001,
-    1007
+    1006
   ],
   "created_on": {
     "year": 2023,
@@ -6910,11 +6912,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 10,
-    "time": "00:33",
+    "month": 3,
+    "day": 8,
+    "time": "16:09",
     "full_time": {
-      "$date": "2024-02-10T00:33:47.463Z"
+      "$date": "2024-03-08T16:09:29.756Z"
     }
   },
   "alpha": null,
@@ -6931,7 +6933,7 @@
   "card_number": 1151,
   "enthusiasm": null,
   "effect_text": "Deal 1 piercing damage to your strongest foe for each of your placed cards/Pluck (max of 4).",
-  "second_effect_text": "<Trigger> If you discard a card(s) from your hand or String, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your String/Active Pluck. ",
+  "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.",
   "illustrator": "TBD",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gm.jpg",
   "file_name": "i1b5gm.jpg",
@@ -6955,11 +6957,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 10,
-    "time": "00:33",
+    "month": 3,
+    "day": 8,
+    "time": "16:09",
     "full_time": {
-      "$date": "2024-02-10T00:33:28.343Z"
+      "$date": "2024-03-08T16:09:15.796Z"
     }
   },
   "alpha": null,
