@@ -98,8 +98,8 @@
   "name": "Mystic",
   "description": "Cards related to the spiritual and metaphysical. ",
   "support": [
-    1128,
-    1131
+    1123,
+    1130
   ],
   "anti_support": [
     1129
@@ -112,12 +112,12 @@
     "full_time": "2023-10-11T01:13:21.629000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 11,
-    "day": 23,
-    "time": "16:31",
+    "year": 2024,
+    "month": 3,
+    "day": 9,
+    "time": "18:04",
     "full_time": {
-      "$date": "2023-11-23T16:31:43.625Z"
+      "$date": "2024-03-09T18:04:48.007Z"
     }
   },
   "article": null
