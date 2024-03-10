@@ -6215,7 +6215,7 @@
   },
   "name": "Placed Strength",
   "account_id": "64ecc30f82c5729f0b36e158",
-  "description": null,
+  "description": "",
   "strategies": [
     "Combo",
     "Ramp",
