@@ -118,19 +118,15 @@ function HowToPage({
                     <div className="flex">
                         <h1 className="left margin-top-10 ellipsis">{howTo.title}</h1>
                     </div>
-                    {/* <h6 className="left"
-                        style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
-                    >
-                        Section: {deck.strategies.length > 0 ? deck.strategies.join(', ') : "n/a"}
-                    </h6> */}
-                    {/* <div className=" flex wide100-3">
-                        <img className="newsSection" src={`/${howTo.section}.png`} alt={howTo.section}/>
-                    </div> */}
-                    {/* <h6 className="left"
-                        style={{margin: '0px 0px 10px 10px', fontWeight: "600"}}
-                    >
-                        Main Deck: {main_list.length} &nbsp; Pluck Deck: {pluck_list.length}
-                    </h6> */}
+                    <div className=" flex wide100-3">
+                        <h4
+                            className="left justify-content-end"
+                            style={{margin: '12px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
+                        >
+                            {howTo.game_format} &nbsp;
+                        </h4>
+                        <img className="newsSection" src={`/${howTo.skill_level}.png`} alt={howTo.skill_level}/>
+                    </div>
                     <div className="flex">
                         { howTo.updated ?
                             <>
@@ -146,7 +142,6 @@ function HowToPage({
                     </div>
                 </Card.ImgOverlay>
             </Card>
-            {/* <h1>{howTo.subtitle}</h1> */}
             <div className="newsSection2">
                 {
                     processedText(howTo.content)?.map((line, index) => {
@@ -205,7 +200,7 @@ function HowToPage({
                                 marginBottom: "-15px"
                             }}
                         >
-                            <h3 className="newsText no-wrap">{prevHowTo.game_format}</h3>
+                            <h3 className="newsText no-wrap">Prev: </h3>
                             <img className="skill_level" src={howToSkills[prevHowTo.skill_level]} alt={prevHowTo.skill_level}/>
                             <h4 className="newsText">{prevHowTo.title}</h4>
                         </div>
@@ -226,8 +221,7 @@ function HowToPage({
                                 marginBottom: "10px"
                             }}
                         >
-
-                            <h3 className="newsText no-wrap">{nextHowTo.game_format}</h3>
+                            <h3 className="newsText no-wrap">Next: </h3>
                             <img className="skill_level" src={howToSkills[nextHowTo.skill_level]} alt={nextHowTo.skill_level}/>
                             {/* <h4 className="newsText">{story.section}</h4> */}
                             <h4 className="newsText">{nextHowTo.title}</h4>
