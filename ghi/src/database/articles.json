@@ -1292,7 +1292,7 @@
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r3bef.jpg",
         "caption": null,
         "link": "https://www.jothplaymaker.com/cards/1025",
-        "order": 1,
+        "order": 0,
         "alt_text": "Burst Esper"
       }
     ],
@@ -1387,6 +1387,31 @@
   "section": "site",
   "content": "",
   "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65ef168df28d4a1e36ea10d4"
+  },
+  "title": "Card change: Shinobi Scroll of Duplication",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-03-11",
+  "updated": null,
+  "section": "releases",
+  "content": "Change in card effects:@@]]//\nShinobi Scroll of Duplication]]//\nPrevious: This Item copies the effect of 1 Fighter or Aura in your String until the end of the round.//\nNew: This Item copies the main effect text of 1 Fighter or Aura in your String until the end of the round.//",
+  "images": {
+    "1": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl20fi.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1166",
+        "order": 1,
+        "alt_text": "Shinobi Scroll of Duplication"
+      }
+    ]
+  },
   "news": true,
   "site_link": ""
 }]

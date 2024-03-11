@@ -6753,7 +6753,7 @@
   "series_name": "Fog Palace//Magic//Tactical",
   "card_number": 1166,
   "enthusiasm": null,
-  "effect_text": "<L. Trigger> During the Start Phase or during a foe's turn, discard 1 unresolved card; this Item copies the effect of 1 Fighter or Aura in your String until the end of the round.",
+  "effect_text": "<L. Trigger> During the Start Phase or during a foe's turn, discard 1 unresolved card; this Item copies the main effect text of 1 Fighter or Aura in your String until the end of the round.",
   "second_effect_text": "",
   "illustrator": "Ham West",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl20fi.jpg",
@@ -6778,11 +6778,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 19,
-    "time": "02:05",
+    "month": 3,
+    "day": 11,
+    "time": "14:29",
     "full_time": {
-      "$date": "2024-02-19T02:05:25.183Z"
+      "$date": "2024-03-11T14:29:37.914Z"
     }
   },
   "alpha": null,
