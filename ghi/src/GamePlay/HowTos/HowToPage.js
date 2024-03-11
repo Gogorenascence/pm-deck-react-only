@@ -121,7 +121,7 @@ function HowToPage({
                     <div className=" flex wide100-3">
                         <h4
                             className="left justify-content-end"
-                            style={{margin: '12px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
+                            style={{margin: '13px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                         >
                             {howTo.game_format} &nbsp;
                         </h4>
