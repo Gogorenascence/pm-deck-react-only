@@ -1673,8 +1673,8 @@
   "series_name": "Gravity Enforcer//Cosmic//Tactical",
   "card_number": 1064,
   "enthusiasm": 14,
-  "effect_text": "All foes gain Focus minus 4.",
-  "second_effect_text": "<Target> Foe with Enthusiasm lower than yours.//<1-5> No effect.//<6-11> Deal 4 damage.//<12+> Deal 4 damage. If they have an Ending, deal damage equal to the difference instead (max of 7).",
+  "effect_text": "<Target> Foe with Enthusiasm lower than yours.//All foes gain Focus minus 4.//<1-5> No effect.//<6-11> Deal 4 damage.//<12+> Deal 4 damage. If they have an Ending, deal damage equal to the difference instead (max of 7).",
+  "second_effect_text": "",
   "illustrator": "betomirandaart2",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p4gee.jpg",
   "file_name": "i1p4gee",
@@ -1697,10 +1697,10 @@
   "updated_on": {
     "year": 2024,
     "month": 3,
-    "day": 4,
-    "time": "21:40",
+    "day": 22,
+    "time": "17:30",
     "full_time": {
-      "$date": "2024-03-04T21:40:31.194Z"
+      "$date": "2024-03-22T17:30:33.985Z"
     }
   },
   "alpha": null,
