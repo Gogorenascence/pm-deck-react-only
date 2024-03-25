@@ -130,6 +130,7 @@
   "name": "Nature",
   "description": "Cards that derive their power from animals, plant-life or the environment.",
   "support": [
+    1132,
     1134,
     1164
   ],
@@ -142,12 +143,12 @@
     "full_time": "2023-10-11T01:23:20.621000"
   },
   "updated_on": {
-    "year": 2023,
-    "month": 12,
-    "day": 17,
-    "time": "07:01",
+    "year": 2024,
+    "month": 3,
+    "day": 25,
+    "time": "15:24",
     "full_time": {
-      "$date": "2023-12-17T07:01:49.081Z"
+      "$date": "2024-03-25T15:24:08.041Z"
     }
   },
   "article": null

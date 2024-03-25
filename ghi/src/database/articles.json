@@ -1414,4 +1414,29 @@
   },
   "news": true,
   "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "660195ab07a81a5d64cf293c"
+  },
+  "title": "Card change: Genetic Capture Device",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-03-25",
+  "updated": null,
+  "section": "releases",
+  "content": "Change in card effects:@@]]//\nGenetic Capture Device]]//\nPrevious: <Limited> Place 1 Altered Fighter or Aura from your hand under this Item.//\nNew: <Limited> Place 1 Altered or Nature Fighter from your hand under this Item.//",
+  "images": {
+    "1": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg18i.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1132",
+        "order": 2,
+        "alt_text": "Genetic Capture Device"
+      }
+    ]
+  },
+  "news": true,
+  "site_link": ""
 }]
