@@ -98,7 +98,7 @@ function HowTosPage({
                             name="skill_level"
                             value={howToQuery.skill_level}
                             onChange={handleHowToQuery}>
-                            <option value="">Game Format</option>
+                            <option value="">Skill Level</option>
                             <option value="beginner">Beginner</option>
                             <option value="advanced">Advanced</option>
                             <option value="expert">Expert</option>
