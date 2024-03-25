@@ -73,7 +73,7 @@ function App() {
   let decks = require('./database/decks.json').map(deck =>
     {deck["id"] = deck._id.$oid
     return deck
-  })
+  }).filter(deck => deck.private !== true)
   let terms = require('./database/terms.json').map(term =>
     {term["id"] = term._id.$oid
     return term

@@ -21,28 +21,9 @@ function DecksPage(props) {
 
     const [fullDecks, setFullDecks] = useState([])
 
-    const findCards = (deck) => {
-        const card_names = []
-        const series_names = []
-        const deckCards = deck?.cards.concat(deck?.pluck)
-        for (let cardNumber of deckCards) {
-            const card = cards.find(card => card.card_number === cardNumber)
-            card_names.push(card.name)
-            series_names.push(card.series_name)
-        }
-        return [card_names, series_names]
-    };
-
     const getDecks = async() =>{
         setLoading(true)
-        const preDecks = [...decks]
-        for (let deck of preDecks) {
-            deck["card_names"] = findCards(deck)[0]
-            console.log(deck.name, findCards(deck).length)
-            deck["series_names"] = findCards(deck)[1]
-        }
-
-        const sortedDecks = preDecks.sort(deckSortMethods[deckSortState].method);
+        const sortedDecks = decks.sort(deckSortMethods[deckSortState].method);
 
         for (let deck of sortedDecks){
             const date = new Date(deck["created_on"]["full_time"]["$date"])
