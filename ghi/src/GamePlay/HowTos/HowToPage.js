@@ -186,49 +186,46 @@ function HowToPage({
                         )
                     })
                 }
-                {prevHowTo && prevHowTo.game_format === howTo.game_format?
-                    // <NavLink className="nav-link" to={`/rulebooks/${prevHowTo.id}`}>
-                    //     <h1 className="ellipsis">Prev: {prevHowTo.title}</h1>
-                    // </NavLink>:null
-                    <NavLink className="nav-link no-pad" to={`/rulebooks/${prevHowTo.id}`}>
-                        <div
-                            className="flex-items newsItem"
-                            style={{
-                                backgroundColor: howToColors[prevHowTo.skill_level],
-                                borderColor: howToBorders[prevHowTo.skill_level],
-                                marginTop: "40px",
-                                marginBottom: "-15px"
-                            }}
-                        >
-                            <h3 className="newsText no-wrap">Prev: </h3>
-                            <img className="skill_level" src={howToSkills[prevHowTo.skill_level]} alt={prevHowTo.skill_level}/>
-                            <h4 className="newsText">{prevHowTo.title}</h4>
-                        </div>
-                    </NavLink>:null
-                }
-                <br/>
-                {nextHowTo && nextHowTo.game_format === howTo.game_format?
-                    // <NavLink className="nav-link" to={`/rulebooks/${nextHowTo.id}`}>
-                    //     <h1 className="ellipsis">Next: {nextHowTo.title}</h1>
-                    // </NavLink>:null
-                    <NavLink className="nav-link no-pad" to={`/rulebooks/${nextHowTo.id}`}>
-                        <div
-                            className="flex-items newsItem"
-                            style={{
-                                backgroundColor: howToColors[nextHowTo.skill_level],
-                                borderColor: howToBorders[nextHowTo.skill_level],
-                                marginTop: "0px",
-                                marginBottom: "10px"
-                            }}
-                        >
-                            <h3 className="newsText no-wrap">Next: </h3>
-                            <img className="skill_level" src={howToSkills[nextHowTo.skill_level]} alt={nextHowTo.skill_level}/>
-                            {/* <h4 className="newsText">{story.section}</h4> */}
-                            <h4 className="newsText">{nextHowTo.title}</h4>
-                        </div>
-                    </NavLink>:null
-                }
-                <NavLink className="nav-link no-pad" to={"/rulebooks"}>
+                <div className="margin-top-30">
+                    {prevHowTo && prevHowTo.game_format === howTo.game_format?
+                        // <NavLink className="nav-link" to={`/rulebooks/${prevHowTo.id}`}>
+                        //     <h1 className="ellipsis">Prev: {prevHowTo.title}</h1>
+                        // </NavLink>:null
+                        <NavLink className="nav-link no-pad" to={`/rulebooks/${prevHowTo.id}`}>
+                            <div
+                                className="flex-items newsItem"
+                                style={{
+                                    backgroundColor: howToColors[prevHowTo.skill_level],
+                                    borderColor: howToBorders[prevHowTo.skill_level],
+                                }}
+                            >
+                                <h3 className="newsText no-wrap">Prev: </h3>
+                                <img className="skill_level" src={howToSkills[prevHowTo.skill_level]} alt={prevHowTo.skill_level}/>
+                                <h4 className="newsText">{prevHowTo.title}</h4>
+                            </div>
+                        </NavLink>:null
+                    }
+                    {nextHowTo && nextHowTo.game_format === howTo.game_format?
+                        // <NavLink className="nav-link" to={`/rulebooks/${nextHowTo.id}`}>
+                        //     <h1 className="ellipsis">Next: {nextHowTo.title}</h1>
+                        // </NavLink>:null
+                        <NavLink className="nav-link no-pad" to={`/rulebooks/${nextHowTo.id}`}>
+                            <div
+                                className="flex-items newsItem"
+                                style={{
+                                    backgroundColor: howToColors[nextHowTo.skill_level],
+                                    borderColor: howToBorders[nextHowTo.skill_level],
+                                }}
+                            >
+                                <h3 className="newsText no-wrap">Next: </h3>
+                                <img className="skill_level" src={howToSkills[nextHowTo.skill_level]} alt={nextHowTo.skill_level}/>
+                                {/* <h4 className="newsText">{story.section}</h4> */}
+                                <h4 className="newsText">{nextHowTo.title}</h4>
+                            </div>
+                        </NavLink>:null
+                    }
+                </div>
+                <NavLink className="nav-link no-pad" to={"/rulebooks"} style={{ marginTop: "25px" }}>
                     <button
                         style={{ width: "100%" }}>
                         Back to Rulebooks
