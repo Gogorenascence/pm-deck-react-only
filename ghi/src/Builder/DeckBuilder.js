@@ -332,12 +332,21 @@ function DeckBuilder(props) {
                                 {all_cards.slice(0, showMore).map((card) => {
                                     return (
                                         <div style={{display: "flex", justifyContent: "center"}}>
-                                            <img
-                                                onClick={() => handleClick(card)}
-                                                className={uniqueList.includes(card) ? "selected builder-card pointer glow3" : "builder-card pointer glow3"}
-                                                title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
-                                                src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                                alt={card.name}/>
+                                            { (card.card_type[0] < 1006 || card.hero_id === "GEN" || main_list?.filter(cardItem => cardItem.hero_id === card.hero_id).length > 3)
+                                                && combinedList.filter(cardItem => cardItem.card_number === card.card_number).length < 4?
+                                                <img
+                                                    onClick={() => handleClick(card)}
+                                                    className={uniqueList.includes(card) ? "selected builder-card pointer glow3" : "builder-card pointer glow3"}
+                                                    title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
+                                                    src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                    alt={card.name}/>
+                                            :
+                                                <img
+                                                    className="builder-card glow3 greyScale"
+                                                    title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
+                                                    src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                    alt={card.name}/>
+                                            }
                                         </div>
                                     );
                                 })}
@@ -516,12 +525,21 @@ function DeckBuilder(props) {
                             {pluck_list.sort((a,b) => a.card_number - b.card_number).map((card) => {
                                 return (
                                     <div style={{display: "flex", justifyContent: "center"}}>
-                                        <img
-                                            className="builder-card2 pointer"
-                                            onClick={() => handleRemoveCard(card)}
-                                            title={card.name}
-                                            src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                            alt={card.name}/>
+                                        { (card.hero_id === "GEN" || main_list?.filter(cardItem => cardItem.hero_id === card.hero_id).length > 3)?
+                                            <img
+                                                className="builder-card2 pointer"
+                                                onClick={() => handleRemoveCard(card)}
+                                                title={card.name}
+                                                src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                alt={card.name}/>
+                                        :
+                                            <img
+                                                className="builder-card2 pointer greyScale"
+                                                onClick={() => handleRemoveCard(card)}
+                                                title={card.name}
+                                                src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                alt={card.name}/>
+                                        }
                                     </div>
                                 );
                             })}

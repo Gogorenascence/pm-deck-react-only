@@ -3317,6 +3317,13 @@ button:hover {
   margin: 0 -22px 0 -20px;
 }
 
+.greyScale {
+  filter: grayscale(1);
+}
+
+.greyScale:hover {
+  filter: grayscale(1);
+}
 
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
