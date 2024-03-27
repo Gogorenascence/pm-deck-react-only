@@ -316,7 +316,7 @@ function DeckCopy(props) {
                                                     alt={card.name}/>
                                             :
                                                 <img
-                                                    className="builder-card pointer glow3 greyScale"
+                                                    className="builder-card glow3 greyScale"
                                                     title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
                                                     src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
                                                     alt={card.name}/>
