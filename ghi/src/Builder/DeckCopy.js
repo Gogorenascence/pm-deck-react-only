@@ -509,7 +509,7 @@ function DeckCopy(props) {
                                             <img
                                                 className="builder-card2 pointer greyScale"
                                                 onClick={() => handleRemoveCard(card)}
-                                                title={card.name}
+                                                title="The Main deck needs at least 4 cards with the same Hero ID as this card."
                                                 src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
                                                 alt={card.name}/>
                                         }
