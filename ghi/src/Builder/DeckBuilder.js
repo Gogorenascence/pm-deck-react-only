@@ -378,8 +378,8 @@ function DeckBuilder(props) {
                 handleRemoveCard={handleRemoveCard}
             />
             {listView?
-                <div className="deck-list">
-                        <div className="maindeck3">
+                <div className="deck-list media-display">
+                    <div className="maindeck3">
                         <div style={{marginLeft: "20px"}}>
                             <div style={{display: "flex", alignItems: "center"}}>
                                 <h2
@@ -401,7 +401,7 @@ function DeckBuilder(props) {
                                                 <div className="card-container pointer">
                                                     <h5 onClick={() => handleRemoveCard(card)}>{card.name}</h5>
                                                     <img
-                                                        className="card-image"
+                                                        className="card-image media-hover-center"
                                                         src={card.picture_url}
                                                         alt={card.name}
                                                     />
@@ -410,11 +410,11 @@ function DeckBuilder(props) {
                                         );
                                     })}
                                 </>:
-                            <h4 className="left no-cards">No cards added</h4>}
+                            <h4 className="left margin-0 media-margin-bottom-20">No cards added</h4>}
                         </div>
                     </div>
 
-                    <div className="pluckdeck3">
+                    <div className="pluckdeck3 media-margin-top-10">
                         <div style={{marginLeft: "20px"}}>
                         <div style={{display: "flex", alignItems: "center"}}>
                                 <h2
@@ -430,71 +430,83 @@ function DeckBuilder(props) {
                                 null}
                             </div>
                             {pluck_list.length > 0 ?<>
-                                    {pluck_list.sort((a,b) => a.card_number - b.card_number).map((card) => {
-                                        return (
-                                            <Col style={{padding: "5px"}}>
+                                {pluck_list.sort((a,b) => a.card_number - b.card_number).map((card) => {
+                                    return (
+                                        <Col style={{padding: "5px"}}>
+                                            { (card.hero_id === "GEN" || main_list?.filter(cardItem => cardItem.hero_id === card.hero_id).length > 3)?
                                                 <div className="card-container pointer">
                                                     <h5 onClick={() => handleRemoveCard(card)}>{card.name}</h5>
                                                     <img
-                                                        className="card-image"
+                                                        className="card-image media-hover-center"
                                                         src={card.picture_url}
                                                         alt={card.name}
                                                     />
                                                 </div>
-                                            </Col>
-                                        );
-                                    })}
-                                </>:
-                            <h4 className="left no-cards">No cards added</h4>}
+                                            :
+                                                <div className="card-container pointer">
+                                                    <h5 onClick={() => handleRemoveCard(card)}>{card.name}</h5>
+                                                    <h6 className='error3'>The Main deck needs at least 4 cards with the same Hero ID as this card.</h6>
+                                                    <img
+                                                        className="card-image3 greyScale media-hover-center"
+                                                        src={card.picture_url}
+                                                        alt={card.name}
+                                                    />
+                                                </div>
+                                            }
+                                        </Col>
+                                    );
+                                })}
+                            </>:
+                            <h4 className="left margin-0 media-margin-bottom-20">No cards added</h4>}
                         </div>
                     </div>
                 </div>
             :<>
-                    <div className="maindeck">
-                        <div>
-                            <div style={{display: "flex", alignItems: "center", marginLeft: "20px"}}>
-                                <h2
-                                    className="left"
-                                    style={{margin: "1% 0%", fontWeight: "700"}}
-                                >Main Deck</h2>
-                                <img className="logo" src="https://i.imgur.com/YpdBflG.png" alt="cards icon"/>
-                                {main_list.length > 0 ?
-                                <h5
-                                    className="left"
-                                    style={{margin: "1% 0%", fontWeight: "700"}}
-                                >{main_list.length}</h5>:
-                                null}
-                                { showMain ?
-                                    <h5 className={main_list.length > 0 ? "left db-main-count" : "hidden2"}
-                                        onClick={() => handleShowMain()}>
-                                            &nbsp;[Hide]
-                                    </h5> :
-                                    <h5 className={main_list.length > 0 ? "left db-main-count" : "hidden2"}
-                                        onClick={() => handleShowMain()}>
-                                        &nbsp;[Show]
-                                    </h5>}
-                            </div>
-
+                <div className="maindeck">
+                    <div>
+                        <div style={{display: "flex", alignItems: "center", marginLeft: "20px"}}>
+                            <h2
+                                className="left"
+                                style={{margin: "1% 0%", fontWeight: "700"}}
+                            >Main Deck</h2>
+                            <img className="logo" src="https://i.imgur.com/YpdBflG.png" alt="cards icon"/>
                             {main_list.length > 0 ?
-                            <div className={showMain ? "card-pool-fill2": "hidden2"}>
-                            {main_list.sort((a,b) => a.card_number - b.card_number).map((card) => {
-                                return (
-                                    <div style={{display: "flex", justifyContent: "center"}}>
-                                        <img
-                                            className="builder-card2 pointer"
-                                            onClick={() => handleRemoveCard(card)}
-                                            title={card.name}
-                                            src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                            alt={card.name}/>
-                                    </div>
-                                );
-                            })}
-                        </div> :
-                        <h4 className="left no-cards">No cards added</h4>}
-                    </div>
-                    </div>
+                            <h5
+                                className="left"
+                                style={{margin: "1% 0%", fontWeight: "700"}}
+                            >{main_list.length}</h5>:
+                            null}
+                            { showMain ?
+                                <h5 className={main_list.length > 0 ? "left db-main-count" : "hidden2"}
+                                    onClick={() => handleShowMain()}>
+                                        &nbsp;[Hide]
+                                </h5> :
+                                <h5 className={main_list.length > 0 ? "left db-main-count" : "hidden2"}
+                                    onClick={() => handleShowMain()}>
+                                    &nbsp;[Show]
+                                </h5>}
+                        </div>
 
-                    <div className="pluckdeck">
+                        {main_list.length > 0 ?
+                        <div className={showMain ? "card-pool-fill2": "hidden2"}>
+                        {main_list.sort((a,b) => a.card_number - b.card_number).map((card) => {
+                            return (
+                                <div style={{display: "flex", justifyContent: "center"}}>
+                                    <img
+                                        className="builder-card2 pointer"
+                                        onClick={() => handleRemoveCard(card)}
+                                        title={card.name}
+                                        src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                        alt={card.name}/>
+                                </div>
+                            );
+                        })}
+                    </div> :
+                    <h4 className="left no-cards">No cards added</h4>}
+                </div>
+                </div>
+
+                <div className="pluckdeck">
                         <div>
                             <div style={{display: "flex", alignItems: "center", marginLeft: "20px"}}>
                                 <h2

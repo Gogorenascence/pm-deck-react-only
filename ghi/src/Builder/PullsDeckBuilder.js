@@ -639,8 +639,8 @@ function PullsDeckBuilder(props) {
                 handleRemoveCard={handleRemoveCard}
             />
             {listView?
-                <div className="deck-list">
-                        <div className="maindeck3">
+                <div className="deck-list media-display">
+                    <div className="maindeck3">
                         <div style={{marginLeft: "20px"}}>
                             <div style={{display: "flex", alignItems: "center"}}>
                                 <h2
@@ -662,7 +662,7 @@ function PullsDeckBuilder(props) {
                                                 <div className="card-container pointer">
                                                     <h5 onClick={() => handleRemoveCard(card)}>{card.name}</h5>
                                                     <img
-                                                        className="card-image"
+                                                        className="card-image media-hover-center"
                                                         src={card.picture_url}
                                                         alt={card.name}
                                                     />
@@ -671,11 +671,11 @@ function PullsDeckBuilder(props) {
                                         );
                                     })}
                                 </>:
-                            <h4 className="left no-cards">No cards added</h4>}
+                            <h4 className="left margin-0 media-margin-bottom-20">No cards added</h4>}
                         </div>
                     </div>
 
-                    <div className="pluckdeck3">
+                    <div className="pluckdeck3 media-margin-top-10">
                         <div style={{marginLeft: "20px"}}>
                         <div style={{display: "flex", alignItems: "center"}}>
                                 <h2
@@ -697,7 +697,7 @@ function PullsDeckBuilder(props) {
                                                 <div className="card-container pointer">
                                                     <h5 onClick={() => handleRemoveCard(card)}>{card.name}</h5>
                                                     <img
-                                                        className="card-image"
+                                                        className="card-image media-hover-center"
                                                         src={card.picture_url}
                                                         alt={card.name}
                                                     />
@@ -706,7 +706,7 @@ function PullsDeckBuilder(props) {
                                         );
                                     })}
                                 </>:
-                            <h4 className="left no-cards">No cards added</h4>}
+                            <h4 className="left margin-0 media-margin-bottom-20">No cards added</h4>}
                         </div>
                     </div>
                 </div>

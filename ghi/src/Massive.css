@@ -3325,6 +3325,36 @@ button:hover {
   filter: grayscale(1);
 }
 
+.card-image3 {
+  position: absolute;
+  z-index: 200;
+  width: 338px;
+  margin: 2.5% 0px 0px 0%;
+  border-radius: 17px;
+  overflow: hidden;
+  top: 100%;
+  left: 50%;
+  display: none;
+  transform: translate(10%, -80%);
+  border: 1px solid white;
+}
+
+.margin-left-20 {
+  margin-left: 20px;
+}
+
+.margin-0 {
+  margin: 0 0 0 0;
+}
+
+.error3 {
+  text-align: left;
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 0;
+}
+
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;
@@ -3384,6 +3414,10 @@ button:hover {
 
   .media-margin-bottom-none {
     margin-bottom: 0;
+  }
+
+  .media-margin-bottom-20 {
+    margin-bottom: 20px;
   }
 
   .media-card-image-wrapper {
@@ -3970,6 +4004,10 @@ button:hover {
     border: 1px solid white;
   }
 
+  .media-hover-center {
+    top: 0%;
+    left: 0%;
+  }
 
 }
 
