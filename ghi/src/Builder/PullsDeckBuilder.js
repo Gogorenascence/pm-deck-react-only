@@ -622,7 +622,7 @@ function PullsDeckBuilder(props) {
                                 <h2
                                     className="left"
                                     style={{margin: "1% 0px 1% 20px", fontWeight: "700"}}
-                                >Card Pool</h2>
+                                >Pulled Cards</h2>
                                 <img className="logo" src="https://i.imgur.com/YpdBflG.png" alt="cards icon"/>
                             </div>
                             <div className="inScrollable">
