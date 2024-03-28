@@ -104,100 +104,94 @@ function ArticlesPage({
 
     return (
         <div className="white-space">
-            <span className="media-flex-center">
-                <div className="wide400p">
-                    <h1 className="left-h1">Article Search</h1>
-                    <input
-                        className="left dcbsearch-x-large"
-                        type="text"
-                        placeholder=" Headline Contains..."
-                        name="title"
-                        value={newsQuery.title}
-                        onChange={handleNewsQuery}>
-                    </input>
-                    <br/>
-                    <input
-                        className="left dcbsearch-x-large"
-                        type="text"
-                        placeholder=" Article Contains..."
-                        name="content"
-                        value={newsQuery.content}
-                        onChange={handleNewsQuery}>
-                    </input>
-                    <br/>
-                    <div className="flex-items">
-                        <input
-                            className="left dcbsearch-medium"
-                            type="date"
-                            placeholder=" Starting Date"
-                            max={maxDate}
-                            onChange={handleNewsQuery}
-                            name="startingDate"
-                            value={newsQuery.startingDate}>
-                        </input>
-                        <select
-                            className="left dcbsearch-medium"
-                            type="text"
-                            placeholder=" Section"
-                            name="section"
-                            value={newsQuery.section}
-                            onChange={handleNewsQuery}>
-                            <option value="">Section</option>
-                            <option value="guides">Guides</option>
-                            <option value="lore">Lore</option>
-                            <option value="releases">Releases</option>
-                            <option value="game">Game</option>
-                            <option value="design">Design</option>
-                            <option value="site">Site</option>
-                            <option value="social">Social</option>
-                            <option value="events">Events</option>
-                            <option value="simulator">Simulator</option>
-                        </select>
-                        <select
-                            className="left dcbsearch-medium"
-                            type="text"
-                            placeholder=" Sorted By"
-                            value={newsSortState}
-                            onChange={handleNewsSortState}>
-                            <option value="none">Sorted By</option>
-                            <option value="newest">Newest</option>
-                            <option value="oldest">Oldest</option>
-                        </select>
-                    </div>
-                    <div className="flex-items margin-top-10">
-                        <input
-                            style={{margin: "2px 5px 0 7px", height:"10px"}}
-                            type="checkbox"
-                            onChange={handleNewsCheck}
-                            name="news"
-                            checked={newsQuery.news}
-                            >
-                        </input>
-                        <label for="news"
-                            className="bold"
-                        >
-                            News Article
-                        </label>
-                    </div>
-                    <br/>
-                    <div className="flex">
-                        <button
-                            className="left"
-                            variant="dark"
-                            onClick={handleResetNewsQuery}
-                            >
-                            Reset Filters
-                        </button>
-                    </div>
-                    { loading ?
-                        <div className="loading-container">
-                            <div className="loading-spinner"></div>
-                        </div> :
-                        <h4 className="left-h3">Showing Results 1 - {completelyFilteredNews.slice(0, someMoreNews).length} of {completelyFilteredNews.length}</h4>}
-
-                </div>
-            </span>
-
+            <h1 className="left-h1">Article Search</h1>
+            <h2 className="left">Search all news and articles</h2>
+            <input
+                className="left dcbsearch-x-large"
+                type="text"
+                placeholder=" Headline Contains..."
+                name="title"
+                value={newsQuery.title}
+                onChange={handleNewsQuery}>
+            </input>
+            <br/>
+            <input
+                className="left dcbsearch-x-large"
+                type="text"
+                placeholder=" Article Contains..."
+                name="content"
+                value={newsQuery.content}
+                onChange={handleNewsQuery}>
+            </input>
+            <br/>
+            <div className="flex-items">
+                <input
+                    className="left dcbsearch-medium"
+                    type="date"
+                    placeholder=" Starting Date"
+                    max={maxDate}
+                    onChange={handleNewsQuery}
+                    name="startingDate"
+                    value={newsQuery.startingDate}>
+                </input>
+                <select
+                    className="left dcbsearch-medium"
+                    type="text"
+                    placeholder=" Section"
+                    name="section"
+                    value={newsQuery.section}
+                    onChange={handleNewsQuery}>
+                    <option value="">Section</option>
+                    <option value="guides">Guides</option>
+                    <option value="lore">Lore</option>
+                    <option value="releases">Releases</option>
+                    <option value="game">Game</option>
+                    <option value="design">Design</option>
+                    <option value="site">Site</option>
+                    <option value="social">Social</option>
+                    <option value="events">Events</option>
+                    <option value="simulator">Simulator</option>
+                </select>
+                <select
+                    className="left dcbsearch-medium"
+                    type="text"
+                    placeholder=" Sorted By"
+                    value={newsSortState}
+                    onChange={handleNewsSortState}>
+                    <option value="none">Sorted By</option>
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+            <div className="flex-items margin-top-10">
+                <input
+                    style={{margin: "2px 5px 0 7px", height:"10px"}}
+                    type="checkbox"
+                    onChange={handleNewsCheck}
+                    name="news"
+                    checked={newsQuery.news}
+                    >
+                </input>
+                <label for="news"
+                    className="bold"
+                >
+                    News Article
+                </label>
+            </div>
+            <div className="flex">
+                <button
+                    className="left margin-top-10"
+                    variant="dark"
+                    onClick={handleResetNewsQuery}
+                    >
+                    Reset Filters
+                </button>
+            </div>
+            { loading ?
+                <div className="loading-container">
+                    <div className="loading-spinner"></div>
+                </div> :
+                <h4 className="left-h3">Showing Results 1 - {completelyFilteredNews.slice(0, someMoreNews).length} of {completelyFilteredNews.length}</h4>}
             <br/>
             <div className="newsPage">
                 {completelyFilteredNews.slice(0, someMoreNews).map((article, index) => {
