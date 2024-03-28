@@ -324,7 +324,7 @@ function PullsDeckBuilder(props) {
             <div className="between-space">
                 <span className="media-flex-center">
                     <div>
-                        <h1 className="left-h1-2">Deck Builder</h1>
+                        <h1 className="left-h1-2">Pulls Deck Builder</h1>
                         <div className="media-vert-30">
                             <h2 className="left">Search for cards</h2>
                             <input

@@ -206,7 +206,7 @@ function NavBar() {
                   Card Sets
                 </div>
               </NavLink>
-              <NavLink className="nav-dropdown-item" to="/cardsets" onClick={() => handleShowMobileMenu()}>
+              <NavLink className="nav-dropdown-item" to="/pulls/deckbuilder" onClick={() => handleShowMobileMenu()}>
                 <div className="dropdown-select">
                   Pulls Deck Builder
                 </div>
