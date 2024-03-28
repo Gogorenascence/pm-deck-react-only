@@ -127,7 +127,7 @@ function PullsDeckBuilder(props) {
     });
 
     const boosterSet = boosterSetPulled
-    const ultraRares = boosterSetPulled.ultra_rares
+    const ultraRares = boosterSetPulled.ultra_rares ?? ""
 
     const [sortState, setSortState] = useState("none");
 
