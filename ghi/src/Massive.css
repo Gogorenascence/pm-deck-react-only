@@ -4009,6 +4009,11 @@ button:hover {
     left: 0%;
   }
 
+  .media-h1-h2 {
+    font-size: 1.5rem; /* Adjust the font size as per your requirement */
+    font-weight: 500;
+  }
+
 }
 
 /* @media (prefers-color-scheme: dark) and (max-width: 1333px){

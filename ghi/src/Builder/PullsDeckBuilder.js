@@ -577,7 +577,7 @@ function PullsDeckBuilder(props) {
                                             <div style={{display: "flex", justifyContent: "center"}} key={index}>
                                                 { main_list.concat(pluck_list).filter(cardItem => cardItem.card_number === card.card_number).length < 4?
                                                     <>
-                                                        {ultraRares.includes(card.card_number) ?
+                                                        {ultraRares?.includes(card.card_number) ?
                                                             <div className="ultra2 pointer glow3"
                                                                 style={{display: "flex", justifyContent: "center"}}>
                                                                 <img
@@ -629,8 +629,8 @@ function PullsDeckBuilder(props) {
                                 <NavLink to="/cardsets"
                                     className="black-white nav-link margin-bottom-20">
                                     <div>
-                                        <h1>No pulled cards</h1>
-                                        <h1 >Click here for Card Set Search</h1>
+                                        <h1 className="media-h1-h2">No pulled cards</h1>
+                                        <h1 className="media-h1-h2">Click here for Card Set Search</h1>
                                     </div>
                                 </NavLink>
                             </div>
@@ -755,7 +755,7 @@ function PullsDeckBuilder(props) {
                                 {main_list.sort((a,b) => a.card_number - b.card_number).map((card) => {
                                     return (
                                         <div style={{display: "flex", justifyContent: "center"}}>
-                                            {ultraRares.includes(card.card_number) ?
+                                            {ultraRares?.includes(card.card_number) ?
                                                 <div className="ultra">
                                                     <img
                                                         onClick={() => handleRemoveCard(card)}
@@ -812,7 +812,7 @@ function PullsDeckBuilder(props) {
                                 {pluck_list.sort((a,b) => a.card_number - b.card_number).map((card) => {
                                     return (
                                         <div style={{display: "flex", justifyContent: "center"}}>
-                                            {ultraRares.includes(card.card_number) ?
+                                            {ultraRares?.includes(card.card_number) ?
                                                 <div className="ultra">
                                                     <img
                                                         onClick={() => handleRemoveCard(card)}
