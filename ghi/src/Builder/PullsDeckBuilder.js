@@ -211,14 +211,20 @@ function PullsDeckBuilder(props) {
             setPluckList([...pluck_list, card]);
             console.log(pluck_list);
             setSelectedPluckCards([...selectedPluckCards, { card, index }]);
+
         }else{
             setMainList([...main_list, card]);
             console.log(main_list);
             setSelectedMainCards([...selectedMainCards, { card, index }]);
         }
+        const poolIndex = cards.indexOf(card);
+        const newCards = [...cards];
+        newCards.splice(poolIndex, 1)
+        setCards(newCards)
     }
 
     const handleRemoveCard = (card) => {
+        setCards([...cards, card])
         if (card.card_type[0] === 1006 ||
             card.card_type[0] === 1007 ||
             card.card_type[0] === 1008){
@@ -318,7 +324,7 @@ function PullsDeckBuilder(props) {
             <div className="between-space">
                 <span className="media-flex-center">
                     <div>
-                        <h1 className="left-h1">Deck Builder</h1>
+                        <h1 className="left-h1-2">Deck Builder</h1>
                         <div className="media-vert-30">
                             <h2 className="left">Search for cards</h2>
                             <input
@@ -567,23 +573,31 @@ function PullsDeckBuilder(props) {
                                 <div style={{margin: "8px"}}>
                                 <div className="card-pool-fill">
                                     {all_cards.slice(0, showMore).map((card, index) => {
-                                        const isSelectedMain = selectedMainCards.some((selectedCard) => selectedCard.index === index);
-                                        const isSelectedPluck = selectedPluckCards.some((selectedCard) => selectedCard.index === index);
                                         return (
                                             <div style={{display: "flex", justifyContent: "center"}} key={index}>
-                                                {ultraRares.includes(card.card_number) ?
-                                                    <div className={ (isSelectedMain||isSelectedPluck) ? "selected ultra2 pointer glow3" : "ultra2 pointer glow3"}
-                                                    style={{display: "flex", justifyContent: "center"}}>
-                                                        <img
-                                                            onClick={() => handleClick(card, index)}
-                                                            className="builder-card4 pointer"
-                                                            title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
-                                                            src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                                            alt={card.name}/>
-                                                    </div>:
+                                                { main_list.concat(pluck_list).filter(cardItem => cardItem.card_number === card.card_number).length < 4?
+                                                    <>
+                                                        {ultraRares.includes(card.card_number) ?
+                                                            <div className="ultra2 pointer glow3"
+                                                                style={{display: "flex", justifyContent: "center"}}>
+                                                                <img
+                                                                    onClick={() => handleClick(card, index)}
+                                                                    className="builder-card4 pointer"
+                                                                    title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
+                                                                    src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                                    alt={card.name}/>
+                                                            </div>:
+                                                            <img
+                                                                onClick={() => handleClick(card, index)}
+                                                                className="builder-card pointer glow3"
+                                                                title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
+                                                                src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                                alt={card.name}/>
+                                                        }
+                                                    </>
+                                                    :
                                                     <img
-                                                        onClick={() => handleClick(card, index)}
-                                                        className={ (isSelectedMain||isSelectedPluck) ? "selected builder-card pointer glow3" : "builder-card pointer glow3"}
+                                                        className="builder-card glow3 greyScale"
                                                         title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
                                                         src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
                                                         alt={card.name}/>

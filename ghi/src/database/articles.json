@@ -1457,9 +1457,9 @@
   "subtitle": "",
   "author": "TeamPlayMaker",
   "story_date": "2024-03-26",
-  "updated": null,
+  "updated": "2024-03-27",
   "section": "site",
-  "content": "The Deck Builder pages (excluding the Pull Deck Builder page) now greys out cards when reaching 4 copies in a deck or if they do not meet Pluck deck building requirements.",
+  "content": "The Deck Builder pages (excluding the Pull Deck Builder page) now greys out cards when reaching 4 copies in a deck or if they do not meet Pluck deck building requirements.//\nCards in the Pull Deck Builder page now grey out when reaching 4 copies in a deck. Cards in the Pull Deck Builder page are also removed from the card pool when selected and added back when deselected.\n",
   "images": {},
   "news": true,
   "site_link": ""
