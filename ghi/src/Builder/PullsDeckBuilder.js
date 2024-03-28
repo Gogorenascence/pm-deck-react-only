@@ -472,7 +472,7 @@ function PullsDeckBuilder(props) {
                                 className="left dcbsearch-medium"
                                 type="text"
                                 name="boosterSet">
-                                <option value={boosterSet.id}>{boosterSet.name}</option>
+                                <option value={boosterSet.id}>{boosterSet.name ?? "No Set Available"}</option>
                             </select>
                             <select
                                 className="left dcbsearch-medium"
