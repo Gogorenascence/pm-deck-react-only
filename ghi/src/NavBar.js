@@ -100,6 +100,11 @@ function NavBar() {
                       Card Sets
                     </div>
                   </NavLink>
+                  <NavLink className="dropdown-select username2" to="/pulls/deckbuilder" onClick={() => followLink()}>
+                    <div className="nav-dropdown-item">
+                      Pulls Deck Builder
+                    </div>
+                  </NavLink>
                 </div>:null
                 }
             </li>
@@ -199,6 +204,11 @@ function NavBar() {
               <NavLink className="nav-dropdown-item" to="/cardsets" onClick={() => handleShowMobileMenu()}>
                 <div className="dropdown-select">
                   Card Sets
+                </div>
+              </NavLink>
+              <NavLink className="nav-dropdown-item" to="/cardsets" onClick={() => handleShowMobileMenu()}>
+                <div className="dropdown-select">
+                  Pulls Deck Builder
                 </div>
               </NavLink>
             </div>:null

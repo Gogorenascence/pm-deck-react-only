@@ -16,6 +16,8 @@ function PullPage(props) {
     const [num, setNum] = useState("");
     const [savedPulls, setSavedPulls] = useState([]);
     const {
+        boosterSetPulled,
+        setBoosterSetPulled,
         pulls,
         setPulls,
         pullsList,
@@ -106,6 +108,7 @@ function PullPage(props) {
     }
 
     const handleClearPulls = (event) => {
+        setBoosterSetPulled("")
         setPulls([])
         setSavedPulls([])
     }
@@ -197,7 +200,7 @@ function PullPage(props) {
                 </button>
                 <button
                     className="left media-center"
-                    onClick={() => navigate(`/cardsets/${card_set_id}/pulls/deckbuilder`)}>
+                    onClick={() => navigate(`/pulls/deckbuilder`)}>
                     Create Deck
                 </button>
 

@@ -138,7 +138,7 @@ function App() {
                                                                     cards={cards}
                                                                     boosterSets={booster_sets}
                                                                   />} />
-              <Route path="/cardsets/:card_set_id/pulls/deckbuilder" element={<PullsDeckBuilder
+              <Route path="/pulls/deckbuilder" element={<PullsDeckBuilder
                                                                                 boosterSets={booster_sets}
                                                                               />} />
               <Route path="/gameplay" element={<GamePlayPage />} />

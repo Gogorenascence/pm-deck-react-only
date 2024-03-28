@@ -90,7 +90,7 @@ function PullsDeckBuilder(props) {
     const [selectedPluckCards, setSelectedPluckCards] = useState([]);
 
     const [cards, setCards] = useState([]);
-    const {pulls}= useContext(PullsContext);
+    const {boosterSetPulled, pulls}= useContext(PullsContext);
 
     const [showMore, setShowMore] = useState(50);
     const [listView, setListView] = useState(false);
@@ -126,8 +126,8 @@ function PullsDeckBuilder(props) {
         tag: "",
     });
 
-    const boosterSet = boosterSets.find(boosterSet => boosterSet.id === card_set_id)
-    const ultraRares = boosterSet.ultra_rares
+    const boosterSet = boosterSetPulled
+    const ultraRares = boosterSetPulled.ultra_rares
 
     const [sortState, setSortState] = useState("none");
 

@@ -12,6 +12,8 @@ function PackOpener(props) {
             num,
     } = props
     const {
+        boosterSetPulled,
+        setBoosterSetPulled,
         setPullsList,
         pulling,
         setPulling
@@ -48,6 +50,7 @@ function PackOpener(props) {
                 "pluck_deck_cards": 0
             }
         }
+        setBoosterSetPulled(boosterSet)
         if (maxVariables.length) {
             for (let i = 0; i < boosterSet.ratio["mv"]; i++) {
                 const randomIndex = Math.floor(Math.random() * maxVariables.length);
@@ -147,6 +150,7 @@ function PackOpener(props) {
                     "pluck_deck_cards": 0
                 }
             }
+            setBoosterSetPulled(boosterSet)
 
             for (let i = 0; i < num; i++) {
                 const pull = await openPack()

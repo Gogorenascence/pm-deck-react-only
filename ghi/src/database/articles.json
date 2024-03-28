@@ -1463,4 +1463,19 @@
   "images": {},
   "news": true,
   "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "6605b50f4759e4cddf39b844"
+  },
+  "title": "Pulls Deck Builder added to Nav Bar",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-03-28",
+  "updated": null,
+  "section": "site",
+  "content": "The Pulls Deck Builder page has been added to Nav Bar under the cards section.",
+  "images": {},
+  "news": true,
+  "site_link": ""
 }]
