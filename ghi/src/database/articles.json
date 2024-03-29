@@ -1422,10 +1422,10 @@
   "title": "Card changes: 3/24 - 3/30",
   "subtitle": "",
   "author": "TeamPlayMaker",
-  "story_date": "2024-03-25",
-  "updated": "2024-03-25",
+  "story_date": "2024-03-29",
+  "updated": "2024-03-29",
   "section": "releases",
-  "content": "Change in card effects:@@]]//\nGenetic Capture Device]]//\nPrevious: <Limited> Place 1 Altered Fighter or Aura from your hand under this Item.//\nNew: <Limited> Place 1 Altered or Nature Fighter from your hand under this Item.//\n\nPantheraMan]]//\nPrevious: ● Heal 1 HP and draw 1 Pluck.//\nNew: ● Heal 2 HP and draw 1 Pluck.//",
+  "content": "Change in card effects:@@]]//\nGenetic Capture Device]]//\nPrevious: <Limited> Place 1 Altered Fighter or Aura from your hand under this Item.//\nNew: <Limited> Place 1 Altered or Nature Fighter from your hand under this Item.//\n\nPantheraMan]]//\nPrevious: ● Heal 1 HP and draw 1 Pluck.//\nNew: ● Heal 2 HP and draw 1 Pluck.//\n\nStar Map]]//\nPrevious: Discard this Item and 1 unresolved card in your String; damage dealt by 1 Cosmic or Mystic Move in your String is treated as bypassing damage.//\nNew: Discard 3 unresolved Cosmic/Mystic cards in your String; damage dealt by 1 Cosmic or Mystic Move in your String is treated as bypassing damage this turn. ",
   "images": {
     "1": [
       {
@@ -1443,6 +1443,15 @@
         "link": "https://www.jothplaymaker.com/cards/1001",
         "order": 0,
         "alt_text": "PantheraMan"
+      }
+    ],
+    "7": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg15i.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1130",
+        "order": 1,
+        "alt_text": "Star Map"
       }
     ]
   },
