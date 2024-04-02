@@ -63,7 +63,8 @@ function PlayAreaModal({
         }
     }, [playArea[showPlayAreaModal.objectName]]);
 
-    const handleShowCardMenu = (index) => {
+    const handleShowCardMenu = (event, index) => {
+        event.preventDefault()
         showCardMenu === index?
         setShowCardMenu(null):
             setShowCardMenu(index)
@@ -150,7 +151,7 @@ function PlayAreaModal({
                                             </div>
 
                                             <img
-                                                onClick={() => handleShowCardMenu(index)}
+                                                onContextMenu={(event) => handleShowCardMenu(event, index)}
                                                 onMouseEnter={() => handleHoveredCard(card)}
                                                 // onDoubleClick={() => handlePluck(index)}
                                                 className={
