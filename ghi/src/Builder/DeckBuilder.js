@@ -262,6 +262,13 @@ function DeckBuilder(props) {
             return randomString;
         }
 
+    const seeCombinedList = (card) => {
+        const cardInList = combinedList.filter(cardItem => cardItem.card_number === card.card_number)
+        if (cardInList.length > 0) {
+            return true
+        }
+    }
+
     return (
         <div className="white-space">
             <div className="between-space">
@@ -332,11 +339,12 @@ function DeckBuilder(props) {
                                 {all_cards.slice(0, showMore).map((card) => {
                                     return (
                                         <div style={{display: "flex", justifyContent: "center"}}>
-                                            { (card.card_type[0] < 1006 || card.hero_id === "GEN" || main_list?.filter(cardItem => cardItem.hero_id === card.hero_id).length > 3)
+                                            { ((card.card_type[0] < 1006 && main_list.length < 60)||
+                                                (card.card_type[0] > 1005 && (card.hero_id === "GEN" || main_list?.filter(cardItem => cardItem.hero_id === card.hero_id).length > 3) && pluck_list.length < 30))
                                                 && combinedList.filter(cardItem => cardItem.card_number === card.card_number).length < 4?
                                                 <img
                                                     onClick={() => handleClick(card)}
-                                                    className={uniqueList.includes(card) ? "selected builder-card pointer glow3" : "builder-card pointer glow3"}
+                                                    className={seeCombinedList(card) ? "selected builder-card pointer glow3" : "builder-card pointer glow3"}
                                                     title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
                                                     src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
                                                     alt={card.name}/>
@@ -548,7 +556,7 @@ function DeckBuilder(props) {
                                             <img
                                                 className="builder-card2 pointer greyScale"
                                                 onClick={() => handleRemoveCard(card)}
-                                                title={card.name}
+                                                title="The Main deck needs at least 4 cards with the same Hero ID as this card."
                                                 src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
                                                 alt={card.name}/>
                                         }

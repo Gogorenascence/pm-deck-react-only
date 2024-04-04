@@ -6842,7 +6842,7 @@
   "enthusiasm": null,
   "effect_text": "Select 1 of your placed cards; resolve that card's main effect, then discard it.",
   "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String (if that card is removed from your String, the placed card(s) is discarded).",
-  "illustrator": "TBD",
+  "illustrator": "mvthwus",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gf.jpg",
   "file_name": "i1b5gf.jpg",
   "card_type": [
@@ -6867,11 +6867,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 3,
-    "day": 8,
-    "time": "16:08",
+    "month": 4,
+    "day": 3,
+    "time": "23:22",
     "full_time": {
-      "$date": "2024-03-08T16:08:26.297Z"
+      "$date": "2024-04-03T23:22:11.129Z"
     }
   },
   "alpha": null,
@@ -6889,7 +6889,7 @@
   "enthusiasm": null,
   "effect_text": "Add 1 of your placed cards to your String, then place another card from your hand under a card in your String (if that card is removed from your String, the placed card(s) is discarded).",
   "second_effect_text": "<Trigger> If you discard a card(s) from your hand or String, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your String/Active Pluck. ",
-  "illustrator": "TBD",
+  "illustrator": "mvthwus",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5ga.jpg",
   "file_name": "i1b5ga.jpg",
   "card_type": [
@@ -6912,11 +6912,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 3,
-    "day": 8,
-    "time": "16:09",
+    "month": 4,
+    "day": 3,
+    "time": "23:22",
     "full_time": {
-      "$date": "2024-03-08T16:09:29.756Z"
+      "$date": "2024-04-03T23:22:20.134Z"
     }
   },
   "alpha": null,
@@ -6934,7 +6934,7 @@
   "enthusiasm": null,
   "effect_text": "Deal 1 piercing damage to your strongest foe for each of your placed cards/Pluck (max of 4).",
   "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.",
-  "illustrator": "TBD",
+  "illustrator": "mvthwus",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gm.jpg",
   "file_name": "i1b5gm.jpg",
   "card_type": [
@@ -6957,11 +6957,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 3,
-    "day": 8,
-    "time": "16:09",
+    "month": 4,
+    "day": 3,
+    "time": "23:22",
     "full_time": {
-      "$date": "2024-03-08T16:09:15.796Z"
+      "$date": "2024-04-03T23:22:31.124Z"
     }
   },
   "alpha": null,
@@ -6979,7 +6979,7 @@
   "enthusiasm": 12,
   "effect_text": "Target: Strongest foe.//<1-5> Deal 2 damage.//<6-11> Deal 1 piercing damage for each of your placed cards/Pluck (max of 5). Add 1 placed card to your hand.//<12+> Deal 1 piercing damage for each of your placed cards/Pluck (max of 5). Add 1 placed card to your String.",
   "second_effect_text": "<Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.",
-  "illustrator": "TBD",
+  "illustrator": "mvthwus",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5ge.jpg",
   "file_name": "i1b5ge.jpg",
   "card_type": [
@@ -7002,11 +7002,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 10,
-    "time": "00:33",
+    "month": 4,
+    "day": 3,
+    "time": "23:23",
     "full_time": {
-      "$date": "2024-02-10T00:33:55.384Z"
+      "$date": "2024-04-03T23:23:17.271Z"
     }
   },
   "alpha": null,
@@ -7024,7 +7024,7 @@
   "enthusiasm": null,
   "effect_text": "<Trigger> During the Start Phase or during a player's turn, cards can not be discarded from your hand or String by your foes' card effects this round.",
   "second_effect_text": "Once per round, add 1 of your placed cards/Pluck to your hand/Reserve.",
-  "illustrator": "TBD",
+  "illustrator": "mvthwus",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl19gi.jpg",
   "file_name": "i1pl19gi.jpg",
   "card_type": [
@@ -7048,11 +7048,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 10,
-    "time": "00:34",
+    "month": 4,
+    "day": 3,
+    "time": "23:22",
     "full_time": {
-      "$date": "2024-02-10T00:34:03.504Z"
+      "$date": "2024-04-03T23:22:55.922Z"
     }
   },
   "alpha": null,
@@ -7070,7 +7070,7 @@
   "enthusiasm": null,
   "effect_text": "Resolve 1 of the following effects://● Discard 1 card from your hand; pull 1 Magic card.//● Discard 1 of your placed Nature cards; add 1 Magic card of the same type from your Main deck to your String.//● Place 1 card from your hand under 1 card or Pluck in your String/Active Pluck (if that card/Pluck is removed from your String/Active Pluck, the placed card(s) is discarded).",
   "second_effect_text": "",
-  "illustrator": "TBD",
+  "illustrator": "mvthwus",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl19ge.jpg",
   "file_name": "i1pl19ge.jpg",
   "card_type": [
@@ -7090,11 +7090,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 18,
-    "time": "00:35",
+    "month": 4,
+    "day": 3,
+    "time": "23:23",
     "full_time": {
-      "$date": "2024-01-18T00:35:33.916Z"
+      "$date": "2024-04-03T23:23:05.633Z"
     }
   },
   "alpha": null,
@@ -7112,7 +7112,7 @@
   "enthusiasm": null,
   "effect_text": "<Trigger> If you would take damage, discard 1 of your placed cards to reduce that damage by 1.",
   "second_effect_text": "<Critical> Add 1 Fighter from your placed cards to your String.",
-  "illustrator": "TBD",
+  "illustrator": "mvthwus",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl19gcb.jpg",
   "file_name": "i1pl19gcb.jpg",
   "card_type": [
@@ -7135,11 +7135,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 10,
-    "time": "00:34",
+    "month": 4,
+    "day": 3,
+    "time": "23:22",
     "full_time": {
-      "$date": "2024-02-10T00:34:12.484Z"
+      "$date": "2024-04-03T23:22:41.574Z"
     }
   },
   "alpha": null,

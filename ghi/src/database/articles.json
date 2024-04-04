@@ -1487,4 +1487,19 @@
   "images": {},
   "news": true,
   "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "660de51ac285d86b6c9539ec"
+  },
+  "title": "Artwork for Gizma added",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-04-03",
+  "updated": null,
+  "section": "design",
+  "content": "",
+  "images": {},
+  "news": true,
+  "site_link": ""
 }]

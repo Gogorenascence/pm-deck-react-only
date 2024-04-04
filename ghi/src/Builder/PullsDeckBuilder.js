@@ -575,7 +575,9 @@ function PullsDeckBuilder(props) {
                                     {all_cards.slice(0, showMore).map((card, index) => {
                                         return (
                                             <div style={{display: "flex", justifyContent: "center"}} key={index}>
-                                                { main_list.concat(pluck_list).filter(cardItem => cardItem.card_number === card.card_number).length < 4?
+                                                { ((card.card_type[0] < 1006 && main_list.length < 60)||
+                                                    (card.card_type[0] > 1005 && pluck_list.length < 30))
+                                                    && main_list.concat(pluck_list).filter(cardItem => cardItem.card_number === card.card_number).length < 4?
                                                     <>
                                                         {ultraRares?.includes(card.card_number) ?
                                                             <div className="ultra2 pointer glow3"
