@@ -43,7 +43,7 @@
   "content": "Defending with Main Deck Cards@@]]//\nMain deck cards have the ability to protect your HP by defending and taking the damage instead. Players can only defend with 1 card per round.//\nWhen defending with a card, the card is revealed if it wasn't already.// \nIf a MAX VARIABLE is defending, it’s resolved immediately and then the player can choose to defend with the new card.//\n\nCard HP@@]]//\nAll cards in the Main deck start with 5 HP and have a maximum of 8 HP.//\nWhen a card takes damage exceeding its HP, it is defeated and discarded from the String; all extra damage is ignored.// \nTo indicate a card’s HP, players place damage tokens equal to the damage it's taken.//\n\nHealing Cards@@]]//\nEffects that heal HP with no specified target can be used on cards.//\nIf the Fighter’s HP exceeds the original 5 HP, the player can flip their damage tokens over to their white sides and place an amount equal to the extra HP.//\n\nDealing damage vs Taking damage@@]]// \nDealing damage and having a player take damage are treated differently. If a card mentions taking damage, cards can not be used to defend, and all effects regarding targeting and dealt damage are ignored.// \n\nReactions@@]]//\nFighters have special effects that trigger when defending called Reactions.//\nIf you reveal a Fighter and they have a reaction(s), place the appropriate number of Reaction tokens on top of the card (each reaction has its own token).// \nIf the reaction has a limited number of activations, remove one of those tokens each time.//\nA player can resolve multiple reactions at the same time.//\n\nReactions include the following:]]//\n\nBlock X]]//\nWhen you are targeted for damage, no damage is taken. X is the number of available activations.// \n\nCounter X]]//\nWhen you are targeted for damage, the player targeting you is dealt X damage after the resolution of their card. \nCan not be used in response to another Counter.//\n\nEndure X]]//\nIf your Fighter would be defeated, their HP is reduced to 1 instead. If a card effect would discard or remove a card in your play, Endure can be used to prevent that removal. X is the number of available activations.//\n\nRedirect X]]//\nWhen you are targeted for damage, an adjacent foe other than the targeting player becomes the new target. X is the number of available activations. Can not be used in response to another Redirect.//\n\nTypes of damage@@]]//\nIn addition to normal damage, there are special types of damage that interact uniquely with cards being used to defend: Bypassing damage and Piercing damage.//\nBypassing]]//\nDamage is dealt directly to the player; cards can not defend and reactions do not trigger (Block excluded).//\nPiercing]]//\nDamage exceeding the defending card's HP is dealt to directly the defending player. Also ignores Block.\n",
   "game_format": "Standard",
   "skill_level": "advanced",
-  "how_to_number": 6,
+  "how_to_number": 16,
   "images": {}
 },
 {
@@ -51,7 +51,7 @@
     "$oid": "6612ae83c285d86b6c953a2b"
   },
   "title": "Deck Building",
-  "updated": "2024-04-07",
+  "updated": null,
   "content": "Main Deck]]@@//\nThe Main deck must have between 40 to 60 cards.//\nThe Main deck is made up of Fighters, Auras, Moves, Endings and Any Types.//\nThe Main deck can contain no more than four copies of cards with the same card number.//\nPluck Deck]]@@//\nThe Pluck deck has no minimum, but can not have more than 30 cards.//\nThe Pluck deck is made up of Items, Events and Comebacks.//\nA card can only be added to the Pluck if it meets one of these conditions:]]//\nIts Hero ID is \"GEN\".//\nAt least four cards in the Main deck share its Hero ID.// \nThe Pluck deck, like the Main deck, can contain no more than four copies of cards with the same card number.//\n",
   "game_format": "Standard",
   "skill_level": "beginner",
@@ -67,4 +67,16 @@
       }
     ]
   }
+},
+{
+  "_id": {
+    "$oid": "6613054bc285d86b6c953a34"
+  },
+  "title": "Card Resolution",
+  "updated": null,
+  "content": "During their turn, players can resolve the main effect of cards in their String or Reserve.//\nThe effects of a resolved card or Pluck stay active as long as the it is the String or Active Pluck, respectively.//\nResolving Cards in a String]]@@//\nWhen resolving the main effect of a card, the player reveals the card if it was not already face up and follows the instructions written on the card.//\nThe resolution of each card is optional.//\nResolution Windows]]//\nCards in a String are resolved in order of their card types: all Fighters first, then all Auras, then all Moves and all Endings last.//\nEach card type has its own \"resolution window\" where all cards of that type must be resolved.//\nThe moment the player moves to the next resolution window, cards currently in the String of the previous types can no longer be resolved.// \nNew Cards and Missed Resolution Windows]]//\nIf a new card is added to the String outside of its type's resolution window, it can still be resolved, but it must must be the next card to be resolved.//\nEx. If a player adds a Fighter and Aura to their play, after resolving their Move. If the player wants to resolve either of the new cards, it will be before the Ending. Additionally, it will be the Fighter first, then the Aura.//  \nTargeting]]//\nIf multiple cards or players fit the criteria for your resolving card, you choose the target.//\nIf there are no applicable targets at the time of a card’s resolution, the effect will not occur, but the card will still count as being resolved.//\nFocus]]//\nSome cards require a dice roll to determine which effect is resolve; the dice result is called Focus.//\nWhen determining Focus, all cards in the String are reveal, then roll a number of dice equal to the number of matching classes in the String.//\nResolving Pluck]]@@//\nWhen resolving the main effect of Pluck, the player must place it in an open Active Pluck Slot; if none are available, it can not be resolved.//\nEnd Phase Maintenance@@]]//\nDuring the End Phase, all cards or Pluck that resolved main effect are sent to the discard pile.//\nUnresolved Cards@@]]//\nText that mentions \"Unresolved cards\" refers only to cards that have resolved their main effect.",
+  "game_format": "Standard",
+  "skill_level": "beginner",
+  "how_to_number": 6,
+  "images": {}
 }]
