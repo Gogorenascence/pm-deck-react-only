@@ -108,7 +108,7 @@ function HowToPage({
                 <div className="card-image-wrapper">
                     <div className="card-image-clip2">
                         <Card.Img
-                            src={images[0]? images[0].src : "https://i.imgur.com/8wqd1sD.png"}
+                            src="https://i.imgur.com/8wqd1sD.png"
                             alt={images[0]? images[0].alt_text : "howTo's first image"}
                             className="card-image2"
                             variant="bottom"/>
@@ -154,13 +154,13 @@ function HowToPage({
                                 :
                                     <p className="newsText2 margin-bottom-0">{line}</p>
                                 }
-                                <div className="newsImageContainer">
+                                <div className={howTo.images[index.toString()]?.length > 1? "newsImageContainer":"newsImageContainer2"}>
                                     {howTo.images[index.toString()] ?
                                         howTo.images[index.toString()].sort((a,b) => a.order - b.order).map(image => {
                                             return (
                                                 image.link?
                                                 <a href={getLink(image.link)}>
-                                                    <div className="margin-top-10 margin-bottom-10">
+                                                    <div className="flex-items-down-10-10">
                                                         <img className="newsImage"
                                                             src={image.src}
                                                             title={image.alt_text}
@@ -170,7 +170,7 @@ function HowToPage({
                                                     </div>
                                                 </a>
                                                 :
-                                                <div className="margin-top-10 margin-bottom-10">
+                                                <div className="flex-items-down-10-10">
                                                     <img className="newsImage"
                                                         src={image.src}
                                                         title={image.alt_text}

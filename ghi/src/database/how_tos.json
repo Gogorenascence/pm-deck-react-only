@@ -15,8 +15,8 @@
     "$oid": "65e8b01548f148842b8189cf"
   },
   "title": "The Start Phase and Priority",
-  "updated": "2024-03-06",
-  "content": "Player Priority]]@@//\nThe Start Phase is the point where the player Priority is initially determined.//\n\nString Size]]@@//\nPlayer Priority is first determined by how many cards are in each String; Strings with the fewest cards go first. Strings with 4 cards have the same level of Priority as a String with 5 or more cards.// \n\nEnthusiasm]]@@//\nBetween Strings of the same size, the String with the highest Enthusiasm goes first. Enthusiasm is confirmed by revealing their Ending; only 1 Ending can be used to determine Enthusiasm.// \nIf a String has 2 or more Endings, the player chooses which Ending to use.// \nStrings with no Ending have an Enthusiasm of 0.//\nTies in Enthusiasm are broken by the highest dice roll.//\n\nMAX VARIABLE@@]]//\nIf a MAX VARIABLE is placed as an Ending, it is resolved immediately and the Enthusiasm of the new Ending is used.//\n\nPriority is Fluid@@]]//\nAs Strings change in size and Enthusiasm throughout the course of the round, so does turn order.//\n\nFor example:]]// \nAll players have four cards in their Strings, but on their turn, the first player removes a card from the player going last; that player is now next in the turn order since they now have three cards in their String.//\n\nSimultaneous Actions@@]]//\nIf multiple players are performing the same action that can not occur simultaneously—like discarding or drawing cards, those actions will occur in the same order as player Priority. \n",
+  "updated": "2024-03-25",
+  "content": "Player Priority]]@@//\nThe Start Phase is the point where the player Priority is initially determined.//\n\nString Size]]@@//\nPlayer Priority is first determined by how many cards are in each String; Strings with the fewest cards go first.// \n\nEnthusiasm]]@@//\nBetween Strings of the same size, the String with the highest Enthusiasm goes first. Enthusiasm is confirmed by revealing their Ending; only 1 Ending can be used to determine Enthusiasm.// \nIf a String has 2 or more Endings, the player chooses which Ending to use.// \nStrings with no Ending have an Enthusiasm of 0.//\nTies in Enthusiasm are broken by the highest dice roll.//\n\nMAX VARIABLE@@]]//\nIf a MAX VARIABLE is placed as an Ending, it is resolved immediately and the Enthusiasm of the new Ending is used.//\n\nPriority is Fluid@@]]//\nAs Strings change in size and Enthusiasm throughout the course of the round, so does turn order.//\n\nFor example:]]// \nAll players have four cards in their Strings, but on their turn, the first player removes a card from the player going last; that player is now next in the turn order since they now have three cards in their String.//\n\nSimultaneous Actions@@]]//\nIf multiple players are performing the same action that can not occur simultaneously—like discarding or drawing cards, those actions will occur in the same order as player Priority. \n",
   "game_format": "Standard",
   "skill_level": "beginner",
   "how_to_number": 5,
@@ -45,4 +45,26 @@
   "skill_level": "advanced",
   "how_to_number": 6,
   "images": {}
+},
+{
+  "_id": {
+    "$oid": "6612ae83c285d86b6c953a2b"
+  },
+  "title": "Deck Building",
+  "updated": "2024-04-07",
+  "content": "Main Deck]]@@//\nThe Main deck must have between 40 to 60 cards.//\nThe Main deck is made up of Fighters, Auras, Moves, Endings and Any Types.//\nThe Main deck can contain no more than four copies of cards with the same card number.//\nPluck Deck]]@@//\nThe Pluck deck has no minimum, but can not have more than 30 cards.//\nThe Pluck deck is made up of Items, Events and Comebacks.//\nA card can only be added to the Pluck if it meets one of these conditions:]]//\nIts Hero ID is \"GEN\".//\nAt least four cards in the Main deck share its Hero ID.// \nThe Pluck deck, like the Main deck, can contain no more than four copies of cards with the same card number.//\n",
+  "game_format": "Standard",
+  "skill_level": "beginner",
+  "how_to_number": 3,
+  "images": {
+    "9": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/matching_h_id.png",
+        "caption": "\"PantheraMan\" has a Hero ID of \"PM1\", so \"Super Panther Claw\" added to the Pluck Deck.",
+        "link": null,
+        "order": 0,
+        "alt_text": "PantheraMan and Super Panther Claw"
+      }
+    ]
+  }
 }]

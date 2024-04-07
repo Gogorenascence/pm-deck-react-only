@@ -163,13 +163,13 @@ function ArticlePage({
                                 :
                                     <p className="newsText2 margin-bottom-0">{line}</p>
                                 }
-                                <div className="newsImageContainer">
+                                <div className={article.images[index.toString()]?.length > 1? "newsImageContainer":"newsImageContainer2"}>
                                     {article.images[index.toString()] ?
                                         article.images[index.toString()].sort((a,b) => a.order - b.order).map(image => {
                                             return (
                                                 image.link?
                                                 <a href={getLink(image.link)}>
-                                                    <div className="margin-top-10 margin-bottom-10">
+                                                    <div className="flex-items-down-10-10">
                                                         <img className="newsImage"
                                                             src={image.src}
                                                             title={image.alt_text}
@@ -179,7 +179,7 @@ function ArticlePage({
                                                     </div>
                                                 </a>
                                                 :
-                                                <div className="margin-top-10 margin-bottom-10">
+                                                <div className="flex-items-down-10-10">
                                                     <img className="newsImage"
                                                         src={image.src}
                                                         title={image.alt_text}
