@@ -3394,7 +3394,7 @@
   "card_number": 1075,
   "enthusiasm": 0,
   "effect_text": "Discard 2 cards from your hand; pull 1 Event (add the Event from the Pluck deck to your Reserve, then shuffle the Pluck deck).",
-  "second_effect_text": "<Limited> Draw 1 Pluck and you can resolve 1 additional Event this round.",
+  "second_effect_text": "<Critical> Draw 1 Pluck and you can resolve 1 additional Event this round.",
   "illustrator": "Ranbutam",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb3bw.jpg",
   "file_name": "i1cb3bw",
@@ -3417,11 +3417,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 1,
-    "day": 22,
-    "time": "18:57",
+    "month": 4,
+    "day": 8,
+    "time": "17:33",
     "full_time": {
-      "$date": "2024-01-22T18:57:04.509Z"
+      "$date": "2024-04-08T17:33:43.718Z"
     }
   },
   "alpha": null,
