@@ -7,16 +7,6 @@ function GamePlayPage() {
             <h2 className="left">Select a section</h2>
             <div className="decks-page-card-list2" style={{marginTop: "30px"}}>
                 <SectionCard
-                    link="/rulebooks"
-                    title="Rulebooks"
-                    imageSRC="https://i.imgur.com/8wqd1sD.png"
-                />
-                <SectionCard
-                    link="/glossary"
-                    title="Glossary and Rulings"
-                    imageSRC="https://i.imgur.com/8wqd1sD.png"
-                />
-                <SectionCard
                     link="/cardcategories"
                     title="Card Categories"
                     imageSRC="https://i.imgur.com/8wqd1sD.png"
@@ -39,6 +29,11 @@ function GamePlayPage() {
                 <SectionCard
                     link="/reactions"
                     title="Reactions"
+                    imageSRC="https://i.imgur.com/8wqd1sD.png"
+                />
+                <SectionCard
+                    link="/glossary"
+                    title="Glossary and Rulings"
                     imageSRC="https://i.imgur.com/8wqd1sD.png"
                 />
             </div>

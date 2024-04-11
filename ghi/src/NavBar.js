@@ -118,6 +118,11 @@ function NavBar() {
               </div>
               { showMenu.show && showMenu.section === "gameplay"?
                 <div className="nav-dropdown-content">
+                  <NavLink className="dropdown-select username2" to="/rulebooks" onClick={() => followLink()}>
+                    <div className="nav-dropdown-item">
+                      How To Play
+                    </div>
+                  </NavLink>
                   <NavLink className="dropdown-select username2" to="/gameplay" onClick={() => followLink()}>
                     <div className="nav-dropdown-item">
                       GamePlay Portal
@@ -224,6 +229,11 @@ function NavBar() {
           </div>
           { showMenu.show && showMenu.section === "gameplay"?
             <div className="nav-dropdown-content">
+              <NavLink className="nav-dropdown-item" to="/rulebooks" onClick={() => handleShowMobileMenu()}>
+                <div className="dropdown-select">
+                  How To Play
+                </div>
+              </NavLink>
               <NavLink className="nav-dropdown-item" to="/gameplay" onClick={() => handleShowMobileMenu()}>
                 <div className="dropdown-select">
                   GamePlay Portal
