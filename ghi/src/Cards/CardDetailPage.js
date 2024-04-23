@@ -157,7 +157,9 @@ function CardDetailPage({
                                 Random Card
                             </button>
                             {relatedCardsList.length > 6?
-                                <RelatedCardModal/>: null
+                                <RelatedCardModal
+                                    relatedCardsList={relatedCardsList}
+                                />: null
                             }
 
                         </div>
@@ -318,7 +320,9 @@ function CardDetailPage({
                                         Random Card
                                     </button>
                                     {relatedCardsList.length > 6?
-                                        <RelatedCardModal relatedCardsList={relatedCardsList}/>: null
+                                        <RelatedCardModal
+                                            relatedCardsList={relatedCardsList}
+                                        />: null
                                     }
 
                                 </div>

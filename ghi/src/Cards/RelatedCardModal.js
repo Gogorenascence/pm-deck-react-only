@@ -4,7 +4,7 @@ import cards from "../database/cards.json";
 import { AppContext } from '../context/AppContext';
 
 
-function RelatedCardModal() {
+function RelatedCardModal({relatedCardsList}) {
     const { card_number } = useParams()
     const [card, setCard] = useState("")
     const content = useRef(null)
@@ -17,8 +17,8 @@ function RelatedCardModal() {
         setCard(cardData);
     };
 
-    const relatedCardsList = cards?.filter(relatedCard => (card?.hero_id === relatedCard.hero_id) && relatedCard.card_number !== card.card_number)
-    relatedCardsList.sort((a,b) => a.card_number - b.card_number)
+    // const relatedCardsList = cards?.filter(relatedCard => (card?.hero_id === relatedCard.hero_id) && relatedCard.card_number !== card.card_number)
+    // relatedCardsList.sort((a,b) => a.card_number - b.card_number)
 
     const [show, setShow] = useState(false);
 
@@ -32,9 +32,9 @@ function RelatedCardModal() {
         console.log(isDark)
     };
 
-    useEffect(() => {
-        getCard();
-    }, [card_number]);
+    // useEffect(() => {
+    //     getCard();
+    // }, [card_number]);
 
     const selectCard = async(card) =>{
         const cards_number = card.card_number

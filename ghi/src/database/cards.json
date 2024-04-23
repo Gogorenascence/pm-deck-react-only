@@ -6631,7 +6631,7 @@
     1002
   ],
   "reactions": [],
-  "card_tags": [],
+  "card_tags": [1000],
   "created_on": {
     "year": 2023,
     "month": 12,
