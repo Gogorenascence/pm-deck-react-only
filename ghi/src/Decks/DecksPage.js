@@ -3,12 +3,11 @@ import {
 } from "react-bootstrap";
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
-import { DeckQueryContext } from "../context/DeckQueryContext";
-import cards from "../database/cards.json";
+import { DeckQueryContext } from "../Context/DeckQueryContext";
+import deckQueries from "../QueryObjects/DeckQueries";
 
-function DecksPage(props) {
 
-    const { decks } = props
+function DecksPage() {
     const [deckShowMore, setDeckShowMore] = useState(20);
     const {
         deckQuery,
@@ -23,77 +22,17 @@ function DecksPage(props) {
 
     const getDecks = async() =>{
         setLoading(true)
-        const sortedDecks = decks.sort(deckSortMethods[deckSortState].method);
-
-        for (let deck of sortedDecks){
-            const date = new Date(deck["created_on"]["full_time"]["$date"])
-            const time_now = new Date();
-            time_now.setHours(time_now.getHours() + 5);
-            // Calculate years, months, days, hours, minutes, and seconds
-            let ago = Math.abs(time_now - date);
-            const years = Math.floor(ago / 31557600000);
-            ago -= years * 31557600000;
-            const months = Math.floor(ago / 2630016000);
-            ago -= months * 2630016000;
-            const days = Math.floor(ago / 86400000);
-            ago -= days * 86400000;
-            const hours = Math.floor(ago / 3600000);
-            ago -= hours * 3600000;
-            const minutes = Math.floor(ago / 60000);
-            ago -= minutes * 60000;
-            // Format the time difference
-            if (years > 0) {
-            deck["created_on"]["ago"] = `${years} year ago`;
-            } else if (months > 0) {
-            deck["created_on"]["ago"] = `${months} month${months > 1 ? 's' : ''} ago`;
-            } else if (days > 0) {
-            deck["created_on"]["ago"] = `${days} day${days > 1 ? 's' : ''} ago`;
-            } else if (hours > 0) {
-            deck["created_on"]["ago"] = `${hours - 5} hour${hours - 5 > 1 ? 's' : ''} ${minutes > 1 ? ' and ' + minutes + ' minutes ago' : ' ago'}`;
-            } else if (minutes > 0) {
-            deck["created_on"]["ago"] = `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
-            } else {
-            deck["created_on"]["ago"] = "a few seconds ago";
-            }
-
-            const updateDate = new Date(deck["updated_on"]["full_time"]["$date"])
-            // Calculate years, months, days, hours, minutes, and seconds
-            let updateAgo = Math.abs(time_now - updateDate);
-            const updateYears = Math.floor(updateAgo / 31557600000);
-            updateAgo -= updateYears * 31557600000;
-            const updateMonths = Math.floor(updateAgo / 2630016000);
-            updateAgo -= updateMonths * 2630016000;
-            const updateDays = Math.floor(updateAgo / 86400000);
-            updateAgo -= updateDays * 86400000;
-            const updateHours = Math.floor(updateAgo / 3600000);
-            updateAgo -= updateHours * 3600000;
-            const updateMinutes = Math.floor(updateAgo / 60000);
-            updateAgo -= updateMinutes * 60000;
-            // Format the time difference
-            if (updateYears > 0) {
-            deck["updated_on"]["ago"] = `${updateYears} year ago`;
-            } else if (updateMonths > 0) {
-            deck["updated_on"]["ago"] = `${updateMonths} month${updateMonths > 1 ? 's' : ''} ago`;
-            } else if (updateDays > 0) {
-            deck["updated_on"]["ago"] = `${updateDays} day${updateDays > 1 ? 's' : ''} ago`;
-            } else if (updateHours > 0) {
-            deck["updated_on"]["ago"] = `${updateHours - 5} hour${updateHours - 5 > 1 ? 's' : ''} ${updateMinutes > 1 ? ' and ' + updateMinutes + ' minutes ago' : ' ago'}`;
-            } else if (updateMinutes > 0) {
-            deck["updated_on"]["ago"] = `${updateMinutes} minute${updateMinutes > 1 ? 's' : ''} ago`;
-            } else {
-            deck["updated_on"]["ago"] = "a few seconds ago";
-            }
-        }
+        const decksData = await deckQueries.getdecksData();
+        const sortedDecks = [...decksData].sort(deckSortMethods[deckSortState].method);
+        setFullDecks(sortedDecks.reverse())
         setLoading(false)
-        console.log(sortedDecks)
-        setFullDecks(sortedDecks)
     };
 
     const navigate = useNavigate()
 
     const getRandomDeck = async() =>{
-        const randomIndex = Math.floor(Math.random() * decks.length);
-        const randomDeck = decks[randomIndex].id;
+        const randomIndex = Math.floor(Math.random() * fullDecks.length);
+        const randomDeck = fullDecks[randomIndex].id;
         navigate(`/decks/${randomDeck}`);
     }
 
@@ -107,11 +46,11 @@ function DecksPage(props) {
     }, []);
 
     const deckSortMethods = {
-        none: { method: (a,b) => b.id.localeCompare(a.id) },
-        newest: { method: (a,b) => b.id.localeCompare(a.id) },
-        oldest: { method: (a,b) => a.id.localeCompare(b.id) },
+        none: { method: (a,b) => b.updated_on.full_time.localeCompare(a.updated_on.full_time) },
+        newest: { method: (a,b) => b.created_on.full_time.localeCompare(a.created_on.full_time) },
+        oldest: { method: (a,b) => a.created_on.full_time.localeCompare(b.created_on.full_time) },
         name: { method: (a,b) => a.name.localeCompare(b.name) },
-        updated: { method: (a,b) => new Date(b.updated_on?.full_time.$date) - new Date(a.updated_on?.full_time.$date) },
+        updated: { method: (a,b) => new Date(b.updated_on.full_time) - new Date(a.updated_on.full_time) },
     };
 
     const handleDeckQuery = (event) => {
@@ -133,7 +72,6 @@ function DecksPage(props) {
     const handleDeckSort = (event) => {
         setDeckSortState(event.target.value);
         // const updated = decks.map(deck => deck.updated_on)
-        console.log(decks)
     };
 
     const handleDeckShowMore = (event) => {

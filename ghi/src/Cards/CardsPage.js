@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
-import { QueryContext } from "../context/QueryContext";
+import { QueryContext } from "../Context/QueryContext";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 
 function CardsPage(props) {

@@ -1,5 +1,5 @@
 import { createContext, useState, useContext } from "react";
-import { GameStateContext } from "../context/GameStateContext";
+import { GameStateContext } from "./GameStateContext";
 import {
     specialSound,
     destroySound,

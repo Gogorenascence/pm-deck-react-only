@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext, useRef } from "react";
-import { GameStateContext } from "../context/GameStateContext";
-import { MainActionsContext } from "../context/MainActionsContext";
+import { GameStateContext } from "../Context/GameStateContext";
+import { MainActionsContext } from "../Context/MainActionsContext";
 import { damageSound, gainSound, rollSound, chatSound } from "../Sounds/Sounds";
 
 

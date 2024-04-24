@@ -5,7 +5,7 @@ import { useState, useEffect, useRef, useContext } from "react";
 import { NavLink, useParams, useNavigate } from 'react-router-dom';
 import BackButton from "../display/BackButton";
 import PackOpener from "./PackOpener";
-import { PullsContext } from "../context/PullsContext";
+import { PullsContext } from "../Context/PullsContext";
 
 
 function PullPage(props) {

@@ -15,7 +15,7 @@ import SetsPage from "./Cards/SetsPage";
 import SetDetailPage from "./Cards/SetDetailPage";
 import PullPage from "./Cards/PullPage";
 import PullsDeckBuilder from "./Builder/PullsDeckBuilder";
-import AppProvider from "./context/AppProvider";
+import AppProvider from "./Context/AppProvider";
 import GamePlayPage from "./GamePlay/GamePlayPage";
 import CardCategoriesPage from "./GamePlay/Categories/CardCategoriesPage";
 import CardCategoryDetail from "./GamePlay/Categories/CardCategoryDetailPage";
@@ -70,6 +70,7 @@ function App() {
     {booster_set["id"] = booster_set._id.$oid
     return booster_set
   })
+
   let decks = require('./database/decks.json').map(deck =>
     {deck["id"] = deck._id.$oid
     return deck

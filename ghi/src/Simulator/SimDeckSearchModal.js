@@ -3,7 +3,7 @@ import {
     menuSound,
     activateSound,
 } from "../Sounds/Sounds";
-import { GameStateContext } from '../context/GameStateContext';
+import { GameStateContext } from '../Context/GameStateContext';
 
 
 function SimDeckSearchModal({

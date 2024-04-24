@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { GameStateContext } from "../context/GameStateContext";
+import { GameStateContext } from "../Context/GameStateContext";
 import SimDeckSearch from "./SimDeckSearch";
 import SimDeckSearchModal from "./SimDeckSearchModal";
 import SimPluckSearch from "./SimPluckSearch";

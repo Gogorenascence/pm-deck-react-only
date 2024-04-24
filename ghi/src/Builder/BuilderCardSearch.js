@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import { BuilderQueryContext } from '../context/BuilderQueryContext';
+import { BuilderQueryContext } from '../Context/BuilderQueryContext';
 
 
 function BuilderCardSearch(props) {

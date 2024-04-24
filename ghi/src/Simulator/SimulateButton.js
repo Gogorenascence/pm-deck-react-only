@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SimulatorActionsContext } from '../context/SimulatorActionsContext';
+import { SimulatorActionsContext } from '../Context/SimulatorActionsContext';
 
 const SimulateButton = ({deckName, main_list, pluck_list}) => {
     const {

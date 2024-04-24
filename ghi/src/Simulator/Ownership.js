@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useContext } from 'react'
 import {
     menuSound
 } from "../Sounds/Sounds";
-import { PluckActionsContext } from '../context/PluckActionsContext';
+import { PluckActionsContext } from '../Context/PluckActionsContext';
 
 
 function Ownership({

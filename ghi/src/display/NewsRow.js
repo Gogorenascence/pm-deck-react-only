@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { NewsQueryContext } from "../context/NewsQueryContext";
+import { NewsQueryContext } from "../Context/NewsQueryContext";
 import { NavLink, useNavigate } from 'react-router-dom';
 import ImageWithoutRightClick from "./ImageWithoutRightClick";
 

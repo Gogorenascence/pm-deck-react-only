@@ -2,7 +2,7 @@ import {
     Col,
 } from "react-bootstrap";
 import React, { useState, useEffect, useContext, useRef } from 'react';
-import { BuilderQueryContext } from "../context/BuilderQueryContext";
+import { BuilderQueryContext } from "../Context/BuilderQueryContext";
 import BuilderCardSearch from "./BuilderCardSearch";
 import FEDeckExport from "../Decks/FEDeckExport";
 import DeckImport from './DeckImport';

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react'
-import { PluckActionsContext } from '../context/PluckActionsContext';
+import { PluckActionsContext } from '../Context/PluckActionsContext';
 
 function OwnershipModal({
     ownership,

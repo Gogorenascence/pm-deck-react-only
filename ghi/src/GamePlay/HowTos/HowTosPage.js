@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
-import { HowToQueryContext } from "../../context/HowToQueryContext";
+import { HowToQueryContext } from "../../Context/HowToQueryContext";
 
 
 function HowTosPage({
