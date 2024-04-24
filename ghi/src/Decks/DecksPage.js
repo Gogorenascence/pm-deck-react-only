@@ -3,7 +3,7 @@ import {
 } from "react-bootstrap";
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
-import { DeckQueryContext } from "../Context/DeckQueryContext";
+import { DeckQueryContext } from "../context/DeckQueryContext";
 import deckQueries from "../QueryObjects/DeckQueries";
 
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useContext } from 'react'
-import { GameStateContext } from "../Context/GameStateContext";
-import { PluckActionsContext } from '../Context/PluckActionsContext';
+import { GameStateContext } from "../context/GameStateContext";
+import { PluckActionsContext } from '../context/PluckActionsContext';
 import {
     menuSound,
     activateSound,

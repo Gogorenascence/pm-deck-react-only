@@ -15,7 +15,7 @@ import SetsPage from "./Cards/SetsPage";
 import SetDetailPage from "./Cards/SetDetailPage";
 import PullPage from "./Cards/PullPage";
 import PullsDeckBuilder from "./Builder/PullsDeckBuilder";
-import AppProvider from "./Context/AppProvider";
+import AppProvider from "./context/AppProvider";
 import GamePlayPage from "./GamePlay/GamePlayPage";
 import CardCategoriesPage from "./GamePlay/Categories/CardCategoriesPage";
 import CardCategoryDetail from "./GamePlay/Categories/CardCategoryDetailPage";

@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import { SimulatorActionsContext } from '../Context/SimulatorActionsContext';
+import { SimulatorActionsContext } from '../context/SimulatorActionsContext';
 import Slider from '@mui/material/Slider';
 
 

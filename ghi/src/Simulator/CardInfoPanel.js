@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { GameStateContext } from "../Context/GameStateContext";
+import { GameStateContext } from "../context/GameStateContext";
 
 
 function CardInfoPanel({

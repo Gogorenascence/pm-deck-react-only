@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
-import { AppContext } from "../Context/AppContext";
+import { AppContext } from "../context/AppContext";
 
 function LightSwitch() {
     const {isDark, setIsDark} = useContext(AppContext)

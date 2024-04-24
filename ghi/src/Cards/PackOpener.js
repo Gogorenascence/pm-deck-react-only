@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { PullsContext } from "../Context/PullsContext";
+import { PullsContext } from "../context/PullsContext";
 
 
 function PackOpener(props) {

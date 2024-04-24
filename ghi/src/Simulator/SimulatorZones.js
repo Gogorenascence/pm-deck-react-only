@@ -4,9 +4,9 @@ import {
     activateSound,
     flipSound
 } from "../Sounds/Sounds";
-import { GameStateContext } from "../Context/GameStateContext";
-import { MainActionsContext } from "../Context/MainActionsContext";
-import {PluckActionsContext} from "../Context/PluckActionsContext";
+import { GameStateContext } from "../context/GameStateContext";
+import { MainActionsContext } from "../context/MainActionsContext";
+import {PluckActionsContext} from "../context/PluckActionsContext";
 
 function PlayAreaZone({
 objectName,

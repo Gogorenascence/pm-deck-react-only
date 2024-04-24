@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
-import { NewsQueryContext } from "../Context/NewsQueryContext";
+import { NewsQueryContext } from "../context/NewsQueryContext";
 import { todaysFormattedDate } from "../Helpers";
 
 

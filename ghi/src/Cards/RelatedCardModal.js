@@ -1,7 +1,7 @@
 import { useParams, NavLink, useNavigate } from 'react-router-dom';
 import React, { useState, useEffect, useRef, useContext } from 'react'
 import cards from "../database/cards.json";
-import { AppContext } from '../Context/AppContext';
+import { AppContext } from '../context/AppContext';
 
 
 function RelatedCardModal({relatedCardsList}) {

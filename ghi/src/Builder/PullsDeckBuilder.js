@@ -3,7 +3,7 @@ import {
 } from "react-bootstrap";
 import { useState, useEffect, useContext, useRef } from 'react';
 import { NavLink, useParams } from "react-router-dom";
-import { PullsContext } from "../Context/PullsContext";
+import { PullsContext } from "../context/PullsContext";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 import FEDeckExport from "../Decks/FEDeckExport";
 import DeckImport from './DeckImport'
