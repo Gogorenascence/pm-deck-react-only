@@ -1528,7 +1528,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r1bma.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1018",
+        "link": null,
         "order": 1,
         "alt_text": "Berserk Transformation!"
       }
@@ -1537,7 +1537,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb15cp.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1111",
+        "link": null,
         "order": 1,
         "alt_text": "Returning Souls"
       }
@@ -1546,7 +1546,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p2pe.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1056",
+        "link": null,
         "order": 1,
         "alt_text": "Distant Drop-Off!!!"
       }
@@ -1555,7 +1555,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg15i.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1130",
+        "link": null,
         "order": 1,
         "alt_text": "Star Map"
       }
@@ -1564,7 +1564,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl20fi.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1166",
+        "link": null,
         "order": 1,
         "alt_text": "Shinobi Scroll of Duplication"
       }
@@ -1573,7 +1573,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl15cpe.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1110",
+        "link": null,
         "order": 1,
         "alt_text": "Grimmer Form"
       }
@@ -1582,7 +1582,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb18g.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1126",
+        "link": null,
         "order": 1,
         "alt_text": "\"Change of Plans!\""
       }
@@ -1591,7 +1591,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p5fa.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1154",
+        "link": null,
         "order": 1,
         "alt_text": "Shinobi Art of Substitution!"
       }
@@ -1611,6 +1611,21 @@
   "updated": null,
   "section": "game",
   "content": "Turning cards has been introduced as new mechanic.//\nTo indicated that a card has resolved its main effect, card is turned horizontally.// \nAll text instances of \"unresolved card(s)\" will be replaced with \"unturned card(s)\".",
+  "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "662d6f999b6fb50ca951a6ee"
+  },
+  "title": "Accounts feature have been added",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-04-27",
+  "updated": null,
+  "section": "site",
+  "content": "Accounts have been added to the site. Users will now be able to login.//\nSaving decks, favoriting decks and account pages will soon be available.",
   "images": {},
   "news": true,
   "site_link": ""

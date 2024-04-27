@@ -514,13 +514,13 @@ function NavBar() {
           </li>
           :
           <li className="nav-item2">
-            <NavLink className="username2" to="/account" onClick={() => handleShowMobileMenu()}>
+            {/* <NavLink className="username2" to="/account" onClick={() => handleShowMobileMenu()}> */}
               <div className="navbar-select2 pointer">
                 <h5 className="navbar-menu-item">
                   {account.username}
                 </h5>
               </div>
-            </NavLink>
+            {/* </NavLink> */}
             <div className="navbar-select2 pointer"
               onClick={() => logout()}
               >
