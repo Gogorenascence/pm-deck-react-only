@@ -12,6 +12,8 @@ function NavBar() {
   })
 
   const [showMobileMenu, setShowMobileMenu] = useState(false)
+  const [showForgot, setShowForgot] = useState(false)
+  const [forgotEmail, setForgotEmail] = useState("")
 
   const {
     signup,
@@ -38,7 +40,8 @@ function NavBar() {
     setViewPass,
     account,
     googleSignIn,
-    googleSignInMobile
+    googleSignInMobile,
+    forgotPassword
   } = useContext(AuthContext)
 
   const {isDark} = useContext(AppContext)
@@ -106,6 +109,10 @@ function NavBar() {
     setLoginCred({ ...loginCred, [event.target.name]: event.target.value });
   };
 
+  const handleForgotEmail = (event) => {
+    setForgotEmail(event.target.value);
+  };
+
   const handleViewPass = (event) => {
     const pass = document.getElementById("pass");
     const passConf = document.getElementById("passConf");
@@ -141,6 +148,12 @@ function NavBar() {
     }
   }
 
+  const handleSendPasswordReset = (event, email) => {
+    event.preventDefault()
+    forgotPassword(email)
+    handleShowLoginModal()
+  }
+
   function useOutsideAlerter(ref) {
     useEffect(() => {
       // Function for click event
@@ -162,6 +175,17 @@ function NavBar() {
   const handleShowMobileMenu = () => {
     setShowMobileMenu(!showMobileMenu)
     handleShowMenu(false, "none")
+  }
+
+  const handleShowForgot = () => {
+    if (showForgot) {
+      setShowForgot(false)
+      setForgotEmail("")
+      setLoginError([])
+    } else {
+      setShowForgot(true)
+      setLoginError([])
+    }
   }
 
   const handleClickBrand = () => {
@@ -610,70 +634,99 @@ function NavBar() {
       }
       { showLoginModal?
         <>
-          <form onSubmit={(event) => login(event, handleShowLoginModal)}
-          className={!isDark? "medium-modal" :"medium-modal-dark"}>
-            <h2 className="label-center">User Login </h2>
-            <div style={{margin: "20px 20px 20px 20px"}}>
-                <h5 className="label">Email </h5>
-                <input
-                    className="builder-input"
-                    type="text"
-                    placeholder=" Email"
-                    onChange={handleLoginCredChange}
-                    name="email"
-                    value={loginCred.email}>
-                </input>
+          {!showForgot?
+            <>
+              <form onSubmit={(event) => login(event, handleShowLoginModal)}
+                className={!isDark? "medium-modal" :"medium-modal-dark"}>
+                <h2 className="label-center">User Login </h2>
+                <div style={{margin: "20px 20px 20px 20px"}}>
+                    <h5 className="label">Email </h5>
+                    <input
+                        className="builder-input"
+                        type="text"
+                        placeholder=" Email"
+                        onChange={handleLoginCredChange}
+                        name="email"
+                        value={loginCred.email}>
+                    </input>
 
-                <h5 className="label">Password </h5>
-                <input
-                    className="builder-input"
-                    id="pass"
-                    type="password"
-                    placeholder=" Password"
-                    onChange={handleLoginCredChange}
-                    name="password"
-                    value={loginCred.password}>
-                </input>
+                    <h5 className="label">Password </h5>
+                    <input
+                        className="builder-input"
+                        id="pass"
+                        type="password"
+                        placeholder=" Password"
+                        onChange={handleLoginCredChange}
+                        name="password"
+                        value={loginCred.password}>
+                    </input>
 
-                { !viewPass?
-                  <img
-                    className="logo2 pointer"
-                    src={!isDark? "https://i.imgur.com/MfNqq8S.png":"https://i.imgur.com/z4CRxAm.png"}
-                    onClick={handleViewPass}
-                    title="view password"
-                  />:
-                  <img
-                    className="logo2 pointer"
-                    src={!isDark? "https://i.imgur.com/w8oag0B.png":"https://i.imgur.com/NE539ZZ.png"}
-                    onClick={handleViewPass}
-                    title="hide password"
-                  />
-                }
+                    { !viewPass?
+                      <img
+                        className="logo2 pointer"
+                        src={!isDark? "https://i.imgur.com/MfNqq8S.png":"https://i.imgur.com/z4CRxAm.png"}
+                        onClick={handleViewPass}
+                        title="view password"
+                      />:
+                      <img
+                        className="logo2 pointer"
+                        src={!isDark? "https://i.imgur.com/w8oag0B.png":"https://i.imgur.com/NE539ZZ.png"}
+                        onClick={handleViewPass}
+                        title="hide password"
+                      />
+                    }
 
-                { loginError?
-                  <p className="error">{loginError}</p>:
-                  null
-                }
+                    { loginError?
+                      <p className="error">{loginError}</p>:
+                      null
+                    }
 
-            </div>
-            <div className="aligned">
-              <button className="front-button" type="submit">Login</button>
-              <button className="end-button" onClick={handleShowLoginModal}>Close</button>
-              <div className="wide100p flex-full margin-top-20 none">
-                <GoogleButton onClick={() => handleGoogleSignIn(handleShowLoginModal)}/>
-              </div>
-              <div className="wide100p flex-full margin-top-20 hidden4">
-                <GoogleButton onClick={() => handleGoogleSignInMobile(handleShowLoginModal)}/>
-              </div>
-              <p onClick={handleShowSignUpModal}
-                className="pointer label-center">
-                  New here? Sign Up!
-              </p>
-            </div>
-          </form>
-          <div className="blackSpace"></div>
-        </>:
-        null
+                </div>
+                <div className="aligned">
+                  <button className="front-button" type="submit">Login</button>
+                  <button className="end-button" onClick={handleShowLoginModal}>Close</button>
+                  <div className="wide100p flex-full margin-top-20 none">
+                    <GoogleButton onClick={() => handleGoogleSignIn(handleShowLoginModal)}/>
+                  </div>
+                  <div className="wide100p flex-full margin-top-20 hidden4">
+                    <GoogleButton onClick={() => handleGoogleSignInMobile(handleShowLoginModal)}/>
+                  </div>
+                  <p onClick={handleShowSignUpModal}
+                    className="pointer label-center">
+                      New here? Sign Up!
+                  </p>
+                  <p onClick={handleShowForgot}
+                    className="pointer label-center">
+                      Forgot Password?
+                  </p>
+                </div>
+              </form>
+              <div className="blackSpace"></div>
+            </>:
+            <>
+              <form onSubmit={(event) => handleSendPasswordReset(event, forgotEmail)}
+                className={!isDark? "medium-modal" :"medium-modal-dark"}>
+                <h2 className="label-center">Password Reset </h2>
+                <div style={{margin: "20px 20px 20px 20px"}}>
+                    <h5 className="label">Account Email </h5>
+                    <input
+                        className="builder-input"
+                        type="text"
+                        placeholder=" Account Email"
+                        onChange={handleForgotEmail}
+                        name="email"
+                        value={forgotEmail}>
+                    </input>
+                </div>
+                <div className="aligned">
+                  <button className="front-button" type="submit">Send An Email</button>
+                  <button className="end-button" onClick={handleShowForgot}>Cancel</button>
+                </div>
+              </form>
+              <div className="blackSpace"></div>
+            </>
+          }
+        </>:null
       }
     </nav>
   );

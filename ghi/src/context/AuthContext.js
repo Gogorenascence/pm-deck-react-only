@@ -16,7 +16,8 @@ import {
     signInWithPopup,
     signInWithRedirect,
     onAuthStateChanged,
-    signOut
+    signOut,
+    sendPasswordResetEmail
 } from "firebase/auth";
 
 
@@ -254,6 +255,17 @@ const AuthContextProvider = ({ children }) => {
         signInWithRedirect(auth, provider)
         handleShowLoginModal()
     }
+
+    const forgotPassword = async (email) => {
+        try {
+            await sendPasswordResetEmail(auth, email);
+            console.log("Password reset email sent successfully!");
+            // Optionally, you can display a message to the user indicating that the reset email has been sent
+        } catch (error) {
+            console.error("Error sending password reset email:", error);
+            // Handle errors, such as displaying an error message to the user
+        }
+    }
     // const update = async (event) => {
     //     const url = `${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/accounts/${account.id}`
     //     fetch(url, {
@@ -313,7 +325,8 @@ const AuthContextProvider = ({ children }) => {
             account,
             setAccount,
             googleSignIn,
-            googleSignInMobile
+            googleSignInMobile,
+            forgotPassword
         }}>
             {children}
         </AuthContext.Provider>
