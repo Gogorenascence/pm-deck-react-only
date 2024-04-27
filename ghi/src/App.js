@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./Massive.css"
-import NavBar from "./NavBar";
+import NavBar from "./FBANavBar";
 import LightSwitch from "./display/LightSwitch";
 import BackToTop from "./display/BackToTop";
 import Footer from "./Footer";
