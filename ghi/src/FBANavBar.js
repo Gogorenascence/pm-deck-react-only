@@ -363,13 +363,13 @@ function NavBar() {
             </div>
               :
             <div className="accountbuttons">
-              <NavLink className="username2" to="/account">
+              {/* <NavLink className="username2" to="/account"> */}
                 <div className="navbar-select pointer">
                   <h5 className="navbar-menu-item">
                     {account.username}
                   </h5>
                 </div>
-              </NavLink>
+              {/* </NavLink> */}
               <div className="navbar-select pointer" onClick={() => logout()}>
                 <h5 className="navbar-menu-item">
                   Logout
