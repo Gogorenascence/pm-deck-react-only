@@ -37,6 +37,8 @@ function NavBar() {
     viewPass,
     setViewPass,
     account,
+    googleSignIn,
+    googleSignInMobile
   } = useContext(AuthContext)
 
   const {isDark} = useContext(AppContext)
@@ -122,6 +124,22 @@ function NavBar() {
       setViewPass(false)
     }
   };
+
+  const handleGoogleSignIn = async () => {
+    try {
+      await googleSignIn()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const handleGoogleSignInMobile = async () => {
+    try {
+      await googleSignInMobile()
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   function useOutsideAlerter(ref) {
     useEffect(() => {
@@ -641,7 +659,12 @@ function NavBar() {
             <div className="aligned">
               <button className="front-button" type="submit">Login</button>
               <button className="end-button" onClick={handleShowLoginModal}>Close</button>
-              {/* <GoogleButton/> */}
+              <div className="wide100p flex-full margin-top-20 none">
+                <GoogleButton onClick={() => handleGoogleSignIn(handleShowLoginModal)}/>
+              </div>
+              <div className="wide100p flex-full margin-top-20 hidden4">
+                <GoogleButton onClick={() => handleGoogleSignInMobile(handleShowLoginModal)}/>
+              </div>
               <p onClick={handleShowSignUpModal}
                 className="pointer label-center">
                   New here? Sign Up!

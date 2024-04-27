@@ -3375,6 +3375,10 @@ button:hover {
   width: auto;
 }
 
+.hidden4 {
+  display: none;
+}
+
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;

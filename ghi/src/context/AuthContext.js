@@ -12,6 +12,9 @@ import {
 import {
     signInWithEmailAndPassword,
     createUserWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signInWithRedirect,
     onAuthStateChanged,
     signOut
 } from "firebase/auth";
@@ -239,6 +242,18 @@ const AuthContextProvider = ({ children }) => {
         });
         setPasswordCon("")
         };
+
+    const googleSignIn = (handleShowLoginModal) => {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+        handleShowLoginModal()
+    }
+
+    const googleSignInMobile = (handleShowLoginModal) => {
+        const provider = new GoogleAuthProvider();
+        signInWithRedirect(auth, provider)
+        handleShowLoginModal()
+    }
     // const update = async (event) => {
     //     const url = `${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/accounts/${account.id}`
     //     fetch(url, {
@@ -296,7 +311,9 @@ const AuthContextProvider = ({ children }) => {
             setLoginCred,
             resetLoginCred,
             account,
-            setAccount
+            setAccount,
+            googleSignIn,
+            googleSignInMobile
         }}>
             {children}
         </AuthContext.Provider>
