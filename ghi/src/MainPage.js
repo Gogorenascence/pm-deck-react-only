@@ -18,7 +18,7 @@ function MainPage({
         <div>
           <TopRow/>
         </div>
-        <div className="margin-top-20">
+        <div className="margin-top-20 none">
           <SimulatorRow/>
         </div>
         <br/>
