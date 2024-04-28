@@ -4065,6 +4065,14 @@ button:hover {
   .media-inline {
     display: inline;
   }
+
+  .login {
+    width: 100%;
+  }
+
+  .login input {
+    width: 60vw;
+  }
 }
 
 /* @media (prefers-color-scheme: dark) and (max-width: 1333px){

@@ -535,79 +535,81 @@ function NavBar() {
         <>
           <form onSubmit={(event) => signup(event, handleShowSignUpModal)} className={!isDark? "medium-modal" :"medium-modal-dark"}>
             <h2 className="label-center">Create Account </h2>
-            <div style={{ margin: "20px 20px 20px 20px"}}>
+            <span className="flex-content">
+              <div className="login" style={{ margin: "20px 20px 20px 20px"}}>
 
-              <h5 className="label">Email </h5>
-              <input
-                  className="builder-input"
-                  type="text"
-                  placeholder=" Email"
-                  onChange={handleSignUpCredChange}
-                  name="email"
-                  value={signUpCred.email}>
-              </input>
+                <h5 className="label">Email </h5>
+                <input
+                    className="builder-input"
+                    type="text"
+                    placeholder=" Email"
+                    onChange={handleSignUpCredChange}
+                    name="email"
+                    value={signUpCred.email}>
+                </input>
 
-              <h5 className="label">Username </h5>
-              <input
-                  className="builder-input"
-                  type="text"
-                  placeholder=" Username"
-                  onChange={handleSignUpCredChange}
-                  name="username"
-                  value={signUpCred.username}>
-              </input>
+                <h5 className="label">Username </h5>
+                <input
+                    className="builder-input"
+                    type="text"
+                    placeholder=" Username"
+                    onChange={handleSignUpCredChange}
+                    name="username"
+                    value={signUpCred.username}>
+                </input>
 
-              <h5 className="label">Password </h5>
-              <input
-                  className="builder-input"
-                  id="pass"
-                  type="password"
-                  placeholder=" Password"
-                  onChange={handleSignUpCredChange}
-                  name="password"
-                  value={signUpCred.password}>
-              </input>
+                <h5 className="label">Password </h5>
+                <input
+                    className="builder-input"
+                    id="pass"
+                    type="password"
+                    placeholder=" Password"
+                    onChange={handleSignUpCredChange}
+                    name="password"
+                    value={signUpCred.password}>
+                </input>
 
-              { !viewPass?
-                <img
-                  className="logo2 pointer"
-                  src={!isDark? "https://i.imgur.com/MfNqq8S.png":"https://i.imgur.com/z4CRxAm.png"}
-                  onClick={handleViewPass}
-                  title="view password"
-                />:
-                <img
-                  className="logo2 pointer"
-                  src={!isDark? "https://i.imgur.com/w8oag0B.png":"https://i.imgur.com/NE539ZZ.png"}
-                  onClick={handleViewPass}
-                  title="hide password"
-                />
-              }
+                { !viewPass?
+                  <img
+                    className="logo2 pointer"
+                    src={!isDark? "https://i.imgur.com/MfNqq8S.png":"https://i.imgur.com/z4CRxAm.png"}
+                    onClick={handleViewPass}
+                    title="view password"
+                  />:
+                  <img
+                    className="logo2 pointer"
+                    src={!isDark? "https://i.imgur.com/w8oag0B.png":"https://i.imgur.com/NE539ZZ.png"}
+                    onClick={handleViewPass}
+                    title="hide password"
+                  />
+                }
 
-              <h5 className="label">Confirm Password </h5>
-              <input
-                  className="builder-input"
-                  id="passConf"
-                  type="password"
-                  placeholder=" Confirm Password"
-                  onChange={handlePasswordConChange}
-                  value={passwordCon}>
-              </input>
+                <h5 className="label">Confirm Password </h5>
+                <input
+                    className="builder-input"
+                    id="passConf"
+                    type="password"
+                    placeholder=" Confirm Password"
+                    onChange={handlePasswordConChange}
+                    value={passwordCon}>
+                </input>
 
-              { !viewPass?
-                <img
-                  className="logo2 pointer"
-                  src={!isDark? "https://i.imgur.com/MfNqq8S.png":"https://i.imgur.com/z4CRxAm.png"}
-                  onClick={handleViewPass}
-                  title="view password"
-                />:
-                <img
-                  className="logo2 pointer"
-                  src={!isDark? "https://i.imgur.com/w8oag0B.png":"https://i.imgur.com/NE539ZZ.png"}
-                  onClick={handleViewPass}
-                  title="hide password"
-                />
-              }
-            </div>
+                { !viewPass?
+                  <img
+                    className="logo2 pointer"
+                    src={!isDark? "https://i.imgur.com/MfNqq8S.png":"https://i.imgur.com/z4CRxAm.png"}
+                    onClick={handleViewPass}
+                    title="view password"
+                  />:
+                  <img
+                    className="logo2 pointer"
+                    src={!isDark? "https://i.imgur.com/w8oag0B.png":"https://i.imgur.com/NE539ZZ.png"}
+                    onClick={handleViewPass}
+                    title="hide password"
+                  />
+                }
+              </div>
+            </span>
             <div style={{margin: "20px 0px 20px 0px"}}>
               { signUpError? (
                 signUpError.map((error) =>
@@ -639,7 +641,8 @@ function NavBar() {
               <form onSubmit={(event) => login(event, handleShowLoginModal)}
                 className={!isDark? "medium-modal" :"medium-modal-dark"}>
                 <h2 className="label-center">User Login </h2>
-                <div style={{margin: "20px 20px 20px 20px"}}>
+                <span className="flex-content">
+                  <div className="login" style={{margin: "20px 20px 20px 20px"}}>
                     <h5 className="label">Email </h5>
                     <input
                         className="builder-input"
@@ -681,14 +684,15 @@ function NavBar() {
                       null
                     }
 
-                </div>
+                  </div>
+                </span>
                 <div className="aligned">
                   <button className="front-button" type="submit">Login</button>
                   <button className="end-button" onClick={handleShowLoginModal}>Close</button>
                   <div className="wide100p flex-full margin-top-20 none">
                     <GoogleButton onClick={() => handleGoogleSignIn(handleShowLoginModal)}/>
                   </div>
-                  <div className="wide100p flex-full margin-top-20 hidden4">
+                  <div className="wide100p flex-full margin-top-20 hidden4 media-flex-center">
                     <GoogleButton onClick={() => handleGoogleSignInMobile(handleShowLoginModal)}/>
                   </div>
                   <p onClick={handleShowSignUpModal}
@@ -707,7 +711,8 @@ function NavBar() {
               <form onSubmit={(event) => handleSendPasswordReset(event, forgotEmail)}
                 className={!isDark? "medium-modal" :"medium-modal-dark"}>
                 <h2 className="label-center">Password Reset </h2>
-                <div style={{margin: "20px 20px 20px 20px"}}>
+                <span className="flex-content">
+                  <div className="login" style={{margin: "20px 20px 20px 20px"}}>
                     <h5 className="label">Account Email </h5>
                     <input
                         className="builder-input"
@@ -717,8 +722,9 @@ function NavBar() {
                         name="email"
                         value={forgotEmail}>
                     </input>
-                </div>
-                <div className="aligned">
+                  </div>
+                </span>
+                <div className="aligned margin-bottom-20">
                   <button className="front-button" type="submit">Send An Email</button>
                   <button className="end-button" onClick={handleShowForgot}>Cancel</button>
                 </div>
