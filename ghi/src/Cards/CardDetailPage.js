@@ -122,7 +122,7 @@ function CardDetailPage({
 
     return (
         <div className="white-space">
-            <div className="cd-container between-space">
+            <div className="cd-container space-around media-inline">
                 <div className="cd-container-child">
                     <div className="cd-inner media-display">
                         <h1 className="hidden2 media-display media-center">{card.name}</h1>
