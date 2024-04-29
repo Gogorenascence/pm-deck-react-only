@@ -3,7 +3,6 @@ import DeckRow from "./display/DeckRow";
 import CardRow from "./display/CardRow";
 import NewsRow from "./display/NewsRow";
 import SimulatorRow from "./display/SimulatorRow";
-import FullTransfer from "./database/FullTransfer";
 
 
 function MainPage({
