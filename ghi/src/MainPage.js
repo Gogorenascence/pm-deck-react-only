@@ -18,7 +18,6 @@ function MainPage({
         <br/>
         <div>
           <TopRow/>
-          {/* <FullTransfer/> */}
         </div>
         <div className="margin-top-20 none">
           <SimulatorRow/>
