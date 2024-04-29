@@ -133,6 +133,7 @@ function NavBar() {
   };
 
   const handleGoogleSignIn = async () => {
+    handleShowLoginModal()
     try {
       await googleSignIn()
     } catch (error) {

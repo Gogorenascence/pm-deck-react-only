@@ -247,7 +247,6 @@ const AuthContextProvider = ({ children }) => {
     const googleSignIn = (handleShowLoginModal) => {
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider)
-        handleShowLoginModal()
     }
 
     const googleSignInMobile = (handleShowLoginModal) => {
