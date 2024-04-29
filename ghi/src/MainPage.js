@@ -3,6 +3,7 @@ import DeckRow from "./display/DeckRow";
 import CardRow from "./display/CardRow";
 import NewsRow from "./display/NewsRow";
 import SimulatorRow from "./display/SimulatorRow";
+import FullTransfer from "./database/FullTransfer";
 
 
 function MainPage({
@@ -17,6 +18,7 @@ function MainPage({
         <br/>
         <div>
           <TopRow/>
+          {/* <FullTransfer/> */}
         </div>
         <div className="margin-top-20 none">
           <SimulatorRow/>

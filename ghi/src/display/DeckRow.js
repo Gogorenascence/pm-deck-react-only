@@ -10,25 +10,19 @@ function DeckRow() {
     const [newDecks, setNewDecks] = useState([])
 
     const getDecks = async() =>{
-        const data = await deckQueries.getdecksData()
-        const deckData = data.filter(deck => deck.private ? deck.private === false: true)
-        .sort((a,b) => b.updated_on.full_time.localeCompare(a.updated_on.full_time)).slice(0, 4)
-
-        setNewDecks(deckData.reverse());
+        const data = await deckQueries.getRangedQueriedDecksData(4, {"private": false})
+        setNewDecks(data);
     };
-
-    const all_decks = newDecks.sort((a,b) => new Date(a.updated_on?.full_time.$date) - new Date(b.updated_on?.full_time.$date)).slice(-4).reverse()
 
     useEffect(() => {
         getDecks();
     }, []);
 
 
-
     return(
         <div className="white-space">
             <div className="deck-row-card-list2">
-                {all_decks.map((deck) => {
+                {newDecks.map((deck) => {
                     return (
                         <NavLink to={`/decks/${deck.id}`} key={deck.id}>
                             <Card className="text-white text-center card-list-card3 glow">

@@ -5,7 +5,6 @@ import ImageWithoutRightClick from "./ImageWithoutRightClick";
 
 
 function NewsRow({articles}) {
-    console.log(articles)
     const { newsQuery, setNewsQuery } = useContext(NewsQueryContext)
     const navigate = useNavigate()
     const stories = articles.filter(story => story.news === true)
