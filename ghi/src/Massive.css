@@ -4073,6 +4073,46 @@ button:hover {
   .login input {
     width: 60vw;
   }
+
+  body.dark {
+    margin-bottom: 200px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: auto;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(16, 14, 22, 0.5), rgba(17, 0, 54, 0.4)), url("./backg.png");
+    background-size: 100%, 60%;
+    background-repeat: no-repeat, repeat;
+    background-position: center center, center center;
+    background-attachment: fixed, fixed;
+    z-index: -1,-100;
+  }
+
+  body.dark::after {
+    content: "";
+    position: fixed;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-size: 125px;
+    background-image: url("./frame2.png");
+    background-repeat: repeat;
+    animation: scroll 5000s linear infinite;
+    opacity: .15;
+    z-index: -20;
+    margin-bottom: 200px;
+  }
 }
 
 /* @media (prefers-color-scheme: dark) and (max-width: 1333px){
