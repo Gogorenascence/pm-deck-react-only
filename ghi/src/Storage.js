@@ -14,11 +14,11 @@ export function saveDeckToSessionStorage(
             main_list: main_list,
             pluck_list: pluck_list
         };
-
         // Convert the deck state object to a string
         const deckStateString = JSON.stringify(deckState);
         // Save the deck state string to session storage under a specific key
         sessionStorage.setItem('savedDeckState', deckStateString);
+        console.log(sessionStorage.getItem('savedDeckState'))
 
         // Optionally, you can also save other related states to session storage here
         // sessionStorage.setItem('otherStateKey', JSON.stringify(otherState));

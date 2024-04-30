@@ -7,6 +7,7 @@ const PullsContextProvider = ({ children }) => {
     const [pulls, setPulls] = useState([]);
     const [pullsList, setPullsList] = useState([]);
     const [pulling, setPulling] = useState(false);
+    const [usePool, setUsePool] = useState(true);
 
     return (
         <PullsContext.Provider value={{
@@ -18,6 +19,8 @@ const PullsContextProvider = ({ children }) => {
             setPullsList,
             pulling,
             setPulling,
+            usePool,
+            setUsePool
             }}>
             {children}
         </PullsContext.Provider>

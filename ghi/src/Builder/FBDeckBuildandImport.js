@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect, useContext } from 'react';
-import { BuilderQueryContext } from '../Context/BuilderQueryContext';
+import { BuilderQueryContext } from '../context/BuilderQueryContext';
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../Context/AuthContext";
-import { PullsContext } from "../Context/PullsContext";
+import { AuthContext } from "../context/AuthContext";
+import { PullsContext } from "../context/PullsContext";
 import BuilderCardSearch from "./BuilderCardSearch";
 import ImageViewListInput from "./ImageViewListInput";
 import ListViewListInput from "./ListViewListInput";
@@ -11,18 +11,24 @@ import DeckImport from './DeckImport';
 import StatsPanel from './StatsPanel';
 // import { beforeLeaving } from '../Helpers';
 import { saveDeckToSessionStorage, loadDeckFromSessionStorage } from '../Storage';
-import cardQueries from "../QueryObjects/CardQueries"
+import deckQueries from '../QueryObjects/DeckQueries';
 
-function DeckBuildandImport() {
+
+function FBDeckBuildandImport({
+    cards,
+    booster_sets
+}) {
     const savedDeckState = JSON.parse(sessionStorage.getItem('savedDeckState')) || {};
     const {account} = useContext(AuthContext)
-    const {query,
+    const {
+        query,
         sortState,
         boosterSet,
         rarity,
         listView,
         showMore,
-        setShowMore} = useContext(BuilderQueryContext)
+        setShowMore
+    } = useContext(BuilderQueryContext)
 
     const fileInput = useRef(null);
 
@@ -79,19 +85,21 @@ function DeckBuildandImport() {
         setShowDecks(!showDecks);
     };
 
+    console.log(savedDeckState)
+
     const [deck, setDeck] = useState(
         savedDeckState?
             {
-                name: savedDeckState.name,
-                account_id: savedDeckState.account_id,
-                description: savedDeckState.description,
+                name: savedDeckState.name ?? "",
+                account_id: "",
+                description: savedDeckState.description ?? "",
                 strategies: [],
                 cards: [],
                 pluck: [],
                 side: [],
                 views: 0,
-                cover_card: savedDeckState.cover_card,
-                parent_id: savedDeckState.parent_id,
+                cover_card: "",
+                parent_id: "",
                 private: false,
             }
         :
@@ -104,11 +112,12 @@ function DeckBuildandImport() {
                 pluck: [],
                 side: [],
                 views: 0,
-                cover_card: null,
+                cover_card: "",
                 parent_id: "",
                 private: false,
             }
     );
+    console.log(savedDeckState)
     const [main_list, setMainList] = useState(
         savedDeckState.main_list ?? []);
     const [pluck_list, setPluckList] = useState(
@@ -120,25 +129,12 @@ function DeckBuildandImport() {
         savedDeckState.selectedList ?? []);
     const [selectedCard, setSelectedCard] = useState(null);
 
-    const [cards, setCards] = useState([]);
-
     const [showPool, setShowPool] = useState(true);
     const [showMain, setShowMain] = useState(true);
     const [showPluck, setShowPluck] = useState(true);
 
     const [noCards, setNoCards] = useState(false);
 
-    const getCards = async() =>{
-        const data = await cardQueries.getCardsData();
-
-        if (data.length == 0 ) {
-            setNoCards(true)
-        }
-
-        const sortedCards = [...data].sort(sortMethods[sortState].method);
-
-        setCards(sortedCards);
-    };
 
     const sortMethods = {
         none: { method: (a,b) => a.card_number - b.card_number },
@@ -173,7 +169,7 @@ function DeckBuildandImport() {
 
     const selectedPool = usePool? cards : pulledCards
 
-    const handleUsePool = (event) => {
+    const handleUsePool = () => {
         setUsePool(!usePool);
     };
 
@@ -181,14 +177,12 @@ function DeckBuildandImport() {
         loadDeckFromSessionStorage(
             deck,
             setDeck,
-            setSelectedList,
             setMainList,
             setPluckList
         );
-        window.scroll(0, 0);
+        // window.scroll(0, 0);
         // beforeLeaving()
         document.body.style.overflow = 'auto';
-        getCards();
         getPulledCards();
         document.title = "Deck Builder - PM CardBase"
         return () => {
@@ -200,12 +194,13 @@ function DeckBuildandImport() {
     useEffect(() => {
         saveDeckToSessionStorage(
             deck,
-            selectedList,
             main_list,
             pluck_list
         );
 
     }, [deck, selectedList, main_list, pluck_list]);
+
+    console.log(cards)
 
     const all_cards = selectedPool.filter(card => card.name.toLowerCase().includes(query.cardName.toLowerCase()))
     .filter(card => (card.effect_text + card.second_effect_text).toLowerCase().includes(query.cardText.toLowerCase()))
@@ -329,22 +324,14 @@ function DeckBuildandImport() {
         data["strategies"] = selectedList
         data["card_names"] = card_names
         data["series_names"] = series_names
+        data["parent_id"] = ""
         account ? data["account_id"] = account.id : data["account_id"] = deck.account_id
 
-        const cardUrl = `${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/`;
-        const fetchConfig = {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
+        const createdDeck = await deckQueries.createDeck(data)
 
-        const response = await fetch(cardUrl, fetchConfig);
-        if (response.ok) {
-            const responseData = await response.json();
-            const deck_id = responseData.id;
-            setDeck({
+        if (createdDeck) {
+            const deck_id = createdDeck.id;
+            const clearedDeck = {
                 name: "",
                 account_id: "",
                 description: "",
@@ -355,8 +342,10 @@ function DeckBuildandImport() {
                 views: 0,
                 cover_card: "",
                 parent_id: "",
-            });
-            navigate(`/decks/${deck_id}`);
+            }
+            setDeck(clearedDeck)
+            saveDeckToSessionStorage(clearedDeck, [], [])
+            (navigate(`/decks/${deck_id}`));
         } else {
             alert("Error in creating deck");
         }
@@ -506,7 +495,9 @@ function DeckBuildandImport() {
                             variant="bottom"/>)}
                 </div>
                 <span className="media-flex-center margin-top-63">
-                    <BuilderCardSearch/>
+                    <BuilderCardSearch
+                        boosterSets={booster_sets}
+                    />
                 </span>
             </div>
             <DeckImport
@@ -583,4 +574,4 @@ function DeckBuildandImport() {
     );
 }
 
-export default DeckBuildandImport;
+export default FBDeckBuildandImport;

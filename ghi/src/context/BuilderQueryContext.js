@@ -10,7 +10,7 @@ const BuilderQueryContextProvider = ({ children }) => {
         cardNumber: "",
         heroID: "",
         series: "",
-        illustrator: "",
+        startingNum: "",
         type: "",
         cardClass: "",
         extraEffect: "",

@@ -1,5 +1,6 @@
 import { db } from "../Firebase"
-import { getDocs, collection, query, orderBy, where, limit } from "firebase/firestore"
+import { getDocs, collection, query, orderBy, where, limit, addDoc } from "firebase/firestore"
+import helper from "./Helper"
 
 const deckQueries = {
     getdecksData: async function getdecksData() {
@@ -232,6 +233,19 @@ const deckQueries = {
             }
             return data;
         }
+    },
+    createDeck: async function createDeck(deckData) {
+        const decksCollectionRef = collection(db, "decks")
+        const randomString = await helper.generateRandomString(24);
+        const created_on = await helper.createTimeObj()
+
+        deckData["id"] = randomString
+        deckData["created_on"] = created_on
+        deckData["updated_on"] = created_on
+
+        console.log(deckData)
+        addDoc(decksCollectionRef, deckData)
+        return deckData
     }
 }
 

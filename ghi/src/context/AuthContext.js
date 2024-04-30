@@ -34,6 +34,7 @@ const AuthContextProvider = ({ children }) => {
         decks: [],
         favorited_decks: [],
         roles: [],
+        id: "",
     })
     const [loginCred, setLoginCred] = useState({
         email: "",
@@ -66,10 +67,23 @@ const AuthContextProvider = ({ children }) => {
     const [showSignUpModal, setShowSignUpModal] = useState(false)
     const [viewPass, setViewPass] = useState(false)
 
+    const generateRandomString = (length) => {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let randomString = '';
+
+        for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        randomString += characters.charAt(randomIndex);
+        }
+
+        return randomString;
+    }
+
     const signup = async (event, handleShowSignUpModal) => {
         event.preventDefault();
         // const check = await signUpCredCheck(signUpCred)
         const time_now = new Date();
+        const account_id = generateRandomString(24)
         const additionalData = {
             username: signUpCred.username,
             collection: [],
@@ -78,6 +92,7 @@ const AuthContextProvider = ({ children }) => {
             favorited_decks: [],
             roles: [],
             created_on: time_now,
+            id: account_id
         };
 
         try {
@@ -138,6 +153,7 @@ const AuthContextProvider = ({ children }) => {
             favorited_decks: additionalData.favorited_decks,
             roles: additionalData.roles,
             created_on: additionalData.created_on,
+            id: additionalData.id
             // Add other properties as needed
         });
         handleShowSignUpModal()
@@ -177,7 +193,8 @@ const AuthContextProvider = ({ children }) => {
         decks: [],
         favorited_decks: [],
         roles: [],
-        created_on: ""
+        created_on: "",
+        id: "",
         })
     }
 
@@ -193,7 +210,8 @@ const AuthContextProvider = ({ children }) => {
                 decks: [],
                 favorited_decks: [],
                 roles: [],
-                created_on: ""
+                created_on: "",
+                id: "",
             }
             try {
                 const docRef = doc(db, "users", user.uid);
@@ -209,6 +227,7 @@ const AuthContextProvider = ({ children }) => {
                 accountData["favorited_decks"] = additionalData.favorited_decksame ?? []
                 accountData["roles"] = additionalData.roles ?? []
                 accountData["created_on"] = additionalData.created_on ?? ""
+                accountData["id"] = additionalData.id ?? ""
                 setAccount(accountData)
                 }
             } catch (error) {
@@ -232,6 +251,7 @@ const AuthContextProvider = ({ children }) => {
             favorited_decks: [],
             roles: [],
             created_on: {},
+            id: "",
         });
         setPasswordCon("")
         };

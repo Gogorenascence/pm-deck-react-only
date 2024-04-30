@@ -2,12 +2,14 @@ import React, { useEffect, useContext } from 'react';
 import { BuilderQueryContext } from '../context/BuilderQueryContext';
 
 
-function BuilderCardSearch(props) {
-    const {query,
+function BuilderCardSearch({
+    boosterSets
+}) {
+    const {
+        query,
         setQuery,
         sortState,
         setSortState,
-        boosterSet,
         setBoosterSet,
         boosterSetId,
         setBoosterSetId,
@@ -15,10 +17,8 @@ function BuilderCardSearch(props) {
         setRarity,
         listView,
         setListView,
-        showMore,
-        setShowMore} = useContext(BuilderQueryContext)
-
-    const { boosterSets } = props
+        setShowMore
+    } = useContext(BuilderQueryContext)
 
     const handleBoosterSetChange = (event) => {
         setBoosterSetId(event.target.value)
@@ -42,7 +42,7 @@ function BuilderCardSearch(props) {
             cardNumber: "",
             heroID: "",
             series: "",
-            illustrator: "",
+            startingNum: "",
             type: "",
             cardClass: "",
             extraEffect: "",
@@ -112,10 +112,11 @@ function BuilderCardSearch(props) {
             </input>
             <input
                 className="left dcbsearch-medium"
-                type="text"
-                placeholder=" Illustrator"
-                name="illustrator"
-                value={query.illustrator}
+                type="number"
+                placeholder=" Starting Number"
+                style={{width: "177px", height: "37px"}}
+                name="startingNum"
+                value={query.startingNum}
                 onChange={handleQuery}>
             </input>
             <br/>
