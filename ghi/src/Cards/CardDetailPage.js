@@ -4,6 +4,7 @@ import RelatedCardModal from "./RelatedCardModal";
 import BackButton from "../display/BackButton";
 import card_categories from "../database/card_categories.json";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
+import ErrorPage from "../display/ErrorPage";
 
 
 function CardDetailPage({
@@ -35,16 +36,20 @@ function CardDetailPage({
         reactions: [],
         card_tags: [],
     });
+    const [noCard, setNoCard] = useState(false)
 
     const getCard = async() =>{
-
         const cardData = cards.find(card => card.card_number.toString() === card_number)
-        cardData["seriesNames"] = cardData.series_name.split("//")
-        cardData["effectText"] = cardData.effect_text.split("//")
-        if (cardData.second_effect_text){
-            cardData["secondEffectText"] = cardData.second_effect_text.split("//")
+        if (cardData) {
+            cardData["seriesNames"] = cardData.series_name.split("//")
+            cardData["effectText"] = cardData.effect_text.split("//")
+            if (cardData.second_effect_text){
+                cardData["secondEffectText"] = cardData.second_effect_text.split("//")
+            }
+            setCard(cardData);
+        } else {
+            setNoCard(true)
         }
-        setCard(cardData);
     };
 
     const relatedCardsList = cards?.filter(relatedCard => (card?.hero_id === relatedCard.hero_id) && relatedCard.card_number !== card.card_number)
@@ -121,217 +126,222 @@ function CardDetailPage({
     }
 
     return (
-        <div className="white-space">
-            <div className="cd-container space-around media-inline">
-                <div className="cd-container-child">
-                    <div className="cd-inner media-display">
-                        <h1 className="hidden2 media-display media-center">{card.name}</h1>
-                        <img
-                            className="cd-card wide100"
-                            src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
-                            alt={card.name}/>
-                    </div>
-                    <div className="none" style={{margin: "5% 0%"}}>
-                            <h1 className="centered-h1">Related Cards</h1>
-                        <div className="cd-inner">
-                            <div className="cd-inner card-list3" style={{width: "480px"}}>
-                                {relatedCardsList.slice(0,6).map((relatedCard) => {
-                                    return (
-                                        <NavLink to={`/cards/${relatedCard.card_number}`}>
-                                                <img
-                                                    className="cd-related-card"
-                                                    title={relatedCard.name}
-                                                    src={relatedCard.picture_url ? relatedCard.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                                    alt={relatedCard.name}/>
-                                        </NavLink>
-                                    );
-                                })}
-                            </div>
+        <>
+            {!noCard?
+                <div className="white-space">
+                    <div className="cd-container space-around media-inline">
+                    <div className="cd-container-child">
+                        <div className="cd-inner media-display">
+                            <h1 className="hidden2 media-display media-center">{card.name}</h1>
+                            <img
+                                className="cd-card wide100"
+                                src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                alt={card.name}/>
                         </div>
-                        <div className="cd-inner" style={{marginTop: "3%"}}>
-                            <button
-                                className="left button100 heightNorm"
-                                style={{ textAlign: "center"}}
-                                onClick={getRandomCard}
-                            >
-                                Random Card
-                            </button>
-                            {relatedCardsList.length > 6?
-                                <RelatedCardModal
-                                    relatedCardsList={relatedCardsList}
-                                />: null
-                            }
-
-                        </div>
-                    </div>
-                </div>
-                <div className="cd-container-child">
-                    <div className="cd-inner2 media-display">
-                    <h1 className="none">{card.name}</h1>
-                        <div>
-                            <div className="cd-info">
-                                <div className={card.card_class ? card.card_class : "NoClass"}>
-                                    <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Type</h4>
-                                    <NavLink to={`/cardtypes/${card_type?.id}`} className="nav-link2 glow2">
-                                            <h5 title={card_type?.rules}
-                                                style={{fontWeight: "400", margin: "18px 12px"}}
-                                                >{card_type?.name} *
-                                            </h5>
-                                    </NavLink>
-                                </div>
-                                <div className={card.card_class ? card.card_class : "NoClass"}>
-                                    <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Class</h4>
-                                    { card.card_class?
-                                        <NavLink to={`/cardcategories/${matchClass(card.card_class)}`} className="nav-link2 glow2">
-                                            <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.card_class ? `${card.card_class} *` : "n/a"}</h5>
-                                        </NavLink>:
-                                        <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.card_class ? card.card_class : "n/a"}</h5>
-                                    }
-                                </div>
-                                <div className={card.card_class ? card.card_class : "NoClass"}>
-                                    <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Reactions</h4>
-                                    {reactions_list.length ? (
-                                        reactions_list.map((reaction) => (
-                                            <NavLink to={`/reactions/${reaction.info.id}`} className="nav-link2 glow2">
-                                                <h5 title={reactionRules(reaction)} style={{fontWeight: "400", margin: "18px 12px"}} key={reaction.info.name}>
-                                                    {reaction.info.name} {reaction.count} *
-                                                </h5>
+                        <div className="none" style={{margin: "5% 0%"}}>
+                                <h1 className="centered-h1">Related Cards</h1>
+                            <div className="cd-inner">
+                                <div className="cd-inner card-list3" style={{width: "480px"}}>
+                                    {relatedCardsList.slice(0,6).map((relatedCard) => {
+                                        return (
+                                            <NavLink to={`/cards/${relatedCard.card_number}`}>
+                                                    <img
+                                                        className="cd-related-card"
+                                                        title={relatedCard.name}
+                                                        src={relatedCard.picture_url ? relatedCard.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                        alt={relatedCard.name}/>
                                             </NavLink>
-                                        ))
-                                    ) : (
-                                        <h5 style={{fontWeight: "400", margin: "18px 12px"}}>n/a</h5>
-                                    )}
-                                </div>
-                                <div className={card.card_class ? card.card_class : "NoClass"}>
-                                    <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Enthusiasm</h4>
-                                        <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.enthusiasm ? card.enthusiasm : "n/a"}</h5>
-                                </div>
-                                <div className={card.card_class ? card.card_class : "NoClass"}>
-                                    <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Tags</h4>
-                                    {card_tags_list[0]?.tag_number !== 1000?
-                                        <>
-                                            {card_tags_list.map((card_tag) => {
-                                                return (
-                                                    <NavLink to={`/cardtags/${card_tag.id}`} className="nav-link2 glow2">
-                                                        <h5 title={card_tag.rules}
-                                                            style={{fontWeight: "400", margin: "18px 12px"}}>
-                                                                {
-                                                                    card_tag.tag_number === "1000" ?
-                                                                    card_tag.name : card_tag.name + " *"}
-                                                        </h5>
-                                                    </NavLink>
-
-                                                );
-                                            })}
-                                        </>:
-                                            <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
-                                                {card_tags_list[0].name}
-                                            </h5>
-                                    }
-
-                                </div>
-                                <div className={card.card_class ? card.card_class : "NoClass"}>
-                                    <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Series</h4>
-                                        {card.seriesNames.map((line) =>
-                                            <NavLink to={`/cardcategories/${matchSeries(line)}`} className="nav-link2 glow2">
-                                                <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
-                                                {line} *</h5>
-                                            </NavLink>)
-                                        }
-                                </div>
-                                <div className={card.card_class ? card.card_class : "NoClass"}>
-                                    <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Card Number</h4>
-                                        <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.card_number}</h5>
-                                </div>
-                                <div className={card.card_class ? card.card_class : "NoClass"}>
-                                    <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Hero ID</h4>
-                                        <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.hero_id}</h5>
-                                </div>
-                                <div className={card.card_class ? card.card_class : "NoClass"}>
-                                    <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Illustrator</h4>
-                                        <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.illustrator}</h5>
+                                        );
+                                    })}
                                 </div>
                             </div>
+                            <div className="cd-inner" style={{marginTop: "3%"}}>
+                                <button
+                                    className="left button100 heightNorm"
+                                    style={{ textAlign: "center"}}
+                                    onClick={getRandomCard}
+                                >
+                                    Random Card
+                                </button>
+                                {relatedCardsList.length > 6?
+                                    <RelatedCardModal
+                                        relatedCardsList={relatedCardsList}
+                                    />: null
+                                }
+
+                            </div>
                         </div>
-                        <div>
+                    </div>
+                    <div className="cd-container-child">
+                        <div className="cd-inner2 media-display">
+                        <h1 className="none">{card.name}</h1>
                             <div>
-                                <div className={card.card_class ? `big${card.card_class}` : "bigNoClass"}>
-                                    <h4 style={{fontWeight: "600", margin: "12px"}}>Card Effect</h4>
+                                <div className="cd-info">
+                                    <div className={card.card_class ? card.card_class : "NoClass"}>
+                                        <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Type</h4>
+                                        <NavLink to={`/cardtypes/${card_type?.id}`} className="nav-link2 glow2">
+                                                <h5 title={card_type?.rules}
+                                                    style={{fontWeight: "400", margin: "18px 12px"}}
+                                                    >{card_type?.name} *
+                                                </h5>
+                                        </NavLink>
+                                    </div>
+                                    <div className={card.card_class ? card.card_class : "NoClass"}>
+                                        <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Class</h4>
+                                        { card.card_class?
+                                            <NavLink to={`/cardcategories/${matchClass(card.card_class)}`} className="nav-link2 glow2">
+                                                <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.card_class ? `${card.card_class} *` : "n/a"}</h5>
+                                            </NavLink>:
+                                            <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.card_class ? card.card_class : "n/a"}</h5>
+                                        }
+                                    </div>
+                                    <div className={card.card_class ? card.card_class : "NoClass"}>
+                                        <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Reactions</h4>
+                                        {reactions_list.length ? (
+                                            reactions_list.map((reaction) => (
+                                                <NavLink to={`/reactions/${reaction.info.id}`} className="nav-link2 glow2">
+                                                    <h5 title={reactionRules(reaction)} style={{fontWeight: "400", margin: "18px 12px"}} key={reaction.info.name}>
+                                                        {reaction.info.name} {reaction.count} *
+                                                    </h5>
+                                                </NavLink>
+                                            ))
+                                        ) : (
+                                            <h5 style={{fontWeight: "400", margin: "18px 12px"}}>n/a</h5>
+                                        )}
+                                    </div>
+                                    <div className={card.card_class ? card.card_class : "NoClass"}>
+                                        <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Enthusiasm</h4>
+                                            <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.enthusiasm ? card.enthusiasm : "n/a"}</h5>
+                                    </div>
+                                    <div className={card.card_class ? card.card_class : "NoClass"}>
+                                        <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Tags</h4>
+                                        {card_tags_list[0]?.tag_number !== 1000?
+                                            <>
+                                                {card_tags_list.map((card_tag) => {
+                                                    return (
+                                                        <NavLink to={`/cardtags/${card_tag.id}`} className="nav-link2 glow2">
+                                                            <h5 title={card_tag.rules}
+                                                                style={{fontWeight: "400", margin: "18px 12px"}}>
+                                                                    {
+                                                                        card_tag.tag_number === "1000" ?
+                                                                        card_tag.name : card_tag.name + " *"}
+                                                            </h5>
+                                                        </NavLink>
 
-                                    {card.effectText.map((line) =>
-                                        <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
-                                            {line}</h5>)}
+                                                    );
+                                                })}
+                                            </>:
+                                                <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
+                                                    {card_tags_list[0].name}
+                                                </h5>
+                                        }
 
+                                    </div>
+                                    <div className={card.card_class ? card.card_class : "NoClass"}>
+                                        <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Series</h4>
+                                            {card.seriesNames.map((line) =>
+                                                <NavLink to={`/cardcategories/${matchSeries(line)}`} className="nav-link2 glow2">
+                                                    <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
+                                                    {line} *</h5>
+                                                </NavLink>)
+                                            }
+                                    </div>
+                                    <div className={card.card_class ? card.card_class : "NoClass"}>
+                                        <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Card Number</h4>
+                                            <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.card_number}</h5>
+                                    </div>
+                                    <div className={card.card_class ? card.card_class : "NoClass"}>
+                                        <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Hero ID</h4>
+                                            <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.hero_id}</h5>
+                                    </div>
+                                    <div className={card.card_class ? card.card_class : "NoClass"}>
+                                        <h4 style={{fontWeight: "600", margin: "10px 0px 0px 12px"}}>Illustrator</h4>
+                                            <h5 style={{fontWeight: "400", margin: "18px 12px"}}>{card.illustrator}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div className={card.card_class ? `big${card.card_class}` : "bigNoClass"}>
+                                        <h4 style={{fontWeight: "600", margin: "12px"}}>Card Effect</h4>
 
-                                    {card.second_effect_text && (
-                                        <div className="borderBlack">
-
-                                        {card.secondEffectText.map((line) =>
+                                        {card.effectText.map((line) =>
                                             <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
                                                 {line}</h5>)}
 
 
-                                        </div>
-                                    )}
-                                    {extra_effects_list.length ? (
-                                    <>
-                                        <h4 style={{fontWeight: "600", margin: "12px"}}>Extra Effect Types</h4>
-                                        <div className="borderBlack" style={{display:"flex"}}>
-                                            {extra_effects_list.map((extra_effect) => (
-                                                <NavLink to={`/extraeffects/${extra_effect.id}`} className="nav-link2 glow2">
-                                                    <h5 title={extra_effect.rules}
-                                                        style={{fontWeight: "400",
-                                                        height: "22px",
-                                                        margin: "0px 5px 20px 15px"}}>
-                                                        {extra_effect.name} *
-                                                    </h5>
-                                                </NavLink>
-                                            ))}
-                                        </div>
-                                    </>
-                                    ) : null}
-                                </div>
-                            </div>
-                        </div>
-                        <div className="hidden2 media-display">
-                            <div style={{margin: "5% 0%"}}>
-                                <h1 className="centered-h1">Related Cards</h1>
-                                <div className="cd-inner">
-                                    <div className="cd-inner card-pool-fill3">
-                                        {relatedCardsList.slice(0,6).map((relatedCard) => {
-                                            return (
-                                                <NavLink to={`/cards/${relatedCard.card_number}`}>
-                                                        <img
-                                                            className="cd-related-card"
-                                                            title={relatedCard.name}
-                                                            src={relatedCard.picture_url ? relatedCard.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                                            alt={relatedCard.name}/>
-                                                </NavLink>
-                                            );
-                                        })}
+                                        {card.second_effect_text && (
+                                            <div className="borderBlack">
+
+                                            {card.secondEffectText.map((line) =>
+                                                <h5 style={{fontWeight: "400", margin: "18px 12px"}}>
+                                                    {line}</h5>)}
+
+
+                                            </div>
+                                        )}
+                                        {extra_effects_list.length ? (
+                                        <>
+                                            <h4 style={{fontWeight: "600", margin: "12px"}}>Extra Effect Types</h4>
+                                            <div className="borderBlack" style={{display:"flex"}}>
+                                                {extra_effects_list.map((extra_effect) => (
+                                                    <NavLink to={`/extraeffects/${extra_effect.id}`} className="nav-link2 glow2">
+                                                        <h5 title={extra_effect.rules}
+                                                            style={{fontWeight: "400",
+                                                            height: "22px",
+                                                            margin: "0px 5px 20px 15px"}}>
+                                                            {extra_effect.name} *
+                                                        </h5>
+                                                    </NavLink>
+                                                ))}
+                                            </div>
+                                        </>
+                                        ) : null}
                                     </div>
                                 </div>
-                                <div className="cd-inner" style={{marginTop: "3%"}}>
-                                    <button
-                                        className="left button100 heightNorm"
-                                        style={{ textAlign: "center"}}
-                                        onClick={getRandomCard}
-                                    >
-                                        Random Card
-                                    </button>
-                                    {relatedCardsList.length > 6?
-                                        <RelatedCardModal
-                                            relatedCardsList={relatedCardsList}
-                                        />: null
-                                    }
+                            </div>
+                            <div className="hidden2 media-display">
+                                <div style={{margin: "5% 0%"}}>
+                                    <h1 className="centered-h1">Related Cards</h1>
+                                    <div className="cd-inner">
+                                        <div className="cd-inner card-pool-fill3">
+                                            {relatedCardsList.slice(0,6).map((relatedCard) => {
+                                                return (
+                                                    <NavLink to={`/cards/${relatedCard.card_number}`}>
+                                                            <img
+                                                                className="cd-related-card"
+                                                                title={relatedCard.name}
+                                                                src={relatedCard.picture_url ? relatedCard.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                                alt={relatedCard.name}/>
+                                                    </NavLink>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                    <div className="cd-inner" style={{marginTop: "3%"}}>
+                                        <button
+                                            className="left button100 heightNorm"
+                                            style={{ textAlign: "center"}}
+                                            onClick={getRandomCard}
+                                        >
+                                            Random Card
+                                        </button>
+                                        {relatedCardsList.length > 6?
+                                            <RelatedCardModal
+                                                relatedCardsList={relatedCardsList}
+                                            />: null
+                                        }
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                    </div>
+                </div>:
+                <ErrorPage path={"/cards/"}/>
+            }
+        </>
     );
 }
 

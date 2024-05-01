@@ -148,3 +148,5 @@
 // for (const [key, value] of Object.entries(queryList)) {
 //     reactionQuery = where(reactionQuery, key, "==", value);
 // }
+
+// Catch nonexistant decks

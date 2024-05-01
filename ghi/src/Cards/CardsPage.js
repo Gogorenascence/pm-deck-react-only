@@ -433,8 +433,10 @@ function CardsPage(props) {
                     style={{ width: "100%", marginTop:"3%"}}
                     onClick={handleShowMore}>
                     Show More Cards ({all_cards.length - showMore} Remaining)
-                </button> : null }
-    </div>
+                </button>:
+                null
+            }
+        </div>
     );
 }
 
