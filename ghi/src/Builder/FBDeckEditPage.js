@@ -121,10 +121,15 @@ function FBDeckEdit({
             }
             setPluckList(pluckList)
 
+            setSelectedList(deckData.strategies)
+            setSelectedCard(deckData.cover_card)
+            const id_list = []
+            const newList = []
         } else {
             setNoDeck(true)
         }
     }
+
 
     const [main_list, setMainList] = useState([]);
     const [pluck_list, setPluckList] = useState([]);
