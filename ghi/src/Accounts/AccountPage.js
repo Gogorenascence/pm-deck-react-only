@@ -4,7 +4,7 @@ import {
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { DeckQueryContext } from "../Context/DeckQueryContext";
-import { AuthContext } from "../Context/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 import AccountDecks from "./AccountDecks";
 import AccountFavoriteDecks from "./AccountFavoriteDecks";
 import ImageUpload from "./ImageUpload";

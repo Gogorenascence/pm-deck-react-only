@@ -3,8 +3,8 @@ import {
 } from "react-bootstrap";
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
-import { DeckQueryContext } from "../Context/DeckQueryContext";
-import { AuthContext } from "../Context/AuthContext";
+import { DeckQueryContext } from "../context/DeckQueryContext";
+import { AuthContext } from "../context/AuthContext";
 
 function AccountFavoriteDecks(props) {
 

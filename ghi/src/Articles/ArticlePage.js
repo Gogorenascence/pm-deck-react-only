@@ -6,9 +6,7 @@ import ErrorPage from "../display/ErrorPage";
 function ArticlePage({
     articles
 }) {
-
     const { article_id } = useParams()
-
     const [article, setArticle] = useState({
         title: "",
         subtitle: "",
@@ -211,7 +209,7 @@ function ArticlePage({
                         </NavLink>
                     </div>
                 </div>:
-                <ErrorPage path={"/articles/"}/>
+                <ErrorPage path={"/"}/>
             }
         </>
     );
