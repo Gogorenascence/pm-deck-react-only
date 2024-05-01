@@ -35,6 +35,7 @@ import ArticlePage from "./Articles/ArticlePage";
 import HowToPage from "./GamePlay/HowTos/HowToPage";
 import HowTosPage from "./GamePlay/HowTos/HowTosPage";
 import FBDeckBuildandImport from "./Builder/FBDeckBuildandImport";
+import FBDeckDetailPage from "./Decks/FBDeckDetailPage";
 
 
 function App() {
@@ -111,7 +112,7 @@ function App() {
                                                       booster_sets={booster_sets}
                                                 />} />
               <Route path="/decks" element={<DecksPage decks={decks}/>} />
-              <Route path="/decks/:deck_id" element={<DeckDetailPage
+              <Route path="/decks/:deck_id" element={<FBDeckDetailPage
                                                       cards={cards}
                                                     />} />
               <Route path="/decks/:deck_id/copy" element={<DeckCopy

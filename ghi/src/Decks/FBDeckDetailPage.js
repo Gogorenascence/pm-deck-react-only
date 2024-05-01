@@ -3,8 +3,8 @@ import {
     Row,
     Card,
 } from "react-bootstrap";
-import { useState, useEffect } from "react";
-import { NavLink, useParams } from 'react-router-dom';
+import { useState, useEffect, useContext } from "react";
+import { NavLink, useParams, useNavigate } from 'react-router-dom';
 import DeckExport from "./DeckExport";
 import BackButton from "../display/BackButton";
 import StatsPanel from "./StatsPanel";
@@ -12,11 +12,17 @@ import SimulateButton from "../Simulator/SimulateButton";
 import DeckSheetPage from "./DeckSheetPage";
 import deckQueries from "../QueryObjects/DeckQueries";
 import ErrorPage from "../display/ErrorPage";
+import { AuthContext } from "../context/AuthContext";
+import PopUp from "../display/PopUp"
+import deckActions from "../Builder/DeckActions";
 
 
-function DeckDetailPage(props) {
+function FBDeckDetailPage(props) {
     const {deck_id} = useParams();
     const {cards} = props
+    const {account} = useContext(AuthContext)
+    const navigate = useNavigate()
+
     const [deck, setDeck] = useState("");
     const [noDeck, setNoDeck] = useState(false)
     const [shuffledDeck, setShuffledDeck] = useState([]);
@@ -34,11 +40,16 @@ function DeckDetailPage(props) {
     const [showMain, setShowMain] = useState(true);
     const [showPluck, setShowPluck] = useState(true);
 
+    const [popUpAction, setPopUpAction] = useState({
+        action: "",
+        message: "",
+        show: false
+    });
+
     const getDeck = async() => {
         const deckData = await deckQueries.getDeckDataById(deck_id);
         if (deckData) {
             setDeck(deckData);
-            console.log(deckData)
             setCreatedAgo(deckData.created_on.ago);
             setUpdatedAgo(deckData.updated_on.ago);
 
@@ -107,7 +118,6 @@ function DeckDetailPage(props) {
         setOwnership("");
     }
 
-
     useEffect(() => {
         window.scroll(0, 0);
         document.body.style.overflow = 'auto';
@@ -162,11 +172,35 @@ function DeckDetailPage(props) {
         setShowPluck(!showPluck);
     };
 
+    const handlePopUp = (action, message, show) => {
+        setPopUpAction({
+            action: action,
+            message: message,
+            show: show
+        })
+    }
+
+    const handleDelete = async() => {
+        const deletedDeck = await deckActions.deleteDeck(deck.id)
+        if (deletedDeck) {
+            navigate("/decks/")
+        } else {
+            console.log("Deck not deleted")
+        }
+    }
 
     return (
         <>
             { !noDeck?
                 <div className="white-space">
+                    {popUpAction.show === true?
+                        <PopUp
+                            action={popUpAction.action}
+                            message={popUpAction.message}
+                            show={popUpAction.show}
+                            setPopUpAction={setPopUpAction}
+                        />
+                    :null}
                     <Card className="text-white text-center card-list-card3" style={{margin: "2% 0%" }}>
                         <div className="card-image-wrapper">
                             <div className="card-image-clip2">
@@ -218,41 +252,39 @@ function DeckDetailPage(props) {
                     </div>:
                     null}
                     <div style={{display: "flex"}}>
-                                {shuffledDeck.length > 0 ?
-                        <div className="maindeck" style={{width: "90%"}}>
-                            <div style={{marginLeft: "10px"}}>
-                                <h4
-                                    className="left"
-                                    style={{margin: "10px 10px", fontWeight: "700"}}
-                                    >Test Hand
-                                </h4>
-                                <div style={{width: "95%", marginLeft: "20px"}}>
-                                    <Row xs="auto" className="justify-content-start">
-                                        {shuffledDeck.slice(0,6).map((card) => {
-                                            return (
-                                                <Col
-                                                    style={{padding: "2px 5px 8px 5px"}}>
-                                                    <img
-                                                        style={{
-                                                            width: '115px',
-                                                            margin: '10px 0px 10px 0px',
-                                                            borderRadius: "7px",
-                                                            overflow: "hidden"}}
-                                                        onClick={() => handleMulliganChange(card)}
-                                                        className={mulliganList.includes(shuffledDeck.indexOf(card)) ? "selected builder-card3" : "builder-card3"}
-                                                        title={card.name}
-                                                        src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                                        alt={card.name}/>
-                                                </Col>
-                                            );
-                                        })}
-                                    </Row>
+                        {shuffledDeck.length > 0 ?
+                            <div className="maindeck" style={{width: "90%"}}>
+                                <div style={{marginLeft: "10px"}}>
+                                    <h4 className="left"
+                                        style={{margin: "10px 10px", fontWeight: "700"}}
+                                        >Test Hand
+                                    </h4>
+                                    <div style={{width: "95%", marginLeft: "20px"}}>
+                                        <Row xs="auto" className="justify-content-start">
+                                            {shuffledDeck.slice(0,6).map((card) => {
+                                                return (
+                                                    <Col
+                                                        style={{padding: "2px 5px 8px 5px"}}>
+                                                        <img
+                                                            style={{
+                                                                width: '115px',
+                                                                margin: '10px 0px 10px 0px',
+                                                                borderRadius: "7px",
+                                                                overflow: "hidden"}}
+                                                            onClick={() => handleMulliganChange(card)}
+                                                            className={mulliganList.includes(shuffledDeck.indexOf(card)) ? "selected builder-card3" : "builder-card3"}
+                                                            title={card.name}
+                                                            src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                            alt={card.name}/>
+                                                    </Col>
+                                                );
+                                            })}
+                                        </Row>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>:
-                                null}
-                            {ownership ?
-
+                            </div>:
+                        null}
+                        {ownership ?
                             <div className="pluckdeck" style={{marginLeft: ".5%"}}>
                                 <h4
                                     className="left"
@@ -276,9 +308,31 @@ function DeckDetailPage(props) {
                                     </Col>
                                 </Row>
                             </div>:
-                            null}
+                        null}
                     </div>
                     <div className="dd-button-row flex">
+                        {(account && account.roles.includes("admin")) || (account && deck.account_id === account.id)?
+                            <>
+                                {/* <NavLink to={`/decks/${deck.id}/edit`}>
+                                    <button
+                                        className="left heightNorm button100 red"
+                                        variant="danger"
+                                        style={{marginLeft: ".5%", marginRight: "7px"}}
+                                        >
+                                        Edit Deck
+                                    </button>
+                                </NavLink> */}
+                                <button
+                                    className="left heightNorm red"
+                                    onClick={() => handlePopUp(handleDelete, "Are you sure you want to delete this deck?", true)}
+                                    style={{marginLeft: "5px", marginRight: "7px"}}
+                                    >
+                                    Delete Deck
+                                </button>
+                            </>
+                        :
+                            null
+                        }
                         {listView?
                             <button
                                 className="left"
@@ -344,8 +398,7 @@ function DeckDetailPage(props) {
                             <div className="maindeck3">
                                 <div style={{marginLeft: "20px"}}>
                                     <div style={{display: "flex", alignItems: "center"}}>
-                                        <h2
-                                            className="left"
+                                        <h2 className="left"
                                             style={{margin: "2% 0% 1% 0%", fontWeight: "700"}}
                                         >Main Deck</h2>
                                         <img className="logo" src="https://i.imgur.com/YpdBflG.png" alt="cards icon"/>
@@ -378,7 +431,7 @@ function DeckDetailPage(props) {
                             </div>
                             <div className="pluckdeck3">
                                 <div style={{marginLeft: "20px"}}>
-                                <div style={{display: "flex", alignItems: "center"}}>
+                                    <div style={{display: "flex", alignItems: "center"}}>
                                         <h2
                                             className="left"
                                             style={{margin: "2% 0% 1% 0%", fontWeight: "700"}}
@@ -390,7 +443,8 @@ function DeckDetailPage(props) {
                                         >{pluck_list.length}</h5>:
                                         null}
                                     </div>
-                                    {pluck_list.length > 0 ?<>
+                                    {pluck_list.length > 0 ?
+                                        <>
                                             {countedPluckList.sort((a,b) => a.card_number - b.card_number).map((card) => {
                                                 return (
                                                     <Col style={{padding: "5px"}}>
@@ -408,7 +462,8 @@ function DeckDetailPage(props) {
                                                 );
                                             })}
                                         </>:
-                                    <h4 className="left no-cards">No cards added</h4>}
+                                        <h4 className="left no-cards">No cards added</h4>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -512,4 +567,4 @@ function DeckDetailPage(props) {
 }
 
 
-export default DeckDetailPage;
+export default FBDeckDetailPage;
