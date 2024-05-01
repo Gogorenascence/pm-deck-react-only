@@ -112,11 +112,9 @@ function App() {
                                                 />} />
               <Route path="/decks" element={<DecksPage decks={decks}/>} />
               <Route path="/decks/:deck_id" element={<DeckDetailPage
-                                                            decks={decks}
-                                                            cards={cards}
+                                                      cards={cards}
                                                     />} />
               <Route path="/decks/:deck_id/copy" element={<DeckCopy
-                                                      decks={decks}
                                                       cards={cards}
                                                       booster_sets={booster_sets}
                                                 />} />
