@@ -313,7 +313,7 @@ function FBDeckDetailPage(props) {
                     <div className="dd-button-row flex">
                         {(account && account.roles.includes("admin")) || (account && deck.account_id === account.id)?
                             <>
-                                {/* <NavLink to={`/decks/${deck.id}/edit`}>
+                                <NavLink to={`/decks/${deck.id}/edit`}>
                                     <button
                                         className="left heightNorm button100 red"
                                         variant="danger"
@@ -321,7 +321,7 @@ function FBDeckDetailPage(props) {
                                         >
                                         Edit Deck
                                     </button>
-                                </NavLink> */}
+                                </NavLink>
                                 <button
                                     className="left heightNorm red"
                                     onClick={() => handlePopUp(handleDelete, "Are you sure you want to delete this deck?", true)}

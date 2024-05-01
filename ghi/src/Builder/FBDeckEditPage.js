@@ -1,43 +1,38 @@
-import React, { useState, useEffect, useContext, useRef } from 'react'
-import { useParams, useNavigate } from 'react-router-dom';
-import BackButton from "../Display/BackButton";
-import { AuthContext } from "../Context/AuthContext";
-import { BuilderQueryContext } from "../Context/BuilderQueryContext";
+import React, { useState, useRef, useEffect, useContext } from 'react';
+import { BuilderQueryContext } from '../context/BuilderQueryContext';
+import { useParams, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
+import { PullsContext } from "../context/PullsContext";
 import BuilderCardSearch from "./BuilderCardSearch";
-import { PullsContext } from "../Context/PullsContext";
 import ImageViewListInput from "./ImageViewListInput";
 import ListViewListInput from "./ListViewListInput";
 import CardPool from "./CardPool";
 import DeckImport from './DeckImport';
 import StatsPanel from './StatsPanel';
+// import { beforeLeaving } from '../Helpers';
+import deckQueries from '../QueryObjects/DeckQueries';
+import ErrorPage from "../display/ErrorPage";
+import deckActions from './DeckActions';
 
 
-function DeckEditPage() {
-    const [deck, setDeck] = useState({
-        name: "",
-        account_id: "",
-        description: "",
-        strategies: [],
-        cards: [],
-        pluck: [],
-        side: [],
-        views: 0,
-        cover_card: null,
-        parent_id: "",
-        private: false,
-    });
-
+function FBDeckEdit({
+    cards,
+    booster_sets
+}) {
     const {deck_id} = useParams();
     const {account} = useContext(AuthContext)
-    const {query,
+    const {
+        query,
         sortState,
         boosterSet,
         rarity,
         listView,
         showMore,
-        setShowMore} = useContext(BuilderQueryContext)
+        setShowMore
+    } = useContext(BuilderQueryContext)
 
     const fileInput = useRef(null);
+
     const [importedDecks, setImportedDecks] = useState([]);
     const [showDecks, setShowDecks] = useState(false);
 
@@ -69,21 +64,17 @@ function DeckEditPage() {
     };
 
     const importDeck = (importedDeck) => {
-        console.log(importedDeck.ObjectStates[0])
         const cardIDList = importedDeck.ObjectStates[0].DeckIDs.map(num => num/100)
         const cardList = cardIDList.map(cardID => cards.find(card => card.card_number === cardID))
-        console.log(cardList)
         const main = cardList.filter(card => card.card_type[0] === 1001||
             card.card_type[0] === 1002||
             card.card_type[0] === 1003||
             card.card_type[0] === 1004||
             card.card_type[0] === 1005)
-        console.log(main)
         setMainList([...main_list, ...main])
         const pluck = cardList.filter(card => card.card_type[0] === 1006||
             card.card_type[0] === 1007||
             card.card_type[0] === 1008)
-        console.log(pluck)
         setPluckList([...pluck_list, ...pluck])
     };
 
@@ -95,16 +86,53 @@ function DeckEditPage() {
         setShowDecks(!showDecks);
     };
 
-    const [deck_list, setDeckList] = useState([]);
+    const [deck, setDeck] = useState({
+        name: "",
+        account_id: "",
+        description: "",
+        strategies: [],
+        cards: [],
+        pluck: [],
+        side: [],
+        views: 0,
+        cover_card: "",
+        parent_id: "",
+        private: false,
+    });
+
+    const [noDeck, setNoDeck] = useState(false)
+
+    const getDeck = async() => {
+        const deckData = await deckQueries.getDeckDataById(deck_id);
+        if (deckData) {
+            setDeck(deckData);
+
+            const mainList = []
+            const pluckList = []
+            for (let card_number of deckData.cards) {
+                const mainDeckCard = cards.find(card => card.card_number === card_number)
+                mainList.push(mainDeckCard)
+            }
+            setMainList(mainList)
+
+            for (let card_number of deckData.pluck) {
+                const pluckDeckCard = cards.find(card => card.card_number === card_number)
+                pluckList.push(pluckDeckCard)
+            }
+            setPluckList(pluckList)
+
+        } else {
+            setNoDeck(true)
+        }
+    }
+
     const [main_list, setMainList] = useState([]);
     const [pluck_list, setPluckList] = useState([]);
     const combinedList = main_list.concat(pluck_list);
-    const [uniqueList, setUniqueList] = useState([]);
+    const uniqueList = [...new Set(combinedList)];
 
     const [selectedList, setSelectedList] = useState([]);
     const [selectedCard, setSelectedCard] = useState(null);
-
-    const [cards, setCards] = useState([]);
 
     const [showPool, setShowPool] = useState(true);
     const [showMain, setShowMain] = useState(true);
@@ -112,68 +140,6 @@ function DeckEditPage() {
 
     const [noCards, setNoCards] = useState(false);
 
-    const getCards = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/`);
-        const data = await response.json();
-        if (data.cards.length == 0 ) {
-            setNoCards(true)
-        }
-        const sortedCards = [...data.cards].sort(sortMethods[sortState].method);
-        setCards(sortedCards);
-    };
-
-    const getDeck = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/${deck_id}/`);
-        const deckData = await response.json();
-        if (deckData["pluck"] === null){
-            deckData["pluck"] = []
-        }
-        if (deckData["side"] === null){
-            deckData["side"] = []
-        }
-        setDeck(deckData);
-    };
-
-    const getDeckList = async() =>{
-        const response = await fetch(`${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/${deck_id}/list/`);
-        const deckListData = await response.json();
-        setDeckList(deckListData)
-        setMainList(deckListData[0])
-        setPluckList(deckListData[1])
-    };
-
-    const getExtraData = async() =>{
-        setSelectedList(deck.strategies)
-        setSelectedCard(deck.cover_card)
-        const id_list = []
-        const newList = []
-        for (let card of combinedList){
-            if (!id_list.includes(card.id)){
-                id_list.push(card.id)
-                newList.push(card)
-            }
-        }
-        setUniqueList(newList);
-    }
-
-    useEffect(() => {
-        window.scroll(0, 0);
-        document.body.style.overflow = 'auto';
-        getDeck();
-        getDeckList();
-        getCards();
-        getPulledCards();
-    // eslint-disable-next-line
-    },[]);
-
-    useEffect(() => {
-        getExtraData();
-        document.title = `Editing ${deck.name} - PM CardBase`
-        return () => {
-            document.title = "PlayMaker CardBase"
-        };
-    // eslint-disable-next-line
-    }, [deck, deck_list, main_list, pluck_list]);
 
     const sortMethods = {
         none: { method: (a,b) => a.card_number - b.card_number },
@@ -208,24 +174,38 @@ function DeckEditPage() {
 
     const selectedPool = usePool? cards : pulledCards
 
-    const handleUsePool = (event) => {
+    const handleUsePool = () => {
         setUsePool(!usePool);
     };
 
+    useEffect(() => {
+        getDeck()
+        console.log(deck)
+        window.scroll(0, 0);
+        // beforeLeaving()
+        document.body.style.overflow = 'auto';
+        getPulledCards();
+        document.title = "Deck Edit - PM CardBase"
+        return () => {
+            document.title = "PlayMaker CardBase"
+        };
+    // eslint-disable-next-line
+    }, []);
+
     const all_cards = selectedPool.filter(card => card.name.toLowerCase().includes(query.cardName.toLowerCase()))
-        .filter(card => (card.effect_text + card.second_effect_text).toLowerCase().includes(query.cardText.toLowerCase()))
-        .filter(card => card.card_number.toString().includes(query.cardNumber))
-        .filter(card => card.hero_id.toLowerCase().includes(query.heroID.toLowerCase()))
-        .filter(card => card.series_name.toLowerCase().includes(query.series.toLowerCase()))
-        .filter(card => card.card_number >= query.startingNum)
-        .filter(card => query.type? card.card_type.some(type => type.toString() == query.type):card.card_type)
-        .filter(card => card.card_class.includes(query.cardClass))
-        .filter(card => query.extraEffect? card.extra_effects.some(effect => effect.toString() == query.extraEffect):card.extra_effects)
-        .filter(card => query.reaction? card.reactions.some(reaction => reaction.toString() == query.reaction):card.reactions)
-        .filter(card => query.tag? card.card_tags.some(tag => tag.toString() == query.tag):card.card_tags)
-        .filter(card => boosterSet && !rarity ? boosterSet.all_cards.includes(card.card_number):card.card_number)
-        .filter(card => boosterSet && rarity ? boosterSet[rarity].includes(card.card_number):card.card_number)
-        .sort(sortMethods[sortState].method)
+    .filter(card => (card.effect_text + card.second_effect_text).toLowerCase().includes(query.cardText.toLowerCase()))
+    .filter(card => card.card_number.toString().includes(query.cardNumber))
+    .filter(card => card.hero_id.toLowerCase().includes(query.heroID.toLowerCase()))
+    .filter(card => card.series_name.toLowerCase().includes(query.series.toLowerCase()))
+    .filter(card => card.card_number >= query.startingNum)
+    .filter(card => query.type? card.card_type.some(type => type.toString() == query.type):card.card_type)
+    .filter(card => card.card_class.includes(query.cardClass))
+    .filter(card => query.extraEffect? card.extra_effects.some(effect => effect.toString() == query.extraEffect):card.extra_effects)
+    .filter(card => query.reaction? card.reactions.some(reaction => reaction.toString() == query.reaction):card.reactions)
+    .filter(card => query.tag? card.card_tags.some(tag => tag.toString() == query.tag):card.card_tags)
+    .filter(card => boosterSet && !rarity ? boosterSet.all_cards.includes(card.card_number):card.card_number)
+    .filter(card => boosterSet && rarity ? boosterSet[rarity].includes(card.card_number):card.card_number)
+    .sort(sortMethods[sortState].method)
 
     const handleShowMore = (event) => {
         {usePool? setShowMore(showMore + 20): setShowMore(showMore + 50)}
@@ -237,13 +217,11 @@ function DeckEditPage() {
 
     const handleCheck = (event) => {
         setDeck({ ...deck, [event.target.name]: event.target.checked });
-        console.log(deck.private)
     };
 
     const handleCoverCardChange = (event) => {
         setSelectedCard( event.target.value );
         setDeck({ ...deck, [event.target.name]: event.target.value });
-        console.log(selectedCard)
     };
 
     const handleStrategyChange = e => {
@@ -251,7 +229,6 @@ function DeckEditPage() {
         options = Array.apply(null, options)
         const selectedValues = options.filter(x => x.selected).map(x => x.value);
         setSelectedList(selectedValues);
-        console.log(selectedValues)
     }
 
     const handleClick = (card) => {
@@ -262,7 +239,6 @@ function DeckEditPage() {
         }else{
             setMainList([...main_list, card]);
         }
-        getExtraData();
     }
 
     const handleRemoveCard = (card) => {
@@ -285,7 +261,6 @@ function DeckEditPage() {
                 setSelectedCard(null)
             }
         }
-        getExtraData();
     }
 
     const clearMain = async() => {
@@ -339,20 +314,12 @@ function DeckEditPage() {
         data["strategies"] = selectedList
         data["card_names"] = card_names
         data["series_names"] = series_names
+        account ? data["account_id"] = account.id : data["account_id"] = deck.account_id
 
-        const cardUrl = `${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/${deck_id}/`;
-        const fetchConfig = {
-            method: "PUT",
-            body: JSON.stringify(data),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
+        const editedDeck = await deckActions.editDeck(deck_id, data)
 
-        const response = await fetch(cardUrl, fetchConfig);
-        if (response.ok) {
-            await response.json();
-            setDeck({
+        if (editedDeck) {
+            const clearedDeck = {
                 name: "",
                 account_id: "",
                 description: "",
@@ -362,9 +329,13 @@ function DeckEditPage() {
                 side: [],
                 views: 0,
                 cover_card: "",
-            });
-            navigate(`/decks/${deck_id}`)
-        };
+                parent_id: "",
+            }
+            setDeck(clearedDeck)
+            (navigate(`/decks/${deck_id}`));
+        } else {
+            alert("Error in editing deck");
+        }
     }
 
     const handleShowPool = (event) => {
@@ -381,197 +352,219 @@ function DeckEditPage() {
 
     const isQueryEmpty = Object.values(query).every((value) => value === "");
 
-    return (
-        <div className="white-space">
-            <div className="between-space media-display">
-                <span className="media-flex-center">
-                    <div>
-                        <h1 className="left-h1-2">Deck Edit</h1>
-                        <h2 className="left">Deck Details</h2>
-                        <h5 className="label">Name </h5>
-                        <input
-                            className="builder-input"
-                            type="text"
-                            placeholder=" Deck Name"
-                            onChange={handleChange}
-                            name="name"
-                            value={deck.name}>
-                        </input>
-                        <br/>
-                        <h5 className="label">Cover Card</h5>
-                        <select
-                            className="builder-input"
-                            type="text"
-                            placeholder=" Cover Card"
-                            onChange={handleCoverCardChange}
-                            name="cover_card"
-                            value={deck.cover_card}>
-                            <option value="">Cover Card</option>
-                            {uniqueList.sort((a,b) => a.card_number - b.card_number).map((card) => (
-                                <option value={card.picture_url}>{card.name}</option>
-                                ))}
-                        </select>
-                        <br/>
-                        <h5 className="label"> Description </h5>
-                        <textarea
-                            className="builder-text"
-                            type="text"
-                            placeholder=" Deck Description"
-                            onChange={handleChange}
-                            name="description"
-                            value={deck.description}>
-                        </textarea>
-                        <h5 className="label">Strategies</h5>
-                        <h7 className="label"><em>hold ctrl/cmd to select more than one</em></h7>
-                        <br/>
-                        <select
-                            className="builder-text"
-                            multiple
-                            name="strategies"
-                            onChange={handleStrategyChange}
-                            >
-                            <option value="">Strategy</option>
-                            <option value="Aggro" selected={deck.strategies.includes("Aggro")}>Aggro</option>
-                            <option value="Combo" selected={deck.strategies.includes("Combo")}>Combo</option>
-                            <option value="Control" selected={deck.strategies.includes("Control")}>Control</option>
-                            <option value="Mid-range" selected={deck.strategies.includes("Mid-range")}>Mid-range</option>
-                            <option value="Ramp" selected={deck.strategies.includes("Ramp")}>Ramp</option>
-                            <option value="Second Wind" selected={deck.strategies.includes("Second Wind")}>Second Wind</option>
-                            <option value="Stall" selected={deck.strategies.includes("Stall")}>Stall</option>
-                            <option value="Toolbox" selected={deck.strategies.includes("Toolbox")}>Toolbox</option>
-                            <option value="other" selected={deck.strategies.includes("other")}>other</option>
-                        </select>
-                        <br/>
-                        <input
-                            style={{margin: "20px 5px 9px 5px", height: "10px"}}
-                            id="private"
-                            type="checkbox"
-                            onChange={handleCheck}
-                            name="private"
-                            checked={deck.private}>
-                        </input>
-                        <label for="private"
-                            className="bold"
-                        >
-                            Make my decks private
-                        </label>
-                        <br/>
-                        { (account && account.roles.includes("admin")) || (account && deck.account_id === account.id)?
-                            <button
-                                style={{width: "67px", margin: "5px"}}
-                                onClick={handleSubmit}
-                                className="heightNorm"
-                            >
-                                Save
-                            </button>:
-                            null
-                        }
-                        <BackButton/>
-                        <button
-                            className="left red heightNorm"
-                            onClick={clearMain}
-                        >
-                            Clear Main
-                        </button>
-                        <button
-                            className="left red heightNorm"
-                            onClick={clearPluck}
-                        >
-                            Clear Pluck
-                        </button>
-                        <br/>
-                    </div>
-                </span>
-                <div className="none margin-top-63">
-                    <h2 className="left">Cover Card</h2>
-                    {selectedCard ? (
-                        <img
-                            className="cover-card"
-                            src={selectedCard}
-                            alt={selectedCard.name}/>
-                            ):(
-                        <img
-                            className="cover-card"
-                            src={"https://i.imgur.com/krY25iI.png"}
-                            alt="card"/>)}
-                </div>
-                <span className="media-flex-center margin-top-63">
-                    <BuilderCardSearch/>
-                </span>
-            </div>
-            <DeckImport
-                fileInput={fileInput}
-                importDeck={importDeck}
-                importedDecks={importedDecks}
-                showDecks={showDecks}
-                handleFileChange={handleFileChange}
-                handleShowDecks={handleShowDecks}
-                clearDecks={clearDecks}
-            />
-            <CardPool
-                all_cards={all_cards}
-                noCards={noCards}
-                noPulledCards={noPulledCards}
-                combinedList={combinedList}
-                isQueryEmpty={isQueryEmpty}
-                usePool={usePool}
-                showPool={showPool}
-                showMore={showMore}
-                handleClick={handleClick}
-                handleUsePool={handleUsePool}
-                handleShowPool={handleShowPool}
-                handleShowMore={handleShowMore}
-                main_list={main_list}
-                pluck_list={pluck_list}
-            />
-            <StatsPanel
-                main_list={main_list}
-                pluck_list={pluck_list}
-                handleRemoveCard={handleRemoveCard}
-            />
-            {listView?
-                <div className="deck-list media-display">
-                    <div className="maindeck3">
-                        <ListViewListInput
-                            title={"Main Deck"}
-                            list={main_list}
-                            handleRemoveCard={handleRemoveCard}
-                        />
-                    </div>
 
-                    <div className="pluckdeck3 media-margin-top-10">
-                        <ListViewListInput
-                            title={"Pluck Deck"}
-                            list={pluck_list}
-                            main_list={main_list}
-                            handleRemoveCard={handleRemoveCard}
-                        />
+    return (
+        <>
+            {((account && account.roles.includes("admin")) && !noDeck)
+                || ((account && deck.account_id === account.id) && !noDeck)?
+                <div className="white-space">
+                    <div className="between-space media-display">
+                        <span className="media-flex-center">
+                            <div>
+                                <h1 className="left-h1-2">Deck Edit</h1>
+                                <h2 className="left">Deck Details</h2>
+                                <h5 className="label">Name </h5>
+                                <input
+                                    className="builder-input"
+                                    type="text"
+                                    placeholder=" Deck Name"
+                                    onChange={handleChange}
+                                    name="name"
+                                    value={deck.name}>
+                                </input>
+                                <br/>
+                                <h5 className="label">Cover Card</h5>
+                                <select
+                                    className="builder-input"
+                                    type="text"
+                                    placeholder=" Cover Card"
+                                    onChange={handleCoverCardChange}
+                                    name="cover_card"
+                                    value={deck.cover_card}>
+                                    <option value="">Cover Card</option>
+                                    {uniqueList.sort((a,b) => a.card_number - b.card_number).map(function(card, index)
+                                    {return( <option value={card.picture_url}
+                                        key={index.toString() + card.card_number.toString()}
+                                        >{card.name}</option>)}
+                                        )}
+                                </select>
+                                <br/>
+                                <h5 className="label"> Description </h5>
+                                <textarea
+                                    className="builder-text"
+                                    type="text"
+                                    placeholder=" Deck Description"
+                                    onChange={handleChange}
+                                    name="description"
+                                    value={deck.description}>
+                                </textarea>
+                                <h5 className="label">Strategies </h5>
+                                <h7 className="label"><em>hold ctrl/cmd to select more than one</em></h7>
+                                <br/>
+                                <select
+                                    className="builder-text"
+                                    multiple
+                                    name="strategies"
+                                    onChange={handleStrategyChange}
+                                    >
+                                    <option value="">Strategy</option>
+                                    <option value="Aggro" selected={selectedList.includes("Aggro")}>Aggro</option>
+                                    <option value="Combo" selected={selectedList.includes("Combo")}>Combo</option>
+                                    <option value="Control" selected={selectedList.includes("Control")}>Control</option>
+                                    <option value="Mid-range" selected={selectedList.includes("Mid-range")}>Mid-range</option>
+                                    <option value="Ramp" selected={selectedList.includes("Ramp")}>Ramp</option>
+                                    <option value="Second Wind" selected={selectedList.includes("Second Wind")}>Second Wind</option>
+                                    <option value="Stall" selected={selectedList.includes("Stall")}>Stall</option>
+                                    <option value="Toolbox" selected={selectedList.includes("Toolbox")}>Toolbox</option>
+                                    <option value="other" selected={selectedList.includes("other")}>other</option>
+                                </select>
+                                <br/>
+                                <input
+                                    style={{margin: "20px 5px 9px 5px", height:"10px"}}
+                                    id="private"
+                                    type="checkbox"
+                                    onChange={handleCheck}
+                                    name="private"
+                                    checked={deck.private}>
+                                </input>
+                                <label for="private"
+                                    className="bold"
+                                >
+                                    Make my decks private
+                                </label>
+                                <br/>
+                                {account?
+                                    <button
+                                        className="left"
+                                        style={{ marginTop: "9px"}}
+                                        onClick={handleSubmit}
+                                    >
+                                        Save Deck
+                                    </button>:
+                                    <button
+                                    className="left"
+                                    style={{ marginTop: "9px"}}
+                                    >
+                                        Save Deck
+                                    </button>
+                                }
+                                <button
+                                    className="left red"
+                                    style={{ marginTop: "9px"}}
+                                    onClick={clearMain}
+                                >
+                                    Clear Main
+                                </button>
+                                <button
+                                    className="left red"
+                                    style={{ marginTop: "9px"}}
+                                    onClick={clearPluck}
+                                >
+                                    Clear Pluck
+                                </button>
+                                <br/>
+                                { !account?
+                                    <h6 className="error">You must be logged in to edit a deck</h6>:
+                                null
+                                }
+                            </div>
+                        </span>
+                        <div className="none margin-top-63">
+                            <h2 className="left">Cover Card</h2>
+                            {selectedCard ? (
+                                <img
+                                    className="cover-card"
+                                    src={selectedCard}
+                                    alt={selectedCard.name}
+                                    variant="bottom"/>
+                                    ):(
+                                <img
+                                    className="cover-card"
+                                    src={"https://i.imgur.com/krY25iI.png"}
+                                    alt="Card"
+                                    variant="bottom"/>)}
+                        </div>
+                        <span className="media-flex-center margin-top-63">
+                            <BuilderCardSearch
+                                boosterSets={booster_sets}
+                            />
+                        </span>
                     </div>
-                </div>
-            :<>
-                <div className="maindeck">
-                    <ImageViewListInput
-                        title={"Main Deck"}
-                        list={main_list}
-                        showList={showMain}
-                        handleShowList={handleShowMain}
-                        handleRemoveCard={handleRemoveCard}
+                    <DeckImport
+                        fileInput={fileInput}
+                        importDeck={importDeck}
+                        importedDecks={importedDecks}
+                        showDecks={showDecks}
+                        handleFileChange={handleFileChange}
+                        handleShowDecks={handleShowDecks}
+                        clearDecks={clearDecks}
                     />
-                </div>
-                <div className="pluckdeck">
-                    <ImageViewListInput
-                        title={"Pluck Deck"}
-                        list={pluck_list}
+                    <CardPool
+                        all_cards={all_cards}
+                        noCards={noCards}
+                        noPulledCards={noPulledCards}
+                        combinedList={uniqueList}
+                        isQueryEmpty={isQueryEmpty}
+                        usePool={usePool}
+                        showPool={showPool}
+                        showMore={showMore}
+                        handleClick={handleClick}
+                        handleUsePool={handleUsePool}
+                        handleShowPool={handleShowPool}
+                        handleShowMore={handleShowMore}
                         main_list={main_list}
-                        showList={showPluck}
-                        handleShowList={handleShowPluck}
+                        pluck_list={pluck_list}
+                    />
+                    <StatsPanel
+                        main_list={main_list}
+                        pluck_list={pluck_list}
                         handleRemoveCard={handleRemoveCard}
                     />
-                </div>
-            </>}
-        </div>
+                    {listView?
+                        <div className="deck-list media-display">
+                            <div className="maindeck3">
+                                <ListViewListInput
+                                    title={"Main Deck"}
+                                    list={main_list}
+                                    handleRemoveCard={handleRemoveCard}
+                                />
+                            </div>
+
+                            <div className="pluckdeck3 media-margin-top-10">
+                                <ListViewListInput
+                                    title={"Pluck Deck"}
+                                    list={pluck_list}
+                                    main_list={main_list}
+                                    handleRemoveCard={handleRemoveCard}
+                                />
+                            </div>
+                        </div>
+                    :<>
+                        <div className="maindeck">
+                            <ImageViewListInput
+                                title={"Main Deck"}
+                                list={main_list}
+                                showList={showMain}
+                                handleShowList={handleShowMain}
+                                handleRemoveCard={handleRemoveCard}
+                            />
+                        </div>
+                        <div className="pluckdeck">
+                            <ImageViewListInput
+                                title={"Pluck Deck"}
+                                list={pluck_list}
+                                main_list={main_list}
+                                showList={showPluck}
+                                handleShowList={handleShowPluck}
+                                handleRemoveCard={handleRemoveCard}
+                            />
+                        </div>
+                    </>}
+                </div>:
+                <ErrorPage path={"/decks/"}/>
+            }
+        </>
     );
 }
 
-
-export default DeckEditPage;
+export default FBDeckEdit;
