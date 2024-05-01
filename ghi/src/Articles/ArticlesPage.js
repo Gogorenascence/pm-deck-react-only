@@ -2,11 +2,13 @@ import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { NewsQueryContext } from "../context/NewsQueryContext";
 import { todaysFormattedDate } from "../Helpers";
+import { AuthContext } from "../context/AuthContext";
 
 
 function ArticlesPage({
     articles
 }) {
+    const {account} = useContext(AuthContext)
 
     const {
         newsQuery,
@@ -30,7 +32,15 @@ function ArticlesPage({
         return `${month}-${day}-${year}`
     }
 
-    const filteredArticles = articles.filter(article => article.section !== "admin")
+    const filteredArticles = account && account.roles.includes("admin")?
+    articles.sort((a,b) => {
+            let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
+            if (comparedArticles === 0) {
+                comparedArticles = b.id.localeCompare(a.id)
+            }
+            return comparedArticles
+        }):
+    articles.filter(article => article.section !== "admin")
         .sort((a,b) => {
             let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
             if (comparedArticles === 0) {
@@ -150,6 +160,9 @@ function ArticlesPage({
                     <option value="site">Site</option>
                     <option value="social">Social</option>
                     <option value="events">Events</option>
+                    {account && account.roles.includes("admin")?
+                        <option value="admin">Admin</option>: null
+                    }
                     <option value="simulator">Simulator</option>
                 </select>
                 <select

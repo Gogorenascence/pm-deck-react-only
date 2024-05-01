@@ -1659,4 +1659,19 @@
   "images": {},
   "news": true,
   "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "6632cfba60b00e0522034f79"
+  },
+  "title": "Deck edit and delete added to site",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-05-01",
+  "updated": null,
+  "section": "site",
+  "content": "",
+  "images": {},
+  "news": true,
+  "site_link": ""
 }]

@@ -2,9 +2,11 @@ import { useState, useEffect, useContext } from "react";
 import { NewsQueryContext } from "../context/NewsQueryContext";
 import { NavLink, useNavigate } from 'react-router-dom';
 import ImageWithoutRightClick from "./ImageWithoutRightClick";
+import { AuthContext } from "../context/AuthContext";
 
 
 function NewsRow({articles}) {
+    const {account} = useContext(AuthContext)
     const { newsQuery, setNewsQuery } = useContext(NewsQueryContext)
     const navigate = useNavigate()
     const stories = articles.filter(story => story.news === true)
@@ -28,7 +30,23 @@ function NewsRow({articles}) {
         navigate("/articles")
     }
 
-    const filteredStories = stories.filter(story => story.section !== "admin").slice(0,20)
+    const filteredStories = account && account.roles.includes("admin")?
+    articles.sort((a,b) => {
+            let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
+            if (comparedArticles === 0) {
+                comparedArticles = b.id.localeCompare(a.id)
+            }
+            return comparedArticles
+        }).slice(0,20):
+    articles.filter(article => article.section !== "admin")
+        .sort((a,b) => {
+            let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
+            if (comparedArticles === 0) {
+                comparedArticles = b.id.localeCompare(a.id)
+            }
+            return comparedArticles
+        }).slice(0,20)
+
 
     const newsColors = {
         releases: "rgba(192, 145, 17, 0.87)",
