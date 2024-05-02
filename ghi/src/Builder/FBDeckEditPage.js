@@ -317,7 +317,6 @@ function FBDeckEdit({
         data["strategies"] = selectedList
         data["card_names"] = card_names
         data["series_names"] = series_names
-        account ? data["account_id"] = account.id : data["account_id"] = deck.account_id
 
         const editedDeck = await deckActions.editDeck(deck_id, data)
 

@@ -3402,6 +3402,10 @@ button:hover {
   margin-top: 0;
 }
 
+.max-height{
+  height: max-content;
+}
+
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;
