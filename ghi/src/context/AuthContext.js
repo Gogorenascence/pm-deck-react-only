@@ -97,8 +97,8 @@ const AuthContextProvider = ({ children }) => {
 
         try {
         const check = []
-        if (signUpCred.username.length < 6) {
-            check.push("Username must contain at least 6 characters")
+        if (signUpCred.username.length < 6 && signUpCred.username.length > 18) {
+            check.push("Username must contain between 6 and 18 characters")
         }
         const emailQuery = query(collection(db, "users"), where("email", "==", signUpCred.email));
         const emailQuerySnapshot = await getDocs(emailQuery);
@@ -113,8 +113,8 @@ const AuthContextProvider = ({ children }) => {
             // throw new Error("Username is already taken.");
         }
         const password = signUpCred.password
-        if (password.length < 6) {
-            check.push("Password must contain at least 6 characters")
+        if (password.length < 6 && password.length > 18) {
+            check.push("Password must contain between 6 and 18 characters")
         }
         const specialChar = ["!","@","$","&","+","~"]
         const checkSpec = password.split('').filter(char => specialChar.includes(char))
