@@ -107,11 +107,11 @@ function DeckDetailPage(props) {
         setOwnership("");
     }
 
-
     useEffect(() => {
         window.scroll(0, 0);
         document.body.style.overflow = 'auto';
         getDeck();
+        console.log(deck)
     },[deck_id]);
 
     useEffect(() => {
@@ -484,7 +484,7 @@ function DeckDetailPage(props) {
                                 </div>
                                 {pluck_list.length > 0 ?
                                     <div className={showPluck ? "card-pool-fill2": "hidden2"}>
-                                        {pluck_list.sort((a,b) => a.card_number - b.card_number).map((card) => {
+                                        {pluck_list.sort((a,b) => a.card_number - b.card_number).map((card, index) => {
                                             return (
                                                 <div style={{display: "flex", justifyContent: "center"}}>
                                                     <NavLink to={`/cards/${card.card_number}`} className="nav-link2">

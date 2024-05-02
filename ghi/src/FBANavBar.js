@@ -364,13 +364,13 @@ function NavBar() {
             </div>
               :
             <div className="accountbuttons">
-              {/* <NavLink className="username2" to="/account"> */}
+              <NavLink className="username2" to="/account">
                 <div className="navbar-select pointer">
                   <h5 className="navbar-menu-item">
                     {account.username}
                   </h5>
                 </div>
-              {/* </NavLink> */}
+              </NavLink>
               <div className="navbar-select pointer" onClick={() => logout()}>
                 <h5 className="navbar-menu-item">
                   Logout
@@ -478,7 +478,7 @@ function NavBar() {
             </div>:null
           }
         </li>
-        { account && account.roles.includes("admin")?
+        {/* { account && account.roles.includes("admin")?
           <li className="nav-item">
             <div className={showMenu.show && showMenu.section === "admin"?
               "navbar-selected pointer": "navbar-select pointer"}
@@ -497,7 +497,7 @@ function NavBar() {
               </div>:null
             }
           </li>:null
-        }
+        } */}
         { !account?
           <li className="nav-item2">
             <div className="navbar-select2 pointer"
@@ -515,13 +515,13 @@ function NavBar() {
           </li>
           :
           <li className="nav-item2">
-            {/* <NavLink className="username2" to="/account" onClick={() => handleShowMobileMenu()}> */}
+            <NavLink className="username2" to="/account" onClick={() => handleShowMobileMenu()}>
               <div className="navbar-select2 pointer">
                 <h5 className="navbar-menu-item">
                   {account.username}
                 </h5>
               </div>
-            {/* </NavLink> */}
+            </NavLink>
             <div className="navbar-select2 pointer"
               onClick={() => logout()}
               >

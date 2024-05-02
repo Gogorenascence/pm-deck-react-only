@@ -123,8 +123,6 @@ function FBDeckEdit({
 
             setSelectedList(deckData.strategies)
             setSelectedCard(deckData.cover_card)
-            const id_list = []
-            const newList = []
         } else {
             setNoDeck(true)
         }

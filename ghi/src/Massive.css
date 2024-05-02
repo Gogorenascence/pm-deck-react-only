@@ -1645,12 +1645,17 @@ button:hover {
 }
 
 .account-option-container {
-  width: 55%;
+  min-width: 55%;
 }
 
 .account-option-items {
   margin-top: 20px;
   width: 47.5vw;
+}
+
+.account-option-item {
+  width: 100%;
+  filter: brightness(1);
 }
 
 .username {
@@ -1718,7 +1723,7 @@ button:hover {
 
 .account-scrollable {
   margin: 0% 0% 0% .5%;
-  height: var(--window-height-account);
+  height: 473px;
   overflow-x: hidden;
   overflow-y: auto;
   border: 1px solid rgba(0, 0, 0, 0.212);
@@ -2374,6 +2379,11 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-left-media-center {
+  display: flex;
+  justify-content: left;
 }
 
 .builder-card-hand {
@@ -3384,6 +3394,14 @@ button:hover {
   justify-content: space-around;
 }
 
+.neg-margin-top-10 {
+  margin-top: -10px;
+}
+
+.margin-top-none {
+  margin-top: 0;
+}
+
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;
@@ -3439,6 +3457,10 @@ button:hover {
 
   .media-margin-top-10 {
     margin-top: 10px;
+  }
+
+  .media-margin-top-40 {
+    margin-top: 40px;
   }
 
   .media-margin-bottom-none {
@@ -4072,6 +4094,20 @@ button:hover {
 
   .login input {
     width: 60vw;
+  }
+
+  .account-option-items {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .flex-left-media-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .neg-margin-top-10 {
+    margin-top: -10px;
   }
 
   body.dark {
