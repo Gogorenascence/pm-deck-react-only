@@ -46,7 +46,7 @@ function FBAccountPage() {
             {account?
                 <div className="white-space">
                     <div className="between-space">
-                        <div className="account-info-container flex-content">
+                        <div className="account-info-container flex-left-media-center">
                             <div>
                                 <h1 className="left-h1 margin-top-none">Account Page</h1>
                                 <h4 className="left">Welcome back, {account.username}!</h4>
