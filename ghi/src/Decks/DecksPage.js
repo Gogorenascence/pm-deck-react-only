@@ -22,7 +22,7 @@ function DecksPage() {
 
     const getDecks = async() =>{
         setLoading(true)
-        const decksData = await deckQueries.getdecksData();
+        const decksData = await deckQueries.getQueriedDecksData({"private": false});
         const sortedDecks = [...decksData].sort(deckSortMethods[deckSortState].method);
         setFullDecks(sortedDecks.reverse())
         setLoading(false)

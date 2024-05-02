@@ -122,8 +122,6 @@ function FBDeckDetailPage(props) {
         window.scroll(0, 0);
         document.body.style.overflow = 'auto';
         getDeck();
-        console.log(deck.account_id)
-        console.log(account.id)
     },[deck_id]);
 
     useEffect(() => {
@@ -216,6 +214,13 @@ function FBDeckDetailPage(props) {
                         <Card.ImgOverlay className="blackfooter2">
                             <div style={{display: "flex"}}>
                                 <h3 className="left cd-container-child media-margin-top-none">{deck.name}</h3>
+                                { deck.private && deck.private === true ?
+                                <img className="logo4"
+                                    src="https://i.imgur.com/V3uOVpD.png"
+                                    alt="private"
+                                    title="This deck is hidden" />:
+                                    null
+                                }
                             </div>
                             <h6 className="left"
                                 style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}

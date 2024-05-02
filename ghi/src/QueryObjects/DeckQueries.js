@@ -243,7 +243,7 @@ const deckQueries = {
         }
         decksCollectionRef = query(
             decksCollectionRef,
-            orderBy("updated_on.full_time", "desc"),
+            orderBy("updated_on.full_time", "desc")
         )
         const snapshot = await getDocs(decksCollectionRef)
         console.log(snapshot)

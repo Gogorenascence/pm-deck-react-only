@@ -5,10 +5,7 @@ import LightSwitch from "./display/LightSwitch";
 import BackToTop from "./display/BackToTop";
 import Footer from "./Footer";
 import MainPage from "./MainPage";
-import DeckBuilder from "./Builder/DeckBuilder"
 import DecksPage from "./Decks/DecksPage"
-import DeckDetailPage from "./Decks/DeckDetailPage";
-import DeckCopy from "./Builder/DeckCopy";
 import CardsPage from "./Cards/CardsPage"
 import CardDetailPage from "./Cards/CardDetailPage";
 import SetsPage from "./Cards/SetsPage";
@@ -38,6 +35,7 @@ import FBDeckBuildandImport from "./Builder/FBDeckBuildandImport";
 import FBDeckDetailPage from "./Decks/FBDeckDetailPage";
 import FBDeckEdit from "./Builder/FBDeckEditPage";
 import FBAccountPage from "./Accounts/FBAccountPage";
+import FBDeckCopy from "./Builder/FBDeckCopyPage";
 
 
 function App() {
@@ -117,7 +115,7 @@ function App() {
               <Route path="/decks/:deck_id" element={<FBDeckDetailPage
                                                       cards={cards}
                                                     />} />
-              <Route path="/decks/:deck_id/copy" element={<DeckCopy
+              <Route path="/decks/:deck_id/copy" element={<FBDeckCopy
                                                       cards={cards}
                                                       booster_sets={booster_sets}
                                                 />} />
