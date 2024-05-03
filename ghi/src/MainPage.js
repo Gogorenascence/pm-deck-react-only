@@ -31,7 +31,7 @@ function MainPage({
           <h1 className="margin-top-20">Latest Decks</h1>
         <br/>
         <div>
-          {/* <DeckRow/> */}
+          <DeckRow/>
         </div>
         <br/>
           <h1 className="margin-top-20 media-margin-bottom-none">Latest Cards</h1>
