@@ -2,11 +2,11 @@ import { useState, useEffect, useContext } from "react";
 import { NewsQueryContext } from "../context/NewsQueryContext";
 import { NavLink, useNavigate } from 'react-router-dom';
 import ImageWithoutRightClick from "./ImageWithoutRightClick";
-import { AuthContext } from "../context/AuthContext";
+// import { AuthContext } from "../context/AuthContext";
 
 
 function NewsRow({articles}) {
-    const {account} = useContext(AuthContext)
+    // const {account} = useContext(AuthContext)
     const { newsQuery, setNewsQuery } = useContext(NewsQueryContext)
     const navigate = useNavigate()
     const stories = articles.filter(story => story.news === true)
@@ -30,52 +30,54 @@ function NewsRow({articles}) {
         navigate("/articles")
     }
 
-    const filteredStories = account && account.roles.includes("admin")?
+    const filteredStories =
+    // account && account.roles.includes("admin")?
     articles.sort((a,b) => {
             let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
             if (comparedArticles === 0) {
                 comparedArticles = b.id.localeCompare(a.id)
             }
             return comparedArticles
-        }).slice(0,20):
-    articles.filter(article => article.section !== "admin")
-        .sort((a,b) => {
-            let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
-            if (comparedArticles === 0) {
-                comparedArticles = b.id.localeCompare(a.id)
-            }
-            return comparedArticles
         }).slice(0,20)
+    //     :
+    // articles.filter(article => article.section !== "admin")
+    //     .sort((a,b) => {
+    //         let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
+    //         if (comparedArticles === 0) {
+    //             comparedArticles = b.id.localeCompare(a.id)
+    //         }
+    //         return comparedArticles
+    //     }).slice(0,20)
 
 
     const newsColors = {
-        // releases: "rgba(192, 145, 17, 0.87)",
-        // game: "rgba(42, 168, 115, 0.70)",
-        // design: "rgba(124, 19, 33, 0.70)",
-        // site: "rgba(77, 71, 94, 0.50)",
-        // social: "rgba(82, 96, 194, 0.70)",
-        // events: "rgba(101, 56, 131, 0.70)",
-        // admin: "rgba(77, 71, 94, 0.50)",
-        // simulator: "rgba(232, 82, 230, 0.70)"
+        releases: "rgba(192, 145, 17, 0.87)",
+        game: "rgba(42, 168, 115, 0.70)",
+        design: "rgba(124, 19, 33, 0.70)",
+        site: "rgba(77, 71, 94, 0.50)",
+        social: "rgba(82, 96, 194, 0.70)",
+        events: "rgba(101, 56, 131, 0.70)",
+        admin: "rgba(77, 71, 94, 0.50)",
+        simulator: "rgba(232, 82, 230, 0.70)"
     }
 
     const newsBorders = {
-        // releases: "#f0be1c",
-        // game: "rgb(54, 184, 129)",
-        // design: "rgb(255, 0, 43)",
-        // site: "#4D475E",
-        // social: "rgb(88, 129, 253)",
-        // events: "rgb(104, 20, 172)",
-        // admin: "#4D475E",
-        // simulator: "rgba(232, 82, 230, 0.70)"
+        releases: "#f0be1c",
+        game: "rgb(54, 184, 129)",
+        design: "rgb(255, 0, 43)",
+        site: "#4D475E",
+        social: "rgb(88, 129, 253)",
+        events: "rgb(104, 20, 172)",
+        admin: "#4D475E",
+        simulator: "rgba(232, 82, 230, 0.70)"
     }
 
     return(
         <div className="white-space">
-            { filteredStories.length > 0 ?
+            { articles.length > 0 ?
                 <>
                     <div className="newsRow">
-                        {filteredStories.map((story, index) => {
+                        {articles.map((story, index) => {
                             return (
                                 <>
                                 {story.content ?
