@@ -3258,6 +3258,7 @@ button:hover {
   overflow: hidden;
   white-space: nowrap;
   max-width: calc(90%); /* The trick is here! */
+  padding-bottom: 2px;
 }
 
 .sim-back-wrapper {

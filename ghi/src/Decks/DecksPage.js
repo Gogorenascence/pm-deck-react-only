@@ -234,7 +234,7 @@ function DecksPage() {
                                         </h6>
                                         <img className="logo3" src="https://i.imgur.com/QLa1ciW.png" alt="updated on"/>
                                         <h6
-                                        className="left justify-content-end"
+                                        className="left justify-content-end ellipsis2"
                                             style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                                         >
                                             {deck.updated_on.ago} &nbsp; &nbsp;
