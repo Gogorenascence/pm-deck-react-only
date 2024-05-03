@@ -72,10 +72,10 @@ function NewsRow({articles}) {
 
     return(
         <div className="white-space">
-            {/* { articles.length > 0 ?
+            { filteredStories.length > 0 ?
                 <>
                     <div className="newsRow">
-                        {articles.map((story, index) => {
+                        {filteredStories.map((story, index) => {
                             return (
                                 <>
                                 {story.content ?
@@ -92,6 +92,7 @@ function NewsRow({articles}) {
 
                                             <h3 className="newsText no-wrap">{formatDate(story.story_date)}</h3>
                                             <img className="newsSection" src={`${story.section}.png`} alt={story.section}/>
+                                            {/* <h4 className="newsText">{story.section}</h4> */}
                                             <h4 className="newsText">{story.title}</h4>
                                         </div>
                                     </NavLink>
@@ -108,6 +109,7 @@ function NewsRow({articles}) {
 
                                         <h3 className="newsText no-wrap">{formatDate(story.story_date)}</h3>
                                         <img className="newsSection" src={`${story.section}.png`} alt={story.section}/>
+                                        {/* <h4 className="newsText">{story.section}</h4> */}
                                         <h4 className="newsText">{story.title}</h4>
                                     </div>
                                 }
@@ -124,7 +126,7 @@ function NewsRow({articles}) {
                             Browse All News and Articles
                         </button>
                 </>: null
-            } */}
+            }
         </div>
     );
 }

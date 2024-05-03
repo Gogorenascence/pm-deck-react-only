@@ -11,7 +11,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("./backg.png");
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../public/backg.png");
   background-size: 85%, 60%;
   background-repeat: no-repeat, repeat;
   background-position: center center, center center;
@@ -80,7 +80,7 @@ body.dark {
   padding: auto;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(to right, rgba(16, 14, 22, 0.5), rgba(17, 0, 54, 0.4)), url("./backg.png");
+  background-image: linear-gradient(to right, rgba(16, 14, 22, 0.5), rgba(17, 0, 54, 0.4)), url("../public/backg.png");
   background-size: 100%, 60%;
   background-repeat: no-repeat, repeat;
   background-position: center center, center center;
@@ -4197,7 +4197,7 @@ button:hover {
     padding: auto;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to right, rgba(16, 14, 22, 0.5), rgba(17, 0, 54, 0.4)), url("./backg.png");
+    background-image: linear-gradient(to right, rgba(16, 14, 22, 0.5), rgba(17, 0, 54, 0.4)), url("../public/backg.png");
     background-size: 100%, 60%;
     background-repeat: no-repeat, repeat;
     background-position: center center, center center;
