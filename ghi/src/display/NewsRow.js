@@ -49,7 +49,7 @@ function NewsRow({articles}) {
 
 
     const newsColors = {
-        releases: "rgba(192, 145, 17, 0.87)",
+        // releases: "rgba(192, 145, 17, 0.87)",
         game: "rgba(42, 168, 115, 0.70)",
         design: "rgba(124, 19, 33, 0.70)",
         site: "rgba(77, 71, 94, 0.50)",
