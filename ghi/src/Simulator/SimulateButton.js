@@ -27,7 +27,7 @@ const SimulateButton = ({deckName, main_list, pluck_list}) => {
     return (
         <button
             onClick={handleSimulator}
-            className="left"
+            className="left none"
         >
             Simulate
         </button>
