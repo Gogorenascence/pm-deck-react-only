@@ -99,7 +99,7 @@ function App() {
     <BrowserRouter>
         <div className="content">
           <NavBar/>
-          {/* <LightSwitch/> */}
+          <LightSwitch/>
           <BackToTop/>
           <div className="app">
 
