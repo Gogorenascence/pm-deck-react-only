@@ -7,7 +7,9 @@ import {
     getDoc,
     getDocs,
     where,
-    query
+    query,
+    updateDoc,
+    writeBatch
 } from "firebase/firestore";
 import {
     signInWithEmailAndPassword,
@@ -224,7 +226,7 @@ const AuthContextProvider = ({ children }) => {
                 accountData["collection"] = additionalData.collection ?? []
                 accountData["wishlist"] = additionalData.wishlist ?? []
                 accountData["decks"] = additionalData.decks ?? []
-                accountData["favorited_decks"] = additionalData.favorited_decksame ?? []
+                accountData["favorited_decks"] = additionalData.favorited_decks ?? []
                 accountData["roles"] = additionalData.roles ?? []
                 accountData["created_on"] = additionalData.created_on ?? ""
                 accountData["id"] = additionalData.id ?? ""
@@ -285,33 +287,34 @@ const AuthContextProvider = ({ children }) => {
             // Handle errors, such as displaying an error message to the user
         }
     }
-    // const update = async (event) => {
-    //     const url = `${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/accounts/${account.id}`
-    //     fetch(url, {
-    //         method: "put",
-    //         body: JSON.stringify(updateCred),
-    //         headers: {
-    //         "Content-Type": "application/json",
-    //         },
-    //     })
-    //     .then(() => getAccountData())
-    //     .catch(console.error);
-    // };
 
-    // const updateWithOutPass = async (event) => {
-    //     const url = `${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/accounts/${account.id}/without`
-    //     console.log(url)
-    //     console.log(updateCred)
-    //     fetch(url, {
-    //         method: "put",
-    //         body: JSON.stringify(updateCred),
-    //         headers: {
-    //         "Content-Type": "application/json",
-    //         },
-    //     })
-    //     .then(() => getAccountData())
-    //     .catch(console.error);
-    // };
+    const updateUser = async (updateList) => {
+        const accountState = onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                try {
+                    const userRef = doc(db, "users", user.uid);
+                    const snapshot = await getDoc(userRef);
+                    if (snapshot.empty) {
+                        console.log("User document does not exist");
+                    } else {
+                        if (updateList) {
+                            const batch = writeBatch(db);
+                            for (const [key, value] of Object.entries(updateList)) {
+                                batch.set(userRef, {[key]: value}, { merge: true }); // Use merge option to update existing fields
+                            }
+                            await batch.commit();
+                            console.log(updateList)
+                        }
+                        await getUser()
+                    }
+                } catch (error) {
+                    console.error("Error fetching additional user data:", error);
+                }
+            }
+            return accountState
+        });
+    }
+
 
     return (
         <AuthContext.Provider value={{
@@ -334,8 +337,7 @@ const AuthContextProvider = ({ children }) => {
             setShowLoginModal,
             viewPass,
             setViewPass,
-            // update,
-            // updateWithOutPass,
+            updateUser,
             passwordCon,
             setPasswordCon,
             loginCred,

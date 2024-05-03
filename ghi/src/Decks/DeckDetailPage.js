@@ -12,6 +12,7 @@ import SimulateButton from "../Simulator/SimulateButton";
 import DeckSheetPage from "./DeckSheetPage";
 import deckQueries from "../QueryObjects/DeckQueries";
 import ErrorPage from "../display/ErrorPage";
+import FavoriteDeck from "../Accounts/FavoriteDeck";
 
 
 function DeckDetailPage(props) {
@@ -179,9 +180,12 @@ function DeckDetailPage(props) {
                         </div>
                         <Card.ImgOverlay className="blackfooter2">
                             <div style={{display: "flex"}}>
-                                <h3 className="left cd-container-child media-margin-top-none">{deck.name}</h3>
+                                <h3 className="left cd-container-child ellipsis">{deck.name}</h3>
+                                {account?
+                                    <FavoriteDeck deck={deck}/>:null
+                                }
                             </div>
-                            <h6 className="left"
+                            <h6 className="left ellipsis2"
                                 style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
                             >
                                 Strategies: {deck.strategies?.length > 0 ? deck.strategies.join(', ') : "n/a"}

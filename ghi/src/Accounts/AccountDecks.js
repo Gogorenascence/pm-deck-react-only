@@ -141,7 +141,7 @@ function AccountDecks(props) {
                                                     </div>
                                                     <Card.ImgOverlay className="blackfooter2 mt-auto">
                                                     <div className="flex">
-                                                        <h3 className="left cd-container-child">{deck.name}</h3>
+                                                        <h3 className="left cd-container-child ellipsis">{deck.name}</h3>
                                                         { deck.private && deck.private === true ?
                                                             <img className="logo4" src="https://i.imgur.com/V3uOVpD.png" alt="private" />:null
                                                         }
@@ -150,7 +150,7 @@ function AccountDecks(props) {
                                                     >
                                                         User:
                                                     </h6> */}
-                                                    <h6 className="left"
+                                                    <h6 className="left ellipsis2"
                                                         style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
                                                     >
                                                         Strategies: {deck.strategies.length > 0 ? deck.strategies.join(', ') : "n/a"}

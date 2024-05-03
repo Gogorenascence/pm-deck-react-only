@@ -1,13 +1,16 @@
 import {
     Card,
 } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { NavLink } from 'react-router-dom';
 import deckQueries from "../QueryObjects/DeckQueries";
+import { AuthContext } from "../context/AuthContext";
+import FavoriteDeck from "../Accounts/FavoriteDeck";
 
 
 function DeckRow() {
     const [newDecks, setNewDecks] = useState([])
+    const {account} = useContext(AuthContext)
 
     const getDecks = async() =>{
         const data = await deckQueries.getRangedQueriedDecksData(4, {"private": false})
@@ -37,10 +40,13 @@ function DeckRow() {
                                 </div>
                                 <Card.ImgOverlay className="blackfooter2">
                                     <div style={{display: "flex"}}>
-                                        <h3 className="left cd-container-child media-margin-top-none"
+                                        <h3 className="left cd-container-child ellipsis2"
                                         >{deck.name}</h3>
+                                        {account?
+                                            <FavoriteDeck deck={deck}/>:null
+                                        }
                                     </div>
-                                    <h6 className="left"
+                                    <h6 className="left ellipsis2"
                                         style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
                                     >
                                         Strategies: {deck.strategies.length > 0 ? deck.strategies.join(', ') : "n/a"}

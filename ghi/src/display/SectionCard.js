@@ -19,7 +19,7 @@ function SectionCard({link, title, imageSRC}) {
                     </div>
                     <Card.ImgOverlay className="blackfooter2 mt-auto">
                         <div style={{display: "flex"}}>
-                            <h1 className="left cd-container-child media-margin-top-10">{title}</h1>
+                            <h1 className="left cd-container-child ellipsis2 media-margin-top-10">{title}</h1>
                         </div>
                     </Card.ImgOverlay>
                 </Card>

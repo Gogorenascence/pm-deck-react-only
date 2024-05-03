@@ -5,17 +5,20 @@ import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { DeckQueryContext } from "../context/DeckQueryContext";
 import deckQueries from "../QueryObjects/DeckQueries";
+import FavoriteDeck from "../Accounts/FavoriteDeck";
+import { AuthContext } from "../context/AuthContext";
 
 
 function DecksPage() {
-    const [deckShowMore, setDeckShowMore] = useState(20);
     const {
         deckQuery,
         setDeckQuery,
         deckSortState,
         setDeckSortState,
     } = useContext(DeckQueryContext)
+    const {account} = useContext(AuthContext)
 
+    const [deckShowMore, setDeckShowMore] = useState(20);
     const [loading, setLoading] = useState(false)
 
     const [fullDecks, setFullDecks] = useState([])
@@ -39,6 +42,7 @@ function DecksPage() {
     useEffect(() => {
         getDecks();
         document.title = "Decks - PM CardBase"
+        account? console.log("account") : console.log("dog")
         return () => {
             document.title = "PlayMaker CardBase"
         };
@@ -204,10 +208,13 @@ function DecksPage() {
                                 </div>
                                 <Card.ImgOverlay className="blackfooter2">
                                     <div style={{display: "flex"}}>
-                                        <h3 className="left cd-container-child media-margin-top-none"
+                                        <h3 className="left cd-container-child ellipsis"
                                         >{deck.name}</h3>
+                                        {account?
+                                            <FavoriteDeck deck={deck}/>:null
+                                        }
                                     </div>
-                                    <h6 className="left"
+                                    <h6 className="left ellipsis2"
                                         style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
                                     >
                                         Strategies: {deck.strategies.length > 0 ? deck.strategies.join(', ') : "n/a"}

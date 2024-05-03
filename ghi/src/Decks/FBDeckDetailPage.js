@@ -15,6 +15,7 @@ import ErrorPage from "../display/ErrorPage";
 import { AuthContext } from "../context/AuthContext";
 import PopUp from "../display/PopUp"
 import deckActions from "../Builder/DeckActions";
+import FavoriteDeck from "../Accounts/FavoriteDeck";
 
 
 function FBDeckDetailPage(props) {
@@ -213,7 +214,7 @@ function FBDeckDetailPage(props) {
                         </div>
                         <Card.ImgOverlay className="blackfooter2">
                             <div style={{display: "flex"}}>
-                                <h3 className="left cd-container-child media-margin-top-none">{deck.name}</h3>
+                                <h3 className="left cd-container-child ellipsis">{deck.name}</h3>
                                 { deck.private && deck.private === true ?
                                 <img className="logo4"
                                     src="https://i.imgur.com/V3uOVpD.png"
@@ -221,8 +222,11 @@ function FBDeckDetailPage(props) {
                                     title="This deck is hidden" />:
                                     null
                                 }
+                                {account?
+                                    <FavoriteDeck deck={deck}/>:null
+                                }
                             </div>
-                            <h6 className="left"
+                            <h6 className="left ellipsis2"
                                 style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
                             >
                                 Strategies: {deck.strategies?.length > 0 ? deck.strategies.join(', ') : "n/a"}

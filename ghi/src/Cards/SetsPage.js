@@ -128,33 +128,33 @@ function SetsPage(props) {
                                     </div>
                                 </div>
                                 <Card.ImgOverlay className="blackfooter2 mt-auto">
-                                        <h3 className="left cd-container-child">{boosterSet.name}</h3>
-                                        {/* <h6 className="left"
-                                            style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
+                                    <h3 className="left cd-container-child ellipsis2">{boosterSet.name}</h3>
+                                    {/* <h6 className="left"
+                                        style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
+                                    >
+                                        Strategies: {deck.strategies.length > 0 ? deck.strategies.join(', ') : "n/a"}
+                                    </h6> */}
+                                    {/* <h6 className="left"
+                                        style={{margin: '0px 0px 10px 10px', fontWeight: "600"}}
+                                    >
+                                        {deck.cards.length} &nbsp; Pluck Deck: {deck.pluck.length}
+                                    </h6> */}
+                                    <div style={{ display: "flex" }}>
+                                        <img className="logo2" src="https://i.imgur.com/nIY2qSx.png" alt="created on"/>
+                                        <h6
+                                        className="left justify-content-end"
+                                            style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                                         >
-                                            Strategies: {deck.strategies.length > 0 ? deck.strategies.join(', ') : "n/a"}
-                                        </h6> */}
-                                        {/* <h6 className="left"
-                                            style={{margin: '0px 0px 10px 10px', fontWeight: "600"}}
+                                            {boosterSet.created_on.date_created}
+                                        </h6>
+                                        {/* <img className="logo3" src="https://i.imgur.com/QLa1ciW.png" alt="updated on"/>
+                                        <h6
+                                        className="left justify-content-end"
+                                            style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                                         >
-                                            {deck.cards.length} &nbsp; Pluck Deck: {deck.pluck.length}
+                                            {deck.updated_on.ago}
                                         </h6> */}
-                                        <div style={{ display: "flex" }}>
-                                            <img className="logo2" src="https://i.imgur.com/nIY2qSx.png" alt="created on"/>
-                                            <h6
-                                            className="left justify-content-end"
-                                                style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
-                                            >
-                                                {boosterSet.created_on.date_created}
-                                            </h6>
-                                            {/* <img className="logo3" src="https://i.imgur.com/QLa1ciW.png" alt="updated on"/>
-                                            <h6
-                                            className="left justify-content-end"
-                                                style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
-                                            >
-                                                {deck.updated_on.ago}
-                                            </h6> */}
-                                        </div>
+                                    </div>
                                 </Card.ImgOverlay>
                             </Card>
                         </NavLink>

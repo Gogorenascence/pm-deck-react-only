@@ -3253,6 +3253,13 @@ button:hover {
   max-width: calc(90%); /* The trick is here! */
 }
 
+.ellipsis2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: calc(90%); /* The trick is here! */
+}
+
 .sim-back-wrapper {
   position: relative;
   overflow: hidden;
