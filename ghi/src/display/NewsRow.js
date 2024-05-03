@@ -50,24 +50,24 @@ function NewsRow({articles}) {
 
     const newsColors = {
         // releases: "rgba(192, 145, 17, 0.87)",
-        game: "rgba(42, 168, 115, 0.70)",
-        design: "rgba(124, 19, 33, 0.70)",
-        site: "rgba(77, 71, 94, 0.50)",
-        social: "rgba(82, 96, 194, 0.70)",
-        events: "rgba(101, 56, 131, 0.70)",
-        admin: "rgba(77, 71, 94, 0.50)",
-        simulator: "rgba(232, 82, 230, 0.70)"
+        // game: "rgba(42, 168, 115, 0.70)",
+        // design: "rgba(124, 19, 33, 0.70)",
+        // site: "rgba(77, 71, 94, 0.50)",
+        // social: "rgba(82, 96, 194, 0.70)",
+        // events: "rgba(101, 56, 131, 0.70)",
+        // admin: "rgba(77, 71, 94, 0.50)",
+        // simulator: "rgba(232, 82, 230, 0.70)"
     }
 
     const newsBorders = {
-        releases: "#f0be1c",
-        game: "rgb(54, 184, 129)",
-        design: "rgb(255, 0, 43)",
-        site: "#4D475E",
-        social: "rgb(88, 129, 253)",
-        events: "rgb(104, 20, 172)",
-        admin: "#4D475E",
-        simulator: "rgba(232, 82, 230, 0.70)"
+        // releases: "#f0be1c",
+        // game: "rgb(54, 184, 129)",
+        // design: "rgb(255, 0, 43)",
+        // site: "#4D475E",
+        // social: "rgb(88, 129, 253)",
+        // events: "rgb(104, 20, 172)",
+        // admin: "#4D475E",
+        // simulator: "rgba(232, 82, 230, 0.70)"
     }
 
     return(
