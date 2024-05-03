@@ -1315,7 +1315,7 @@ button:hover {
   height: 65px;
   position: fixed;
   right: 2rem;
-  bottom: 77.5%;
+  bottom: 7rem;
   cursor: pointer;
   opacity: 30%;
   transition: opacity 0.5s;
