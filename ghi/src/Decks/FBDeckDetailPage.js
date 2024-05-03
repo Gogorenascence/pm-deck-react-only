@@ -239,14 +239,14 @@ function FBDeckDetailPage(props) {
                             <div style={{ display: "flex" }}>
                                 <img className="logo2" src="https://i.imgur.com/nIY2qSx.png" alt="created on"/>
                                 <h6
-                                className="left justify-content-end"
+                                className="left justify-content-end ellipsis2"
                                     style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                                 >
                                     {createdAgo} &nbsp; &nbsp;
                                 </h6>
                                 <img className="logo3" src="https://i.imgur.com/QLa1ciW.png" alt="updated on"/>
                                 <h6
-                                className="left justify-content-end"
+                                className="left justify-content-end ellipsis2"
                                     style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                                 >
                                     {updatedAgo} &nbsp; &nbsp;
