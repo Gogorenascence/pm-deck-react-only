@@ -1736,6 +1736,10 @@ button:hover {
   opacity: 60%;
 }
 
+.half2 {
+  opacity: 50%;
+}
+
 .selected2 {
   outline: 5px solid rgb(255, 255, 255);
 }
@@ -3711,6 +3715,62 @@ button:hover {
     width: 100%;
     margin: 0 0 0 0;
   }
+
+  .bigStaunch4 {
+    width: 100%;
+    color: aliceblue;
+    margin: 4% 0 0 0;
+    background: none;
+    background-color: rgb(36, 104, 76);
+    border: 7px solid rgb(28, 196, 126);
+    border-radius: 7px;
+    outline: 1px solid white;
+  }
+
+  .bigPower4 {
+    width: 100%;
+    color: aliceblue;
+    margin: 4% 0 0 0;
+    background: none;
+    background-color: rgb(124, 19, 33);
+    border: 7px solid rgb(255, 0, 43);
+    border-radius: 7px;
+    outline: 1px solid white;
+  }
+
+  .bigUnity4 {
+    width: 100%;
+    color: aliceblue;
+    margin: 4% 0 0 0;
+    background: none;
+    background-color: rgb(82, 96, 194);
+    border: 7px solid rgb(28, 40, 78);
+    border-radius: 7px;
+    outline: 1px solid white;
+  }
+
+  .bigCanny4 {
+    width: 100%;
+    color: aliceblue;
+    margin: 4% 0 0 0;
+    background: none;
+    background-color: rgb(101, 56, 131);
+    border: 7px solid rgb(60, 26, 68);
+    border-radius: 7px;
+    outline: 1px solid white;
+  }
+
+  .bigFaith4 {
+    width: 100%;
+    color: aliceblue;
+    margin: 4% 0 0 0;
+    background: none;
+    background-color: rgba(156, 118, 13, 0.87);
+    border: 7px solid rgb(240, 190, 28);
+    border-radius: 7px;
+    outline: 1px solid white;
+  }
+
 
   .margin-left-3P {
     margin-left: 0;
