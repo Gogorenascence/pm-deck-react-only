@@ -517,8 +517,8 @@ function NavBar() {
           <li className="nav-item2">
             <NavLink className="username2" to="/account" onClick={() => handleShowMobileMenu()}>
               <div className="navbar-select2 pointer">
-                <h5 className="navbar-menu-item">
-                  Account
+                <h5 className="navbar-menu-item ellipsis2">
+                  {account.username}
                 </h5>
               </div>
             </NavLink>
