@@ -25,7 +25,7 @@ function MainPage({
         <h1 className="margin-top-20">CardBase News</h1>
         <br/>
         <div>
-          {/* <NewsRow articles={articles}/> */}
+          <NewsRow articles={articles}/>
         </div>
         <br/>
           <h1 className="margin-top-20">Latest Decks</h1>

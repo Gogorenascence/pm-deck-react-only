@@ -118,7 +118,7 @@ function FBAccountPage() {
                         </div>
                         <div className="account-option-container">
                             {/* <ImageUpload/> */}
-                            <AccountDecks option={option}/>
+                            {/* <AccountDecks option={option}/> */}
                             <AccountFavoriteDecks option={option}/>
                         </div>
                     </div>
