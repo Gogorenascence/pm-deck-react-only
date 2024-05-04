@@ -123,7 +123,7 @@ function AccountDecks(props) {
                                 </div> :
                             null}
                             {!loading ?
-                                <div className="account-option-items account-scrollable">
+                                <div className="account-option-items account-spcrollable">
                                     {all_decks.slice(0, deckShowMore).map((deck, index) => {
                                         const marginBottom = index < all_decks.length - 1 ? '15px' : '0';
                                         return (

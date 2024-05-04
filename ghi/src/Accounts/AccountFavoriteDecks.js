@@ -111,10 +111,10 @@ function AccountFavoriteDecks(props) {
 
 
     return (
-        <>
-            { !noDecks?
+        // <>
+        //     { !noDecks?
                 <div>
-                    {option === "favoriteDecks"?
+                    {/* {option === "favoriteDecks"? */}
                         <div className="account-options-container">
                             <span className="flex-left-media-center">
                                 <div className="margin-bottom-10 media-margin-bottom-none">
@@ -205,18 +205,20 @@ function AccountFavoriteDecks(props) {
                                     </button> : null }
                                 </div>:null
                             }
-                        </div>: null
-                    }
-                </div>:
-                <div>
-                    {option === "myDecks"?
-                        <div className="textwindow">
-                            <h1 className="undercontext">Looks Like There's Nothing Here!</h1>
-                        </div>: null
-                    }
+                        </div>
+                        {/* : null
+                    } */}
                 </div>
-            }
-        </>
+                // :
+        //         <div>
+        //             {option === "myDecks"?
+        //                 <div className="textwindow">
+        //                     <h1 className="undercontext">Looks Like There's Nothing Here!</h1>
+        //                 </div>: null
+        //             }
+        //         </div>
+        //     }
+        // </>
     );
 }
 
