@@ -3107,6 +3107,7 @@ button:hover {
 
 .newsRow2 {
   height: 250px;
+  overflow-x: auto;
   overflow-y: auto;
 }
 
