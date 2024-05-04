@@ -1724,7 +1724,7 @@ button:hover {
 .account-scrollable {
   margin: 0% 0% 0% .5%;
   height: 473px;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* overflow-y: auto; */
   border: 1px solid rgba(0, 0, 0, 0.212);
   background-color: rgba(15, 0, 50, 0.315);
