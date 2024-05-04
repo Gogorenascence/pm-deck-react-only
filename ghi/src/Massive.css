@@ -3102,7 +3102,7 @@ button:hover {
 
 .newsRow {
   max-height: 250px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .newsItem {
@@ -3185,7 +3185,6 @@ button:hover {
   border-radius: 5px;
   width: 100%;
 } */
-
 
 .newsSection {
   height: 55px;
