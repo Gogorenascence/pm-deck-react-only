@@ -3102,7 +3102,12 @@ button:hover {
 
 .newsRow {
   max-height: 250px;
-  overflow-y: auto;
+  overflow-y: scroll;
+}
+
+.newsRow2 {
+  max-height: 250px;
+  overflow-y: scroll;
 }
 
 .newsItem {
@@ -3122,16 +3127,16 @@ button:hover {
   color: white;
 }
 
-/* .newsRow::-webkit-scrollbar {
+.newsRow::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-} */
+}
 
-/* .newsRow::-webkit-scrollbar-thumb {
+.newsRow::-webkit-scrollbar-thumb {
   background: rgb(81, 76, 104);
   border-radius: 5px;
   width: 100%;
-} */
+}
 
 /* .newsRow {
   scrollbar-width: thin;
@@ -3185,6 +3190,7 @@ button:hover {
   border-radius: 5px;
   width: 100%;
 } */
+
 
 .newsSection {
   height: 55px;
