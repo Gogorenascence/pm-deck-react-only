@@ -119,7 +119,7 @@ function FBAccountPage() {
                         <div className="account-option-container">
                             {/* <ImageUpload/> */}
                             <AccountDecks option={option}/>
-                            {/* <AccountFavoriteDecks option={option}/> */}
+                            <AccountFavoriteDecks option={option}/>
                         </div>
                     </div>
                 </div>:
