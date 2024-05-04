@@ -3101,14 +3101,14 @@ button:hover {
 }
 
 .newsRow {
-  height: 250px;
+  max-height: 250px;
   overflow-y: scroll;
 }
 
-/* .newsRow2 {
-  maxheight: 250px;
-  overflow-y: scroll;
-} */
+.newsRow2 {
+  height: 250px;
+  /* overflow-y: scroll; */
+}
 
 .newsItem {
   width: calc(100% - 8px);
