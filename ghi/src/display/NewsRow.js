@@ -78,7 +78,7 @@ function NewsRow({articles}) {
                         {filteredStories.map((story, index) => {
                             return (
                                 <>
-                                    {story.content ?
+                                    {/* {story.content ? */}
                                         <NavLink className="nav-link no-pad" to={`/articles/${story.id}`}>
                                             <div
                                                 className="flex-items newsItem"
@@ -96,7 +96,7 @@ function NewsRow({articles}) {
                                                 <h4 className="newsText">{story.title}</h4>
                                             </div>
                                         </NavLink>
-                                    :
+                                    {/* :
                                         <div
                                             className="flex-items newsItem"
                                             style={{
@@ -109,10 +109,10 @@ function NewsRow({articles}) {
 
                                             <h3 className="newsText no-wrap">{formatDate(story.story_date)}</h3>
                                             <img className="newsSection" src={`${story.section}.png`} alt={story.section}/>
-                                            {/* <h4 className="newsText">{story.section}</h4> */}
+
                                             <h4 className="newsText">{story.title}</h4>
                                         </div>
-                                    }
+                                    } */}
                                 </>
                             )
                         })}
