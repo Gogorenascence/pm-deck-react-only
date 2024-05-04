@@ -3122,16 +3122,16 @@ button:hover {
   color: white;
 }
 
-.newsRow::-webkit-scrollbar {
+/* .newsRow::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-}
+} */
 
-.newsRow::-webkit-scrollbar-thumb {
+/* .newsRow::-webkit-scrollbar-thumb {
   background: rgb(81, 76, 104);
   border-radius: 5px;
   width: 100%;
-}
+} */
 
 /* .newsRow {
   scrollbar-width: thin;

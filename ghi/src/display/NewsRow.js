@@ -74,7 +74,7 @@ function NewsRow({articles}) {
         <div className="white-space">
             { filteredStories.length > 0 ?
                 <>
-                    <div className="newsqRow">
+                    <div className="newsRow">
                         {filteredStories.map((story, index) => {
                             return (
                                 <>
