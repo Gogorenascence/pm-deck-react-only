@@ -71,6 +71,13 @@ function DeckRow() {
                                         >
                                             {deck.updated_on.ago} &nbsp; &nbsp;
                                         </h6>
+                                        <img className="logo2" src="https://i.imgur.com/eMGZ7ON.png" alt="created by"/>
+                                        <h6
+                                        className="left justify-content-end"
+                                            style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
+                                        >
+                                            {deck.creator}
+                                        </h6>
                                     </div>
                                 </Card.ImgOverlay>
                             </Card>

@@ -7,6 +7,7 @@ import { DeckQueryContext } from "../context/DeckQueryContext";
 import deckQueries from "../QueryObjects/DeckQueries";
 import FavoriteDeck from "../Accounts/FavoriteDeck";
 import { AuthContext } from "../context/AuthContext";
+import userQueries from "../QueryObjects/UserQueries";
 
 
 function DecksPage() {
@@ -25,7 +26,19 @@ function DecksPage() {
 
     const getDecks = async() =>{
         setLoading(true)
+        const usersData = await userQueries.getUsersData()
+        console.log(usersData)
         const decksData = await deckQueries.getQueriedDecksData({"private": false});
+        // const decksData = await deckQueries.getdecksDataNoDate()
+        // for (let deck of decksData) {
+        //     const creator = usersData.find(user => user.id === deck.account_id)
+        //     if (creator) {
+        //         deck["creator"] = creator.username
+        //     } else {
+        //         deck["creator"] = "TeamPlayMaker"
+        //     }
+        // }
+        console.log(decksData)
         const sortedDecks = [...decksData].sort(deckSortMethods[deckSortState].method);
         setFullDecks(sortedDecks.reverse())
         setLoading(false)
@@ -227,7 +240,7 @@ function DecksPage() {
                                     <div style={{ display: "flex" }}>
                                         <img className="logo2" src="https://i.imgur.com/nIY2qSx.png" alt="created on"/>
                                         <h6
-                                        className="left justify-content-end"
+                                        className="left justify-content-end ellipsis2"
                                             style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                                         >
                                             {deck.created_on.ago} &nbsp; &nbsp;
@@ -238,6 +251,13 @@ function DecksPage() {
                                             style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                                         >
                                             {deck.updated_on.ago} &nbsp; &nbsp;
+                                        </h6>
+                                        <img className="logo2" src="https://i.imgur.com/eMGZ7ON.png" alt="created by"/>
+                                        <h6
+                                        className="left justify-content-end"
+                                            style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
+                                        >
+                                            {deck.creator}
                                         </h6>
                                     </div>
                                 </Card.ImgOverlay>

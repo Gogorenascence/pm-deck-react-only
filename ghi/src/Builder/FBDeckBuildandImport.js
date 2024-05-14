@@ -326,6 +326,7 @@ function FBDeckBuildandImport({
         data["series_names"] = series_names
         data["parent_id"] = ""
         account ? data["account_id"] = account.id : data["account_id"] = deck.account_id
+        account ? data["creator"] = account.username : data["creator"] = deck.creator
 
         const createdDeck = await deckQueries.createDeck(data)
 

@@ -3,6 +3,7 @@ import DeckRow from "./display/DeckRow";
 import CardRow from "./display/CardRow";
 import NewsRow from "./display/NewsRow";
 import SimulatorRow from "./display/SimulatorRow";
+import FullTransfer from "./database/FullTransfer";
 
 
 function MainPage({
@@ -15,6 +16,7 @@ function MainPage({
         <h1 className="media-title">Welcome to PlayMaker CardBase</h1>
         <h2 className="media-title">The PlayMaker Card Database and Deck Sharing Site</h2>
         <br/>
+        {/* <FullTransfer/> */}
         <div>
           <TopRow/>
         </div>

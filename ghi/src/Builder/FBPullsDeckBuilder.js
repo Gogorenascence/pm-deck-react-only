@@ -323,6 +323,7 @@ function PullsDeckBuilder() {
         data["card_names"] = card_names
         data["series_names"] = series_names
         account ? data["account_id"] = account.id : data["account_id"] = deck.account_id
+        account ? data["creator"] = account.username : data["creator"] = deck.creator
 
         const cardUrl = `${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/decks/`;
         const fetchConfig = {

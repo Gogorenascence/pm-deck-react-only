@@ -188,7 +188,7 @@ function DeckDetailPage(props) {
                             <h6 className="left ellipsis2"
                                 style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
                             >
-                                Strategies: {deck.strategies?.length > 0 ? deck.strategies.join(', ') : "n/a"}
+                                Stratedgies: {deck.strategies?.length > 0 ? deck.strategies.join(', ') : "n/a"}
                             </h6>
                             <h6 className="left"
                                 style={{margin: '0px 0px 10px 10px', fontWeight: "600"}}
@@ -209,6 +209,13 @@ function DeckDetailPage(props) {
                                     style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
                                 >
                                     {updatedAgo} &nbsp; &nbsp;
+                                </h6>
+                                <img className="logo2" src="https://i.imgur.com/eMGZ7ON.png" alt="created by"/>
+                                <h6
+                                className="left justify-content-end"
+                                    style={{margin: '5px 0px 5px 5px', fontWeight: "600", textAlign: "left"}}
+                                >
+                                    {deck.creator}
                                 </h6>
                             </div>
                         </Card.ImgOverlay>
