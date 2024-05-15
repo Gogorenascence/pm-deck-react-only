@@ -2204,7 +2204,7 @@
   "series_name": "Gravity Enforcer//Cosmic//Tactical",
   "card_number": 1114,
   "enthusiasm": 0,
-  "effect_text": "<Trigger> During the Start Phase or during a foe's turn, all foes gain Enthusiasm minus 2.\n",
+  "effect_text": "<Trigger> During the Start Phase or during a foe's turn, all foes gain Enthusiasm minus 2.",
   "second_effect_text": "<Critical> Your Ending gains damage plus 1 if it deals damage to a foe with Enthusiasm lower than yours.",
   "illustrator": "betomirandaart2",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb16ge.jpg",
