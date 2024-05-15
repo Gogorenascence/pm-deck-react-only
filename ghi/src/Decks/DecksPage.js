@@ -26,6 +26,7 @@ function DecksPage() {
     const getDecks = async() =>{
         setLoading(true)
         const decksData = await deckQueries.getQueriedDecksData({"private": false});
+        // const decksData = await deckQueries.getdecksDataNoDate()
         console.log(decksData)
         const sortedDecks = [...decksData].sort(deckSortMethods[deckSortState].method);
         setFullDecks(sortedDecks.reverse())

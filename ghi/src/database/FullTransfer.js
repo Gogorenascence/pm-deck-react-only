@@ -63,10 +63,7 @@ function FullTransfer() {
             return booster_set
         })
 
-    let decks = require('./decks.json').map(deck => {
-            deck.id = deck._id ? (deck._id.$oid ? deck._id.$oid : deck._id) : deck.id;
-            return deck;
-        })
+    let decks = require('./decks.json')
 
     let terms = require('./terms.json').map(term =>
         {term["id"] = term._id.$oid
@@ -124,21 +121,16 @@ function FullTransfer() {
         // console.log(cards[0])
 
         for (let deck of decks) {
-            // console.log(deck.created_on)
-            // if (deck.created_on.full_time.$date) {
-            //     const newFullTime = deck.created_on.full_time.$date.slice(0, 19)
-            //     deck.created_on.full_time = newFullTime
-            // } else {
-            //     const newFullTime = deck.created_on.full_time.slice(0, 19)
-            //     deck.created_on.full_time = newFullTime
+            // const splitSeriesNames = []
+            // for (let seriesItem of deck.series_names) {
+            //     const splitSeriesList = seriesItem.split("//")
+            //     for (let splitSeriesItem of splitSeriesList) {
+            //         if (!splitSeriesNames.includes(splitSeriesItem)) {
+            //             splitSeriesNames.push(splitSeriesItem)
+            //         }
+            //     }
             // }
-            // if (deck.updated_on.full_time.$date) {
-            //     const newFullTime = deck["updated_on"]["full_time"]["$date"].slice(0, 19)
-            //     deck["updated_on"]["full_time"] = newFullTime
-            // } else {
-            //     const newFullTime = deck["updated_on"]["full_time"].slice(0, 19)
-            //     deck["updated_on"]["full_time"] = newFullTime
-            // }
+            // deck["series_names"] = splitSeriesNames
             addDoc(decksCollectionRef, deck)
         }
         // console.log(decks)
@@ -184,3 +176,23 @@ function FullTransfer() {
 }
 
 export default FullTransfer
+
+
+// for (let deck of decks) {
+    // console.log(deck.created_on)
+    // if (deck.created_on.full_time.$date) {
+    //     const newFullTime = deck.created_on.full_time.$date.slice(0, 19)
+    //     deck.created_on.full_time = newFullTime
+    // } else {
+    //     const newFullTime = deck.created_on.full_time.slice(0, 19)
+    //     deck.created_on.full_time = newFullTime
+    // }
+    // if (deck.updated_on.full_time.$date) {
+    //     const newFullTime = deck["updated_on"]["full_time"]["$date"].slice(0, 19)
+    //     deck["updated_on"]["full_time"] = newFullTime
+    // } else {
+    //     const newFullTime = deck["updated_on"]["full_time"].slice(0, 19)
+    //     deck["updated_on"]["full_time"] = newFullTime
+    // }
+//     addDoc(decksCollectionRef, deck)
+// }

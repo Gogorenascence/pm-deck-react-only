@@ -301,15 +301,26 @@ function FBDeckEdit({
         for (let card of main_list){
             main.push(card.card_number)
             card_names.push(card.name)
-            series_names.push(card.series_name)
+            const splitSeriesList = card.series_name.split("//")
+            for (let splitSeriesItem of splitSeriesList) {
+                if (!series_names.includes(splitSeriesItem)) {
+                    series_names.push(splitSeriesItem)
+                }
+            }
         }
+        console.log(series_names)
         for (let card of pluck_list){
             if (card.hero_id === "GEN"
                 || main_list?.filter(cardItem => cardItem.hero_id === card.hero_id)
                 .length > 3) {
                 pluck.push(card.card_number)
                 card_names.push(card.name)
-                series_names.push(card.series_name)
+                const splitSeriesList = card.series_name.split("//")
+                for (let splitSeriesItem of splitSeriesList) {
+                    if (!series_names.includes(splitSeriesItem)) {
+                        series_names.push(splitSeriesItem)
+                    }
+                }
             }
         }
         data["cards"] = main;
