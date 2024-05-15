@@ -7,7 +7,6 @@ import { DeckQueryContext } from "../context/DeckQueryContext";
 import deckQueries from "../QueryObjects/DeckQueries";
 import FavoriteDeck from "../Accounts/FavoriteDeck";
 import { AuthContext } from "../context/AuthContext";
-import userQueries from "../QueryObjects/UserQueries";
 
 
 function DecksPage() {
@@ -26,18 +25,7 @@ function DecksPage() {
 
     const getDecks = async() =>{
         setLoading(true)
-        const usersData = await userQueries.getUsersData()
-        console.log(usersData)
         const decksData = await deckQueries.getQueriedDecksData({"private": false});
-        // const decksData = await deckQueries.getdecksDataNoDate()
-        // for (let deck of decksData) {
-        //     const creator = usersData.find(user => user.id === deck.account_id)
-        //     if (creator) {
-        //         deck["creator"] = creator.username
-        //     } else {
-        //         deck["creator"] = "TeamPlayMaker"
-        //     }
-        // }
         console.log(decksData)
         const sortedDecks = [...decksData].sort(deckSortMethods[deckSortState].method);
         setFullDecks(sortedDecks.reverse())
@@ -237,7 +225,7 @@ function DecksPage() {
                                     >
                                         Main Deck: {deck.cards.length} &nbsp; Pluck Deck: {deck.pluck.length}
                                     </h6>
-                                    <div style={{ display: "flex" }}>
+                                    <div style={{ display: "flex", maxWidth: "90%"}}>
                                         <img className="logo2" src="https://i.imgur.com/nIY2qSx.png" alt="created on"/>
                                         <h6
                                         className="left justify-content-end ellipsis2"

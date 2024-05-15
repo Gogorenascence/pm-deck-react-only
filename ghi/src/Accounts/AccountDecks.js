@@ -160,7 +160,7 @@ function AccountDecks(props) {
                                                     >
                                                         Main Deck: {deck.cards.length} &nbsp; Pluck Deck: {deck.pluck.length}
                                                     </h6>
-                                                    <div style={{ display: "flex" }}>
+                                                    <div style={{ display: "flex", maxWidth: "90%"}}>
                                                         <img className="logo2" src="https://i.imgur.com/nIY2qSx.png" alt="created on"/>
                                                         <h6
                                                         className="left justify-content-end"
