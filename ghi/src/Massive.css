@@ -3418,6 +3418,41 @@ button:hover {
   height: max-content;
 }
 
+.auto-complete-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 366px;
+  margin: 0 5px;
+}
+
+.auto-complete-large {
+  background-color: white;
+  max-height: 200px;
+  width: 360px;
+  border: #000 solid 1px;
+  position: absolute;
+  z-index: 100;
+  overflow-y: scroll;
+  transform: translate(0, 44px);
+}
+
+/* Hide the scrollbar */
+.auto-complete-large::-webkit-scrollbar {
+  width: 0; /* Set the width of the scrollbar to 0 */
+}
+
+/* Hide the scrollbar thumb */
+.auto-complete-large::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Set the background color of the thumb to transparent */
+}
+
+.auto-complete-item {
+  height: 25px;
+  padding-left: 3px;
+}
+
+
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;

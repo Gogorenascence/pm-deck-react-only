@@ -121,16 +121,16 @@ function FullTransfer() {
         // console.log(cards[0])
 
         for (let deck of decks) {
-            // const splitSeriesNames = []
-            // for (let seriesItem of deck.series_names) {
-            //     const splitSeriesList = seriesItem.split("//")
-            //     for (let splitSeriesItem of splitSeriesList) {
-            //         if (!splitSeriesNames.includes(splitSeriesItem)) {
-            //             splitSeriesNames.push(splitSeriesItem)
-            //         }
-            //     }
-            // }
-            // deck["series_names"] = splitSeriesNames
+            const splitSeriesNames = []
+            for (let seriesItem of deck.series_names) {
+                const splitSeriesList = seriesItem.split("//")
+                for (let splitSeriesItem of splitSeriesList) {
+                    if (!splitSeriesNames.includes(splitSeriesItem)) {
+                        splitSeriesNames.push(splitSeriesItem)
+                    }
+                }
+            }
+            deck["series_names"] = splitSeriesNames
             addDoc(decksCollectionRef, deck)
         }
         // console.log(decks)

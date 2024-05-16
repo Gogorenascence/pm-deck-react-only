@@ -204,7 +204,11 @@ function ArticlesPage({
                 <div className="loading-container">
                     <div className="loading-spinner"></div>
                 </div> :
-                <h4 className="left-h3">Showing Results 1 - {completelyFilteredNews.slice(0, someMoreNews).length} of {completelyFilteredNews.length}</h4>}
+                // <h4 className="left-h3">Showing Results 1 - {completelyFilteredNews.slice(0, someMoreNews).length} of {completelyFilteredNews.length}</h4>}
+                <h4 className="left-h3">
+                    {completelyFilteredNews.length > 0 ? `Showing Results 1 - ${completelyFilteredNews.slice(0, someMoreNews).length} of ${completelyFilteredNews.length}`:
+                        "No Articles Fit Your Search Criteria"}
+                </h4>}
             <br/>
             <div className="newsPage">
                 {completelyFilteredNews.slice(0, someMoreNews).map((article, index) => {

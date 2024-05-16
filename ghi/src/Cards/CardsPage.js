@@ -388,7 +388,11 @@ function CardsPage(props) {
                     </div> :
                 null}
 
-            <h5 className="left-h3">Showing Results 1 - {all_cards.slice(0, showMore).length} of {all_cards.length}</h5>
+            {/* <h4 className="left-h3">Showing Results 1 - {all_cards.slice(0, showMore).length} of {all_cards.length}</h4> */}
+            <h4 className="left-h3">
+                    {all_cards.length > 0 ? `Showing Results 1 - ${all_cards.slice(0, showMore).length} of ${all_cards.length}`:
+                        "No Cards Fit Your Search Criteria"}
+                </h4>
 
             {listView?
                 <div className="card-list2">

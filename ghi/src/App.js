@@ -36,6 +36,7 @@ import FBDeckDetailPage from "./Decks/FBDeckDetailPage";
 import FBDeckEdit from "./Builder/FBDeckEditPage";
 import FBAccountPage from "./Accounts/FBAccountPage";
 import FBDeckCopy from "./Builder/FBDeckCopyPage";
+// import DecksPage from "./Decks/FBDecksPage";
 
 
 function App() {
@@ -105,14 +106,18 @@ function App() {
           <div className="app">
 
             <Routes>
-              <Route index element={<MainPage cards={cards}
-                                              articles={articles}
+              <Route index element={<MainPage
+                                      cards={cards}
+                                      articles={articles}
                                     />} />
               <Route path="/deckbuilder" element={<FBDeckBuildandImport
-                                                      cards={cards}
-                                                      booster_sets={booster_sets}
-                                                />} />
-              <Route path="/decks" element={<DecksPage decks={decks}/>} />
+                                                    cards={cards}
+                                                    booster_sets={booster_sets}
+                                                  />} />
+              <Route path="/decks" element={<DecksPage
+                                              cards={cards}
+                                              card_categories={card_categories}
+                                            />} />
               <Route path="/decks/:deck_id" element={<FBDeckDetailPage
                                                       cards={cards}
                                                     />} />

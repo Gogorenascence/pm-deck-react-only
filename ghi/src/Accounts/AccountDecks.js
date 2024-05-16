@@ -72,34 +72,35 @@ function AccountDecks(props) {
         updated: { method: (a,b) => new Date(b.updated_on.full_time) - new Date(a.updated_on.full_time) },
     };
 
-    const handleDeckQuery = (event) => {
-        setDeckQuery({ ...deckQuery, [event.target.name]: event.target.value });
-    };
+    // const handleDeckQuery = (event) => {
+    //     setDeckQuery({ ...deckQuery, [event.target.name]: event.target.value });
+    // };
 
-    const handleDeckQueryReset = (event) => {
-        setDeckQuery({
-            deckName: "",
-            description: "",
-            cardName: "",
-            strategy: "",
-            seriesName: "",
-        });
-        setDeckSortState("none")
-    };
+    // const handleDeckQueryReset = (event) => {
+    //     setDeckQuery({
+    //         deckName: "",
+    //         description: "",
+    //         cardName: "",
+    //         strategy: "",
+    //         seriesName: "",
+    //     });
+    //     setDeckSortState("none")
+    // };
 
-    const handleDeckSort = (event) => {
-        setDeckSortState(event.target.value);
-    };
+    // const handleDeckSort = (event) => {
+    //     setDeckSortState(event.target.value);
+    // };
 
     const handleDeckShowMore = (event) => {
         setDeckShowMore(deckShowMore + 20);
     };
 
-    const all_decks = decks.filter(deck => deck.name.toLowerCase().includes(deckQuery.deckName.toLowerCase()))
-        .filter(deck => (deck.description).toLowerCase().includes(deckQuery.description.toLowerCase()))
-        .filter(deck => deckQuery.cardName ? (deck.card_names && deck.card_names.length > 0 ? deck.card_names.some(name => name.toLowerCase().includes(deckQuery.cardName.toLowerCase())) : false) : true)
-        .filter(deck => deckQuery.strategy? deck.strategies.some(strategy => strategy.includes(deckQuery.strategy)):deck.strategies)
-        .filter(deck => deckQuery.seriesName ? (deck.series_names && deck.series_names.length > 0 ? deck.series_names.some(series => series.toLowerCase().includes(deckQuery.seriesName.toLowerCase())) : false) : true)
+    const all_decks = decks
+        // decks.filter(deck => deck.name.toLowerCase().includes(deckQuery.deckName.toLowerCase()))
+        // .filter(deck => (deck.description).toLowerCase().includes(deckQuery.description.toLowerCase()))
+        // .filter(deck => deckQuery.cardName ? (deck.card_names && deck.card_names.length > 0 ? deck.card_names.some(name => name.toLowerCase().includes(deckQuery.cardName.toLowerCase())) : false) : true)
+        // .filter(deck => deckQuery.strategy? deck.strategies.some(strategy => strategy.includes(deckQuery.strategy)):deck.strategies)
+        // .filter(deck => deckQuery.seriesName ? (deck.series_names && deck.series_names.length > 0 ? deck.series_names.some(series => series.toLowerCase().includes(deckQuery.seriesName.toLowerCase())) : false) : true)
         .sort(deckSortMethods[deckSortState].method)
 
     // const all_decks = all_decks.filter(deck => account && deck.account_id && deck.account_id === account.id)

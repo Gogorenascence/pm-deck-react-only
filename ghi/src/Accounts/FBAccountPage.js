@@ -3,11 +3,11 @@ import {
 } from "react-bootstrap";
 import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
-import { DeckQueryContext } from "../context/DeckQueryContext";
+// import { DeckQueryContext } from "../context/DeckQueryContext";
 import { AuthContext } from "../context/AuthContext";
 import AccountDecks from "./AccountDecks";
 import AccountFavoriteDecks from "./AccountFavoriteDecks";
-import ImageUpload from "./ImageUpload";
+// import ImageUpload from "./ImageUpload";
 
 
 function FBAccountPage() {

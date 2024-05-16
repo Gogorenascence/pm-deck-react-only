@@ -2,20 +2,24 @@ import {
     Card,
 } from "react-bootstrap";
 import { useState, useEffect, useContext } from "react";
-import { NavLink, useNavigate } from 'react-router-dom';
-import { DeckQueryContext } from "../context/DeckQueryContext";
+import { NavLink } from 'react-router-dom';
+import { FBDeckQueryContext } from "../context/FBDeckQueryContext";
 import deckQueries from "../QueryObjects/DeckQueries";
 import FavoriteDeck from "../Accounts/FavoriteDeck";
 import { AuthContext } from "../context/AuthContext";
+import AutoComplete from "../display/AutoComplete";
 
 
-function DecksPage() {
+function DecksPage({
+    cards,
+    card_categories
+}) {
     const {
         deckQuery,
         setDeckQuery,
         deckSortState,
         setDeckSortState,
-    } = useContext(DeckQueryContext)
+    } = useContext(FBDeckQueryContext)
     const {account} = useContext(AuthContext)
 
     const [deckShowMore, setDeckShowMore] = useState(20);
@@ -23,22 +27,21 @@ function DecksPage() {
 
     const [fullDecks, setFullDecks] = useState([])
 
+    const [showAutoComplete, setShowAutoComplete] = useState(false)
+
     const getDecks = async() =>{
         setLoading(true)
-        const decksData = await deckQueries.getQueriedDecksData({"private": false});
-        console.log(decksData)
-        const sortedDecks = [...decksData].sort(deckSortMethods[deckSortState].method);
-        setFullDecks(sortedDecks.reverse())
+        // const decksData = await deckQueries.getQueriedDecksData({"private": false});
+        const decksData = await deckQueries.getDecksListData(deckQuery)
+        if (decksData) {
+            const sortedDecks = [...decksData].sort(deckSortMethods[deckSortState].method);
+            setFullDecks(sortedDecks.reverse())
+        } else {
+            setFullDecks([])
+        }
         setLoading(false)
+        // handleDeckQueryReset()
     };
-
-    const navigate = useNavigate()
-
-    const getRandomDeck = async() =>{
-        const randomIndex = Math.floor(Math.random() * fullDecks.length);
-        const randomDeck = fullDecks[randomIndex].id;
-        navigate(`/decks/${randomDeck}`);
-    }
 
     useEffect(() => {
         getDecks();
@@ -58,18 +61,27 @@ function DecksPage() {
         updated: { method: (a,b) => new Date(b.updated_on.full_time) - new Date(a.updated_on.full_time) },
     };
 
-    const handleDeckQuery = (event) => {
-        setDeckQuery({ ...deckQuery, [event.target.name]: event.target.value });
+    const firebaseQueryTerms = {
+        none: "",
+        equals: "=="
+    }
+
+    const handleDeckQuery = (event, term) => {
+        if (event.target.value) {
+            setDeckQuery({ ...deckQuery, [event.target.name]: [event.target.value, term, true] });
+        } else {
+            setDeckQuery({ ...deckQuery, [event.target.name]: [event.target.value, term, false] });
+        }
+        console.log(deckQuery.card_series_names[0])
+        setShowAutoComplete(true)
     };
 
-    const handleDeckQueryReset = (event) => {
+    const handleDeckQueryReset = () => {
         setDeckQuery({
-            deckName: "",
-            description: "",
-            cardName: "",
-            strategy: "",
-            seriesName: "",
-            user: "",
+            name: ["","", false],
+            creator: ["","", false],
+            card_series_names: ["","", false],
+            private: [false, "==", true]
         });
         setDeckSortState("none")
     };
@@ -83,12 +95,22 @@ function DecksPage() {
         setDeckShowMore(deckShowMore + 20);
     };
 
-    const all_decks = fullDecks.filter(deck => deck.name.toLowerCase().includes(deckQuery.deckName.toLowerCase()))
-        .filter(deck => (deck.description).toLowerCase().includes(deckQuery.description.toLowerCase()))
-        .filter(deck => deckQuery.cardName ? (deck.card_names && deck.card_names.length > 0 ? deck.card_names.some(name => name.toLowerCase().includes(deckQuery.cardName.toLowerCase())) : false) : true)
-        .filter(deck => deckQuery.strategy? deck.strategies.some(strategy => strategy.includes(deckQuery.strategy)):deck.strategies)
-        .filter(deck => deckQuery.seriesName ? (deck.series_names && deck.series_names.length > 0 ? deck.series_names.some(series => series.toLowerCase().includes(deckQuery.seriesName.toLowerCase())) : false) : true)
-        .sort(deckSortMethods[deckSortState].method)
+    const all_decks = fullDecks.sort(deckSortMethods[deckSortState].method)
+
+    const cardNameList = cards.filter(card => card.name.toLowerCase()
+        .includes(deckQuery.card_series_names[0].toLowerCase()))
+
+    const cardCatList = card_categories.filter(card_category => card_category.cat_type !== "card_class")
+        .filter(card_category => card_category.name.toLowerCase()
+        .includes(deckQuery.card_series_names[0].toLowerCase()))
+
+    const nameSeriesList = cardNameList.concat(cardCatList).sort((a,b) => a.name.localeCompare(b.name))
+    const uniqueNameSeriesList = nameSeriesList.reduce((acc, listItem) => {
+        if (!acc.find(item => item.name === listItem.name)) {
+            acc.push(listItem)
+        }
+        return acc
+    }, [])
 
 
     return (
@@ -98,58 +120,32 @@ function DecksPage() {
             <input
                 className="left dcbsearch-large"
                 type="text"
-                placeholder=" Deck Name Contains..."
-                name="deckName"
-                value={deckQuery.deckName}
-                onChange={handleDeckQuery}>
-            </input>
-            <br/>
-            {/* <input
-                className="left dcbsearch-large"
-                type="text"
-                placeholder=" Description Contains..."
-                name="description"
-                value={deckQuery.description}
-                onChange={handleDeckQuery}>
-            </input>
-            <br/> */}
-            <input
-                className="left dcbsearch-large"
-                type="text"
-                placeholder=" Contains Card Named..."
-                name="cardName"
-                value={deckQuery.cardName}
-                onChange={handleDeckQuery}>
+                placeholder=" Deck's Name is..."
+                name="name"
+                value={deckQuery.name[0]}
+                onChange={(event) => handleDeckQuery(event, firebaseQueryTerms.equals)}>
             </input>
             <br/>
             <input
                 className="left dcbsearch-large"
                 type="text"
-                placeholder=" Contains Series Named..."
-                name="seriesName"
-                value={deckQuery.seriesName}
-                onChange={handleDeckQuery}>
+                placeholder=" Creator's Username is..."
+                name="creator"
+                value={deckQuery.creator[0]}
+                onChange={(event) => handleDeckQuery(event, firebaseQueryTerms.equals)}>
             </input>
             <br/>
-            <select
-                className="left"
-                type="text"
-                placeholder=" Strategy"
-                name="strategy"
-                value={deckQuery.strategy}
-                onChange={handleDeckQuery}
-                style={{width: "180px", height: "37px"}}>
-                <option value="">Strategy</option>
-                <option value="Aggro">Aggro</option>
-                <option value="Combo">Combo</option>
-                <option value="Control">Control</option>
-                <option value="Mid-range">Mid-range</option>
-                <option value="Ramp">Ramp</option>
-                <option value="Second Wind">Second Wind</option>
-                <option value="Stall">Stall</option>
-                <option value="Toolbox">Toolbox</option>
-                <option value="other">other</option>
-            </select>
+            <AutoComplete
+                itemList={uniqueNameSeriesList}
+                renderCondition={showAutoComplete && uniqueNameSeriesList.length > 1}
+                setNoneRenderFunction={() => setShowAutoComplete(false)}
+                onChangeFunction={(event) => handleDeckQuery(event, firebaseQueryTerms.none)}
+                name={"card_series_names"}
+                value={deckQuery.card_series_names[0]}
+                placeholder={" Contains a Card or Series Named..."}
+                onClickFunction={(item) => setDeckQuery(
+                    {...deckQuery, ["card_series_names"]: [item.name, "", true]})}
+            />
             <select
                 className="left"
                 type="text"
@@ -164,12 +160,13 @@ function DecksPage() {
                 <option value="name">A-Z</option>
             </select>
             <br/>
-            <NavLink to="/deckbuilder">
-                <button className="left"
-                    variant="dark">
-                        Create Deck
-                </button>
-            </NavLink>
+            <button
+                className="left"
+                variant="dark"
+                onClick={getDecks}
+                >
+                Search Decks
+            </button>
             <button
                 className="left"
                 variant="dark"
@@ -177,24 +174,21 @@ function DecksPage() {
                 >
                 Reset Filters
             </button>
-            <button
-                className="left"
-                variant="dark"
-                onClick={getRandomDeck}
-                >
-                Random Deck
-            </button>
+            <NavLink to="/deckbuilder">
+                <button className="left"
+                    variant="dark">
+                        Create Deck
+                </button>
+            </NavLink>
 
             { loading ?
                 <div className="loading-container">
                     <div className="loading-spinner"></div>
                 </div> :
-                    <h4 className="left-h3">
-                        {all_decks.length > 0 ? `Showing Results 1 - ${all_decks.slice(0, deckShowMore).length} of ${all_decks.length}`:
-                            "No Decks Fit Your Search Criteria"}
-                    </h4>}
-
-
+                <h4 className="left-h3">
+                    {all_decks.length > 0 ? `Showing Results 1 - ${all_decks.slice(0, deckShowMore).length} of ${all_decks.length}`:
+                        "No Decks Fit Your Search Criteria"}
+                </h4>}
 
             <div className="decks-page-card-list2">
                 {all_decks.slice(0, deckShowMore).map((deck) => {
