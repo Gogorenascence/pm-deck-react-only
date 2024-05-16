@@ -5,7 +5,7 @@ import LightSwitch from "./display/LightSwitch";
 import BackToTop from "./display/BackToTop";
 import Footer from "./Footer";
 import MainPage from "./MainPage";
-import DecksPage from "./Decks/DecksPage"
+// import DecksPage from "./Decks/DecksPage"
 import CardsPage from "./Cards/CardsPage"
 import CardDetailPage from "./Cards/CardDetailPage";
 import SetsPage from "./Cards/SetsPage";
@@ -36,7 +36,7 @@ import FBDeckDetailPage from "./Decks/FBDeckDetailPage";
 import FBDeckEdit from "./Builder/FBDeckEditPage";
 import FBAccountPage from "./Accounts/FBAccountPage";
 import FBDeckCopy from "./Builder/FBDeckCopyPage";
-// import DecksPage from "./Decks/FBDecksPage";
+import DecksPage from "./Decks/FBDecksPage";
 
 
 function App() {

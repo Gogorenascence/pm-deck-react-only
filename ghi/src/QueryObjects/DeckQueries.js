@@ -1,5 +1,15 @@
 import { db } from "../Firebase"
-import { getDocs, collection, query, orderBy, where, limit, addDoc, or } from "firebase/firestore"
+import {
+    getDocs,
+    collection,
+    query,
+    orderBy,
+    where,
+    limit,
+    addDoc,
+    or,
+    startAfter
+} from "firebase/firestore"
 import helper from "./Helper"
 
 const deckQueries = {
@@ -99,7 +109,11 @@ const deckQueries = {
         }))
         return data
     },
-    getDecksListData: async function getDecksListData(queryList) {
+    getDecksListData: async function getDecksListData(
+        queryList,
+        sortMethod,
+
+    ) {
         let decksCollectionRef = collection(db, "decks");
         // for (const [key, value] of Object.entries(queryList)) {
         //     if (value[2]){
@@ -123,19 +137,77 @@ const deckQueries = {
                     where("series_names", "array-contains", needsContains)
             ));
         }
+        decksCollectionRef = query(
+            decksCollectionRef,
+            orderBy(sortMethod[0], sortMethod[1]),
+            limit(20)
+        )
         const snapshot = await getDocs(decksCollectionRef)
         console.log(snapshot)
         if (snapshot.empty) {
             console.log("No matching documents.");
             return null;
         } else {
+            const lastDoc = snapshot.docs[snapshot.docs.length-1]
             const data = snapshot.docs.map((doc) => ({
                 ...doc.data(),
             }))
             helper.createAllTimesAgos(data)
-            return data;
+            return [data, lastDoc];
         }
-    }
+    },
+    getMoreDecksListData: async function getMoreDecksListData(
+        queryList,
+        sortMethod,
+        lastDoc,
+        end
+    ) {
+        let decksCollectionRef = collection(db, "decks");
+        let needsContains = ""
+        for (const [key, value] of Object.entries(queryList)) {
+            if (value[2]) {
+                if (key === "card_series_names" && value[0]) {
+                    needsContains = value[0]
+                } else {
+                    decksCollectionRef = query(decksCollectionRef, where(key, value[1], value[0]));
+                }
+            }
+        }
+        if (needsContains) {
+            decksCollectionRef = query(decksCollectionRef,
+                or(
+                    where("card_names", "array-contains", needsContains),
+                    where("series_names", "array-contains", needsContains)
+            ));
+        }
+        decksCollectionRef = query(
+            decksCollectionRef,
+            orderBy(sortMethod[0], sortMethod[1]),
+        )
+        if (lastDoc) {
+            decksCollectionRef = query(
+                decksCollectionRef,
+                startAfter(lastDoc)
+            );
+        }
+        decksCollectionRef = query(
+            decksCollectionRef,
+            limit(end)
+        );
+        const snapshot = await getDocs(decksCollectionRef)
+        console.log(snapshot)
+        if (snapshot.empty) {
+            console.log("No matching documents.");
+            return null;
+        } else {
+            const lastDoc = snapshot.docs[snapshot.docs.length-1]
+            const data = snapshot.docs.map((doc) => ({
+                ...doc.data(),
+            }))
+            helper.createAllTimesAgos(data)
+            return [data, lastDoc];
+        }
+    },
 }
 
 export default deckQueries

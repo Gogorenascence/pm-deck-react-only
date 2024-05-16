@@ -61,8 +61,8 @@ function SetsPage(props) {
 
     return (
         <div className="white-space">
-            <h1 className="left-h1">Card Set Search</h1>
-            <h2 className="left">Search our collection of Card Sets</h2>
+            <h1 className="left-h1">Card Set List</h1>
+            {/* <h2 className="left">Search our collection of Card Sets</h2> */}
             <input
                 className="left"
                 type="text"

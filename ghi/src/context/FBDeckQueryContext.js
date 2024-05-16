@@ -12,6 +12,7 @@ const FBDeckQueryContextProvider = ({ children }) => {
         private: [false, "==", true]
     });
     const [deckSortState, setDeckSortState] = useState("none");
+    const [queryChanged, setQueryChanged] = useState(false)
 
     return (
         <FBDeckQueryContext.Provider value={{
@@ -19,6 +20,8 @@ const FBDeckQueryContextProvider = ({ children }) => {
             setDeckQuery,
             deckSortState,
             setDeckSortState,
+            queryChanged,
+            setQueryChanged
             }}>
             {children}
         </FBDeckQueryContext.Provider>

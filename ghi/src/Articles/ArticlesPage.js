@@ -114,8 +114,8 @@ function ArticlesPage({
 
     return (
         <div className="white-space">
-            <h1 className="left-h1">Article Search</h1>
-            <h2 className="left">Search all news and articles</h2>
+            <h1 className="left-h1">Article List</h1>
+            {/* <h2 className="left">Search all news and articles</h2> */}
             <input
                 className="left dcbsearch-x-large"
                 type="text"

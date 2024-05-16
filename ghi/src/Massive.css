@@ -3429,7 +3429,6 @@ button:hover {
 .auto-complete-large {
   background-color: white;
   max-height: 200px;
-  width: 360px;
   border: #000 solid 1px;
   position: absolute;
   z-index: 100;

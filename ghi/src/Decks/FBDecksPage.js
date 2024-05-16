@@ -8,6 +8,7 @@ import deckQueries from "../QueryObjects/DeckQueries";
 import FavoriteDeck from "../Accounts/FavoriteDeck";
 import { AuthContext } from "../context/AuthContext";
 import AutoComplete from "../display/AutoComplete";
+import helper from "../QueryObjects/Helper";
 
 
 function DecksPage({
@@ -19,6 +20,8 @@ function DecksPage({
         setDeckQuery,
         deckSortState,
         setDeckSortState,
+        queryChanged,
+        setQueryChanged
     } = useContext(FBDeckQueryContext)
     const {account} = useContext(AuthContext)
 
@@ -26,21 +29,52 @@ function DecksPage({
     const [loading, setLoading] = useState(false)
 
     const [fullDecks, setFullDecks] = useState([])
+    const [lastDoc, setLastDoc] = useState("")
+    const [endOfList, setEndOfList] = useState("false")
 
     const [showAutoComplete, setShowAutoComplete] = useState(false)
 
     const getDecks = async() =>{
         setLoading(true)
         // const decksData = await deckQueries.getQueriedDecksData({"private": false});
-        const decksData = await deckQueries.getDecksListData(deckQuery)
-        if (decksData) {
-            const sortedDecks = [...decksData].sort(deckSortMethods[deckSortState].method);
-            setFullDecks(sortedDecks.reverse())
+        const decksData = await deckQueries.getDecksListData(
+            deckQuery,
+            firebaseSortMethods[deckSortState]
+        )
+        console.log(decksData)
+        if (decksData && decksData[0].length) {
+            setFullDecks(decksData[0])
+            setLastDoc(decksData[1])
+            decksData[0].length < 20?
+                setEndOfList(true):
+                setEndOfList(false)
         } else {
             setFullDecks([])
+            setEndOfList(true)
         }
         setLoading(false)
-        // handleDeckQueryReset()
+    };
+
+    const getMoreDecks = async() =>{
+        setLoading(true)
+        const decksData = await deckQueries.getMoreDecksListData(
+            deckQuery,
+            firebaseSortMethods[deckSortState],
+            lastDoc,
+            20
+        )
+        if (decksData && decksData[0].length) {
+            const newFullDecks = fullDecks.concat(decksData[0])
+            setFullDecks(newFullDecks)
+            setLastDoc(decksData[1])
+
+            decksData[0].length < 20?
+            setEndOfList(true):
+            setEndOfList(false)
+        } else {
+            setEndOfList(true)
+        }
+        setLoading(false)
     };
 
     useEffect(() => {
@@ -53,12 +87,12 @@ function DecksPage({
     // eslint-disable-next-line
     }, []);
 
-    const deckSortMethods = {
-        none: { method: (a,b) => b.updated_on.full_time.localeCompare(a.updated_on.full_time) },
-        newest: { method: (a,b) => b.created_on.full_time.localeCompare(a.created_on.full_time) },
-        oldest: { method: (a,b) => a.created_on.full_time.localeCompare(b.created_on.full_time) },
-        name: { method: (a,b) => a.name.localeCompare(b.name) },
-        updated: { method: (a,b) => new Date(b.updated_on.full_time) - new Date(a.updated_on.full_time) },
+    const firebaseSortMethods = {
+        none: ["updated_on.full_time", "desc"],
+        newest: ["created_on.full_time", "desc"],
+        oldest: ["created_on.full_time", "asc"],
+        name: ["name", "asc"],
+        updated: ["updated_on.full_time", "desc"]
     };
 
     const firebaseQueryTerms = {
@@ -72,30 +106,31 @@ function DecksPage({
         } else {
             setDeckQuery({ ...deckQuery, [event.target.name]: [event.target.value, term, false] });
         }
-        console.log(deckQuery.card_series_names[0])
-        setShowAutoComplete(true)
+        if (event.target.name === "card_series_names") setShowAutoComplete(true)
     };
 
     const handleDeckQueryReset = () => {
-        setDeckQuery({
+        const oldDeckQuery = deckQuery
+        const newDeckQuery = {
             name: ["","", false],
             creator: ["","", false],
             card_series_names: ["","", false],
             private: [false, "==", true]
-        });
+        }
+        setDeckQuery(newDeckQuery);
         setDeckSortState("none")
+        if (helper.objectsAreEqual(oldDeckQuery, oldDeckQuery)) {
+            console.log("woof")
+        }
     };
 
     const handleDeckSort = (event) => {
         setDeckSortState(event.target.value);
+        console.log(firebaseSortMethods[deckSortState])
         // const updated = decks.map(deck => deck.updated_on)
     };
 
-    const handleDeckShowMore = (event) => {
-        setDeckShowMore(deckShowMore + 20);
-    };
-
-    const all_decks = fullDecks.sort(deckSortMethods[deckSortState].method)
+    const all_decks = fullDecks
 
     const cardNameList = cards.filter(card => card.name.toLowerCase()
         .includes(deckQuery.card_series_names[0].toLowerCase()))
@@ -145,6 +180,7 @@ function DecksPage({
                 placeholder={" Contains a Card or Series Named..."}
                 onClickFunction={(item) => setDeckQuery(
                     {...deckQuery, ["card_series_names"]: [item.name, "", true]})}
+                size={"360px"}
             />
             <select
                 className="left"
@@ -186,12 +222,12 @@ function DecksPage({
                     <div className="loading-spinner"></div>
                 </div> :
                 <h4 className="left-h3">
-                    {all_decks.length > 0 ? `Showing Results 1 - ${all_decks.slice(0, deckShowMore).length} of ${all_decks.length}`:
+                    {all_decks.length > 0 ? `Showing Results 1 - ${all_decks.length}`:
                         "No Decks Fit Your Search Criteria"}
                 </h4>}
 
             <div className="decks-page-card-list2">
-                {all_decks.slice(0, deckShowMore).map((deck) => {
+                {all_decks.map((deck) => {
                     return (
                         <NavLink to={`/decks/${deck.id}`}  key={deck.id}>
                             <Card className="text-white text-center card-list-card3 glow">
@@ -251,13 +287,14 @@ function DecksPage({
                     );
                 })}
             </div>
-            {deckShowMore < all_decks.length ?
+            {!endOfList ?
                 <button
                     variant="dark"
                     style={{ width: "100%", marginTop:"2%"}}
-                    onClick={handleDeckShowMore}>
-                    Show More Decks ({all_decks.length - deckShowMore} Remaining)
-                </button> : null }
+                    onClick={getMoreDecks}>
+                    Show More Decks
+                </button>
+                : null }
         </div>
     );
 }

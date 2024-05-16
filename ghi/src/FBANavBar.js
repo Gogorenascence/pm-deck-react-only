@@ -213,14 +213,14 @@ function NavBar() {
               </div>
               { showMenu.show && showMenu.section === "decks"?
               <div className="nav-dropdown-content">
-                <NavLink className="dropdown-select username2" to="/deckbuilder" onClick={() => followLink()}>
-                  <div className="nav-dropdown-item">
-                    Deck Builder
-                  </div>
-                </NavLink>
                 <NavLink className="dropdown-select username2" to="/decks" onClick={() => followLink()}>
                   <div className="nav-dropdown-item">
                     Deck Search
+                  </div>
+                </NavLink>
+                <NavLink className="dropdown-select username2" to="/deckbuilder" onClick={() => followLink()}>
+                  <div className="nav-dropdown-item">
+                    Deck Builder
                   </div>
                 </NavLink>
               </div>: null
@@ -238,7 +238,7 @@ function NavBar() {
                 <div className="nav-dropdown-content">
                   <NavLink className="dropdown-select username2" to="/cards" onClick={() => followLink()}>
                     <div className="nav-dropdown-item">
-                      Card Search
+                      Card List
                     </div>
                   </NavLink>
                   {/* <NavLink className="dropdown-select username2" to="/topcards" onClick={() => followLink()}>
@@ -248,7 +248,7 @@ function NavBar() {
                   </NavLink> */}
                   <NavLink className="dropdown-select username2" to="/cardsets" onClick={() => followLink()}>
                     <div className="nav-dropdown-item">
-                      Card Set Search
+                      Card Set List
                     </div>
                   </NavLink>
                   <NavLink className="dropdown-select username2" to="/pulls/deckbuilder" onClick={() => followLink()}>
@@ -294,7 +294,7 @@ function NavBar() {
                 <div className="nav-dropdown-content">
                   <NavLink className="dropdown-select username2" to="/articles" onClick={() => followLink()}>
                     <div className="nav-dropdown-item">
-                      Article Search
+                      Article List
                     </div>
                   </NavLink>
                 </div>:null
@@ -416,7 +416,7 @@ function NavBar() {
             <div className="nav-dropdown-content">
               <NavLink className="nav-dropdown-item" to="/cards" onClick={() => handleShowMobileMenu()}>
                 <div className="dropdown-select">
-                  Card Search
+                  Card List
                 </div>
               </NavLink>
               {/* <NavLink className="nav-dropdown-item" to="/topcards" onClick={() => handleShowMobileMenu()}>
@@ -426,7 +426,7 @@ function NavBar() {
               </NavLink> */}
               <NavLink className="nav-dropdown-item" to="/cardsets" onClick={() => handleShowMobileMenu()}>
                 <div className="dropdown-select">
-                  Card Set Search
+                  Card Set List
                 </div>
               </NavLink>
               <NavLink className="nav-dropdown-item" to="/pulls/deckbuilder" onClick={() => handleShowMobileMenu()}>
@@ -472,7 +472,7 @@ function NavBar() {
             <div className="nav-dropdown-content">
               <NavLink className="nav-dropdown-item" to="/articles" onClick={() => handleShowMobileMenu()}>
                 <div className="dropdown-select">
-                  Article Search
+                  Article List
                 </div>
               </NavLink>
             </div>:null

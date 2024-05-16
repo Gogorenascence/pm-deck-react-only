@@ -163,6 +163,15 @@ const helper = {
             } else {
             deckData["updated_on"]["ago"] = "a few seconds ago";
             }
+    },
+    objectsAreEqual: function objectsAreEqual(obj1, obj2) {
+        const obj1Keys = Object.keys(obj1);
+        for (const key of obj1Keys) {
+            if (obj1[key] != obj2[key]) {
+                return false;
+            }
+        }
+        return true;
     }
 }
 

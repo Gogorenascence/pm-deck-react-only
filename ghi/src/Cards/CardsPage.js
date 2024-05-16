@@ -176,8 +176,8 @@ function CardsPage(props) {
 
     return (
         <div className="white-space">
-            <h1 className="left-h1">Card Search</h1>
-            <h2 className="left">Search our collection of cards</h2>
+            <h1 className="left-h1">Card List</h1>
+            {/* <h2 className="left">Search our collection of cards</h2> */}
             <input
                 className="left dcbsearch-x-x-large"
                 type="text"

@@ -61,7 +61,7 @@ function HowTosPage({
         <div className="white-space">
             <span className="media-flex-center">
                 <div className="wide400p">
-                    <h1 className="left-h1">Rulebook Search</h1>
+                    <h1 className="left-h1">Rulebook List</h1>
                     <input
                         className="left dcbsearch-x-large"
                         type="text"

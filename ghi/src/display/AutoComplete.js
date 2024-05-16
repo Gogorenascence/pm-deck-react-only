@@ -9,7 +9,8 @@ onChangeFunction,
 name,
 value,
 placeholder,
-onClickFunction
+onClickFunction,
+size
 }) {
 
     const autoCompleteList = useRef(null)
@@ -42,7 +43,10 @@ onClickFunction
                 onChange={onChangeFunction}>
             </input>
             {renderCondition?
-                <div className="auto-complete-large">
+                <div
+                    className="auto-complete-large"
+                    style={{width: size}}
+                >
                     {itemList.map(item => {
                         return(
                             <div className="auto-complete-item pointer"
