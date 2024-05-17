@@ -391,14 +391,14 @@ function NavBar() {
           </div>
           { showMenu.show && showMenu.section === "decks"?
           <div className="nav-dropdown-content">
-            <NavLink className="nav-dropdown-item" to="/deckbuilder" onClick={() => handleShowMobileMenu()}>
-              <div className="dropdown-select">
-                  Deck Builder
-              </div>
-            </NavLink>
             <NavLink className="nav-dropdown-item" to="/decks" onClick={() => handleShowMobileMenu()}>
               <div className="dropdown-select">
                 Deck Search
+              </div>
+            </NavLink>
+            <NavLink className="nav-dropdown-item" to="/deckbuilder" onClick={() => handleShowMobileMenu()}>
+              <div className="dropdown-select">
+                  Deck Builder
               </div>
             </NavLink>
           </div>: null
