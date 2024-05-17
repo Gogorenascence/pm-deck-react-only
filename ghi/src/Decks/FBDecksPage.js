@@ -64,10 +64,14 @@ function DecksPage({
             20
         )
         if (decksData && decksData[0].length) {
-            const newFullDecks = fullDecks.concat(decksData[0])
-            setFullDecks(newFullDecks)
-            setLastDoc(decksData[1])
-
+            if (queryChanged) {
+                setFullDecks(decksData[0])
+                setLastDoc(decksData[1])
+            } else {
+                const newFullDecks = fullDecks.concat(decksData[0])
+                setFullDecks(newFullDecks)
+                setLastDoc(decksData[1])
+            }
             decksData[0].length < 20?
             setEndOfList(true):
             setEndOfList(false)
@@ -75,6 +79,7 @@ function DecksPage({
             setEndOfList(true)
         }
         setLoading(false)
+        setQueryChanged(false)
     };
 
     useEffect(() => {
@@ -107,6 +112,7 @@ function DecksPage({
             setDeckQuery({ ...deckQuery, [event.target.name]: [event.target.value, term, false] });
         }
         if (event.target.name === "card_series_names") setShowAutoComplete(true)
+        setQueryChanged(true)
     };
 
     const handleDeckQueryReset = () => {
@@ -119,8 +125,8 @@ function DecksPage({
         }
         setDeckQuery(newDeckQuery);
         setDeckSortState("none")
-        if (helper.objectsAreEqual(oldDeckQuery, oldDeckQuery)) {
-            console.log("woof")
+        if (helper.objectsAreEqual(oldDeckQuery, newDeckQuery)) {
+            setQueryChanged(false)
         }
     };
 
@@ -222,7 +228,7 @@ function DecksPage({
                     <div className="loading-spinner"></div>
                 </div> :
                 <h4 className="left-h3">
-                    {all_decks.length > 0 ? `Showing Results 1 - ${all_decks.length}`:
+                    {all_decks.length > 0 ? `Showing Results 1 - ${all_decks.length}${!endOfList? " of Many": ` of ${all_decks.length}`}`:
                         "No Decks Fit Your Search Criteria"}
                 </h4>}
 
