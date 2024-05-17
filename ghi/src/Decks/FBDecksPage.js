@@ -41,7 +41,6 @@ function DecksPage({
             deckQuery,
             firebaseSortMethods[deckSortState]
         )
-        console.log(decksData)
         if (decksData && decksData[0].length) {
             setFullDecks(decksData[0])
             setLastDoc(decksData[1])
