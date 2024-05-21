@@ -151,7 +151,15 @@ function PlayAreaModal({
                                             </div>
 
                                             <img
+                                                onClick={(event) => handleShowCardMenu(event, index)}
                                                 onContextMenu={(event) => handleShowCardMenu(event, index)}
+                                                onDoubleClick={() => {
+                                                    discardCard(
+                                                        zoneArray[index],
+                                                        index,
+                                                        showPlayAreaModal.objectName)
+                                                    setShowCardMenu(null)
+                                                }}
                                                 onMouseEnter={() => handleHoveredCard(card)}
                                                 // onDoubleClick={() => handlePluck(index)}
                                                 className={

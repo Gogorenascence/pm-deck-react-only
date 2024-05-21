@@ -240,7 +240,7 @@ const PluckActionsContextProvider = ({ children }) => {
             const selectZone = pluckZones[zone]
             const newOwnership = [...player.ownership]
             setPrompt({message: "", action: ""})
-            selectZone.push(playedPluck)
+            selectZone.unshift(playedPluck)
             setOwnership(newOwnership.filter((_, i) => i !== selectedPluckIndex))
             setSelectedPluckIndex(null)
             specialSound(volume)

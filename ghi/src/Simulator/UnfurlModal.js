@@ -64,7 +64,8 @@ function UnfurlModal({
         document.body.style.overflow = 'auto';
     };
 
-    const handleShowDeckMenu = (index) => {
+    const handleShowDeckMenu = (event, index) => {
+        event.preventDefault()
         showDeckMenu === index ?
             setShowDeckMenu(null) :
             setShowDeckMenu(index)
@@ -111,13 +112,14 @@ function UnfurlModal({
                                                 ><p>Add to Hand</p></div>
                                                 <div className="card-menu-item"
                                                     onClick={() => handleCardFromDeck(index)}
-                                                ><p>{selectedIndex === index? "Cancel" : "Add to Play"}</p></div>
+                                                ><p>{selectedIndex === index? "Cancel" : "Add to String"}</p></div>
                                                 <div className="card-menu-item"
                                                     onClick={() => handleDiscardCard(index)}
                                                 ><p>Discard</p></div>
                                             </div>
                                             <img
-                                                onClick={() => handleShowDeckMenu(index)}
+                                                onClick={(event) => handleShowDeckMenu(event, index)}
+                                                onContextMenu={(event) => handleShowDeckMenu(event, index)}
                                                 onDoubleClick={() => handleCardFromDeck(index)}
                                                 onMouseEnter={() => handleHoveredCard(card)}
                                                 className={

@@ -64,7 +64,8 @@ function ActivePluckModal({
         }
     }, [activePluck[showActivePluckModal.objectName]]);
 
-    const handleShowCardMenu = (index) => {
+    const handleShowCardMenu = (event, index) => {
+        event.preventDefault()
         showCardMenu === index?
         setShowCardMenu(null):
             setShowCardMenu(index)
@@ -110,7 +111,7 @@ function ActivePluckModal({
                                                         handleClose()
                                                         setShowOwnershipModal(swapping.cardToSwap? false: true)}
                                                     }
-                                                ><p>Swap from Ownership</p></div>
+                                                ><p>Swap from Reserve</p></div>
                                                 <div className="card-menu-item"
                                                     onClick={() => {movingPluck.pluckToMove && movingPluck.zone === showActivePluckModal.objectName?
                                                         setMovingPluck({pluckToMove: "", zone: "", index: null}):
@@ -132,7 +133,7 @@ function ActivePluckModal({
                                                         // handleClose()
                                                         setShowCardMenu(null)
                                                     }}
-                                                ><p>Return to Ownership</p></div>
+                                                ><p>Return to Reserve</p></div>
                                                 <div className="card-menu-item"
                                                     onClick={() => {
                                                         discardPluck(
@@ -145,7 +146,15 @@ function ActivePluckModal({
                                             </div>
 
                                             <img
-                                                onClick={() => handleShowCardMenu(index)}
+                                                onClick={(event) => handleShowCardMenu(event, index)}
+                                                onContextMenu={(event) => handleShowCardMenu(event, index)}
+                                                onDoubleClick={() => {
+                                                    discardPluck(
+                                                        zoneArray[index],
+                                                        index,
+                                                        showActivePluckModal.objectName)
+                                                    setShowCardMenu(null)
+                                                }}
                                                 onMouseEnter={() => handleHoveredCard(card)}
                                                 // onDoubleClick={() => handlePluck(index)}
                                                 className={

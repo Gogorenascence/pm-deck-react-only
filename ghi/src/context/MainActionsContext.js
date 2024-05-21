@@ -253,7 +253,7 @@ const MainActionsContextProvider = ({ children }) => {
                 const playZones = {...player.playArea}
                 const selectZone = playZones[zone]
                 setPrompt({message: "", action: ""})
-                !placing? selectZone.push(playedCard): selectZone.unshift(playedCard)
+                !placing? selectZone.unshift(playedCard): selectZone.push(playedCard)
                 if (selectZone.length > 1) {
                     soundPlayer.equipSound(volume*1.5)
                 } else {
@@ -273,7 +273,7 @@ const MainActionsContextProvider = ({ children }) => {
                 const selectZone = playZones[zone]
                 const newDiscardPile = [...player.mainDiscard]
                 setPrompt({message: "", action: ""})
-                !placing? selectZone.push(playedCard): selectZone.unshift(playedCard)
+                !placing? selectZone.unshift(playedCard): selectZone.push(playedCard)
                 if (selectZone.length > 1) {
                     soundPlayer.equipSound(volume*1.5)
                 } else {
@@ -290,7 +290,7 @@ const MainActionsContextProvider = ({ children }) => {
                 const selectZone = playZones[zone]
                 const newHand = [...player.hand]
                 setPrompt({message: "", action: ""})
-                !placing? selectZone.push(playedCard): selectZone.unshift(playedCard)
+                !placing? selectZone.unshift(playedCard): selectZone.push(playedCard)
                 if (selectZone.length > 1) {
                     soundPlayer.equipSound(volume*1.5)
                 } else {

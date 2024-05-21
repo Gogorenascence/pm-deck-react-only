@@ -51,7 +51,8 @@ function OwnershipModal({
         }
     }, [ownership]);
 
-    const handleShowCardMenu = (index) => {
+    const handleShowCardMenu = (event, index) => {
+        event.preventDefault()
         showPluckMenu === index?
         setShowPluckMenu(null):
             setShowPluckMenu(index)
@@ -87,9 +88,9 @@ function OwnershipModal({
                                                 ><p>{selectedPluckIndex === index? "Cancel" : "Play"}</p></div>
                                                 <div className="card-menu-item"><p>Place</p></div>
                                                 <div className="card-menu-item"
-                                                    onClick={() => {
+                                                    onClick={(event) => {
                                                         discardPluckFromOwnership(index)
-                                                        handleShowCardMenu(index)
+                                                        handleShowCardMenu(event, index)
                                                     }}
                                                 ><p>Discard</p></div>
                                                 <div className="card-menu-item"
@@ -100,8 +101,11 @@ function OwnershipModal({
                                                 ><p>Deckbottom</p></div>
                                             </div>
                                             <img
-                                                onClick={() => {!swapping.cardToSwap?
-                                                                        handleShowCardMenu(index):
+                                                onClick={(event) => {!swapping.cardToSwap?
+                                                                        handleShowCardMenu(event, index):
+                                                                        swapPluckInOwnership(index)}}
+                                                onContextMenu={(event) => {!swapping.cardToSwap?
+                                                                        handleShowCardMenu(event, index):
                                                                         swapPluckInOwnership(index)}}
                                                 onMouseEnter={() => handleHoveredCard(card)}
                                                 onDoubleClick={() => handlePluck(index)}

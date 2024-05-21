@@ -74,14 +74,16 @@ function SimDeckSearchModal({
         document.body.style.overflow = 'auto';
     };
 
-    const handleShowDeckMenu = (index) => {
+    const handleShowDeckMenu = (event, index) => {
+        event.preventDefault()
         showDeckMenu === index ?
             setShowDeckMenu(null) :
             setShowDeckMenu(index)
         menuSound(volume)
     }
 
-    const handleShowDiscardMenu = (index) => {
+    const handleShowDiscardMenu = (event, index) => {
+        event.preventDefault()
         showDiscardMenu === index ?
             setShowDiscardMenu(null) :
             setShowDiscardMenu(index)
@@ -143,7 +145,7 @@ function SimDeckSearchModal({
                                                 ><p>Add to Hand</p></div>
                                                 <div className="card-menu-item"
                                                     onClick={() => handleCardFromDiscard(index)}
-                                                ><p>{selectedIndex === mainDiscard.length - 1 - index? "Cancel" : "Add to Play"}</p></div>
+                                                ><p>{selectedIndex === mainDiscard.length - 1 - index? "Cancel" : "Add to String"}</p></div>
                                                 <div className="card-menu-item"
                                                     onClick={() => handleReturnCardFromDiscard(index, "top")}
                                                 ><p>Decktop</p></div>
@@ -152,7 +154,8 @@ function SimDeckSearchModal({
                                                 ><p>Deckbottom</p></div>
                                             </div>
                                             <img
-                                                onClick={() => handleShowDiscardMenu(index)}
+                                                onClick={(event) => handleShowDiscardMenu(event, index)}
+                                                onContextMenu={(event) => handleShowDiscardMenu(event, index)}
                                                 onDoubleClick={() => handleCardFromDiscard(index)}
                                                 onMouseEnter={() => handleHoveredCard(card)}
                                                 className={
@@ -197,7 +200,8 @@ function SimDeckSearchModal({
                                                 ><p>Add to Hand</p></div>
                                             </div>
                                             <img
-                                                onClick={() => handleShowDeckMenu(index)}
+                                                onClick={(event) => handleShowDeckMenu(event, index)}
+                                                onContextMenu={(event) => handleShowDeckMenu(event, index)}
                                                 onMouseEnter={() => handleHoveredCard(card)}
                                                 className={
                                                     showDeckMenu === index?

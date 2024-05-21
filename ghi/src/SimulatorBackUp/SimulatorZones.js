@@ -278,7 +278,7 @@ function ActivePluckZone({
                         })
                         setShowOwnershipModal(swapping.cardToSwap? false: true)}
                     }
-                ><p>{swapping.cardToSwap && swapping.zone === objectName? "Cancel": "Swap from Ownership"}</p></div>
+                ><p>{swapping.cardToSwap && swapping.zone === objectName? "Cancel": "Swap from Reserve"}</p></div>
                 <div className="card-menu-item"
                     onClick={() => {movingPluck.pluckToMove && movingPluck.zone === objectName?
                         setMovingPluck({pluckToMove: "", zone: "", index: null}):

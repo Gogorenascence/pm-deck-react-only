@@ -66,14 +66,16 @@ function SimPluckSearchModal({
         document.body.style.overflow = 'auto';
     };
 
-    const handleShowDeckMenu = (index) => {
+    const handleShowDeckMenu = (event, index) => {
+        event.preventDefault()
         showDeckMenu === index ?
             setShowDeckMenu(null) :
             setShowDeckMenu(index)
         menuSound(volume)
     }
 
-    const handleShowDiscardMenu = (index) => {
+    const handleShowDiscardMenu = (event, index) => {
+        event.preventDefault()
         showDiscardMenu === index ?
             setShowDiscardMenu(null) :
             setShowDiscardMenu(index)
@@ -114,7 +116,7 @@ function SimPluckSearchModal({
                                             <div className={showDiscardMenu === index ? "deck-menu3": "hidden2"}>
                                                 <div className="card-menu-item"
                                                     onClick={() => handleAddPluckFromDiscard(index)}
-                                                ><p>Add to Ownership</p></div>
+                                                ><p>Add to Reserve</p></div>
                                                 <div className="card-menu-item"
                                                     onClick={() => handleReturnPluckFromDiscard(index, "top")}
                                                 ><p>Decktop</p></div>
@@ -123,7 +125,8 @@ function SimPluckSearchModal({
                                                 ><p>Deckbottom</p></div>
                                             </div>
                                             <img
-                                                onClick={() => handleShowDiscardMenu(index)}
+                                                onClick={(event) => handleShowDiscardMenu(event, index)}
+                                                onContextMenu={(event) => handleShowDiscardMenu(event, index)}
                                                 onMouseEnter={() => handleHoveredCard(card)}
                                                 className={
                                                     showDiscardMenu === index?
@@ -163,10 +166,11 @@ function SimPluckSearchModal({
                                             <div className={showDeckMenu === index ? "deck-menu2": "hidden2"}>
                                                 <div className="card-menu-item"
                                                     onClick={() => handleAddPluck(index, false)}
-                                                ><p>Add to Ownership</p></div>
+                                                ><p>Add to Reserve</p></div>
                                             </div>
                                             <img
-                                                onClick={() => handleShowDeckMenu(index)}
+                                                onClick={(event) => handleShowDeckMenu(event, index)}
+                                                onContextMenu={(event) => handleShowDeckMenu(event, index)}
                                                 onMouseEnter={() => handleHoveredCard(card)}
                                                 className={
                                                     showDeckMenu === index?
