@@ -7,8 +7,8 @@ import GameBoard from "./GameBoard";
 import PositionSlider from "./PositionSlider";
 import CardInfoPanel from "./CardInfoPanel";
 import LogChatPanel from "./LogChatPanel";
-// import mainDeckCard from "./MainDeckCard";
-// import pluckDeckCard from "./PluckDeckCard";
+import { AuthContext } from "../context/AuthContext";
+import deckQueries from "../QueryObjects/DeckQueries";
 
 
 function SimulatorObjectPage(props) {
@@ -106,8 +106,27 @@ function SimulatorObjectPage(props) {
         reactions
     } = props
 
-    const getDecks = () => {
-        setDecks(pre_decks)
+    const {account} = useContext(AuthContext)
+
+    const getDecks = async() => {
+        const deckList = []
+        if (account && account.decks) {
+            const accountDeckData = await deckQueries.getQueriedDecksData({account_id: account.id});
+            deckList = [...deckList, accountDeckData]
+        }
+        if (account && account.favorited_decks) {
+            for (let deckID of account.favorited_decks) {
+                const deckData = await deckQueries.getDeckDataById(deckID);
+                const present = deckList.find(deck => deck.id === deckID)
+                if (deckData && !present) {
+                    deckList.push(deckData)
+                }
+            }
+        }
+        const sortedDecks = deckList.sort((a, b) => a.name.localeCompare(b.name))
+        console.log(sortedDecks)
+        console.log("dog")
+        setDecks(sortedDecks)
     }
 
     const getCards = () => {

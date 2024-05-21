@@ -8,6 +8,7 @@ import PositionSlider from "./PositionSlider";
 import CardInfoPanel from "./CardInfoPanel";
 import LogChatPanel from "./LogChatPanel";
 import { AuthContext } from "../context/AuthContext";
+import deckQueries from "../QueryObjects/DeckQueries";
 
 
 function SimulatorPage(props) {
@@ -97,7 +98,6 @@ function SimulatorPage(props) {
     } = useContext(PluckActionsContext)
 
     const {
-        pre_decks,
         pre_processed_cards,
         card_types,
         card_tags,
@@ -107,8 +107,36 @@ function SimulatorPage(props) {
 
     const {account} = useContext(AuthContext)
 
-    const getDecks = () => {
-        setDecks(pre_decks)
+    const getDecks = async() => {
+        let deckList = []
+        if (account) {
+            if (account.decks) {
+                const accountDeckData = await deckQueries.getQueriedDecksData({account_id: account.id});
+                deckList = [...deckList, ...accountDeckData]
+            }
+            if (account.favorited_decks) {
+                for (let deckID of account.favorited_decks) {
+                    const deckData = await deckQueries.getDeckDataById(deckID);
+                    const present = deckList.find(deck => deck.id === deckID)
+                    if (deckData && !present) {
+                        deckList.push(deckData)
+                    }
+                }
+            }
+        } else {
+            const starterDeckIDs = [
+                "FIL3xs1syUA0eygAn4vluhaW",
+                "B0xE2Cw5GZA4nPf1JfL2s26o",
+                "UB99lNIJkpUO8GinVngNpqLN",
+                "3pDYioaTWQ63SNuYdorKOLme"
+            ]
+            for (let deckID of starterDeckIDs) {
+                const deckData = await deckQueries.getDeckDataById(deckID);
+                deckList.push(deckData)
+            }
+        }
+        const sortedDecks = deckList.sort((a, b) => a.name.localeCompare(b.name))
+        setDecks(sortedDecks)
     }
 
     const getCards = () => {
@@ -166,7 +194,7 @@ function SimulatorPage(props) {
             document.title = "PlayMaker CardBase"
         };
     // eslint-disable-next-line
-    },[]);
+    },[account]);
 
     useEffect(() => {
         if (selectedIndex === null && selectedPluckIndex === null) {
