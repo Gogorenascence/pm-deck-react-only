@@ -75,7 +75,7 @@ function OwnershipModal({
                 <div className="sim-modal2 topbar"
                 >
                     <div className={full_ownership.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>
-                        <h1 className="centered-h1">Ownership</h1>
+                        <h1 className="centered-h1">Reserve</h1>
                         <div>
                         <div className={full_ownership.length < 5 ? "card-pool-fill-hand" : "card-pool-fill"}>
                             {full_ownership.map((card, index) => {
