@@ -185,19 +185,20 @@ const AuthContextProvider = ({ children }) => {
 
     const logout = () => {
         signOut(auth)
-        .then(() => {
-        console.log("User successfully logged out")
-        })
+            .then(() => {
+                console.log("User successfully logged out")
+            })
         setAccount({
-        username: "",
-        collection: [],
-        wishlist: [],
-        decks: [],
-        favorited_decks: [],
-        roles: [],
-        created_on: "",
-        id: "",
+            username: "",
+            collection: [],
+            wishlist: [],
+            decks: [],
+            favorited_decks: [],
+            roles: [],
+            created_on: "",
+            id: "",
         })
+        window.location.href = "/";
     }
 
     const getUser = async () => {
