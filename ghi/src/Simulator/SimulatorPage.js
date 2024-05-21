@@ -111,7 +111,12 @@ function SimulatorPage(props) {
 
     const getDecks = async() => {
         let deckList = []
-        console.log("cat")
+        const starterDeckIDs = [
+            "FIL3xs1syUA0eygAn4vluhaW",
+            "B0xE2Cw5GZA4nPf1JfL2s26o",
+            "UB99lNIJkpUO8GinVngNpqLN",
+            "3pDYioaTWQ63SNuYdorKOLme"
+        ]
         if (account) {
             if (account.decks) {
                 const accountDeckData = await deckQueries.getQueriedDecksData({account_id: account.id});
@@ -126,6 +131,14 @@ function SimulatorPage(props) {
                     }
                 }
             }
+            for (let deckID of starterDeckIDs) {
+                const deckData = await deckQueries.getDeckDataById(deckID);
+                const present = deckList.find(deck => deck.id === deckID)
+                if (deckData && !present) {
+                    deckList.push(deckData)
+                }
+            }
+
         } else {
             const starterDeckIDs = [
                 "FIL3xs1syUA0eygAn4vluhaW",
