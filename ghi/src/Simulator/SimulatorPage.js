@@ -191,6 +191,8 @@ function SimulatorPage(props) {
 
     useEffect(() => {
         getCards();
+        console.log(account)
+        console.log(prevAccount)
         if (account !== prevAccount) {
             getDecks();
             setPrevAccount(account)

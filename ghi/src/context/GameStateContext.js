@@ -6,7 +6,7 @@ const GameStateContext = createContext();
 
 const GameStateContextProvider = ({ children }) => {
     const [game, setGame] = useState(false)
-    const [prevAccount, setPrevAccount] = useState(null)
+    const [prevAccount, setPrevAccount] = useState("")
     const [player, setPlayer] = useState({
         name: "",
         hp: 16,
