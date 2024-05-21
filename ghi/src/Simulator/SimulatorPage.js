@@ -15,6 +15,8 @@ function SimulatorPage(props) {
     document.body.classList.add("dark")
     const {
         game,
+        prevAccount,
+        setPrevAccount,
         player,
         setPlayer,
         playerMainDeck,
@@ -109,6 +111,7 @@ function SimulatorPage(props) {
 
     const getDecks = async() => {
         let deckList = []
+        console.log("cat")
         if (account) {
             if (account.decks) {
                 const accountDeckData = await deckQueries.getQueriedDecksData({account_id: account.id});
@@ -188,7 +191,10 @@ function SimulatorPage(props) {
 
     useEffect(() => {
         getCards();
-        getDecks();
+        if (account !== prevAccount) {
+            getDecks();
+            setPrevAccount(account)
+        }
         document.title = "Simulator - PM CardBase"
         return () => {
             document.title = "PlayMaker CardBase"
@@ -235,8 +241,8 @@ function SimulatorPage(props) {
                         onChange={handleChangeDeck}
                         name="Deck">
                         <option value="">Deck</option>
-                        {decks.map((deck) => (
-                            <option value={deck.id}>{deck.name}</option>
+                        {decks.map((deck, index) => (
+                            <option value={deck.id} key={`${index}: ${deck.name}`}>{deck.name}</option>
                             ))}
                     </select>
                     <button className="front-button" onClick={fillDecks}>Get Deck</button>
