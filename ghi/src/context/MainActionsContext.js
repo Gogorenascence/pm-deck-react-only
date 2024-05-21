@@ -1,20 +1,7 @@
 import { createContext, useState, useContext } from "react";
 import { GameStateContext } from "./GameStateContext";
 import { SimulatorActionsContext } from "./SimulatorActionsContext";
-import {
-    specialSound,
-    destroySound,
-    shuffleSound,
-    summonSound,
-    drawSound,
-    gainSound,
-    activateSound,
-    discardSound,
-    menuSound,
-    startSound,
-    equipSound,
-    flipSound
-} from "../Sounds/Sounds";
+import soundPlayer from "../Sounds/SoundPlayer";
 
 const MainActionsContext = createContext();
 
@@ -86,7 +73,7 @@ const MainActionsContextProvider = ({ children }) => {
             shuffledDeck[randomMainIndex], shuffledDeck[currentMainIndex]];
         }
         setPlayerMainDeck({name: selectedMainDeck.name, cards: shuffledDeck});
-        shuffleSound(volume)
+        soundPlayer.shuffleSound(volume)
         addToLog("System", "system", "Shuffling Main deck")
     }
 
@@ -95,7 +82,7 @@ const MainActionsContextProvider = ({ children }) => {
             const newHand = [...hand]
             const newMainDeck = [...playerMainDeck.cards]
             newHand.push(newMainDeck[0])
-            drawSound(volume)
+            soundPlayer.drawSound(volume)
             setHand(newHand)
             setPlayerMainDeck({
                 name: selectedMainDeck.name,
@@ -112,7 +99,7 @@ const MainActionsContextProvider = ({ children }) => {
             const newMainDeck = [...playerMainDeck.cards]
             const cardToAdd = newMainDeck[index]
             newHand.push(cardToAdd)
-            drawSound(volume)
+            soundPlayer.drawSound(volume)
             setHand(newHand)
             const newShuffledMainDeck = newMainDeck.filter((_, i) => i !== index)
             if (unfurling === false) {
@@ -124,7 +111,7 @@ const MainActionsContextProvider = ({ children }) => {
                         newShuffledMainDeck[randomMainIndex], newShuffledMainDeck[currentMainIndex]];
                     }
                 isShuffling()
-                shuffleSound(volume)
+                soundPlayer.shuffleSound(volume)
             }
             setPlayerMainDeck({
                 name: selectedMainDeck.name,
@@ -146,7 +133,7 @@ const MainActionsContextProvider = ({ children }) => {
             newHand.push(cardToAdd)
             setHand(newHand)
             setDiscard(newDiscardPile.filter((_, i) => i !== index))
-            drawSound(volume);
+            soundPlayer.drawSound(volume);
             addToLog("System", "system", `"${cardToAdd.name}" was added from discard pile to ${player.name}'s hand`)
         } else {
             addToLog("System", "system", "You can have more than 8 cards in your hand.")
@@ -163,7 +150,7 @@ const MainActionsContextProvider = ({ children }) => {
             setHand(newHand)
             const newSelectZone = selectZone.filter((_, i) => i !== index)
             newPlayArea[zone] = newSelectZone
-            drawSound(volume);
+            soundPlayer.drawSound(volume);
 
             setPlayArea(newPlayArea)
             addToLog("System", "system", `"${player.name} returned "${card.name}" from their String to their hand.`)
@@ -186,7 +173,7 @@ const MainActionsContextProvider = ({ children }) => {
         const newSelectZone = selectZone.filter((_, i) => i !== zoneIndex)
         newSelectZone.push(cardInHand)
         newPlayArea[zone] = newSelectZone
-        drawSound(volume);
+        soundPlayer.drawSound(volume);
 
         setPlayArea(newPlayArea)
         setSwapping({
@@ -211,7 +198,7 @@ const MainActionsContextProvider = ({ children }) => {
             name: selectedMainDeck.name,
             cards: newMainDeck.filter((_, i) => i !== index)
         });
-        discardSound(volume)
+        soundPlayer.discardSound(volume)
         addToLog("System", "system", `${player.name} discarded "${cardToDiscard.name}" from their deck`)
     }
 
@@ -220,7 +207,7 @@ const MainActionsContextProvider = ({ children }) => {
         showCardMenu === index?
             setShowCardMenu(null):
             setShowCardMenu(index)
-        menuSound(volume)
+        soundPlayer.menuSound(volume)
     }
 
     const selectCard = (index) => {
@@ -268,9 +255,9 @@ const MainActionsContextProvider = ({ children }) => {
                 setPrompt({message: "", action: ""})
                 !placing? selectZone.push(playedCard): selectZone.unshift(playedCard)
                 if (selectZone.length > 1) {
-                    equipSound(volume*1.5)
+                    soundPlayer.equipSound(volume*1.5)
                 } else {
-                    specialSound(volume)
+                    soundPlayer.specialSound(volume)
                 }
                 setPlayerMainDeck({
                     name: selectedMainDeck.name,
@@ -288,9 +275,9 @@ const MainActionsContextProvider = ({ children }) => {
                 setPrompt({message: "", action: ""})
                 !placing? selectZone.push(playedCard): selectZone.unshift(playedCard)
                 if (selectZone.length > 1) {
-                    equipSound(volume*1.5)
+                    soundPlayer.equipSound(volume*1.5)
                 } else {
-                    specialSound(volume)
+                    soundPlayer.specialSound(volume)
                 }
                 setDiscard(newDiscardPile.filter((_, i) => i !== selectedIndex))
                 setSelectedIndex(null)
@@ -305,9 +292,9 @@ const MainActionsContextProvider = ({ children }) => {
                 setPrompt({message: "", action: ""})
                 !placing? selectZone.push(playedCard): selectZone.unshift(playedCard)
                 if (selectZone.length > 1) {
-                    equipSound(volume*1.5)
+                    soundPlayer.equipSound(volume*1.5)
                 } else {
-                    {zoneFaceDown? specialSound(volume):summonSound(volume)}
+                    {zoneFaceDown? soundPlayer.specialSound(volume): soundPlayer.summonSound(volume)}
                 }
                 if (zoneFaceDown){
                     setFaceDown({...faceDown, [zoneFaceDown]: true})
@@ -362,8 +349,8 @@ const MainActionsContextProvider = ({ children }) => {
                 setActivePluck(newActivePluck)
             }
             {nextSelectZone.length > 1?
-                equipSound(volume*1.5):
-                specialSound(volume)};
+                soundPlayer.equipSound(volume*1.5):
+                soundPlayer.specialSound(volume)};
 
             setMoving({
                 cardToMove: "",
@@ -382,7 +369,7 @@ const MainActionsContextProvider = ({ children }) => {
         if (card.card_type[0].type_number < 1006) {
             newDiscardPile.push(card)
             const newSelectZone = selectZone.filter((_, i) => i !== index)
-            destroySound(volume)
+            soundPlayer.destroySound(volume)
             newPlayArea[zone] = newSelectZone
             setDiscard(newDiscardPile)
             setPlayArea(newPlayArea)
@@ -390,7 +377,7 @@ const MainActionsContextProvider = ({ children }) => {
         } else {
             newPluckDiscardPile.push(card)
             const newSelectZone = selectZone.filter((_, i) => i !== index)
-            destroySound(volume)
+            soundPlayer.destroySound(volume)
             newPlayArea[zone] = newSelectZone
             setPluckDiscard(newPluckDiscardPile)
             setPlayArea(newPlayArea)
@@ -405,7 +392,7 @@ const MainActionsContextProvider = ({ children }) => {
         newDiscardPile.push(discardedCard)
         setHand(newHand.filter((_, i) => i !== index))
         setDiscard(newDiscardPile)
-        discardSound(volume)
+        soundPlayer.discardSound(volume)
         setShowCardMenu(null)
         addToLog("System", "system", `${player.name} discarded "${discardedCard.name}" from their hand`)
     }
@@ -417,7 +404,7 @@ const MainActionsContextProvider = ({ children }) => {
         newCards.unshift(toppedCard)
         setHand(newHand.filter((_, i) => i !== index))
         setPlayerMainDeck({...playerMainDeck, cards: newCards})
-        flipSound(volume)
+        soundPlayer.flipSound(volume)
         setShowCardMenu(null)
         addToLog("System", "system", `${player.name} returned "${toppedCard.name}" to the top of their deck`)
     }
@@ -429,7 +416,7 @@ const MainActionsContextProvider = ({ children }) => {
         newCards.push(bottomCard)
         setHand(newHand.filter((_, i) => i !== index))
         setPlayerMainDeck({...playerMainDeck, cards: newCards})
-        flipSound(volume)
+        soundPlayer.flipSound(volume)
         setShowCardMenu(null)
         addToLog("System", "system", `${player.name} returned "${bottomCard.name}" to the bottom of their deck`)
     }
@@ -447,7 +434,7 @@ const MainActionsContextProvider = ({ children }) => {
         }
         setDiscard(newDiscard.filter((_, i) => i !== index))
         setPlayerMainDeck({...playerMainDeck, cards: newCards})
-        flipSound(volume)
+        soundPlayer.flipSound(volume)
         setShowCardMenu(null)
     }
 

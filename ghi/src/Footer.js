@@ -8,7 +8,7 @@ function Footer() {
     const current_year = new Date().getFullYear()
 
     return (
-        <div className={location.pathname === "/simulator"? "hidden2": "footer"}>
+        <div className={location.pathname.slice(0, 10) === "/simulator"? "hidden2": "footer"}>
             <p className="footer-copy-right">&copy;2023 JotH: PlayMaker &nbsp;</p>
             <img
                 title="https://discord.gg/hVfTNEZG9p"

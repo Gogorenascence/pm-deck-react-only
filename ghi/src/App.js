@@ -37,6 +37,7 @@ import FBDeckEdit from "./Builder/FBDeckEditPage";
 import FBAccountPage from "./Accounts/FBAccountPage";
 import FBDeckCopy from "./Builder/FBDeckCopyPage";
 import DecksPage from "./Decks/FBDecksPage";
+import SimulatorObjectPage from "./SimulatorBackUp/SimulatorPage"
 
 
 function App() {
@@ -192,6 +193,14 @@ function App() {
               <Route path="/rulebooks" element={<HowTosPage howTos={howTos.sort((a,b) => a.how_to_number - b.how_to_number)}/>} />
               <Route path="/rulebooks/:how_to_id" element={<HowToPage howTos={howTos}/>} />
               <Route path="/account" element={<FBAccountPage />} />
+              <Route path="/simulator2" element={<SimulatorObjectPage
+                                                pre_decks={decks}
+                                                pre_processed_cards={cards}
+                                                card_types={card_types}
+                                                card_tags={card_tags}
+                                                extra_effects={extra_effects}
+                                                reactions={reactions}
+                                                />} />
             </Routes>
 
           </div>

@@ -13,6 +13,7 @@ import { NewsQueryContextProvider } from "./NewsQueryContext.js";
 import { HowToQueryContextProvider } from "./HowToQueryContext.js";
 import { AuthContextProvider } from "./AuthContext.js";
 import { FBDeckQueryContextProvider } from "./FBDeckQueryContext.js";
+import { SimulatorObjectsContextProvider } from "./SimulatorObjectsContext.js";
 
 
 const AppProvider = ({ children }) => {
@@ -27,15 +28,17 @@ const AppProvider = ({ children }) => {
                                     <DeckQueryContextProvider>
                                         <GameStateContextProvider>
                                             <SimulatorActionsContextProvider>
-                                                <MainActionsContextProvider>
-                                                    <PluckActionsContextProvider>
-                                                        <NewsQueryContextProvider>
-                                                            <HowToQueryContextProvider>
-                                                                {children}
-                                                            </HowToQueryContextProvider>
-                                                        </NewsQueryContextProvider>
-                                                    </PluckActionsContextProvider>
-                                                </MainActionsContextProvider>
+                                                <SimulatorObjectsContextProvider>
+                                                    <MainActionsContextProvider>
+                                                        <PluckActionsContextProvider>
+                                                            <NewsQueryContextProvider>
+                                                                <HowToQueryContextProvider>
+                                                                    {children}
+                                                                </HowToQueryContextProvider>
+                                                            </NewsQueryContextProvider>
+                                                        </PluckActionsContextProvider>
+                                                    </MainActionsContextProvider>
+                                                </SimulatorObjectsContextProvider>
                                             </SimulatorActionsContextProvider>
                                         </GameStateContextProvider>
                                     </DeckQueryContextProvider>

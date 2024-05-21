@@ -7,10 +7,11 @@ import GameBoard from "./GameBoard";
 import PositionSlider from "./PositionSlider";
 import CardInfoPanel from "./CardInfoPanel";
 import LogChatPanel from "./LogChatPanel";
-import { AuthContext } from "../context/AuthContext";
+// import mainDeckCard from "./MainDeckCard";
+// import pluckDeckCard from "./PluckDeckCard";
 
 
-function SimulatorPage(props) {
+function SimulatorObjectPage(props) {
     document.body.classList.add("dark")
     const {
         game,
@@ -105,8 +106,6 @@ function SimulatorPage(props) {
         reactions
     } = props
 
-    const {account} = useContext(AuthContext)
-
     const getDecks = () => {
         setDecks(pre_decks)
     }
@@ -158,6 +157,24 @@ function SimulatorPage(props) {
         setCards(processedCards)
     }
 
+    // const getMainDeckObject = async(deck) => {
+    //     const mainDeckObject = []
+    //     for (let card of deck) {
+    //         const newCardObj = await mainDeckCard.createCardObject(card)
+    //         mainDeckObject.push({...newCardObj})
+    //     }
+    //     return mainDeckObject
+    // }
+
+    // const getPluckDeckObject = async(deck) => {
+    //     const pluckDeckObject = []
+    //     for (let card of deck) {
+    //         const newCardObj = await pluckDeckCard.createCardObject(card)
+    //         pluckDeckObject.push({...newCardObj})
+    //     }
+    //     return pluckDeckObject
+    // }
+
     useEffect(() => {
         getCards();
         getDecks();
@@ -177,7 +194,7 @@ function SimulatorPage(props) {
     useEffect(() => {
         setPlayer((prevPlayer) => ({
             ...prevPlayer,
-            name: account? account.username: "WindFall",
+            name: "WindFall",
             mainDeck: playerMainDeck.cards,
             pluckDeck: playerPluckDeck.cards,
             hand: hand,
@@ -343,4 +360,4 @@ function SimulatorPage(props) {
     );
 }
 
-export default SimulatorPage;
+export default SimulatorObjectPage;

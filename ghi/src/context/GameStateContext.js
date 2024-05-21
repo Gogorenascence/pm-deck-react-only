@@ -1,5 +1,5 @@
 import { createContext, useState, useContext } from "react";
-import { equipSound } from "../Sounds/Sounds";
+import soundPlayer from "../Sounds/SoundPlayer";
 
 
 const GameStateContext = createContext();
@@ -114,7 +114,7 @@ const GameStateContextProvider = ({ children }) => {
                 }
                 setDefending(newDefending)
                 setDefendingCard(newDefendingCard)
-                equipSound(volume*1.5)
+                soundPlayer.equipSound(volume*1.5)
                 addToLog("System", "system", `${player.name} is defending with "${card.name}"`)
             }
         } else {
