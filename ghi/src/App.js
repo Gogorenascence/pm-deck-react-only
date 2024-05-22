@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./Massive.css"
 import NavBar from "./FBANavBar";
 import LightSwitch from "./display/LightSwitch";
@@ -38,6 +38,7 @@ import FBAccountPage from "./Accounts/FBAccountPage";
 import FBDeckCopy from "./Builder/FBDeckCopyPage";
 import DecksPage from "./Decks/FBDecksPage";
 import SimulatorObjectPage from "./SimulatorBackUp/SimulatorPage"
+import SimScrollbar from "./display/SimScrollbar";
 
 
 function App() {
@@ -95,6 +96,7 @@ function App() {
     return howTo
   })
 
+
   return (
 
     <AppProvider>
@@ -104,6 +106,7 @@ function App() {
           <NavBar/>
           <LightSwitch/>
           <BackToTop/>
+          <SimScrollbar/>
           <div className="app">
 
             <Routes>

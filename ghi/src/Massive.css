@@ -2454,9 +2454,9 @@ button:hover {
 }
 
 .panel-card {
-  width: 240px;
+  max-width: 230px;
   margin: 20px 0 10px 0;
-  border-radius: 17px;
+  border-radius: 4%;
   overflow: hidden;
   border: 1px solid white;
 }
@@ -2762,26 +2762,6 @@ button:hover {
   right: 1px;
   transition: all 0.5s;
   z-index: 10;
-}
-
-.panel-card {
-  width: 240px;
-  margin: 20px 0 10px 0;
-  border-radius: 17px;
-  overflow: hidden;
-  border: 1px solid white;
-}
-
-.panel-text-box {
-  margin: 10px;
-  height: 175px;
-  width: 378px;
-  overflow-y: scroll;
-  outline: 1px solid white;
-}
-
-.panel-text-box-text {
-  margin: 0 0 0 5px;
 }
 
 .margin-left-13 {
@@ -3449,6 +3429,21 @@ button:hover {
 .auto-complete-item {
   height: 25px;
   padding-left: 3px;
+}
+
+.sim-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.sim-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(81, 76, 104);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.mediaInfoPanel {
+  display: none;
 }
 
 
@@ -4278,3 +4273,20 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.4);
   }
 } */
+
+@media screen and (max-height: 700px) {
+  .panel-card {
+    display: none;
+  }
+  .infoPanelContent {
+    height: max-content;
+  }
+  .mediaInfoPanel {
+    height: var(--window-height2);
+    flex-direction: column;
+    justify-content: center;
+  }
+  .infoPanelNone {
+    display: none;
+  }
+}
