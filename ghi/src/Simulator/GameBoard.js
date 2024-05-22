@@ -64,7 +64,7 @@ function GameBoard({
         playingFaceDown,
         defending,
         handleDefending,
-        addToLog
+        handleChangeScale,
     } = useContext(GameStateContext)
 
     const fighter = playArea.fighter_slot || [];
@@ -95,8 +95,18 @@ function GameBoard({
 
     const totalSlotLength = slot5.length + slot6.length + slot7.length + slot8.length;
 
+    const handleWheel = (event) => {
+        event.preventDefault();
+        const scrollDelta = event.deltaY;
+        if (scrollDelta > 0) {
+            handleChangeScale('decrease');
+        } else if (scrollDelta < 0) {
+            handleChangeScale('increase');
+        }
+    };
+
     return (
-        <div className={showExtra? "play-area" : "play-area2"}>
+        <div className={showExtra? "play-area" : "play-area2"} onWheel={handleWheel}>
             <SimDeckSearchModal
                 mainDeck={mainDeck}
                 handleHoveredCard={handleHoveredCard}

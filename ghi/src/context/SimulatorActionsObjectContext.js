@@ -15,9 +15,9 @@ import {
     flipSound
 } from "../Sounds/Sounds";
 
-const SimulatorActionsContext = createContext();
+const SimulatorActionsObjectContext = createContext();
 
-const SimulatorActionsContextProvider = ({ children }) => {
+const SimulatorActionsObjectContextProvider = ({ children }) => {
     const {
         setGame,
         player,
@@ -95,9 +95,9 @@ const SimulatorActionsContextProvider = ({ children }) => {
     }
 
     const allPlayerPluck = player.activePluck.slot_1?.length +
-        player.activePluck.slot_2?.length +
-        player.activePluck.slot_3?.length +
-        player.activePluck.slot_4?.length
+    player.activePluck.slot_2?.length +
+    player.activePluck.slot_3?.length +
+    player.activePluck.slot_4?.length
 
     const gameStart = () => {
         const shuffledMainDeck = [...playerMainDeck.cards]
@@ -109,132 +109,135 @@ const SimulatorActionsContextProvider = ({ children }) => {
             currentMainIndex--;
             // And swap it with the current element.
             [shuffledMainDeck[currentMainIndex], shuffledMainDeck[randomMainIndex]] = [
-            shuffledMainDeck[randomMainIndex], shuffledMainDeck[currentMainIndex]];
-        }
-        setHand(shuffledMainDeck.slice(0,6))
-        // soundLoop(drawSound, 6, .07)
-        gainSound(volume)
-        startSound(volume)
-        setPlayerMainDeck({name: selectedMainDeck.name, cards: shuffledMainDeck.slice(6)});
+                shuffledMainDeck[randomMainIndex], shuffledMainDeck[currentMainIndex]];
+            }
+            setHand(shuffledMainDeck.slice(0,6))
+            // soundLoop(drawSound, 6, .07)
+            gainSound(volume)
+            startSound(volume)
+            setPlayerMainDeck({name: selectedMainDeck.name, cards: shuffledMainDeck.slice(6)});
 
-        const shuffledPluckDeck = [...playerPluckDeck.cards]
-        let currentPluckIndex = shuffledPluckDeck.length, randomPluckIndex;
-        // While there remain elements to shuffle.
-        while (currentPluckIndex !== 0) {
-            // Pick a remaining element.
-            randomPluckIndex = Math.floor(Math.random() * currentPluckIndex);
-            currentPluckIndex--;
-            // And swap it with the current element.
-            [shuffledPluckDeck[currentPluckIndex], shuffledPluckDeck[randomPluckIndex]] = [
-            shuffledPluckDeck[randomPluckIndex], shuffledPluckDeck[currentPluckIndex]];
-        }
-        setOwnership([shuffledPluckDeck[0]])
-        setPlayerPluckDeck({name: selectedPluckDeck.name, cards: shuffledPluckDeck.slice(1)});
-        setGame(true)
-        addToLog("System", "system", "Game Start!")
-    }
+            const shuffledPluckDeck = [...playerPluckDeck.cards]
+            let currentPluckIndex = shuffledPluckDeck.length, randomPluckIndex;
+            // While there remain elements to shuffle.
+            while (currentPluckIndex !== 0) {
+                // Pick a remaining element.
+                randomPluckIndex = Math.floor(Math.random() * currentPluckIndex);
+                currentPluckIndex--;
+                // And swap it with the current element.
+                [shuffledPluckDeck[currentPluckIndex], shuffledPluckDeck[randomPluckIndex]] = [
+                    shuffledPluckDeck[randomPluckIndex], shuffledPluckDeck[currentPluckIndex]];
+                }
+                setOwnership([shuffledPluckDeck[0]])
+                setPlayerPluckDeck({name: selectedPluckDeck.name, cards: shuffledPluckDeck.slice(1)});
+                setGame(true)
+                addToLog("System", "system", "Game Start!")
+            }
 
-    const checkPlayer = () => {
-        activateSound(volume)
-        addToLog("System", "system", `${player.name},
-        HP: ${player["hp"]},
-        Enthusiasm: ${player.enthusiasm},
-        Focus: ${player.focus},
-        Mettle: ${player.mettle}
-        ${player.secondWind? ", Second Wind": ""}`)
-        console.log(player)
-        console.log(defendingCard)
-    }
+            const checkPlayer = () => {
+                activateSound(volume)
+                addToLog("System", "system", `${player.name},
+                HP: ${player["hp"]},
+                Enthusiasm: ${player.enthusiasm},
+                Focus: ${player.focus},
+                Mettle: ${player.mettle}
+                ${player.secondWind? ", Second Wind": ""}`)
+                console.log(player)
+                console.log(defendingCard)
+            }
 
-    const resetPlayer = () => {
-        setPlayerMainDeck({name: "", cards: []})
-        setPlayerPluckDeck({name: "", cards: []})
-        setDiscard([])
-        setPluckDiscard([])
-        setHand([])
-        setOwnership([])
-        setPlayArea({
-            fighter_slot: [],
-            aura_slot: [],
-            move_slot: [],
-            ending_slot: [],
-            slot_5: [],
-            slot_6: [],
-            slot_7: [],
-            slot_8: [],
-        })
-        setActivePluck({
-            slot_1: [],
-            slot_2: [],
-            slot_3: [],
-            slot_4: [],
-        })
-        setGame(false)
-        addToLog("System", "system", "Player was reset")
-    }
+            const resetPlayer = () => {
+                setPlayerMainDeck({name: "", cards: []})
+                setPlayerPluckDeck({name: "", cards: []})
+                setDiscard([])
+                setPluckDiscard([])
+                setHand([])
+                setOwnership([])
+                setPlayArea({
+                    fighter_slot: [],
+                    aura_slot: [],
+                    move_slot: [],
+                    ending_slot: [],
+                    slot_5: [],
+                    slot_6: [],
+                    slot_7: [],
+                    slot_8: [],
+                })
+                setActivePluck({
+                    slot_1: [],
+                    slot_2: [],
+                    slot_3: [],
+                    slot_4: [],
+                })
+                setGame(false)
+                addToLog("System", "system", "Player was reset")
+            }
 
-    const mute = () => {
-        volume > 0? setVolume(0) : setVolume(0.05)
-    }
+            const mute = () => {
+                volume > 0? setVolume(0) : setVolume(0.05)
+            }
 
-    const handleHoveredCard = (cardItem) => {
+            const handleHoveredCard = (cardItem) => {
         setHoveredCard(cardItem)
     }
 
+    const simulatorActionsObject = {
+        selectedMainDeck,
+        setSelectedMainDeck,
+        selectedPluckDeck,
+        setSelectedPluckDeck,
+        decks,
+        setDecks,
+        cards,
+        setCards,
+        hand,
+        setHand,
+        ownership,
+        setOwnership,
+        discard,
+        setDiscard,
+        pluckDiscard,
+        setPluckDiscard,
+        hoveredCard,
+        selectedIndex,
+        setSelectedIndex,
+        selectedPluckIndex,
+        setSelectedPluckIndex,
+        setHoveredCard,
+        prompt,
+        setPrompt,
+        fromDeck,
+        setFromDeck,
+        fromDiscard,
+        setFromDiscard,
+        showCardMenu,
+        setShowCardMenu,
+        showPluckMenu,
+        setShowPluckMenu,
+        loading,
+        setLoading,
+        placing,
+        setPlacing,
+        shuffling,
+        setShuffling,
+        shufflingPluck,
+        setShufflingPluck,
+        handleChangeDeck,
+        fillDecks,
+        allPlayerPluck,
+        gameStart,
+        checkPlayer,
+        resetPlayer,
+        mute,
+        handleHoveredCard
+    }
+
     return (
-        <SimulatorActionsContext.Provider value={{
-            selectedMainDeck,
-            setSelectedMainDeck,
-            selectedPluckDeck,
-            setSelectedPluckDeck,
-            decks,
-            setDecks,
-            cards,
-            setCards,
-            hand,
-            setHand,
-            ownership,
-            setOwnership,
-            discard,
-            setDiscard,
-            pluckDiscard,
-            setPluckDiscard,
-            hoveredCard,
-            selectedIndex,
-            setSelectedIndex,
-            selectedPluckIndex,
-            setSelectedPluckIndex,
-            setHoveredCard,
-            prompt,
-            setPrompt,
-            fromDeck,
-            setFromDeck,
-            fromDiscard,
-            setFromDiscard,
-            showCardMenu,
-            setShowCardMenu,
-            showPluckMenu,
-            setShowPluckMenu,
-            loading,
-            setLoading,
-            placing,
-            setPlacing,
-            shuffling,
-            setShuffling,
-            shufflingPluck,
-            setShufflingPluck,
-            handleChangeDeck,
-            fillDecks,
-            allPlayerPluck,
-            gameStart,
-            checkPlayer,
-            resetPlayer,
-            mute,
-            handleHoveredCard
+        <SimulatorActionsObjectContext.Provider value={{simulatorActionsObject
         }}>
             {children}
-        </SimulatorActionsContext.Provider>
+        </SimulatorActionsObjectContext.Provider>
     );
 };
 
-export { SimulatorActionsContext, SimulatorActionsContextProvider };
+export { SimulatorActionsObjectContext, SimulatorActionsObjectContextProvider };

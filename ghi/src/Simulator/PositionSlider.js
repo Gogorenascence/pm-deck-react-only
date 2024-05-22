@@ -14,20 +14,8 @@ function PositionSlider({
 
     const {mute} = useContext(SimulatorActionsContext)
 
-    const handleWheel = (event) => {
-        event.preventDefault();
-        const scrollDelta = event.deltaY;
-        if (scrollDelta > 0) {
-            handleChangeScale('decrease');
-        } else if (scrollDelta < 0) {
-            handleChangeScale('increase');
-        }
-    };
-
     return (
-        <div className={show? "settings_container" : "settings_container_hide"}
-            onWheel={handleWheel}
-        >
+        <div className={show? "settings_container" : "settings_container_hide"}>
             <p className='lock pointer' onClick={() => setShow(!show)}>
                 {show? "Hide" : "Show"}
             </p>
