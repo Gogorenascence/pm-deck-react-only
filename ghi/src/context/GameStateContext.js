@@ -204,7 +204,7 @@ const GameStateContextProvider = ({ children }) => {
 
     const handleChangeScale = (change) => {
         if (change === 'increase') {
-            if (scale < 1.4) {
+            if (scale < 3) {
                 setScale(scale + 0.1);
             }
         } else {
