@@ -96,7 +96,6 @@ function GameBoard({
     const totalSlotLength = slot5.length + slot6.length + slot7.length + slot8.length;
 
     const handleWheel = (event) => {
-        event.preventDefault();
         const scrollDelta = event.deltaY;
         if (scrollDelta > 0) {
             handleChangeScale('decrease');
@@ -106,7 +105,7 @@ function GameBoard({
     };
 
     return (
-        <div className={showExtra? "play-area" : "play-area2"} onWheel={handleWheel}>
+        <div className="play-area" onWheel={handleWheel}>
             <SimDeckSearchModal
                 mainDeck={mainDeck}
                 handleHoveredCard={handleHoveredCard}
@@ -190,7 +189,7 @@ function GameBoard({
                 handleHoveredCard={handleHoveredCard}
                 setShowOwnershipModal={setShowOwnershipModal}
             />
-            <div className="field_box" style={fieldStyle}>
+            <div style={fieldStyle}>
                 <div className={showExtra? "flex margin-top-10": "hidden2"}>
                     <div
                         className={defending.slot_5? "matLabel selected4 pointer":"matLabel pointer"}

@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState } from "react";
 import soundPlayer from "../Sounds/SoundPlayer";
 
 
@@ -189,11 +189,13 @@ const GameStateContextProvider = ({ children }) => {
 
     const [playingFaceDown, setPlayingFaceDown] = useState(false)
 
+    const [showExtra, setShowExtra] = useState(true)
+
     const [transformRotateX, setTransformRotateX] = useState("45deg")
     const [scale, setScale] = useState(0.75)
     const [position, setPosition] = useState({
-    x_pos: 0,
-    y_pos: -100,
+        x_pos: 0,
+        y_pos: -100,
     })
 
     const handleChangeTransformRotateX = (event) => {
@@ -214,8 +216,8 @@ const GameStateContextProvider = ({ children }) => {
 
     const handleChangePosition = (direction) => {
         const MOVE_AMOUNT = 30;
-        const y_pos = position.y_pos
         const x_pos = position.x_pos
+        const y_pos = position.y_pos
         if (direction === 'up') {
             setPosition({...position, y_pos: y_pos - MOVE_AMOUNT });
             //this.forceUpdate();
@@ -229,18 +231,16 @@ const GameStateContextProvider = ({ children }) => {
             setPosition({...position, x_pos: x_pos + MOVE_AMOUNT });
             //this.forceUpdate();
         } else {
-            setPosition({...position, x_pos: 0, y_pos: 0 });
+            setPosition({...position, x_pos: 0, y_pos: -100});
             //this.forceUpdate();
         }
     }
 
     const fieldStyle = {
         transform: transformRotateX && scale && position.x_pos !== undefined && position.y_pos !== undefined ?
-            "perspective(1000px) rotateX(" + transformRotateX + ") scale(" + scale + ") translate(" + position.x_pos + "px, " + position.y_pos + "px)"
-            : "perspective(1000px) rotateX(45deg) scale(1.0) translate(0px, 0px)",
+            "perspective(1000px) rotateX(" + transformRotateX + ") scale(" + scale + ") translate(" + position.x_pos + "px, " + `${ showExtra? position.y_pos - 100: position.y_pos + 200}` + "px)"
+            : "perspective(1000px) rotateX(45deg) scale(1.0) translate(0px, 100px)",
     }
-
-    const [showExtra, setShowExtra] = useState(true)
 
     const [volume, setVolume] = useState(0.05)
 

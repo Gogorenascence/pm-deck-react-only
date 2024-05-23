@@ -2135,17 +2135,10 @@ button:hover {
 }
 
 .play-area {
-  height: 70vh;
-  margin-top: 25px;
-  margin-right: -200px;
-  /* margin-bottom: 100px; */
-}
-
-.play-area2 {
-  height: 70vh;
+  height: 65vh;
   margin-top: 50px;
   margin-right: -200px;
-  margin-bottom: -100px;
+  /* margin-bottom: 100px; */
 }
 
 .matCard {
@@ -2217,11 +2210,11 @@ button:hover {
   align-items: center;
 }
 
-.field_box {
+/* .field_box {
   transform: perspective(1000px) rotateX(45deg) scale(.8, .8) translate(150px 20px);
   align-self: center;
   position: relative;
-}
+} */
 
 .slider_container {
   height: 80px;
@@ -2429,6 +2422,7 @@ button:hover {
 .card-pool-fill-hand {
   display: flex;
   justify-content: center;
+  margin-top: -50px;
 }
 
 .infoPanel {
@@ -3205,6 +3199,7 @@ button:hover {
   position: absolute;
   top: 66px;
   width: 100vw;
+  height: var(--window-height-account);
 }
 
 .newsImageContainer {
@@ -4141,12 +4136,6 @@ button:hover {
 
   .no-wrap {
     white-space: nowrap;
-  }
-
-  .simulator {
-    position: absolute;
-    top: 66px;
-    width: 100vw;
   }
 
   .newsImageContainer {
