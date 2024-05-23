@@ -1,14 +1,16 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import soundPlayer from "../Sounds/SoundPlayer";
+import { AuthContext } from "./AuthContext";
 
 
 const GameStateContext = createContext();
 
 const GameStateContextProvider = ({ children }) => {
+    const { account } = useContext(AuthContext)
     const [game, setGame] = useState(false)
     const [prevAccount, setPrevAccount] = useState("")
     const [player, setPlayer] = useState({
-        name: "",
+        name: account? account.username: "",
         hp: 16,
         mainDeck: [],
         pluckDeck: [],

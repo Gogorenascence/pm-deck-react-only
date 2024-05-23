@@ -1,24 +1,14 @@
 import { useParams, NavLink, useNavigate } from 'react-router-dom';
 import React, { useState, useEffect, useRef, useContext } from 'react'
-import cards from "../database/cards.json";
 import { AppContext } from '../context/AppContext';
 
 
 function RelatedCardModal({relatedCardsList}) {
-    const { card_number } = useParams()
-    const [card, setCard] = useState("")
     const content = useRef(null)
     const {isDark} = useContext(AppContext)
 
     useOutsideAlerter(content)
     const navigate = useNavigate()
-    const getCard = async() =>{
-        const cardData = cards.find(card => card.card_number.toString() === card_number)
-        setCard(cardData);
-    };
-
-    // const relatedCardsList = cards?.filter(relatedCard => (card?.hero_id === relatedCard.hero_id) && relatedCard.card_number !== card.card_number)
-    // relatedCardsList.sort((a,b) => a.card_number - b.card_number)
 
     const [show, setShow] = useState(false);
 
@@ -31,10 +21,6 @@ function RelatedCardModal({relatedCardsList}) {
         document.body.style.overflow = 'hidden';
         console.log(isDark)
     };
-
-    // useEffect(() => {
-    //     getCard();
-    // }, [card_number]);
 
     const selectCard = async(card) =>{
         const cards_number = card.card_number

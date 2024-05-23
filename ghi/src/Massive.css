@@ -935,6 +935,12 @@ button:hover {
   z-index: -1;
 }
 
+.logo7 {
+  margin: 4px 4px 4px 5px;
+  height: 27px;
+  z-index: 0;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -2125,9 +2131,39 @@ button:hover {
   width: 100%;
 }
 
-.deckSelect3 {
+.playerTabBottom {
+  /* position: absolute; */
+  height: 40px;
+  width: 100%;
+  background-color: #4d475e9a;
+  outline: 1px white solid;
+  border-radius: 0 0 7px 7px;
+  margin: 0;
+  top: 42px;
+}
+
+.playerTabTop {
+  /* position: absolute; */
+  height: 40px;
+  width: 100%;
+  background-color: #000000b7;
+  outline: 1px white solid;
+  margin: 0;
+  /* top: 90px; */
+}
+
+.playerTabTitle {
+  padding: 0 10px 0 10px;
+  margin: 0;
+}
+
+.playerTabTitle2 {
+  padding: 0 10px 0 0;
+  margin: 0;
+}
+
+.tabContainer {
   position: absolute;
-  top: 90px;
 }
 
 .deckSelect3 p {

@@ -8,15 +8,12 @@ import PositionSlider from "./PositionSlider";
 import CardInfoPanel from "./CardInfoPanel";
 import LogChatPanel from "./LogChatPanel";
 import { AuthContext } from "../context/AuthContext";
-import deckQueries from "../QueryObjects/DeckQueries";
+import PlayerTab from "./PlayerTab";
 
 
 function SimulatorPage(props) {
     document.body.classList.add("dark")
     const {
-        game,
-        prevAccount,
-        setPrevAccount,
         player,
         setPlayer,
         playerMainDeck,
@@ -109,55 +106,6 @@ function SimulatorPage(props) {
 
     const {account} = useContext(AuthContext)
 
-    const getDecks = async() => {
-        let deckList = []
-        const starterDeckIDs = [
-            "FIL3xs1syUA0eygAn4vluhaW",
-            "B0xE2Cw5GZA4nPf1JfL2s26o",
-            "UB99lNIJkpUO8GinVngNpqLN",
-            "3pDYioaTWQ63SNuYdorKOLme"
-        ]
-        if (account) {
-            const accountDeckData = await deckQueries.getQueriedDecksData({account_id: account.id});
-            if (accountDeckData) {
-                deckList = [...deckList, ...accountDeckData]
-            }
-            console.log("Account decks added.")
-            if (account.favorited_decks) {
-                for (let deckID of account.favorited_decks) {
-                    const deckData = await deckQueries.getDeckDataById(deckID);
-                    const present = deckList.find(deck => deck.id === deckID)
-                    if (deckData && !present) {
-                        deckList.push(deckData)
-                    }
-                }
-            }
-            console.log("Favorited decks added.")
-            for (let deckID of starterDeckIDs) {
-                const deckData = await deckQueries.getDeckDataById(deckID);
-                const present = deckList.find(deck => deck.id === deckID)
-                if (deckData && !present) {
-                    deckList.push(deckData)
-                }
-            }
-            console.log("Starter decks added.")
-
-        } else {
-            const starterDeckIDs = [
-                "FIL3xs1syUA0eygAn4vluhaW",
-                "B0xE2Cw5GZA4nPf1JfL2s26o",
-                "UB99lNIJkpUO8GinVngNpqLN",
-                "3pDYioaTWQ63SNuYdorKOLme"
-            ]
-            for (let deckID of starterDeckIDs) {
-                const deckData = await deckQueries.getDeckDataById(deckID);
-                deckList.push(deckData)
-            }
-        }
-        const sortedDecks = deckList.sort((a, b) => a.name.localeCompare(b.name))
-        setDecks(sortedDecks)
-    }
-
     const getCards = () => {
         const processedCards = []
         for (let card of pre_processed_cards) {
@@ -208,11 +156,6 @@ function SimulatorPage(props) {
     useEffect(() => {
         getCards();
         console.log(account)
-        console.log(prevAccount)
-        if (account !== prevAccount) {
-            getDecks();
-            setPrevAccount(account)
-        }
         document.title = "Simulator - PM CardBase"
         return () => {
             document.title = "PlayMaker CardBase"
@@ -239,7 +182,7 @@ function SimulatorPage(props) {
             mainDiscard: discard,
             pluckDiscard: pluckDiscard
         }));
-    }, [playerMainDeck, playerPluckDeck, hand, ownership, playArea, activePluck, discard, pluckDiscard]);
+    }, [account, playerMainDeck, playerPluckDeck, hand, ownership, playArea, activePluck, discard, pluckDiscard]);
 
     return (
         <div className="flex-content simulator">
@@ -250,32 +193,17 @@ function SimulatorPage(props) {
                 <h1 className={prompt.message? null: "hidden2"}>{prompt.message}</h1>
             </div>
             <div className="cd-inner">
-                <div className="deckSelect">
-                    <h5 className="label">Select a Deck </h5>
-                    <select
-                        className="builder-input"
-                        type="text"
-                        placeholder=" Deck"
-                        onChange={handleChangeDeck}
-                        name="Deck">
-                        <option value="">Deck</option>
-                        {decks.map((deck, index) => (
-                            <option value={deck.id} key={`${index}: ${deck.name}`}>{deck.name}</option>
-                            ))}
-                    </select>
-                    <button className="front-button" onClick={fillDecks}>Get Deck</button>
-
-                    {player.mainDeck.length > 0 ?
-                        <>
-                            <button className="middle-button" onClick={!game? gameStart: resetPlayer}>{!game? "Game Start": "Reset Player"}</button>
-                        </>:null
-                    }
-
-                    <button className="end-button" onClick={checkPlayer}>Player Info</button>
-                </div>
-                <div className={loading && decks.length < 1? "deckSelect2": "hidden2"}>
-                    <p>Loading decks...</p>
-                </div>
+                <PlayerTab
+                    account={account}
+                    handleChangeDeck={handleChangeDeck}
+                    decks={decks}
+                    setDecks={setDecks}
+                    loading={loading}
+                    fillDecks={fillDecks}
+                    gameStart={gameStart}
+                    checkPlayer={checkPlayer}
+                    resetPlayer={resetPlayer}
+                />
                 <div>
                     <GameBoard
                         playArea={player.playArea}
