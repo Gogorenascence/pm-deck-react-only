@@ -4268,14 +4268,20 @@ button:hover {
     display: none;
   }
   .infoPanelContent {
-    height: max-content;
+    height: 95%;
+    /* margin-top: -5px; */
   }
   .mediaInfoPanel {
+    display: flex;
     height: var(--window-height2);
     flex-direction: column;
     justify-content: center;
   }
   .infoPanelNone {
     display: none;
+  }
+  .panel-text-box {
+    height: 80%;
+    width: 353px;
   }
 }
