@@ -193,17 +193,19 @@ function SimulatorPage(props) {
                 <h1 className={prompt.message? null: "hidden2"}>{prompt.message}</h1>
             </div>
             <div className="cd-inner">
-                <PlayerTab
-                    account={account}
-                    handleChangeDeck={handleChangeDeck}
-                    decks={decks}
-                    setDecks={setDecks}
-                    loading={loading}
-                    fillDecks={fillDecks}
-                    gameStart={gameStart}
-                    checkPlayer={checkPlayer}
-                    resetPlayer={resetPlayer}
-                />
+                <div className="flex-full playersRow">
+                    <PlayerTab
+                        account={account}
+                        handleChangeDeck={handleChangeDeck}
+                        decks={decks}
+                        setDecks={setDecks}
+                        loading={loading}
+                        fillDecks={fillDecks}
+                        gameStart={gameStart}
+                        checkPlayer={checkPlayer}
+                        resetPlayer={resetPlayer}
+                    />
+                </div>
                 <div>
                     <GameBoard
                         playArea={player.playArea}

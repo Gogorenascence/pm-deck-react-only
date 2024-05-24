@@ -204,8 +204,13 @@ button {
   white-space: nowrap;
 }
 
-button:hover {
+button:hover:not(:disabled) {
   filter: brightness(1.75);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 .red {
@@ -2153,16 +2158,22 @@ button:hover {
 }
 
 .playerTabTitle {
-  padding: 0 10px 0 10px;
+  padding: 0 1px 0 10px;
   margin: 0;
 }
 
 .playerTabTitle2 {
-  padding: 0 10px 0 0;
+  padding: 0 7px 0 5px;
   margin: 0;
 }
 
-.tabContainer {
+/* .tabContainer {
+  position: absolute;
+} */
+
+.playersRow {
+  width: 100%;
+  height: max-content;
   position: absolute;
 }
 
@@ -3054,6 +3065,18 @@ button:hover {
   border-radius: 0 5px 5px 0;
 }
 
+.healthTracker4 {
+  width: 150px;
+  height: 37px;
+  margin: 5px 0 0 2px;
+}
+
+.healthTracker5 {
+  width: 90px;
+  height: 37px;
+  margin: 5px 0 0 2px;
+}
+
 .front-button {
   border-radius: 5px 0 0 5px;
 }
@@ -3477,6 +3500,19 @@ button:hover {
   display: none;
 }
 
+.flex-column-full {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rollTracker {
+  margin-top: 5px;
+  height: 36px;
+  outline: 1px white solid;
+  background-color: #00000038;
+}
 
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
