@@ -436,17 +436,19 @@
   "news": true
 },
 {
+  "site_link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2959625751",
+  "content": "The Steam Workshop on Tabletop Simulator for PlayMaker is up.//\nYou can follow the link here to download&&\n",
+  "id": "65c66fee833f10de9b0740f7",
   "_id": {
-    "$oid": "65c66fee833f10de9b0740f7"
+      "$oid": "65c66fee833f10de9b0740f7"
   },
-  "section": "game",
-  "title": "The Steam Workshop on Tabletop Simulator for PlayMaker is up",
-  "content": "The Steam Workshop on Tabletop Simulator for PlayMaker is up.\n\nYou can follow the link here to download:\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=2959625751",
   "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
+  "updated": "2024-05-24",
+  "title": "The Steam Workshop on Tabletop Simulator for PlayMaker is up",
   "story_date": "2023-04-12",
-  "site_link": "",
-  "news": true
+  "section": "game",
+  "news": true,
+  "author": "64ecc30f82c5729f0b36e158"
 },
 {
   "_id": {

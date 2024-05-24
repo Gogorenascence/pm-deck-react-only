@@ -77,6 +77,10 @@ function ArticlePage({
         return line?.replace("@@", "");
     };
 
+    const processedLinkLine = (line) => {
+        return line?.replace("&&", "");
+    };
+
     const formatDate = (date) => {
         const month = date.slice(5,7);
         const day = date.slice(8);
@@ -110,23 +114,10 @@ function ArticlePage({
                         <Card.ImgOverlay className="blackfooter2 mt-auto">
                             <div className="flex">
                                 <h1 className="left margin-top-10 ellipsis">{article.title}</h1>
-                                {/* {account?
-                                    <FavoriteDeck deck={deck}/>:null
-                                } */}
                             </div>
-                            {/* <h6 className="left"
-                                style={{margin: '0px 0px 5px 10px', fontWeight: "600"}}
-                            >
-                                Section: {deck.strategies.length > 0 ? deck.strategies.join(', ') : "n/a"}
-                            </h6> */}
                             <div className=" flex wide100-3">
                                 <img className="newsSection" src={`/${article.section}.png`} alt={article.section}/>
                             </div>
-                            {/* <h6 className="left"
-                                style={{margin: '0px 0px 10px 10px', fontWeight: "600"}}
-                            >
-                                Main Deck: {main_list.length} &nbsp; Pluck Deck: {pluck_list.length}
-                            </h6> */}
                             <div className="flex">
                                 <img className="logo2" src="https://i.imgur.com/nIY2qSx.png" alt="created on"/>
                                 <h6
@@ -167,7 +158,12 @@ function ArticlePage({
                                                 { line.includes("@@")? processedBigLine(processedBoldLine(line)): processedBoldLine(line)}
                                             </p>
                                         :
-                                            <p className="newsText2 margin-bottom-0">{line}</p>
+                                            line.includes("&&")?
+                                                <a href={getLink(article.site_link)}>
+                                                    <p className="newsText2 margin-bottom-0">{processedLinkLine(line)}</p>
+                                                </a>
+                                                :<p className="newsText2 margin-bottom-0">{line}</p>
+
                                         }
                                         <div className={article.images[index.toString()]?.length > 1? "newsImageContainer":"newsImageContainer2"}>
                                             {article.images[index.toString()] ?
