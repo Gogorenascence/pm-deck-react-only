@@ -87,7 +87,7 @@ function App() {
   })
 
   let articles = require('./database/articles.json').map(article =>
-    {article["id"] = article._id.$oid
+    {article["id"] = article._id ? (article._id.$oid ? article._id.$oid : article._id) : article.id;
     return article
   })
 
