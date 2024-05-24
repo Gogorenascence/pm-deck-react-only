@@ -230,7 +230,7 @@ function PlayerTab({
                             <h5 className="label margin-0">Dice Roller </h5>
                             <div className="flex-full" style={{width: "370px"}}>
                                 <img
-                                    className={`logo7 margin-top-10 ${addRoll? null: "half2"}`}
+                                    className={`logo7 margin-top-10 pointer ${addRoll? null: "half2"}`}
                                     src='addRoll.png'
                                     onClick={() => handleAddRoll()}
                                     title={addRoll? "New Roll": "Adding Rolls"}

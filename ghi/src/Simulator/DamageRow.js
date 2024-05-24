@@ -82,14 +82,14 @@ function DamageRow() {
             <div className="flex-full">
                 { !gain?
                     <img
-                        className='logo7 margin-top-10'
+                        className='logo7 margin-top-10 pointer'
                         src='damage.png'
                         onClick={() => handleGain()}
                         title='Damage'
                         alt='damage'
                     />:
                     <img
-                        className='logo7 margin-top-10'
+                        className='logo7 margin-top-10 pointer'
                         src='gain.png'
                         onClick={() => handleGain()}
                         title='Gain HP'
