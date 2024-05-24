@@ -215,14 +215,14 @@ function PlayerTab({
                                 Game Start
                             </button>
                             <button
-                                className="end-button red"
+                                className="end-button red margin-left-3"
                                 onClick={() => {
                                     resetPlayer()
                                     handleClose()
                                 }}
-                                disabled={gameState.player.mainDeck.length === 0 ? true : false}
+                                disabled={ !gameState.game ? true : false}
                             >
-                                End Game
+                                Game End
                             </button>
                         </div>
                         <DamageRow/>
@@ -246,7 +246,7 @@ function PlayerTab({
                                 </div>
                                 <button
                                     onClick={diceRoll}
-                                    className="margin-top-5 end-button"
+                                    className="margin-top-5 end-button margin-left-3"
                                     >
                                     Roll
                                 </button>
