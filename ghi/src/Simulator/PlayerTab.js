@@ -139,7 +139,7 @@ function PlayerTab({
 
     return (
         <div>
-            <span>
+            <span className='pointer'>
                 <div
                     className="playerTabTop flex-full"
                     onClick={() => handleShow()}
