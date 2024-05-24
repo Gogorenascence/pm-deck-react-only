@@ -10,8 +10,6 @@ function PlayerTab({
     handleChangeDeck,
     decks,
     setDecks,
-    loading,
-    fillDecks,
     gameStart,
     resetPlayer
 }){
@@ -191,6 +189,7 @@ function PlayerTab({
                                 type="text"
                                 placeholder=" Deck"
                                 onChange={handleChangeDeck}
+                                disabled={gameState.game? true: false}
                                 name="Deck">
                                 <option value="">Deck</option>
                                 {decks.map((deck, index) => (
@@ -199,19 +198,19 @@ function PlayerTab({
                             </select>
                         </div>
                         <div className='margin-10 flex-full'>
-                            <button
+                            {/* <button
                                 className="front-button"
                                 onClick={fillDecks}
                             >
                                 Get Deck
-                            </button>
+                            </button> */}
                             <button
-                                className="middle-button"
+                                className="front-button"
                                 onClick={() => {
                                     gameStart()
                                     handleClose()
                                 }}
-                                disabled={gameState.player.mainDeck.length === 0 ? true : false}
+                                disabled={gameState.player.mainDeck.length === 0 || gameState.game? true : false}
                             >
                                 Game Start
                             </button>
@@ -223,7 +222,7 @@ function PlayerTab({
                                 }}
                                 disabled={gameState.player.mainDeck.length === 0 ? true : false}
                             >
-                                Reset Player
+                                End Game
                             </button>
                         </div>
                         <DamageRow/>

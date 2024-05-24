@@ -63,18 +63,28 @@ const SimulatorActionsContextProvider = ({ children }) => {
     const [shuffling, setShuffling] = useState(false)
     const [shufflingPluck, setShufflingPluck] = useState(false)
 
-    const handleChangeDeck = (event) => {
+    const handleChangeDeck = async(event) => {
         const deckID = event.target.value
         const deckFound = decks.find(deck => deck.id === deckID)
-        console.log(deckID)
-        setSelectedMainDeck({
-            name: deckFound.name,
-            cards: deckFound.cards
-        });
-        setSelectedPluckDeck({
-            name: deckFound.name,
-            cards: deckFound.pluck
-        })
+        console.log(deckFound)
+        if (deckFound !== undefined) {
+            const filledMainDeck = deckFound.cards.map(cardNumber =>
+                cards.find(card => card.card_number === cardNumber)
+            );
+            const filledPluckDeck = deckFound.pluck.map(cardNumber =>
+                cards.find(card => card.card_number === cardNumber)
+            );
+            setPlayerMainDeck({name: deckFound.name, cards: filledMainDeck})
+            setPlayerPluckDeck({name: deckFound.name, cards: filledPluckDeck})
+            equipSound(volume)
+            addToLog("System", "system", `${deckFound.name} selected`)
+        } else {
+            setPlayerMainDeck({name: "", cards: []})
+            setPlayerPluckDeck({name: "", cards: []})
+            discardSound(volume)
+            addToLog("System", "system", "No deck selected")
+
+        }
     };
 
     const fillDecks = (event) => {
