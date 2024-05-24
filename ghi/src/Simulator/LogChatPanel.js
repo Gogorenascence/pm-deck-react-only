@@ -163,35 +163,6 @@ function LogChatPanel({
                                 </div>
                             )): null}
                         </div>
-                        <div className="flex">
-                            <button
-                                onClick={() => {
-                                    addToLog("System", "system", `${player.name} rolled a ${diceRoll()}`)
-                                    rollSound(volume)
-                                }}
-                                className="margin-top-10"
-                            >
-                                Roll
-                            </button>
-                            <input
-                                type="text"
-                                value={damage}
-                                onChange={handleDamage}
-                                placeholder="Damage"
-                                className="healthTracker"
-                                onKeyDown={takeDamage}
-                            ></input>
-                            <button
-                                className={defender === "self"?
-                                "healthTracker2 red": "healthTracker2"}
-                                onClick={()=>setDefender("self")}
-                            >Self</button>
-                            <button
-                                className={defender === "card"?
-                                "healthTracker3 red": "healthTracker3"}
-                                onClick={()=>setDefender("card")}
-                            >Card</button>
-                        </div>
                         <textarea
                             className="chatTextBox"
                             type="text"

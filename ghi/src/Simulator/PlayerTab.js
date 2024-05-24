@@ -76,12 +76,18 @@ function PlayerTab({
     }, [account])
 
     useEffect(() => {
-        const resetInterval = setInterval(() => {
-            setRoll(0);
-        }, 6000);
-        // Cleanup interval on component unmount
-        return () => clearInterval(resetInterval);
-      }, []); // Empty dependency array means this effect runs once when the component mounts
+        // const resetInterval = setInterval(() => {
+        //     setRoll(0);
+        // }, 60000);
+        // // Cleanup interval on component unmount
+        // return () => clearInterval(resetInterval);
+
+        const timeout = setTimeout(function() {
+            setRoll(0)
+        }, 60000);
+
+        return () => clearTimeout(timeout);
+      }, [roll]); // Empty dependency array means this effect runs once when the component mounts
 
     const handleShow = async() => {
         setShow(true)
@@ -177,7 +183,7 @@ function PlayerTab({
             {show ?
                 <div className="small-modal-dark topbar" ref={content}>
                     <div className='flex-column-full margin-bottom-20'>
-                        <h2 className="label-center margin-top-0 margin-bottom-40">Player Panel </h2>
+                        <h2 className="aligned margin-top-0 margin-bottom-30">Player Panel </h2>
                         <div>
                             <h5 className="label margin-top-none">Select a Deck </h5>
                             <select

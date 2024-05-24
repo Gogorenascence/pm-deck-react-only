@@ -1289,6 +1289,10 @@ button:disabled {
   margin-bottom: 20px;
 }
 
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
 .margin-bottom-40 {
   margin-bottom: 40px;
 }
@@ -2167,10 +2171,6 @@ button:disabled {
   margin: 0;
 }
 
-/* .tabContainer {
-  position: absolute;
-} */
-
 .playersRow {
   width: 100%;
   height: max-content;
@@ -2865,7 +2865,7 @@ button:disabled {
   background-color: white;
   color: #000;
   width: 360px;
-  height: 90px;
+  height: 135px;
   margin-top: 10px;
   z-index: inherit;
 }
@@ -3508,7 +3508,7 @@ button:disabled {
 }
 
 .rollTracker {
-  margin-top: 5px;
+  margin: 5px 0 0 3px;
   height: 36px;
   outline: 1px white solid;
   background-color: #00000038;
