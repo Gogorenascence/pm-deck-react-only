@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { SimulatorActionsContext } from '../context/SimulatorActionsContext';
+import { AppContext } from '../context/AppContext';
 import Slider from '@mui/material/Slider';
 
 
@@ -13,6 +14,14 @@ function PositionSlider({
     const [show, setShow] = useState(true)
 
     const {mute} = useContext(SimulatorActionsContext)
+    const { position } = useContext(AppContext)
+
+    const [dragPosition, setDragPosition] = useState({
+        top: `${500 - window.innerHeight/2}px`,
+        left: `${1300 - window.innerWidth/2}px`,
+        right: 'auto',
+        bottom: 'auto'
+    })
 
     const handleWheel = (event) => {
         event.preventDefault();
@@ -24,13 +33,53 @@ function PositionSlider({
         }
     };
 
+    // const dragPosition = {
+    //     top: `${position.y - window.innerHeight/2}px`,
+    //     left: `${position.x - window.innerWidth/2}px`,
+    //     right: 'auto',
+    //     bottom: 'auto'
+    // }
+
+
+    const handleMouseDown = (event) => {
+        event.preventDefault();
+        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseup', handleMouseUp);
+    };
+
+    const handleMouseMove = (event) => {
+        event.preventDefault();
+        setDragPosition({
+            top: `${(event.clientY - window.innerHeight / 2) + 265}px`,
+            left: `${(event.clientX - window.innerWidth / 2) - 75}px`,
+            right: 'auto',
+            bottom: 'auto'
+        });
+    };
+
+    const handleMouseUp = (event) => {
+        event.preventDefault();
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mouseup', handleMouseUp);
+    };
+
     return (
         <div className={show? "settings_container" : "settings_container_hide"}
             onWheel={handleWheel}
+
+            style={dragPosition}
         >
-            <p className='lock pointer' onClick={() => setShow(!show)}>
-                {show? "Hide" : "Show"}
-            </p>
+            <div className='flex space-around'>
+                <img
+                    className='lock pointer'
+                    onClick={() => setShow(!show)}
+                    src={show? "mini.png" : "max.png"}
+                />
+                <img className='lock pointer'
+                    onMouseDown={handleMouseDown}
+                    src="move.png"
+                />
+            </div>
             <div className={show? "inner_container": "inner_container_hide"}>
 
                 <div className="translate_button_container">

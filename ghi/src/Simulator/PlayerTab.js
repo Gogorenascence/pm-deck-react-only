@@ -89,6 +89,7 @@ function PlayerTab({
 
     const handleShow = async() => {
         setShow(true)
+        console.log(gameState.player)
         document.body.style.overflow = 'hidden';
     };
 

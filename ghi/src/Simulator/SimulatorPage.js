@@ -3,6 +3,7 @@ import { GameStateContext } from "../context/GameStateContext";
 import { SimulatorActionsContext } from "../context/SimulatorActionsContext";
 import { MainActionsContext } from "../context/MainActionsContext";
 import { PluckActionsContext } from "../context/PluckActionsContext";
+import { AppContext } from "../context/AppContext";
 import GameBoard from "./GameBoard";
 import PositionSlider from "./PositionSlider";
 import CardInfoPanel from "./CardInfoPanel";
@@ -106,6 +107,10 @@ function SimulatorPage(props) {
 
     const {account} = useContext(AuthContext)
 
+    const {
+        position,
+    } = useContext(AppContext)
+
     const getCards = () => {
         const processedCards = []
         for (let card of pre_processed_cards) {
@@ -193,7 +198,7 @@ function SimulatorPage(props) {
                 <h1 className={prompt.message? null: "hidden2"}>{prompt.message}</h1>
             </div>
             <div className="cd-inner">
-                <div className="flex-full playersRow">
+                <div className="flex-items space-around playersRow">
                     <PlayerTab
                         account={account}
                         handleChangeDeck={handleChangeDeck}
@@ -205,7 +210,43 @@ function SimulatorPage(props) {
                         checkPlayer={checkPlayer}
                         resetPlayer={resetPlayer}
                     />
+                    {/* <div className="flex space-around" style={{width: "50%"}}>
+                        <PlayerTab
+                            account={account}
+                            handleChangeDeck={handleChangeDeck}
+                            decks={decks}
+                            setDecks={setDecks}
+                            loading={loading}
+                            fillDecks={fillDecks}
+                            gameStart={gameStart}
+                            checkPlayer={checkPlayer}
+                            resetPlayer={resetPlayer}
+                        />
+                        <PlayerTab
+                            account={account}
+                            handleChangeDeck={handleChangeDeck}
+                            decks={decks}
+                            setDecks={setDecks}
+                            loading={loading}
+                            fillDecks={fillDecks}
+                            gameStart={gameStart}
+                            checkPlayer={checkPlayer}
+                            resetPlayer={resetPlayer}
+                        />
+                        <PlayerTab
+                            account={account}
+                            handleChangeDeck={handleChangeDeck}
+                            decks={decks}
+                            setDecks={setDecks}
+                            loading={loading}
+                            fillDecks={fillDecks}
+                            gameStart={gameStart}
+                            checkPlayer={checkPlayer}
+                            resetPlayer={resetPlayer}
+                        />
+                    </div> */}
                 </div>
+                {/* <p>{position.x}, {position.y}</p> */}
                 <div>
                     <GameBoard
                         playArea={player.playArea}
@@ -311,13 +352,15 @@ function SimulatorPage(props) {
                 </div>
 
             </div>
-            <div className="rightSimSide">
+            <div className="rightSimSide2">
                 <PositionSlider
                     handleChangePosition={handleChangePosition}
                     handleChangeScale={handleChangeScale}
                     handleChangeTransformRotateX={handleChangeTransformRotateX}
                     volume={volume}
                 />
+            </div>
+            <div className="rightSimSide">
                 <LogChatPanel/>
             </div>
         </div>

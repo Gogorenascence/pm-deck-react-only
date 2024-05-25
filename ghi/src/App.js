@@ -101,115 +101,115 @@ function App() {
 
     <AppProvider>
 
-    <BrowserRouter>
-        <div className="content">
-          <NavBar/>
-          <LightSwitch/>
-          <BackToTop/>
-          <SimScrollbar/>
-          <div className="app">
+      <BrowserRouter>
+          <div className="content">
+            <NavBar/>
+            <LightSwitch/>
+            <BackToTop/>
+            <SimScrollbar/>
+            <div className="app">
 
-            <Routes>
-              <Route index element={<MainPage
-                                      cards={cards}
-                                      articles={articles}
-                                    />} />
-              <Route path="/deckbuilder" element={<FBDeckBuildandImport
-                                                    cards={cards}
-                                                    booster_sets={booster_sets}
-                                                  />} />
-              <Route path="/decks" element={<DecksPage
-                                              cards={cards}
-                                              card_categories={card_categories}
-                                            />} />
-              <Route path="/decks/:deck_id" element={<FBDeckDetailPage
-                                                      cards={cards}
-                                                    />} />
-              <Route path="/decks/:deck_id/copy" element={<FBDeckCopy
-                                                      cards={cards}
-                                                      booster_sets={booster_sets}
-                                                />} />
-              <Route path="/decks/:deck_id/edit" element={<FBDeckEdit
+              <Routes>
+                <Route index element={<MainPage
+                                        cards={cards}
+                                        articles={articles}
+                                      />} />
+                <Route path="/deckbuilder" element={<FBDeckBuildandImport
                                                       cards={cards}
                                                       booster_sets={booster_sets}
                                                     />} />
-              <Route path="/cards" element={<CardsPage cards={cards}  booster_sets={booster_sets}/>} />
-              <Route path="/cards/:card_number" element={<CardDetailPage
-                                                            cards={cards}
-                                                            card_types={card_types}
-                                                            card_tags={card_tags}
-                                                            extra_effects={extra_effects}
-                                                            reactions={reactions}
-                                                        />} />
-              <Route path="/topcards" element={<UnderConstruction />} />
-              <Route path="/cardsets" element={<SetsPage
-                                                boosterSets={booster_sets}
+                <Route path="/decks" element={<DecksPage
+                                                cards={cards}
+                                                card_categories={card_categories}
                                               />} />
-              <Route path="/cardsets/:card_set_id" element={<SetDetailPage
+                <Route path="/decks/:deck_id" element={<FBDeckDetailPage
+                                                        cards={cards}
+                                                      />} />
+                <Route path="/decks/:deck_id/copy" element={<FBDeckCopy
+                                                        cards={cards}
+                                                        booster_sets={booster_sets}
+                                                  />} />
+                <Route path="/decks/:deck_id/edit" element={<FBDeckEdit
+                                                        cards={cards}
+                                                        booster_sets={booster_sets}
+                                                      />} />
+                <Route path="/cards" element={<CardsPage cards={cards}  booster_sets={booster_sets}/>} />
+                <Route path="/cards/:card_number" element={<CardDetailPage
                                                               cards={cards}
-                                                              boosterSets={booster_sets}
-                                                            />} />
-              <Route path="/cardsets/:card_set_id/pulls" element={<PullPage
-                                                                    cards={cards}
-                                                                    boosterSets={booster_sets}
-                                                                  />} />
-              <Route path="/pulls/deckbuilder" element={<PullsDeckBuilder
-                                                                                boosterSets={booster_sets}
-                                                                              />} />
-              <Route path="/gameplay" element={<GamePlayPage />} />
-              <Route path="/glossary" element={<TermsPage terms={terms}/>} />
-              <Route path="/cardcategories" element={<CardCategoriesPage card_categories={card_categories}/>} />
-              <Route path="/cardcategories/:card_category_id" element={<CardCategoryDetail
-                                                                          card_categories={card_categories}
-                                                                          cards={cards}
-                                                                      />} />
-              <Route path="/cardtags" element={<CardTagsPage card_tags={card_tags}/>} />
-              <Route path="/cardtags/:card_tag_id" element={<CardTagDetails
+                                                              card_types={card_types}
                                                               card_tags={card_tags}
-                                                              cards={cards}
-                                                            />} />
-              <Route path="/cardtypes" element={<CardTypesPage card_types={card_types} />} />
-              <Route path="/cardtypes/:card_type_id" element={<CardTypeDetails
-                                                                card_types={card_types}
+                                                              extra_effects={extra_effects}
+                                                              reactions={reactions}
+                                                          />} />
+                <Route path="/topcards" element={<UnderConstruction />} />
+                <Route path="/cardsets" element={<SetsPage
+                                                  boosterSets={booster_sets}
+                                                />} />
+                <Route path="/cardsets/:card_set_id" element={<SetDetailPage
                                                                 cards={cards}
-                                                            />} />
-              <Route path="/extraeffects" element={<ExtraEffectsPage extra_effects={extra_effects}/>} />
-              <Route path="/extraeffects/:extra_effect_id" element={<ExtraEffectDetails
-                                                                      extra_effects={extra_effects}
+                                                                boosterSets={booster_sets}
+                                                              />} />
+                <Route path="/cardsets/:card_set_id/pulls" element={<PullPage
                                                                       cards={cards}
+                                                                      boosterSets={booster_sets}
                                                                     />} />
-              <Route path="/reactions" element={<ReactionsPage reactionProps={reactions}/>} />
-              <Route path="/reactions/:reaction_id" element={<ReactionDetails
-                                                              reactionProps={reactions}
-                                                              cards={cards}
-                                                            />} />
-              <Route path="/simulator" element={<SimulatorPage
-                                                pre_decks={decks}
-                                                pre_processed_cards={cards}
-                                                card_types={card_types}
-                                                card_tags={card_tags}
-                                                extra_effects={extra_effects}
-                                                reactions={reactions}
-                                                />} />
-              <Route path="/articles" element={<ArticlesPage articles={articles}/>} />
-              <Route path="/articles/:article_id" element={<ArticlePage articles={articles}/>} />
-              <Route path="/rulebooks" element={<HowTosPage howTos={howTos.sort((a,b) => a.how_to_number - b.how_to_number)}/>} />
-              <Route path="/rulebooks/:how_to_id" element={<HowToPage howTos={howTos}/>} />
-              <Route path="/account" element={<FBAccountPage />} />
-              <Route path="/simulator2" element={<SimulatorObjectPage
-                                                pre_decks={decks}
-                                                pre_processed_cards={cards}
-                                                card_types={card_types}
-                                                card_tags={card_tags}
-                                                extra_effects={extra_effects}
-                                                reactions={reactions}
-                                                />} />
-            </Routes>
+                <Route path="/pulls/deckbuilder" element={<PullsDeckBuilder
+                                                                                  boosterSets={booster_sets}
+                                                                                />} />
+                <Route path="/gameplay" element={<GamePlayPage />} />
+                <Route path="/glossary" element={<TermsPage terms={terms}/>} />
+                <Route path="/cardcategories" element={<CardCategoriesPage card_categories={card_categories}/>} />
+                <Route path="/cardcategories/:card_category_id" element={<CardCategoryDetail
+                                                                            card_categories={card_categories}
+                                                                            cards={cards}
+                                                                        />} />
+                <Route path="/cardtags" element={<CardTagsPage card_tags={card_tags}/>} />
+                <Route path="/cardtags/:card_tag_id" element={<CardTagDetails
+                                                                card_tags={card_tags}
+                                                                cards={cards}
+                                                              />} />
+                <Route path="/cardtypes" element={<CardTypesPage card_types={card_types} />} />
+                <Route path="/cardtypes/:card_type_id" element={<CardTypeDetails
+                                                                  card_types={card_types}
+                                                                  cards={cards}
+                                                              />} />
+                <Route path="/extraeffects" element={<ExtraEffectsPage extra_effects={extra_effects}/>} />
+                <Route path="/extraeffects/:extra_effect_id" element={<ExtraEffectDetails
+                                                                        extra_effects={extra_effects}
+                                                                        cards={cards}
+                                                                      />} />
+                <Route path="/reactions" element={<ReactionsPage reactionProps={reactions}/>} />
+                <Route path="/reactions/:reaction_id" element={<ReactionDetails
+                                                                reactionProps={reactions}
+                                                                cards={cards}
+                                                              />} />
+                <Route path="/simulator" element={<SimulatorPage
+                                                  pre_decks={decks}
+                                                  pre_processed_cards={cards}
+                                                  card_types={card_types}
+                                                  card_tags={card_tags}
+                                                  extra_effects={extra_effects}
+                                                  reactions={reactions}
+                                                  />} />
+                <Route path="/articles" element={<ArticlesPage articles={articles}/>} />
+                <Route path="/articles/:article_id" element={<ArticlePage articles={articles}/>} />
+                <Route path="/rulebooks" element={<HowTosPage howTos={howTos.sort((a,b) => a.how_to_number - b.how_to_number)}/>} />
+                <Route path="/rulebooks/:how_to_id" element={<HowToPage howTos={howTos}/>} />
+                <Route path="/account" element={<FBAccountPage />} />
+                <Route path="/simulator2" element={<SimulatorObjectPage
+                                                  pre_decks={decks}
+                                                  pre_processed_cards={cards}
+                                                  card_types={card_types}
+                                                  card_tags={card_tags}
+                                                  extra_effects={extra_effects}
+                                                  reactions={reactions}
+                                                  />} />
+              </Routes>
 
+            </div>
           </div>
-        </div>
-        <Footer/>
-    </BrowserRouter>
+          <Footer/>
+      </BrowserRouter>
 
     </AppProvider>
   );

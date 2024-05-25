@@ -65,6 +65,7 @@ function GameBoard({
         defending,
         handleDefending,
         handleChangeScale,
+        playerMainDeck
     } = useContext(GameStateContext)
 
     const fighter = playArea.fighter_slot || [];
@@ -353,6 +354,7 @@ function GameBoard({
                         fromDiscard={fromDiscard}
                         volume={volume}
                         shuffling={shuffling}
+                        player={playerMainDeck}
                     />
                 </div>
                 <div className="flex">
