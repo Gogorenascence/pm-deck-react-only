@@ -11,14 +11,14 @@ function PositionSlider({
     volume
 }){
 
-    const [show, setShow] = useState(true)
+    const [show, setShow] = useState(false)
 
     const {mute} = useContext(SimulatorActionsContext)
     const { position } = useContext(AppContext)
 
     const [dragPosition, setDragPosition] = useState({
         top: `${500 - window.innerHeight/2}px`,
-        left: `${1300 - window.innerWidth/2}px`,
+        left: `${1050 - window.innerWidth/2}px`,
         right: 'auto',
         bottom: 'auto'
     })
