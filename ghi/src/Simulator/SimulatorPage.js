@@ -352,6 +352,9 @@ function SimulatorPage(props) {
                 </div>
 
             </div>
+            <div className="rightSimSide">
+                <LogChatPanel/>
+            </div>
             <div className="rightSimSide2">
                 <PositionSlider
                     handleChangePosition={handleChangePosition}
@@ -359,9 +362,6 @@ function SimulatorPage(props) {
                     handleChangeTransformRotateX={handleChangeTransformRotateX}
                     volume={volume}
                 />
-            </div>
-            <div className="rightSimSide">
-                <LogChatPanel/>
             </div>
         </div>
     );

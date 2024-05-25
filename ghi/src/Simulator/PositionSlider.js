@@ -14,7 +14,6 @@ function PositionSlider({
     const [show, setShow] = useState(false)
 
     const {mute} = useContext(SimulatorActionsContext)
-    const { position } = useContext(AppContext)
 
     const [dragPosition, setDragPosition] = useState({
         top: `${500 - window.innerHeight/2}px`,
@@ -32,14 +31,6 @@ function PositionSlider({
             handleChangeScale('increase');
         }
     };
-
-    // const dragPosition = {
-    //     top: `${position.y - window.innerHeight/2}px`,
-    //     left: `${position.x - window.innerWidth/2}px`,
-    //     right: 'auto',
-    //     bottom: 'auto'
-    // }
-
 
     const handleMouseDown = (event) => {
         event.preventDefault();
@@ -66,7 +57,6 @@ function PositionSlider({
     return (
         <div className={show? "settings_container" : "settings_container_hide"}
             onWheel={handleWheel}
-
             style={dragPosition}
         >
             <div className='flex space-around'>

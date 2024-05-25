@@ -2877,7 +2877,7 @@ button:disabled {
   width: fit-content;
   position: fixed;
   right: 0;
-  z-index: 0;
+  z-index: 2;
 }
 
 .rightSimSide2 {
