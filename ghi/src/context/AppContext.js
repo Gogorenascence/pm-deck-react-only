@@ -16,7 +16,6 @@ const AppContextProvider = ({ children }) => {
             x: event.clientX,
             y: event.clientY,
         });
-        console.log(position)
     }
 
     useEffect(() => {

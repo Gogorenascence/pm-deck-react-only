@@ -4,7 +4,7 @@ import {
 } from "../Sounds/Sounds";
 
 
-function SimPluckSearchModal({
+function OppPluckDiscardModal({
     pluckDeck,
     handleHoveredCard,
     showPluckSearchModal,
@@ -108,7 +108,7 @@ function SimPluckSearchModal({
                     <div className={pluckDiscard.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>
                         <h1 className="centered-h1">Discard Pile</h1>
                         <div>
-                        <div className="card-pool-fill">
+                        <div className={pluckDiscard.length < 5 ? "card-pool-fill-hand" : "card-pool-fill"}>
                             {pluckDiscard.slice().reverse().map((card, index) => {
                                 return (
                                     <div style={{display: "flex", justifyContent: "center"}}>
@@ -198,4 +198,4 @@ function SimPluckSearchModal({
     )
 }
 
-export default SimPluckSearchModal
+export default OppPluckDiscardModal

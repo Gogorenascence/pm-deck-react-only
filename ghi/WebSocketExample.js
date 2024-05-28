@@ -1,16 +1,53 @@
-import { createContext, useContext, useState } from "react";
+// npm install ws
+// Create a file named server.js (or any name you prefer) and set up the WebSocket server:
+
+const WebSocket = require('ws');
+
+const wss = new WebSocket.Server({ port: 8080 });
+
+let clients = [];
+
+wss.on('connection', (ws) => {
+    console.log('New client connected');
+    clients.push(ws);
+
+    ws.on('message', (message) => {
+        console.log('Received:', message);
+        // Broadcast the message to all connected clients
+        clients.forEach(client => {
+            if (client !== ws && client.readyState === WebSocket.OPEN) {
+                client.send(message);
+            }
+        });
+    });
+
+    ws.on('close', () => {
+        console.log('Client disconnected');
+        clients = clients.filter(client => client !== ws);
+    });
+});
+
+console.log('WebSocket server is running on ws://localhost:8080');
+
+// Step 2: Integrate WebSocket Client in React
+// In your React app, you need to set up a WebSocket client to connect to the WebSocket server and handle incoming messages.
+
+// Create a WebSocket client:
+
+// In your GameStateContextProvider, set up the WebSocket client and handle communication:
+
+import { createContext, useContext, useState, useEffect } from "react";
 import soundPlayer from "../Sounds/SoundPlayer";
 import { AuthContext } from "./AuthContext";
-
 
 const GameStateContext = createContext();
 
 const GameStateContextProvider = ({ children }) => {
-    const { account } = useContext(AuthContext)
-    const [game, setGame] = useState(false)
-    const [prevAccount, setPrevAccount] = useState("")
+    const { account } = useContext(AuthContext);
+    const [game, setGame] = useState(false);
+    const [prevAccount, setPrevAccount] = useState("");
     const [player, setPlayer] = useState({
-        name: account? account.username: "",
+        name: account ? account.username : "",
         hp: 16,
         mainDeck: [],
         pluckDeck: [],
@@ -18,23 +55,23 @@ const GameStateContextProvider = ({ children }) => {
         ownership: [],
         mainDiscard: [],
         pluckDiscard: [],
-        playArea:"",
+        playArea: "",
         activePluck: "",
         focus: 0,
         enthusiasm: 0,
         mettle: 0,
         secondWind: false,
-    })
+    });
 
     const [playerMainDeck, setPlayerMainDeck] = useState({
         name: "",
         cards: [],
-    })
+    });
 
     const [playerPluckDeck, setPlayerPluckDeck] = useState({
         name: "",
         cards: [],
-    })
+    });
 
     const [playArea, setPlayArea] = useState({
         fighter_slot: [],
@@ -45,21 +82,21 @@ const GameStateContextProvider = ({ children }) => {
         slot_6: [],
         slot_7: [],
         slot_8: [],
-    })
+    });
 
     const [activePluck, setActivePluck] = useState({
         slot_1: [],
         slot_2: [],
         slot_3: [],
         slot_4: [],
-    })
+    });
 
     const [faceDown, setFaceDown] = useState({
         fighter_slot: false,
         aura_slot: false,
         move_slot: false,
         ending_slot: false
-    })
+    });
 
     const [defending, setDefending] = useState({
         fighter_slot: false,
@@ -70,7 +107,7 @@ const GameStateContextProvider = ({ children }) => {
         slot_6: false,
         slot_7: false,
         slot_8: false,
-    })
+    });
 
     const [defendingCard, setDefendingCard] = useState({
         card: "",
@@ -80,7 +117,7 @@ const GameStateContextProvider = ({ children }) => {
         endure: 0,
         redirect: 0,
         slot: ""
-    })
+    });
 
     const handleDefending = (slot) => {
         if (!defending[slot]) {
@@ -93,8 +130,8 @@ const GameStateContextProvider = ({ children }) => {
                 slot_6: false,
                 slot_7: false,
                 slot_8: false,
-            }
-            newDefending[slot] = true
+            };
+            newDefending[slot] = true;
             const newDefendingCard = {
                 card: "",
                 hp: 5,
@@ -104,24 +141,24 @@ const GameStateContextProvider = ({ children }) => {
                 redirect: 0,
                 slot: ""
 
-            }
+            };
             if (playArea[slot][0]) {
-                const card = playArea[slot][0]
-                newDefendingCard["slot"] = slot
-                newDefendingCard["card"] = card
+                const card = playArea[slot][0];
+                newDefendingCard["slot"] = slot;
+                newDefendingCard["card"] = card;
                 for (let reaction of card.reactions) {
                     if (reaction.name) {
-                        const newReaction = reaction.name.toLowerCase()
-                        newDefendingCard[newReaction] = reaction.count
+                        const newReaction = reaction.name.toLowerCase();
+                        newDefendingCard[newReaction] = reaction.count;
                     }
                 }
-                setDefending(newDefending)
-                setDefendingCard(newDefendingCard)
-                soundPlayer.equipSound(volume*1.5)
-                addToLog("System", "system", `${player.name} is defending with "${card.name}"`)
+                setDefending(newDefending);
+                setDefendingCard(newDefendingCard);
+                soundPlayer.equipSound(volume * 1.5);
+                addToLog("System", "system", `${player.name} is defending with "${card.name}"`);
             }
         } else {
-            setDefending({...defending, [slot]: false})
+            setDefending({ ...defending, [slot]: false });
             setDefendingCard({
                 card: "",
                 hp: 5,
@@ -130,9 +167,9 @@ const GameStateContextProvider = ({ children }) => {
                 endure: 0,
                 redirect: 0,
                 slot: ""
-            })
+            });
         }
-    }
+    };
 
     const [activating, setActivating] = useState({
         fighter_slot: false,
@@ -147,7 +184,7 @@ const GameStateContextProvider = ({ children }) => {
         slot_2: false,
         slot_3: false,
         slot_4: false,
-    })
+    });
 
     const handleActivating = (zone) => {
         setActivating(prevActivating => {
@@ -175,30 +212,30 @@ const GameStateContextProvider = ({ children }) => {
             }, 1000);
             return newActivating;
         });
-    }
+    };
 
-    const [log, setLog] = useState([])
+    const [log, setLog] = useState([]);
 
     const addToLog = (user, role, message) => {
-        const newLog = [...log]
+        const newLog = [...log];
         newLog.push({
             user: user,
             role: role,
             message: message
-        })
-        setLog(newLog)
-    }
+        });
+        setLog(newLog);
+    };
 
-    const [playingFaceDown, setPlayingFaceDown] = useState(false)
+    const [playingFaceDown, setPlayingFaceDown] = useState(false);
 
-    const [showExtra, setShowExtra] = useState(true)
+    const [showExtra, setShowExtra] = useState(true);
 
-    const [transformRotateX, setTransformRotateX] = useState("45deg")
-    const [scale, setScale] = useState(0.75)
+    const [transformRotateX, setTransformRotateX] = useState("45deg");
+    const [scale, setScale] = useState(0.75);
     const [position, setPosition] = useState({
         x_pos: 0,
         y_pos: -100,
-    })
+    });
 
     const handleChangeTransformRotateX = (event) => {
         setTransformRotateX(`${event.target.value}deg`);
@@ -211,42 +248,116 @@ const GameStateContextProvider = ({ children }) => {
             }
         } else {
             if (scale > 0.3) {
-                setScale(scale - 0.1 );
+                setScale(scale - 0.1);
             }
         }
-    }
+    };
 
     const handleChangePosition = (direction) => {
         const MOVE_AMOUNT = 30;
-        const x_pos = position.x_pos
-        const y_pos = position.y_pos
+        const x_pos = position.x_pos;
+        const y_pos = position.y_pos;
         if (direction === 'up') {
-            setPosition({...position, y_pos: y_pos - MOVE_AMOUNT });
-            //this.forceUpdate();
+            setPosition({ ...position, y_pos: y_pos - MOVE_AMOUNT });
         } else if (direction === 'down') {
-            setPosition({...position, y_pos: y_pos + MOVE_AMOUNT });
-            //this.forceUpdate();
+            setPosition({ ...position, y_pos: y_pos + MOVE_AMOUNT });
         } else if (direction === 'left') {
-            setPosition({...position, x_pos: x_pos - MOVE_AMOUNT });
-            //this.forceUpdate();
+            setPosition({ ...position, x_pos: x_pos - MOVE_AMOUNT });
         } else if (direction === 'right') {
-            setPosition({...position, x_pos: x_pos + MOVE_AMOUNT });
-            //this.forceUpdate();
+            setPosition({ ...position, x_pos: x_pos + MOVE_AMOUNT });
         } else {
-            setPosition({...position, x_pos: 0, y_pos: -100});
-            //this.forceUpdate();
+            setPosition({ ...position, x_pos: 0, y_pos: -100 });
         }
-    }
+    };
 
     const fieldStyle = {
-        transform: transformRotateX && scale && position.x_pos !== undefined && position.y_pos !== undefined ?
-            "perspective(1000px) rotateX(" + transformRotateX + ") scale(" + scale + ") translate(" + position.x_pos + "px, " + `${ showExtra? position.y_pos - 100: position.y_pos + 200}` + "px)"
+        transform: transformRotateX && scale && position.x_pos !== undefined && position.y_pos !== undefined
+            ? "perspective(1000px) rotateX(" + transformRotateX + ") scale(" + scale + ") translate(" + position.x_pos + "px, " + `${showExtra ? position.y_pos - 100 : position.y_pos + 200}` + "px)"
             : "perspective(1000px) rotateX(45deg) scale(1.0) translate(0px, 100px)",
-    }
+    };
 
-    const [volume, setVolume] = useState(0.05)
+    const [volume, setVolume] = useState(0.05);
 
-    const [opponents, setOpponents] = useState([])
+    // WebSocket connection
+    useEffect(() => {
+        const socket = new WebSocket('ws://localhost:8080');
+
+        socket.onopen = () => {
+            console.log('Connected to WebSocket server');
+        };
+
+        socket.onmessage = (event) => {
+            const message = JSON.parse(event.data);
+            if (message.type === 'updateState') {
+                // Handle incoming state update
+                const { newState } = message;
+                // Update the local state with the new state received from the server
+                setGame(newState.game);
+                setPlayer(newState.player);
+                setPlayArea(newState.playArea);
+                setActivePluck(newState.activePluck);
+                setDefending(newState.defending);
+                setDefendingCard(newState.defendingCard);
+                setLog(newState.log);
+                setPosition(newState.position);
+                setTransformRotateX(newState.transformRotateX);
+                setScale(newState.scale);
+                setVolume(newState.volume);
+                setShowExtra(newState.showExtra);
+            }
+        };
+
+        socket.onclose = () => {
+            console.log('Disconnected from WebSocket server');
+        };
+
+        socket.onerror = (error) => {
+            console.error('WebSocket error:', error);
+        };
+
+        return () => {
+            socket.close();
+        };
+    }, []);
+
+    const sendUpdate = (newState) => {
+        const socket = new WebSocket('ws://localhost:8080');
+        socket.onopen = () => {
+            socket.send(JSON.stringify({ type: 'updateState', newState }));
+        };
+    };
+
+    // Whenever a state changes, send the new state to the server
+    useEffect(() => {
+        const newState = {
+            game,
+            player,
+            playArea,
+            activePluck,
+            defending,
+            defendingCard,
+            log,
+            position,
+            transformRotateX,
+            scale,
+            volume,
+            showExtra,
+        };
+        sendUpdate(newState);
+    }, [
+        game,
+        player,
+        playArea,
+        activePluck,
+        defending,
+        defendingCard,
+        log,
+        position,
+        transformRotateX,
+        scale,
+        volume,
+        showExtra,
+    ]);
 
     return (
         <GameStateContext.Provider value={{
@@ -291,13 +402,14 @@ const GameStateContextProvider = ({ children }) => {
             handleChangeTransformRotateX,
             handleChangeScale,
             handleChangePosition,
-            fieldStyle,
-            opponents,
-            setOpponents
-            }}>
+            fieldStyle
+        }}>
             {children}
         </GameStateContext.Provider>
     );
 };
 
 export { GameStateContext, GameStateContextProvider };
+
+// Run the WebSocket server:
+// node server.js

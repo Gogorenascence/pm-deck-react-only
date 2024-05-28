@@ -125,7 +125,7 @@ function SimDeckSearchModal({
                     <div className={mainDiscard.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>
                         <h1 className="centered-h1">Discard Pile</h1>
                         <div>
-                        <div className={mainDiscard.length < 5 ? "card-pool-fill-hand" : "card-pool-fill"}>
+                        <div className="card-pool-fill">
                             {mainDiscard.slice().reverse().map((card, index) => {
                                 return (
                                     <div style={{display: "flex", justifyContent: "center"}}>

@@ -60,7 +60,8 @@ function UnfurlPluckModal({
         document.body.style.overflow = 'auto';
     };
 
-    const handleShowDeckMenu = (index) => {
+    const handleShowDeckMenu = (event, index) => {
+        event.preventDefault()
         showDeckMenu === index ?
             setShowDeckMenu(null) :
             setShowDeckMenu(index)
@@ -87,7 +88,7 @@ function UnfurlPluckModal({
                     <div className="outScrollableSim" ref={content}>
                         <h1 className="centered-h1">Unfurled Pluck</h1>
                         <div>
-                        <div className="card-pool-fill-hand">
+                        <div className="card-pool-fill">
                             {pluckDeck.slice(0, unfurlPluckCount).map((card, index) => {
                                 return (
                                     <div style={{display: "flex", justifyContent: "center"}}>
@@ -101,7 +102,8 @@ function UnfurlPluckModal({
                                                 ><p>Discard</p></div>
                                             </div>
                                             <img
-                                                onClick={() => handleShowDeckMenu(index)}
+                                                onClick={(event) => handleShowDeckMenu(event, index)}
+                                                onContextMenu={(event) => handleShowDeckMenu(event, index)}
                                                 onMouseEnter={() => handleHoveredCard(card)}
                                                 className={
                                                     showDeckMenu === index?
@@ -121,10 +123,10 @@ function UnfurlPluckModal({
                             <button className="margin-bottom-20 front-button" onClick={handleUnfurl}>
                                 Unfurl
                             </button>
-                            <button className="margin-bottom-20 middle-button" onClick={() =>(setUnfurlPluckCount(1))}>
+                            <button className="margin-bottom-20 middle-button margin-left-3" onClick={() =>(setUnfurlPluckCount(1))}>
                                 Clear
                             </button>
-                            <button className="margin-bottom-20 end-button" onClick={handleClose}>
+                            <button className="margin-bottom-20 end-button margin-left-3" onClick={handleClose}>
                                 Close
                             </button>
                         </div>

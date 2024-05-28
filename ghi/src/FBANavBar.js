@@ -624,7 +624,7 @@ function NavBar() {
 
             <div className="aligned">
               <button className="front-button" type="submit">Signup</button>
-              <button className="end-button" onClick={handleShowSignUpModal}>Close</button>
+              <button className="end-button margin-left-3" onClick={handleShowSignUpModal}>Close</button>
               <p onClick={handleShowLoginModal}
                 className="pointer label-center">
                   Already have an account? Log in!
@@ -689,7 +689,7 @@ function NavBar() {
                 </span>
                 <div className="aligned">
                   <button className="front-button" type="submit">Login</button>
-                  <button className="end-button" onClick={handleShowLoginModal}>Close</button>
+                  <button className="end-button margin-left-3" onClick={handleShowLoginModal}>Close</button>
                   <div className="wide100p flex-full margin-top-20 none">
                     <GoogleButton onClick={() => handleGoogleSignIn(handleShowLoginModal)}/>
                   </div>
@@ -727,7 +727,7 @@ function NavBar() {
                 </span>
                 <div className="aligned margin-bottom-20">
                   <button className="front-button" type="submit">Send An Email</button>
-                  <button className="end-button" onClick={handleShowForgot}>Cancel</button>
+                  <button className="end-button margin-left-3" onClick={handleShowForgot}>Cancel</button>
                 </div>
               </form>
               <div className="blackSpace"></div>

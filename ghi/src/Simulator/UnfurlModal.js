@@ -101,7 +101,7 @@ function UnfurlModal({
                     <div className="outScrollableSim" ref={content}>
                         <h1 className="centered-h1">Unfurled Cards</h1>
                         <div>
-                        <div className="card-pool-fill-hand">
+                        <div className="card-pool-fill">
                             {mainDeck.slice(0, unfurlCount).map((card, index) => {
                                 return (
                                     <div style={{display: "flex", justifyContent: "center"}}>
@@ -140,10 +140,10 @@ function UnfurlModal({
                             <button className="margin-bottom-20 front-button" onClick={handleUnfurl}>
                                 Unfurl
                             </button>
-                            <button className="margin-bottom-20 middle-button" onClick={() =>(setUnfurlCount(1))}>
+                            <button className="margin-bottom-20 middle-button margin-left-3" onClick={() =>(setUnfurlCount(1))}>
                                 Clear
                             </button>
-                            <button className="margin-bottom-20 end-button" onClick={handleClose}>
+                            <button className="margin-bottom-20 end-button margin-left-3" onClick={handleClose}>
                                 Close
                             </button>
                         </div>

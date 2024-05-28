@@ -44,6 +44,7 @@ function ActivePluckModal({
                     // !event.target.closest(".cd-related-modal-card")
                 ) {
                     handleClose();
+                    setShowCardMenu(null)
                 }
             }
           // Adding click event listener
@@ -66,9 +67,11 @@ function ActivePluckModal({
 
     const handleShowCardMenu = (event, index) => {
         event.preventDefault()
+        menuSound(volume)
         showCardMenu === index?
         setShowCardMenu(null):
             setShowCardMenu(index)
+
     }
 
     const handleClose = () => {
@@ -88,7 +91,7 @@ function ActivePluckModal({
                     <div className={zoneArray.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>
                         <h1 className="centered-h1">{showActivePluckModal.name}</h1>
                         <div>
-                        <div className={zoneArray.length < 5 ? "card-pool-fill-hand" : "card-pool-fill"}>
+                        <div className="card-pool-fill">
                             {zoneArray.map((card, index) => {
                                 return (
                                     <div style={{display: "flex", justifyContent: "center"}}>

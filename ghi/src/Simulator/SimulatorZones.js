@@ -146,13 +146,24 @@ discardCard
                 {zoneArray.length > 0 ?
                     <>
                         {zoneArray.length > 1 ?
-                            <div className="matCardOverlay"
+                            <div className="matCardOverlay pointer"
                                 onClick={() => {
                                     if (selectedIndex === null && !moving.cardToMove && !movingPluck.pluckToMove) {
                                         setShowPlayAreaModal({
                                             name: stringName,
                                             objectName: objectName
                                         })
+                                        menuSound(volume)
+                                    }
+                                }}
+                                onContextMenu={(event) => {
+                                    if (selectedIndex === null && !moving.cardToMove && !movingPluck.pluckToMove) {
+                                        event.preventDefault()
+                                        setShowPlayAreaModal({
+                                            name: stringName,
+                                            objectName: objectName
+                                        })
+                                        menuSound(volume)
                                     }
                                 }}
                                 onMouseEnter={() => handleHoveredCard(zoneArray[0])}
@@ -249,12 +260,6 @@ function ActivePluckZone({
         })
     }
 
-    // const handleOpenOwnership = (event) => {
-    //     event.preventDefault()
-    //     setShowOwnershipModal(true)
-    //     menuSound(volume)
-    //     document.body.style.overflow = 'hidden';
-    // };
 
     return(
         <div>
@@ -325,13 +330,24 @@ function ActivePluckZone({
                 {zoneArray.length > 0 ?
                     <>
                         {zoneArray.length > 1 ?
-                            <div className="matCardOverlay"
+                            <div className="matCardOverlay pointer"
                                 onClick={() => {
                                     if (selectedPluckIndex === null && !movingPluck.pluckToMove && !moving.cardToMove) {
                                         setShowActivePluckModal({
                                             name: stringName,
                                             objectName: objectName
                                         })
+                                        menuSound(volume)
+                                    }
+                                }}
+                                onContextMenu={(event) => {
+                                    if (selectedPluckIndex === null && !movingPluck.pluckToMove && !moving.cardToMove) {
+                                        event.preventDefault()
+                                        setShowActivePluckModal({
+                                            name: stringName,
+                                            objectName: objectName
+                                        })
+                                        menuSound(volume)
                                     }
                                 }}
                                 onMouseEnter={() => handleHoveredCard(zoneArray[0])}
@@ -476,14 +492,25 @@ function ExtraZone({
                     <>
                         {zoneArray.length > 1 ?
                             <div className={moving.zone === objectName?
-                                    "matCardOverlay selected3" :
-                                    "matCardOverlay"}
+                                    "matCardOverlay selected3 pointer" :
+                                    "matCardOverlay pointer"}
                                     onClick={() => {
                                         if (selectedIndex === null && !moving.cardToMove && !movingPluck.pluckToMove) {
                                             setShowPlayAreaModal({
                                                 name: stringName,
                                                 objectName: objectName
                                             })
+                                            menuSound(volume)
+                                        }
+                                    }}
+                                    onContextMenu={(event) => {
+                                        if (selectedIndex === null && !moving.cardToMove && !movingPluck.pluckToMove) {
+                                            event.preventDefault()
+                                            setShowPlayAreaModal({
+                                                name: stringName,
+                                                objectName: objectName
+                                            })
+                                            menuSound(volume)
                                         }
                                     }}
                                 onMouseEnter={() => handleHoveredCard(zoneArray[0])}

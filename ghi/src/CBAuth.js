@@ -738,7 +738,7 @@ function CBAuth() {
               </div>
               <div className="aligned">
                 <button className="front-button" type="submit">Login</button>
-                <button className="end-button" onClick={handleShowLoginModal}>Close</button>
+                <button className="end-button margin-left-3" onClick={handleShowLoginModal}>Close</button>
                 <p onClick={handleShowSignUpModal}
                   className="pointer label-center">
                     New here? Sign Up!

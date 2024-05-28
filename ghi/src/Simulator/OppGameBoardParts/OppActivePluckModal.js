@@ -1,37 +1,38 @@
 import React, { useState, useEffect, useRef, useContext } from 'react'
 import { GameStateContext } from "../context/GameStateContext";
-import { MainActionsContext } from "../context/MainActionsContext";
+import { PluckActionsContext } from '../context/PluckActionsContext';
 import {
     menuSound,
     activateSound,
     flipSound
 } from "../Sounds/Sounds";
 
-function PlayAreaModal({
-    // ownership,
-    playArea,
+
+function OppActivePluckModal({
+    activePluck,
     handleHoveredCard,
-    // selectedPluckIndex,
-    showPlayAreaModal,
-    setShowPlayAreaModal,
-    // discardPluckFromOwnership,
-    // returnPluckToDeck,
-    // showPluckMenu,
-    // setShowPluckMenu
+    showActivePluckModal,
+    setShowActivePluckModal,
+    setShowOwnershipModal
 }) {
 
     const content = useRef(null)
     useOutsideAlerter(content)
 
-    const {faceDown, player, volume, addToLog} = useContext(GameStateContext)
     const {
-        addCardFromPlay,
-        discardCard,
+        player,
+        volume,
+        addToLog
+    } = useContext(GameStateContext)
+
+    const {
+        addPluckFromActivePluck,
+        discardPluck,
         swapping,
         setSwapping,
-        moving,
-        setMoving,
-    } = useContext(MainActionsContext)
+        movingPluck,
+        setMovingPluck,
+    } = useContext(PluckActionsContext)
 
     function useOutsideAlerter(ref) {
         useEffect(() => {
@@ -43,7 +44,6 @@ function PlayAreaModal({
                     // !event.target.closest(".cd-related-modal-card")
                 ) {
                     handleClose();
-                    setShowCardMenu(null)
                 }
             }
           // Adding click event listener
@@ -59,30 +59,24 @@ function PlayAreaModal({
 
     useEffect(() => {
       // Check if filteredCards is empty
-        if (playArea[showPlayAreaModal.objectName]?.length === 0) {
+        if (activePluck[showActivePluckModal.objectName]?.length === 0) {
             handleClose(); // Call handleClose when filteredCards is empty
         }
-    }, [playArea[showPlayAreaModal.objectName]]);
+    }, [activePluck[showActivePluckModal.objectName]]);
 
     const handleShowCardMenu = (event, index) => {
         event.preventDefault()
-        menuSound(volume)
         showCardMenu === index?
         setShowCardMenu(null):
             setShowCardMenu(index)
     }
 
     const handleClose = () => {
-        setShowPlayAreaModal({name: "", objectName: ""})
-        // setShowPluckMenu(null)
+        setShowActivePluckModal({name: "", objectName: ""})
         document.body.style.overflow = 'auto';
     };
 
-    const zoneArray = playArea[showPlayAreaModal.objectName]
-    // const handlePluck = (index) => {
-    //     selectPluck(index)
-    //     handleClose()
-    // }
+    const zoneArray = activePluck[showActivePluckModal.objectName]
 
     const [showCardMenu, setShowCardMenu] = useState(null)
 
@@ -92,9 +86,9 @@ function PlayAreaModal({
                 <div className="sim-modal2 topbar"
                 >
                     <div className={zoneArray.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>
-                        <h1 className="centered-h1">{showPlayAreaModal.name}</h1>
+                        <h1 className="centered-h1">{showActivePluckModal.name}</h1>
                         <div>
-                        <div className="card-pool-fill">
+                        <div className={zoneArray.length < 5 ? "card-pool-fill-hand" : "card-pool-fill"}>
                             {zoneArray.map((card, index) => {
                                 return (
                                     <div style={{display: "flex", justifyContent: "center"}}>
@@ -107,46 +101,45 @@ function PlayAreaModal({
                                                     }}
                                                 ><p>Resolve</p></div>
                                                 <div className="card-menu-item"
-                                                    onClick={() => {swapping.cardToSwap && swapping.zone === showPlayAreaModal.objectName?
+                                                    onClick={() => {swapping.cardToSwap && swapping.zone === showActivePluckModal.objectName?
                                                         setSwapping({cardToSwap: "", zone: "", index: null, zoneFaceDown: false}):
                                                         setSwapping({
                                                             cardToSwap: zoneArray[index],
-                                                            zone: showPlayAreaModal.objectName,
+                                                            zone: showActivePluckModal.objectName,
                                                             index: index,
-                                                            zoneFaceDown: faceDown[showPlayAreaModal.objectName]? true: false
                                                         })
-                                                        handleClose()}
+                                                        handleClose()
+                                                        setShowOwnershipModal(swapping.cardToSwap? false: true)}
                                                     }
-                                                ><p>Swap from Hand</p></div>
+                                                ><p>Swap from Reserve</p></div>
                                                 <div className="card-menu-item"
-                                                    onClick={() => {moving.cardToMove && moving.zone === showPlayAreaModal.objectName?
-                                                        setMoving({cardToMove: "", zone: "", index: null}):
-                                                        setMoving({
-                                                            cardToMove: zoneArray[index],
-                                                            zone: showPlayAreaModal.objectName,
+                                                    onClick={() => {movingPluck.pluckToMove && movingPluck.zone === showActivePluckModal.objectName?
+                                                        setMovingPluck({pluckToMove: "", zone: "", index: null}):
+                                                        setMovingPluck({
+                                                            pluckToMove: zoneArray[index],
+                                                            zone: showActivePluckModal.objectName,
                                                             index: index,
-                                                            zoneFaceDown: faceDown[showPlayAreaModal.objectName]? true: false
                                                         })
                                                         handleClose()}
                                                     }
-                                                ><p>{moving.cardToMove && moving.zone === showPlayAreaModal.objectName?
+                                                ><p>{movingPluck.pluckToMove && movingPluck.zone === showActivePluckModal.objectName?
                                                     "Cancel": "Move"}</p></div>
                                                 <div className="card-menu-item"
                                                     onClick={() => {
-                                                        addCardFromPlay(
+                                                        addPluckFromActivePluck(
                                                             zoneArray[index],
                                                             index,
-                                                            showPlayAreaModal.objectName)
+                                                            showActivePluckModal.objectName)
                                                         // handleClose()
                                                         setShowCardMenu(null)
                                                     }}
-                                                ><p>Return to Hand</p></div>
+                                                ><p>Return to Reserve</p></div>
                                                 <div className="card-menu-item"
                                                     onClick={() => {
-                                                        discardCard(
+                                                        discardPluck(
                                                             zoneArray[index],
                                                             index,
-                                                            showPlayAreaModal.objectName)
+                                                            showActivePluckModal.objectName)
                                                         setShowCardMenu(null)
                                                     }}
                                                 ><p>Discard</p></div>
@@ -156,10 +149,10 @@ function PlayAreaModal({
                                                 onClick={(event) => handleShowCardMenu(event, index)}
                                                 onContextMenu={(event) => handleShowCardMenu(event, index)}
                                                 onDoubleClick={() => {
-                                                    discardCard(
+                                                    discardPluck(
                                                         zoneArray[index],
                                                         index,
-                                                        showPlayAreaModal.objectName)
+                                                        showActivePluckModal.objectName)
                                                     setShowCardMenu(null)
                                                 }}
                                                 onMouseEnter={() => handleHoveredCard(card)}
@@ -192,4 +185,4 @@ function PlayAreaModal({
     )
 }
 
-export default PlayAreaModal
+export default OppActivePluckModal

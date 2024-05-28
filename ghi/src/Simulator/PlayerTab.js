@@ -11,7 +11,8 @@ function PlayerTab({
     decks,
     setDecks,
     gameStart,
-    resetPlayer
+    resetPlayer,
+    matchMake
 }){
 
     const gameState = useContext(GameStateContext)
@@ -215,6 +216,12 @@ function PlayerTab({
                             >
                                 Game Start
                             </button>
+                            {/* <button
+                                className='middle-button margin-left-3'
+                                onClick={matchMake}
+                            >
+                                Find opponents
+                            </button> */}
                             <button
                                 className="end-button red margin-left-3"
                                 onClick={() => {

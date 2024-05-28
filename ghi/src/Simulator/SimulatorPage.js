@@ -10,6 +10,7 @@ import CardInfoPanel from "./CardInfoPanel";
 import LogChatPanel from "./LogChatPanel";
 import { AuthContext } from "../context/AuthContext";
 import PlayerTab from "./PlayerTab";
+import OpponentTab from "./OpponentTab";
 
 
 function SimulatorPage(props) {
@@ -29,7 +30,12 @@ function SimulatorPage(props) {
         setShowExtra,
         volume,
         playingFaceDown,
-        setPlayingFaceDown
+        setPlayingFaceDown,
+        opponents,
+        setOpponents,
+        faceDown,
+        defending,
+        defendingCard
     } = useContext(GameStateContext)
 
     const {
@@ -106,10 +112,6 @@ function SimulatorPage(props) {
     } = props
 
     const {account} = useContext(AuthContext)
-
-    const {
-        position,
-    } = useContext(AppContext)
 
     const getCards = () => {
         const processedCards = []
@@ -189,6 +191,60 @@ function SimulatorPage(props) {
         }));
     }, [account, playerMainDeck, playerPluckDeck, hand, ownership, playArea, activePluck, discard, pluckDiscard]);
 
+    const matchMake = async() => {
+        console.log(opponents)
+        console.log("Finding opponents")
+        const opponent = {
+            name: "",
+            hp: 16,
+            mainDeck: [],
+            pluckDeck: [],
+            hand: [],
+            ownership: [],
+            mainDiscard: [],
+            pluckDiscard: [],
+            playArea:"",
+            activePluck: "",
+            focus: 0,
+            enthusiasm: 0,
+            mettle: 0,
+            secondWind: false,
+            playArea: "",
+            activePluck: "",
+            faceDown: "",
+            defending: "",
+            defendingCard: ""
+        }
+
+        for (let [key, value] of Object.entries(player)) {
+            console.log(key, value)
+            opponent[key] = value
+        }
+        const oppFaceDown = {}
+        for (let [key, value] of Object.entries(faceDown)) {
+            oppFaceDown[key] = value
+        }
+        opponent["faceDown"] = oppFaceDown
+        const oppDefending = {}
+        for (let [key, value] of Object.entries(defending)) {
+            oppDefending[key] = value
+        }
+        opponent["defending"] = oppDefending
+        const oppDefendingCard = {}
+        for (let [key, value] of Object.entries(defendingCard)) {
+            oppDefendingCard[key] = value
+        }
+        opponent["defendingCard"] = oppDefendingCard
+        console.log(opponent)
+        console.log("Opponent Found")
+        if (opponents.length < 3) {
+            setOpponents([...opponents, opponent])
+        }
+        console.log("Opponent Added")
+        console.log(opponents)
+    }
+
+
     return (
         <div className="flex-content simulator">
             <CardInfoPanel hoveredCard={hoveredCard}/>
@@ -199,18 +255,7 @@ function SimulatorPage(props) {
             </div>
             <div className="cd-inner">
                 <div className="flex-items space-around playersRow">
-                    <PlayerTab
-                        account={account}
-                        handleChangeDeck={handleChangeDeck}
-                        decks={decks}
-                        setDecks={setDecks}
-                        loading={loading}
-                        fillDecks={fillDecks}
-                        gameStart={gameStart}
-                        checkPlayer={checkPlayer}
-                        resetPlayer={resetPlayer}
-                    />
-                    {/* <div className="flex space-around" style={{width: "50%"}}>
+                    <span className="flex space-around" style={{minWidth: "70%"}}>
                         <PlayerTab
                             account={account}
                             handleChangeDeck={handleChangeDeck}
@@ -221,32 +266,18 @@ function SimulatorPage(props) {
                             gameStart={gameStart}
                             checkPlayer={checkPlayer}
                             resetPlayer={resetPlayer}
+                            matchMake={matchMake}
                         />
-                        <PlayerTab
-                            account={account}
-                            handleChangeDeck={handleChangeDeck}
-                            decks={decks}
-                            setDecks={setDecks}
-                            loading={loading}
-                            fillDecks={fillDecks}
-                            gameStart={gameStart}
-                            checkPlayer={checkPlayer}
-                            resetPlayer={resetPlayer}
-                        />
-                        <PlayerTab
-                            account={account}
-                            handleChangeDeck={handleChangeDeck}
-                            decks={decks}
-                            setDecks={setDecks}
-                            loading={loading}
-                            fillDecks={fillDecks}
-                            gameStart={gameStart}
-                            checkPlayer={checkPlayer}
-                            resetPlayer={resetPlayer}
-                        />
-                    </div> */}
+                        {opponents?.map((opponent, index) => {
+                            return (
+                                <OpponentTab
+                                    opponent={opponent}
+                                    oppIndex={index}
+                                />
+                            )})
+                        }
+                    </span>
                 </div>
-                {/* <p>{position.x}, {position.y}</p> */}
                 <div>
                     <GameBoard
                         playArea={player.playArea}

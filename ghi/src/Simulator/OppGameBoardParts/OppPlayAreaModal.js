@@ -7,7 +7,7 @@ import {
     flipSound
 } from "../Sounds/Sounds";
 
-function PlayAreaModal({
+function OppPlayAreaModal({
     // ownership,
     playArea,
     handleHoveredCard,
@@ -43,7 +43,6 @@ function PlayAreaModal({
                     // !event.target.closest(".cd-related-modal-card")
                 ) {
                     handleClose();
-                    setShowCardMenu(null)
                 }
             }
           // Adding click event listener
@@ -66,7 +65,6 @@ function PlayAreaModal({
 
     const handleShowCardMenu = (event, index) => {
         event.preventDefault()
-        menuSound(volume)
         showCardMenu === index?
         setShowCardMenu(null):
             setShowCardMenu(index)
@@ -94,7 +92,7 @@ function PlayAreaModal({
                     <div className={zoneArray.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>
                         <h1 className="centered-h1">{showPlayAreaModal.name}</h1>
                         <div>
-                        <div className="card-pool-fill">
+                        <div className={zoneArray.length < 5 ? "card-pool-fill-hand" : "card-pool-fill"}>
                             {zoneArray.map((card, index) => {
                                 return (
                                     <div style={{display: "flex", justifyContent: "center"}}>
@@ -192,4 +190,4 @@ function PlayAreaModal({
     )
 }
 
-export default PlayAreaModal
+export default OppPlayAreaModal
