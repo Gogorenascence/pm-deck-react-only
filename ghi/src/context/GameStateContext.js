@@ -247,6 +247,7 @@ const GameStateContextProvider = ({ children }) => {
     const [volume, setVolume] = useState(0.05)
 
     const [opponents, setOpponents] = useState([])
+    const [selectedOpp, setSelectedOpp] = useState(null)
 
     return (
         <GameStateContext.Provider value={{
@@ -293,7 +294,9 @@ const GameStateContextProvider = ({ children }) => {
             handleChangePosition,
             fieldStyle,
             opponents,
-            setOpponents
+            setOpponents,
+            selectedOpp,
+            setSelectedOpp
             }}>
             {children}
         </GameStateContext.Provider>

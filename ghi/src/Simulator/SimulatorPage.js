@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useRef } from "react";
 import { GameStateContext } from "../context/GameStateContext";
 import { SimulatorActionsContext } from "../context/SimulatorActionsContext";
 import { MainActionsContext } from "../context/MainActionsContext";
@@ -11,6 +11,8 @@ import LogChatPanel from "./LogChatPanel";
 import { AuthContext } from "../context/AuthContext";
 import PlayerTab from "./PlayerTab";
 import OpponentTab from "./OpponentTab";
+import OppGameBoard from "./OppGameBoard";
+import helper from "../QueryObjects/Helper";
 
 
 function SimulatorPage(props) {
@@ -35,7 +37,9 @@ function SimulatorPage(props) {
         setOpponents,
         faceDown,
         defending,
-        defendingCard
+        defendingCard,
+        selectedOpp,
+        setSelectedOpp
     } = useContext(GameStateContext)
 
     const {
@@ -113,6 +117,8 @@ function SimulatorPage(props) {
 
     const {account} = useContext(AuthContext)
 
+    const content = useRef(null)
+
     const getCards = () => {
         const processedCards = []
         for (let card of pre_processed_cards) {
@@ -189,7 +195,13 @@ function SimulatorPage(props) {
             mainDiscard: discard,
             pluckDiscard: pluckDiscard
         }));
+        console.log("dog")
     }, [account, playerMainDeck, playerPluckDeck, hand, ownership, playArea, activePluck, discard, pluckDiscard]);
+
+    // useEffect(() => {
+    //     console.log("dog")
+    // }, [opponents[0].playArea]);
+
 
     const matchMake = async() => {
         console.log(opponents)
@@ -216,22 +228,26 @@ function SimulatorPage(props) {
             defendingCard: ""
         }
 
-        for (let [key, value] of Object.entries(player)) {
+        const newPlayer = helper.deepCopy(player)
+        const newFaceDown = {...faceDown}
+        const newDefending = {...defending}
+        const newDefendingCard = {...defendingCard}
+        for (let [key, value] of Object.entries(newPlayer)) {
             console.log(key, value)
             opponent[key] = value
         }
         const oppFaceDown = {}
-        for (let [key, value] of Object.entries(faceDown)) {
+        for (let [key, value] of Object.entries(newFaceDown)) {
             oppFaceDown[key] = value
         }
         opponent["faceDown"] = oppFaceDown
         const oppDefending = {}
-        for (let [key, value] of Object.entries(defending)) {
+        for (let [key, value] of Object.entries(newDefending)) {
             oppDefending[key] = value
         }
         opponent["defending"] = oppDefending
         const oppDefendingCard = {}
-        for (let [key, value] of Object.entries(defendingCard)) {
+        for (let [key, value] of Object.entries(newDefendingCard)) {
             oppDefendingCard[key] = value
         }
         opponent["defendingCard"] = oppDefendingCard
@@ -244,9 +260,40 @@ function SimulatorPage(props) {
         console.log(opponents)
     }
 
+    const handleClose = async() => {
+        setSelectedOpp(null)
+        document.body.style.overflow = 'auto';
+    };
+
+    useOutsideAlerter(content)
+
+    function useOutsideAlerter(ref) {
+        useEffect(() => {
+          // Function for click event
+            function handleOutsideClick(event) {
+                if (ref.current && !ref.current.contains(event.target)
+                    && !event.target.closest(".playerTabBottom")
+                    && !event.target.closest(".playerTabTop")
+                    ) {
+                    handleClose();
+                }
+            }
+          // Adding click event listener
+            document.addEventListener("click", handleOutsideClick);
+                return () => document.removeEventListener("click", handleOutsideClick);
+        }, [ref]);
+    }
 
     return (
         <div className="flex-content simulator">
+            {selectedOpp?
+                <div className="medium-modal-dark2 topbar" ref={content}>
+                    <h2 className="aligned margin-top-0 margin-bottom-30">{selectedOpp.name}</h2>
+                    <OppGameBoard
+                        opponent={selectedOpp}
+                    />
+                </div>
+            : null}
             <CardInfoPanel hoveredCard={hoveredCard}/>
             <div className={prompt.message? "promptBar pointer": "noPromptBar"}
                 onClick={() => setPrompt({message: "", action: ""})}
@@ -273,6 +320,7 @@ function SimulatorPage(props) {
                                 <OpponentTab
                                     opponent={opponent}
                                     oppIndex={index}
+                                    setSelectedOpp={setSelectedOpp}
                                 />
                             )})
                         }

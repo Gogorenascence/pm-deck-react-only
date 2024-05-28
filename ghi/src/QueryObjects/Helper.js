@@ -172,6 +172,9 @@ const helper = {
             }
         }
         return true;
+    },
+    deepCopy: function deepCopy(obj) {
+        return JSON.parse(JSON.stringify(obj));
     }
 }
 

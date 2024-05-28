@@ -1,14 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import OppGameBoard from './OppGameBoard';
 
 
 function OpponentTab({
     opponent,
-    oppIndex
+    oppIndex,
+    setSelectedOpp
 }){
-    const content = useRef(null)
 
-    const [show, setShow] = useState(false);
 
     useEffect(() => {
 
@@ -16,34 +15,10 @@ function OpponentTab({
     // Empty dependency array means this effect runs once when the component mounts
 
     const handleShow = async() => {
-        setShow(true)
+        setSelectedOpp(opponent)
         console.log(opponent)
         document.body.style.overflow = 'hidden';
     };
-
-    const handleClose = async() => {
-        setShow(false)
-        document.body.style.overflow = 'auto';
-    };
-
-    useOutsideAlerter(content)
-
-    function useOutsideAlerter(ref) {
-        useEffect(() => {
-          // Function for click event
-            function handleOutsideClick(event) {
-                if (ref.current && !ref.current.contains(event.target)
-                    && !event.target.closest(".playerTabBottom")
-                    && !event.target.closest(".playerTabTop")
-                    ) {
-                    handleClose();
-                }
-            }
-          // Adding click event listener
-            document.addEventListener("click", handleOutsideClick);
-                return () => document.removeEventListener("click", handleOutsideClick);
-        }, [ref]);
-    }
 
     const colors = {
         "0": "rgba(3, 131, 78, 0.589)",
@@ -94,14 +69,14 @@ function OpponentTab({
                     <h5 className="playerTabTitle2">{opponent.enthusiasm}</h5>
                 </div>
             </span>
-            {show ?
+            {/* {show ?
                 <div className="medium-modal-dark2 topbar" ref={content}>
                     <h2 className="aligned margin-top-0 margin-bottom-30">{opponent.name}</h2>
                     <OppGameBoard
                         opponent={opponent}
                     />
                 </div>
-            : null}
+            : null} */}
         </div>
     )
 }

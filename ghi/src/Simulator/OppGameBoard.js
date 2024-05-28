@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext} from "react";
+import { useState, useContext } from "react";
 import { SimulatorActionsContext } from "../context/SimulatorActionsContext";
 import {
     OppPlayAreaZone,
@@ -14,7 +14,7 @@ import OppPluckDiscard from "./OppGameBoardParts/OppPluckDiscard";
 
 
 function OppGameBoard({
-    opponent
+    opponent,
 }) {
 
     const { handleHoveredCard } = useContext(SimulatorActionsContext)
