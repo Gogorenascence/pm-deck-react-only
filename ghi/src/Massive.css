@@ -3580,6 +3580,10 @@ button:disabled {
   padding-left: 3px;
 }
 
+.auto-complete-item:hover {
+  border: #000 solid 1px;
+}
+
 .sim-scrollbar::-webkit-scrollbar {
   width: 10px;
   height: 10px;
