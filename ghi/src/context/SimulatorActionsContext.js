@@ -81,22 +81,18 @@ const SimulatorActionsContextProvider = ({ children }) => {
         }
     };
 
-    const fillDecks = () => {
-        if (selectedMainDeck.cards.length > 0) {
-            const filledMainDeck = selectedMainDeck.cards.map(cardNumber =>
-                cards.find(card => card.card_number === cardNumber)
-            );
-            const filledPluckDeck = selectedPluckDeck.cards.map(cardNumber =>
-                cards.find(card => card.card_number === cardNumber)
-            );
-            setPlayerMainDeck({name: selectedMainDeck.name, cards: filledMainDeck})
-            setPlayerPluckDeck({name: selectedPluckDeck.name, cards: filledPluckDeck})
-            equipSound(volume)
-            addToLog("System", "system", `${selectedMainDeck.name} selected`)
-        } else {
-            addToLog("System", "system", "No deck selected")
-        }
-    }
+    const simulateDeck = async(deck) => {
+        const filledMainDeck = deck.cards.map(cardNumber =>
+            cards.find(card => card.card_number === cardNumber)
+        );
+        const filledPluckDeck = deck.pluck.map(cardNumber =>
+            cards.find(card => card.card_number === cardNumber)
+        );
+        setPlayerMainDeck({name: deck.name, cards: filledMainDeck})
+        setPlayerPluckDeck({name: deck.name, cards: filledPluckDeck})
+        equipSound(volume)
+        addToLog("System", "system", `${deck.name} selected`)
+    };
 
     const allPlayerPluck = player.activePluck.slot_1?.length +
         player.activePluck.slot_2?.length +
@@ -229,13 +225,13 @@ const SimulatorActionsContextProvider = ({ children }) => {
             shufflingPluck,
             setShufflingPluck,
             handleChangeDeck,
-            fillDecks,
             allPlayerPluck,
             gameStart,
             checkPlayer,
             resetPlayer,
             mute,
-            handleHoveredCard
+            handleHoveredCard,
+            simulateDeck
         }}>
             {children}
         </SimulatorActionsContext.Provider>

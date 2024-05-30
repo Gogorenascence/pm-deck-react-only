@@ -65,11 +65,9 @@ function SimulatorPage(props) {
         showCardMenu,
         showPluckMenu,
         setShowPluckMenu,
-        loading,
         shuffling,
         shufflingPluck,
         handleChangeDeck,
-        fillDecks,
         gameStart,
         checkPlayer,
         resetPlayer,
@@ -331,8 +329,6 @@ function SimulatorPage(props) {
                             handleChangeDeck={handleChangeDeck}
                             decks={decks}
                             setDecks={setDecks}
-                            loading={loading}
-                            fillDecks={fillDecks}
                             gameStart={gameStart}
                             checkPlayer={checkPlayer}
                             resetPlayer={resetPlayer}

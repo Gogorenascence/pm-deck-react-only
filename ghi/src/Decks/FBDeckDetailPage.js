@@ -401,9 +401,7 @@ function FBDeckDetailPage(props) {
                             </button>
                         </NavLink>
                         <SimulateButton
-                            deckName={deck.name}
-                            main_list={deck.cards}
-                            pluck_list={deck.pluck}
+                            deck={deck}
                             />
                         <BackButton/>
                     </div>
