@@ -301,13 +301,13 @@ function NavBar() {
               }
             </li>
             <li className="nav-item">
-              <div className="navbar-select pointer">
-                <NavLink className="username2" to="/simulator">
-                  <h5 className="navbar-menu-item">
-                    Simulator
-                  </h5>
-                </NavLink>
-              </div>
+              <NavLink className="username2" to="/simulator">
+                <div className="navbar-select pointer">
+                    <h5 className="navbar-menu-item">
+                      Simulator
+                    </h5>
+                </div>
+              </NavLink>
             </li>
             {/* <li className="nav-item">
                 <NavLink className="username2" to="/simulator" onClick={() => followLink()}>

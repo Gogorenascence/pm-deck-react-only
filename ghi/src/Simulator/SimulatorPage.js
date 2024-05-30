@@ -201,11 +201,6 @@ function SimulatorPage(props) {
         console.log("dog")
     }, [account, playerMainDeck, playerPluckDeck, hand, ownership, playArea, activePluck, discard, pluckDiscard]);
 
-    // useEffect(() => {
-    //     console.log("dog")
-    // }, [opponents[0].playArea]);
-
-
     const matchMake = async() => {
         console.log(opponents)
         console.log("Finding opponents")

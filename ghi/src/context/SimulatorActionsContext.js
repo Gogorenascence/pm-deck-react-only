@@ -1,18 +1,11 @@
 import { createContext, useState, useContext } from "react";
 import { GameStateContext } from "./GameStateContext";
 import {
-    specialSound,
-    destroySound,
-    shuffleSound,
-    summonSound,
-    drawSound,
     gainSound,
     activateSound,
     discardSound,
-    menuSound,
     startSound,
     equipSound,
-    flipSound
 } from "../Sounds/Sounds";
 
 const SimulatorActionsContext = createContext();
