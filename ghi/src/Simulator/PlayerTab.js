@@ -116,6 +116,9 @@ function PlayerTab({
     const handleSecondWind = () => {
         const newPlayer = {...gameState.player}
         newPlayer["secondWind"] = !newPlayer["secondWind"]
+        if (newPlayer["secondWind"] === true) {
+            soundPlayer.startSound(gameState.volume)
+        }
         gameState.setPlayer(newPlayer)
     }
 
