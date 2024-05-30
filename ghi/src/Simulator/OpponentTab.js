@@ -51,27 +51,32 @@ function OpponentTab({
                         />
                         <h5 className="playerTabTitle2">{opponent.hp}</h5>
                     </span>
-                    <img
-                        className='logo2'
-                        src='mettle.png'
-                        title='Mettle'
-                        alt='mettle'
-                    />
-                    <h5 className="playerTabTitle2">{opponent.mettle}</h5>
-                    <img
-                        className='logo2'
-                        src='focus3.png'
-                        title='Focus'
-                        alt='focus'
-                    />
-                    <h5 className="playerTabTitle2">+{opponent.focus}</h5>
-                    <img
-                        className='logo2'
-                        src='enth.png'
-                        title='Enthusiasm'
-                        alt='enthusiasm'
-                    />
-                    <h5 className="playerTabTitle2">{opponent.enthusiasm}</h5>
+                    <span
+                        className='flex-items'
+                        onClick={() => handleShow()}
+                    >
+                        <img
+                            className='logo2'
+                            src='mettle.png'
+                            title='Mettle'
+                            alt='mettle'
+                        />
+                        <h5 className="playerTabTitle2">{opponent.mettle}</h5>
+                        <img
+                            className='logo2'
+                            src='focus3.png'
+                            title='Focus'
+                            alt='focus'
+                        />
+                        <h5 className="playerTabTitle2">+{opponent.focus}</h5>
+                        <img
+                            className='logo2'
+                            src='enth.png'
+                            title='Enthusiasm'
+                            alt='enthusiasm'
+                        />
+                        <h5 className="playerTabTitle2">{opponent.enthusiasm}</h5>
+                    </span>
                 </div>
             </span>
             {/* {show ?

@@ -28,6 +28,30 @@ const turnSorter = {
             return this.getDiceRoll(6) - this.getDiceRoll(6);
         })
         return players;
+    },
+    getPriority: function (player, opponents) {
+        const players = [...opponents, player]
+        const sortedPlayers = this.sortPlayers(players)
+        const playerIndex = sortedPlayers.indexOf(player)
+        const orders = {
+            0: "First",
+            1: "Second",
+            2: "Third",
+            3: "Last"
+        }
+        return orders[playerIndex]
+    },
+    getOppPriority: function (opp, player, opponents) {
+        const players = [...opponents, player]
+        const sortedPlayers = this.sortPlayers(players)
+        const oppIndex = sortedPlayers.indexOf(opp)
+        const orders = {
+            0: "First",
+            1: "Second",
+            2: "Third",
+            3: "Last"
+        }
+        return orders[oppIndex]
     }
 }
 

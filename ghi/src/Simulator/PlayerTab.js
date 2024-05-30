@@ -142,20 +142,9 @@ function PlayerTab({
     }
 
     const handleEnthusiasm = (event) => {
-        gameState.setPlayer({...gameState.player, enthusiasm: event.target.value})
-    }
-
-    const getPriority = () => {
-        const players = [...gameState.opponents, gameState.player]
-        const sortedPlayers = turnSorter.sortPlayers(players)
-        const playerIndex = sortedPlayers.indexOf(gameState.player)
-        const orders = {
-            0: "First",
-            1: "Second",
-            2: "Third",
-            3: "Last"
-        }
-        return orders[playerIndex]
+        event.target.value?
+            gameState.setPlayer({...gameState.player, enthusiasm: event.target.value}):
+            gameState.setPlayer({...gameState.player, enthusiasm: 0 })
     }
 
     useEffect(() => {
@@ -410,7 +399,10 @@ function PlayerTab({
                                     style={{width: "150px"}}
                                 >
                                     <p className='m-l-r-5'>
-                                        {getPriority()}
+                                        {turnSorter.getPriority(
+                                            gameState.player,
+                                            gameState.opponents
+                                        )}
                                     </p>
                                 </div>
                             </span>

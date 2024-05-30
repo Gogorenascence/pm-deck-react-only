@@ -13,6 +13,7 @@ import OpponentTab from "./OpponentTab";
 import OppGameBoard from "./OppGameBoard";
 import OppDefendingCard from "./OppGameBoardParts/OppDefendingCard";
 import helper from "../QueryObjects/Helper";
+import turnSorter from "./TurnSorter";
 
 
 function SimulatorPage(props) {
@@ -293,7 +294,16 @@ function SimulatorPage(props) {
                 <>
                     {selectedOpp?
                         <div className="medium-modal-dark2 topbar" ref={content}>
-                            <h2 className="aligned margin-top-0 margin-bottom-30">{selectedOpp.name}</h2>
+                            <h2 className="aligned margin-top-0 margin-bottom-10">
+                                {selectedOpp.name}
+                            </h2>
+                            <h3 className="aligned margin-top-0 margin-bottom-30">
+                                Priority: {turnSorter.getOppPriority(
+                                    selectedOpp,
+                                    player,
+                                    opponents
+                                )}
+                            </h3>
                             <OppGameBoard
                                 opponent={selectedOpp}
                             />
