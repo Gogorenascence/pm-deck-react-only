@@ -3,7 +3,6 @@ import { GameStateContext } from "../context/GameStateContext";
 import { SimulatorActionsContext } from "../context/SimulatorActionsContext";
 import { MainActionsContext } from "../context/MainActionsContext";
 import { PluckActionsContext } from "../context/PluckActionsContext";
-import { AppContext } from "../context/AppContext";
 import GameBoard from "./GameBoard";
 import PositionSlider from "./PositionSlider";
 import CardInfoPanel from "./CardInfoPanel";
@@ -12,6 +11,7 @@ import { AuthContext } from "../context/AuthContext";
 import PlayerTab from "./PlayerTab";
 import OpponentTab from "./OpponentTab";
 import OppGameBoard from "./OppGameBoard";
+import OppDefendingCard from "./OppGameBoardParts/OppDefendingCard";
 import helper from "../QueryObjects/Helper";
 
 
@@ -39,7 +39,9 @@ function SimulatorPage(props) {
         defending,
         defendingCard,
         selectedOpp,
-        setSelectedOpp
+        setSelectedOpp,
+        selectedOppCard,
+        setSelectedOppCard
     } = useContext(GameStateContext)
 
     const {
@@ -262,6 +264,7 @@ function SimulatorPage(props) {
 
     const handleClose = async() => {
         setSelectedOpp(null)
+        setSelectedOppCard(null)
         document.body.style.overflow = 'auto';
     };
 
@@ -286,13 +289,28 @@ function SimulatorPage(props) {
 
     return (
         <div className="flex-content simulator">
-            {selectedOpp?
-                <div className="medium-modal-dark2 topbar" ref={content}>
-                    <h2 className="aligned margin-top-0 margin-bottom-30">{selectedOpp.name}</h2>
-                    <OppGameBoard
-                        opponent={selectedOpp}
-                    />
-                </div>
+            {selectedOpp || selectedOppCard?
+                <>
+                    {selectedOpp?
+                        <div className="medium-modal-dark2 topbar" ref={content}>
+                            <h2 className="aligned margin-top-0 margin-bottom-30">{selectedOpp.name}</h2>
+                            <OppGameBoard
+                                opponent={selectedOpp}
+                            />
+                        </div>: null
+                    }
+                    {selectedOppCard?
+                        <div className="small-modal-dark topbar flex-content" ref={content}>
+                            <span>
+                                <h2 className="aligned margin-top-0 margin-bottom-10">Defending Card</h2>
+                                <h3 className="aligned margin-top-0 margin-bottom-30">{selectedOppCard.owner}</h3>
+                                <OppDefendingCard
+                                    opponentCard={selectedOppCard}
+                                    />
+                            </span>
+                        </div>: null
+                    }
+                </>
             : null}
             <CardInfoPanel hoveredCard={hoveredCard}/>
             <div className={prompt.message? "promptBar pointer": "noPromptBar"}
@@ -321,6 +339,7 @@ function SimulatorPage(props) {
                                     opponent={opponent}
                                     oppIndex={index}
                                     setSelectedOpp={setSelectedOpp}
+                                    setSelectedOppCard={setSelectedOppCard}
                                 />
                             )})
                         }

@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import OppGameBoard from './OppGameBoard';
 
 
 function OpponentTab({
     opponent,
     oppIndex,
-    setSelectedOpp
+    setSelectedOpp,
+    setSelectedOppCard
 }){
-
-
-    useEffect(() => {
-
-    }, []);
-    // Empty dependency array means this effect runs once when the component mounts
 
     const handleShow = async() => {
         setSelectedOpp(opponent)
         console.log(opponent)
+        document.body.style.overflow = 'hidden';
+    };
+
+    const handleShowDefending = async() => {
+        if (opponent.defendingCard.card !== "") {
+            console.log("Opponent", opponent.defendingCard)
+            setSelectedOppCard(opponent.defendingCard)
+        }
         document.body.style.overflow = 'hidden';
     };
 
@@ -36,16 +38,19 @@ function OpponentTab({
                 >
                     <h5 className="playerTabTitle">{opponent.name}</h5>
                 </div>
-                <div className="playerTabBottom flex-full"
-                onClick={() => handleShow()}
-                >
-                    <img
-                        className='logo7'
-                        src='heart.png'
-                        title='HP'
-                        alt='heart'
-                    />
-                    <h5 className="playerTabTitle2">{opponent.hp}</h5>
+                <div className="playerTabBottom flex-full">
+                    <span
+                        className='flex-items'
+                        onClick={() => handleShowDefending()}
+                    >
+                        <img
+                            className='logo7'
+                            src='heart.png'
+                            title='HP'
+                            alt='heart'
+                        />
+                        <h5 className="playerTabTitle2">{opponent.hp}</h5>
+                    </span>
                     <img
                         className='logo2'
                         src='mettle.png'

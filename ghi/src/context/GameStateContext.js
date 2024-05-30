@@ -102,8 +102,8 @@ const GameStateContextProvider = ({ children }) => {
                 counter: 0,
                 endure: 0,
                 redirect: 0,
-                slot: ""
-
+                slot: "",
+                owner: player.name
             }
             if (playArea[slot][0]) {
                 const card = playArea[slot][0]
@@ -129,7 +129,8 @@ const GameStateContextProvider = ({ children }) => {
                 counter: 0,
                 endure: 0,
                 redirect: 0,
-                slot: ""
+                slot: "",
+                owner: player.name
             })
         }
     }
@@ -248,6 +249,7 @@ const GameStateContextProvider = ({ children }) => {
 
     const [opponents, setOpponents] = useState([])
     const [selectedOpp, setSelectedOpp] = useState(null)
+    const [selectedOppCard, setSelectedOppCard] = useState(null)
 
     return (
         <GameStateContext.Provider value={{
@@ -296,7 +298,9 @@ const GameStateContextProvider = ({ children }) => {
             opponents,
             setOpponents,
             selectedOpp,
-            setSelectedOpp
+            setSelectedOpp,
+            selectedOppCard,
+            setSelectedOppCard
             }}>
             {children}
         </GameStateContext.Provider>
