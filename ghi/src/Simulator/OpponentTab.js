@@ -8,13 +8,15 @@ function OpponentTab({
     setSelectedOppCard
 }){
 
-    const handleShow = async() => {
+    const handleShow = async(event) => {
+        event.preventDefault()
         setSelectedOpp(opponent)
         console.log(opponent)
         document.body.style.overflow = 'hidden';
     };
 
-    const handleShowDefending = async() => {
+    const handleShowDefending = async(event) => {
+        event.preventDefault()
         if (opponent.defendingCard.card !== "") {
             console.log("Opponent", opponent.defendingCard)
             setSelectedOppCard(opponent.defendingCard)
@@ -32,16 +34,24 @@ function OpponentTab({
         <div>
             <span className='pointer'>
                 <div
-                    className="playerTabTop flex-full"
-                    onClick={() => handleShow()}
+                    className="playerTabTop2 flex-full"
+                    onClick={(event) => handleShow(event)}
+                    onContextMenu={(event) => handleShow(event)}
                     style={{ backgroundColor: `${ opponent.hp < 5? "#ff0000b7": colors[oppIndex.toString()]}` }}
                 >
                     <h5 className="playerTabTitle">{opponent.name}</h5>
                 </div>
-                <div className="playerTabBottom flex-full">
+                <div className="playerTabBottom2 flex-full">
                     <span
                         className='flex-items'
-                        onClick={() => handleShowDefending()}
+                        onClick={(event) => { opponent.defendingCard.card?
+                            handleShowDefending(event):
+                            handleShow(event)
+                        }}
+                        onContextMenu={(event) => { opponent.defendingCard.card?
+                            handleShowDefending(event):
+                            handleShow(event)
+                        }}
                     >
                         <img
                             className='logo7'
@@ -53,7 +63,8 @@ function OpponentTab({
                     </span>
                     <span
                         className='flex-items'
-                        onClick={() => handleShow()}
+                        onClick={(event) => handleShow(event)}
+                        onContextMenu={(event) => handleShow(event)}
                     >
                         <img
                             className='logo2'
@@ -79,31 +90,8 @@ function OpponentTab({
                     </span>
                 </div>
             </span>
-            {/* {show ?
-                <div className="medium-modal-dark2 topbar" ref={content}>
-                    <h2 className="aligned margin-top-0 margin-bottom-30">{opponent.name}</h2>
-                    <OppGameBoard
-                        opponent={opponent}
-                    />
-                </div>
-            : null} */}
         </div>
     )
 }
 
 export default OpponentTab;
-
-
-{/* <div className='margin-10 flex-full'>
-                            <button className="front-button" onClick={fillDecks}>Get Deck</button>
-                            {gameState.player.mainDeck.length > 0 ?
-                                <>
-                                    <button className="middle-button" onClick={!gameState.game? gameStart: resetPlayer}>{!gameState.game? "Game Start": "Reset Player"}</button>
-                                </>:null
-                            }
-                            <button className="end-button" onClick={checkPlayer}>Player Info</button>
-                        </div> */}
-
-                                            {/* <div className={loading && decks.length < 1? "deckSelect2": "hidden2"}>
-                        <p>Loading decks...</p>
-                    </div> */}

@@ -30,7 +30,8 @@ const SimulatorActionsContextProvider = ({ children }) => {
         volume,
         setVolume,
         addToLog,
-        defendingCard
+        defendingCard,
+        setOpponents
     } = useContext(GameStateContext)
 
     const [selectedMainDeck, setSelectedMainDeck] = useState({
@@ -87,7 +88,7 @@ const SimulatorActionsContextProvider = ({ children }) => {
         }
     };
 
-    const fillDecks = (event) => {
+    const fillDecks = () => {
         if (selectedMainDeck.cards.length > 0) {
             const filledMainDeck = selectedMainDeck.cards.map(cardNumber =>
                 cards.find(card => card.card_number === cardNumber)
@@ -181,6 +182,7 @@ const SimulatorActionsContextProvider = ({ children }) => {
         })
         setGame(false)
         addToLog("System", "system", "Player was reset")
+        setOpponents([])
     }
 
     const mute = () => {

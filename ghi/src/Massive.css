@@ -2175,7 +2175,28 @@ button:disabled {
   /* top: 90px; */
 }
 
-.playerTabTitle {
+.playerTabBottom2 {
+  /* position: absolute; */
+  height: 40px;
+  width: 100%;
+  background-color: #4d475e9a;
+  outline: 1px white solid;
+  border-radius: 0 0 7px 7px;
+  margin: 0;
+  top: 42px;
+}
+
+.playerTabTop2 {
+  /* position: absolute; */
+  height: 40px;
+  width: 280px;
+  background-color: #000000b7;
+  outline: 1px white solid;
+  margin: 0;
+  /* top: 90px; */
+}
+
+.playerTabTitle2 {
   padding: 0 1px 0 10px;
   margin: 0;
 }

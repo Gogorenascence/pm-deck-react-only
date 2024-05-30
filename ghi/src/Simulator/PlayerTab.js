@@ -74,7 +74,8 @@ function PlayerTab({
         }
     }, [account])
 
-    const handleShow = async(section) => {
+    const handleShow = async(event, section) => {
+        event.preventDefault()
         setShow(section)
         document.body.style.overflow = 'hidden';
     };
@@ -163,13 +164,18 @@ function PlayerTab({
             <span className='pointer'>
                 <div
                     className="playerTabTop flex-full"
-                    onClick={() => handleShow("player")}
+                    onClick={(event) => handleShow(event, "player")}
+                    onContextMenu={(event) => handleShow(event, "player")}
                     style={gameState.player.hp < 5 || gameState.player.secondWind?{ backgroundColor: "#ff0000b7"}: null}
                 >
                     <h5 className="playerTabTitle">{gameState.player.name}</h5>
                 </div>
                 <div className="playerTabBottom flex-full">
-                    <span className='flex-items' onClick={() => handleShow("health")}>
+                    <span
+                        className='flex-items'
+                        onClick={(event) => handleShow(event, "health")}
+                        onContextMenu={(event) => handleShow(event, "health")}
+                    >
                         <img
                             className='logo7'
                             src='heart.png'
@@ -178,7 +184,11 @@ function PlayerTab({
                         />
                         <h5 className="playerTabTitle2">{gameState.player.hp}</h5>
                     </span>
-                    <span className='flex-items' onClick={() => handleShow("mettle")}>
+                    <span
+                        className='flex-items'
+                        onClick={(event) => handleShow(event, "mettle")}
+                        onContextMenu={(event) => handleShow(event, "mettle")}
+                    >
                         <img
                             className='logo2'
                             src='mettle.png'
@@ -187,7 +197,11 @@ function PlayerTab({
                             />
                         <h5 className="playerTabTitle2">{gameState.player.mettle}</h5>
                     </span>
-                    <span className='flex-items' onClick={() => handleShow("focus")}>
+                    <span
+                        className='flex-items'
+                        onClick={(event) => handleShow(event, "focus")}
+                        onContextMenu={(event) => handleShow(event, "focus")}
+                    >
                         <img
                             className='logo2'
                             src='focus3.png'
@@ -200,7 +214,11 @@ function PlayerTab({
                                 : gameState.player.focus}
                         </h5>
                     </span>
-                    <span className='flex-items' onClick={() => handleShow("enth")}>
+                    <span
+                        className='flex-items'
+                        onClick={(event) => handleShow(event, "enth")}
+                        onContextMenu={(event) => handleShow(event, "enth")}
+                    >
                         <img
                             className='logo2'
                             src='enth.png'

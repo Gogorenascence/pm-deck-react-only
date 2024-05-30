@@ -276,8 +276,8 @@ function SimulatorPage(props) {
           // Function for click event
             function handleOutsideClick(event) {
                 if (ref.current && !ref.current.contains(event.target)
-                    && !event.target.closest(".playerTabBottom")
-                    && !event.target.closest(".playerTabTop")
+                    && !event.target.closest(".playerTabBottom2")
+                    && !event.target.closest(".playerTabTop2")
                     ) {
                     handleClose();
                 }
