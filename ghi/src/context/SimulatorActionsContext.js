@@ -62,12 +62,20 @@ const SimulatorActionsContextProvider = ({ children }) => {
         const deckFound = decks.find(deck => deck.id === deckID)
         console.log(deckFound)
         if (deckFound !== undefined) {
-            const filledMainDeck = deckFound.cards.map(cardNumber =>
-                cards.find(card => card.card_number === cardNumber)
-            );
-            const filledPluckDeck = deckFound.pluck.map(cardNumber =>
-                cards.find(card => card.card_number === cardNumber)
-            );
+            const filledMainDeck = []
+            for (let cardNumber of deckFound.cards) {
+                const card = cards.find(card => card.card_number === cardNumber)
+                if (card) {
+                    filledMainDeck.push(card)
+                }
+            }
+            const filledPluckDeck = []
+            for (let cardNumber of deckFound.pluck) {
+                const card = cards.find(card => card.card_number === cardNumber)
+                if (card) {
+                    filledPluckDeck.push(card)
+                }
+            }
             setPlayerMainDeck({name: deckFound.name, cards: filledMainDeck})
             setPlayerPluckDeck({name: deckFound.name, cards: filledPluckDeck})
             equipSound(volume)
@@ -82,12 +90,20 @@ const SimulatorActionsContextProvider = ({ children }) => {
     };
 
     const simulateDeck = async(deck) => {
-        const filledMainDeck = deck.cards.map(cardNumber =>
-            cards.find(card => card.card_number === cardNumber)
-        );
-        const filledPluckDeck = deck.pluck.map(cardNumber =>
-            cards.find(card => card.card_number === cardNumber)
-        );
+        const filledMainDeck = []
+        for (let cardNumber of deck.cards) {
+            const card = cards.find(card => card.card_number === cardNumber)
+            if (card) {
+                filledMainDeck.push(card)
+            }
+        }
+        const filledPluckDeck = []
+        for (let cardNumber of deck.pluck) {
+            const card = cards.find(card => card.card_number === cardNumber)
+            if (card) {
+                filledPluckDeck.push(card)
+            }
+        }
         setPlayerMainDeck({name: deck.name, cards: filledMainDeck})
         setPlayerPluckDeck({name: deck.name, cards: filledPluckDeck})
         equipSound(volume)

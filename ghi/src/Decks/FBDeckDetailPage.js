@@ -402,7 +402,7 @@ function FBDeckDetailPage(props) {
                         </NavLink>
                         <SimulateButton
                             deck={deck}
-                            />
+                        />
                         <BackButton/>
                     </div>
                     <StatsPanel
