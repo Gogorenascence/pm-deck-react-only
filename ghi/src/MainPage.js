@@ -11,6 +11,8 @@ function MainPage({
   articles
 }) {
 
+  document.body.style.overflow = 'auto';
+
     return (
       <div>
         <h1 className="media-title">Welcome to PlayMaker CardBase</h1>

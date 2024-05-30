@@ -365,31 +365,6 @@ function FBDeckDetailPage(props) {
                                 List View
                             </button>
                         }
-                        <button
-                                className="left none"
-                                onClick={getShuffledDeck}
-                                style={{marginLeft: ".5%"}}
-                                >
-                                Test Hand
-                        </button>
-                        {shuffledDeck.length > 0 ?
-                            <>
-                                <button
-                                    className="left"
-                                    onClick={mulligan}
-                                    style={{marginLeft: ".5%"}}
-                                    >
-                                    Mulligan
-                                </button>
-                                <button
-                                    className="left"
-                                    onClick={clearShuffledDeck}
-                                    style={{marginLeft: ".5%", width: '108px', textAlign: "center"}}
-                                    >
-                                    Hide Hand
-                                </button>
-                            </>: null
-                        }
                         <DeckExport deck_id={deck_id} deck={deck} main_list={main_list} pluck_list={pluck_list}/>
                         <DeckSheetPage name={deck.name} main_list={main_list} pluck_list={pluck_list}/>
                         <NavLink to={`/decks/${deck.id}/copy`}>
