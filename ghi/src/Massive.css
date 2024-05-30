@@ -2168,7 +2168,7 @@ button:disabled {
 .playerTabTop {
   /* position: absolute; */
   height: 40px;
-  width: 100%;
+  width: 280px;
   background-color: #000000b7;
   outline: 1px white solid;
   margin: 0;
@@ -2550,6 +2550,14 @@ button:disabled {
   border: 1px solid white;
 }
 
+.panel-card2 {
+  max-width: 230px;
+  margin: 5px 0 10px 0;
+  border-radius: 4%;
+  overflow: hidden;
+  border: 1px solid white;
+}
+
 .panel-text-box {
   margin: 10px;
   height: 175px;
@@ -2851,6 +2859,10 @@ button:disabled {
   right: 1px;
   transition: all 0.5s;
   z-index: 10;
+}
+
+.margin-left-none {
+  margin-left: 0;
 }
 
 .margin-left-3 {

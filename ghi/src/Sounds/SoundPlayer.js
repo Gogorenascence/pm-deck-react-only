@@ -13,6 +13,7 @@ import flip from "./flip.wav"
 import damage from "./damage.wav"
 import roll from "./diceroll.mp3"
 import chat from "./chatmessage.wav"
+import coin from "./coinflip.wav"
 
 
 const soundPlayer = {
@@ -88,6 +89,11 @@ const soundPlayer = {
     },
     chatSound: function chatSound(volume) {
         const audio = new Audio(chat);
+        audio.volume = volume
+        audio.play()
+    },
+    coinSound: function coinSound(volume) {
+        const audio = new Audio(coin);
         audio.volume = volume
         audio.play()
     },

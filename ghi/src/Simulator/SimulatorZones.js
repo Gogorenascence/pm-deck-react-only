@@ -27,7 +27,9 @@ discardCard
         volume,
         addToLog,
         activating,
-        handleActivating
+        handleActivating,
+        defending,
+        defendingCard
     } = useContext(GameStateContext)
 
     const {

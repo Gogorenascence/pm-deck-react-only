@@ -6,6 +6,14 @@
 Note when player is checking a player display
 <!-- toggle for extra slots -->
 defending cards and tokens
+                            onMouseEnter={() => {
+                                console.log(defending, defendingCard)
+                                if (!defending === objectName) {
+                                    handleHoveredCard(zoneArray[0])
+                                } else {
+                                    handleHoveredCard(defendingCard)
+                                }
+                            }}
 <!-- return cards to the hand -->
 <!-- send cards to the discard pile -->
 <!-- return cards to deck -->

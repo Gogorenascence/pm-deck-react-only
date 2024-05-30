@@ -19,7 +19,6 @@ function DamageRow() {
     const {discardCard} = useContext(MainActionsContext)
     const [damage, setDamage] = useState("")
     const [gain, setGain] = useState(false)
-    const [defender, setDefender] = useState("self")
 
     const handleDamage = (event) => {
         setDamage(event.target.value)
@@ -29,9 +28,8 @@ function DamageRow() {
         setGain(!gain)
     }
 
-    const takeDamage = (event) => {
-        if (event.key === "Enter" && !event.shiftKey && /^(-)?\d+$/.test(damage)) {
-            event.preventDefault();
+    const takeDamage = (defender) => {
+        if (/^(-)?\d+$/.test(damage)) {
             const damageTaken = !gain? parseInt(damage, 10): parseInt(damage, 10) * -1;
             console.log(damageTaken)
             if (defender === "self"){
@@ -103,17 +101,14 @@ function DamageRow() {
                     onChange={handleDamage}
                     placeholder="Damage"
                     className="healthTracker4"
-                    onKeyDown={takeDamage}
                 ></input>
                 <button
-                    className={`healthTracker5 middle-button ${defender === "self"?
-                    "red": null}`}
-                    onClick={()=>setDefender("self")}
+                    className="healthTracker5 middle-button"
+                    onClick={()=> takeDamage("self")}
                 >Self</button>
                 <button
-                    className={`healthTracker5 end-button ${defender === "card"?
-                    "red": null}`}
-                    onClick={()=>setDefender("card")}
+                    className="healthTracker5 end-button"
+                    onClick={()=> takeDamage("card")}
                 >Card</button>
             </div>
         </div>

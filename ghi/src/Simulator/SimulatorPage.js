@@ -302,7 +302,7 @@ function SimulatorPage(props) {
             </div>
             <div className="cd-inner">
                 <div className="flex-items space-around playersRow">
-                    <span className="flex space-around" style={{minWidth: "70%"}}>
+                    <span className="flex space-around" style={{minWidth: "75%"}}>
                         <PlayerTab
                             account={account}
                             handleChangeDeck={handleChangeDeck}
