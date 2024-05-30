@@ -106,7 +106,7 @@ function SimPluckSearchModal({
                 <div className="sim-modal topbar"
                 >
                     <div className={pluckDiscard.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>
-                        <h1 className="centered-h1">Discard Pile</h1>
+                        <h1 className="centered-h1">Pluck Discard Pile</h1>
                         <div>
                         <div className="card-pool-fill">
                             {pluckDiscard.slice().reverse().map((card, index) => {

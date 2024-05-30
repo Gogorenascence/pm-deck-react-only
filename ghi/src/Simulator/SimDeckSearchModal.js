@@ -123,7 +123,7 @@ function SimDeckSearchModal({
                 <div className="sim-modal topbar"
                 >
                     <div className={mainDiscard.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>
-                        <h1 className="centered-h1">Discard Pile</h1>
+                        <h1 className="centered-h1">Main Discard Pile</h1>
                         <div>
                         <div className="card-pool-fill">
                             {mainDiscard.slice().reverse().map((card, index) => {

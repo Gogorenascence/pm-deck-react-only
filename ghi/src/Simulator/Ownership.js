@@ -46,9 +46,11 @@ function Ownership({
 
     const handleOpen = (event) => {
         event.preventDefault()
-        setShowOwnershipModal(true)
-        menuSound(volume)
-        document.body.style.overflow = 'hidden';
+        if (ownership.length > 0) {
+            setShowOwnershipModal(true)
+            menuSound(volume)
+            document.body.style.overflow = 'hidden';
+        }
     };
 
     const handleClose = () => {

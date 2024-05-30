@@ -86,10 +86,12 @@ function SimDeckSearch({
 
     const handleOpenDiscard = (event) => {
         event.preventDefault()
-        setShowDiscardModal(true)
-        setShowDiscardMenu(false)
-        menuSound(volume)
-        document.body.style.overflow = 'hidden';
+        if (mainDiscard.length > 0) {
+            setShowDiscardModal(true)
+            setShowDiscardMenu(false)
+            menuSound(volume)
+            document.body.style.overflow = 'hidden';
+        }
     };
 
     const handleShowCardMenu = (event) => {

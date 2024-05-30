@@ -83,10 +83,12 @@ function SimPluckSearch({
 
     const handleOpenDiscard = (event) => {
         event.preventDefault()
-        setShowPluckDiscardModal(true)
-        setShowDiscardMenu(false)
-        menuSound(volume)
-        document.body.style.overflow = 'hidden';
+        if (pluckDiscard.length > 0) {
+            setShowPluckDiscardModal(true)
+            setShowDiscardMenu(false)
+            menuSound(volume)
+            document.body.style.overflow = 'hidden';
+        }
     };
 
     const handleShowDeckMenu = (event) => {
