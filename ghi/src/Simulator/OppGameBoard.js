@@ -1,11 +1,12 @@
 import { useState, useContext } from "react";
+import { GameStateContext } from "../context/GameStateContext";
 import { SimulatorActionsContext } from "../context/SimulatorActionsContext";
 import {
     OppPlayAreaZone,
     OppActivePluckZone,
     OppExtraZone
 } from "./OppGameBoardParts/OppSimulatorZones";
-// import OppPlayAreaModal from "./OppGameBoardParts/OppPlayAreaModal";
+import OppPlayAreaModal from "./OppGameBoardParts/OppPlayAreaModal";
 // import OppActivePluckModal from "./OppGameBoardParts/OppActivePluckModal";
 import OppMainDiscard from "./OppGameBoardParts/OppMainDiscard";
 // import OppMainDiscardModal from "./OppGameBoardParts/OppMainDiscardModal";
@@ -16,6 +17,16 @@ import OppPluckDiscard from "./OppGameBoardParts/OppPluckDiscard";
 function OppGameBoard({
     opponent,
 }) {
+    const {
+        showOppPlayAreaModal,
+        setShowOppPlayAreaModal,
+        showOppActivePluckModal,
+        setShowOppActivePluckModal,
+        showOppDiscardModal,
+        setShowOppDiscardModal,
+        showOppPluckDiscardModal,
+        setShowOppPluckDiscardModal
+    } = useContext(GameStateContext)
 
     const { handleHoveredCard } = useContext(SimulatorActionsContext)
 
@@ -35,60 +46,11 @@ function OppGameBoard({
 
     const defending = opponent.defending || {}
     const faceDown = opponent.faceDown || {}
-    const [showDeckSearchModal, setShowDeckSearchModal] = useState(false)
-    const [showDiscardModal, setShowDiscardModal] = useState(false)
-    const [showPluckSearchModal, setShowPluckSearchModal] = useState(false)
-    const [showPluckDiscardModal, setShowPluckDiscardModal] = useState(false)
-    const [showPlayAreaModal, setShowPlayAreaModal] = useState({name: "", zone: null, objectName: ""})
-    const [showActivePluckModal, setShowActivePluckModal] = useState({name: "", zone: null, objectName: ""})
+
 
     return (
         <div>
             <div className="play-area-opp">
-                {/* <SimDeckSearchModal
-                    mainDeck={mainDeck}
-                    handleHoveredCard={handleHoveredCard}
-                    showDeckSearchModal={showDeckSearchModal}
-                    setShowDeckSearchModal={setShowDeckSearchModal}
-                    selectCard={selectCard}
-                    selectedIndex={selectedIndex}
-                    fromDiscard={fromDiscard}
-                    setFromDiscard={setFromDiscard}
-                    addCardFromDeck={addCardFromDeck}
-                    addCardFromDiscard={addCardFromDiscard}
-                    returnDiscardedCardToDeck={returnDiscardedCardToDeck}
-                    mainDiscard={mainDiscard}
-                    showDiscardModal={showDiscardModal}
-                    setShowDiscardModal={setShowDiscardModal}
-                    setFromDeck={setFromDeck}
-                    volume={volume}
-                />
-                <SimPluckSearchModal
-                    pluckDeck={pluckDeck}
-                    handleHoveredCard={handleHoveredCard}
-                    showPluckSearchModal={showPluckSearchModal}
-                    setShowPluckSearchModal={setShowPluckSearchModal}
-                    addPluckFromDeck={addPluckFromDeck}
-                    addPluckFromDiscard={addPluckFromDiscard}
-                    returnDiscardedPluckToDeck={returnDiscardedPluckToDeck}
-                    pluckDiscard={pluckDiscard}
-                    showPluckDiscardModal={showPluckDiscardModal}
-                    setShowPluckDiscardModal={setShowPluckDiscardModal}
-                    volume={volume}
-                />
-                <PlayAreaModal
-                    playArea={playArea}
-                    showPlayAreaModal={showPlayAreaModal}
-                    setShowPlayAreaModal={setShowPlayAreaModal}
-                    handleHoveredCard={handleHoveredCard}
-                />
-                <ActivePluckModal
-                    activePluck={activePluck}
-                    showActivePluckModal={showActivePluckModal}
-                    setShowActivePluckModal={setShowActivePluckModal}
-                    handleHoveredCard={handleHoveredCard}
-                    setShowOwnershipModal={setShowOwnershipModal}
-                /> */}
 
                 <div className="flex margin-top-10">
                     <div
@@ -109,28 +71,28 @@ function OppGameBoard({
                         objectName={"slot_5"}
                         stringName={"Extra Slot 1"}
                         zoneArray={slot5}
-                        setShowPlayAreaModal={setShowPlayAreaModal}
+                        setShowOppPlayAreaModal={setShowOppPlayAreaModal}
                         handleHoveredCard={handleHoveredCard}
                     />
                     <OppExtraZone
                         objectName={"slot_6"}
                         stringName={"Extra Slot 2"}
                         zoneArray={slot6}
-                        setShowPlayAreaModal={setShowPlayAreaModal}
+                        setShowOppPlayAreaModal={setShowOppPlayAreaModal}
                         handleHoveredCard={handleHoveredCard}
                     />
                     <OppExtraZone
                         objectName={"slot_7"}
                         stringName={"Extra Slot 3"}
                         zoneArray={slot7}
-                        setShowPlayAreaModal={setShowPlayAreaModal}
+                        setShowOppPlayAreaModal={setShowOppPlayAreaModal}
                         handleHoveredCard={handleHoveredCard}
                     />
                     <OppExtraZone
                         objectName={"slot_8"}
                         stringName={"Extra Slot 4"}
                         zoneArray={slot8}
-                        setShowPlayAreaModal={setShowPlayAreaModal}
+                        setShowOppPlayAreaModal={setShowOppPlayAreaModal}
                         handleHoveredCard={handleHoveredCard}
                     />
                 </div>
@@ -172,7 +134,7 @@ function OppGameBoard({
                         objectName={"fighter_slot"}
                         stringName={"Fighter Slot"}
                         zoneArray={fighter}
-                        setShowPlayAreaModal={setShowPlayAreaModal}
+                        setShowOppPlayAreaModal={setShowOppPlayAreaModal}
                         handleHoveredCard={handleHoveredCard}
                         faceDown={faceDown}
                     />
@@ -180,7 +142,7 @@ function OppGameBoard({
                         objectName={"aura_slot"}
                         stringName={"Aura Slot"}
                         zoneArray={aura}
-                        setShowPlayAreaModal={setShowPlayAreaModal}
+                        setShowOppPlayAreaModal={setShowOppPlayAreaModal}
                         handleHoveredCard={handleHoveredCard}
                         faceDown={faceDown}
                     />
@@ -188,7 +150,7 @@ function OppGameBoard({
                         objectName={"move_slot"}
                         stringName={"Move Slot"}
                         zoneArray={move}
-                        setShowPlayAreaModal={setShowPlayAreaModal}
+                        setShowOppPlayAreaModal={setShowOppPlayAreaModal}
                         handleHoveredCard={handleHoveredCard}
                         faceDown={faceDown}
                     />
@@ -196,16 +158,15 @@ function OppGameBoard({
                         objectName={"ending_slot"}
                         stringName={"Ending Slot"}
                         zoneArray={ending}
-                        setShowPlayAreaModal={setShowPlayAreaModal}
+                        setShowOppPlayAreaModal={setShowOppPlayAreaModal}
                         handleHoveredCard={handleHoveredCard}
                         faceDown={faceDown}
                     />
                     <OppMainDiscard
                         mainDeck={opponent.mainDeck}
                         handleHoveredCard={handleHoveredCard}
-                        setShowDeckSearchModal={setShowDeckSearchModal}
                         mainDiscard={opponent.mainDiscard}
-                        setShowDiscardModal={setShowDiscardModal}
+                        setShowOppDiscardModal={setShowOppDiscardModal}
                     />
                 </div>
 
@@ -236,35 +197,34 @@ function OppGameBoard({
                         stringName={"Active Pluck 1"}
                         zoneArray={pluck_slot1}
                         handleHoveredCard={handleHoveredCard}
-                        setShowActivePluckModal={setShowActivePluckModal}
+                        setShowOppActivePluckModal={setShowOppActivePluckModal}
                     />
                     <OppActivePluckZone
                         objectName={"slot_2"}
                         stringName={"Active Pluck 2"}
                         zoneArray={pluck_slot2}
                         handleHoveredCard={handleHoveredCard}
-                        setShowActivePluckModal={setShowActivePluckModal}
+                        setShowOppActivePluckModal={setShowOppActivePluckModal}
                     />
                     <OppActivePluckZone
                         objectName={"slot_3"}
                         stringName={"Active Pluck 3"}
                         zoneArray={pluck_slot3}
                         handleHoveredCard={handleHoveredCard}
-                        setShowActivePluckModal={setShowActivePluckModal}
+                        setShowOppActivePluckModal={setShowOppActivePluckModal}
                     />
                     <OppActivePluckZone
                         objectName={"slot_4"}
                         stringName={"Active Pluck 4"}
                         zoneArray={pluck_slot4}
                         handleHoveredCard={handleHoveredCard}
-                        setShowActivePluckModal={setShowActivePluckModal}
+                        setShowOppActivePluckModal={setShowOppActivePluckModal}
                     />
                     <OppPluckDiscard
                         pluckDeck={opponent.pluckDeck}
                         handleHoveredCard={handleHoveredCard}
-                        setShowPluckSearchModal={setShowPluckSearchModal}
                         pluckDiscard={opponent.pluckDiscard}
-                        setShowPluckDiscardModal={setShowPluckDiscardModal}
+                        setShowOppPluckDiscardModal={setShowOppPluckDiscardModal}
                     />
                 </div>
             </div>

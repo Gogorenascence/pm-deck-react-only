@@ -1,38 +1,16 @@
-import React, { useState, useEffect, useRef, useContext } from 'react'
-import { GameStateContext } from "../context/GameStateContext";
-import { PluckActionsContext } from '../context/PluckActionsContext';
-import {
-    menuSound,
-    activateSound,
-    flipSound
-} from "../Sounds/Sounds";
+import React, { useEffect, useRef } from 'react'
 
 
 function OppActivePluckModal({
+    player,
     activePluck,
     handleHoveredCard,
-    showActivePluckModal,
-    setShowActivePluckModal,
-    setShowOwnershipModal
+    showOppActivePluckModal,
+    setShowOppActivePluckModal,
 }) {
 
     const content = useRef(null)
     useOutsideAlerter(content)
-
-    const {
-        player,
-        volume,
-        addToLog
-    } = useContext(GameStateContext)
-
-    const {
-        addPluckFromActivePluck,
-        discardPluck,
-        swapping,
-        setSwapping,
-        movingPluck,
-        setMovingPluck,
-    } = useContext(PluckActionsContext)
 
     function useOutsideAlerter(ref) {
         useEffect(() => {
@@ -52,131 +30,42 @@ function OppActivePluckModal({
         }, [ref]);
     }
 
-
-    // useEffect(() => {
-
-    // }, [showModal, main_list, pluck_list]); // Include showModal and card_list as dependencies
-
     useEffect(() => {
       // Check if filteredCards is empty
-        if (activePluck[showActivePluckModal.objectName]?.length === 0) {
+        if (activePluck[showOppActivePluckModal.objectName]?.length === 0) {
             handleClose(); // Call handleClose when filteredCards is empty
         }
-    }, [activePluck[showActivePluckModal.objectName]]);
-
-    const handleShowCardMenu = (event, index) => {
-        event.preventDefault()
-        showCardMenu === index?
-        setShowCardMenu(null):
-            setShowCardMenu(index)
-    }
+    }, [activePluck[showOppActivePluckModal.objectName]]);
 
     const handleClose = () => {
-        setShowActivePluckModal({name: "", objectName: ""})
+        setShowOppActivePluckModal({name: "", objectName: ""})
         document.body.style.overflow = 'auto';
     };
 
-    const zoneArray = activePluck[showActivePluckModal.objectName]
-
-    const [showCardMenu, setShowCardMenu] = useState(null)
+    const zoneArray = activePluck[showOppActivePluckModal.objectName]
 
     return(
         <div>
             {zoneArray?
-                <div className="sim-modal2 topbar"
+                <div className="sim-modal3 topbar"
                 >
                     <div className={zoneArray.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>
-                        <h1 className="centered-h1">{showActivePluckModal.name}</h1>
-                        <div>
-                        <div className={zoneArray.length < 5 ? "card-pool-fill-hand" : "card-pool-fill"}>
+                        <h2 className="aligned margin-top-0 margin-bottom-10">{player}</h2>
+                        <h3 className="aligned margin-top-0 margin-bottom-10">{showOppActivePluckModal.name}</h3>
+                        <div className="card-pool-fill padding-bottom-30">
                             {zoneArray.map((card, index) => {
                                 return (
                                     <div style={{display: "flex", justifyContent: "center"}}>
                                         <div>
-                                            <div className={showCardMenu === index ? "deck-menu5Items": "hidden2"}>
-                                                <div className="card-menu-item"
-                                                    onClick={() => {
-                                                        activateSound(volume)
-                                                        addToLog("System", "system", `${player.name} is resolving "${zoneArray[index].name}"`)
-                                                    }}
-                                                ><p>Resolve</p></div>
-                                                <div className="card-menu-item"
-                                                    onClick={() => {swapping.cardToSwap && swapping.zone === showActivePluckModal.objectName?
-                                                        setSwapping({cardToSwap: "", zone: "", index: null, zoneFaceDown: false}):
-                                                        setSwapping({
-                                                            cardToSwap: zoneArray[index],
-                                                            zone: showActivePluckModal.objectName,
-                                                            index: index,
-                                                        })
-                                                        handleClose()
-                                                        setShowOwnershipModal(swapping.cardToSwap? false: true)}
-                                                    }
-                                                ><p>Swap from Reserve</p></div>
-                                                <div className="card-menu-item"
-                                                    onClick={() => {movingPluck.pluckToMove && movingPluck.zone === showActivePluckModal.objectName?
-                                                        setMovingPluck({pluckToMove: "", zone: "", index: null}):
-                                                        setMovingPluck({
-                                                            pluckToMove: zoneArray[index],
-                                                            zone: showActivePluckModal.objectName,
-                                                            index: index,
-                                                        })
-                                                        handleClose()}
-                                                    }
-                                                ><p>{movingPluck.pluckToMove && movingPluck.zone === showActivePluckModal.objectName?
-                                                    "Cancel": "Move"}</p></div>
-                                                <div className="card-menu-item"
-                                                    onClick={() => {
-                                                        addPluckFromActivePluck(
-                                                            zoneArray[index],
-                                                            index,
-                                                            showActivePluckModal.objectName)
-                                                        // handleClose()
-                                                        setShowCardMenu(null)
-                                                    }}
-                                                ><p>Return to Reserve</p></div>
-                                                <div className="card-menu-item"
-                                                    onClick={() => {
-                                                        discardPluck(
-                                                            zoneArray[index],
-                                                            index,
-                                                            showActivePluckModal.objectName)
-                                                        setShowCardMenu(null)
-                                                    }}
-                                                ><p>Discard</p></div>
-                                            </div>
-
                                             <img
-                                                onClick={(event) => handleShowCardMenu(event, index)}
-                                                onContextMenu={(event) => handleShowCardMenu(event, index)}
-                                                onDoubleClick={() => {
-                                                    discardPluck(
-                                                        zoneArray[index],
-                                                        index,
-                                                        showActivePluckModal.objectName)
-                                                    setShowCardMenu(null)
-                                                }}
                                                 onMouseEnter={() => handleHoveredCard(card)}
-                                                // onDoubleClick={() => handlePluck(index)}
-                                                className={
-                                                    showCardMenu === index?
-                                                    "selected3 builder-card margin-10 pointer glow3":"builder-card margin-10 pointer glow3"
-                                                // :
-                                                    // "builder-card margin-10 pointer glow3"
-                                                }
+                                                className="builder-card margin-10 pointer glow3"
                                                 src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
                                                 alt={card.name}/>
                                         </div>
                                     </div>
                                 );
                             })}
-                        </div>
-                        </div>
-                        <div className="cd-inner margin-top-20">
-                            <button
-                                className={zoneArray.length > 4 ? "margin-bottom-20" :null}
-                                onClick={handleClose}
-                                >Close
-                            </button>
                         </div>
                     </div>
                 </div>:null

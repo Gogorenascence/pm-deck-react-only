@@ -4,9 +4,8 @@ import React, { useEffect, useRef } from 'react'
 function OppMainDiscard({
     mainDeck,
     handleHoveredCard,
-    setShowDeckSearchModal,
     mainDiscard,
-    setShowDiscardModal,
+    setShowOppDiscardModal,
 }) {
 
     const content = useRef(null)
@@ -23,7 +22,6 @@ function OppMainDiscard({
                     !event.target.closest(".matCard")&&
                     !event.target.closest(".matCardSelected")
                 ) {
-                    handleClose();
                     handleCloseDiscard();
                 }
             }
@@ -35,27 +33,19 @@ function OppMainDiscard({
 
 
     useEffect(() => {
-        if (mainDeck.length === 0) {
-            handleClose();
-        }
         if (mainDiscard.length === 0) {
             handleCloseDiscard(); // Call handleClose when filteredCards is empty
         }
-    }, [mainDeck, mainDiscard]);
-
-    const handleClose = () => {
-        setShowDeckSearchModal(false)
-        document.body.style.overflow = 'auto';
-    };
+    }, [mainDiscard]);
 
     const handleCloseDiscard = () => {
-        setShowDiscardModal(false)
+        setShowOppDiscardModal(false)
         document.body.style.overflow = 'auto';
     };
 
     const handleOpenDiscard = (event) => {
         event.preventDefault()
-        setShowDiscardModal(true)
+        setShowOppDiscardModal(true)
         document.body.style.overflow = 'hidden';
     };
 

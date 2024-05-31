@@ -1,4 +1,4 @@
-import { useEffect, useContext, useRef } from "react";
+import { useEffect, useContext, useRef, useState } from "react";
 import { GameStateContext } from "../context/GameStateContext";
 import { SimulatorActionsContext } from "../context/SimulatorActionsContext";
 import { MainActionsContext } from "../context/MainActionsContext";
@@ -12,6 +12,10 @@ import PlayerTab from "./PlayerTab";
 import OpponentTab from "./OpponentTab";
 import OppGameBoard from "./OppGameBoard";
 import OppDefendingCard from "./OppGameBoardParts/OppDefendingCard";
+import OppPlayAreaModal from "./OppGameBoardParts/OppPlayAreaModal";
+import OppActivePluckModal from "./OppGameBoardParts/OppActivePluckModal";
+import OppMainDiscardModal from "./OppGameBoardParts/OppMainDiscardModal";
+import OppPluckDiscardModal from "./OppGameBoardParts/OppPluckDiscardModal";
 import helper from "../QueryObjects/Helper";
 import turnSorter from "./TurnSorter";
 
@@ -42,7 +46,15 @@ function SimulatorPage(props) {
         selectedOpp,
         setSelectedOpp,
         selectedOppCard,
-        setSelectedOppCard
+        setSelectedOppCard,
+        showOppPlayAreaModal,
+        setShowOppPlayAreaModal,
+        showOppActivePluckModal,
+        setShowOppActivePluckModal,
+        showOppDiscardModal,
+        setShowOppDiscardModal,
+        showOppPluckDiscardModal,
+        setShowOppPluckDiscardModal
     } = useContext(GameStateContext)
 
     const {
@@ -117,6 +129,8 @@ function SimulatorPage(props) {
     } = props
 
     const {account} = useContext(AuthContext)
+
+    const [showPlayAreaModal, setShowPlayAreaModal] = useState({name: "", zone: null, objectName: ""})
 
     const content = useRef(null)
 
@@ -305,14 +319,46 @@ function SimulatorPage(props) {
                     {selectedOppCard?
                         <div className="small-modal-dark topbar flex-content" ref={content}>
                             <span>
-                                <h2 className="aligned margin-top-0 margin-bottom-10">Defending Card</h2>
-                                <h3 className="aligned margin-top-0 margin-bottom-30">{selectedOppCard.owner}</h3>
+                                <h2 className="aligned margin-top-0 margin-bottom-10">{selectedOppCard.owner}</h2>
+                                <h3 className="aligned margin-top-0 margin-bottom-30">Defending Card</h3>
                                 <OppDefendingCard
                                     opponentCard={selectedOppCard}
                                     />
                             </span>
                         </div>: null
                     }
+                    {selectedOpp?
+                        <>
+                            <OppPlayAreaModal
+                                player={selectedOpp.name}
+                                playArea={selectedOpp.playArea}
+                                showOppPlayAreaModal={showOppPlayAreaModal}
+                                setShowOppPlayAreaModal={setShowOppPlayAreaModal}
+                                handleHoveredCard={handleHoveredCard}
+                            />
+                            <OppActivePluckModal
+                                player={selectedOpp.name}
+                                activePluck={activePluck}
+                                showOppActivePluckModal={showOppActivePluckModal}
+                                setShowOppActivePluckModal={setShowOppActivePluckModal}
+                                handleHoveredCard={handleHoveredCard}
+                            />
+                            <OppMainDiscardModal
+                                player={selectedOpp.name}
+                                mainDiscard={selectedOpp.mainDiscard}
+                                handleHoveredCard={handleHoveredCard}
+                                showOppDiscardModal={showOppDiscardModal}
+                                setShowOppDiscardModal={setShowOppDiscardModal}
+                            />
+                            <OppPluckDiscardModal
+                                player={selectedOpp.name}
+                                pluckDiscard={selectedOpp.pluckDiscard}
+                                handleHoveredCard={handleHoveredCard}
+                                showOppPluckDiscardModal={showOppPluckDiscardModal}
+                                setShowOppPluckDiscardModal={setShowOppPluckDiscardModal}
+                            />
+                        </>
+                    :null}
                 </>
             : null}
             <CardInfoPanel hoveredCard={hoveredCard}/>

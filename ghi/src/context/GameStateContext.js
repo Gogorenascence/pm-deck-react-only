@@ -251,6 +251,11 @@ const GameStateContextProvider = ({ children }) => {
     const [selectedOpp, setSelectedOpp] = useState(null)
     const [selectedOppCard, setSelectedOppCard] = useState(null)
 
+    const [showOppDiscardModal, setShowOppDiscardModal] = useState(false)
+    const [showOppPluckDiscardModal, setShowOppPluckDiscardModal] = useState(false)
+    const [showOppPlayAreaModal, setShowOppPlayAreaModal] = useState({name: "", zone: null, objectName: ""})
+    const [showOppActivePluckModal, setShowOppActivePluckModal] = useState({name: "", zone: null, objectName: ""})
+
     return (
         <GameStateContext.Provider value={{
             game,
@@ -300,7 +305,15 @@ const GameStateContextProvider = ({ children }) => {
             selectedOpp,
             setSelectedOpp,
             selectedOppCard,
-            setSelectedOppCard
+            setSelectedOppCard,
+            showOppPlayAreaModal,
+            setShowOppPlayAreaModal,
+            showOppActivePluckModal,
+            setShowOppActivePluckModal,
+            showOppDiscardModal,
+            setShowOppDiscardModal,
+            showOppPluckDiscardModal,
+            setShowOppPluckDiscardModal
             }}>
             {children}
         </GameStateContext.Provider>

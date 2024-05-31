@@ -1,27 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react'
-import {
-    menuSound,
-} from "../Sounds/Sounds";
 
 
 function OppPluckDiscardModal({
-    pluckDeck,
-    handleHoveredCard,
-    showPluckSearchModal,
-    setShowPluckSearchModal,
-    addPluckFromDeck,
-    addPluckFromDiscard,
-    returnDiscardedPluckToDeck,
+    player,
     pluckDiscard,
-    showPluckDiscardModal,
-    setShowPluckDiscardModal,
-    volume
+    handleHoveredCard,
+    showOppPluckDiscardModal,
+    setShowOppPluckDiscardModal,
 }) {
 
     const content = useRef(null)
     useOutsideAlerter(content)
-    const [showDeckMenu, setShowDeckMenu] = useState(null)
-    const [showDiscardMenu, setShowDiscardMenu] = useState(null)
 
     function useOutsideAlerter(ref) {
         useEffect(() => {
@@ -34,7 +23,6 @@ function OppPluckDiscardModal({
                     !event.target.closest(".matCard")&&
                     !event.target.closest(".matCardSelected")
                     ) {
-                    handleClose();
                     handleCloseDiscard();
                 }
             }
@@ -44,152 +32,33 @@ function OppPluckDiscardModal({
         }, [ref]);
     }
 
-    useEffect(() => {
-      // Check if filteredCards is empty
-        if (pluckDeck.length === 0) {
-            handleClose(); // Call handleClose when filteredCards is empty
-        }
-        if (pluckDiscard.length === 0) {
-            handleCloseDiscard(); // Call handleClose when filteredCards is empty
-        }
-    }, [pluckDeck, pluckDiscard]);
-
-    const handleClose = () => {
-        setShowPluckSearchModal(false)
-        setShowDeckMenu(null)
-        document.body.style.overflow = 'auto';
-    };
-
     const handleCloseDiscard = () => {
-        setShowPluckDiscardModal(false)
-        setShowDiscardMenu(null)
+        setShowOppPluckDiscardModal(false)
         document.body.style.overflow = 'auto';
     };
-
-    const handleShowDeckMenu = (event, index) => {
-        event.preventDefault()
-        showDeckMenu === index ?
-            setShowDeckMenu(null) :
-            setShowDeckMenu(index)
-        menuSound(volume)
-    }
-
-    const handleShowDiscardMenu = (event, index) => {
-        event.preventDefault()
-        showDiscardMenu === index ?
-            setShowDiscardMenu(null) :
-            setShowDiscardMenu(index)
-        menuSound(volume)
-    }
-
-    const handleAddPluck = (index, unfurling) => {
-        addPluckFromDeck(index, unfurling)
-        handleClose()
-        setShowDeckMenu(null)
-    }
-
-    const handleAddPluckFromDiscard = (index) => {
-        const originalIndex = pluckDiscard.length - 1 - index;
-        addPluckFromDiscard(originalIndex)
-        setShowDiscardMenu(null)
-    }
-
-    const handleReturnPluckFromDiscard = (index, position) => {
-        const originalIndex = pluckDiscard.length - 1 - index;
-        returnDiscardedPluckToDeck(originalIndex, position)
-        setShowDiscardMenu(null)
-    }
 
     return(
         <div>
-            {showPluckDiscardModal ?
-                <div className="sim-modal topbar"
+            {showOppPluckDiscardModal ?
+                <div className="sim-modal3 topbar"
                 >
                     <div className={pluckDiscard.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>
-                        <h1 className="centered-h1">Discard Pile</h1>
-                        <div>
-                        <div className={pluckDiscard.length < 5 ? "card-pool-fill-hand" : "card-pool-fill"}>
+                        <h2 className="aligned margin-top-0 margin-bottom-10">{player}</h2>
+                        <h3 className="aligned margin-top-0 margin-bottom-30">Discard Pile</h3>
+                        <div className="card-pool-fill padding-bottom-30">
                             {pluckDiscard.slice().reverse().map((card, index) => {
                                 return (
                                     <div style={{display: "flex", justifyContent: "center"}}>
                                         <div>
-                                            <div className={showDiscardMenu === index ? "deck-menu3": "hidden2"}>
-                                                <div className="card-menu-item"
-                                                    onClick={() => handleAddPluckFromDiscard(index)}
-                                                ><p>Add to Reserve</p></div>
-                                                <div className="card-menu-item"
-                                                    onClick={() => handleReturnPluckFromDiscard(index, "top")}
-                                                ><p>Decktop</p></div>
-                                                <div className="card-menu-item"
-                                                    onClick={() => handleReturnPluckFromDiscard(index, "bottom")}
-                                                ><p>Deckbottom</p></div>
-                                            </div>
                                             <img
-                                                onClick={(event) => handleShowDiscardMenu(event, index)}
-                                                onContextMenu={(event) => handleShowDiscardMenu(event, index)}
                                                 onMouseEnter={() => handleHoveredCard(card)}
-                                                className={
-                                                    showDiscardMenu === index?
-                                                    "selected3 builder-card margin-10 pointer glow3"
-                                                :
-                                                    "builder-card margin-10 pointer"
-                                                }
+                                                className="builder-card margin-10 pointer"
                                                 src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
                                                 alt={card.name}/>
                                         </div>
                                     </div>
                                 );
                             })}
-                        </div>
-                        </div>
-                        <div className="cd-inner margin-top-20">
-                            <button className={pluckDiscard.length > 4 ? "margin-bottom-20" :null}
-                                onClick={handleCloseDiscard}
-                            >
-                                Close
-                            </button>
-                        </div>
-                    </div>
-                </div>:null
-            }
-            {showPluckSearchModal ?
-                <div className="sim-modal topbar"
-                >
-                    <div className={pluckDeck.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>
-                        <h1 className="centered-h1">Pluck Deck</h1>
-                        <div>
-                        <div className={pluckDeck.length < 5 ? "card-pool-fill-hand" : "card-pool-fill"}>
-                            {pluckDeck.map((card, index) => {
-                                return (
-                                    <div style={{display: "flex", justifyContent: "center"}}>
-                                        <div>
-                                            <div className={showDeckMenu === index ? "deck-menu2": "hidden2"}>
-                                                <div className="card-menu-item"
-                                                    onClick={() => handleAddPluck(index, false)}
-                                                ><p>Add to Reserve</p></div>
-                                            </div>
-                                            <img
-                                                onClick={(event) => handleShowDeckMenu(event, index)}
-                                                onContextMenu={(event) => handleShowDeckMenu(event, index)}
-                                                onMouseEnter={() => handleHoveredCard(card)}
-                                                className={
-                                                    showDeckMenu === index?
-                                                    "selected3 builder-card margin-10 pointer glow3"
-                                                :
-                                                    "builder-card margin-10 pointer"
-                                                }
-                                                src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                                alt={card.name}/>
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                        </div>
-                        <div className="cd-inner margin-top-20">
-                            <button className={pluckDeck.length > 4 ? "margin-bottom-20" :null} onClick={handleClose}>
-                                Close
-                            </button>
                         </div>
                     </div>
                 </div>:null

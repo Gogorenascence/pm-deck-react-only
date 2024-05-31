@@ -5,7 +5,7 @@
 <!-- player info display -->
 Note when player is checking a player display
 <!-- toggle for extra slots -->
-defending cards and tokens
+<!-- defending cards and tokens
                             onMouseEnter={() => {
                                 console.log(defending, defendingCard)
                                 if (!defending === objectName) {
@@ -13,7 +13,7 @@ defending cards and tokens
                                 } else {
                                     handleHoveredCard(defendingCard)
                                 }
-                            }}
+                            }} -->
 <!-- return cards to the hand -->
 <!-- send cards to the discard pile -->
 <!-- return cards to deck -->
@@ -88,7 +88,7 @@ hashmapping
 
 save article creation and editting to session storage or state
 facedown object to include active pluck
-add card ownership to card objects
+<!-- add card ownership to card objects -->
             const filledMainDeck = []
             for (let cardNumber of deckFound.cards) {
                     const newCard = cards.find(card => card.card_number === cardNumber)

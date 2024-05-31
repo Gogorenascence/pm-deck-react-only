@@ -2,7 +2,7 @@ function OppPlayAreaZone({
 objectName,
 stringName,
 zoneArray,
-setShowPlayAreaModal,
+setShowOppPlayAreaModal,
 handleHoveredCard,
 faceDown,
 }){
@@ -38,7 +38,7 @@ faceDown,
                         {zoneArray.length > 1 ?
                             <div className="matCardOverlay"
                                 onClick={() => {
-                                    setShowPlayAreaModal({
+                                    setShowOppPlayAreaModal({
                                         name: stringName,
                                         objectName: objectName
                                     })
@@ -78,7 +78,7 @@ function OppActivePluckZone({
     stringName,
     zoneArray,
     handleHoveredCard,
-    setShowActivePluckModal,
+    setShowOppActivePluckModal,
 }){
 
     return(
@@ -89,7 +89,7 @@ function OppActivePluckZone({
                         {zoneArray.length > 1 ?
                             <div className="matCardOverlay"
                                 onClick={() => {
-                                    setShowActivePluckModal({
+                                    setShowOppActivePluckModal({
                                         name: stringName,
                                         objectName: objectName
                                     })
@@ -118,7 +118,7 @@ function OppExtraZone({
     objectName,
     stringName,
     zoneArray,
-    setShowPlayAreaModal,
+    setShowOppPlayAreaModal,
     handleHoveredCard,
 }){
 
@@ -130,7 +130,7 @@ function OppExtraZone({
                         {zoneArray.length > 1 ?
                             <div className="matCardOverlay"
                                     onClick={() => {
-                                        setShowPlayAreaModal({
+                                        setShowOppPlayAreaModal({
                                             name: stringName,
                                             objectName: objectName
                                         })

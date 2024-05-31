@@ -4,9 +4,8 @@ import React, { useEffect, useRef, useState } from 'react'
 function OppPluckDiscard({
     pluckDeck,
     handleHoveredCard,
-    setShowPluckSearchModal,
     pluckDiscard,
-    setShowPluckDiscardModal,
+    setShowOppPluckDiscardModal,
 }) {
 
     const content = useRef(null)
@@ -23,7 +22,6 @@ function OppPluckDiscard({
                     !event.target.closest(".matCard")&&
                     !event.target.closest(".matCardSelected")
                 ) {
-                    handleClose();
                     handleCloseDiscard();
                 }
             }
@@ -33,28 +31,14 @@ function OppPluckDiscard({
         }, [ref]);
     }
 
-    useEffect(() => {
-        if (pluckDeck.length === 0) {
-            handleClose();
-        }
-        if (pluckDiscard.length === 0) {
-            handleCloseDiscard(); // Call handleClose when filteredCards is empty
-        }
-    }, [pluckDeck, pluckDiscard]);
-
-    const handleClose = () => {
-        setShowPluckSearchModal(false)
-        document.body.style.overflow = 'auto';
-    };
-
     const handleCloseDiscard = () => {
-        setShowPluckDiscardModal(false)
+        setShowOppPluckDiscardModal(false)
         document.body.style.overflow = 'auto';
     };
 
     const handleOpenDiscard = (event) => {
         event.preventDefault()
-        setShowPluckDiscardModal(true)
+        setShowOppPluckDiscardModal(true)
         document.body.style.overflow = 'hidden';
     };
 
