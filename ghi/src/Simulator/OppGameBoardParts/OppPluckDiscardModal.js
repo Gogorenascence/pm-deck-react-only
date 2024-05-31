@@ -39,7 +39,7 @@ function OppPluckDiscardModal({
 
     return(
         <div>
-            {showOppPluckDiscardModal ?
+            {showOppPluckDiscardModal && pluckDiscard.length > 0?
                 <div className="sim-modal3 topbar"
                 >
                     <div className={pluckDiscard.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>

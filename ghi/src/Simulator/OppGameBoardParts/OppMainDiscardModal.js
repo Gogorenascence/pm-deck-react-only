@@ -39,7 +39,7 @@ function OppMainDiscardModal({
 
     return(
         <div>
-            {showOppDiscardModal ?
+            {showOppDiscardModal && mainDiscard.length >0?
                 <div className="sim-modal3 topbar"
                 >
                     <div className={mainDiscard.length < 5 ? "outScrollableSim" : "outScrollableSim2"} ref={content}>
