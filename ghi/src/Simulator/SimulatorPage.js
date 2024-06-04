@@ -183,7 +183,7 @@ function SimulatorPage(props) {
 
     useEffect(() => {
         getCards();
-        console.log(account)
+        // console.log(account)
         document.title = "Simulator - PM CardBase"
         return () => {
             document.title = "PlayMaker CardBase"
@@ -210,7 +210,6 @@ function SimulatorPage(props) {
             mainDiscard: discard,
             pluckDiscard: pluckDiscard
         }));
-        console.log("dog")
     }, [account, playerMainDeck, playerPluckDeck, hand, ownership, playArea, activePluck, discard, pluckDiscard]);
 
     const matchMake = async() => {
@@ -382,12 +381,14 @@ function SimulatorPage(props) {
                         />
                         {opponents?.map((opponent, index) => {
                             return (
-                                <OpponentTab
-                                    opponent={opponent}
-                                    oppIndex={index}
-                                    setSelectedOpp={setSelectedOpp}
-                                    setSelectedOppCard={setSelectedOppCard}
-                                />
+                                <div key={index}>
+                                    <OpponentTab
+                                        opponent={opponent}
+                                        oppIndex={index}
+                                        setSelectedOpp={setSelectedOpp}
+                                        setSelectedOppCard={setSelectedOppCard}
+                                    />
+                                </div>
                             )})
                         }
                     </span>
@@ -443,7 +444,10 @@ function SimulatorPage(props) {
                             <div className="card-pool-fill-hand">
                                 {player.hand.map((card, index) => {
                                     return (
-                                        <div className="in-hand" style={{display: "flex", justifyContent: "center"}}>
+                                        <div className="in-hand"
+                                            style={{display: "flex", justifyContent: "center"}}
+                                            key={`${index}${card.name}`}
+                                        >
                                             <div>
                                                 <div className={showCardMenu === index? "card-menu": "hidden2"}>
                                                     <div className="card-menu-item"

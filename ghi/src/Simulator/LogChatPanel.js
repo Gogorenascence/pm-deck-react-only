@@ -82,8 +82,8 @@ function LogChatPanel() {
                 {showPanel?
                     <div className="right">
                         <div className="scrollableChat" ref={chatWindow}>
-                            {log.length > 0? log.map((message) => (
-                                <div className="m-l-r-5">
+                            {log.length > 0? log.map((message, index) => (
+                                <div className="m-l-r-5" key={index}>
                                     <p style={{fontWeight: "700", color: colors[message.role], margin: "7px 0 0 0"}}>
                                         {message.user}
                                     </p>

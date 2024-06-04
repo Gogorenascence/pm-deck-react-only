@@ -23,7 +23,6 @@ const deckQueries = {
         return data
     },
     getDeckDataById: async function getDeckDataById(id) {
-        console.log("dog")
         const decksCollectionRef = collection(db, "decks");
         const deckQuery = query(
             decksCollectionRef,
@@ -31,7 +30,7 @@ const deckQueries = {
         )
         const snapshot = await getDocs(deckQuery);
         if (snapshot.empty) {
-            console.log("No matching documents.");
+            // console.log("No matching documents.");
             return null;
         } else {
             const deckData = snapshot.docs[0].data();
@@ -41,7 +40,7 @@ const deckQueries = {
     },
     getRangedQueriedDecksData: async function getRangedQueriedDecksData(end, queryList) {
         let decksCollectionRef = collection(db, "decks");
-        console.log(query(decksCollectionRef))
+        // console.log(query(decksCollectionRef))
 
         for (const [key, value] of Object.entries(queryList)) {
             decksCollectionRef = query(decksCollectionRef, where(key, "==", value));
@@ -52,7 +51,7 @@ const deckQueries = {
             limit(end)
         )
         const snapshot = await getDocs(decksCollectionRef)
-        console.log(snapshot)
+        // console.log(snapshot)
         if (snapshot.empty) {
             console.log("No matching documents.");
             return null;
@@ -66,7 +65,7 @@ const deckQueries = {
     },
     getQueriedDecksData: async function getQueriedDecksData(queryList) {
         let decksCollectionRef = collection(db, "decks");
-        console.log(query(decksCollectionRef))
+        // console.log(query(decksCollectionRef))
 
         for (const [key, value] of Object.entries(queryList)) {
             decksCollectionRef = query(decksCollectionRef, where(key, "==", value));
@@ -76,9 +75,9 @@ const deckQueries = {
             orderBy("updated_on.full_time", "desc")
         )
         const snapshot = await getDocs(decksCollectionRef)
-        console.log(snapshot)
+        // console.log(snapshot)
         if (snapshot.empty) {
-            console.log("No matching documents.");
+            // console.log("No matching documents.");
             return null;
         } else {
             const data = snapshot.docs.map((doc) => ({

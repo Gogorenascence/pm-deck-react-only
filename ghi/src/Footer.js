@@ -13,7 +13,6 @@ function Footer() {
             <img
                 title="https://discord.gg/hVfTNEZG9p"
                 onClick={() => openInNewTab("https://discord.gg/hVfTNEZG9p")}
-                cursor
                 className="social-icon pointer"
                 src="https://i.imgur.com/TVbM9Jg.png"
                 alt="discord">

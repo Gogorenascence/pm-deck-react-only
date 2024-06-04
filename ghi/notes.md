@@ -15,3 +15,16 @@
   }
 
   Breaks dark-mode when rendered in account decks, favorited decks and new row
+
+
+
+Add an environment variable to use the legacy OpenSSL provider. You can do this by adding a script to your package.json or by exporting the variable directly in your terminal:
+
+Option A: Modify package.json
+Add a start script in your package.json:
+  "scripts": {
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },

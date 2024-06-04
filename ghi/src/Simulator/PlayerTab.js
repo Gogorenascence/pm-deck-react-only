@@ -37,7 +37,7 @@ function PlayerTab({
             if (accountDeckData) {
                 deckList = [...deckList, ...accountDeckData]
             }
-            console.log("Account decks added.")
+            // console.log("Account decks added.")
             if (account.favorited_decks) {
                 for (let deckID of account.favorited_decks) {
                     const deckData = await deckQueries.getDeckDataById(deckID);
@@ -47,7 +47,7 @@ function PlayerTab({
                     }
                 }
             }
-            console.log("Favorited decks added.")
+            // console.log("Favorited decks added.")
             for (let deckID of starterDeckIDs) {
                 const deckData = await deckQueries.getDeckDataById(deckID);
                 const present = deckList.find(deck => deck.id === deckID)
@@ -55,7 +55,7 @@ function PlayerTab({
                     deckList.push(deckData)
                 }
             }
-            console.log("Starter decks added.")
+            // console.log("Starter decks added.")
 
         } else {
             for (let deckID of starterDeckIDs) {

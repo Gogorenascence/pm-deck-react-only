@@ -77,7 +77,7 @@ function NewsRow({articles}) {
                     <div className="newsRow">
                         {filteredStories.map((story, index) => {
                             return (
-                                <>
+                                <div key={index}>
                                     {story.content ?
                                         <NavLink className="nav-link no-pad" to={`/articles/${story.id}`}>
                                             <div
@@ -113,7 +113,7 @@ function NewsRow({articles}) {
                                             <h4 className="newsText">{story.title}</h4>
                                         </div>
                                     }
-                                </>
+                                </div>
                             )
                         })}
                     </div>

@@ -4,6 +4,8 @@
 <!-- add all board cards to context -->
 <!-- player info display -->
 Note when player is checking a player display
+play from decks
+place in the active pluck
 <!-- toggle for extra slots -->
 <!-- defending cards and tokens
                             onMouseEnter={() => {

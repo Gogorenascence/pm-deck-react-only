@@ -38,6 +38,16 @@ const helper = {
         }
         return randomString;
     },
+    generateRandomStringNA: function (length) {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let randomString = '';
+
+        for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        randomString += characters.charAt(randomIndex);
+        }
+        return randomString;
+    },
     createAllTimesAgos: function createAllTimesAgos(data){
         for (let deck of data){
             const date = new Date(deck["created_on"]["full_time"])
