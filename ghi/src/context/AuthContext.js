@@ -8,7 +8,6 @@ import {
     getDocs,
     where,
     query,
-    updateDoc,
     writeBatch
 } from "firebase/firestore";
 import {

@@ -130,8 +130,6 @@ function SimulatorPage(props) {
 
     const {account} = useContext(AuthContext)
 
-    const [showPlayAreaModal, setShowPlayAreaModal] = useState({name: "", zone: null, objectName: ""})
-
     const content = useRef(null)
 
     const getCards = () => {
@@ -183,7 +181,6 @@ function SimulatorPage(props) {
 
     useEffect(() => {
         getCards();
-        // console.log(account)
         document.title = "Simulator - PM CardBase"
         return () => {
             document.title = "PlayMaker CardBase"

@@ -13,6 +13,7 @@ import deckQueries from "../QueryObjects/DeckQueries";
 
 function SimulatorObjectPage(props) {
     document.body.classList.add("dark")
+    console.log(document.body.classList)
     const {
         game,
         player,

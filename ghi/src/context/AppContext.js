@@ -9,29 +9,29 @@ const AppContextProvider = ({ children }) => {
         return savedDarkMode ? JSON.parse(savedDarkMode) : false;
     });
 
-    const [position, setPosition] = useState({ x: 0, y: 0 });
+    // const [position, setPosition] = useState({ x: 0, y: 0 });
 
-    const handleMouseMove = (event) => {
-        setPosition({
-            x: event.clientX,
-            y: event.clientY,
-        });
-    }
+    // const handleMouseMove = (event) => {
+    //     setPosition({
+    //         x: event.clientX,
+    //         y: event.clientY,
+    //     });
+    // }
 
-    useEffect(() => {
-        window.addEventListener("mousemove", handleMouseMove);
-        return () => {
-            window.removeEventListener("mousemove", handleMouseMove);
-        };
-    }, []);
+    // useEffect(() => {
+    //     window.addEventListener("mousemove", handleMouseMove);
+    //     return () => {
+    //         window.removeEventListener("mousemove", handleMouseMove);
+    //     };
+    // }, []);
 
 
     return (
         <AppContext.Provider value={{
             isDark,
             setIsDark,
-            position,
-            setPosition,
+            // position,
+            // setPosition,
             }}>
             {children}
         </AppContext.Provider>
