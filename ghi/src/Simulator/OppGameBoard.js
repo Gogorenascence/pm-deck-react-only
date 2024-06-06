@@ -1,32 +1,24 @@
-import { useState, useContext } from "react";
-import { GameStateContext } from "../context/GameStateContext";
+import { useContext } from "react";
+import { MatchMakingContext } from "../context/MatchMakingContext";
 import { SimulatorActionsContext } from "../context/SimulatorActionsContext";
 import {
     OppPlayAreaZone,
     OppActivePluckZone,
     OppExtraZone
 } from "./OppGameBoardParts/OppSimulatorZones";
-import OppPlayAreaModal from "./OppGameBoardParts/OppPlayAreaModal";
-// import OppActivePluckModal from "./OppGameBoardParts/OppActivePluckModal";
 import OppMainDiscard from "./OppGameBoardParts/OppMainDiscard";
-// import OppMainDiscardModal from "./OppGameBoardParts/OppMainDiscardModal";
 import OppPluckDiscard from "./OppGameBoardParts/OppPluckDiscard";
-// import OppPluckDiscardModal from "./OppGameBoardParts/OppPluckDiscardModal";
 
 
 function OppGameBoard({
     opponent,
 }) {
     const {
-        showOppPlayAreaModal,
         setShowOppPlayAreaModal,
-        showOppActivePluckModal,
         setShowOppActivePluckModal,
-        showOppDiscardModal,
         setShowOppDiscardModal,
-        showOppPluckDiscardModal,
         setShowOppPluckDiscardModal
-    } = useContext(GameStateContext)
+    } = useContext(MatchMakingContext)
 
     const { handleHoveredCard } = useContext(SimulatorActionsContext)
 

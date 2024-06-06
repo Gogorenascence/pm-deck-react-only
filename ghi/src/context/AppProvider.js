@@ -14,6 +14,7 @@ import { HowToQueryContextProvider } from "./HowToQueryContext.js";
 import { AuthContextProvider } from "./AuthContext.js";
 import { FBDeckQueryContextProvider } from "./FBDeckQueryContext.js";
 import { SimulatorObjectsContextProvider } from "./SimulatorObjectsContext.js";
+import { MatchMakingContextProvider } from "./MatchMakingContext.js";
 
 
 const AppProvider = ({ children }) => {
@@ -27,19 +28,21 @@ const AppProvider = ({ children }) => {
                                 <QueryContextProvider>
                                     <DeckQueryContextProvider>
                                         <GameStateContextProvider>
-                                            <SimulatorActionsContextProvider>
-                                                <SimulatorObjectsContextProvider>
-                                                    <MainActionsContextProvider>
-                                                        <PluckActionsContextProvider>
-                                                            <NewsQueryContextProvider>
-                                                                <HowToQueryContextProvider>
-                                                                    {children}
-                                                                </HowToQueryContextProvider>
-                                                            </NewsQueryContextProvider>
-                                                        </PluckActionsContextProvider>
-                                                    </MainActionsContextProvider>
-                                                </SimulatorObjectsContextProvider>
-                                            </SimulatorActionsContextProvider>
+                                            <MatchMakingContextProvider>
+                                                <SimulatorActionsContextProvider>
+                                                    <SimulatorObjectsContextProvider>
+                                                        <MainActionsContextProvider>
+                                                            <PluckActionsContextProvider>
+                                                                <NewsQueryContextProvider>
+                                                                    <HowToQueryContextProvider>
+                                                                        {children}
+                                                                    </HowToQueryContextProvider>
+                                                                </NewsQueryContextProvider>
+                                                            </PluckActionsContextProvider>
+                                                        </MainActionsContextProvider>
+                                                    </SimulatorObjectsContextProvider>
+                                                </SimulatorActionsContextProvider>
+                                            </MatchMakingContextProvider>
                                         </GameStateContextProvider>
                                     </DeckQueryContextProvider>
                                 </QueryContextProvider>

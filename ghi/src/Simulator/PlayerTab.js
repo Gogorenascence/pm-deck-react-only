@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import { GameStateContext } from '../context/GameStateContext';
+import { MatchMakingContext } from '../context/MatchMakingContext';
 import deckQueries from '../QueryObjects/DeckQueries';
 import DamageRow from './DamageRow';
 import DefendingCard from './DefendingCard';
@@ -15,10 +16,12 @@ function PlayerTab({
     setDecks,
     gameStart,
     resetPlayer,
-    matchMake
+    matchMake,
+    priority
 }){
 
     const gameState = useContext(GameStateContext)
+    const matchMaking = useContext(MatchMakingContext)
     const content = useRef(null)
 
     const [show, setShow] = useState(null);
@@ -261,7 +264,10 @@ function PlayerTab({
                             </button>
                             <button
                                 className='middle-button margin-left-3'
-                                onClick={matchMake}
+                                onClick={() => {
+                                    matchMake()
+                                    handleClose()
+                                }}
                             >
                                 Find opponents
                             </button>
@@ -419,12 +425,12 @@ function PlayerTab({
                                     className="rollTracker flex-items"
                                     style={{width: "150px"}}
                                 >
-                                    <p className='m-l-r-5'>
+                                    {/* <p className='m-l-r-5'>
                                         {turnSorter.getPriority(
                                             gameState.player,
-                                            gameState.opponents
+                                            matchMaking.opponents
                                         )}
-                                    </p>
+                                    </p> */}
                                 </div>
                             </span>
                         </div>

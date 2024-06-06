@@ -28,3 +28,63 @@ Add a start script in your package.json:
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+
+
+
+
+    const matchMake = async() => {
+        console.log(opponents)
+        console.log("Finding opponents")
+        const opponent = {
+            name: "",
+            hp: 16,
+            mainDeck: [],
+            pluckDeck: [],
+            hand: [],
+            ownership: [],
+            mainDiscard: [],
+            pluckDiscard: [],
+            playArea:"",
+            activePluck: "",
+            focus: 0,
+            enthusiasm: 0,
+            mettle: 0,
+            secondWind: false,
+            playArea: "",
+            activePluck: "",
+            faceDown: "",
+            defending: "",
+            defendingCard: ""
+        }
+
+        const newPlayer = helper.deepCopy(player)
+        const newFaceDown = {...faceDown}
+        const newDefending = {...defending}
+        const newDefendingCard = {...defendingCard}
+        for (let [key, value] of Object.entries(newPlayer)) {
+            console.log(key, value)
+            opponent[key] = value
+        }
+        const oppFaceDown = {}
+        for (let [key, value] of Object.entries(newFaceDown)) {
+            oppFaceDown[key] = value
+        }
+        opponent["faceDown"] = oppFaceDown
+        const oppDefending = {}
+        for (let [key, value] of Object.entries(newDefending)) {
+            oppDefending[key] = value
+        }
+        opponent["defending"] = oppDefending
+        const oppDefendingCard = {}
+        for (let [key, value] of Object.entries(newDefendingCard)) {
+            oppDefendingCard[key] = value
+        }
+        opponent["defendingCard"] = oppDefendingCard
+        console.log(opponent)
+        console.log("Opponent Found")
+        if (opponents.length < 3) {
+            setOpponents([...opponents, opponent])
+        }
+        console.log("Opponent Added")
+        console.log(opponents)
+    }

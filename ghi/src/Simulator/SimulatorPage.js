@@ -1,5 +1,6 @@
 import { useEffect, useContext, useRef, useState } from "react";
 import { GameStateContext } from "../context/GameStateContext";
+import { MatchMakingContext } from "../context/MatchMakingContext";
 import { SimulatorActionsContext } from "../context/SimulatorActionsContext";
 import { MainActionsContext } from "../context/MainActionsContext";
 import { PluckActionsContext } from "../context/PluckActionsContext";
@@ -16,7 +17,6 @@ import OppPlayAreaModal from "./OppGameBoardParts/OppPlayAreaModal";
 import OppActivePluckModal from "./OppGameBoardParts/OppActivePluckModal";
 import OppMainDiscardModal from "./OppGameBoardParts/OppMainDiscardModal";
 import OppPluckDiscardModal from "./OppGameBoardParts/OppPluckDiscardModal";
-import helper from "../QueryObjects/Helper";
 import turnSorter from "./TurnSorter";
 
 
@@ -38,11 +38,10 @@ function SimulatorPage(props) {
         volume,
         playingFaceDown,
         setPlayingFaceDown,
+    } = useContext(GameStateContext)
+
+    const {
         opponents,
-        setOpponents,
-        faceDown,
-        defending,
-        defendingCard,
         selectedOpp,
         setSelectedOpp,
         selectedOppCard,
@@ -54,8 +53,11 @@ function SimulatorPage(props) {
         showOppDiscardModal,
         setShowOppDiscardModal,
         showOppPluckDiscardModal,
-        setShowOppPluckDiscardModal
-    } = useContext(GameStateContext)
+        setShowOppPluckDiscardModal,
+        matchMake,
+        playerIn,
+        waiting
+    } = useContext(MatchMakingContext)
 
     const {
         decks,
@@ -209,63 +211,6 @@ function SimulatorPage(props) {
         }));
     }, [account, playerMainDeck, playerPluckDeck, hand, ownership, playArea, activePluck, discard, pluckDiscard]);
 
-    const matchMake = async() => {
-        console.log(opponents)
-        console.log("Finding opponents")
-        const opponent = {
-            name: "",
-            hp: 16,
-            mainDeck: [],
-            pluckDeck: [],
-            hand: [],
-            ownership: [],
-            mainDiscard: [],
-            pluckDiscard: [],
-            playArea:"",
-            activePluck: "",
-            focus: 0,
-            enthusiasm: 0,
-            mettle: 0,
-            secondWind: false,
-            playArea: "",
-            activePluck: "",
-            faceDown: "",
-            defending: "",
-            defendingCard: ""
-        }
-
-        const newPlayer = helper.deepCopy(player)
-        const newFaceDown = {...faceDown}
-        const newDefending = {...defending}
-        const newDefendingCard = {...defendingCard}
-        for (let [key, value] of Object.entries(newPlayer)) {
-            console.log(key, value)
-            opponent[key] = value
-        }
-        const oppFaceDown = {}
-        for (let [key, value] of Object.entries(newFaceDown)) {
-            oppFaceDown[key] = value
-        }
-        opponent["faceDown"] = oppFaceDown
-        const oppDefending = {}
-        for (let [key, value] of Object.entries(newDefending)) {
-            oppDefending[key] = value
-        }
-        opponent["defending"] = oppDefending
-        const oppDefendingCard = {}
-        for (let [key, value] of Object.entries(newDefendingCard)) {
-            oppDefendingCard[key] = value
-        }
-        opponent["defendingCard"] = oppDefendingCard
-        console.log(opponent)
-        console.log("Opponent Found")
-        if (opponents.length < 3) {
-            setOpponents([...opponents, opponent])
-        }
-        console.log("Opponent Added")
-        console.log(opponents)
-    }
-
     const handleClose = async() => {
         setSelectedOpp(null)
         setSelectedOppCard(null)
@@ -300,13 +245,13 @@ function SimulatorPage(props) {
                             <h2 className="aligned margin-top-0 margin-bottom-10">
                                 {selectedOpp.name}
                             </h2>
-                            <h3 className="aligned margin-top-0 margin-bottom-30">
+                            {/* <h3 className="aligned margin-top-0 margin-bottom-30">
                                 Priority: {turnSorter.getOppPriority(
                                     selectedOpp,
                                     player,
                                     opponents
                                 )}
-                            </h3>
+                            </h3> */}
                             <OppGameBoard
                                 opponent={selectedOpp}
                             />
@@ -366,17 +311,20 @@ function SimulatorPage(props) {
             <div className="cd-inner">
                 <div className="flex-items space-around playersRow">
                     <span className="flex space-around" style={{minWidth: "75%"}}>
-                        <PlayerTab
-                            account={account}
-                            handleChangeDeck={handleChangeDeck}
-                            decks={decks}
-                            setDecks={setDecks}
-                            gameStart={gameStart}
-                            checkPlayer={checkPlayer}
-                            resetPlayer={resetPlayer}
-                            matchMake={matchMake}
-                        />
-                        {opponents?.map((opponent, index) => {
+                        <div>
+                            <PlayerTab
+                                account={account}
+                                handleChangeDeck={handleChangeDeck}
+                                decks={decks}
+                                setDecks={setDecks}
+                                gameStart={gameStart}
+                                checkPlayer={checkPlayer}
+                                resetPlayer={resetPlayer}
+                                matchMake={matchMake}
+                            />
+                            <p className="aligned">{waiting? "Waiting for opponents...": null}</p>
+                        </div>
+                        {playerIn(player) && opponents.map((opponent, index) => {
                             return (
                                 <div key={index}>
                                     <OpponentTab

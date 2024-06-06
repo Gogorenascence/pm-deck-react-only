@@ -413,3 +413,230 @@ export { GameStateContext, GameStateContextProvider };
 
 // Run the WebSocket server:
 // node server.js
+
+
+
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
+const app = express();
+app.use(cors());
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+const http = require("http").createServer(app);
+const io = require("socket.io")(http, {
+    cors: {
+        origin: "*",
+    },
+});
+
+const rooms = {}; // Store rooms and their players
+
+io.on("connection", (socket) => {
+    console.log(`New client connected: ${socket.id}`);
+
+    socket.on("joinRoom", (room, playerData) => {
+        if (!rooms[room]) {
+            rooms[room] = [];
+        }
+
+        if (rooms[room].length < 4) {
+            socket.join(room);
+            rooms[room].push({ ...playerData, s_id: socket.id });
+            io.to(room).emit("message", { user: playerData.name, role: "system", message: `${playerData.name} has joined the room.` });
+            io.to(room).emit("updatePlayers", rooms[room]);
+        } else {
+            socket.emit("roomFull", room);
+        }
+    });
+
+    socket.on("leaveRoom", (room) => {
+        if (rooms[room]) {
+            rooms[room] = rooms[room].filter(player => player.s_id !== socket.id);
+            socket.leave(room);
+            io.to(room).emit("updatePlayers", rooms[room]);
+        }
+    });
+
+    socket.on("message", (room, messageData) => {
+        io.to(room).emit("message", messageData);
+    });
+
+    socket.on("disconnect", () => {
+        for (const room of Object.keys(rooms)) {
+            rooms[room] = rooms[room].filter(player => player.s_id !== socket.id);
+            io.to(room).emit("updatePlayers", rooms[room]);
+        }
+        console.log(`Client disconnected: ${socket.id}`);
+    });
+});
+
+const PORT = process.env.PORT || 4000;
+
+http.listen(PORT, () => {
+    console.log(`Server is up and running on port number ${PORT}`);
+});
+
+app.get('/', (req, res) => {
+    res.send('Real-time Chat Server is running');
+});
+
+
+import { createContext, useContext, useState, useEffect } from "react";
+import { io } from "socket.io-client";
+import { AuthContext } from "./AuthContext";
+import { GameStateContext } from "./GameStateContext";
+
+const MatchMakingContext = createContext();
+
+const MatchMakingContextProvider = ({ children }) => {
+    const { account } = useContext(AuthContext);
+    const {
+        player,
+        faceDown,
+        defending,
+        defendingCard,
+        volume
+    } = useContext(GameStateContext);
+
+    const socket = io("http://localhost:4000");
+
+    const [players, setPlayers] = useState([]);
+    const [opponents, setOpponents] = useState([]);
+    const [watchers, setWatchers] = useState([]);
+    const [selectedOpp, setSelectedOpp] = useState(null);
+    const [selectedOppCard, setSelectedOppCard] = useState(null);
+    const [log, setLog] = useState([]);
+    const [room, setRoom] = useState(null);
+
+    const [showOppDiscardModal, setShowOppDiscardModal] = useState(false);
+    const [showOppPluckDiscardModal, setShowOppPluckDiscardModal] = useState(false);
+    const [showOppPlayAreaModal, setShowOppPlayAreaModal] = useState({ name: "", zone: null, objectName: "" });
+    const [showOppActivePluckModal, setShowOppActivePluckModal] = useState({ name: "", zone: null, objectName: "" });
+
+    const [priority, setPriority] = useState("");
+
+    const joinRoom = (roomName) => {
+        setRoom(roomName);
+        const playerData = {
+            name: player.name,
+            hp: player.hp,
+            mainDeck: player.mainDeck,
+            pluckDeck: player.pluckDeck,
+            hand: player.hand,
+            ownership: player.ownership,
+            mainDiscard: player.mainDiscard,
+            pluckDiscard: player.pluckDiscard,
+            playArea: player.playArea,
+            activePluck: player.activePluck,
+            focus: player.focus,
+            enthusiasm: player.enthusiasm,
+            mettle: player.mettle,
+            secondWind: player.secondWind,
+            faceDown: faceDown,
+            defending: defending,
+            defendingCard: defendingCard,
+            p_id: player.p_id
+        };
+        socket.emit("joinRoom", roomName, playerData);
+    };
+
+    const leaveRoom = () => {
+        if (room) {
+            socket.emit("leaveRoom", room);
+            setRoom(null);
+            setPlayers([]);
+            setOpponents([]);
+            setWatchers([]);
+        }
+    };
+
+    const addToLog = (user, role, message) => {
+        const messageData = {
+            user: user,
+            role: role,
+            message: message
+        };
+        socket.emit("message", room, messageData);
+    };
+
+    useEffect(() => {
+        const handleMessage = (messageData) => {
+            setLog(prevLog => {
+                const isDuplicate = prevLog.some(
+                    logItem => logItem.user === messageData.user &&
+                               logItem.role === messageData.role &&
+                               logItem.message === messageData.message
+                );
+                if (isDuplicate) return prevLog;
+                return [...prevLog, messageData];
+            });
+        };
+
+        socket.on("message", handleMessage);
+
+        return () => {
+            socket.off("message", handleMessage);
+        };
+    }, [room]);
+
+    useEffect(() => {
+        const handleUpdatePlayers = (playersData) => {
+            const newPlayers = [];
+            const newOpponents = [];
+            const newWatchers = [];
+            for (let playerData of playersData) {
+                const playerItem = { ...playerData };
+                if (playerData.p_id === player.p_id) {
+                    newPlayers.push(playerItem);
+                } else if (newOpponents.length < 3) {
+                    newOpponents.push(playerItem);
+                } else {
+                    newWatchers.push(playerItem);
+                }
+            }
+            setPlayers(newPlayers);
+            setOpponents(newOpponents);
+            setWatchers(newWatchers);
+        };
+
+        socket.on("updatePlayers", handleUpdatePlayers);
+
+        return () => {
+            socket.off("updatePlayers", handleUpdatePlayers);
+        };
+    }, [player.p_id, room]);
+
+    return (
+        <MatchMakingContext.Provider value={{
+            opponents,
+            setOpponents,
+            selectedOpp,
+            setSelectedOpp,
+            selectedOppCard,
+            setSelectedOppCard,
+            showOppPlayAreaModal,
+            setShowOppPlayAreaModal,
+            showOppActivePluckModal,
+            setShowOppActivePluckModal,
+            showOppDiscardModal,
+            setShowOppDiscardModal,
+            showOppPluckDiscardModal,
+            setShowOppPluckDiscardModal,
+            players,
+            setPlayers,
+            joinRoom,
+            leaveRoom,
+            priority,
+            log,
+            addToLog
+        }}>
+            {children}
+        </MatchMakingContext.Provider>
+    );
+};
+
+export { MatchMakingContext, MatchMakingContextProvider };

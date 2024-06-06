@@ -29,10 +29,8 @@ const turnSorter = {
         })
         return players;
     },
-    getPriority: function (player, opponents) {
-        const players = [...opponents, player]
-        const sortedPlayers = this.sortPlayers(players)
-        const playerIndex = sortedPlayers.indexOf(player)
+    getPriority: function (player, players) {
+        const playerIndex = players.indexOf(player)
         const orders = {
             0: "First",
             1: "Second",
@@ -41,10 +39,8 @@ const turnSorter = {
         }
         return orders[playerIndex]
     },
-    getOppPriority: function (opp, player, opponents) {
-        const players = [...opponents, player]
-        const sortedPlayers = this.sortPlayers(players)
-        const oppIndex = sortedPlayers.indexOf(opp)
+    getOppPriority: function (opp, players) {
+        const oppIndex = players.indexOf(opp)
         const orders = {
             0: "First",
             1: "Second",

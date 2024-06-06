@@ -24,31 +24,32 @@ io.on("connection", (socket) => {
         io.emit("message", messageData );
     });
 
-    socket.on("newPlayer", (playerData) => {
-        console.log(`New player joined: ${playerData.p_id}`);
-        players[playerData.p_id] = { ...playerData, socketId: socket.id };
-        io.emit("newPlayer", players[playerData.p_id]);
+
+    socket.on("findingOpponents", (playerData) => {
+        console.log(`New player: ${playerData.name}`);
+
+        // Ensure no more than 4 players are allowed
+        const currPlayers = Object.values(players);
+        if (currPlayers.length < 4 && !currPlayers.find(player => player.p_id === playerData.p_id)) {
+            players[socket.id] = { ...playerData, s_id: socket.id };
+            io.emit("message", { user: playerData.name, role: "system", message: `${playerData.name} has joined the game.` });
+        } else {
+            console.log("No new players allowed or player already exists");
+        }
+
+        // Emit the updated player list to all clients
+        io.emit("updatePlayers", players);
         console.log("Current players:", players);
     });
 
-    socket.on("updatePlayerData", (playerData) => {
-        if (players[playerData.p_id]) {
-            console.log(`Updating player data for: ${playerData.p_id}`);
-            players[playerData.p_id] = { ...players[playerData.p_id], ...playerData };
-        }
-        console.log("players", players)
-    });
-
-    socket.on("requestPlayerData", (requestedId) => {
-        if (players[requestedId]) {
-            socket.emit("receivePlayerData", players[requestedId]);
-        }
-    });
-
     socket.on("disconnect", () => {
-        console.log(`Client disconnected: ${socket.id}`);
-        delete players[socket.id];
-        io.emit("playerDisconnected", { id: socket.id });
+        const disconnectedPlayer = players[socket.id];
+        if (disconnectedPlayer) {
+            delete players[socket.id];
+            io.emit("updatePlayers", players);
+            io.emit("message", { user: disconnectedPlayer.name, role: "system", message: `${disconnectedPlayer.name} has left the game.` });
+            console.log("Player disconnected:", disconnectedPlayer.name);
+        }
     });
 });
 

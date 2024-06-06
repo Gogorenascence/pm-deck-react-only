@@ -485,3 +485,145 @@ const SimulatorActionsContextProvider = ({ children }) => {
             addToLog("System", "system", "No deck selected")
         }
     }
+
+
+       // socket.on("findingOpponents", (playersData) => {
+    //     console.log(playersData)
+    //     const newPlayers = []
+    //     const newOpponents = []
+    //     const newWatchers = []
+    //     for (let [s_id, playerData] of Object.entries(playersData)) {
+    //         if (
+    //             playerData.p_id === player.p_id
+    //             && newPlayers <= 3
+    //         ) {
+    //             const playerItem  = {...playerData, ["s_id"]: s_id}
+    //             newPlayers.push(playerItem)
+    //         } else if (
+    //             playerData.p_id !== player.p_id
+    //             && newPlayers <= 3
+    //         ) {
+    //             const playerItem  = {...playerData, ["s_id"]: s_id}
+    //             newPlayers.push(playerItem)
+    //             newOpponents.push(playerItem)
+    //         } else {
+    //             const playerItem  = {...playerData, ["s_id"]: s_id}
+    //             newWatchers.push(playerItem)
+    //         }
+    //     }
+    //     console.log(newPlayers.length)
+    //     console.log(newOpponents.length)
+    //     console.log(newWatchers)
+    //     setPlayers(newPlayers)
+    //     setOpponents(newOpponents)
+    //     setWatchers(newWatchers)
+    //     // console.log(newOpponents)
+    // })
+    // useEffect(() => {
+    //     const socket = new WebSocket('ws://localhost:8080');
+
+    //     socket.onopen = () => {
+    //         console.log('Connected to WebSocket server');
+    //     };
+
+    //     socket.onclose = () => {
+    //         console.log('Disconnected from WebSocket server');
+    //     };
+
+    //     socket.onerror = (error) => {
+    //         console.error('WebSocket error:', error);
+    //     };
+
+    //     return () => {
+    //         socket.close();
+    //     };
+    // }, []);
+
+    // useEffect(() => {
+    //     const playerData = {
+    //         name: player.name,
+    //         hp: player.hp,
+    //         mainDeck: player.mainDeck,
+    //         pluckDeck: player.pluckDeck,
+    //         hand: player.hand,
+    //         ownership: player.ownership,
+    //         mainDiscard: player.mainDiscard,
+    //         pluckDiscard: player.pluckDiscard,
+    //         playArea: player.playArea,
+    //         activePluck: player.activePluck,
+    //         focus: player.focus,
+    //         enthusiasm: player.enthusiasm,
+    //         mettle: player.mettle,
+    //         secondWind: player.secondWind,
+    //         faceDown: faceDown,
+    //         defending: defending,
+    //         defendingCard: defendingCard,
+    //         p_id: player.p_id
+    //     };
+    //     console.log(playerData)
+    //     socket.emit('newPlayer', playerData);
+
+    //     return () => {
+    //         socket.off('newPlayer');
+    //     }
+    // }, [])
+
+    // Whenever a state changes, send the new state to the server
+    // useEffect(() => {
+    //     const playerData = {
+    //         name: player.name,
+    //         hp: player.hp,
+    //         mainDeck: player.mainDeck,
+    //         pluckDeck: player.pluckDeck,
+    //         hand: player.hand,
+    //         ownership: player.ownership,
+    //         mainDiscard: player.mainDiscard,
+    //         pluckDiscard: player.pluckDiscard,
+    //         playArea: player.playArea,
+    //         activePluck: player.activePluck,
+    //         focus: player.focus,
+    //         enthusiasm: player.enthusiasm,
+    //         mettle: player.mettle,
+    //         secondWind: player.secondWind,
+    //         faceDown: faceDown,
+    //         defending: defending,
+    //         defendingCard: defendingCard,
+    //         p_id: player.p_id
+    //     };
+    //     socket.emit('updatePlayerData', playerData);
+    //     console.log("updating", playerData)
+    // }, [
+    //     player,
+    //     playArea,
+    //     activePluck,
+    //     faceDown,
+    //     defending,
+    //     defendingCard
+    // ]);
+
+    // useEffect(() => {
+    //     // Listen for new players joining
+    //     socket.on("newPlayer", (data) => {
+    //         setOpponents((prevOpponents) => {
+    //             if (prevOpponents.some(opponent => opponent.name === data.name)) {
+    //                 return prevOpponents
+    //             }
+    //             if (opponents.length < 3) {
+    //                 return [...opponents, data]
+    //             }
+    //             return prevOpponents
+    //         })
+    //     });
+
+    //     // Listen for players disconnecting
+    //     socket.on("playerDisconnected", (data) => {
+    //         setOpponents((prevOpponents) =>
+    //             prevOpponents.filter((opponent) => opponent.id !== data.id)
+    //         );
+    //     });
+
+    //     return () => {
+    //         socket.off("newPlayer");
+    //         socket.off("playerDisconnected");
+    //     };
+    // }, [opponents]);
