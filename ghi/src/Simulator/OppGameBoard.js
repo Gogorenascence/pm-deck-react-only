@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MatchMakingContext } from "../context/MatchMakingContext";
 import { SimulatorActionsContext } from "../context/SimulatorActionsContext";
 import {
@@ -38,7 +38,6 @@ function OppGameBoard({
 
     const defending = opponent.defending || {}
     const faceDown = opponent.faceDown || {}
-
 
     return (
         <div>
@@ -111,7 +110,7 @@ function OppGameBoard({
                 <div className="flex">
                     <div style={{marginLeft: "-160px", marginRight: "20px"}}>
                         <div className="matCard pointer">
-                            {opponent.hand.length > 1 ?
+                            {opponent.hand.length > 0 ?
                                 <div className="matCardOverlay">
                                     <h1 className="fontSize60">{opponent.hand.length}</h1>
                                 </div> :null
@@ -173,7 +172,7 @@ function OppGameBoard({
                 <div className="flex">
                     <div style={{marginLeft: "-160px", marginRight: "20px"}}>
                         <div className="matCard pointer">
-                            {opponent.ownership.length > 1 ?
+                            {opponent.ownership.length > 0 ?
                                 <div className="matCardOverlay">
                                     <h1 className="fontSize60">{opponent.ownership.length}</h1>
                                 </div> :null

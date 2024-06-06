@@ -39,8 +39,24 @@ io.on("connection", (socket) => {
 
         // Emit the updated player list to all clients
         io.emit("updatePlayers", players);
-        console.log("Current players:", players);
+        // console.log("Current players:", players);
     });
+
+    socket.on("updatePlayer", (playerData) => {
+        console.log(socket.id)
+        const currPlayers = Object.values(players);
+        const playerToReplace = currPlayers.find(player => player.p_id === playerData.p_id)
+        if (playerToReplace) {
+            delete players[playerToReplace.s_id]
+            players[socket.id] = {...playerData, s_id: socket.id}
+            console.log(`Updating ${playerData.name}'s boardstate`)
+        } else {
+            console.log("Player is not in the game.")
+        }
+
+        io.emit("updatePlayers", players)
+        console.log("Current players:", players);
+    })
 
     socket.on("disconnect", () => {
         const disconnectedPlayer = players[socket.id];

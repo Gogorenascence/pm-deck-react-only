@@ -181,6 +181,20 @@ function SimulatorPage(props) {
         setCards(processedCards)
     }
 
+    const getSelectedOppData = () => {
+        if (selectedOpp) {
+            const selectedOppData = opponents.find(opp => opp.p_id === selectedOpp.p_id)
+            setSelectedOpp(selectedOppData)
+        }
+        if (selectedOppCard) {
+            const oppData = opponents.find(opp => opp.p_id === selectedOppCard.owner_id)
+            let newDefendingCard = {...oppData.defendingCard}
+            console.log(oppData)
+            newDefendingCard["owner_id"] = oppData.p_id
+            setSelectedOppCard(newDefendingCard)
+        }
+    }
+
     useEffect(() => {
         getCards();
         document.title = "Simulator - PM CardBase"
@@ -210,6 +224,10 @@ function SimulatorPage(props) {
             pluckDiscard: pluckDiscard
         }));
     }, [account, playerMainDeck, playerPluckDeck, hand, ownership, playArea, activePluck, discard, pluckDiscard]);
+
+    useEffect(() => {
+        getSelectedOppData()
+    }, [opponents])
 
     const handleClose = async() => {
         setSelectedOpp(null)

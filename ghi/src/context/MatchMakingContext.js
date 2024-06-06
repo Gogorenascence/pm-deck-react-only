@@ -34,7 +34,7 @@ const MatchMakingContextProvider = ({ children }) => {
     const [showOppPlayAreaModal, setShowOppPlayAreaModal] = useState({name: "", zone: null, objectName: ""})
     const [showOppActivePluckModal, setShowOppActivePluckModal] = useState({name: "", zone: null, objectName: ""})
 
-    const [priority, setPriority] = useState("")
+    const [priority, setPriority] = useState([])
 
     const matchMake = async() => {
         console.log("Finding opponents")
@@ -72,6 +72,7 @@ const MatchMakingContextProvider = ({ children }) => {
     useEffect(() => {
         socket.on("updatePlayers", (playersData) => {
             console.log(playersData);
+            console.log(socket.id)
             const newPlayers = [];
             const newOpponents = [];
             const newWatchers = [];
@@ -81,7 +82,11 @@ const MatchMakingContextProvider = ({ children }) => {
                     newPlayers.push(playerItem);
                 } else if (newOpponents.length < 3) {
                     newOpponents.push(playerItem);
-                    soundPlayer.enterSound(volume)
+                    if (selectedOpp && selectedOpp.p_id === playerItem.p_id) {
+                        setSelectedOpp(playerItem)
+                    }
+                    // if (!players.find(playerInfo => playerInfo.p_id === playerItem.p_id))
+                    //     soundPlayer.enterSound(volume)
                     setWaiting(false)
                 } else {
                     newWatchers.push(playerItem);
@@ -96,6 +101,34 @@ const MatchMakingContextProvider = ({ children }) => {
             socket.off("updatePlayers");
         };
     }, [player.p_id]);
+
+    useEffect(() => {
+        console.log(player)
+        if (playerIn(player)) {
+            const playerData = {
+                name: player.name,
+                hp: player.hp,
+                mainDeck: player.mainDeck,
+                pluckDeck: player.pluckDeck,
+                hand: player.hand,
+                ownership: player.ownership,
+                mainDiscard: player.mainDiscard,
+                pluckDiscard: player.pluckDiscard,
+                playArea: player.playArea,
+                activePluck: player.activePluck,
+                focus: player.focus,
+                enthusiasm: player.enthusiasm,
+                mettle: player.mettle,
+                secondWind: player.secondWind,
+                faceDown: faceDown,
+                defending: defending,
+                defendingCard: defendingCard,
+                p_id: player.p_id,
+                s_id: player.s_id
+            };
+            socket.emit("updatePlayer", playerData)
+        }
+    }, [player, faceDown, defending, defendingCard])
 
     return (
         <MatchMakingContext.Provider value={{
@@ -117,6 +150,7 @@ const MatchMakingContextProvider = ({ children }) => {
             setPlayers,
             matchMake,
             priority,
+            setPriority,
             playerIn,
             waiting
             }}>

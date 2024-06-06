@@ -17,9 +17,11 @@ function OpponentTab({
 
     const handleShowDefending = async(event) => {
         event.preventDefault()
-        if (opponent.defendingCard.card !== "") {
+        if (opponent.defendingCard.card !== null) {
+            let newDefendingCard = {...opponent.defendingCard}
+            newDefendingCard["owner_id"] = opponent.p_id
             console.log("Opponent", opponent.defendingCard)
-            setSelectedOppCard(opponent.defendingCard)
+            setSelectedOppCard(newDefendingCard)
         }
         document.body.style.overflow = 'hidden';
     };
