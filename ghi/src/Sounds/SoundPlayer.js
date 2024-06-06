@@ -14,6 +14,7 @@ import damage from "./damage.wav"
 import roll from "./diceroll.mp3"
 import chat from "./chatmessage.wav"
 import coin from "./coinflip.wav"
+import enter from "./playerenter1.wav"
 
 
 const soundPlayer = {
@@ -94,6 +95,11 @@ const soundPlayer = {
     },
     coinSound: function coinSound(volume) {
         const audio = new Audio(coin);
+        audio.volume = volume
+        audio.play()
+    },
+    enterSound: function enterSound(volume) {
+        const audio = new Audio(enter);
         audio.volume = volume
         audio.play()
     },

@@ -81,6 +81,7 @@ const MatchMakingContextProvider = ({ children }) => {
                     newPlayers.push(playerItem);
                 } else if (newOpponents.length < 3) {
                     newOpponents.push(playerItem);
+                    soundPlayer.enterSound(volume)
                     setWaiting(false)
                 } else {
                     newWatchers.push(playerItem);

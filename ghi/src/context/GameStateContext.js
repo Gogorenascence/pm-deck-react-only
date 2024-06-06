@@ -187,24 +187,35 @@ const GameStateContextProvider = ({ children }) => {
 
     const [log, setLog] = useState([])
 
-    const addToLog = (user, role, message) => {
-        const messageData = {
-                user: user,
-                role: role,
-                message: message
-            }
-        socket.emit("message", messageData );
+    const addToLog = (user, role, message, card) => {
+        const newLog = [...log]
+        newLog.push({
+            user: user,
+            role: role,
+            message: message,
+            card: card
+        })
+        setLog(newLog)
     }
 
-    useEffect(() => {
-        socket.on("message", ( messageData ) => {
-            setLog((prevLog) => [...prevLog, messageData])
-        });
+    // const addToLog = (user, role, message) => {
+    //     const messageData = {
+    //             user: user,
+    //             role: role,
+    //             message: message
+    //         }
+    //     socket.emit("message", messageData );
+    // }
 
-        return () => {
-            socket.off('message');
-        }
-    }, []);
+    // useEffect(() => {
+    //     socket.on("message", ( messageData ) => {
+    //         setLog((prevLog) => [...prevLog, messageData])
+    //     });
+
+    //     return () => {
+    //         socket.off('message');
+    //     }
+    // }, []);
 
     const [playingFaceDown, setPlayingFaceDown] = useState(false)
 
