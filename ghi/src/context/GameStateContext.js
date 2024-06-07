@@ -11,7 +11,7 @@ const GameStateContext = createContext();
 const GameStateContextProvider = ({ children }) => {
     const { account } = useContext(AuthContext)
 
-    const socket = io.connect("http://localhost:4000/");
+    // const socket = io.connect("http://localhost:4000/");
 
     const [game, setGame] = useState(false)
     const [prevAccount, setPrevAccount] = useState("")
@@ -197,25 +197,6 @@ const GameStateContextProvider = ({ children }) => {
         })
         setLog(newLog)
     }
-
-    // const addToLog = (user, role, message) => {
-    //     const messageData = {
-    //             user: user,
-    //             role: role,
-    //             message: message
-    //         }
-    //     socket.emit("message", messageData );
-    // }
-
-    // useEffect(() => {
-    //     socket.on("message", ( messageData ) => {
-    //         setLog((prevLog) => [...prevLog, messageData])
-    //     });
-
-    //     return () => {
-    //         socket.off('message');
-    //     }
-    // }, []);
 
     const [playingFaceDown, setPlayingFaceDown] = useState(false)
 

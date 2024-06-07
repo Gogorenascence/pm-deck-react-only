@@ -79,6 +79,7 @@ function DecksPage({
         }
         setLoading(false)
         setQueryChanged(false)
+        console.log(fullDecks)
     };
 
     useEffect(() => {
@@ -300,6 +301,7 @@ function DecksPage({
                     Show More Decks
                 </button>
                 : null }
+            <button onClick={() => {console.log(fullDecks)}}>All Decks</button>
         </div>
     );
 }

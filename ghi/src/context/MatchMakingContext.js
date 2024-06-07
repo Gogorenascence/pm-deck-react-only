@@ -20,14 +20,13 @@ const MatchMakingContextProvider = ({ children }) => {
         addToLog
     } = useContext(GameStateContext)
 
-    const socket = io.connect("http://localhost:4000/");
-
     const [waiting, setWaiting] = useState(false)
     const [players, setPlayers] = useState([])
     const [opponents, setOpponents] = useState([])
     const [watchers, setWatchers] = useState([])
     const [selectedOpp, setSelectedOpp] = useState(null)
     const [selectedOppCard, setSelectedOppCard] = useState(null)
+    const [socket, setSocket] = useState(null);
 
     const [showOppDiscardModal, setShowOppDiscardModal] = useState(false)
     const [showOppPluckDiscardModal, setShowOppPluckDiscardModal] = useState(false)
@@ -37,6 +36,7 @@ const MatchMakingContextProvider = ({ children }) => {
     const [priority, setPriority] = useState([])
 
     const matchMake = async() => {
+        const newSocket = io.connect("http://localhost:4000/")
         console.log("Finding opponents")
         const playerData = {
             name: player.name,
@@ -60,7 +60,8 @@ const MatchMakingContextProvider = ({ children }) => {
         };
         console.log(playerData)
         setWaiting(true)
-        socket.emit("findingOpponents", playerData)
+        newSocket.emit("findingOpponents", playerData)
+        setSocket(newSocket)
     }
 
     const playerIn = (player) => {
@@ -70,41 +71,42 @@ const MatchMakingContextProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        socket.on("updatePlayers", (playersData) => {
-            console.log(playersData);
-            console.log(socket.id)
-            const newPlayers = [];
-            const newOpponents = [];
-            const newWatchers = [];
-            for (let [s_id, playerData] of Object.entries(playersData)) {
-                const playerItem = { ...playerData, s_id };
-                if (playerData.p_id === player.p_id) {
-                    newPlayers.push(playerItem);
-                } else if (newOpponents.length < 3) {
-                    newOpponents.push(playerItem);
-                    if (selectedOpp && selectedOpp.p_id === playerItem.p_id) {
-                        setSelectedOpp(playerItem)
+        if (socket) {
+            socket.on("updatePlayers", (playersData) => {
+                console.log(playersData);
+                console.log(socket.id)
+                const newPlayers = [];
+                const newOpponents = [];
+                const newWatchers = [];
+                for (let [s_id, playerData] of Object.entries(playersData)) {
+                    const playerItem = { ...playerData, s_id };
+                    if (playerData.p_id === player.p_id) {
+                        newPlayers.push(playerItem);
+                    } else if (newOpponents.length < 3) {
+                        newOpponents.push(playerItem);
+                        if (selectedOpp && selectedOpp.p_id === playerItem.p_id) {
+                            setSelectedOpp(playerItem)
+                        }
+                        // if (!players.find(playerInfo => playerInfo.p_id === playerItem.p_id))
+                        //     soundPlayer.enterSound(volume)
+                        setWaiting(false)
+                    } else {
+                        newWatchers.push(playerItem);
                     }
-                    // if (!players.find(playerInfo => playerInfo.p_id === playerItem.p_id))
-                    //     soundPlayer.enterSound(volume)
-                    setWaiting(false)
-                } else {
-                    newWatchers.push(playerItem);
                 }
-            }
-            setPlayers(newPlayers);
-            setOpponents(newOpponents);
-            setWatchers(newWatchers);
-        });
+                setPlayers(newPlayers);
+                setOpponents(newOpponents);
+                setWatchers(newWatchers);
+            });
 
-        return () => {
-            socket.off("updatePlayers");
-        };
-    }, [player.p_id]);
+            return () => {
+                socket.off("updatePlayers");
+            };
+        }
+    }, [player.p_id, socket]);
 
     useEffect(() => {
-        console.log(player)
-        if (playerIn(player)) {
+        if (socket && playerIn(player)) {
             const playerData = {
                 name: player.name,
                 hp: player.hp,
@@ -128,7 +130,7 @@ const MatchMakingContextProvider = ({ children }) => {
             };
             socket.emit("updatePlayer", playerData)
         }
-    }, [player, faceDown, defending, defendingCard])
+    }, [player, faceDown, defending, defendingCard, socket])
 
     return (
         <MatchMakingContext.Provider value={{

@@ -26,9 +26,6 @@ function FBDeckDetailPage(props) {
 
     const [deck, setDeck] = useState("");
     const [noDeck, setNoDeck] = useState(false)
-    const [shuffledDeck, setShuffledDeck] = useState([]);
-    const [ownership, setOwnership] = useState("");
-    const [mulliganList, setMulliganList] = useState([]);
 
     const [main_list, setMainList] = useState([]);
     const [pluck_list, setPluckList] = useState([]);
@@ -96,29 +93,6 @@ function FBDeckDetailPage(props) {
         }
     }
 
-    const getShuffledDeck = async() =>{
-        const shuffledDeck = main_list.slice(0)
-        let currentIndex = shuffledDeck.length,  randomIndex;
-        // While there remain elements to shuffle.
-        while (currentIndex !== 0) {
-            // Pick a remaining element.
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
-            // And swap it with the current element.
-            [shuffledDeck[currentIndex], shuffledDeck[randomIndex]] = [
-            shuffledDeck[randomIndex], shuffledDeck[currentIndex]];
-        }
-        setShuffledDeck(shuffledDeck);
-
-        const randomPluckIndex = Math.floor(Math.random() * pluck_list.length);
-        setOwnership(pluck_list[randomPluckIndex]);
-    }
-
-    const clearShuffledDeck = async() =>{
-        setShuffledDeck([]);
-        setOwnership("");
-    }
-
     useEffect(() => {
         window.scroll(0, 0);
         document.body.style.overflow = 'auto';
@@ -131,35 +105,6 @@ function FBDeckDetailPage(props) {
             document.title = "PlayMaker CardBase"
         };
     },[deck]);
-
-    const handleMulliganChange = (card) => {
-        const deckIndex = shuffledDeck.indexOf(card)
-        if (mulliganList.includes(deckIndex)){
-            const mulliganIndex = mulliganList.indexOf(deckIndex);
-            const newMulliganList = [...mulliganList];
-            newMulliganList.splice(mulliganIndex, 1);
-            setMulliganList(newMulliganList);
-        }else{
-            setMulliganList([...mulliganList, deckIndex]);
-        }
-    }
-
-    const mulligan = async() => {
-        for (let card of shuffledDeck){
-            const cardIndex = shuffledDeck.indexOf(card)
-            if (mulliganList.includes(cardIndex)){
-                shuffledDeck[cardIndex] = "Gone"
-            }
-        }
-        for (let card of shuffledDeck.slice(0)){
-            const removeIndex = shuffledDeck.indexOf(card)
-            if (card === "Gone"){
-                shuffledDeck.splice(removeIndex, 1)
-            }
-        }
-        setShuffledDeck(shuffledDeck.slice(0))
-        setMulliganList([])
-    }
 
     const handleListView = (event) => {
         setListView(!listView);
@@ -269,65 +214,6 @@ function FBDeckDetailPage(props) {
                             >{deck.description}</h5>
                     </div>:
                     null}
-                    <div style={{display: "flex"}}>
-                        {shuffledDeck.length > 0 ?
-                            <div className="maindeck" style={{width: "90%"}}>
-                                <div style={{marginLeft: "10px"}}>
-                                    <h4 className="left"
-                                        style={{margin: "10px 10px", fontWeight: "700"}}
-                                        >Test Hand
-                                    </h4>
-                                    <div style={{width: "95%", marginLeft: "20px"}}>
-                                        <Row xs="auto" className="justify-content-start">
-                                            {shuffledDeck.slice(0,6).map((card) => {
-                                                return (
-                                                    <Col
-                                                        style={{padding: "2px 5px 8px 5px"}}>
-                                                        <img
-                                                            style={{
-                                                                width: '115px',
-                                                                margin: '10px 0px 10px 0px',
-                                                                borderRadius: "7px",
-                                                                overflow: "hidden"}}
-                                                            onClick={() => handleMulliganChange(card)}
-                                                            className={mulliganList.includes(shuffledDeck.indexOf(card)) ? "selected builder-card3" : "builder-card3"}
-                                                            title={card.name}
-                                                            src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                                            alt={card.name}/>
-                                                    </Col>
-                                                );
-                                            })}
-                                        </Row>
-                                    </div>
-                                </div>
-                            </div>:
-                        null}
-                        {ownership ?
-                            <div className="pluckdeck" style={{marginLeft: ".5%"}}>
-                                <h4
-                                    className="left"
-                                    style={{margin: "10px 10px", fontWeight: "700"}}
-                                    >Ownwership
-                                </h4>
-                                <Row xs="auto" className="justify-content-center">
-                                    <Col style={{paddingTop: "2px"}}>
-                                        <img
-                                            className="builder-card3"
-                                            style={{ width: '115px',
-                                            margin: '10px 0px 10px 0px',
-                                            borderRadius: "7px",
-                                            overflow: "hidden"}}
-
-                                            title={ownership.name}
-                                            src={ownership.picture_url ? ownership.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                            alt={ownership.name}
-                                            variant="bottom"/>
-
-                                    </Col>
-                                </Row>
-                            </div>:
-                        null}
-                    </div>
                     <div className="dd-button-row flex">
                         {(account && account.roles.includes("admin")) || (account && deck.account_id === account.id)?
                             <>

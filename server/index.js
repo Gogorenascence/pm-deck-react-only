@@ -40,6 +40,10 @@ io.on("connection", (socket) => {
         // Emit the updated player list to all clients
         io.emit("updatePlayers", players);
         // console.log("Current players:", players);
+
+        return () => {
+            socket.off("updatePlayers");
+        };
     });
 
     socket.on("updatePlayer", (playerData) => {
@@ -56,6 +60,10 @@ io.on("connection", (socket) => {
 
         io.emit("updatePlayers", players)
         console.log("Current players:", players);
+
+        return () => {
+            socket.off("updatePlayers");
+        };
     })
 
     socket.on("disconnect", () => {
@@ -66,6 +74,10 @@ io.on("connection", (socket) => {
             io.emit("message", { user: disconnectedPlayer.name, role: "system", message: `${disconnectedPlayer.name} has left the game.` });
             console.log("Player disconnected:", disconnectedPlayer.name);
         }
+
+        return () => {
+            socket.off("updatePlayers");
+        };
     });
 });
 

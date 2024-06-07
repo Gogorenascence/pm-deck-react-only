@@ -39,7 +39,7 @@ function OpponentTab({
                     className="playerTabTop2 flex-full"
                     onClick={(event) => handleShow(event)}
                     onContextMenu={(event) => handleShow(event)}
-                    style={{ backgroundColor: `${ opponent.hp < 5? "#ff0000b7": colors[oppIndex.toString()]}` }}
+                    style={{ backgroundColor: `${ opponent.hp < 5 || opponent.secondWind? "#ff0000b7": colors[oppIndex.toString()]}` }}
                 >
                     <h5 className="playerTabTitle">{opponent.name}</h5>
                 </div>
