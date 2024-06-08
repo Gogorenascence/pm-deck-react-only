@@ -301,7 +301,7 @@ function DecksPage({
                     Show More Decks
                 </button>
                 : null }
-            <button onClick={() => {console.log(fullDecks)}}>All Decks</button>
+            {/* <button onClick={() => {console.log(fullDecks)}}>All Decks</button> */}
         </div>
     );
 }
