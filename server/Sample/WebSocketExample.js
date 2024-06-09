@@ -640,3 +640,47 @@ const MatchMakingContextProvider = ({ children }) => {
 };
 
 export { MatchMakingContext, MatchMakingContextProvider };
+
+
+
+
+const rooms = {}; // Store rooms and their players
+
+io.on("connection", (socket) => {
+    console.log(`New client connected: ${socket.id}`);
+
+    socket.on("joinRoom", (room, playerData) => {
+        if (!rooms[room]) {
+            rooms[room] = [];
+        }
+
+        if (rooms[room].length < 4) {
+            socket.join(room);
+            rooms[room].push({ ...playerData, s_id: socket.id });
+            io.to(room).emit("message", { user: playerData.name, role: "system", message: `${playerData.name} has joined the room.` });
+            io.to(room).emit("updatePlayers", rooms[room]);
+        } else {
+            socket.emit("roomFull", room);
+        }
+    });
+
+    socket.on("leaveRoom", (room) => {
+        if (rooms[room]) {
+            rooms[room] = rooms[room].filter(player => player.s_id !== socket.id);
+            socket.leave(room);
+            io.to(room).emit("updatePlayers", rooms[room]);
+        }
+    });
+
+    socket.on("message", (room, messageData) => {
+        io.to(room).emit("message", messageData);
+    });
+
+    socket.on("disconnect", () => {
+        for (const room of Object.keys(rooms)) {
+            rooms[room] = rooms[room].filter(player => player.s_id !== socket.id);
+            io.to(room).emit("updatePlayers", rooms[room]);
+        }
+        console.log(`Client disconnected: ${socket.id}`);
+    });
+});
