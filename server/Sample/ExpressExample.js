@@ -169,7 +169,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const Player = require('./models/gamestate'); // Import the Player model
+const Player = require('./models/game'); // Import the Player model
 
 const app = express();
 app.use(cors());

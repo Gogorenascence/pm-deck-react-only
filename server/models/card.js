@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
 
-const dateDetailSchema = new Schema({
+
+const dateDetailSchema = new mongoose.Schema({
     year: { type: Number, required: true },
     month: { type: Number, required: true },
     day: { type: Number, required: true },
@@ -9,7 +9,7 @@ const dateDetailSchema = new Schema({
     full_time: { type: String, required: true }
 }, { _id: false });
 
-const cardSchema = new Schema(
+const cardSchema = new mongoose.Schema(
     {
         name: { type: String, required: true },
         card_class: { type: String, required: true },
@@ -32,12 +32,12 @@ const cardSchema = new Schema(
         beta: { type: Boolean },
         id: { type: String },
         _id: { type: mongoose.Types.ObjectId, required: true, auto: true }
-    },
-    {collection: "cards"}
+    }
 );
 
-const Card = mongoose.model("Card", cardSchema)
+const Card = mongoose.model("Card", cardSchema, "cards")
 
 module.exports = {
-    Card
+    Card,
+    cardSchema
 };

@@ -42,7 +42,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-const Player = require("./models/gamestate");
+const Player = require("./models/game");
 
 const app = express();
 app.use(cors());

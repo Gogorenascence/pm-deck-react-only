@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { Card } = require('../models/card');
 
-// Create a new player
+// Create a new card
 router.post('/', async (req, res) => {
     const card = new Card(req.body);
     try {
@@ -29,57 +29,58 @@ router.get('/', async (req, res) => {
 });
 
 // Get a card by ID
-router.get('/:id', async (req, res) => {
-    const _id = req.params.id;
+router.get('/:card_number', async (req, res) => {
+    const card_number = req.params.card_number;
     try {
-        const card = await Card.findById(_id);
+        const card = await Card.findOne({card_number: card_number});
         if (!card) {
             return res.status(404).send();
         }
-        res.send(player);
+        card.id = card._id ? (card._id.$oid ? card._id.$oid : card._id) : card.id;
+        res.send(card);
     } catch (error) {
         res.status(500).send(error);
     }
 });
 
-// Update a player by ID
-// router.patch('/:id', async (req, res) => {
-//     const updates = Object.keys(req.body);
-//     const allowedUpdates = ['name', 'hp', 'mainDeck', 'pluckDeck', 'hand', 'ownership', 'mainDiscard', 'pluckDiscard', 'playArea', 'activePluck', 'focus', 'enthusiasm', 'mettle', 'secondWind', 'faceDown', 'defending', 'defendingCard'];
-//     const isValidOperation = updates.every((update) => allowedUpdates.includes(update));
+// Update a card by ID
+router.patch('/:id', async (req, res) => {
+    const updates = Object.keys(req.body);
+    const allowedUpdates = ['name', 'hp', 'mainDeck', 'pluckDeck', 'hand', 'ownership', 'mainDiscard', 'pluckDiscard', 'playArea', 'activePluck', 'focus', 'enthusiasm', 'mettle', 'secondWind', 'faceDown', 'defending', 'defendingCard'];
+    const isValidOperation = updates.every((update) => allowedUpdates.includes(update));
 
-//     if (!isValidOperation) {
-//         return res.status(400).send({ error: 'Invalid updates!' });
-//     }
+    if (!isValidOperation) {
+        return res.status(400).send({ error: 'Invalid updates!' });
+    }
 
-//     try {
-//         const player = await Player.findById(req.params.id);
-//         if (!player) {
-//             return res.status(404).send();
-//         }
+    try {
+        const card = await Card.findById(req.params.id);
+        if (!card) {
+            return res.status(404).send();
+        }
 
-//         updates.forEach((update) => player[update] = req.body[update]);
-//         await player.save();
-//         res.send(player);
-//     } catch (error) {
-//         res.status(400).send(error);
-//     }
-// });
+        updates.forEach((update) => card[update] = req.body[update]);
+        await card.save();
+        res.send(card);
+    } catch (error) {
+        res.status(400).send(error);
+    }
+});
 
-// // Delete a player by ID
-// router.delete('/:id', async (req, res) => {
-//     try {
-//         const player = await Player.findByIdAndDelete(req.params.id);
+// Delete a card by ID
+router.delete('/:id', async (req, res) => {
+    try {
+        const card = await Card.findByIdAndDelete(req.params.id);
 
-//         if (!player) {
-//             return res.status(404).send();
-//         }
+        if (!card) {
+            return res.status(404).send();
+        }
 
-//         res.send(player);
-//     } catch (error) {
-//         res.status(500).send(error);
-//     }
-// });
+        res.send(card);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
 
 module.exports = router;
 
