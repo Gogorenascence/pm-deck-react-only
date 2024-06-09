@@ -36,7 +36,7 @@ const MatchMakingContextProvider = ({ children }) => {
     const [priority, setPriority] = useState([])
 
     const matchMake = async() => {
-        const newSocket = io.connect("http://localhost:4000/")
+        const newSocket = io.connect("https://pm-deck-react-only.onrender.com/")
         console.log("Finding opponents")
         const playerData = {
             name: player.name,
