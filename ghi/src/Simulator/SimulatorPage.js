@@ -18,6 +18,8 @@ import OppActivePluckModal from "./OppGameBoardParts/OppActivePluckModal";
 import OppMainDiscardModal from "./OppGameBoardParts/OppMainDiscardModal";
 import OppPluckDiscardModal from "./OppGameBoardParts/OppPluckDiscardModal";
 import turnSorter from "./TurnSorter";
+import helper from "../QueryObjects/Helper";
+import RoomList from "./RoomList";
 
 
 function SimulatorPage(props) {
@@ -56,7 +58,8 @@ function SimulatorPage(props) {
         setShowOppPluckDiscardModal,
         matchMake,
         playerIn,
-        waiting
+        waiting,
+        setWaiting
     } = useContext(MatchMakingContext)
 
     const {
@@ -221,9 +224,20 @@ function SimulatorPage(props) {
             playArea: playArea,
             activePluck: activePluck,
             mainDiscard: discard,
-            pluckDiscard: pluckDiscard
+            pluckDiscard: pluckDiscard,
+            p_id: account? account.id: "Temp p_id"
         }));
-    }, [account, playerMainDeck, playerPluckDeck, hand, ownership, playArea, activePluck, discard, pluckDiscard]);
+    }, [
+        account,
+        playerMainDeck,
+        playerPluckDeck,
+        hand,
+        ownership,
+        playArea,
+        activePluck,
+        discard,
+        pluckDiscard
+    ]);
 
     useEffect(() => {
         getSelectedOppData()
@@ -320,6 +334,10 @@ function SimulatorPage(props) {
                     :null}
                 </>
             : null}
+            <RoomList
+                waiting={waiting}
+                setWaiting={setWaiting}
+            />
             <CardInfoPanel hoveredCard={hoveredCard}/>
             <div className={prompt.message? "promptBar pointer": "noPromptBar"}
                 onClick={() => setPrompt({message: "", action: ""})}
@@ -342,7 +360,7 @@ function SimulatorPage(props) {
                             />
                             <p className="aligned">{waiting? "Waiting for opponents...": null}</p>
                         </div>
-                        {playerIn(player) && opponents.map((opponent, index) => {
+                        {opponents?.map((opponent, index) => {
                             return (
                                 <div key={index}>
                                     <OpponentTab

@@ -265,7 +265,9 @@ function PlayerTab({
                             <button
                                 className='middle-button margin-left-3'
                                 onClick={() => {
-                                    matchMake()
+                                    console.log("dog")
+                                    matchMaking.matchMake()
+                                    // matchMaking.setWaiting(true)
                                     handleClose()
                                 }}
                             >

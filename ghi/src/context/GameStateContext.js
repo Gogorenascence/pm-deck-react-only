@@ -30,7 +30,8 @@ const GameStateContextProvider = ({ children }) => {
         enthusiasm: 0,
         mettle: 0,
         secondWind: false,
-        p_id: helper.generateRandomStringNA(16)
+        p_id: account? account.id: "Temp p_id" ,
+        g_id: null
     })
 
     const [playerMainDeck, setPlayerMainDeck] = useState({

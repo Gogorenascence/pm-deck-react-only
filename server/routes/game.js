@@ -44,6 +44,7 @@ router.get('/:id', async (req, res) => {
 
 // Update a game by ID
 router.patch('/:id', async (req, res) => {
+    const _id = req.params.id;
     const updates = Object.keys(req.body);
     const allowedUpdates = [
         "name",
@@ -56,9 +57,8 @@ router.patch('/:id', async (req, res) => {
     if (!isValidOperation) {
         return res.status(400).send({ error: 'Invalid updates!' });
     }
-
     try {
-        const game = await Game.findById(req.params.id);
+        const game = await Game.findById(_id);
         if (!game) {
             return res.status(404).send();
         }

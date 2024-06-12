@@ -3635,6 +3635,15 @@ button:disabled {
   padding-bottom: 30px;
 }
 
+.roomItem {
+  width: 98%;
+  height: 150px;
+  margin: 5px;
+  background-color: #262227;
+  border-radius: 7px;
+  outline: 1px white solid;
+}
+
 @media screen and (max-width: 1330px) {
   .cards-page-card-list {
     display: grid;
