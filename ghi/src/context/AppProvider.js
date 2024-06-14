@@ -28,9 +28,9 @@ const AppProvider = ({ children }) => {
                                 <QueryContextProvider>
                                     <DeckQueryContextProvider>
                                         <GameStateContextProvider>
-                                            <MatchMakingContextProvider>
                                                 <SimulatorActionsContextProvider>
                                                     <SimulatorObjectsContextProvider>
+                                            <MatchMakingContextProvider>
                                                         <MainActionsContextProvider>
                                                             <PluckActionsContextProvider>
                                                                 <NewsQueryContextProvider>
@@ -40,9 +40,9 @@ const AppProvider = ({ children }) => {
                                                                 </NewsQueryContextProvider>
                                                             </PluckActionsContextProvider>
                                                         </MainActionsContextProvider>
+                                            </MatchMakingContextProvider>
                                                     </SimulatorObjectsContextProvider>
                                                 </SimulatorActionsContextProvider>
-                                            </MatchMakingContextProvider>
                                         </GameStateContextProvider>
                                     </DeckQueryContextProvider>
                                 </QueryContextProvider>

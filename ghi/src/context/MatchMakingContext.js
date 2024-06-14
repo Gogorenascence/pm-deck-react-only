@@ -1,10 +1,12 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useRef } from "react";
 import soundPlayer from "../Sounds/SoundPlayer";
 import { AuthContext } from "./AuthContext";
 import { GameStateContext } from "./GameStateContext";
+import { SimulatorActionsContext } from "./SimulatorActionsContext";
 import { io } from "socket.io-client";
 import helper from "../QueryObjects/Helper";
 import { rollSound } from "../Sounds/Sounds";
+
 
 
 const MatchMakingContext = createContext();
@@ -13,6 +15,9 @@ const MatchMakingContextProvider = ({ children }) => {
     const { account } = useContext(AuthContext)
     const {
         player,
+        setPlayer,
+        setPlayerMainDeck,
+        setPlayerPluckDeck,
         faceDown,
         defending,
         defendingCard,
@@ -20,6 +25,8 @@ const MatchMakingContextProvider = ({ children }) => {
         volume,
         addToLog
     } = useContext(GameStateContext)
+    const { cards } = useContext(SimulatorActionsContext)
+    const prevPlayerValues = useRef({})
 
     const [waiting, setWaiting] = useState(false)
     const [rooms, setRooms] = useState([])
@@ -50,11 +57,108 @@ const MatchMakingContextProvider = ({ children }) => {
     }
 
     const getRooms = async() => {
+        if (socket !== null) {
         // const roomsResponse = await fetch("https://pm-deck-react-only.onrender.com/games")
-        const roomsResponse = await fetch("http://localhost:4000/games")
-        const roomsData = await roomsResponse.json()
-        console.log(roomsData)
-        setRooms(roomsData)
+            const roomsResponse = await fetch("http://localhost:4000/games")
+            const roomsData = await roomsResponse.json()
+            // console.log(roomsData)
+            setRooms(roomsData)
+            setWaiting(true)
+        }
+    }
+
+    const cardToCardNumber = (playerObject, currPlayerValues) => {
+        const convertList = [
+            "mainDeck",
+            "pluckDeck",
+            "hand",
+            "ownership",
+            "mainDiscard",
+            "pluckDiscard",
+        ]
+        const playAreaConvertList = [
+            "fighter_slot",
+            "aura_slot",
+            "move_slot",
+            "ending_slot",
+            "slot_5",
+            "slot_6",
+            "slot_7",
+            "slot_8",
+        ]
+        const activePluckConvertList = [
+            "slot_1",
+            "slot_2",
+            "slot_3",
+            "slot_4",
+        ]
+        for (let key in currPlayerValues) {
+            if (convertList.includes(key)){
+                playerObject[key] = currPlayerValues[key].map(card => card.card_number)
+            } else if ( key === "playArea" ) {
+                playerObject["playArea"] = {}
+                for (let slot of playAreaConvertList) {
+                    playerObject["playArea"][slot] = currPlayerValues[key][slot].map(card => card.card_number)
+                }
+            } else if ( key === "activePluck" ) {
+                playerObject["activePluck"] = {}
+                for (let slot of activePluckConvertList) {
+                    playerObject["activePluck"][slot] = currPlayerValues[key][slot].map(card => card.card_number)
+                }
+            } else {
+                playerObject[key] = currPlayerValues[key]
+            }
+        }
+    }
+
+    const cardNumberToCard = (newPlayerObject, playerObject) => {
+        const convertList = [
+            "mainDeck",
+            "pluckDeck",
+            "hand",
+            "ownership",
+            "mainDiscard",
+            "pluckDiscard",
+        ]
+        const playAreaConvertList = [
+            "fighter_slot",
+            "aura_slot",
+            "move_slot",
+            "ending_slot",
+            "slot_5",
+            "slot_6",
+            "slot_7",
+            "slot_8",
+        ]
+        const activePluckConvertList = [
+            "slot_1",
+            "slot_2",
+            "slot_3",
+            "slot_4",
+        ]
+        for (let key in playerObject) {
+            if (convertList.includes(key)){
+                newPlayerObject[key] = playerObject[key].map(
+                    cardNumber => cards.find(card => card.card_number === cardNumber)
+                )
+            } else if ( key === "playArea" ) {
+                newPlayerObject["playArea"] = {}
+                for (let slot of playAreaConvertList) {
+                    newPlayerObject["playArea"][slot] = playerObject[key][slot].map(
+                        cardNumber => cards.find(card => card.card_number === cardNumber)
+                    )
+                }
+            } else if ( key === "activePluck" ) {
+                newPlayerObject["activePluck"] = {}
+                for (let slot of activePluckConvertList) {
+                    newPlayerObject["activePluck"][slot] = playerObject[key][slot].map(
+                        cardNumber => cards.find(card => card.card_number === cardNumber)
+                    )
+                }
+            } else {
+                newPlayerObject[key] = playerObject[key]
+            }
+        }
     }
 
     const getPlayer = async() => {
@@ -64,7 +168,8 @@ const MatchMakingContextProvider = ({ children }) => {
 
             if (playerResponse.status === 404) {
                 console.log("Player not found, creating new player")
-                const playerData = {
+                const playerData = {}
+                const currPlayerValues = {
                     name: player.name,
                     hp: player.hp,
                     mainDeck: player.mainDeck,
@@ -85,7 +190,9 @@ const MatchMakingContextProvider = ({ children }) => {
                     activating: activating,
                     p_id: player.p_id,
                     g_id: player.g_id
-                };
+                }
+
+                cardToCardNumber(playerData, currPlayerValues)
                 console.log(playerData)
 
                 const playerUrl = "http://localhost:4000/players/";
@@ -99,20 +206,33 @@ const MatchMakingContextProvider = ({ children }) => {
 
                 const response = await fetch(playerUrl, fetchConfig);
                 if (response.ok) {
-                    const playerResponse = await fetch(`http://localhost:4000/players/${player.p_id}`)
-                    const playerData = await playerResponse.json()
-                    setSavedPlayer(playerData)
+                    setSavedPlayer(currPlayerValues)
                 } else {
                     console.log(response);
                 }
             } else if (playerResponse.ok) {
                 const playerData = await playerResponse.json();
                 console.log("Player found", playerData);
-                setSavedPlayer(playerData);
+                const newPlayerObject = {}
+                cardNumberToCard(newPlayerObject, playerData)
+                console.log(newPlayerObject)
+                // setPlayer((prevPlayer) => ({
+                //     ...prevPlayer,
+                //     mainDeck: newPlayerObject.mainDeck,
+                //     pluckDeck: newPlayerObject.pluckDeck,
+                //     hand: newPlayerObject.hand,
+                //     ownership: newPlayerObject.ownership,
+                //     playArea: newPlayerObject.playArea,
+                //     activePluck: newPlayerObject.activePluck,
+                //     mainDiscard: newPlayerObject.mainDiscard,
+                //     pluckDiscard: newPlayerObject.pluckDiscard,
+                // }));
+                // setPlayerMainDeck({name: "Saved Deck", cards: newPlayerObject.mainDeck})
+                // setPlayerPluckDeck({name: "Saved Deck", cards: newPlayerObject.pluckDeck})
+                setSavedPlayer(newPlayerObject);
             } else {
                 console.log("Error fetching player data", playerResponse.status);
             }
-            setWaiting(true)
         } catch (error) {
             console.error("Error during matchmaking", error);
         }
@@ -120,7 +240,7 @@ const MatchMakingContextProvider = ({ children }) => {
 
     const getOpponents = async(room_id) => {
         // const roomsResponse = await fetch("https://pm-deck-react-only.onrender.com/games")
-        console.log(selectedRoom)
+        // console.log(selectedRoom)
         const opponentsList = []
         const roomResponse = await fetch(`http://localhost:4000/games/${room_id}`)
         try {
@@ -140,7 +260,7 @@ const MatchMakingContextProvider = ({ children }) => {
         } catch (error) {
             console.error("Error finding game", error);
         }
-        console.log(opponentsList)
+        // console.log(opponentsList)
         setOpponents(opponentsList)
     }
 
@@ -187,8 +307,9 @@ const MatchMakingContextProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        if (socket !== null ) {
-            const playerData = {
+        if (socket !== null) {
+            const playerUpdates = {}
+            const currPlayerValues = {
                 hp: player.hp,
                 mainDeck: player.mainDeck,
                 pluckDeck: player.pluckDeck,
@@ -206,9 +327,58 @@ const MatchMakingContextProvider = ({ children }) => {
                 defending: defending,
                 defendingCard: defendingCard,
                 activating: activating,
-            };
-            console.log(playerData)
-            updatePlayer(playerData)
+            }
+
+            const convertList = [
+                "mainDeck",
+                "pluckDeck",
+                "hand",
+                "ownership",
+                "mainDiscard",
+                "pluckDiscard",
+            ]
+
+            const playAreaConvertList = [
+                "fighter_slot",
+                "aura_slot",
+                "move_slot",
+                "ending_slot",
+                "slot_5",
+                "slot_6",
+                "slot_7",
+                "slot_8",
+            ]
+
+            const activePluckConvertList = [
+                "slot_1",
+                "slot_2",
+                "slot_3",
+                "slot_4",
+            ]
+
+            for (let key in currPlayerValues) {
+                if (prevPlayerValues.current[key] !== currPlayerValues[key]) {
+                    if (convertList.includes(key)){
+                        console.log(currPlayerValues[key])
+                        playerUpdates[key] = currPlayerValues[key].map(card => card.card_number)
+                    } else if ( key === "playArea" ) {
+                        playerUpdates["playArea"] = {}
+                        for (let slot of playAreaConvertList) {
+                            playerUpdates["playArea"][slot] = currPlayerValues[key][slot].map(card => card.card_number)
+                        }
+                    } else if ( key === "activePluck" ) {
+                        playerUpdates["activePluck"] = {}
+                        for (let slot of activePluckConvertList) {
+                            playerUpdates["activePluck"][slot] = currPlayerValues[key][slot].map(card => card.card_number)
+                        }
+                    } else {
+                        playerUpdates[key] = currPlayerValues[key]
+                    }
+                }
+            }
+            console.log(playerUpdates)
+            updatePlayer(playerUpdates)
+            prevPlayerValues.current = currPlayerValues
         }
     }, [
         player,
@@ -216,7 +386,6 @@ const MatchMakingContextProvider = ({ children }) => {
         defending,
         defendingCard,
         activating,
-        socket
     ])
 
     return (

@@ -29,6 +29,8 @@ function SimulatorPage(props) {
         setPlayer,
         playerMainDeck,
         playerPluckDeck,
+        setPlayerMainDeck,
+        setPlayerPluckDeck,
         playArea,
         activePluck,
         handleChangeTransformRotateX,
@@ -59,7 +61,9 @@ function SimulatorPage(props) {
         matchMake,
         playerIn,
         waiting,
-        setWaiting
+        setWaiting,
+        savedPlayer,
+        socket
     } = useContext(MatchMakingContext)
 
     const {
@@ -138,6 +142,7 @@ function SimulatorPage(props) {
     const content = useRef(null)
 
     const getCards = () => {
+        console.log("getting cards")
         const processedCards = []
         for (let card of pre_processed_cards) {
             const cardData = {...card}
@@ -214,19 +219,19 @@ function SimulatorPage(props) {
     }, [showCardMenu, showPluckMenu])
 
     useEffect(() => {
-        setPlayer((prevPlayer) => ({
-            ...prevPlayer,
-            name: account? account.username: "WindFall",
-            mainDeck: playerMainDeck.cards,
-            pluckDeck: playerPluckDeck.cards,
-            hand: hand,
-            ownership: ownership,
-            playArea: playArea,
-            activePluck: activePluck,
-            mainDiscard: discard,
-            pluckDiscard: pluckDiscard,
-            p_id: account? account.id: "Temp p_id"
-        }));
+            setPlayer((prevPlayer) => ({
+                ...prevPlayer,
+                name: account? account.username: "WindFall",
+                mainDeck: playerMainDeck.cards,
+                pluckDeck: playerPluckDeck.cards,
+                hand: hand,
+                ownership: ownership,
+                playArea: playArea,
+                activePluck: activePluck,
+                mainDiscard: discard,
+                pluckDiscard: pluckDiscard,
+                p_id: account? account.id: "Temp p_id"
+            }));
     }, [
         account,
         playerMainDeck,
@@ -236,7 +241,7 @@ function SimulatorPage(props) {
         playArea,
         activePluck,
         discard,
-        pluckDiscard
+        pluckDiscard,
     ]);
 
     useEffect(() => {
