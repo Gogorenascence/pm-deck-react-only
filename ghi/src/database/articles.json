@@ -1690,16 +1690,37 @@
   "id": "CGk3aQXX22e6o8tRoKB7oIYY"
 },
 {
-  "content": "",
-  "author": "TeamPlayMaker",
-  "section": "simulator",
-  "id": "6VGXQuybeYYJ1dqZFm4tTlj3",
-  "site_link": "",
-  "news": true,
-  "images": {},
-  "title": "Multiplayer and game rooms coming soon!",
-  "story_date": "2024-06-05",
+  "_id": {
+    "$oid": "666c83c44864a2830a149894"
+  },
+  "title": "Card changes 6/14",
   "subtitle": "",
-  "updated": "2024-06-05"
+  "author": "TeamPlayMaker",
+  "story_date": "2024-06-14",
+  "updated": null,
+  "section": "releases",
+  "content": "Changes in card effects:@@]]//\nShadow Strike!!]]//\nPrevious: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.//\nNew: <Trigger> If a player discards a card(s) from their hand or String, place 2 cards of the same type from your hand/discard pile under a card in your String.//\nShinobi Art of Substitution!]]//\nPrevious: Discard 1 unturned card in your String; add 1 card of the same type from your hand to your String and place the original card's damage tokens on the added card.//\nNew: Discard 1 unturned card in your String; add 1 card of the same type from your discard pile to your String and place the original card's damage tokens on the added card.//\n",
+  "images": {
+    "1": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gm.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1151",
+        "order": 1,
+        "alt_text": "Shadow Strike!!"
+      }
+    ],
+    "4": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p5fa.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1154",
+        "order": 1,
+        "alt_text": "Shinobi Art of Substitution!"
+      }
+    ]
+  },
+  "news": true,
+  "site_link": ""
 }
 ]
