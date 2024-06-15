@@ -5955,7 +5955,7 @@
   "card_number": 1142,
   "enthusiasm": null,
   "effect_text": "Heal 2 HP and Provoke 1 Fighter or Move.",
-  "second_effect_text": "<Trigger> During a foe's turn, reveal 1 Staunch or Tactical card in your hand (the card stays revealed); all cards of the same type in all foes' Strings gain damage minus 1 as long as the revealed card is in your hand. ",
+  "second_effect_text": "<Trigger> During a foe's turn, reveal 1 Tech or Tactical card in your hand (the card stays revealed); all cards of the same type in all foes' Strings gain damage minus 1 as long as the revealed card is in your hand.",
   "illustrator": "Bricis",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g5tsa.jpg",
   "file_name": "i1g5tsa.jpg",
@@ -5979,11 +5979,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 8,
-    "time": "04:06",
+    "month": 6,
+    "day": 15,
+    "time": "14:22",
     "full_time": {
-      "$date": "2024-02-08T04:06:57.947Z"
+      "$date": "2024-06-15T14:22:53.707Z"
     }
   },
   "alpha": null,
@@ -6043,7 +6043,7 @@
   "series_name": "The Spider//Tech//Tactical//Call",
   "card_number": 1158,
   "enthusiasm": null,
-  "effect_text": "Pull 1 The Spider card/Pluck except the Event \"The Trap Is Set!\" (add the card/Pluck from the respective deck to your hand/Reserve, then shuffle the deck).",
+  "effect_text": "Pull 1 Tech or Tactical card/Pluck except the Event \"The Trap Is Set!\" (add the card/Pluck from the respective deck to your hand/Reserve, then shuffle the deck).",
   "second_effect_text": "<Trigger> During a foe's turn, deal 1 damage to that foe equal to total amount damage minus across all cards in their String (max of 3).",
   "illustrator": "Bricis",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl17tse.jpg",
@@ -6067,11 +6067,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 8,
-    "time": "04:06",
+    "month": 6,
+    "day": 15,
+    "time": "14:17",
     "full_time": {
-      "$date": "2024-02-08T04:06:14.009Z"
+      "$date": "2024-06-15T14:17:24.067Z"
     }
   },
   "alpha": null,
@@ -6705,7 +6705,7 @@
   "series_name": "The Spider//Tech//Tactical//Support",
   "card_number": 1157,
   "enthusiasm": null,
-  "effect_text": "<L. Trigger> If your String has a Staunch or Tactical Fighter(s), place 1 Tactical Move from your hand or the discard pile under this Item (if this Item is removed from your Active Pluck, the placed card is discarded).",
+  "effect_text": "<Limited> If your String has a Tech or Tactical Fighter(s), place 1 Tech or Tactical Move from your hand or the discard pile under this Item (if this Item is removed from your Active Pluck, the placed card is discarded).",
   "second_effect_text": "This Item copies the effect text of its placed card. ",
   "illustrator": "Bricis",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl17tsi.jpg",
@@ -6730,11 +6730,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 8,
-    "time": "04:07",
+    "month": 6,
+    "day": 15,
+    "time": "14:20",
     "full_time": {
-      "$date": "2024-02-08T04:07:11.065Z"
+      "$date": "2024-06-15T14:20:10.541Z"
     }
   },
   "alpha": null,
@@ -6797,7 +6797,7 @@
   "series_name": "The Spider//Tech//Tactical//Support",
   "card_number": 1141,
   "enthusiasm": null,
-  "effect_text": "Pull 1 Tactical card or 1 The Spider Pluck.",
+  "effect_text": "Pull 1 Tech card or 1 The Spider Pluck.",
   "second_effect_text": "<Trigger> During the Start Phase, place 1 Tactical card from your hand or discard pile under this Fighter (if this card is removed from your String, the placed card(s) is discarded); this card copies the Trigger effect text of its placed card. Discard the placed card during the End Phase.",
   "illustrator": "Bricis",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g5tsf.jpg",
@@ -6824,11 +6824,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 8,
-    "time": "04:07",
+    "month": 6,
+    "day": 15,
+    "time": "14:33",
     "full_time": {
-      "$date": "2024-02-08T04:07:54.594Z"
+      "$date": "2024-06-15T14:33:42.594Z"
     }
   },
   "alpha": null,
@@ -6933,7 +6933,7 @@
   "series_name": "The Spider//Tech//Tactical//Support",
   "card_number": 1143,
   "enthusiasm": null,
-  "effect_text": "Deal 3 damage to a random foe. That foe's Move gains damage minus 1 (damage dealt by that card is reduced by 1 at the end of its resolution).  ",
+  "effect_text": "Deal 3 damage to a foe. That foe's Move and Ending gain damage minus 1 (damage dealt by those cards are reduced by 1 at the end of their resolution).",
   "second_effect_text": "<Trigger> During a foe's turn, all foes whose cards have damage minus take 1 damage.",
   "illustrator": "Bricis",
   "picture_url": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g5tsm.jpg",
@@ -6958,11 +6958,11 @@
   },
   "updated_on": {
     "year": 2024,
-    "month": 2,
-    "day": 8,
-    "time": "04:06",
+    "month": 6,
+    "day": 15,
+    "time": "14:13",
     "full_time": {
-      "$date": "2024-02-08T04:06:48.878Z"
+      "$date": "2024-06-15T14:13:59.394Z"
     }
   },
   "alpha": null,

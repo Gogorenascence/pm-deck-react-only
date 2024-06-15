@@ -1,31 +1,5 @@
 [{
   "_id": {
-    "$oid": "65bd8c363e76a19d864fcf9c"
-  },
-  "section": "site",
-  "title": "News Section added to the main page",
-  "content": "News feed detailing future changes to the game and site was created, and is now available on the main page.",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-02-03",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65bd8c663e76a19d864fcf9d"
-  },
-  "section": "admin",
-  "title": "News create page created and added the Admin Create Portal",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-02-01",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
     "$oid": "65bd8d123e76a19d864fcf9e"
   },
   "section": "game",
@@ -38,179 +12,6 @@
   "news": true,
   "subtitle": null,
   "updated": "2024-02-16"
-},
-{
-  "_id": {
-    "$oid": "65bd8e0d3e76a19d864fcf9f"
-  },
-  "section": "game",
-  "title": "New key terms introduced 1/14 - 1/20",
-  "content": "Key terms Focus plus X, Focus minus X, Enthusiasm plus X and Enthusiasm minus X have been introduced.//\nAll text \"Add X to your Focus\" will be replaced by \"Focus plus X\".//\nAll text \"Lower the Focus of X foes by Y\" will be replaced by and \"X foes gain Focus minus Y\".//\nAll text \"Add X to your Enthusiasm\" will be replaced by \"Enthusiasm plus X\".//\nAll text \"Lower the Focus of X foes by Y\" will be replaced by and \"X foes gain Enthusiasm minus Y\".//",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-01-17",
-  "site_link": "",
-  "news": true,
-  "subtitle": null,
-  "updated": "2024-02-17"
-},
-{
-  "_id": {
-    "$oid": "65bd8e753e76a19d864fcfa0"
-  },
-  "section": "game",
-  "title": "Name changes for Play and Ownership",
-  "content": "\"Play\" and \"Ownership\" will now be named \"String\" and \"Reserve\", respectively.",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-01-17",
-  "site_link": "",
-  "news": true,
-  "subtitle": null,
-  "updated": "2024-02-16"
-},
-{
-  "_id": {
-    "$oid": "65bd8fbd3e76a19d864fcfa1"
-  },
-  "section": "site",
-  "title": "Glossary and Rulings Page created",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-01-15",
-  "site_link": "glossary",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65bd8fe83e76a19d864fcfa2"
-  },
-  "section": "admin",
-  "title": "Terms create, edit and details pages created",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-01-15",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65bd906b3e76a19d864fcfa3"
-  },
-  "section": "design",
-  "title": "5 HP is now the main tag of all Endings",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-01-31",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65bd91123e76a19d864fcfa4"
-  },
-  "section": "design",
-  "title": "Pointers added to each die result of Endings and cards with modular effects",
-  "content": "Pointers added to each die result of Endings and cards with modular effects to help players with color blindness discern larger blocks of card text.",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-01-08",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65bd91a53e76a19d864fcfa5"
-  },
-  "section": "simulator",
-  "title": "Dice roll and damage function added to simulator's chat window",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-12-31",
-  "site_link": "simulator",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65bd949d3e76a19d864fcfa6"
-  },
-  "section": "releases",
-  "title": "The New Challengers and The New Challengers: Limited Release revealed",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-12-19",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65bd94be3e76a19d864fcfa7"
-  },
-  "section": "releases",
-  "title": "Enter the Hero: Gold Release revealed",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-12-19",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65bd952e3e76a19d864fcfa8"
-  },
-  "section": "design",
-  "title": "Artwork for the Recoil series added",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-01-01",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65bd95823e76a19d864fcfa9"
-  },
-  "section": "design",
-  "title": "Artwork for Lucky Punch added",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-10-20",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65bd97cc3e76a19d864fcfaa"
-  },
-  "section": "game",
-  "title": "Cycle tag introduced",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-12-11",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65bd99443e76a19d864fcfab"
-  },
-  "section": "simulator",
-  "title": "Simulate button added to deck details pages",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-12-07",
-  "site_link": "",
-  "news": true
 },
 {
   "_id": {
@@ -227,40 +28,57 @@
 },
 {
   "_id": {
-    "$oid": "65bd99ea3e76a19d864fcfad"
+    "$oid": "65cf9bcf029ae854b4ad8d46"
   },
-  "section": "simulator",
-  "title": "Sound effects added to the Simulator page",
-  "content": "",
+  "title": "Article Pages are up",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-02-16",
+  "updated": null,
+  "section": "site",
+  "content": "The each article and news item with more than a headline will a full page. If an article has more information it will now be clickable.",
+  "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65becd503e76a19d864fd506"
+  },
+  "section": "game",
+  "title": "Changes to starting HP",
+  "content": "Starting HP is now based on total number of players. Starting HP gain 4 for each player. ",
   "images": {},
   "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-11-21",
+  "story_date": "2024-02-01",
   "site_link": "",
   "news": true
 },
 {
   "_id": {
-    "$oid": "65bd9b9a3e76a19d864fcfae"
+    "$oid": "65d12d1c029ae854b4ada3e7"
   },
-  "section": "site",
-  "title": "Deck Export for Tabletop Simulator completed",
-  "content": "",
+  "title": "Article templates added to Article Create page",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-02-17",
+  "updated": null,
+  "section": "admin",
+  "content": "The Article Create now has templates that can be selected to help with formatting.",
   "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-09-18",
-  "site_link": "",
-  "news": true
+  "news": true,
+  "site_link": ""
 },
 {
   "_id": {
-    "$oid": "65bd9be93e76a19d864fcfaf"
+    "$oid": "65bd97cc3e76a19d864fcfaa"
   },
-  "section": "site",
-  "title": "Stats panel for Deck Builder completed",
+  "section": "game",
+  "title": "Cycle tag introduced",
   "content": "",
   "images": {},
   "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-11-05",
+  "story_date": "2023-12-11",
   "site_link": "",
   "news": true
 },
@@ -279,19 +97,6 @@
 },
 {
   "_id": {
-    "$oid": "65be935b3e76a19d864fd4ff"
-  },
-  "section": "admin",
-  "title": "Admin Create Portal created",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-12-23",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
     "$oid": "65be93d33e76a19d864fd500"
   },
   "section": "site",
@@ -300,86 +105,6 @@
   "images": {},
   "author": "64ecc30f82c5729f0b36e158",
   "story_date": "2023-10-09",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65be94903e76a19d864fd501"
-  },
-  "section": "site",
-  "title": "Deck Builder now remembers deck in progress even after leaving the page",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-12-24",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65be94d43e76a19d864fd502"
-  },
-  "section": "simulator",
-  "title": "Chat panel added to the Simulator",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-12-02",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65be96433e76a19d864fd503"
-  },
-  "section": "game",
-  "title": "Change to Second Wind mechanic",
-  "content": "Before: Second Wind lasts the duration of the game.//\n\nAfter: Second Wind lasts 1 turn.",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-01-24",
-  "site_link": "",
-  "news": true,
-  "subtitle": null,
-  "updated": "2024-02-17"
-},
-{
-  "_id": {
-    "$oid": "65be97203e76a19d864fd504"
-  },
-  "section": "game",
-  "title": "Tiered HP introduced",
-  "content": "HP is now tiered. HP is now broken up into 4 tiers with 4 HP each. When a player moves into a new tier, the highest amount of HP in that tier is the new maximum HP for that player.",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2023-12-10",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65be9bab3e76a19d864fd505"
-  },
-  "section": "game",
-  "title": "True damage type introduced",
-  "content": "The card effect \"ignore the reactions of defending Fighter(s)\" will be replaced with the True damage type. ",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-01-04",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65becd503e76a19d864fd506"
-  },
-  "section": "game",
-  "title": "Changes to starting HP",
-  "content": "Starting HP is now based on total number of players. Starting HP gain 4 for each player. ",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-02-01",
   "site_link": "",
   "news": true
 },
@@ -398,32 +123,6 @@
 },
 {
   "_id": {
-    "$oid": "65bfc8973e76a19d864fd508"
-  },
-  "section": "site",
-  "title": "News Page is up",
-  "content": "",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-02-04",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
-    "$oid": "65bff25e3e76a19d864fd9b9"
-  },
-  "section": "game",
-  "title": "Effect change for key term Reset",
-  "content": "The key word Reset has been changed from \"you can resolve the extra effects of 1 X one more time\" to \"you can resolve the effects of 1 Item in your Reserve one more time\".",
-  "images": {},
-  "author": "64ecc30f82c5729f0b36e158",
-  "story_date": "2024-02-04",
-  "site_link": "",
-  "news": true
-},
-{
-  "_id": {
     "$oid": "65c453de833f10de9b07390e"
   },
   "section": "design",
@@ -434,21 +133,6 @@
   "story_date": "2024-02-08",
   "site_link": "",
   "news": true
-},
-{
-  "site_link": "https://steamcommunity.com/sharedfiles/filedetails/?id=2959625751",
-  "content": "The Steam Workshop on Tabletop Simulator for PlayMaker is up.//\nYou can follow the link here to download&&\n",
-  "id": "65c66fee833f10de9b0740f7",
-  "_id": {
-      "$oid": "65c66fee833f10de9b0740f7"
-  },
-  "images": {},
-  "updated": "2024-05-24",
-  "title": "The Steam Workshop on Tabletop Simulator for PlayMaker is up",
-  "story_date": "2023-04-12",
-  "section": "game",
-  "news": true,
-  "author": "64ecc30f82c5729f0b36e158"
 },
 {
   "_id": {
@@ -467,33 +151,156 @@
 },
 {
   "_id": {
-    "$oid": "65cf9ae7029ae854b4ad8d45"
+    "$oid": "65d0191f029ae854b4ad8e22"
   },
-  "title": "Hit tag effect change",
+  "title": "Card changes 9/24 - 9/30",
   "subtitle": "",
   "author": "TeamPlayMaker",
-  "story_date": "2024-02-14",
-  "updated": "2024-02-17",
-  "section": "game",
-  "content": "The hit tag effect has been changed.// Previous effect://If this card is not defending and has not resolved its main effect, deal 1 damage to a foe. You can not defend with or resolve the main effect of this card for the rest of the round.//New effect://If this card has not resolved its main effect, deal 1 damage to a foe. You can not resolve the main effect of this card for the rest of the round.",
-  "images": {},
+  "story_date": "2023-09-30",
+  "updated": "2024-02-27",
+  "section": "releases",
+  "content": "Changes in card effects:@@]]//\n\nSwift Guard!!]]//\nPrevious: <1-5> No effect.//\nNew: <1-5> Deal 2 damage.//\n\nDouble Wall Blowback!!!]]//\nPrevious: <1-5> Deal 2 damage.//\nNew: <1-5> Deal 3 damage.//\n\nGold Frag]]//\nPrevious: <L. Trigger> When a Fighter in your play is revealed, that Fighter gains 1 HP.//\nNew: <L. Trigger> When this Item is played or a Fighter(s) in your play is revealed, 1 Fighter in your play gains 1 HP (that card is revealed).//\n\nDual Wing Strike!!]]//\nPrevious: <1-5> Deal 2 damage. <6-11> Deal 2 damage. Draw 1 card. <12+> Deal 2 damage plus 1 additional damage for each card in your play past 4. Add 1 Unity card from the discard pile to your hand.//\nNew: <1-5> Deal 1 damage. <6-11> Deal 2 damage. Add 1 Unity Move from your hand to your play, that card can not be resolved this round. <12+> Deal 2 damage. Add 1 Unity Move from your hand to your play.//\n\nDive Bomber Finisher!!!]]//\nPrevious: <1-5> Deal 1 damage.//\nNew: <1-5> Deal 2 damage.//\n\nThermodynamic Break!!!]]//\nPrevious: <1-5> Deal 1 damage.//\nNew: <1-5> Deal 2 damage.//\n\nPitch - Swift Rending!!!]]//\nPrevious: <1-5> No effect.//\nNew: <1-5> Deal 2 damage.//\n\nReturning Souls]]//\nPrevious: <Critical> Discard 2 cards from your play; add 1 Aura from the discard pile to your play.//\nNew: <Critical> Discard 1 unresolved card from your play; add 1 Aura or Move from the discard pile to your play.//\n\nRekindled]]//\nPrevious: If a player(s) has a Power card(s) in their play, gain 2 HP.//\nNew: If a player(s) has a Power card(s) in their play, gain 1 HP.//\n\nIgnition Left!!]]//\nPrevious: <6-11> Deal 3 piercing damage. <12+> Deal 3 piercing damage. Ignore the reaction(s) of defending Fighter(s) and draw 1 card.//\nNew: <6-11> Deal 3 piercing damage. Draw 1 card. <12+> Deal 3 piercing damage. Ignore the reaction(s) of defending Fighter(s) and draw 2 cards.//\n\nBig Bang Right!!!]]//\nPrevious: <6-11> Discard 1 card from your hand. <12+>  If your hand has 6 or more cards, deal 6 piercing damage. Ignore the reaction(s) of defending Fighter(s).//\nNew: <6-11> Deal 2 piercing damage. <12+>  Deal 3 piercing damage. If your hand has 6 or more cards, deal 3 additional piercing damage. Ignore the reaction(s) of defending Fighter(s).//",
+  "images": {
+    "1": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g2gwm.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1007",
+        "order": 0,
+        "alt_text": "Swift Guard"
+      }
+    ],
+    "4": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g2gwe.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1008",
+        "order": 0,
+        "alt_text": "Double Wall Blowback!!!"
+      }
+    ],
+    "7": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl02gwi.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1070",
+        "order": 0,
+        "alt_text": "Gold Frag"
+      }
+    ],
+    "10": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b1dwm.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1035",
+        "order": 0,
+        "alt_text": "Dual Wing Strike!!"
+      }
+    ],
+    "13": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b1dwe.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1036",
+        "order": 0,
+        "alt_text": "Dive Bomber Finisher!!!"
+      }
+    ],
+    "16": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r3bee.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1028",
+        "order": 0,
+        "alt_text": "Thermodynamic Break!!!"
+      }
+    ],
+    "19": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g3bwe.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1012",
+        "order": 0,
+        "alt_text": "Pitch - Swift Rending!!!"
+      }
+    ],
+    "22": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb15cp.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1111",
+        "order": 0,
+        "alt_text": "Returning Souls"
+      }
+    ],
+    "25": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb4fb.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1078",
+        "order": 0,
+        "alt_text": "Rekindled"
+      }
+    ],
+    "28": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r2rfm.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1023",
+        "order": 0,
+        "alt_text": "Ignition Left!!"
+      }
+    ],
+    "31": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r2rfe.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1024",
+        "order": 0,
+        "alt_text": "Big Bang Right!!!"
+      }
+    ]
+  },
   "news": true,
   "site_link": ""
 },
 {
   "_id": {
-    "$oid": "65cf9bcf029ae854b4ad8d46"
+    "$oid": "65ef168df28d4a1e36ea10d4"
   },
-  "title": "Article Pages are up",
+  "title": "Card change: Shinobi Scroll of Duplication",
   "subtitle": "",
   "author": "TeamPlayMaker",
-  "story_date": "2024-02-16",
+  "story_date": "2024-03-11",
   "updated": null,
-  "section": "site",
-  "content": "The each article and news item with more than a headline will a full page. If an article has more information it will now be clickable.",
-  "images": {},
+  "section": "releases",
+  "content": "Change in card effects:@@]]//\nShinobi Scroll of Duplication]]//\nPrevious: This Item copies the effect of 1 Fighter or Aura in your String until the end of the round.//\nNew: This Item copies the main effect text of 1 Fighter or Aura in your String until the end of the round.//",
+  "images": {
+    "1": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl20fi.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1166",
+        "order": 1,
+        "alt_text": "Shinobi Scroll of Duplication"
+      }
+    ]
+  },
   "news": true,
   "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65bd91a53e76a19d864fcfa5"
+  },
+  "section": "simulator",
+  "title": "Dice roll and damage function added to simulator's chat window",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-12-31",
+  "site_link": "simulator",
+  "news": true
 },
 {
   "_id": {
@@ -654,146 +461,6 @@
 },
 {
   "_id": {
-    "$oid": "65d00b67029ae854b4ad8da1"
-  },
-  "title": "Card changes: Gizma",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2024-02-03",
-  "updated": "2024-02-27",
-  "section": "releases",
-  "content": "Change in card effects:@@]]//\nGizma]]//\nPrevious: Resolve the main effect of 1 Fighter, Aura or Move in your placed cards, then discard it.//\nNew: Resolve the main effect of 1 card in your placed cards, then discard it.//",
-  "images": {
-    "1": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gf.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1149",
-        "order": 0,
-        "alt_text": "Gizma"
-      }
-    ]
-  },
-  "news": true,
-  "site_link": ""
-},
-{
-  "_id": {
-    "$oid": "65d0191f029ae854b4ad8e22"
-  },
-  "title": "Card changes 9/24 - 9/30",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2023-09-30",
-  "updated": "2024-02-27",
-  "section": "releases",
-  "content": "Changes in card effects:@@]]//\n\nSwift Guard!!]]//\nPrevious: <1-5> No effect.//\nNew: <1-5> Deal 2 damage.//\n\nDouble Wall Blowback!!!]]//\nPrevious: <1-5> Deal 2 damage.//\nNew: <1-5> Deal 3 damage.//\n\nGold Frag]]//\nPrevious: <L. Trigger> When a Fighter in your play is revealed, that Fighter gains 1 HP.//\nNew: <L. Trigger> When this Item is played or a Fighter(s) in your play is revealed, 1 Fighter in your play gains 1 HP (that card is revealed).//\n\nDual Wing Strike!!]]//\nPrevious: <1-5> Deal 2 damage. <6-11> Deal 2 damage. Draw 1 card. <12+> Deal 2 damage plus 1 additional damage for each card in your play past 4. Add 1 Unity card from the discard pile to your hand.//\nNew: <1-5> Deal 1 damage. <6-11> Deal 2 damage. Add 1 Unity Move from your hand to your play, that card can not be resolved this round. <12+> Deal 2 damage. Add 1 Unity Move from your hand to your play.//\n\nDive Bomber Finisher!!!]]//\nPrevious: <1-5> Deal 1 damage.//\nNew: <1-5> Deal 2 damage.//\n\nThermodynamic Break!!!]]//\nPrevious: <1-5> Deal 1 damage.//\nNew: <1-5> Deal 2 damage.//\n\nPitch - Swift Rending!!!]]//\nPrevious: <1-5> No effect.//\nNew: <1-5> Deal 2 damage.//\n\nReturning Souls]]//\nPrevious: <Critical> Discard 2 cards from your play; add 1 Aura from the discard pile to your play.//\nNew: <Critical> Discard 1 unresolved card from your play; add 1 Aura or Move from the discard pile to your play.//\n\nRekindled]]//\nPrevious: If a player(s) has a Power card(s) in their play, gain 2 HP.//\nNew: If a player(s) has a Power card(s) in their play, gain 1 HP.//\n\nIgnition Left!!]]//\nPrevious: <6-11> Deal 3 piercing damage. <12+> Deal 3 piercing damage. Ignore the reaction(s) of defending Fighter(s) and draw 1 card.//\nNew: <6-11> Deal 3 piercing damage. Draw 1 card. <12+> Deal 3 piercing damage. Ignore the reaction(s) of defending Fighter(s) and draw 2 cards.//\n\nBig Bang Right!!!]]//\nPrevious: <6-11> Discard 1 card from your hand. <12+>  If your hand has 6 or more cards, deal 6 piercing damage. Ignore the reaction(s) of defending Fighter(s).//\nNew: <6-11> Deal 2 piercing damage. <12+>  Deal 3 piercing damage. If your hand has 6 or more cards, deal 3 additional piercing damage. Ignore the reaction(s) of defending Fighter(s).//",
-  "images": {
-    "1": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g2gwm.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1007",
-        "order": 0,
-        "alt_text": "Swift Guard"
-      }
-    ],
-    "4": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g2gwe.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1008",
-        "order": 0,
-        "alt_text": "Double Wall Blowback!!!"
-      }
-    ],
-    "7": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl02gwi.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1070",
-        "order": 0,
-        "alt_text": "Gold Frag"
-      }
-    ],
-    "10": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b1dwm.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1035",
-        "order": 0,
-        "alt_text": "Dual Wing Strike!!"
-      }
-    ],
-    "13": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b1dwe.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1036",
-        "order": 0,
-        "alt_text": "Dive Bomber Finisher!!!"
-      }
-    ],
-    "16": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r3bee.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1028",
-        "order": 0,
-        "alt_text": "Thermodynamic Break!!!"
-      }
-    ],
-    "19": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g3bwe.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1012",
-        "order": 0,
-        "alt_text": "Pitch - Swift Rending!!!"
-      }
-    ],
-    "22": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb15cp.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1111",
-        "order": 0,
-        "alt_text": "Returning Souls"
-      }
-    ],
-    "25": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb4fb.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1078",
-        "order": 0,
-        "alt_text": "Rekindled"
-      }
-    ],
-    "28": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r2rfm.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1023",
-        "order": 0,
-        "alt_text": "Ignition Left!!"
-      }
-    ],
-    "31": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r2rfe.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1024",
-        "order": 0,
-        "alt_text": "Big Bang Right!!!"
-      }
-    ]
-  },
-  "news": true,
-  "site_link": ""
-},
-{
-  "_id": {
     "$oid": "65d02259029ae854b4ad8e23"
   },
   "title": "Card changes 10/1 - 10/7",
@@ -934,140 +601,15 @@
 },
 {
   "_id": {
-    "$oid": "65d02c86029ae854b4ad8e2d"
+    "$oid": "65cf9ae7029ae854b4ad8d45"
   },
-  "title": "Key term Start Phase introduced",
+  "title": "Hit tag effect change",
   "subtitle": "",
   "author": "TeamPlayMaker",
-  "story_date": "2023-10-06",
+  "story_date": "2024-02-14",
   "updated": "2024-02-17",
   "section": "game",
-  "content": "The key term Start Phase has been introduced.//\nAll text referring to the start of the round will be replaced with \"During the Start Phase\".",
-  "images": {},
-  "news": true,
-  "site_link": ""
-},
-{
-  "_id": {
-    "$oid": "65d03643029ae854b4ad8e44"
-  },
-  "title": "Card changes 10/15 - 10/21",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2023-10-21",
-  "updated": "2024-02-27",
-  "section": "releases",
-  "content": "Changes in card effects:@@]]//\nPantheraMan]]//\nPrevious: Deal 2 damage to a foe who has yet to go this round. If you are first to go this round or you have the highest Enthusiasm, draw 1 Pluck and gain 1 HP.//\nNew: If you are first to go this round or you have the highest Enthusiasm, resolve 1 of the following effects: ● Deal 2 piercing damage to a foe. ● Gain 1 HP and draw 1 Pluck.//\n\nBlack Claw Divide!!!]]//\nPrevious: <Target> Foe who has yet to go this round. <12+> Deal 4 piercing damage. The next player's Move(s) and Ending(s) gain damage minus 1 (damage dealt by those cards is reduced by 1 at the end of their resolutions).//\nNew: <Target> Foe who has yet to go this round. If you have the highest Enthusiasm, target a foe of your choice instead. <12+> Deal 4 piercing damage. The next player's Move and Ending gain damage minus 1 (damage dealt by those cards is reduced by 1 at the end of their resolutions//\n\nMax Reverb!!!]]//\nPrevious: If you are at 5 HP or less, ignore the reaction(s) of defending Fighter(s).//\nNew: If you are at critical HP, ignore the reaction(s) of defending Fighter(s) and reduce damage you take this round by 1.//\n\nHeavy Aura!]]//\nPrevious: Foes with Enthusiasm lower than yours take 1 damage after resolving an Aura(s) or drawing a card(s).//\nNew: Foes with Enthusiasm lower than yours take 1 damage after resolving an Aura(s) or adding card(s) to their hands.//\n",
-  "images": {
-    "1": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g1pmf.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1001",
-        "order": 0,
-        "alt_text": "PantheraMan"
-      }
-    ],
-    "4": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g1pme.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1004",
-        "order": 0,
-        "alt_text": "Black Claw Divide!!!"
-      }
-    ],
-    "7": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p1bne.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1052",
-        "order": 0,
-        "alt_text": "Max Reverb!!!"
-      }
-    ],
-    "10": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p4gea.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1062",
-        "order": 0,
-        "alt_text": "Heavy Aura!"
-      }
-    ]
-  },
-  "news": true,
-  "site_link": ""
-},
-{
-  "_id": {
-    "$oid": "65d0e580029ae854b4ad8e45"
-  },
-  "title": "New cards 10/29 - 11/4",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2023-11-04",
-  "updated": "2024-02-27",
-  "section": "releases",
-  "content": "Overclock and Overload@@]]//\nHero ID and Card Number:]]//GEN 1129//\nType:]]//Event//\nTag:]]//Max 1//\nSeries]]://Tech and Energy//\nEffect]]:// All Tech and Energy cards in your play gain damage plus 1 (those cards deal 1 additional damage at the end of their resolutions). Take 1 damage and reduce your Focus by 1 each time you resolve a card or Pluck.//\n\nRoar of Nature@@]]//\nHero ID and Card Number:]]//GEN 1134//\nType:]]//Event//\nTag:]]//Max 1//\nSeries]]://Nature and Call//\nEffect]]:// If your play has 3 or more Nature cards, resolve this card as if you were at critical HP. <C. Trigger> When a card or Pluck is resolving, cancel the non-damaging effects of the resolving card/Pluck.//\n\nMiraculous Transformation@@]]//\nHero ID and Card Number:]]//GEN 1135//\nType:]]//Comeback//\nSeries]]://Transformation and Fortune//\nEffect]]:// If you take 5 or more damage, resolve this Comeback as if you were at critical HP (quick effect). <C. Trigger> During the Start Phase or if you take damage, add 1 Transformation card from your hand or discard pile to your play, then resolve its main effect.",
-  "images": {
-    "0": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg11e.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1133",
-        "order": 0,
-        "alt_text": "Overclock and Overload"
-      }
-    ],
-    "11": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg12e.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1134",
-        "order": 0,
-        "alt_text": "Roar of Nature"
-      }
-    ],
-    "22": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg13cb.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1137",
-        "order": 0,
-        "alt_text": "Miraculous Transformation"
-      }
-    ]
-  },
-  "news": true,
-  "site_link": ""
-},
-{
-  "_id": {
-    "$oid": "65d0fe99029ae854b4ad8ed8"
-  },
-  "title": "Key term Provoke introduced",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2023-10-30",
-  "updated": null,
-  "section": "game",
-  "content": "The key term Provoke has been introduced.//All text \"Select X foes; that foe must resolve their Y this round with you as the target (other players can still be targeted)\" will be replaced with \"Provoke X Y\".",
-  "images": {},
-  "news": true,
-  "site_link": ""
-},
-{
-  "_id": {
-    "$oid": "65d12d1c029ae854b4ada3e7"
-  },
-  "title": "Article templates added to Article Create page",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2024-02-17",
-  "updated": null,
-  "section": "admin",
-  "content": "The Article Create now has templates that can be selected to help with formatting.",
+  "content": "The hit tag effect has been changed.// Previous effect://If this card is not defending and has not resolved its main effect, deal 1 damage to a foe. You can not defend with or resolve the main effect of this card for the rest of the round.//New effect://If this card has not resolved its main effect, deal 1 damage to a foe. You can not resolve the main effect of this card for the rest of the round.",
   "images": {},
   "news": true,
   "site_link": ""
@@ -1104,16 +646,80 @@
 },
 {
   "_id": {
-    "$oid": "65d2b6fc029ae854b4ada92a"
+    "$oid": "65e63edbf9422fdbb5d4a28a"
   },
-  "title": "Artwork for Feza added",
+  "title": "Card changes: 3/3 - 3/9",
   "subtitle": "",
   "author": "TeamPlayMaker",
-  "story_date": "2024-02-18",
-  "updated": null,
-  "section": "design",
-  "content": "",
-  "images": {},
+  "story_date": "2024-03-08",
+  "updated": "2024-03-08",
+  "section": "releases",
+  "content": "Change in card effects:@@]]//\nInfinity Mass Press!!!]]//\nPrevious: <12+> Deal damage equal to the difference (max of 7).//\nNew: <12+> Deal 4 damage. If they have an Ending, deal damage equal to the difference instead (max of 7).//\n\nBurst Esper]]//\n\"<Trigger> If this card is discarded from your hand, deal 2 damage to a random foe.\" added.//\n\nGizma]]//\nPrevious: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under this card (if this card is removed from your String, the placed card(s) is discarded).//\nNew: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String (if that card is removed from your String, the placed card(s) is discarded).//\n\nShadow Strike!!]]//\nPrevious: <Trigger> If you discard a card(s) from your hand or String, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your String/Active Pluck.//\nNew: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.//\n\nMaster of Shadows!]]//\nPrevious: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.//\nNew: <Trigger> If you discard a card(s) from your hand or String, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your String/Active Pluck.//\n\nChange in card tags@@]]//\nGizma]]//\nCycle tag removed and Hit 1 tag added.//\n\nMaster of Shadows]]//\nHit 1 tag removed and Cycle tag added.",
+  "images": {
+    "1": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p4gee.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1064",
+        "order": 0,
+        "alt_text": "Infinity Mass Press!!!"
+      }
+    ],
+    "4": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r3bef.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1025",
+        "order": 0,
+        "alt_text": "Burst Esper"
+      }
+    ],
+    "6": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gf.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1149",
+        "order": 0,
+        "alt_text": "Gizma"
+      }
+    ],
+    "9": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gm.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1151",
+        "order": 0,
+        "alt_text": "Shadow Strike!!"
+      }
+    ],
+    "12": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5ga.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1150",
+        "order": 0,
+        "alt_text": "Master of Shadows!"
+      }
+    ],
+    "16": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gf.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1149",
+        "order": 0,
+        "alt_text": "Gizma"
+      }
+    ],
+    "18": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5ga.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1150",
+        "order": 0,
+        "alt_text": "Master of Shadows"
+      }
+    ]
+  },
   "news": true,
   "site_link": ""
 },
@@ -1225,14 +831,313 @@
 },
 {
   "_id": {
-    "$oid": "65d534c5ebdf4798dd742580"
+    "$oid": "65bd99443e76a19d864fcfab"
   },
-  "title": "PDF generator added to Deck pages and Deck Builer",
+  "section": "simulator",
+  "title": "Simulate button added to deck details pages",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-12-07",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65bd8fbd3e76a19d864fcfa1"
+  },
+  "section": "site",
+  "title": "Glossary and Rulings Page created",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-01-15",
+  "site_link": "glossary",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65bd95823e76a19d864fcfa9"
+  },
+  "section": "design",
+  "title": "Artwork for Lucky Punch added",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-10-20",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65bff25e3e76a19d864fd9b9"
+  },
+  "section": "game",
+  "title": "Effect change for key term Reset",
+  "content": "The key word Reset has been changed from \"you can resolve the extra effects of 1 X one more time\" to \"you can resolve the effects of 1 Item in your Reserve one more time\".",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-02-04",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65bd8e753e76a19d864fcfa0"
+  },
+  "section": "game",
+  "title": "Name changes for Play and Ownership",
+  "content": "\"Play\" and \"Ownership\" will now be named \"String\" and \"Reserve\", respectively.",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-01-17",
+  "site_link": "",
+  "news": true,
+  "subtitle": null,
+  "updated": "2024-02-16"
+},
+{
+  "_id": {
+    "$oid": "65bd99ea3e76a19d864fcfad"
+  },
+  "section": "simulator",
+  "title": "Sound effects added to the Simulator page",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-11-21",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65bd8c363e76a19d864fcf9c"
+  },
+  "section": "site",
+  "title": "News Section added to the main page",
+  "content": "News feed detailing future changes to the game and site was created, and is now available on the main page.",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-02-03",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65d0fe99029ae854b4ad8ed8"
+  },
+  "title": "Key term Provoke introduced",
   "subtitle": "",
   "author": "TeamPlayMaker",
-  "story_date": "2024-02-20",
+  "story_date": "2023-10-30",
+  "updated": null,
+  "section": "game",
+  "content": "The key term Provoke has been introduced.//All text \"Select X foes; that foe must resolve their Y this round with you as the target (other players can still be targeted)\" will be replaced with \"Provoke X Y\".",
+  "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65e7cde19f6d332477527395"
+  },
+  "title": "Rulebook create, edit and detail pages completed",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-03-05",
+  "updated": null,
+  "section": "admin",
+  "content": "",
+  "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65bd8c663e76a19d864fcf9d"
+  },
+  "section": "admin",
+  "title": "News create page created and added the Admin Create Portal",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-02-01",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65be94d43e76a19d864fd502"
+  },
+  "section": "simulator",
+  "title": "Chat panel added to the Simulator",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-12-02",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65d00b67029ae854b4ad8da1"
+  },
+  "title": "Card changes: Gizma",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-02-03",
+  "updated": "2024-02-27",
+  "section": "releases",
+  "content": "Change in card effects:@@]]//\nGizma]]//\nPrevious: Resolve the main effect of 1 Fighter, Aura or Move in your placed cards, then discard it.//\nNew: Resolve the main effect of 1 card in your placed cards, then discard it.//",
+  "images": {
+    "1": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gf.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1149",
+        "order": 0,
+        "alt_text": "Gizma"
+      }
+    ]
+  },
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "660de51ac285d86b6c9539ec"
+  },
+  "title": "Artwork for Gizma added",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-04-03",
+  "updated": null,
+  "section": "design",
+  "content": "",
+  "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65bd9b9a3e76a19d864fcfae"
+  },
+  "section": "site",
+  "title": "Deck Export for Tabletop Simulator completed",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-09-18",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65bd9be93e76a19d864fcfaf"
+  },
+  "section": "site",
+  "title": "Stats panel for Deck Builder completed",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-11-05",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65d0e580029ae854b4ad8e45"
+  },
+  "title": "New cards 10/29 - 11/4",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2023-11-04",
+  "updated": "2024-02-27",
+  "section": "releases",
+  "content": "Overclock and Overload@@]]//\nHero ID and Card Number:]]//GEN 1129//\nType:]]//Event//\nTag:]]//Max 1//\nSeries]]://Tech and Energy//\nEffect]]:// All Tech and Energy cards in your play gain damage plus 1 (those cards deal 1 additional damage at the end of their resolutions). Take 1 damage and reduce your Focus by 1 each time you resolve a card or Pluck.//\n\nRoar of Nature@@]]//\nHero ID and Card Number:]]//GEN 1134//\nType:]]//Event//\nTag:]]//Max 1//\nSeries]]://Nature and Call//\nEffect]]:// If your play has 3 or more Nature cards, resolve this card as if you were at critical HP. <C. Trigger> When a card or Pluck is resolving, cancel the non-damaging effects of the resolving card/Pluck.//\n\nMiraculous Transformation@@]]//\nHero ID and Card Number:]]//GEN 1135//\nType:]]//Comeback//\nSeries]]://Transformation and Fortune//\nEffect]]:// If you take 5 or more damage, resolve this Comeback as if you were at critical HP (quick effect). <C. Trigger> During the Start Phase or if you take damage, add 1 Transformation card from your hand or discard pile to your play, then resolve its main effect.",
+  "images": {
+    "0": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg11e.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1133",
+        "order": 0,
+        "alt_text": "Overclock and Overload"
+      }
+    ],
+    "11": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg12e.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1134",
+        "order": 0,
+        "alt_text": "Roar of Nature"
+      }
+    ],
+    "22": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg13cb.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1137",
+        "order": 0,
+        "alt_text": "Miraculous Transformation"
+      }
+    ]
+  },
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "6605b50f4759e4cddf39b844"
+  },
+  "title": "Pulls Deck Builder added to Nav Bar",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-03-28",
   "updated": null,
   "section": "site",
+  "content": "The Pulls Deck Builder page has been added to Nav Bar under the cards section.",
+  "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65c66fee833f10de9b0740f7"
+  },
+  "section": "game",
+  "title": "The Steam Workshop on Tabletop Simulator for PlayMaker is up",
+  "content": "The Steam Workshop on Tabletop Simulator for PlayMaker is up.\n\nYou can follow the link here to download:\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=2959625751",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-04-12",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65bfc8973e76a19d864fd508"
+  },
+  "section": "site",
+  "title": "News Page is up",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-02-04",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65d2b6fc029ae854b4ada92a"
+  },
+  "title": "Artwork for Feza added",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-02-18",
+  "updated": null,
+  "section": "design",
   "content": "",
   "images": {},
   "news": true,
@@ -1255,97 +1160,111 @@
 },
 {
   "_id": {
-    "$oid": "65dea31f3ee977ec9ef3cc67"
+    "$oid": "65bd8e0d3e76a19d864fcf9f"
   },
-  "title": "Article Images are now clickable",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2024-02-27",
-  "updated": null,
-  "section": "admin",
-  "content": "",
+  "section": "game",
+  "title": "New key terms introduced 1/14 - 1/20",
+  "content": "Key terms Focus plus X, Focus minus X, Enthusiasm plus X and Enthusiasm minus X have been introduced.//\nAll text \"Add X to your Focus\" will be replaced by \"Focus plus X\".//\nAll text \"Lower the Focus of X foes by Y\" will be replaced by and \"X foes gain Focus minus Y\".//\nAll text \"Add X to your Enthusiasm\" will be replaced by \"Enthusiasm plus X\".//\nAll text \"Lower the Focus of X foes by Y\" will be replaced by and \"X foes gain Enthusiasm minus Y\".//",
   "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-01-17",
+  "site_link": "",
   "news": true,
-  "site_link": ""
+  "subtitle": null,
+  "updated": "2024-02-17"
 },
 {
   "_id": {
-    "$oid": "65e63edbf9422fdbb5d4a28a"
+    "$oid": "65bd8fe83e76a19d864fcfa2"
   },
-  "title": "Card changes: 3/3 - 3/9",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2024-03-08",
-  "updated": "2024-03-08",
+  "section": "admin",
+  "title": "Terms create, edit and details pages created",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-01-15",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65bd906b3e76a19d864fcfa3"
+  },
+  "section": "design",
+  "title": "5 HP is now the main tag of all Endings",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-01-31",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65be935b3e76a19d864fd4ff"
+  },
+  "section": "admin",
+  "title": "Admin Create Portal created",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-12-23",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65be94903e76a19d864fd501"
+  },
+  "section": "site",
+  "title": "Deck Builder now remembers deck in progress even after leaving the page",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-12-24",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65bd94be3e76a19d864fcfa7"
+  },
   "section": "releases",
-  "content": "Change in card effects:@@]]//\nInfinity Mass Press!!!]]//\nPrevious: <12+> Deal damage equal to the difference (max of 7).//\nNew: <12+> Deal 4 damage. If they have an Ending, deal damage equal to the difference instead (max of 7).//\n\nBurst Esper]]//\n\"<Trigger> If this card is discarded from your hand, deal 2 damage to a random foe.\" added.//\n\nGizma]]//\nPrevious: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under this card (if this card is removed from your String, the placed card(s) is discarded).//\nNew: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String (if that card is removed from your String, the placed card(s) is discarded).//\n\nShadow Strike!!]]//\nPrevious: <Trigger> If you discard a card(s) from your hand or String, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your String/Active Pluck.//\nNew: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.//\n\nMaster of Shadows!]]//\nPrevious: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.//\nNew: <Trigger> If you discard a card(s) from your hand or String, place 1 card or Pluck from their respective discard pile under 1 card or Pluck in your String/Active Pluck.//\n\nChange in card tags@@]]//\nGizma]]//\nCycle tag removed and Hit 1 tag added.//\n\nMaster of Shadows]]//\nHit 1 tag removed and Cycle tag added.",
-  "images": {
-    "1": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p4gee.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1064",
-        "order": 0,
-        "alt_text": "Infinity Mass Press!!!"
-      }
-    ],
-    "4": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r3bef.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1025",
-        "order": 0,
-        "alt_text": "Burst Esper"
-      }
-    ],
-    "6": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gf.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1149",
-        "order": 0,
-        "alt_text": "Gizma"
-      }
-    ],
-    "9": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gm.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1151",
-        "order": 0,
-        "alt_text": "Shadow Strike!!"
-      }
-    ],
-    "12": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5ga.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1150",
-        "order": 0,
-        "alt_text": "Master of Shadows!"
-      }
-    ],
-    "16": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gf.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1149",
-        "order": 0,
-        "alt_text": "Gizma"
-      }
-    ],
-    "18": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5ga.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1150",
-        "order": 0,
-        "alt_text": "Master of Shadows"
-      }
-    ]
+  "title": "Enter the Hero: Gold Release revealed",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-12-19",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65bd952e3e76a19d864fcfa8"
   },
+  "section": "design",
+  "title": "Artwork for the Recoil series added",
+  "content": "",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-01-01",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65be96433e76a19d864fd503"
+  },
+  "section": "game",
+  "title": "Change to Second Wind mechanic",
+  "content": "Before: Second Wind lasts the duration of the game.//\n\nAfter: Second Wind lasts 1 turn.",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-01-24",
+  "site_link": "",
   "news": true,
-  "site_link": ""
+  "subtitle": null,
+  "updated": "2024-02-17"
 },
 {
   "_id": {
@@ -1364,15 +1283,60 @@
 },
 {
   "_id": {
-    "$oid": "65e7cde19f6d332477527395"
+    "$oid": "660366b84759e4cddf39ad46"
   },
-  "title": "Rulebook create, edit and detail pages completed",
+  "title": "Deck Builder now follows maximum limits and Pluck deck building requirements",
   "subtitle": "",
   "author": "TeamPlayMaker",
-  "story_date": "2024-03-05",
+  "story_date": "2024-03-26",
+  "updated": "2024-03-27",
+  "section": "site",
+  "content": "The Deck Builder pages (excluding the Pull Deck Builder page) now greys out cards when reaching 4 copies in a deck or if they do not meet Pluck deck building requirements.//\nCards in the Pull Deck Builder page now grey out when reaching 4 copies in a deck. Cards in the Pull Deck Builder page are also removed from the card pool when selected and added back when deselected.\n",
+  "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65d534c5ebdf4798dd742580"
+  },
+  "title": "PDF generator added to Deck pages and Deck Builer",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-02-20",
+  "updated": null,
+  "section": "site",
+  "content": "",
+  "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65dea31f3ee977ec9ef3cc67"
+  },
+  "title": "Article Images are now clickable",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-02-27",
   "updated": null,
   "section": "admin",
   "content": "",
+  "images": {},
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "65d02c86029ae854b4ad8e2d"
+  },
+  "title": "Key term Start Phase introduced",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2023-10-06",
+  "updated": "2024-02-17",
+  "section": "game",
+  "content": "The key term Start Phase has been introduced.//\nAll text referring to the start of the round will be replaced with \"During the Start Phase\".",
   "images": {},
   "news": true,
   "site_link": ""
@@ -1389,31 +1353,6 @@
   "section": "site",
   "content": "",
   "images": {},
-  "news": true,
-  "site_link": ""
-},
-{
-  "_id": {
-    "$oid": "65ef168df28d4a1e36ea10d4"
-  },
-  "title": "Card change: Shinobi Scroll of Duplication",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2024-03-11",
-  "updated": null,
-  "section": "releases",
-  "content": "Change in card effects:@@]]//\nShinobi Scroll of Duplication]]//\nPrevious: This Item copies the effect of 1 Fighter or Aura in your String until the end of the round.//\nNew: This Item copies the main effect text of 1 Fighter or Aura in your String until the end of the round.//",
-  "images": {
-    "1": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl20fi.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1166",
-        "order": 1,
-        "alt_text": "Shinobi Scroll of Duplication"
-      }
-    ]
-  },
   "news": true,
   "site_link": ""
 },
@@ -1462,46 +1401,105 @@
 },
 {
   "_id": {
-    "$oid": "660366b84759e4cddf39ad46"
+    "$oid": "65bd91123e76a19d864fcfa4"
   },
-  "title": "Deck Builder now follows maximum limits and Pluck deck building requirements",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2024-03-26",
-  "updated": "2024-03-27",
-  "section": "site",
-  "content": "The Deck Builder pages (excluding the Pull Deck Builder page) now greys out cards when reaching 4 copies in a deck or if they do not meet Pluck deck building requirements.//\nCards in the Pull Deck Builder page now grey out when reaching 4 copies in a deck. Cards in the Pull Deck Builder page are also removed from the card pool when selected and added back when deselected.\n",
-  "images": {},
-  "news": true,
-  "site_link": ""
-},
-{
-  "_id": {
-    "$oid": "6605b50f4759e4cddf39b844"
-  },
-  "title": "Pulls Deck Builder added to Nav Bar",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2024-03-28",
-  "updated": null,
-  "section": "site",
-  "content": "The Pulls Deck Builder page has been added to Nav Bar under the cards section.",
-  "images": {},
-  "news": true,
-  "site_link": ""
-},
-{
-  "_id": {
-    "$oid": "660de51ac285d86b6c9539ec"
-  },
-  "title": "Artwork for Gizma added",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2024-04-03",
-  "updated": null,
   "section": "design",
+  "title": "Pointers added to each die result of Endings and cards with modular effects",
+  "content": "Pointers added to each die result of Endings and cards with modular effects to help players with color blindness discern larger blocks of card text.",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-01-08",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65bd949d3e76a19d864fcfa6"
+  },
+  "section": "releases",
+  "title": "The New Challengers and The New Challengers: Limited Release revealed",
   "content": "",
   "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-12-19",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65be97203e76a19d864fd504"
+  },
+  "section": "game",
+  "title": "Tiered HP introduced",
+  "content": "HP is now tiered. HP is now broken up into 4 tiers with 4 HP each. When a player moves into a new tier, the highest amount of HP in that tier is the new maximum HP for that player.",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2023-12-10",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65be9bab3e76a19d864fd505"
+  },
+  "section": "game",
+  "title": "True damage type introduced",
+  "content": "The card effect \"ignore the reactions of defending Fighter(s)\" will be replaced with the True damage type. ",
+  "images": {},
+  "author": "64ecc30f82c5729f0b36e158",
+  "story_date": "2024-01-04",
+  "site_link": "",
+  "news": true
+},
+{
+  "_id": {
+    "$oid": "65d03643029ae854b4ad8e44"
+  },
+  "title": "Card changes 10/15 - 10/21",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2023-10-21",
+  "updated": "2024-02-27",
+  "section": "releases",
+  "content": "Changes in card effects:@@]]//\nPantheraMan]]//\nPrevious: Deal 2 damage to a foe who has yet to go this round. If you are first to go this round or you have the highest Enthusiasm, draw 1 Pluck and gain 1 HP.//\nNew: If you are first to go this round or you have the highest Enthusiasm, resolve 1 of the following effects: ● Deal 2 piercing damage to a foe. ● Gain 1 HP and draw 1 Pluck.//\n\nBlack Claw Divide!!!]]//\nPrevious: <Target> Foe who has yet to go this round. <12+> Deal 4 piercing damage. The next player's Move(s) and Ending(s) gain damage minus 1 (damage dealt by those cards is reduced by 1 at the end of their resolutions).//\nNew: <Target> Foe who has yet to go this round. If you have the highest Enthusiasm, target a foe of your choice instead. <12+> Deal 4 piercing damage. The next player's Move and Ending gain damage minus 1 (damage dealt by those cards is reduced by 1 at the end of their resolutions//\n\nMax Reverb!!!]]//\nPrevious: If you are at 5 HP or less, ignore the reaction(s) of defending Fighter(s).//\nNew: If you are at critical HP, ignore the reaction(s) of defending Fighter(s) and reduce damage you take this round by 1.//\n\nHeavy Aura!]]//\nPrevious: Foes with Enthusiasm lower than yours take 1 damage after resolving an Aura(s) or drawing a card(s).//\nNew: Foes with Enthusiasm lower than yours take 1 damage after resolving an Aura(s) or adding card(s) to their hands.//\n",
+  "images": {
+    "1": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g1pmf.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1001",
+        "order": 0,
+        "alt_text": "PantheraMan"
+      }
+    ],
+    "4": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g1pme.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1004",
+        "order": 0,
+        "alt_text": "Black Claw Divide!!!"
+      }
+    ],
+    "7": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p1bne.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1052",
+        "order": 0,
+        "alt_text": "Max Reverb!!!"
+      }
+    ],
+    "10": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p4gea.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1062",
+        "order": 0,
+        "alt_text": "Heavy Aura!"
+      }
+    ]
+  },
   "news": true,
   "site_link": ""
 },
@@ -1530,7 +1528,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1r1bma.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1018",
+        "link": null,
         "order": 1,
         "alt_text": "Berserk Transformation!"
       }
@@ -1539,7 +1537,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb15cp.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1111",
+        "link": null,
         "order": 1,
         "alt_text": "Returning Souls"
       }
@@ -1548,7 +1546,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p2pe.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1056",
+        "link": null,
         "order": 1,
         "alt_text": "Distant Drop-Off!!!"
       }
@@ -1557,7 +1555,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1plg15i.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1130",
+        "link": null,
         "order": 1,
         "alt_text": "Star Map"
       }
@@ -1566,7 +1564,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl20fi.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1166",
+        "link": null,
         "order": 1,
         "alt_text": "Shinobi Scroll of Duplication"
       }
@@ -1575,7 +1573,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl15cpe.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1110",
+        "link": null,
         "order": 1,
         "alt_text": "Grimmer Form"
       }
@@ -1584,7 +1582,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1cb18g.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1126",
+        "link": null,
         "order": 1,
         "alt_text": "\"Change of Plans!\""
       }
@@ -1593,7 +1591,7 @@
       {
         "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p5fa.jpg",
         "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1154",
+        "link": null,
         "order": 1,
         "alt_text": "Shinobi Art of Substitution!"
       }
@@ -1642,7 +1640,7 @@
   "story_date": "2024-04-29",
   "updated": null,
   "section": "site",
-  "content": "Dark mode is currently not working for the Main page and Account page of the mobile site.//\nThe issue is under investigation and will be fixed as soon as possible.//\nThanks for your patience.",
+  "content": "Dark mode is currently not working for the Main page of the mobile site.//\nThe issue is under investigation and will be fixed as soon as possible.//\nThanks for your patience.",
   "images": {},
   "news": true,
   "site_link": ""
@@ -1678,6 +1676,88 @@
   "site_link": ""
 },
 {
+  "_id": {
+    "$oid": "666c83c44864a2830a149894"
+  },
+  "title": "Card changes 6/9 - 6/15",
+  "subtitle": "",
+  "author": "TeamPlayMaker",
+  "story_date": "2024-06-14",
+  "updated": "2024-06-15",
+  "section": "releases",
+  "content": "Changes in card effects:@@]]//\nShadow Strike!!]]//\nPrevious: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.//\nNew: <Trigger> If a player discards a card(s) from their hand or String, place 2 cards of the same type from your hand/discard pile under a card in your String.//\nShinobi Art of Substitution!]]//\nPrevious: Discard 1 unturned card in your String; add 1 card of the same type from your hand to your String and place the original card's damage tokens on the added card.//\nNew: Discard 1 unturned card in your String; add 1 card of the same type from your discard pile to your String and place the original card's damage tokens on the added card.//\nThe Remote Trapper!!]]//\nPrevious: Deal 3 damage to a random foe. That foe's Move gains damage minus 1 (damage dealt by that card is reduced by 1 at the end of its resolution).//\nNew: Deal 3 damage to a foe. That foe's Move and Ending gain damage minus 1 (damage dealt by those cards are reduced by 1 at the end of their resolution).//\n\"The Trap Is Set!\"]]//\nPrevious: Pull 1 The Spider card/Pluck except the Event \"The Trap Is Set!\" (add the card/Pluck from the respective deck to your hand/Reserve, then shuffle the deck).//\nNew: Pull 1 Tech or Tactical card/Pluck except the Event \"The Trap Is Set!\" (add 1 card/Pluck from the respective deck to your hand/Reserve, then shuffle the deck).//\nThe Battler]]//\nPrevious: <Limited> If your String has a Staunch or Tactical Fighter(s), place 1 Tactical Move from your hand or the discard pile under this Item (if this Item is removed from your Active Pluck, the placed card is discarded).//\nNew: <Limited> If your String has a Tech or Tactical Fighter(s), place 1 Tech or Tactical Move from your hand or the discard pile under this Item (if this Item is removed from your Active Pluck, the placed card is discarded).//\nThe Wire Shooter!]]//\nPrevious: <Trigger> During a foe's turn, reveal 1 Staunch or Tactical card in your hand (the card stays revealed); all cards of the same type in all foes' Strings gain damage minus 1 as long as the revealed card is in your hand.//\nNew: <Trigger>During a foe's turn, reveal 1 Tech or Tactical card in your hand (the card stays revealed); all cards of the same type in all foes' Strings gain damage minus 1 as long as the revealed card is in your hand.//\nThe Spider]]//\nPrevious: Pull 1 Tactical card or 1 The Spider Pluck.//\nNew: Pull 1 Tech card or 1 The Spider Pluck.//",
+  "images": {
+    "1": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gm.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1151",
+        "order": 0,
+        "alt_text": "Shadow Strike!!"
+      }
+    ],
+    "4": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p5fa.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1154",
+        "order": 0,
+        "alt_text": "Shinobi Art of Substitution!"
+      }
+    ],
+    "7": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g5tsm.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1143",
+        "order": 1,
+        "alt_text": "The Remote Trapper!!"
+      }
+    ],
+    "10": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl17tse.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1158",
+        "order": 1,
+        "alt_text": "\"The Trap Is Set!\""
+      }
+    ],
+    "13": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1pl17tsi.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1157",
+        "order": 1,
+        "alt_text": "The Battler]]"
+      }
+    ],
+    "16": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g5tsa.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1142",
+        "order": 1,
+        "alt_text": "The Wire Shooter!"
+      }
+    ],
+    "19": [
+      {
+        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1g5tsf.jpg",
+        "caption": null,
+        "link": "https://www.jothplaymaker.com/cards/1141",
+        "order": 1,
+        "alt_text": "The Spider"
+      }
+    ]
+  },
+  "news": true,
+  "site_link": ""
+},
+{
+  "_id": {
+    "$oid": "666da048e351d87527c6c649"
+  },
   "title": "Player Panel Added to Simulator",
   "subtitle": "",
   "author": "TeamPlayMaker",
@@ -1688,39 +1768,4 @@
   "news": true,
   "site_link": "",
   "id": "CGk3aQXX22e6o8tRoKB7oIYY"
-},
-{
-  "_id": {
-    "$oid": "666c83c44864a2830a149894"
-  },
-  "title": "Card changes 6/14",
-  "subtitle": "",
-  "author": "TeamPlayMaker",
-  "story_date": "2024-06-14",
-  "updated": null,
-  "section": "releases",
-  "content": "Changes in card effects:@@]]//\nShadow Strike!!]]//\nPrevious: <Trigger> If a player discards a card(s) from their hand or String, place 1 card of the same type from your hand or discard pile under a card in your String.//\nNew: <Trigger> If a player discards a card(s) from their hand or String, place 2 cards of the same type from your hand/discard pile under a card in your String.//\nShinobi Art of Substitution!]]//\nPrevious: Discard 1 unturned card in your String; add 1 card of the same type from your hand to your String and place the original card's damage tokens on the added card.//\nNew: Discard 1 unturned card in your String; add 1 card of the same type from your discard pile to your String and place the original card's damage tokens on the added card.//\n",
-  "images": {
-    "1": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1b5gm.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1151",
-        "order": 1,
-        "alt_text": "Shadow Strike!!"
-      }
-    ],
-    "4": [
-      {
-        "src": "https://compressedplaymakercards.s3.us-west-1.amazonaws.com/i1p5fa.jpg",
-        "caption": null,
-        "link": "https://www.jothplaymaker.com/cards/1154",
-        "order": 1,
-        "alt_text": "Shinobi Art of Substitution!"
-      }
-    ]
-  },
-  "news": true,
-  "site_link": ""
-}
-]
+}]

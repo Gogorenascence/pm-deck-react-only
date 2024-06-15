@@ -38,9 +38,7 @@
     1070,
     1071,
     1101,
-    1117,
-    1142,
-    1157
+    1117
   ],
   "anti_support": [],
   "created_on": {
@@ -406,7 +404,11 @@
   "name": "Tech",
   "description": "Cards that use technologically advanced weapons, tools or suits.",
   "support": [
-    1133
+    1133,
+    1141,
+    1142,
+    1157,
+    1158
   ],
   "anti_support": [],
   "created_on": {

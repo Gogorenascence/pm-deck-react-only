@@ -50,7 +50,8 @@ function App() {
       ...card,
       picture_url: card.picture_url.replace("https://playmakercards","https://compressedplaymakercards")
           .replace("png", "jpg")
-  }))
+        }
+      ))
   let card_categories = require('./database/card_categories.json').map(category =>
     {category["id"] = category._id.$oid
     return category
