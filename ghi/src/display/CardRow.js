@@ -19,7 +19,7 @@ function CardRow() {
             <div className="cards-page-card-list5 none">
                 {newCards.slice(0, 5).map((card) => {
                     return (
-                        <div key={card.name}>
+                        <div key={card.card_number}>
                             <NavLink to={`/cards/${card.card_number}`}>
                                     <img
                                         className="card-row glow3"
