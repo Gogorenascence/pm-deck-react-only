@@ -119,6 +119,7 @@ function CardsPage(props) {
     const handleQuery = (event) => {
         setQuery({ ...query, [event.target.name]: event.target.value });
         setShowMore(20)
+        console.log(cards)
         console.log(query)
     };
 
@@ -397,7 +398,7 @@ function CardsPage(props) {
                 <div className="card-list2">
                     {all_cards.slice(0, showMore).map(function(card, index, arr) {
                         return (
-                            <NavLink to={`/cards/${card.card_number}`} className="nav-link glow2" key={card.name}>
+                            <NavLink to={`/cards/${card.card_number}`} className="nav-link glow2" key={`${card.name} ${index}`}>
                                     <div className={card.card_class ? `big${card.card_class}2` : "bigNoClass2"}>
                                         <h3 style={{fontWeight: "600", margin: "12px"}}>{card.name}</h3>
                                         <h5 style={{fontWeight: "600", margin: "12px"}}>{card.card_class} {card.cardType}</h5>
@@ -417,9 +418,9 @@ function CardsPage(props) {
                 </div>
             :
             <div className="cards-page-card-list">
-                {all_cards.slice(0, showMore).map(card => {
+                {all_cards.slice(0, showMore).map((card, index) => {
                     return (
-                        <NavLink to={`/cards/${card.card_number}`} key={card.name}>
+                        <NavLink to={`/cards/${card.card_number}`} key={`${card.name} ${index}`}>
                                 <img className="card-list-card glow3"
                                     title={card.name}
                                     src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}

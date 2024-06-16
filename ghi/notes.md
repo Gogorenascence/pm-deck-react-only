@@ -88,3 +88,16 @@ Add a start script in your package.json:
         console.log("Opponent Added")
         console.log(opponents)
     }
+
+Not having a unique key can lead to duplicated objects in the display; not reflected in the arrays or data
+            {all_cards.slice(0, showMore).map((card, index) => {
+                    return (
+                        <NavLink to={`/cards/${card.card_number}`} key={`${card.name} ${index}`}>
+                                <img className="card-list-card glow3"
+                                    title={card.name}
+                                    src={card.picture_url ? card.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                    alt={card.name}
+                                    loading="lazy"/>
+                        </NavLink>
+                    );
+                })}
