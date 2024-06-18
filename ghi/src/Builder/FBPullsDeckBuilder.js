@@ -276,6 +276,12 @@ function PullsDeckBuilder() {
     }
 
     const clearMain = async() => {
+        console.log(cards)
+        const newCards = [...cards]
+        for (let card of main_list) {
+            newCards.push(card)
+        }
+        setCards(newCards)
         setMainList([]);
         const picture_urls = []
         for (let card of main_list){
@@ -287,6 +293,11 @@ function PullsDeckBuilder() {
     }
 
     const clearPluck = async() => {
+        const newCards = [...cards]
+        for (let card of main_list) {
+            newCards.push(card)
+        }
+        setCards(newCards)
         setPluckList([]);
         const picture_urls = []
         for (let card of pluck_list){

@@ -199,7 +199,7 @@ function DecksPage() {
             <div className="decks-page-card-list2">
                 {all_decks.slice(0, deckShowMore).map((deck) => {
                     return (
-                        <NavLink to={`/decks/${deck.id}`}  key={deck.id}>
+                        <NavLink to={`/decks/${deck.id}`} key={deck.id}>
                             <Card className="text-white text-center card-list-card3 glow">
                                 <div className="card-image-wrapper">
                                     <div className="card-image-clip">

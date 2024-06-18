@@ -54,10 +54,10 @@ handleRemoveCard
     }
 
     useEffect(() => {
-      // Update filteredCards based on your filtering criteria
         const card_list = main_list.concat(pluck_list)
-        const newFilteredCards = card_list.filter((card) =>
-            (showModal.card_type ? card.card_type[0] === showModal.card_type : true))
+        // Update filteredCards based on your filtering criteria
+        const newFilteredCards = card_list
+            .filter((card) => (showModal.card_type ? card.card_type[0] === showModal.card_type : true))
             .filter((card) => (showModal.card_class ? card.card_class === showModal.card_class : true));
         setFilteredCards(() => newFilteredCards);
     }, [showModal, main_list, pluck_list]); // Include showModal and card_list as dependencies
@@ -162,7 +162,7 @@ handleRemoveCard
                         <h1 className="centered-h1">{showModal.label}</h1>
                         <div>
                             <div className="cd-inner2 card-pool-fill">
-                                {filteredCards.map((card) => {
+                                {filteredCards.map((card, index) => {
                                     return (
                                         // <NavLink to={`/cards/${card.card_number}`}>
                                             <img
@@ -170,7 +170,8 @@ handleRemoveCard
                                                 title={`${card.name}\n${preprocessText(card.effect_text)}\n${card.second_effect_text ? preprocessText(card.second_effect_text) : ""}`}
                                                 src={card.picture_url ? card.picture_url : "logo4p.png"}
                                                 onClick={() => handleRemoveCard(card)}
-                                                alt={card.name}/>
+                                                alt={card.name}
+                                                key={index}/>
                                         // </NavLink>
                                     );
                                 })}
