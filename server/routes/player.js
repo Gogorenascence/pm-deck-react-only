@@ -45,6 +45,7 @@ router.get('/:p_id', async (req, res) => {
 
 // Update a player by ID
 router.patch('/:p_id', async (req, res) => {
+    const p_id = req.params.p_id;
     const updates = Object.keys(req.body);
     const allowedUpdates = [
         'hp',
@@ -63,7 +64,8 @@ router.patch('/:p_id', async (req, res) => {
         'faceDown',
         'defending',
         'defendingCard',
-        'activating'
+        'activating',
+        'g_id'
     ];
     const isValidOperation = updates.every((update) => allowedUpdates.includes(update));
 
@@ -72,7 +74,7 @@ router.patch('/:p_id', async (req, res) => {
     }
 
     try {
-        const player = await Player.findOne(req.params.p_id);
+        const player = await Player.findOne({p_id: p_id});
         if (!player) {
             return res.status(404).send();
         }

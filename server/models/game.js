@@ -11,21 +11,21 @@ const playAreaSchema = new mongoose.Schema({
     slot_6: { type: Array, default: [] },
     slot_7: { type: Array, default: [] },
     slot_8: { type: Array, default: [] },
-});
+}, { _id: false });
 
 const activePluckSchema = new mongoose.Schema({
     slot_1: { type: Array, default: [] },
     slot_2: { type: Array, default: [] },
     slot_3: { type: Array, default: [] },
     slot_4: { type: Array, default: [] },
-});
+}, { _id: false });
 
 const faceDownSchema = new mongoose.Schema({
     fighter_slot: Boolean,
     aura_slot: Boolean,
     move_slot: Boolean,
     ending_slot: Boolean,
-});
+}, { _id: false });
 
 const defendingSchema = new mongoose.Schema({
     fighter_slot: Boolean,
@@ -36,7 +36,7 @@ const defendingSchema = new mongoose.Schema({
     slot_6: Boolean,
     slot_7: Boolean,
     slot_8: Boolean,
-});
+}, { _id: false });
 
 const defendingCardSchema = new mongoose.Schema({
     card: { type: Object },
@@ -92,8 +92,8 @@ const playerSchema = new mongoose.Schema({
     defending: { type: defendingSchema },
     defendingCard: { type: defendingCardSchema },
     activating: { type: activatingSchema },
-    p_id: { type: String, required: true },
-    g_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Game', required: true },
+    p_id: { type: String },
+    g_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Game' },
     _id: { type: mongoose.Types.ObjectId, required: true, auto: true }
 });
 
@@ -101,9 +101,9 @@ const gameSchema = new mongoose.Schema({
     name: { type: String, required: true },
     owner: { type: ownerSchema, required: true },
     seats: { type: Number, required: true },
-    players: { type: [mongoose.Schema.Types.ObjectId], ref: 'Player', default: [] },
+    players: { type: [String], default: [] },
     watchers: { type: [watcherSchema], default: [] },
-    id: { type: String, required: true },
+    id: { type: String },
     _id: { type: mongoose.Types.ObjectId, required: true, auto: true }
 })
 
