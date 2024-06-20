@@ -5,6 +5,8 @@ import BackButton from "../display/BackButton";
 import card_categories from "../database/card_categories.json";
 import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 import ErrorPage from "../display/ErrorPage";
+import { AuthContext } from "../context/AuthContext";
+import CardEditModal from "./CardEditModal";
 
 
 function CardDetailPage({
@@ -15,6 +17,7 @@ function CardDetailPage({
     reactions
 }) {
     const { card_number } = useParams()
+    const { account } = useContext(AuthContext)
 
     const [card, setCard] = useState({
         name: "",
@@ -183,7 +186,15 @@ function CardDetailPage({
                                         relatedCardsList={relatedCardsList}
                                     />: null
                                 }
-
+                                { account && account.roles.includes("admin")?
+                                    <CardEditModal
+                                        cardData={card}
+                                        cardTypes={card_types}
+                                        cardTags={card_tags}
+                                        extraEffects={extra_effects}
+                                        reactionsData={reactions}
+                                    />:
+                                null}
                             </div>
                         </div>
                     </div>
@@ -323,11 +334,11 @@ function CardDetailPage({
                                             {relatedCardsList.slice(0,6).map((relatedCard) => {
                                                 return (
                                                     <NavLink to={`/cards/${relatedCard.card_number}`}>
-                                                            <img
-                                                                className="cd-related-card"
-                                                                title={relatedCard.name}
-                                                                src={relatedCard.picture_url ? relatedCard.picture_url : "https://i.imgur.com/krY25iI.png"}
-                                                                alt={relatedCard.name}/>
+                                                        <img
+                                                            className="cd-related-card"
+                                                            title={relatedCard.name}
+                                                            src={relatedCard.picture_url ? relatedCard.picture_url : "https://i.imgur.com/krY25iI.png"}
+                                                            alt={relatedCard.name}/>
                                                     </NavLink>
                                                 );
                                             })}
@@ -346,7 +357,15 @@ function CardDetailPage({
                                                 relatedCardsList={relatedCardsList}
                                             />: null
                                         }
-
+                                        { account && account.roles.includes("admin")?
+                                                <CardEditModal
+                                                    cardData={card}
+                                                    cardTypes={card_types}
+                                                    cardTags={card_tags}
+                                                    extraEffects={extra_effects}
+                                                    reactionsData={reactions}
+                                                />:
+                                        null}
                                     </div>
                                 </div>
                             </div>

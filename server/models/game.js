@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { cardSchema } = require('./card');
 
 
 const playAreaSchema = new mongoose.Schema({
@@ -76,12 +75,12 @@ const watcherSchema = new mongoose.Schema({
 const playerSchema = new mongoose.Schema({
     name: { type: String, required: true },
     hp: { type: Number, required: true },
-    mainDeck: { type: [cardSchema], default: [] },
-    pluckDeck: { type: [cardSchema], default: [] },
-    hand: { type: [cardSchema], default: [] },
-    ownership: { type: [cardSchema], default: [] },
-    mainDiscard: { type: [cardSchema], default: [] },
-    pluckDiscard: { type: [cardSchema], default: [] },
+    mainDeck: { type: [Number], default: [] },
+    pluckDeck: { type: [Number], default: [] },
+    hand: { type: [Number], default: [] },
+    ownership: { type: [Number], default: [] },
+    mainDiscard: { type: [Number], default: [] },
+    pluckDiscard: { type: [Number], default: [] },
     playArea: { type: playAreaSchema },
     activePluck: { type: activePluckSchema },
     focus: { type: Number, default: 0 },
