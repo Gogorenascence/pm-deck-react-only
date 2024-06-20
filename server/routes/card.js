@@ -43,10 +43,45 @@ router.get('/:card_number', async (req, res) => {
     }
 });
 
+router.get('/:hero_id/related', async (req, res) => {
+    const hero_id = req.params.hero_id;
+    try {
+        const card = await Card.find({hero_id: hero_id});
+        if (!card) {
+            return res.status(404).send();
+        }
+        card.id = card._id ? (card._id.$oid ? card._id.$oid : card._id) : card.id;
+        res.send(card);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
 // Update a card by ID
-router.patch('/:id', async (req, res) => {
+router.patch('/:card_number', async (req, res) => {
+    const card_number = req.params.card_number;
     const updates = Object.keys(req.body);
-    const allowedUpdates = ['name', 'hp', 'mainDeck', 'pluckDeck', 'hand', 'ownership', 'mainDiscard', 'pluckDiscard', 'playArea', 'activePluck', 'focus', 'enthusiasm', 'mettle', 'secondWind', 'faceDown', 'defending', 'defendingCard'];
+    const allowedUpdates = [
+        "name",
+        "card_class",
+        "hero_id",
+        "series_name",
+        "seriesNames",
+        "card_number",
+        "enthusiasm",
+        "effect_text",
+        "second_effect_text",
+        "effectText",
+        "secondEffectText",
+        "illustrator",
+        "picture_url",
+        "file_name",
+        "card_type",
+        "extra_effects",
+        "reactions",
+        "card_tags",
+        "updated_on"
+    ]
     const isValidOperation = updates.every((update) => allowedUpdates.includes(update));
 
     if (!isValidOperation) {
@@ -54,7 +89,7 @@ router.patch('/:id', async (req, res) => {
     }
 
     try {
-        const card = await Card.findById(req.params.id);
+        const card = await Card.findOne({card_number: card_number});
         if (!card) {
             return res.status(404).send();
         }

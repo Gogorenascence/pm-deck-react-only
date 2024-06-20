@@ -8,7 +8,7 @@ import ErrorPage from "../display/ErrorPage";
 
 
 function CardDetailPage({
-    cards,
+    // cards,
     card_types,
     card_tags,
     extra_effects,
@@ -37,9 +37,14 @@ function CardDetailPage({
         card_tags: [],
     });
     const [noCard, setNoCard] = useState(false)
+    const [cards, setCards] = useState([])
+    const [relatedCardsList, setRelatedCardsList] = useState([])
 
     const getCard = async() =>{
-        const cardData = cards.find(card => card.card_number.toString() === card_number)
+        // const cardData = cards.find(card => card.card_number.toString() === card_number)
+        // const cardResponse = await fetch(`https://pm-deck-react-only.onrender.com/cards/${card_number}`)
+        const cardResponse = await fetch(`http://localhost:4000/cards/${card_number}`)
+        const cardData = await cardResponse.json()
         if (cardData) {
             cardData["seriesNames"] = cardData.series_name.split("//")
             cardData["effectText"] = cardData.effect_text.split("//")
@@ -52,8 +57,18 @@ function CardDetailPage({
         }
     };
 
-    const relatedCardsList = cards?.filter(relatedCard => (card?.hero_id === relatedCard.hero_id) && relatedCard.card_number !== card.card_number)
-    relatedCardsList.sort((a,b) => a.card_number - b.card_number)
+    const getRelatedCards = async() => {
+        if (card.hero_id) {
+            // const cardsResponse = await fetch(`https://pm-deck-react-only.onrender.com/cards/${card.hero_id}`)
+            const cardsResponse = await fetch("http://localhost:4000/cards/")
+            const cardsData = await cardsResponse.json()
+            if (cardsData) {
+                setCards(cardsData)
+                const relatedCardsData = cardsData.filter(relatedCard => (card.hero_id === relatedCard.hero_id) && relatedCard.card_number !== card.card_number)
+                setRelatedCardsList(relatedCardsData.sort((a,b) => a.card_number - b.card_number))
+            }
+        }
+    }
 
     const card_type = card_types.find(card_type => card?.card_type[0] === card_type?.type_number)
 
@@ -103,10 +118,10 @@ function CardDetailPage({
     useEffect(() => {
         window.scroll(0, 0);
         getCard();
-    }, [card_number]);
+    }, [card_number, ]);
 
     useEffect(() => {
-        console.log(card)
+        getRelatedCards();
         document.title = `${card.name} - PM CardBase`
         return () => {
             document.title = "PlayMaker CardBase"

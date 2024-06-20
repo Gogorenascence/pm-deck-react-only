@@ -6,7 +6,7 @@ import ImageWithoutRightClick from "../display/ImageWithoutRightClick";
 function CardsPage(props) {
 
     const {
-        cards,
+        // cards,
         booster_sets
     } = props
 
@@ -37,53 +37,58 @@ function CardsPage(props) {
         setRarity
     } = useContext(QueryContext);
 
+    const [cards, setCards] = useState([])
+
     const [listView, setListView] = useState(false);
     const [showMore, setShowMore] = useState(20);
 
     const [noCards, setNoCards] = useState(false);
 
     const getCards = async() =>{
-        if (newCards.length == 0 ) {
+        const cardsResponse = await fetch("https://pm-deck-react-only.onrender.com/cards")
+        const cardsData = await cardsResponse.json()
+        if (cardsData.length == 0 ) {
             setNoCards(true)
+        } else {
+            const sortedCards = [...cardsData].sort(sortMethods[sortState].method);
+
+            const typedCards = []
+            for (let card of sortedCards){
+                if (card.card_type[0] === 1001) {
+                    card["cardType"] = "Fighter"
+                }
+                else if (card.card_type[0] === 1002) {
+                    card["cardType"] = "Aura"
+                }
+                else if (card.card_type[0] === 1003) {
+                    card["cardType"] = "Move"
+                }
+                else if (card.card_type[0] === 1004) {
+                    card["cardType"] = "Ending"
+                }
+                else if (card.card_type[0] === 1005) {
+                    card["cardType"] = "Any Type"
+                }
+                else if (card.card_type[0] === 1006) {
+                    card["cardType"] = "Item"
+                }
+                else if (card.card_type[0] === 1007) {
+                    card["cardType"] = "Event"
+                }
+                else if (card.card_type[0] === 1008) {
+                    card["cardType"] = "Comeback"
+                }
+
+                card["effectText"] = card.effect_text.split("//")
+
+                if (card.second_effect_text){
+                    card["secondEffectText"] = card.second_effect_text.split("//")
+                }
+
+                typedCards.push(card)
+            }
+            setCards(typedCards);
         }
-        const sortedCards = [...cards].sort(sortMethods[sortState].method);
-
-        const typedCards = []
-        for (let card of sortedCards){
-            if (card.card_type[0] === 1001) {
-                card["cardType"] = "Fighter"
-            }
-            else if (card.card_type[0] === 1002) {
-                card["cardType"] = "Aura"
-            }
-            else if (card.card_type[0] === 1003) {
-                card["cardType"] = "Move"
-            }
-            else if (card.card_type[0] === 1004) {
-                card["cardType"] = "Ending"
-            }
-            else if (card.card_type[0] === 1005) {
-                card["cardType"] = "Any Type"
-            }
-            else if (card.card_type[0] === 1006) {
-                card["cardType"] = "Item"
-            }
-            else if (card.card_type[0] === 1007) {
-                card["cardType"] = "Event"
-            }
-            else if (card.card_type[0] === 1008) {
-                card["cardType"] = "Comeback"
-            }
-
-            card["effectText"] = card.effect_text.split("//")
-
-            if (card.second_effect_text){
-                card["secondEffectText"] = card.second_effect_text.split("//")
-            }
-
-            typedCards.push(card)
-        }
-        setNewCards(typedCards);
     };
 
     const navigate = useNavigate()
@@ -107,7 +112,7 @@ function CardsPage(props) {
     },[]);
 
     const sortMethods = {
-        none: { method: (a,b) => new Date(b.updated_on?.full_time.$date) - new Date(a.updated_on?.full_time.$date) },
+        none: { method: (a,b) => new Date(b.updated_on?.full_time) - new Date(a.updated_on?.full_time) },
         newest: { method: (a,b) => b.id.localeCompare(a.id) },
         oldest: { method: (a,b) => a.id.localeCompare(b.id) },
         name: { method: (a,b) => a.name.localeCompare(b.name) },
@@ -157,7 +162,7 @@ function CardsPage(props) {
         setShowMore(20)
     };
 
-    const all_cards = newCards.filter(card => card.name.toLowerCase().includes(query.cardName.toLowerCase()))
+    const all_cards = cards.filter(card => card.name.toLowerCase().includes(query.cardName.toLowerCase()))
         .filter((card, index, arr) => (card.effect_text + card.second_effect_text).toLowerCase().includes(query.cardText.toLowerCase()))
         .filter(card => card.card_number.toString().includes(query.cardNumber))
         .filter(card => card.hero_id.toLowerCase().includes(query.heroID.toLowerCase()))
