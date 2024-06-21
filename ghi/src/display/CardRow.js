@@ -1,4 +1,4 @@
-import cards from "../database/cards.json";
+// import cards from "../database/cards.json";
 import { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom';
 import ImageWithoutRightClick from "./ImageWithoutRightClick";
@@ -8,7 +8,9 @@ function CardRow() {
 
     const [newCards, setNewCards] = useState([]);
     const getCards = async() =>{
-        setNewCards(cards.sort((a,b) => new Date(b.updated_on.full_time.$date) - new Date(a.updated_on.full_time.$date)));
+        const cardsResponse = await fetch("https://pm-deck-react-only.onrender.com/cards")
+        const cardsData = await cardsResponse.json()
+        setNewCards(cardsData.sort((a,b) => new Date(b.updated_on.full_time) - new Date(a.updated_on.full_time)));
     }
     useEffect(() => {
         getCards();

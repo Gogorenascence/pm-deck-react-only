@@ -45,8 +45,8 @@ function CardDetailPage({
 
     const getCard = async() =>{
         // const cardData = cards.find(card => card.card_number.toString() === card_number)
-        // const cardResponse = await fetch(`https://pm-deck-react-only.onrender.com/cards/${card_number}`)
-        const cardResponse = await fetch(`http://localhost:4000/cards/${card_number}`)
+        const cardResponse = await fetch(`https://pm-deck-react-only.onrender.com/cards/${card_number}`)
+        // const cardResponse = await fetch(`http://localhost:4000/cards/${card_number}`)
         const cardData = await cardResponse.json()
         if (cardData) {
             cardData["seriesNames"] = cardData.series_name.split("//")
@@ -63,7 +63,7 @@ function CardDetailPage({
     const getRelatedCards = async() => {
         if (card.hero_id) {
             // const cardsResponse = await fetch(`https://pm-deck-react-only.onrender.com/cards/${card.hero_id}`)
-            const cardsResponse = await fetch("http://localhost:4000/cards/")
+            const cardsResponse = await fetch("https://pm-deck-react-only.onrender.com/cards")
             const cardsData = await cardsResponse.json()
             if (cardsData) {
                 setCards(cardsData)

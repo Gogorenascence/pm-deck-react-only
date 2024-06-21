@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect, useContext } from 'react'
 import { AppContext } from "../context/AppContext";
+import helper from '../QueryObjects/Helper';
 
 
 function CardEditModal({
@@ -30,6 +31,7 @@ function CardEditModal({
         card_tags: [],
     });
 
+    const [cardRef, setCardRef] = useState()
     const [card_type, setCardType] = useState([]);
     const [extra_effects, setExtraEffects] = useState([]);
     const [reactions, setReactionsData] = useState([]);
@@ -59,7 +61,8 @@ function CardEditModal({
     };
 
     const getCard = async() =>{
-        setCard(cardData);
+        setCard(cardData)
+        setCardRef(cardData)
         setCardType(cardData.card_type)
         setExtraEffects(cardData.extra_effects)
         setReactionsData(cardData.reactions)
@@ -82,6 +85,7 @@ function CardEditModal({
     const handleChange = (event) => {
         setCard({ ...card, [event.target.name]: event.target.value });
         console.log(card)
+        console.log(cardRef)
     };
 
     const handleShowComps = (event) => {
@@ -211,19 +215,24 @@ function CardEditModal({
     const handleSubmit = async (event) => {
         event.preventDefault();
         const data = {...card};
+        const update = {}
         data["card_number"] = parseInt(card["card_number"], 10);
-        data["enthusiasm"] = parseInt(card["enthusiasm"], 10);
+        data["enthusiasm"] = card.enthusiasm? parseInt(card["enthusiasm"], 10): null
         data["card_type"] = card_type
         data["extra_effects"] = extra_effects
         data["reactions"] = reactions
         data["card_tags"] = card_tags
-        data
-        console.log(data)
-
-        const cardUrl = `${process.env.REACT_APP_FASTAPI_SERVICE_API_HOST}/api/cards/${card.id}/`;
+        for (let key in data) {
+            if (data[key] !== cardRef[key]) {
+                update[key] = data[key]
+            }
+        }
+        update["updated_on"] = helper.createTimeObj2()
+        // console.log(update)
+        const cardUrl = `https://pm-deck-react-only.onrender.com/cards${card.card_number}/`;
         const fetchConfig = {
             method: "PATCH",
-            body: JSON.stringify(data),
+            body: JSON.stringify(update),
             headers: {
                 "Content-Type": "application/json",
             },
@@ -524,6 +533,7 @@ function CardEditModal({
                                     className="add-comp-button"
                                     variant="dark"
                                     onClick={handleSubmit}
+                                    disabled={helper.objectsAreEqual(card, cardRef)? true: false}
                                 >
                                         Save
                                 </button>

@@ -28,6 +28,28 @@ const helper = {
         console.log(time_dict);
         return time_dict
     },
+    createTimeObj2: function createTimeObj2() {
+        let now = new Date();
+        // now.setHours(now.getHours() + 5)
+
+        let year = now.getFullYear();
+        let month = String(now.getMonth() + 1).padStart(2, '0');
+        let day = String(now.getDate()).padStart(2, '0');
+        let hours = String(now.getHours()).padStart(2, '0');
+        let minutes = String(now.getMinutes()).padStart(2, '0');
+
+        // Construct time_dict
+        let time_dict = {
+            "year": year,
+            "month": month,
+            "day": day,
+            "time": hours + ":" + minutes,
+            "full_time": now.toISOString()
+        };
+
+        console.log(time_dict);
+        return time_dict
+    },
     generateRandomString: async function generateRandomString(length) {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         let randomString = '';
