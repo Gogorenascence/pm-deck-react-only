@@ -207,6 +207,14 @@ const deckQueries = {
             return [data, lastDoc];
         }
     },
+    getAllDecksData: async function getdecksData() {
+        const decksCollectionRef = collection(db, "decks")
+        const response = await getDocs(decksCollectionRef);
+        const data = response.docs.map((doc) => ({
+            ...doc.data(),
+        }))
+        return data
+    },
 }
 
 export default deckQueries

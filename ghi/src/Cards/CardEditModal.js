@@ -229,7 +229,7 @@ function CardEditModal({
         }
         update["updated_on"] = helper.createTimeObj2()
         // console.log(update)
-        const cardUrl = `https://pm-deck-react-only.onrender.com/cards${card.card_number}/`;
+        const cardUrl = `https://pm-deck-react-only.onrender.com/cards/${card.card_number}/`;
         const fetchConfig = {
             method: "PATCH",
             body: JSON.stringify(update),

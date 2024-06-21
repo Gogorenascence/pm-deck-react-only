@@ -153,6 +153,11 @@ function DecksPage({
         return acc
     }, [])
 
+    const getAllDecksData = async() => {
+        const all_decks_data = await deckQueries.getAllDecksData()
+        if (all_decks_data) console.log(all_decks_data)
+    }
+
 
     return (
         <div className="white-space">
@@ -301,7 +306,7 @@ function DecksPage({
                     Show More Decks
                 </button>
                 : null }
-            {/* <button onClick={() => {console.log(fullDecks)}}>All Decks</button> */}
+            <button onClick={getAllDecksData}>All Decks</button>
         </div>
     );
 }
