@@ -29,8 +29,8 @@ function NewsRow({
 
     const getArticles = async() => {
         // setLoading(true)
-        // const articlesResponse = await fetch("https://pm-deck-react-only.onrender.com/articles/")
-        const articlesResponse = await fetch("http://localhost:4000/articles/")
+        const articlesResponse = await fetch("https://pm-deck-react-only.onrender.com/articles/")
+        // const articlesResponse = await fetch("http://localhost:4000/articles/")
         const articlesData = await articlesResponse.json()
         if (articlesData) {
             const filteredArticles = account && account.roles.includes("admin")?
