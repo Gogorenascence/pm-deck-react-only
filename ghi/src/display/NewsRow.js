@@ -5,18 +5,15 @@ import ImageWithoutRightClick from "./ImageWithoutRightClick";
 import { AuthContext } from "../context/AuthContext";
 
 
-function NewsRow({articles}) {
-    const {account} = useContext(AuthContext)
+function NewsRow({
+    // articles
+}) {
+    const { account } = useContext(AuthContext)
     const { newsQuery, setNewsQuery } = useContext(NewsQueryContext)
     const navigate = useNavigate()
-    const stories = articles.filter(story => story.news === true)
-        .sort((a,b) => {
-            let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
-            if (comparedArticles === 0) {
-                comparedArticles = b.id.localeCompare(a.id)
-            }
-            return comparedArticles
-        })
+
+    const [articles, setArticles] = useState([])
+    const [loading, setLoading] = useState([])
 
     const formatDate = (date) => {
         const month = date.slice(5,7);
@@ -30,23 +27,32 @@ function NewsRow({articles}) {
         navigate("/articles")
     }
 
-    const filteredStories = account && account.roles.includes("admin")?
-    articles.sort((a,b) => {
-            let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
-            if (comparedArticles === 0) {
-                comparedArticles = b.id.localeCompare(a.id)
-            }
-            return comparedArticles
-        }).slice(0,20):
-    articles.filter(article => article.section !== "admin")
-        .sort((a,b) => {
-            let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
-            if (comparedArticles === 0) {
-                comparedArticles = b.id.localeCompare(a.id)
-            }
-            return comparedArticles
-        }).slice(0,20)
-
+    const getArticles = async() => {
+        // setLoading(true)
+        // const articlesResponse = await fetch("https://pm-deck-react-only.onrender.com/articles/")
+        const articlesResponse = await fetch("http://localhost:4000/articles/")
+        const articlesData = await articlesResponse.json()
+        if (articlesData) {
+            const filteredArticles = account && account.roles.includes("admin")?
+                articlesData.sort((a,b) => {
+                        let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
+                        if (comparedArticles === 0) {
+                            comparedArticles = b.id.localeCompare(a.id)
+                        }
+                        return comparedArticles
+                    }).slice(0,20):
+                articlesData.filter(article => article.section !== "admin")
+                    .sort((a,b) => {
+                        let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
+                        if (comparedArticles === 0) {
+                            comparedArticles = b.id.localeCompare(a.id)
+                        }
+                        return comparedArticles
+                    }).slice(0,20)
+            setArticles(filteredArticles)
+            // setLoading(false)
+        }
+    }
 
     const newsColors = {
         releases: "rgba(192, 145, 17, 0.87)",
@@ -70,12 +76,16 @@ function NewsRow({articles}) {
         simulator: "rgba(232, 82, 230, 0.70)"
     }
 
+    useEffect(() => {
+        getArticles()
+    }, [])
+
     return(
         <div className="white-space">
-            { filteredStories.length > 0 ?
+            { articles.length > 0 ?
                 <>
                     <div className="newsRow">
-                        {filteredStories.map((story, index) => {
+                        {articles.map((story, index) => {
                             return (
                                 <div key={index}>
                                     {story.content ?
@@ -86,7 +96,7 @@ function NewsRow({articles}) {
                                                     backgroundColor: newsColors[story.section],
                                                     borderColor: newsBorders[story.section],
                                                     marginTop: index === 0 ? "2px" : "10px",
-                                                    marginBottom: index ===  filteredStories.length -1 ? "2px" : "10px"
+                                                    marginBottom: index ===  articles.length -1 ? "2px" : "10px"
                                                 }}
                                             >
 
@@ -103,7 +113,7 @@ function NewsRow({articles}) {
                                                 backgroundColor: newsColors[story.section],
                                                 borderColor: newsBorders[story.section],
                                                 marginTop: index === 0 ? "2px" : "10px",
-                                                marginBottom: index ===  filteredStories.length -1 ? "2px" : "10px"
+                                                marginBottom: index ===  articles.length -1 ? "2px" : "10px"
                                             }}
                                         >
 

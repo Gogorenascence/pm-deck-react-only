@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 import ErrorPage from "../display/ErrorPage";
 
 function ArticlePage({
-    articles
+    // articles
 }) {
     const { article_id } = useParams()
     const [article, setArticle] = useState({
@@ -26,10 +26,11 @@ function ArticlePage({
     })
 
     const getArticle = async() =>{
-        const articleData = articles.find(article => article.id === article_id)
-        if (articleData) {
+        const articleResponse = await fetch(`https://pm-deck-react-only.onrender.com/articles/${article_id}`)
+        // const articleResponse = await fetch(`http://localhost:4000/articles/${article_id}`)
+        if (articleResponse.ok) {
+            const articleData = await articleResponse.json()
             setArticle(articleData);
-
             const processedImages = []
             for (let keyName of Object.keys(articleData.images)) {
                 for (let order of Object.keys(articleData.images[keyName])) {
@@ -205,7 +206,7 @@ function ArticlePage({
                         </NavLink>
                     </div>
                 </div>:
-                <ErrorPage path={"/"}/>
+                <ErrorPage path={"/articles"}/>
             }
         </>
     );

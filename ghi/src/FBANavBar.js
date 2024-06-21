@@ -297,6 +297,11 @@ function NavBar() {
                       Article List
                     </div>
                   </NavLink>
+                  <NavLink className="dropdown-select username2" to="/articlecreate" onClick={() => followLink()}>
+                    <div className="nav-dropdown-item">
+                      Article Create
+                    </div>
+                  </NavLink>
                 </div>:null
               }
             </li>
@@ -473,6 +478,11 @@ function NavBar() {
               <NavLink className="nav-dropdown-item" to="/articles" onClick={() => handleShowMobileMenu()}>
                 <div className="dropdown-select">
                   Article List
+                </div>
+              </NavLink>
+              <NavLink className="nav-dropdown-item" to="/articlecreate" onClick={() => handleShowMobileMenu()}>
+                <div className="dropdown-select">
+                  Article Create
                 </div>
               </NavLink>
             </div>:null

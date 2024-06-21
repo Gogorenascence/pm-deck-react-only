@@ -47,8 +47,8 @@ function CardDetailPage({
         // const cardData = cards.find(card => card.card_number.toString() === card_number)
         const cardResponse = await fetch(`https://pm-deck-react-only.onrender.com/cards/${card_number}`)
         // const cardResponse = await fetch(`http://localhost:4000/cards/${card_number}`)
-        const cardData = await cardResponse.json()
-        if (cardData) {
+        if (cardResponse.ok) {
+            const cardData = await cardResponse.json()
             cardData["seriesNames"] = cardData.series_name.split("//")
             cardData["effectText"] = cardData.effect_text.split("//")
             if (cardData.second_effect_text){

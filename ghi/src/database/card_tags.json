@@ -56,7 +56,7 @@
     "$oid": "640ce5e85f6730657ad873cb"
   },
   "name": "Max 1",
-  "rules": "You can only resolve 1 card with this tag per round.",
+  "rules": "You can only card with this tag in your String/Active Pluck at a time.",
   "tag_number": 1005,
   "support": [],
   "anti_support": []

@@ -158,6 +158,26 @@ function NavBar() {
                 </NavLink>
               </div>
             </li>
+            { account && account.roles.includes("admin")?
+              <li className="nav-item">
+                <div className={showMenu.show && showMenu.section === "admin"?
+                  "navbar-selected pointer": "navbar-select pointer"}
+                  onClick={() => handleShowMenu(true, "admin")}>
+                  <h5 className="navbar-menu-item">
+                    Admin
+                  </h5>
+                </div>
+                { showMenu.show && showMenu.section === "admin"?
+                  <div className="nav-dropdown-content">
+                    <NavLink className="dropdown-select username2" to="/createportal" onClick={() => followLink()}>
+                      <div className="nav-dropdown-item">
+                        Admin Create Portal
+                      </div>
+                    </NavLink>
+                  </div>:null
+                }
+              </li>:null
+            }
           </ul>
         </div>
 
@@ -260,6 +280,26 @@ function NavBar() {
             </div>:null
           }
         </li>
+        { account && account.roles.includes("admin")?
+          <li className="nav-item">
+            <div className={showMenu.show && showMenu.section === "admin"?
+              "navbar-selected pointer": "navbar-select pointer"}
+              onClick={() => handleShowMenu(true, "admin")}>
+              <h5 className="navbar-menu-item">
+                Admin
+              </h5>
+            </div>
+            { showMenu.show && showMenu.section === "admin"?
+              <div className="nav-dropdown-content">
+                <NavLink className="nav-dropdown-item" to="/createportal" onClick={() => handleShowMobileMenu()}>
+                  <div className="dropdown-select">
+                    Admin Create Portal
+                  </div>
+                </NavLink>
+              </div>:null
+            }
+          </li>:null
+        }
       </ul>
     </nav>
   );

@@ -6,7 +6,7 @@ import { AuthContext } from "../context/AuthContext";
 
 
 function ArticlesPage({
-    articles
+    // articles
 }) {
     const {account} = useContext(AuthContext)
 
@@ -23,6 +23,7 @@ function ArticlesPage({
 
     const maxDate = todaysFormattedDate();
 
+    const [articles, setArticles] = useState([])
     const [loading, setLoading] = useState(false)
 
     const formatDate = (date) => {
@@ -32,22 +33,33 @@ function ArticlesPage({
         return `${month}-${day}-${year}`
     }
 
-    const filteredArticles = account && account.roles.includes("admin")?
-    articles.sort((a,b) => {
-            let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
-            if (comparedArticles === 0) {
-                comparedArticles = b.id.localeCompare(a.id)
-            }
-            return comparedArticles
-        }):
-    articles.filter(article => article.section !== "admin")
-        .sort((a,b) => {
-            let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
-            if (comparedArticles === 0) {
-                comparedArticles = b.id.localeCompare(a.id)
-            }
-            return comparedArticles
-        })
+    const getArticles = async() => {
+        setLoading(true)
+        const articleResponse = await fetch("https://pm-deck-react-only.onrender.com/articles/")
+        // const articleResponse = await fetch("http://localhost:4000/articles/")
+        const articleData = await articleResponse.json()
+        if (articleData) {
+            const filteredArticles = account && account.roles.includes("admin")?
+                articleData.sort((a,b) => {
+                        let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
+                        if (comparedArticles === 0) {
+                            comparedArticles = b.id.localeCompare(a.id)
+                        }
+                        return comparedArticles
+                    }):
+                articleData.filter(article => article.section !== "admin")
+                    .sort((a,b) => {
+                        let comparedArticles = new Date(b.story_date) - new Date(a.story_date)
+                        if (comparedArticles === 0) {
+                            comparedArticles = b.id.localeCompare(a.id)
+                        }
+                        return comparedArticles
+                    })
+            setArticles(filteredArticles)
+            setLoading(false)
+        }
+    }
+
 
     const newsColors = {
         guide: "rgba(42, 168, 115, 0.70)",
@@ -78,7 +90,7 @@ function ArticlesPage({
     useEffect(() => {
         window.scroll(0, 0);
         document.body.style.overflow = 'auto';
-        // getArticles();
+        getArticles();
         document.title = "Articles - PM CardBase"
         return () => {
             document.title = "PlayMaker CardBase"
@@ -105,7 +117,7 @@ function ArticlesPage({
         setNewsSortState(event.target.value);
     };
 
-    const completelyFilteredNews = filteredArticles.filter(article => newsQuery.section? (newsQuery.section === article.section): article)
+    const completelyFilteredNews = articles.filter(article => newsQuery.section? (newsQuery.section === article.section): article)
         .filter(article => newsQuery.startingDate? (new Date(article.story_date) >= new Date(newsQuery.startingDate)):article)
         .filter(article => newsQuery.content? (article.content.toLowerCase().includes(newsQuery.content.toLowerCase())):article)
         .filter(article => newsQuery.title? (article.title.toLowerCase().includes(newsQuery.title.toLowerCase())):article)
@@ -222,7 +234,7 @@ function ArticlesPage({
                                             backgroundColor: newsColors[article.section],
                                             borderColor: newsBorders[article.section],
                                             marginTop: index === 0 ? "2px" : "10px",
-                                            marginBottom: index ===  filteredArticles.length -1 ? "2px" : "10px"
+                                            marginBottom: index ===  articles.length -1 ? "2px" : "10px"
                                         }}
                                     >
 
@@ -239,7 +251,7 @@ function ArticlesPage({
                                         backgroundColor: newsColors[article.section],
                                         borderColor: newsBorders[article.section],
                                         marginTop: index === 0 ? "2px" : "10px",
-                                        marginBottom: index ===  filteredArticles.length -1 ? "2px" : "10px"
+                                        marginBottom: index ===  articles.length -1 ? "2px" : "10px"
                                     }}
                                 >
 
