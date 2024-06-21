@@ -204,6 +204,14 @@ function ArticlesPage({
                 </label>
             </div>
             <div className="flex">
+                { account && account.roles.includes("admin")?
+                    <NavLink to="/articlecreate">
+                        <button
+                            className="left red left margin-top-10">
+                            Create
+                        </button>
+                    </NavLink>:
+                null}
                 <button
                     className="left margin-top-10"
                     variant="dark"
