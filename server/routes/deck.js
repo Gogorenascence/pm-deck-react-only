@@ -1,61 +1,64 @@
 const express = require('express');
 const router = express.Router();
-const { Article } = require('../models/article');
+const { Deck } = require('../models/deck');
 
-// Create a new article
+// Create a new deck
 router.post('/', async (req, res) => {
-    const article = new Article(req.body);
+    const deck = new Deck(req.body);
     try {
-        await article.save();
-        res.status(201).send(article);
+        await deck.save();
+        res.status(201).send(deck);
     } catch (error) {
         res.status(400).send(error);
     }
 });
 
-// Get all articles
+// Get all decks
 router.get('/', async (req, res) => {
     try {
-        const articles = await Article.find();
-        const processed_articles = [...articles].map((article) => {
-            article.id = article._id ? (article._id.$oid ? article._id.$oid : article._id) : article.id;
-            return article;
+        const decks = await Deck.find();
+        const processed_decks = [...decks].map((deck) => {
+            deck.id = deck._id ? (deck._id.$oid ? deck._id.$oid : deck._id) : deck.id;
+            return deck;
         })
-        res.send(processed_articles);
+        res.send(processed_decks);
     } catch (error) {
         console.error(error)
         res.status(500).send(error);
     }
 });
 
-// Get a article by ID
+// Get a deck by ID
 router.get('/:id', async (req, res) => {
     const _id = req.params.id;
     try {
-        const article = await Article.findById(_id);
-        if (!article) {
+        const deck = await Deck.findById(_id);
+        if (!deck) {
             return res.status(404).send();
         }
-        res.send(article);
+        res.send(deck);
     } catch (error) {
         res.status(500).send(error);
     }
 });
 
-// Update a article by ID
+// Update a deck by ID
 router.patch('/:id', async (req, res) => {
     const updates = Object.keys(req.body);
     const allowedUpdates = [
-        "title",
-        "subtitle",
-        "author",
-        "story_date",
-        "section",
-        "content",
-        "images",
-        "news",
-        "site_link",
-        "updated"
+        "name",
+        "account_id",
+        "description",
+        "strategies",
+        "cards",
+        "pluck",
+        "views",
+        "updated_on",
+        "cover_card",
+        "card_names",
+        "series_names",
+        "private",
+        "creator"
     ];
     const isValidOperation = updates.every((update) => allowedUpdates.includes(update));
 
@@ -64,29 +67,29 @@ router.patch('/:id', async (req, res) => {
     }
 
     try {
-        const article = await Article.findById(req.params.id);
-        if (!article) {
+        const deck = await Deck.findById(req.params.id);
+        if (!deck) {
             return res.status(404).send();
         }
 
-        updates.forEach((update) => article[update] = req.body[update]);
-        await article.save();
-        res.send(article);
+        updates.forEach((update) => deck[update] = req.body[update]);
+        await deck.save();
+        res.send(deck);
     } catch (error) {
         res.status(400).send(error);
     }
 });
 
-// Delete a article by ID
+// Delete a deck by ID
 router.delete('/:id', async (req, res) => {
     try {
-        const article = await Article.findByIdAndDelete(req.params.id);
+        const deck = await Deck.findByIdAndDelete(req.params.id);
 
-        if (!article) {
+        if (!deck) {
             return res.status(404).send();
         }
 
-        res.send(article);
+        res.send(deck);
     } catch (error) {
         res.status(500).send(error);
     }

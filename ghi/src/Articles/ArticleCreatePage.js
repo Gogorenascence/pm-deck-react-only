@@ -99,8 +99,8 @@ function ArticleCreatePage() {
             }
         }
         console.log(data)
-        // const articleUrl = "https://pm-deck-react-only.onrender.com/articles/";
-        const articleUrl = "http://localhost:4000/articles/";
+        const articleUrl = "https://pm-deck-react-only.onrender.com/articles/";
+        // const articleUrl = "http://localhost:4000/articles/";
         const fetchConfig = {
             method: "POST",
             body: JSON.stringify(data),

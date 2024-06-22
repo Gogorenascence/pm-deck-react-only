@@ -2,11 +2,15 @@ import { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import { Card } from "react-bootstrap";
 import ErrorPage from "../display/ErrorPage";
+import { AuthContext } from "../context/AuthContext";
+
 
 function ArticlePage({
     // articles
 }) {
     const { article_id } = useParams()
+    const { account } = useContext(AuthContext)
+
     const [article, setArticle] = useState({
         title: "",
         subtitle: "",
@@ -115,6 +119,11 @@ function ArticlePage({
                         <Card.ImgOverlay className="blackfooter2 mt-auto">
                             <div className="flex">
                                 <h1 className="left margin-top-10 ellipsis">{article.title}</h1>
+                                { account && account.roles.includes("admin")?
+                                    <NavLink className="nav-link" to={`/articles/${article_id}/edit`}>
+                                        <h5>[Edit]</h5>
+                                    </NavLink>
+                                :null}
                             </div>
                             <div className=" flex wide100-3">
                                 <img className="newsSection" src={`/${article.section}.png`} alt={article.section}/>
@@ -200,7 +209,7 @@ function ArticlePage({
                         }
                         <NavLink className="nav-link no-pad" to={"/articles"}>
                             <button
-                                style={{ width: "100%"}}>
+                                style={{ width: "100%", marginTop: "20px"}}>
                                 Back to News and Articles
                             </button>
                         </NavLink>

@@ -31,7 +31,7 @@ function CardEditModal({
         card_tags: [],
     });
 
-    const [cardRef, setCardRef] = useState()
+    const [cardRef, setCardRef] = useState("")
     const [card_type, setCardType] = useState([]);
     const [extra_effects, setExtraEffects] = useState([]);
     const [reactions, setReactionsData] = useState([]);

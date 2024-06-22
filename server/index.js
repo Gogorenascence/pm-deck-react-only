@@ -6,6 +6,7 @@ const cardRouter = require("./routes/card")
 const gameRouter = require("./routes/game")
 const playerRouter = require("./routes/player")
 const articleRouter = require("./routes/article")
+const deckRouter = require("./routes/deck")
 const setupSocket = require("./socket")
 const dotenv = require('dotenv');
 
@@ -44,4 +45,5 @@ app.get('/', (req, res) => {
 app.use('/cards', cardRouter);
 app.use('/games', gameRouter);
 app.use('/players', playerRouter);
-app.use('/articles', articleRouter)
+app.use('/articles', articleRouter);
+app.use('/decks', deckRouter);
