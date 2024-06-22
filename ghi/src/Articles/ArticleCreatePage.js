@@ -112,12 +112,12 @@ function ArticleCreatePage() {
         const response = await fetch(articleUrl, fetchConfig);
         if (response.ok) {
             const responseData = await response.json();
-            const article_id = responseData.id;
+            const article_id = responseData._id.toString();
             setArticle({
                 title: "",
                 subtitle: "",
                 author: "",
-                story_date: "",
+                story_date: todaysFormattedDate(),
                 section: "",
                 content: "",
                 images: "",
@@ -126,7 +126,7 @@ function ArticleCreatePage() {
             });
             setImages([])
             if (!stayHere) {navigate(`/articles/${article_id}`)}
-            console.log("Success")
+            console.log("Success", responseData)
         } else {
             alert("Error in creating news");
         }
