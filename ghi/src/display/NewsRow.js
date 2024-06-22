@@ -88,7 +88,7 @@ function NewsRow({
                         {articles.map((story, index) => {
                             return (
                                 <div key={index}>
-                                    {story.content ?
+                                    {story.content||(account && account.roles.includes("admin"))?
                                         <NavLink className="nav-link no-pad" to={`/articles/${story.id}`}>
                                             <div
                                                 className="flex-items newsItem"

@@ -234,7 +234,7 @@ function ArticlesPage({
                 {completelyFilteredNews.slice(0, someMoreNews).map((article, index) => {
                     return (
                         <>
-                            {article.content?
+                            {article.content||(account && account.roles.includes("admin"))?
                                 <NavLink className="nav-link no-pad" to={`/articles/${article.id}`}>
                                     <div
                                         className="flex-items newsItem"

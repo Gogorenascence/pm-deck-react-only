@@ -306,7 +306,7 @@ function DecksPage({
                     Show More Decks
                 </button>
                 : null }
-            <button onClick={getAllDecksData}>All Decks</button>
+            {/* <button onClick={getAllDecksData}>All Decks</button> */}
         </div>
     );
 }
