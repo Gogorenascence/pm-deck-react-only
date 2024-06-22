@@ -42,6 +42,7 @@ import DecksPage from "./Decks/FBDecksPage";
 import SimulatorObjectPage from "./SimulatorBackUp/SimulatorPage"
 import SimScrollbar from "./display/SimScrollbar";
 import CardEditPage from "./Cards/CardEditPage";
+import ErrorPage from "./display/ErrorPage";
 
 
 function App() {
@@ -216,6 +217,7 @@ function App() {
                                                   extra_effects={extra_effects}
                                                   reactions={reactions}
                                                   />} />
+                <Route path="*" element={<ErrorPage path={"/"}/>} />
               </Routes>
 
             </div>
