@@ -1281,6 +1281,10 @@ button:disabled {
   margin-top: 40px;
 }
 
+.margin-bottom-5 {
+  margin-bottom: 5px;
+}
+
 .margin-bottom-10 {
   margin-bottom: 10px;
 }
@@ -4391,6 +4395,13 @@ button:disabled {
 
   .neg-margin-top-10 {
     margin-top: -10px;
+  }
+
+  .media-flex-column-full {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   body.dark {

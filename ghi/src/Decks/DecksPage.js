@@ -165,8 +165,7 @@ function DecksPage() {
             </select>
             <br/>
             <NavLink to="/deckbuilder">
-                <button className="left"
-                    variant="dark">
+                <button className="left">
                         Create Deck
                 </button>
             </NavLink>

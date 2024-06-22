@@ -358,13 +358,11 @@ function CardDetailPage({
                                             />: null
                                         }
                                         { account && account.roles.includes("admin")?
-                                                <CardEditModal
-                                                    cardData={card}
-                                                    cardTypes={card_types}
-                                                    cardTags={card_tags}
-                                                    extraEffects={extra_effects}
-                                                    reactionsData={reactions}
-                                                />:
+                                            <NavLink to={`/cards/${card_number}/edit`}>
+                                                <button className="left red left">
+                                                    Edit Card
+                                                </button>
+                                            </NavLink>:
                                         null}
                                     </div>
                                 </div>

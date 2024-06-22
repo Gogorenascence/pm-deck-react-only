@@ -288,8 +288,8 @@ function CardEditModal({
                     >
                         <h1>Card Edit</h1>
 
-                        <div className="flex-content media-display">
-                            <div className="create-section">
+                        <div className="space-around media-display">
+                            <div className="flex-column-full">
                                 <div>
                                     <h5 className="label">Name </h5>
                                     <input
@@ -368,7 +368,7 @@ function CardEditModal({
                                     </input>
                                 </div>
                             </div>
-                            <div className="create-section">
+                            <div className="flex-column-full">
                                 <div>
                                     <h5 className="label">Card Class </h5>
                                     <select

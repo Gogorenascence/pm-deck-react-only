@@ -41,6 +41,7 @@ import FBDeckCopy from "./Builder/FBDeckCopyPage";
 import DecksPage from "./Decks/FBDecksPage";
 import SimulatorObjectPage from "./SimulatorBackUp/SimulatorPage"
 import SimScrollbar from "./display/SimScrollbar";
+import CardEditPage from "./Cards/CardEditPage";
 
 
 function App() {
@@ -143,6 +144,12 @@ function App() {
                                                               card_tags={card_tags}
                                                               extra_effects={extra_effects}
                                                               reactions={reactions}
+                                                          />} />
+                <Route path="/cards/:card_number/edit" element={<CardEditPage
+                                                              cardTypes={card_types}
+                                                              cardTags={card_tags}
+                                                              extraEffects={extra_effects}
+                                                              reactionsData={reactions}
                                                           />} />
                 <Route path="/topcards" element={<UnderConstruction />} />
                 <Route path="/cardsets" element={<SetsPage
