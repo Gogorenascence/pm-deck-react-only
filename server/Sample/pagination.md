@@ -113,3 +113,93 @@ getPaginatedResults(page, limit).then(result => {
 }).catch(error => {
   console.error('Error:', error);
 });
+
+
+
+
+
+
+// Get paginated and filtered deck list
+router.get('/', async (req, res) => {
+    const { deckName, description, cardName, strategies, seriesName, user } = req.query;
+    const limit = parseInt(req.query.limit) || 10; // Number of decks per page
+    const page = parseInt(req.query.page) || 1; // Page number
+    const skip = (page - 1) * limit;
+
+    // Build the query object based on provided parameters
+    const query = {};
+    if (deckName) query.name = new RegExp(deckName, 'i');
+    if (description) query.description = new RegExp(description, 'i');
+    if (cardName) query.card_names = new RegExp(cardName, 'i');
+    if (strategies) query.strategies = new RegExp(strategies, 'i');
+    if (seriesName) query.series_names = new RegExp(seriesName, 'i');
+    if (user) query.creator = new RegExp(user, 'i');
+
+    try {
+        const totalDecks = await Deck.countDocuments(query);
+        const totalPages = Math.ceil(totalDecks / limit);
+
+        const decks = await Deck.find(query).skip(skip).limit(limit);
+        const processed_decks = decks.map(deck => {
+            deck.id = deck._id ? (deck._id.$oid ? deck._id.$oid : deck._id) : deck.id;
+            return deck;
+        });
+
+        res.send({
+            totalDecks,
+            totalPages,
+            currentPage: page,
+            decks: processed_decks
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send(error);
+    }
+});
+
+
+const [deckQuery, setDeckQuery] = useState({
+    deckName: "",
+    description: "",
+    cardName: "",
+    strategies: "",
+    seriesName: "",
+    user: "",
+});
+
+const [pagination, setPagination] = useState({
+    limit: 10,
+    page: 1,
+});
+
+
+const fetchDecks = async () => {
+    const { deckName, description, cardName, strategies, seriesName, user } = deckQuery;
+    const { limit, page } = pagination;
+
+    const queryParams = new URLSearchParams({
+        deckName,
+        description,
+        cardName,
+        strategies,
+        seriesName,
+        user,
+        limit,
+        page
+    }).toString();
+
+    try {
+        const response = await fetch(`/api/decks?${queryParams}`);
+        const data = await response.json();
+
+        // Handle the response data
+        console.log(data);
+    } catch (error) {
+        console.error('Error fetching decks:', error);
+    }
+};
+
+// Call fetchDecks whenever deckQuery or pagination changes
+useEffect(() => {
+    fetchDecks();
+}, [deckQuery, pagination]);
