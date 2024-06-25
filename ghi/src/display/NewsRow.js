@@ -78,7 +78,7 @@ function NewsRow({
 
     useEffect(() => {
         getArticles()
-    }, [])
+    }, [account])
 
     return(
         <div className="white-space">
