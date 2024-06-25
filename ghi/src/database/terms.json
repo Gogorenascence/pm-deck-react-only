@@ -91,7 +91,7 @@
     "$oid": "65a5f19ad0b0525bb535d635"
   },
   "name": "Limited effect",
-  "text": "Extra effect type that can only be used while the card is in play.",
+  "text": "Extra effect type that can only be used once while the card that used it is in play.",
   "term_number": 1012
 },
 {
