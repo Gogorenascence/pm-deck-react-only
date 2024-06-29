@@ -195,7 +195,7 @@ function App() {
                                                                 cards={cards}
                                                               />} />
                 <Route path="/simulator" element={<SimulatorPage
-                                                  pre_decks={decks}
+                                                  // pre_decks={decks}
                                                   pre_processed_cards={cards}
                                                   card_types={card_types}
                                                   card_tags={card_tags}
@@ -209,14 +209,14 @@ function App() {
                 <Route path="/rulebooks" element={<HowTosPage howTos={howTos.sort((a,b) => a.how_to_number - b.how_to_number)}/>} />
                 <Route path="/rulebooks/:how_to_id" element={<HowToPage howTos={howTos}/>} />
                 <Route path="/account" element={<FBAccountPage />} />
-                <Route path="/simulator2" element={<SimulatorObjectPage
+                {/* <Route path="/simulator2" element={<SimulatorObjectPage
                                                   pre_decks={decks}
                                                   pre_processed_cards={cards}
                                                   card_types={card_types}
                                                   card_tags={card_tags}
                                                   extra_effects={extra_effects}
                                                   reactions={reactions}
-                                                  />} />
+                                                  />} /> */}
                 <Route path="*" element={<ErrorPage path={"/"}/>} />
               </Routes>
 
